@@ -4,7 +4,7 @@ const ninja = document.querySelector('ninja-keys');
 // add the home and posts menu items
 ninja.data = [{
     id: "nav-about",
-    title: "about",
+    title: "About",
     section: "Navigation",
     handler: () => {
       window.location.href = "/";
@@ -412,16 +412,17 @@ ninja.data = [{
           description: "",
           section: "Books",handler: () => {
               window.location.href = "/books/the_godfather/";
-            },},{id: "news-a-simple-inline-announcement",
-          title: 'A simple inline announcement.',
+            },},{id: "news-started-phd-journey-at-ucla",
+          title: 'Started PhD journey at UCLA',
           description: "",
-          section: "News",},{id: "news-a-long-announcement-with-details",
-          title: 'A long announcement with details',
+          section: "News",},{id: "news-presented-my-work-on-cu-dissolution-at-the-acs-fall-2024-conference-in-denver-co",
+          title: 'Presented my work on Cu dissolution at the ACS Fall 2024 conference in...',
           description: "",
-          section: "News",handler: () => {
-              window.location.href = "/news/announcement_2/";
-            },},{id: "news-a-simple-inline-announcement-with-markdown-emoji-sparkles-smile",
-          title: 'A simple inline announcement with Markdown emoji! :sparkles: :smile:',
+          section: "News",},{id: "news-presented-my-work-on-cu-dissolution-at-prime-2024-conference-in-honolulu-hawaii",
+          title: 'Presented my work on Cu dissolution at PRiME 2024 Conference in Honolulu, Hawaii...',
+          description: "",
+          section: "News",},{id: "news-received-dissertation-year-award-at-ucla",
+          title: 'Received Dissertation Year Award at UCLA',
           description: "",
           section: "News",},{id: "projects-project-1",
           title: 'project 1',
