@@ -2,7 +2,7 @@
 layout: page
 title: Electrochemial hydrogenation of imine reactivity
 description: Explored the role of 1ppm Pb in the process of electrochemical hydrogenation of imine to amine
-img: assets/img/pb.jpg
+img: assets/img/pb.png
 importance: 3
 category: PhD projects
 ---
