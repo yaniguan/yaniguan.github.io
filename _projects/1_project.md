@@ -1,8 +1,8 @@
 ---
 layout: page
-title: Cu electrode dissolution involving amine under electrochemical amination conditions
-description: The dissolution of Cu in the presence was investigated driven by the observation of Cu dissolution in experiments
-img: assets/img/Dissoluton.png
+title: Working Electrode Dissolution and Stability
+description: Origin of copper dissolution under electrocatalytic reduction conditions involving amines (DOI: 10.1039/D4SC01944J)
+img: assets/img/Dissolution.png
 importance: 1
 category: PhD projects
 related_publications: true

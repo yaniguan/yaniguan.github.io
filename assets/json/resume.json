@@ -16,6 +16,22 @@
       "endDate": "now",
       "summary": "Studied electrochemical amination of acetone with methylamine as nitrogen source",
       "highlights": ["Cu dissolution and Stability", "Electric double layer", "Electrochemical hydrogenation of imine"]
+    },
+    {
+      "name": "DP Technology",
+      "position": "Algorithm Researcher",
+      "startDate": "2022-06-01",
+      "endDate": "2022-09-01",
+      "summary": "Maintained and promoted open-source community focusing on DeePMD-kit and Dflow",
+      "highlights": ["DeePMD-kit: Neural Network Potential", "Dflow: scientific calculation workflow"]
+    },
+    {
+      "name": "Hebei University of Technology",
+      "position": "Undergraduate Student Researcher",
+      "startDate": "2018-09-01",
+      "endDate": "2022-06-30",
+      "summary": "Explored heterogeneous catalytic process using multi-scale simulations and machine learning",
+      "highlights": ["CO2RR on Cu-based catalysts", "Bifunctional oxygen electrodes", "Machine Learning in heterogeneous catalysis"]
     }
   ],
 
@@ -24,10 +40,28 @@
       "institution": "University of California, Los Angeles",
       "location": "Los Angeles, CA, US",
       "area": "Chemical Engineering",
-      "studyType": "PhD",
+      "studyType": "Ph.D.",
       "startDate": "2022-09-01",
       "endDate": "now",
       "GPA": "3.7"
+    },
+    {
+      "institution": "University of California, Los Angeles",
+      "location": "Los Angeles, CA, US",
+      "area": "Chemical Engineering",
+      "studyType": "M.S.",
+      "startDate": "2022-09-01",
+      "endDate": "2024-03-30",
+      "GPA": "3.7"
+    }, 
+    {
+      "institution": "Hebei University of Technology",
+      "location": "Tianjin, China",
+      "area": "Chemical Safety Engineering",
+      "studyType": "B.S.",
+      "startDate": "2018-09-01",
+      "endDate": "2022-06-30",
+      "GPA": "3.5"
     }
   ],
   "awards": [
@@ -39,7 +73,7 @@
     {
       "title": "Outstanding Award for Innovation and Entrepreneurship of College Students",
       "date": "2021-11-01",
-      "awarder": "Royal Swedish Academy of Sciences"
+      "awarder": "Hebei University of Technology"
     }
   ],
   "certificates": [
@@ -66,9 +100,8 @@
       "keywords": [
         "First-principle calculations",
         "Molecular Dynamics",
-        "AutoCAD",
         "COMSOL Multi-physics",
-        "Machine Learning, LLM"
+        "Machine Learning"
       ]
     },
     {
