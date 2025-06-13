@@ -31,7 +31,7 @@ ninja.data = [{
             window.location.href = "/projects/";
           },
         },{id: "nav-repositories",
-          title: "repositories",
+          title: "Repositories",
           description: "Edit the `_data/repositories.yml` and change the `github_users` and `github_repos` lists to include your own GitHub profile and repositories.",
           section: "Navigation",
           handler: () => {
@@ -44,11 +44,11 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/cv/";
           },
-        },{id: "post-a-post-with-plotly-js",
+        },{id: "post-dec-2024-jan-2025-roadtrip-to-texas",
         
-          title: "a post with plotly.js",
+          title: "Dec 2024 - Jan 2025 Roadtrip to Texas",
         
-        description: "this is what included plotly.js code could look like",
+        description: "Recap for the roadtrip - Los Angeles, Las Vegas, Sedona, Tuscon, El Paso, San Antonio, Austin, Houston, Dallas, Carlsbad, Las Cruces, Phoenix, Los Angeles",
         section: "Posts",
         handler: () => {
           
