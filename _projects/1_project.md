@@ -4,7 +4,7 @@ title: Cu electrode dissolution involving amine under electrochemical amination 
 description: The dissolution of Cu in the presence was investigated driven by the observation of Cu dissolution in experiments
 img: assets/img/Dissoluton.jpg
 importance: 1
-category: research
+category: PhD projects
 related_publications: true
 ---
 

@@ -4,7 +4,7 @@ title: Electric Double Layer
 description: Investigated the electric double layer capacitance before starting the reactions for electrochemical amination of acetone
 img: assets/img/capacitance.jpg
 importance: 2
-category: research
+category: PhD projects
 giscus_comments: true
 ---
 
