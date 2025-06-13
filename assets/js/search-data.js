@@ -67,14 +67,14 @@ ninja.data = [{
           section: "News",},{id: "news-received-dissertation-year-award-at-ucla",
           title: 'Received Dissertation Year Award at UCLA',
           description: "",
-          section: "News",},{id: "projects-",
-          title: '',
-          description: "",
+          section: "News",},{id: "projects-working-electrode-dissolution-and-stability",
+          title: 'Working Electrode Dissolution and Stability',
+          description: "Origin of copper dissolution under electrocatalytic reduction conditions involving amines (DOI 10.1039/D4SC01944J)",
           section: "Projects",handler: () => {
               window.location.href = "/projects/1_project/";
-            },},{id: "projects-",
-          title: '',
-          description: "",
+            },},{id: "projects-electric-double-layer-structures-and-properties",
+          title: 'Electric Double Layer Structures and Properties',
+          description: "Probing the Electric Double-Layer Capacitance to Understand the Reaction Environment in Conditions of Electrochemical Amination of Acetone, (DOI 10.1021/acsami.4c14134)",
           section: "Projects",handler: () => {
               window.location.href = "/projects/2_project/";
             },},{id: "projects-electrochemial-hydrogenation-of-imine-reactivity",
