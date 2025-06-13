@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Working Electrode Dissolution and Stability
-description: Origin of copper dissolution under electrocatalytic reduction conditions involving amines (DOI: 10.1039/D4SC01944J)
+description: Origin of copper dissolution under electrocatalytic reduction conditions involving amines (DOI 10.1039/D4SC01944J)
 img: assets/img/Dissolution.png
 importance: 1
 category: PhD projects
