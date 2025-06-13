@@ -14,27 +14,12 @@
     - title: Ph.D.
       institution: University of California, Los Angeles
       year: 2022 - now
-      description:
-        - PhD in Computational Chemistry
-        # - Description 2.
-        # - title: Description 3.
-        #   contents:
-        #     - Sub-description 1.
-        #     - Sub-description 2.
     - title: M.S. 
       institution: University of California, Los Angeles
       year: 2022 - 2023
-      description:
-        - Thesis: Modeling the Electrocatalytic Interface in the Conditions of Electrochemical Amination of Acetone with Methylamine as Nitrogen Source
-        # - Description 2.
     - title: B.S. 
       institution: Hebei University of Technology
       year: 2018 - 2022
-      description:
-        - title: Honors and Awards
-          contents:
-            - Outstanding Award for Innovation and Entrepreneurship of College Students in Tianjin 
-            - Youth Star in Hebei province
 
 - title: Experience
   type: time_table
@@ -42,40 +27,15 @@
     - title: Graduate Student Researcher
       institution: University of California, Los Angeles
       year: 2022 - now
-      description:
-        - title: Probing the Electric Double Layer Capacitance
-          contents:
-            - Analyzed adsorption behavior of acetone and methylamine on copper electrodes using impedance spectroscopy
-            - Investigated interfacial polarizability and EDL capacitance via grand canonical DFT and ab initio molecular dynamics
-        - title: Cu-based Electrode Degradation and Stability
-          contents:
-            - Uncovered Cu dissolution mechanisms in amine solutions using Grand Canonical DFT, revealing surface restructuring even at negative potentials
-            - Identified amine-driven Cu extraction and complexation as key factors in cathode degradation under electroreduction conditions
-        - title: Electrochemical Reductive Amination Reactivity
-          contents:
-            - Investigated Pb's role in electrochemical hydrogenation, revealing a dynamic PbH₂–PbH₄ cycle that facilitates imine reduction
-            - Demonstrated Pb acts as a hydrogen shuttle, lowering energy barriers and enhancing catalytic efficiency in reductive amination
-            - Extended this hydrogen shuttle effects to other post-transition metals, such as Tl, Pb and Bi
 
-    - title: Visiting Professor
-      institution: California Institute of Technology, Pasadena, California, US
-      year: 1933
-      description:
-        - Description 1.
-        - Description 2.
+    - title: Algorithm Researcher Intern
+      institution: DP Technology
+      year: 2022 Summer
 
-    - title: Director
-      institution: Kaiser Wilhelm Institute for Physics, Berlin, Germany.
-      year: 1917-1933
+    - title: Undergraduate Researcher
+      institution: Hebei University of Technology
+      year: 2018 - 2022
 
-    - title: Professor of Theoretical Physics
-      institution: Karl-Ferdinand University, Prague, Czechoslovakia
-      year: 1911 - 1917
-      description:
-
-    - title: Associate Professor of Theoretical Physics
-      institution: University of Zurich, Zurich, Switzerland
-      year: 1909 - 1911
 
 - title: Open Source Projects
   type: time_table
