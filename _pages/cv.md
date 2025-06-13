@@ -1,11 +1,11 @@
 ---
 layout: cv
 permalink: /cv/
-title: cv
+title: cv (Jan 31, 2025 (last update))
 nav: true
 nav_order: 5
-cv_pdf: example_pdf.pdf # you can also use external links here
-description: This is a description of the page. You can modify it in '_pages/cv.md'. You can also change or remove the top pdf download button.
+cv_pdf: CV_YaniGuan.pdf # you can also use external links here
+description: Please check my CV here, updated Jan 31 2025
 toc:
   sidebar: left
 ---

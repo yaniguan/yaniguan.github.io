@@ -2,16 +2,16 @@
 layout: about
 title: about
 permalink: /
-subtitle: <a href='#'>Affiliations</a>. Address. Contacts. Motto. Etc.
+# subtitle: <a href='#'>Affiliations</a>. Address. Contacts. Motto. Etc.
 
 profile:
   align: right
-  image: prof_pic.jpg
+  image: yaniguan.jpeg
   image_circular: false # crops the image to make it circular
   more_info: >
-    <p>555 your office number</p>
-    <p>123 your address street</p>
-    <p>Your City, State 12345</p>
+    # <p>555 your office number</p>
+    # <p>123 your address street</p>
+    <p>Los Angeles, CA, 90038</p>
 
 selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
@@ -26,11 +26,10 @@ latest_posts:
   scrollable: true # adds a vertical scroll bar if there are more than 3 new posts items
   limit: 3 # leave blank to include all the blog posts
 ---
+Hey there — thanks for visiting my homepage!
 
-Hey, thank you for visiting my Homepage!
+I'm a Ph.D. candidate in Computational Chemistry at UCLA, advised by [Prof. Philippe Sautet](https://scholar.google.com/citations?user=SMrNoFUAAAAJ&hl=en). Prior to this, I was an undergraduate researcher at Hebei University of Technology, working with [Prof. Jingde Li](https://scholar.google.ca/citations?user=86gvU-wAAAAJ&hl=en) on projects in computational heterogeneous catalysis.
 
-I'm a PhD candidate in computational chemistry at UCLA working under the guidance of [Prof. Philippe Sautet](https://scholar.google.com/citations?user=SMrNoFUAAAAJ&hl=en). Before it, I worked as undergraduate researcher at Hebei University of Technology under the guidance of [Prof. Jingde Li](https://scholar.google.ca/citations?user=86gvU-wAAAAJ&hl=en) focusing on computational hetergeneous catalysis. 
+My research centers on the rational understanding and design of electrochemical systems, catalytic processes, and functional materials through first-principles simulations and data-driven approaches.
 
-My research interests include rational understanding and design of electrochemical systems, catalysts and other materials. 
-
-Beyong my research, I am into hiking, reading, road trips and photography. 
+Outside the lab, I enjoy hiking, road trips, photography, and getting lost in a good book.
