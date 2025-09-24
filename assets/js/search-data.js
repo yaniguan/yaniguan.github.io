@@ -9,26 +9,12 @@ ninja.data = [{
     handler: () => {
       window.location.href = "/";
     },
-  },{id: "nav-blog",
-          title: "Blog",
-          description: "",
-          section: "Navigation",
-          handler: () => {
-            window.location.href = "/blog/";
-          },
-        },{id: "nav-publications",
+  },{id: "nav-publications",
           title: "Publications",
           description: "My publications by categories in reversed chronological order.",
           section: "Navigation",
           handler: () => {
             window.location.href = "/publications/";
-          },
-        },{id: "nav-projects",
-          title: "Projects",
-          description: "My PhD and other projects",
-          section: "Navigation",
-          handler: () => {
-            window.location.href = "/projects/";
           },
         },{id: "nav-repositories",
           title: "Repositories",
@@ -44,18 +30,7 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/cv/";
           },
-        },{id: "post-dec-2024-jan-2025-roadtrip-to-texas",
-        
-          title: "Dec 2024 - Jan 2025 Roadtrip to Texas",
-        
-        description: "Recap for the roadtrip - Los Angeles, Las Vegas, Sedona, Tuscon, El Paso, San Antonio, Austin, Houston, Dallas, Carlsbad, Las Cruces, Phoenix, Los Angeles",
-        section: "Posts",
-        handler: () => {
-          
-            window.location.href = "/blog/2025/plotly/";
-          
-        },
-      },{id: "news-started-phd-journey-at-ucla",
+        },{id: "news-started-phd-journey-at-ucla",
           title: 'Started PhD journey at UCLA',
           description: "",
           section: "News",},{id: "news-presented-my-work-on-cu-dissolution-at-the-acs-fall-2024-conference-in-denver-co",
@@ -67,22 +42,7 @@ ninja.data = [{
           section: "News",},{id: "news-received-dissertation-year-award-at-ucla",
           title: 'Received Dissertation Year Award at UCLA',
           description: "",
-          section: "News",},{id: "projects-working-electrode-dissolution-and-stability",
-          title: 'Working Electrode Dissolution and Stability',
-          description: "Origin of copper dissolution under electrocatalytic reduction conditions involving amines (DOI 10.1039/D4SC01944J)",
-          section: "Projects",handler: () => {
-              window.location.href = "/projects/1_project/";
-            },},{id: "projects-electric-double-layer-structures-and-properties",
-          title: 'Electric Double Layer Structures and Properties',
-          description: "Probing the Electric Double-Layer Capacitance to Understand the Reaction Environment in Conditions of Electrochemical Amination of Acetone, (DOI 10.1021/acsami.4c14134)",
-          section: "Projects",handler: () => {
-              window.location.href = "/projects/2_project/";
-            },},{id: "projects-electrochemial-hydrogenation-of-imine-reactivity",
-          title: 'Electrochemial Hydrogenation of Imine Reactivity',
-          description: "Explored the role of 1ppm Pb in the process of electrochemical hydrogenation of imine to amine (submitted)",
-          section: "Projects",handler: () => {
-              window.location.href = "/projects/3_project/";
-            },},{
+          section: "News",},{
         id: 'social-email',
         title: 'email',
         section: 'Socials',
