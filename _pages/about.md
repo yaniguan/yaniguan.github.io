@@ -2,14 +2,16 @@
 layout: about
 title: About
 permalink: /
-# subtitle: <a href='#'>Affiliations</a>. Address. Contacts. Motto. Etc.
+subtitle: Ph.D. Candidate, Computational Chemistry · <a href='https://sautet.chem.ucla.edu/' target='_blank'>Sautet Group</a> · UCLA
 
 profile:
   align: right
   image: yaniguan.jpeg
   image_circular: false # crops the image to make it circular
   more_info: >
-    <p>Los Angeles, CA, 90038</p>
+    <p>Department of Chemistry & Biochemistry</p>
+    <p>University of California, Los Angeles</p>
+    <p>Los Angeles, CA 90095</p>
 
 selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
@@ -26,11 +28,16 @@ latest_posts:
 ---
 Hey there — thanks for visiting my homepage!
 
-I'm a Ph.D. candidate in Computational Chemistry at UCLA, advised by [Prof. Philippe Sautet](https://scholar.google.com/citations?user=SMrNoFUAAAAJ&hl=en). Prior to this, I was an undergraduate researcher at Hebei University of Technology, working with [Prof. Jingde Li](https://scholar.google.ca/citations?user=86gvU-wAAAAJ&hl=en) on projects in computational heterogeneous catalysis.
+I'm a Ph.D. candidate in Chemical Engineering at UCLA, advised by [Prof. Philippe Sautet](https://scholar.google.com/citations?user=SMrNoFUAAAAJ&hl=en). My work sits at the intersection of **machine learning** and **molecular science** — building models and systems that make scientific discovery faster and more principled.
 
-Research:
-1. Molecular-level reasoning for biomass-to-amine conversion: Applied physics-based modeling and data-driven techniques to uncover mechanisms and reactivity pathways in electrochemical amination, leading to multiple first-author publications.
+**Research focus:**
 
-2. LLM for molecular design: Developed ChatDFT, integrating knowledge retrieval, fine-tuning (SFT), and RLHF to create intelligent pipelines for molecular modeling, simulation automation, and data interpretation.
+1. **End-to-End ML for Science:** Design and deploy production ML pipelines using GNNs, transformers, and diffusion models to predict molecular properties and explore chemical space. Emphasis on real-world constraints: memory efficiency, OOD generalization, and uncertainty quantification.
 
-Outside the lab, I enjoy hiking, road trips, photography, and getting lost in a good book.
+2. **LLM-Powered Agentic Systems (ChatDFT):** Architected an AI agent platform integrating LLMs with RAG, SFT, and RLHF to automate quantum chemistry simulation workflows end-to-end — achieving >70% reduction in setup-to-results time.
+
+3. **Data-Driven Molecular Design:** Applied structure–activity relationship modeling and generative approaches to accelerate catalyst and material discovery, contributing to multiple peer-reviewed publications.
+
+Previously, I was an Algorithm Researcher intern at [DP Technology](https://www.dp.tech/en), building ML interatomic potential pipelines deployed across 200+ research teams.
+
+Outside work, I enjoy hiking, road trips, photography, and getting lost in a good book.

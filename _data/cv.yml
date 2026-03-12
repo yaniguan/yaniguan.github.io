@@ -1,78 +1,75 @@
-- title: General Information
-  type: map
-  contents:
-    - name: Full Name
-      value: Yani Guan
-    - name: Date of Birth
-      value: 17th July 1999
-    - name: Languages
-      value: English, Chinese
-
 - title: Education
   type: time_table
   contents:
-    - title: Ph.D.
-      institution: University of California, Los Angeles
-      year: 2022 - now
-    - title: M.S. 
-      institution: University of California, Los Angeles
-      year: 2022 - 2023
-    - title: B.S. 
+    - title: Ph.D. in Chemical Engineering
+      institution: University of California, Los Angeles (UCLA)
+      year: 2022 – Present
+      description:
+        - "Expected graduation: Jun 2027"
+        - "Advisor: Prof. Philippe Sautet"
+    - title: B.S. in Chemical Engineering
       institution: Hebei University of Technology
-      year: 2018 - 2022
+      year: 2018 – 2022
 
-- title: Experience
+- title: Research Experience
   type: time_table
   contents:
-    - title: Graduate Student Researcher
+    - title: End-to-End ML Systems — Model Development & Production Pipelines
       institution: University of California, Los Angeles
-      year: 2022 - now
+      year: Jan 2024 – Present
+      description:
+        - Designed and deployed end-to-end ML pipelines—spanning data cleaning, feature engineering, model training, evaluation, and iterative redeployment—enabling systematic model improvement analogous to A/B-driven production update cycles.
+        - Built graph neural network (GNN) and transformer-based models trained on large structured datasets to predict complex system properties, optimizing for predictive performance and inference efficiency.
+        - Developed ML interatomic potentials as high-fidelity surrogates for physics-based simulations—production-grade models with careful attention to memory efficiency, numerical stability, and OOD generalization.
+        - Engineered physics-informed features and uncertainty quantification methods to improve model robustness and interpretability.
 
-    - title: Algorithm Researcher Intern
+    - title: ChatDFT — LLM-Powered Agentic Simulation Platform
+      institution: University of California, Los Angeles
+      year: Sep 2023 – Present
+      description:
+        - Architected an AI agent system integrating LLMs with retrieval-augmented generation (RAG), intent extraction, and HPC job scheduling to fully automate quantum chemistry simulation workflows—achieving >70% reduction in setup-to-results time.
+        - Shipped production-grade agentic pipelines (Python, REST APIs, cloud infrastructure) with structured evaluation loops, enabling continuous model performance monitoring and iterative improvement.
+        - Applied SFT and RLHF to fine-tune domain-specific LLMs for molecular modeling and data interpretation tasks.
+
+    - title: Structure–Activity Relationships & Data-Driven Molecular Design
+      institution: University of California, Los Angeles
+      year: Sep 2022 – Present
+      description:
+        - Applied data-driven ML methods to analyze structure–reactivity relationships across broad chemical libraries, systematically identifying key descriptors governing target performance.
+        - Designed generative model workflows for molecular property optimization, combining diffusion-based and graph-based approaches to explore chemical space.
+        - Performed transition-state searches and microkinetic modeling, integrating simulation outputs with statistical analysis pipelines for reproducible scientific reporting.
+
+- title: Industry Experience
+  type: time_table
+  contents:
+    - title: Algorithm Researcher — ML Infrastructure & Production Deployment
       institution: DP Technology
-      year: 2022 Summer
+      year: Jun 2022 – Sep 2022
+      description:
+        - Built and shipped production ML pipelines integrating neural network potentials with molecular dynamics engines (Python, C++), deployed on cloud HPC infrastructure for high-throughput automated screening.
+        - Developed robust, reusable software tools adopted by 200+ researchers across academia and industry.
 
-    - title: Undergraduate Researcher
-      institution: Hebei University of Technology
-      year: 2018 - 2022
-
-
-- title: Open Source Projects
-  type: time_table
+- title: Technical Skills
+  type: list
   contents:
-    - title: <a href="https://github.com/alshedivat/al-folio">al-folio</a>
-      year: 2015-now
-      description: A beautiful, simple, clean, and responsive Jekyll theme for academics.
+    - "<u>ML Frameworks:</u> PyTorch, scikit-learn, HuggingFace Transformers"
+    - "<u>Model Architectures:</u> Graph Neural Networks (GNN), Transformer, Diffusion Models, Generative Models, ML Interatomic Potentials"
+    - "<u>LLM & Agents:</u> RAG, SFT, RLHF, Agentic Pipelines, Prompt Engineering, LangChain"
+    - "<u>MLOps & Engineering:</u> End-to-End ML Pipelines, A/B Testing, REST APIs, Cloud HPC, Python, C++"
+    - "<u>Scientific Computing:</u> DFT, Molecular Dynamics, Microkinetic Modeling, Uncertainty Quantification"
 
 - title: Honors and Awards
   type: time_table
   contents:
     - year: 2025
       items:
-        - Dessertation Year Award
+        - Dissertation Year Award, UCLA
     - year: 2022
       items:
-        - Second Prize of College Students Innovation and Entrepreneurship in Hebei Province, China
+        - Second Prize, College Students Innovation and Entrepreneurship, Hebei Province, China
     - year: 2021
       items:
-        - Outstanding Award for Innovation and Entrepreneurship of College Students in Tianjin 
+        - Outstanding Award for Innovation and Entrepreneurship, Tianjin, China
     - year: 2020
       items:
-        - Youth Star in Hebei province
-
-# - title: Academic Interests
-#   type: nested_list
-#   contents:
-#     - title: Topic 1.
-#       items:
-#         - Description 1.
-#         - Description 2.
-#     - title: Topic 2.
-#       items:
-#         - Description 1.
-#         - Description 2.
-
-# - title: Other Interests
-#   type: list
-#   contents:
-#     - <u>Hobbies:</u> Hobby 1, Hobby 2, etc.
+        - Youth Star, Hebei Province, China
