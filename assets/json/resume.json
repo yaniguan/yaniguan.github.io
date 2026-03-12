@@ -1,67 +1,88 @@
 {
   "basics": {
     "name": "Yani Guan",
-    "label": "PhD candidate, Graduate Student Researcher",
+    "label": "Ph.D. Candidate | ML for Science · GNN · LLM · Generative Models",
     "image": "",
     "email": "yaniguan@ucla.edu",
     "phone": "310-853-9631",
     "url": "https://yaniguan.github.io",
-    "summary": "4th Year PhD candidate (Sep 2025) in computations and simulations, from multi-scale simulations to AI for Science approaches"
+    "summary": "Ph.D. candidate in Chemical Engineering at UCLA building production ML systems at the intersection of machine learning and molecular science. Research spans end-to-end ML pipelines, GNNs, transformer and diffusion-based generative models, and LLM-powered agentic platforms for scientific automation."
   },
   "work": [
     {
       "name": "University of California, Los Angeles",
-      "position": "Graduate Student Researcher",
+      "position": "Graduate Student Researcher — End-to-End ML Systems",
+      "startDate": "2024-01-01",
+      "endDate": "now",
+      "summary": "Model development and production ML pipelines for molecular science.",
+      "highlights": [
+        "Designed and deployed end-to-end ML pipelines spanning data cleaning, feature engineering, model training, evaluation, and iterative redeployment",
+        "Built GNN and transformer-based models trained on large structured datasets to predict complex molecular properties",
+        "Developed ML interatomic potentials as high-fidelity surrogates for physics-based simulations with focus on memory efficiency and OOD generalization",
+        "Engineered physics-informed features and uncertainty quantification methods to improve model robustness"
+      ]
+    },
+    {
+      "name": "University of California, Los Angeles",
+      "position": "Graduate Student Researcher — ChatDFT (LLM Agentic Platform)",
+      "startDate": "2023-09-01",
+      "endDate": "now",
+      "summary": "LLM-powered agentic simulation platform for quantum chemistry automation.",
+      "highlights": [
+        "Architected an AI agent system integrating LLMs with RAG, intent extraction, and HPC job scheduling to fully automate quantum chemistry workflows — achieving >70% reduction in setup-to-results time",
+        "Shipped production-grade agentic pipelines (Python, REST APIs, cloud infrastructure) with structured evaluation loops for continuous model monitoring",
+        "Applied SFT and RLHF to fine-tune domain-specific LLMs for molecular modeling and data interpretation"
+      ]
+    },
+    {
+      "name": "University of California, Los Angeles",
+      "position": "Graduate Student Researcher — Data-Driven Molecular Design",
       "startDate": "2022-09-01",
       "endDate": "now",
-      "summary": "Studied electrochemical amination of acetone with methylamine as nitrogen source",
-      "highlights": ["Cu dissolution and Stability", "Electric double layer", "Electrochemical hydrogenation of imine"]
+      "summary": "Structure–activity relationships and generative approaches for molecular discovery.",
+      "highlights": [
+        "Applied data-driven ML methods to analyze structure–reactivity relationships across broad chemical libraries",
+        "Designed generative model workflows combining diffusion-based and graph-based approaches to explore chemical space",
+        "Contributed to multiple peer-reviewed publications on electrochemical amination and ML for heterogeneous catalysis"
+      ]
     },
     {
       "name": "DP Technology",
-      "position": "Algorithm Researcher",
+      "position": "Algorithm Researcher — ML Infrastructure & Production Deployment",
       "startDate": "2022-06-01",
       "endDate": "2022-09-01",
-      "summary": "Maintained and promoted open-source community focusing on DeePMD-kit and Dflow",
-      "highlights": ["DeePMD-kit: Neural Network Potential", "Dflow: scientific calculation workflow"]
-    },
-    {
-      "name": "Hebei University of Technology",
-      "position": "Undergraduate Student Researcher",
-      "startDate": "2018-09-01",
-      "endDate": "2022-06-30",
-      "summary": "Explored heterogeneous catalytic process using multi-scale simulations and machine learning",
-      "highlights": ["CO2RR on Cu-based catalysts", "Bifunctional oxygen electrodes", "Machine Learning in heterogeneous catalysis"]
+      "summary": "ML infrastructure and production deployment for neural network potentials.",
+      "highlights": [
+        "Built and shipped production ML pipelines integrating neural network potentials with molecular dynamics engines (Python, C++), deployed on cloud HPC infrastructure",
+        "Developed robust, reusable software tools adopted by 200+ researchers across academia and industry"
+      ]
     }
   ],
-
   "education": [
     {
       "institution": "University of California, Los Angeles",
-      "location": "Los Angeles, CA, US",
+      "location": "Los Angeles, CA",
       "area": "Chemical Engineering",
       "studyType": "Ph.D.",
       "startDate": "2022-09-01",
-      "endDate": "now",
-      "GPA": "3.7"
+      "endDate": "2027-06-01",
+      "score": "Expected Jun 2027"
     },
     {
       "institution": "University of California, Los Angeles",
-      "location": "Los Angeles, CA, US",
+      "location": "Los Angeles, CA",
       "area": "Chemical Engineering",
       "studyType": "M.S.",
       "startDate": "2022-09-01",
-      "endDate": "2024-03-30",
-      "GPA": "3.7"
-    }, 
+      "endDate": "2024-03-30"
+    },
     {
       "institution": "Hebei University of Technology",
       "location": "Tianjin, China",
-      "area": "Chemical Safety Engineering",
+      "area": "Chemical Engineering",
       "studyType": "B.S.",
       "startDate": "2018-09-01",
-      "endDate": "2022-06-30",
-      "GPA": "3.5"
+      "endDate": "2022-06-30"
     }
   ],
   "awards": [
@@ -71,48 +92,87 @@
       "awarder": "University of California, Los Angeles"
     },
     {
+      "title": "Second Prize, College Students Innovation and Entrepreneurship",
+      "date": "2022-06-01",
+      "awarder": "Hebei Province, China"
+    },
+    {
       "title": "Outstanding Award for Innovation and Entrepreneurship of College Students",
       "date": "2021-11-01",
-      "awarder": "Hebei University of Technology"
+      "awarder": "Tianjin, China"
+    },
+    {
+      "title": "Youth Star",
+      "date": "2020-06-01",
+      "awarder": "Hebei Province, China"
     }
   ],
   "certificates": [
-    {
-      "name": "Python for Everybody Specialization",
-      "date": "2024-05-01",
-      "issuer": "University of Michigan",
-      "url": "https://www.coursera.org/account/accomplishments/specialization/Y8NBRD387YEZ",
-      "icon": "fa-solid fa-location-dot"
-    },
     {
       "name": "Introduction to Generative AI Learning Path Specialization",
       "date": "2024-05-01",
       "issuer": "Google Cloud Training",
       "url": "https://www.coursera.org/account/accomplishments/specialization/2RUNQZV2GYKB",
-      "icon": "fa-solid fa-tag"
+      "icon": "fa-solid fa-robot"
+    },
+    {
+      "name": "Python for Everybody Specialization",
+      "date": "2024-05-01",
+      "issuer": "University of Michigan",
+      "url": "https://www.coursera.org/account/accomplishments/specialization/Y8NBRD387YEZ",
+      "icon": "fa-brands fa-python"
     }
   ],
   "skills": [
     {
-      "name": "Computational Chemistry",
-      "level": "Master",
-      "icon": "fa-solid fa-hashtag",
+      "name": "ML Frameworks & Models",
+      "level": "Advanced",
+      "icon": "fa-solid fa-brain",
       "keywords": [
-        "First-principle calculations",
-        "Molecular Dynamics",
-        "COMSOL Multi-physics",
-        "Machine Learning"
+        "PyTorch",
+        "scikit-learn",
+        "HuggingFace Transformers",
+        "Graph Neural Networks (GNN)",
+        "Transformer Architectures",
+        "Diffusion Models",
+        "Generative Models",
+        "ML Interatomic Potentials"
       ]
     },
     {
-      "name": "Programming Languages",
-      "level": "Master",
-      "icon": "fa-solid fa-hashtag",
+      "name": "LLM & Agentic Systems",
+      "level": "Advanced",
+      "icon": "fa-solid fa-microchip",
       "keywords": [
-        "Java",
+        "RAG (Retrieval-Augmented Generation)",
+        "SFT & RLHF Fine-tuning",
+        "Agentic Pipelines",
+        "Prompt Engineering",
+        "LangChain"
+      ]
+    },
+    {
+      "name": "MLOps & Engineering",
+      "level": "Proficient",
+      "icon": "fa-solid fa-code",
+      "keywords": [
+        "End-to-End ML Pipelines",
+        "A/B Testing",
+        "REST APIs",
+        "Cloud HPC",
         "Python",
-        "MATLAB",
-        "Shell scripting"
+        "C++"
+      ]
+    },
+    {
+      "name": "Scientific Computing",
+      "level": "Advanced",
+      "icon": "fa-solid fa-flask",
+      "keywords": [
+        "DFT (Density Functional Theory)",
+        "Molecular Dynamics",
+        "Microkinetic Modeling",
+        "Uncertainty Quantification"
       ]
     }
   ],
