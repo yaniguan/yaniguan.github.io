@@ -30,6 +30,13 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/cv/";
           },
+        },{id: "nav-photography",
+          title: "Photography",
+          description: "Moments from hikes, road trips, and travels.",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/photography/";
+          },
         },{id: "news-started-phd-journey-at-ucla",
           title: 'Started PhD journey at UCLA',
           description: "",
@@ -41,6 +48,9 @@ ninja.data = [{
           description: "",
           section: "News",},{id: "news-received-dissertation-year-award-at-ucla",
           title: 'Received Dissertation Year Award at UCLA',
+          description: "",
+          section: "News",},{id: "news-excited-to-join-ses-ai-corp-as-a-research-intern-for-six-months",
+          title: 'Excited to join SES AI Corp as a Research Intern for six months!...',
           description: "",
           section: "News",},{
         id: 'social-email',
