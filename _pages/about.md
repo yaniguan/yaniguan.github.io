@@ -9,7 +9,8 @@ profile:
   image: yaniguan.jpeg
   image_circular: false # crops the image to make it circular
   more_info: >
-    <p>Chemistry & Biochemistry, UCLA</p>
+    <p>Chemical and Biomolecular Engineering</p>
+    <p>University of California, Los Angeles</p>
     <p>Los Angeles, CA 90095</p>
 
 selected_papers: true # includes a list of papers marked as "selected={true}"
