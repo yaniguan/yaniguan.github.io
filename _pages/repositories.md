@@ -1,7 +1,7 @@
 ---
 layout: page
-permalink: /repositories/
-title: Projects
+permalink: /software/
+title: Software
 description: Open-source work in LLMs, agentic AI, and computational chemistry.
 nav: true
 nav_order: 4

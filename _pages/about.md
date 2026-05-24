@@ -86,7 +86,8 @@ Hi, I'm Yani — a Ph.D. candidate in Chemical and Biomolecular Engineering at U
 
   <div class="exp-item">
     <div class="exp-header">
-      <span class="exp-org">Undergraduate Research</span>
+      <span class="exp-org">Hebei University of Technology</span>
+      <span class="exp-role">· Undergraduate Research</span>
       <span class="exp-date">2018 – 2022</span>
     </div>
     <ul class="exp-body">
