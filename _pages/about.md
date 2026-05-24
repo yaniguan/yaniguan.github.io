@@ -25,28 +25,6 @@ latest_posts:
 
 Hi, I'm Yani — a Ph.D. candidate in Chemical and Biomolecular Engineering at UCLA, working at the intersection of **computational chemistry**, **machine learning**, and **agentic AI**.
 
-<div class="about-chips">
-  <div class="chip-row">
-    <span class="chip-section-label">Research</span>
-    <span class="achip">Computational Electrochemistry</span>
-    <span class="achip">Molecular Dynamics</span>
-    <span class="achip">Electrocatalysis</span>
-    <span class="achip">Electrode Degradation</span>
-    <span class="achip">ML for Chemistry</span>
-    <span class="achip">LLMs &amp; Agentic AI</span>
-  </div>
-  <div class="chip-row" style="margin-top:0.5rem">
-    <span class="chip-section-label">Tools</span>
-    <span class="achip achip-tool">Python</span>
-    <span class="achip achip-tool">PyTorch</span>
-    <span class="achip achip-tool">VASP / CP2K</span>
-    <span class="achip achip-tool">LAMMPS</span>
-    <span class="achip achip-tool">LangChain</span>
-    <span class="achip achip-tool">HPC / Slurm</span>
-    <span class="achip achip-tool">Git</span>
-  </div>
-</div>
-
 <style>
 .about-chips { margin: 1rem 0 0.5rem; }
 .chip-row { display: flex; flex-wrap: wrap; align-items: center; gap: 0.35rem; }
@@ -74,7 +52,6 @@ Hi, I'm Yani — a Ph.D. candidate in Chemical and Biomolecular Engineering at U
   color: var(--global-text-color, #444);
   border: 1px solid rgba(80,80,80,0.18);
 }
-</style>
 .exp-list {
   clear: right;
   margin-top: 1.5rem;
@@ -97,6 +74,28 @@ Hi, I'm Yani — a Ph.D. candidate in Chemical and Biomolecular Engineering at U
 .exp-body { font-size: 0.85rem; color: var(--global-text-color, #444); margin: 0; line-height: 1.6; }
 .exp-body li { margin-bottom: 0.15rem; }
 </style>
+
+<div class="about-chips">
+  <div class="chip-row">
+    <span class="chip-section-label">Research</span>
+    <span class="achip">Computational Electrochemistry</span>
+    <span class="achip">Molecular Dynamics</span>
+    <span class="achip">Electrocatalysis</span>
+    <span class="achip">Electrode Degradation</span>
+    <span class="achip">ML for Chemistry</span>
+    <span class="achip">LLMs &amp; Agentic AI</span>
+  </div>
+  <div class="chip-row" style="margin-top:0.5rem">
+    <span class="chip-section-label">Tools</span>
+    <span class="achip achip-tool">Python</span>
+    <span class="achip achip-tool">PyTorch</span>
+    <span class="achip achip-tool">VASP / CP2K</span>
+    <span class="achip achip-tool">LAMMPS</span>
+    <span class="achip achip-tool">LangChain</span>
+    <span class="achip achip-tool">HPC / Slurm</span>
+    <span class="achip achip-tool">Git</span>
+  </div>
+</div>
 
 <div class="exp-list">
 
