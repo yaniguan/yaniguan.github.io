@@ -30,13 +30,6 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/cv/";
           },
-        },{id: "nav-photography",
-          title: "Photography",
-          description: "Moments from hikes, road trips, and travels.",
-          section: "Navigation",
-          handler: () => {
-            window.location.href = "/photography/";
-          },
         },{id: "news-started-phd-journey-at-ucla",
           title: 'Started PhD journey at UCLA',
           description: "",
