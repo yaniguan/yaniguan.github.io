@@ -16,12 +16,12 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/publications/";
           },
-        },{id: "nav-projects",
-          title: "Projects",
+        },{id: "nav-software",
+          title: "Software",
           description: "Open-source work in LLMs, agentic AI, and computational chemistry.",
           section: "Navigation",
           handler: () => {
-            window.location.href = "/repositories/";
+            window.location.href = "/software/";
           },
         },{id: "news-started-phd-journey-at-ucla",
           title: 'Started PhD journey at UCLA',
