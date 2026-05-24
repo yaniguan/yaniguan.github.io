@@ -8,6 +8,11 @@ nav_order: 2
 ---
 
 <style>
+/* Hide topic labels on the full publications list */
+.publications .col-sm-2.abbr abbr.badge,
+.publications .col-sm-2.abbr .badge {
+  display: none;
+}
 .pub-header {
   display: flex;
   flex-wrap: wrap;

@@ -78,22 +78,16 @@ Hi, I'm Yani — a Ph.D. candidate in Chemical and Biomolecular Engineering at U
 <div class="about-chips">
   <div class="chip-row">
     <span class="chip-section-label">Research</span>
-    <span class="achip">Computational Electrochemistry</span>
-    <span class="achip">Molecular Dynamics</span>
-    <span class="achip">Electrocatalysis</span>
-    <span class="achip">Electrode Degradation</span>
-    <span class="achip">ML for Chemistry</span>
-    <span class="achip">LLMs &amp; Agentic AI</span>
+    <span class="achip">Energy Storage</span>
+    <span class="achip">Electrochemical Systems</span>
+    <span class="achip">LLM &amp; Agentic Workflow</span>
   </div>
   <div class="chip-row" style="margin-top:0.5rem">
-    <span class="chip-section-label">Tools</span>
-    <span class="achip achip-tool">Python</span>
-    <span class="achip achip-tool">PyTorch</span>
-    <span class="achip achip-tool">VASP / CP2K</span>
-    <span class="achip achip-tool">LAMMPS</span>
-    <span class="achip achip-tool">LangChain</span>
-    <span class="achip achip-tool">HPC / Slurm</span>
-    <span class="achip achip-tool">Git</span>
+    <span class="chip-section-label">Methods</span>
+    <span class="achip achip-tool">DFT / MD Simulation</span>
+    <span class="achip achip-tool">Machine Learning</span>
+    <span class="achip achip-tool">Agentic AI</span>
+    <span class="achip achip-tool">HPC Workflows</span>
   </div>
 </div>
 
