@@ -6,7 +6,7 @@ subtitle: Ph.D. Candidate · <a href='https://sautet.chem.ucla.edu/' target='_bl
 
 profile:
   align: right
-  image: yaniguan.jpeg
+  image: profile.jpg
   image_circular: false
   more_info: >
     <p>Los Angeles, CA 90034</p>
