@@ -7,3 +7,22 @@
 
 "Vision":
   color: "#009f36"
+
+"Ag Amination":
+  color: "#2a7ab5"
+"EDLC":
+  color: "#3a8fcc"
+"Cu Dissolution":
+  color: "#1a6fa0"
+"DFT-KMC":
+  color: "#2a9d8f"
+"CO2 DFT":
+  color: "#3a7d44"
+"ML for Catalysis":
+  color: "#d4701f"
+"Li-S Battery":
+  color: "#b84c1a"
+"Zn-Air Battery":
+  color: "#2d7a3a"
+"Bifunc. Catalyst":
+  color: "#6b5e9c"
