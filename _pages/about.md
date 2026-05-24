@@ -25,7 +25,56 @@ latest_posts:
 
 Hi, I'm Yani — a Ph.D. candidate in Chemical and Biomolecular Engineering at UCLA, working at the intersection of **computational chemistry**, **machine learning**, and **agentic AI**.
 
+<div class="about-chips">
+  <div class="chip-row">
+    <span class="chip-section-label">Research</span>
+    <span class="achip">Computational Electrochemistry</span>
+    <span class="achip">Molecular Dynamics</span>
+    <span class="achip">Electrocatalysis</span>
+    <span class="achip">Electrode Degradation</span>
+    <span class="achip">ML for Chemistry</span>
+    <span class="achip">LLMs &amp; Agentic AI</span>
+  </div>
+  <div class="chip-row" style="margin-top:0.5rem">
+    <span class="chip-section-label">Tools</span>
+    <span class="achip achip-tool">Python</span>
+    <span class="achip achip-tool">PyTorch</span>
+    <span class="achip achip-tool">VASP / CP2K</span>
+    <span class="achip achip-tool">LAMMPS</span>
+    <span class="achip achip-tool">LangChain</span>
+    <span class="achip achip-tool">HPC / Slurm</span>
+    <span class="achip achip-tool">Git</span>
+  </div>
+</div>
+
 <style>
+.about-chips { margin: 1rem 0 0.5rem; }
+.chip-row { display: flex; flex-wrap: wrap; align-items: center; gap: 0.35rem; }
+.chip-section-label {
+  font-size: 0.68rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  color: var(--global-text-color-light, #999);
+  width: 4rem;
+  flex-shrink: 0;
+}
+.achip {
+  font-size: 0.75rem;
+  padding: 0.22em 0.7em;
+  border-radius: 4px;
+  font-weight: 500;
+  background: rgba(70,130,180,0.08);
+  color: var(--global-theme-color, #4682B4);
+  border: 1px solid rgba(70,130,180,0.22);
+  line-height: 1.5;
+}
+.achip-tool {
+  background: rgba(80,80,80,0.06);
+  color: var(--global-text-color, #444);
+  border: 1px solid rgba(80,80,80,0.18);
+}
+</style>
 .exp-list {
   clear: right;
   margin-top: 1.5rem;
