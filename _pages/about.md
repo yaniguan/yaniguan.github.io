@@ -24,10 +24,6 @@ announcements:
 latest_posts:
   enabled: false
 ---
-Hi, I'm Yani — thanks for stopping by!
+Hi, I'm Yani — a Ph.D. candidate in Chemical and Biomolecular Engineering at UCLA ([Sautet Group](https://sautet.chem.ucla.edu/)). I work at the intersection of **computational chemistry** and **machine learning**, with a recent focus on **large language models** and **agentic workflows** for scientific discovery.
 
-I'm a Ph.D. candidate in Chemical Engineering at UCLA ([Sautet Group](https://sautet.chem.ucla.edu/)), working at the intersection of **machine learning** and **computational chemistry**. I build end-to-end ML pipelines — GNNs, transformers, diffusion models — for molecular property prediction, and developed **ChatDFT**, an LLM-powered platform that automates quantum chemistry workflows via RAG, fine-tuning (SFT/RLHF), and HPC integration, cutting setup-to-results time by 70%.
-
-I'm currently on a six-month research internship at [SES AI Corp](https://www.ses.ai/), working on next-generation battery technology. Previously, I interned at [DP Technology](https://www.dp.tech/en) building neural network potentials used by 200+ researchers worldwide.
-
-My work spans electrochemical amination, ML for heterogeneous catalysis, and generative molecular design. Outside the lab, I enjoy hiking, road trips, photography, and a good book.
+Outside the lab, I enjoy hiking, road trips, photography, and a good book.
