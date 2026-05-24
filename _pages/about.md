@@ -7,31 +7,92 @@ subtitle: Ph.D. Candidate · <a href='https://sautet.chem.ucla.edu/' target='_bl
 profile:
   align: right
   image: yaniguan.jpeg
-  image_circular: false # crops the image to make it circular
+  image_circular: false
   more_info: >
     <p>Los Angeles, CA 90034</p>
 
-selected_papers: true # includes a list of papers marked as "selected={true}"
-social: true # includes social icons at the bottom of the page
+selected_papers: true
+social: true
 
 announcements:
-  enabled: true # includes a list of news items
-  scrollable: true # adds a vertical scroll bar if there are more than 3 news items
-  limit: # leave blank to include all the news in the `_news` folder
+  enabled: true
+  scrollable: true
+  limit:
 
 latest_posts:
   enabled: false
 ---
-Hi, I'm Yani — a Ph.D. candidate in Chemical and Biomolecular Engineering at UCLA. Here's a bit about my journey:
 
-**[SES AI Corp](https://www.ses.ai/) — Research Intern (2026)**
-I lead molecular dynamics (MD) simulations for advanced liquid-phase electrolyte systems, covering system construction, parameterization, and full-scale execution within the SES Molecular Universe project. I also develop and automate data-processing pipelines to improve workflow robustness and scalability, and perform in-depth analysis of structural (RDF, coordination), dynamic (diffusion, ion transport), and thermodynamic properties. On the infrastructure side, I manage the end-to-end simulation lifecycle on HPC resources and collaborate cross-functionally to translate simulation outputs into actionable engineering insights.
+Hi, I'm Yani — a Ph.D. candidate in Chemical and Biomolecular Engineering at UCLA, working at the intersection of **computational chemistry**, **machine learning**, and **agentic AI**.
 
-**[UCLA Sautet Group](https://sautet.chem.ucla.edu/) — Ph.D. Research**
-My doctoral work focuses on computational electrochemistry: modeling the electric double-layer capacitance (EDLC), copper dissolution mechanisms, and impurity reactivity at electrocatalytic interfaces. Alongside the core research, I explore AI-driven scientific tools — including [ChatDFT](https://github.com/yaniguan/ChatDFT), an LLM-powered agentic platform that automates quantum chemistry workflows, and [ChemVisionAgent](https://github.com/yaniguan/ChemVisionAgent), a multimodal agent for chemistry data extraction.
+<style>
+.exp-list { margin-top: 1.5rem; }
+.exp-item {
+  border-left: 3px solid var(--global-theme-color, #6C63FF);
+  padding: 0.1rem 0 0.1rem 1rem;
+  margin-bottom: 1.25rem;
+}
+.exp-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.4rem;
+  margin-bottom: 0.3rem;
+}
+.exp-org { font-weight: 700; color: var(--global-theme-color, #6C63FF); font-size: 0.95rem; }
+.exp-role { font-size: 0.85rem; color: var(--global-text-color, #333); font-weight: 500; }
+.exp-date { font-size: 0.78rem; color: var(--global-text-color-light, #999); margin-left: auto; }
+.exp-body { font-size: 0.85rem; color: var(--global-text-color, #444); margin: 0; line-height: 1.6; }
+.exp-body li { margin-bottom: 0.15rem; }
+</style>
 
-**[DP Technology](https://www.dp.tech/en) — Algorithm Researcher Intern**
-I worked on AI infrastructure for scientific computing workflows, building and deploying production ML pipelines for neural network potentials. I also contributed to open-source community operations and project management within the DeePMD ecosystem.
+<div class="exp-list">
 
-**Undergraduate Research**
-I developed multi-scale DFT-KMC models for catalytic reaction mechanisms and applied machine learning to heterogeneous catalysis. My experimental work included the design and characterization of bifunctional electrocatalysts for lithium-sulfur and zinc-air batteries.
+  <div class="exp-item">
+    <div class="exp-header">
+      <span class="exp-org"><a href="https://www.ses.ai/" style="color:inherit;text-decoration:none;">SES AI Corp</a></span>
+      <span class="exp-role">· Research Intern</span>
+      <span class="exp-date">2026</span>
+    </div>
+    <ul class="exp-body">
+      <li>MD simulations for liquid-phase electrolyte systems within the Molecular Universe project</li>
+      <li>Workflow automation & scalable data pipelines on HPC; structural, dynamic, and thermodynamic analysis</li>
+    </ul>
+  </div>
+
+  <div class="exp-item">
+    <div class="exp-header">
+      <span class="exp-org"><a href="https://sautet.chem.ucla.edu/" style="color:inherit;text-decoration:none;">UCLA Sautet Group</a></span>
+      <span class="exp-role">· Ph.D. Research</span>
+      <span class="exp-date">2022 – present</span>
+    </div>
+    <ul class="exp-body">
+      <li>Computational electrochemistry: EDLC modeling, Cu dissolution, impurity reactivity</li>
+      <li>AI for science: <a href="https://github.com/yaniguan/ChatDFT">ChatDFT</a> (LLM + HPC agentic platform) · <a href="https://github.com/yaniguan/ChemVisionAgent">ChemVisionAgent</a> (multimodal agent)</li>
+    </ul>
+  </div>
+
+  <div class="exp-item">
+    <div class="exp-header">
+      <span class="exp-org"><a href="https://www.dp.tech/en" style="color:inherit;text-decoration:none;">DP Technology</a></span>
+      <span class="exp-role">· Algorithm Researcher Intern</span>
+      <span class="exp-date">2022</span>
+    </div>
+    <ul class="exp-body">
+      <li>ML pipelines for neural network potentials; AI infrastructure for scientific computing workflows</li>
+      <li>Open-source community operations & project management (DeePMD ecosystem)</li>
+    </ul>
+  </div>
+
+  <div class="exp-item">
+    <div class="exp-header">
+      <span class="exp-org">Undergraduate Research</span>
+      <span class="exp-date">2018 – 2022</span>
+    </div>
+    <ul class="exp-body">
+      <li>DFT-KMC multi-scale modeling · ML for heterogeneous catalysis</li>
+      <li>Bifunctional electrocatalysts for Li-S and Zn-air batteries (computational + experimental)</li>
+    </ul>
+  </div>
+
+</div>
