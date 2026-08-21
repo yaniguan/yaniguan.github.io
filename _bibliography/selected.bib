@@ -3,6 +3,33 @@
 
 @string{aps = {American Physical Society,}}
 
+@article{guan2026ocsr,
+  title={Real Data Closes Synthetic-to-Real Gap in Optical Chemical Structure Recognition},
+  author={Guan, Yani and Dong, Dengpan and Wei, Zi and Luo, Shuang and Hannah, Dan C and Zhang, Yumin and Xu, Kang},
+  journal={arXiv preprint arXiv:2608.09100},
+  year={2026},
+  arxiv={2608.09100},
+  doi={10.48550/arXiv.2608.09100},
+  note={* Equal contribution. Vision-language models for image-to-SMILES: real labeled depictions, not more synthetic data, are what close the synthetic-to-real gap.},
+  abstract={Millions of chemical structures appear in patents and papers only as drawings. Optical chemical structure recognition (OCSR) appears nearly solved on synthetic images, but remains difficult on real documents: the starting recognizer Qwen2.5-VL-7B reaches over 91\% accuracy on synthetic images and below 16\% on the ACS, CLEF-IP and USPTO benchmarks. We fine-tuned 21 recognizers on mixtures of synthetically rendered structures and labeled real depictions from patents, journal figures and hand-drawn collections, varying the VLM base, the fraction of real training data, and the vision-tower adaptation strategy. Adding labeled real training images makes the largest difference: for Qwen2.5-VL, ACS exact match rises from 0.15 with no real data to 0.37 at 9.5\% real data and 0.46 at 50.2\%. A vision LoRA does not help Qwen at all (+0.00, paired p = 1.00), substantially helps InternVL3-8B (+22.8 to +34.6 pt) and modestly helps GLM-4.1V-9B, so its value depends on the base model. The strongest model reaches 0.96 exact match on clean renders and 0.49, 0.65, 0.84 and 0.76 on ACS, CLEF-IP, UOB and USPTO. Differences between bases are largest without real data (0.21) and shrink at 70\% real data (0.06), while their ranking also changes -- base model and real-data mixture must therefore be selected together.},
+  preview={ocsr_real_data.png},
+  abbr={OCSR VLM},
+  selected={true}
+}
+
+@article{dong2026htmd,
+  title={High-throughput Molecular Dynamics Simulation on an AI-powered Platform},
+  author={Dong, Dengpan and Guan, Yani and Luo, Shuang and Ding, Jingxuan and Hannah, Dan C and Zhang, Yumin and Hu, Qichao and Xu, Kang},
+  journal={ChemRxiv preprint},
+  year={2026},
+  doi={10.26434/chemrxiv.15007400/v1},
+  note={MU-PFF: a machine-learned many-body polarizable force field plus automated system building and trajectory analysis, taking an electrolyte formulation from SMILES to predicted properties without manual parameterization.},
+  abstract={We present an end-to-end, AI-powered platform for high-throughput molecular dynamics (MD) simulation of liquid electrolytes and complex formulations. At its core is MU-PFF, a many-body polarizable force field whose functional form follows the well-validated exp-6 polarizable model, but whose parameters are produced entirely by an automated machine-learning pipeline rather than by hand. We assemble a quantum-chemistry dataset of roughly one million molecules and molecular complexes and train a single message-passing neural network to predict the complete parameter set -- partial charges, atomic polarizabilities, bonded (bond, bend, torsion) terms, and the repulsion-dispersion parameters -- directly from molecular structure. Parameterization that traditionally takes weeks of expert effort per chemistry is reduced to a single forward pass, yielding a universal polarizable force field that transfers across solvents, salts and additives. Coupled to automated system building and trajectory analysis, the platform reproduces experimental electrolyte properties with high fidelity: density error below 0.02 g/cm3, lithium-electrolyte ionic conductivity of approximately 1.5 mS/cm in quantitative agreement with measurement, and salt/additive solubility predicted to within 10\%. We further demonstrate extended capabilities, including additive solubility by thermodynamic integration and electric-double-layer simulation under applied potential.},
+  preview={mu_md_platform.png},
+  abbr={MU-PFF MD},
+  selected={true}
+}
+
 @article{guan2026amination,
   title={Electrochemical Amination of Acetone using Ag as Cathode: Mechanism and Role of Pb Impurities for Hydrogen Transfer},
   author={Guan, Yani and K{\"u}mper, Justus and Cuomo, Angelina and Kumari, Simran and M{\"u}rtz, Sonja D and Nikolaienko, Pavlo and Mayrhofer, Karl and Palkovits, Regina and Sautet, Philippe},

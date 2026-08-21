@@ -23,7 +23,7 @@ latest_posts:
   enabled: false
 ---
 
-Hi, I'm Yani — a Ph.D. candidate in Chemical and Biomolecular Engineering at UCLA, working at the intersection of **computational chemistry**, **machine learning**, and **agentic AI**.
+Hi, I'm Yani — a Ph.D. candidate in Chemical and Biomolecular Engineering at UCLA, working at the intersection of **computational chemistry**, **molecular foundation models**, and **agentic AI**.
 
 <style>
 .about-chips { margin: 1rem 0 0.5rem; }
@@ -78,16 +78,18 @@ Hi, I'm Yani — a Ph.D. candidate in Chemical and Biomolecular Engineering at U
 <div class="about-chips">
   <div class="chip-row">
     <span class="chip-section-label">Research</span>
-    <span class="achip">Energy Storage</span>
-    <span class="achip">Electrochemical Systems</span>
-    <span class="achip">LLM &amp; Agentic Workflow</span>
+    <span class="achip">Electrolytes &amp; Energy Storage</span>
+    <span class="achip">Molecular Foundation Models</span>
+    <span class="achip">Multimodal AI for Chemistry</span>
+    <span class="achip">Agentic AI &amp; Co-Scientists</span>
   </div>
   <div class="chip-row" style="margin-top:0.5rem">
     <span class="chip-section-label">Methods</span>
-    <span class="achip achip-tool">DFT / MD Simulation</span>
-    <span class="achip achip-tool">Machine Learning</span>
-    <span class="achip achip-tool">Agentic AI</span>
-    <span class="achip achip-tool">HPC Workflows</span>
+    <span class="achip achip-tool">Pretraining &amp; Post-training (LoRA / SFT)</span>
+    <span class="achip achip-tool">VLM &amp; Multimodal RAG</span>
+    <span class="achip achip-tool">Polarizable-FF MD (OpenMM)</span>
+    <span class="achip achip-tool">DFT</span>
+    <span class="achip achip-tool">HPC / Kubernetes Workflows</span>
   </div>
 </div>
 
@@ -100,9 +102,10 @@ Hi, I'm Yani — a Ph.D. candidate in Chemical and Biomolecular Engineering at U
       <span class="exp-date">2026</span>
     </div>
     <ul class="exp-body">
-      <li><strong>Workflow & Platform Engineering:</strong> build, scale, and automate data-processing pipelines for molecular simulation workflows within the Molecular Universe (MU) platform</li>
-      <li><strong>Advanced Data Analysis:</strong> extract structural (RDF, coordination), dynamic (diffusion, ion transport), and thermodynamic properties to guide material discovery</li>
-      <li><strong>HPC Management:</strong> end-to-end simulation lifecycle on HPC resources — optimization, troubleshooting, and cross-functional translation of data into engineering insights</li>
+      <li><strong>Molecular foundation models:</strong> continued pretraining of open-source molecular backbones on a ~150M-molecule corpus with chemistry-aware tokenization — learning molecule- and electrolyte-level representations from structure, conformers, and MD trajectories</li>
+      <li><strong>Post-training &amp; alignment:</strong> LoRA SFT of Qwen3.6-27B and GLM-5.2 / GLM-4.7 into tool-using electrolyte and cell <em>co-scientists</em> — latent-conditioned prefixes, reasoning-trace distillation, leakage-safe benchmarks, and default-deny governed job submission</li>
+      <li><strong>Multimodal chemistry:</strong> fine-tuned VLMs for image→SMILES recognition (<em>VERDICT</em> consensus engine) and a multimodal molecule RAG retrieving across text, figures, and multi-scale simulation structures</li>
+      <li><strong>High-throughput MD:</strong> ML-parameterized polarizable force fields (MU-PFF) and OpenMM pipelines for ~40K Li/Na electrolyte simulations on HPC/Kubernetes — RDF and coordination, diffusion and conductivity, solubility by thermodynamic integration</li>
     </ul>
   </div>
 
