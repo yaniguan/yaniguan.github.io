@@ -87,7 +87,8 @@ Hi, I'm Yani — a Ph.D. candidate in Chemical and Biomolecular Engineering at U
     <span class="chip-section-label">Methods</span>
     <span class="achip achip-tool">Pretraining &amp; Post-training (LoRA / SFT)</span>
     <span class="achip achip-tool">VLM &amp; Multimodal RAG</span>
-    <span class="achip achip-tool">Polarizable-FF MD (OpenMM)</span>
+    <span class="achip achip-tool">Polarizable-FF MD &amp; FF Fitting</span>
+    <span class="achip achip-tool">Trajectory World Models</span>
     <span class="achip achip-tool">DFT</span>
     <span class="achip achip-tool">HPC / Kubernetes Workflows</span>
   </div>
@@ -102,10 +103,11 @@ Hi, I'm Yani — a Ph.D. candidate in Chemical and Biomolecular Engineering at U
       <span class="exp-date">2026</span>
     </div>
     <ul class="exp-body">
-      <li><strong>Molecular foundation models:</strong> continued pretraining of open-source molecular backbones on a ~150M-molecule corpus with chemistry-aware tokenization — learning molecule- and electrolyte-level representations from structure, conformers, and MD trajectories</li>
-      <li><strong>Post-training &amp; alignment:</strong> LoRA SFT of Qwen3.6-27B and GLM-5.2 / GLM-4.7 into tool-using electrolyte and cell <em>co-scientists</em> — latent-conditioned prefixes, reasoning-trace distillation, leakage-safe benchmarks, and default-deny governed job submission</li>
-      <li><strong>Multimodal chemistry:</strong> fine-tuned VLMs for image→SMILES recognition (<em>VERDICT</em> consensus engine) and a multimodal molecule RAG retrieving across text, figures, and multi-scale simulation structures</li>
-      <li><strong>High-throughput MD:</strong> ML-parameterized polarizable force fields (MU-PFF) and OpenMM pipelines for ~40K Li/Na electrolyte simulations on HPC/Kubernetes — RDF and coordination, diffusion and conductivity, solubility by thermodynamic integration</li>
+      <li><strong>Molecular foundation models:</strong> continued pretraining, post-training, and alignment of open-source 2D/3D molecular backbones on a ~150M-molecule corpus — steering a general-chemistry foundation toward <em>electrolyte-aware</em> molecule and property representations</li>
+      <li><strong>Multimodal chemistry:</strong> fine-tuned VLMs for optical chemical structure recognition (image&rarr;SMILES) with the <em>VERDICT</em> multi-model consensus engine, a multimodal molecule RAG retrieving across text, figures, and structures, and a literature-mining pipeline that builds the VLM SFT corpus</li>
+      <li><strong>Electrolyte MD:</strong> polarizable force-field fitting and benchmarking for Na-ion chemistries, plus Li-ion electrolyte MD on HPC/Kubernetes — structure and coordination, transport, and solvation thermodynamics</li>
+      <li><strong>Trajectory representation learning:</strong> a three-head encoder over MD trajectories with latent-space pretraining objectives and a hierarchical frames&rarr;center-of-mass&rarr;atom decoder — a <em>world model</em> for microscopic molecular motion</li>
+      <li><strong>Cell co-scientist:</strong> reasoning traces distilled from multi-scale cell DOE simulations, aligned with multimodal evidence and contrastive learning <em>across</em> scales, then used to fine-tune tool-using electrolyte and cell <em>co-scientists</em> (LoRA SFT of Qwen3.6-27B and GLM-5.2 / GLM-4.7) with leakage-safe benchmarks and default-deny governed job submission</li>
     </ul>
   </div>
 
