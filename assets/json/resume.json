@@ -143,37 +143,19 @@
       "name": "LLM & Agentic Systems",
       "level": "Advanced",
       "icon": "fa-solid fa-microchip",
-      "keywords": [
-        "RAG (Retrieval-Augmented Generation)",
-        "SFT & RLHF Fine-tuning",
-        "Agentic Pipelines",
-        "Prompt Engineering",
-        "LangChain"
-      ]
+      "keywords": ["RAG (Retrieval-Augmented Generation)", "SFT & RLHF Fine-tuning", "Agentic Pipelines", "Prompt Engineering", "LangChain"]
     },
     {
       "name": "MLOps & Engineering",
       "level": "Proficient",
       "icon": "fa-solid fa-code",
-      "keywords": [
-        "End-to-End ML Pipelines",
-        "A/B Testing",
-        "REST APIs",
-        "Cloud HPC",
-        "Python",
-        "C++"
-      ]
+      "keywords": ["End-to-End ML Pipelines", "A/B Testing", "REST APIs", "Cloud HPC", "Python", "C++"]
     },
     {
       "name": "Scientific Computing",
       "level": "Advanced",
       "icon": "fa-solid fa-flask",
-      "keywords": [
-        "DFT (Density Functional Theory)",
-        "Molecular Dynamics",
-        "Microkinetic Modeling",
-        "Uncertainty Quantification"
-      ]
+      "keywords": ["DFT (Density Functional Theory)", "Molecular Dynamics", "Microkinetic Modeling", "Uncertainty Quantification"]
     }
   ],
   "languages": [
