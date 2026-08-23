@@ -1,0 +1,23 @@
+---
+layout: default
+---
+{% comment %}
+  A quiet list/content page that reuses the landing page's typography: a title,
+  an optional lede, then whatever the page writes. Set `page_class` in the front
+  matter to opt into page-specific styling (e.g. `list-page`).
+{% endcomment %}
+<div class="post about-page {{ page.page_class }}">
+  <header class="page-head">
+    {% if page.eyebrow %}
+      <p class="page-eyebrow">
+        <a href="{{ page.eyebrow_url | default: '/' | relative_url }}">{{ page.eyebrow }}</a>
+      </p>
+    {% endif %}
+    <h1 class="page-title">{{ page.title }}</h1>
+    {% if page.description %}
+      <p class="page-lede">{{ page.description }}</p>
+    {% endif %}
+  </header>
+
+  <article class="about-body">{{ content }}</article>
+</div>

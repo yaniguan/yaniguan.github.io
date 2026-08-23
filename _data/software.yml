@@ -1,0 +1,79 @@
+# Software listed on /publications/.
+#
+# To add a project: append an item below. `group` must match one of the group ids
+# in `groups`; `url` and `stack` are optional. Keep descriptions to what the code
+# actually does today.
+
+groups:
+  - id: systems
+    title: Systems
+  - id: tools
+    title: Tools & experiments
+
+items:
+  - name: VERDICT
+    group: systems
+    tagline: verified ensemble recognition and decoding for image-to-chemical transcription
+    description: >
+      A consensus optical chemical structure recognition service: four independent
+      recognizers — DECIMER, MolScribe, MolNexTR and a fine-tuned GLM-4.1V — vote by
+      molecular identity (InChIKey), and the selected structure must additionally survive
+      chemical parsing and an image round-trip before it is accepted. Returns one
+      canonical SMILES with a confidence tier, an explicit abstention path, and a
+      per-engine audit trace; ships with a Chrome extension that turns any molecule
+      drawing on a page into a structure lookup. On ACS figures the four-engine quorum
+      accepts 88.5% of crops at 86.2% precision on accepted answers.
+    stack: Python · PyTorch · RDKit · HTTP service (per-engine workers) · Chrome extension
+
+  - name: Molecule multimodal RAG
+    group: systems
+    tagline: retrieval across text, figures, and multi-scale simulation
+    description: >
+      A molecular knowledge graph that treats depictions and simulations as first-class
+      retrieval modalities alongside text. Literature full text and figures are harvested,
+      segmented and passed through OCSR, so every record carries a structure keyed on its
+      parent InChIKey together with the DOI, figure, crop and engine votes that produced
+      it. Retrieval combines semantic text search, structure-similarity and exact-InChIKey
+      lookup, and structural retrieval over multi-scale simulation records — DFT properties
+      and MD trajectory observables — which is what lets a literature molecule be joined to
+      the formulations it appears in.
+    stack: Python · RDKit · OPSIN · SQLite/FTS5 hybrid retrieval · graph expansion
+
+  - name: ChatDFT
+    group: systems
+    url: https://github.com/yaniguan/ChatDFT
+    tagline: LLM + HPC agentic platform for quantum-chemistry workflows
+    description: >
+      An agent system that turns a natural-language request into a complete DFT campaign:
+      intent extraction, retrieval-augmented planning, input generation, HPC job
+      scheduling, and result interpretation, with structured evaluation loops around each
+      stage.
+    stack: Python · LLM agents · RAG · REST API · HPC schedulers
+
+  - name: ChemVisionAgent
+    group: systems
+    url: https://github.com/yaniguan/ChemVisionAgent
+    tagline: multimodal agent for chemistry data extraction
+    description: >
+      Extracts structured chemical data — molecules, conditions and measurements — from
+      figures, tables and scanned documents, pairing vision models with rule-based
+      chemical validation.
+    stack: Python · vision-language models · RDKit
+
+  - name: hpc_monitor
+    group: tools
+    url: https://github.com/yaniguan/hpc_monitor
+    tagline: real-time dashboard for HPC job queues and resource utilization
+    stack: Python · Slurm
+
+  - name: bookmark_with_extensions
+    group: tools
+    url: https://github.com/yaniguan/bookmark_with_extensions
+    tagline: Chrome extension for bookmark management
+    stack: JavaScript · Chrome extension
+
+  - name: ChatBot
+    group: tools
+    url: https://github.com/yaniguan/ChatBot
+    tagline: conversational AI chatbot project
+    stack: Python

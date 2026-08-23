@@ -4,7 +4,7 @@
 
 title: Yani Guan Homepage # the website title (if blank, full name will be used instead)
 first_name: Yani
-middle_name: 
+middle_name:
 last_name: Guan
 email: yaniguan@ucla.edu
 description: > # the ">" symbol means to ignore newlines until "footer_text:"
@@ -27,8 +27,8 @@ back_to_top: true # set to false to disable the back to top button
 # Theme
 # -----------------------------------------------------------------------------
 # code highlighter theme
-highlight_theme_light: github   # https://github.com/jwarby/jekyll-pygments-themes
-highlight_theme_dark: native    # https://github.com/jwarby/jekyll-pygments-themes
+highlight_theme_light: github # https://github.com/jwarby/jekyll-pygments-themes
+highlight_theme_dark: native # https://github.com/jwarby/jekyll-pygments-themes
 
 # repo color theme
 repo_theme_light: default # https://github.com/anuraghazra/github-readme-stats/blob/master/themes/README.md
@@ -92,7 +92,7 @@ bing_site_verification: # out your bing-site-verification ID (Bing Webmaster)
 
 blog_name: notes # blog_name will be displayed in your blog page
 blog_description: notes on computational chemistry, AI for Science, and research
-permalink: /blog/:year/:title/
+permalink: /notes/:title/ # short write-ups live at /notes/, listed by _pages/notes.md
 lsi: false # produce an index for related posts
 
 # Pagination

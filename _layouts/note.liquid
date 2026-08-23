@@ -1,0 +1,23 @@
+---
+layout: default
+---
+{% comment %}
+  A single short write-up. Deliberately thinner than the blog `post` layout: no
+  tag chips, no comments, no related-post grid — just the piece and a way back.
+{% endcomment %}
+<div class="post about-page">
+  <header class="page-head">
+    <p class="page-eyebrow"><a href="{{ '/notes/' | relative_url }}">Notes</a></p>
+    <h1 class="page-title">{{ page.title }}</h1>
+    <p class="page-meta">
+      {{ page.date | date: '%B %-d, %Y' }}
+      {%- if page.description %} · {{ page.description }}{% endif -%}
+    </p>
+  </header>
+
+  <article class="about-body note-body">{{ content }}</article>
+
+  <p class="about-more" style="margin-top: 2.5rem">
+    <a href="{{ '/notes/' | relative_url }}">All notes</a>
+  </p>
+</div>

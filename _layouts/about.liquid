@@ -73,16 +73,10 @@ layout: default
       </section>
     {% endif %}
 
-    <!-- News -->
-    {% if page.announcements and page.announcements.enabled %}
-      <section class="about-section">
-        <h2 class="about-section-title">News</h2>
-        {% include news.liquid limit=true %}
-        <p class="about-more">
-          <a href="{{ '/news/' | relative_url }}">All news</a>
-        </p>
-      </section>
-    {% endif %}
+    {% comment %}
+      News is not rendered here: the page places it itself, between Research and
+      Experience. `page.announcements.limit` still drives how many rows show.
+    {% endcomment %}
 
     <!-- Latest posts -->
     {% if page.latest_posts and page.latest_posts.enabled %}
