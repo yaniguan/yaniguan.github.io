@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-Excited to join <a href="https://www.ses.ai/" target="_blank">SES AI Corp</a> as a Research Intern for six months!
+Excited to join <a href="https://www.ses.ai/" target="_blank">SES AI Corp</a> as an Applied Scientist Intern for six months!

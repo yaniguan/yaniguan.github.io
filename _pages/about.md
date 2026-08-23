@@ -2,7 +2,7 @@
 layout: about
 title: About
 permalink: /
-subtitle: Ph.D. Candidate, <a href='https://sautet.chem.ucla.edu/' target='_blank'>Sautet Group</a>, UCLA &nbsp;·&nbsp; Research Intern, <a href='https://www.ses.ai/' target='_blank'>SES AI</a>
+subtitle: Ph.D. Candidate, <a href='https://sautet.chem.ucla.edu/' target='_blank'>Sautet Group</a>, UCLA &nbsp;·&nbsp; Applied Scientist Intern, <a href='https://www.ses.ai/' target='_blank'>SES AI</a>
 tagline: >
   I work on both halves of AI for chemistry: the multi-scale simulations that
   produce the science, and the multimodal models, post-training and agents that
@@ -256,7 +256,7 @@ latest_posts:
       <div class="about-row-val">
         <div class="about-role">
           <a href="https://www.ses.ai/">SES AI</a>
-          <span>Research Intern</span>
+          <span>Applied Scientist Intern</span>
         </div>
         Molecular foundation models, multimodal chemistry models, electrolyte MD, and
         cell co-scientists for AI-driven battery development.
