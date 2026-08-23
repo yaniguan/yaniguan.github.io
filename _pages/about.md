@@ -13,7 +13,7 @@ profile:
   image: profile.jpg
   image_circular: false
   more_info: >
-    <a href="/outside/">Outside the lab</a> — cameras, long drives, Shakespeare.
+    <a href="/outside/">Outside the lab</a> — cameras, Shakespeare, long drives.
 
 selected_papers: true
 social: false
