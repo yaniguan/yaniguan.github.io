@@ -478,6 +478,12 @@ html[data-theme="dark"] .about-page {
   color: var(--about-ink-muted);
 }
 
+// A page that opens straight into gutter rows (e.g. /notes/) needs the breathing
+// room that a bordered .about-section would otherwise have supplied.
+.about-body > .about-rows:first-child {
+  margin-top: 2rem;
+}
+
 /* -----------------------------------------------------------------------------
  * Research figure — a hand-drawn map of how the pieces connect. The SVG scales
  * with its viewBox and scrolls sideways below its natural width instead of
