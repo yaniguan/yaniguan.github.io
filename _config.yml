@@ -290,6 +290,10 @@ scholar:
   query: "@*"
   group_by: year
   group_order: descending
+  # Sorted here rather than per-tag: jekyll-scholar 7.2 has no --sort_by switch,
+  # and an unknown switch silently drops every switch after it.
+  sort_by: "year, title"
+  order: "descending, ascending"
 
 # Display different badges withs stats for your publications
 # Customize badge behavior in _layouts/bib.liquid

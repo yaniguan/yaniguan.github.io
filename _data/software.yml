@@ -13,36 +13,32 @@ groups:
 items:
   - name: VERDICT
     group: systems
-    tagline: verified ensemble recognition and decoding for image-to-chemical transcription
+    tagline: Consensus optical chemical structure recognition, with a browser extension
     description: >
-      A consensus optical chemical structure recognition service: four independent
-      recognizers — DECIMER, MolScribe, MolNexTR and a fine-tuned GLM-4.1V — vote by
-      molecular identity (InChIKey), and the selected structure must additionally survive
-      chemical parsing and an image round-trip before it is accepted. Returns one
-      canonical SMILES with a confidence tier, an explicit abstention path, and a
-      per-engine audit trace; ships with a Chrome extension that turns any molecule
-      drawing on a page into a structure lookup. On ACS figures the four-engine quorum
-      accepts 88.5% of crops at 86.2% precision on accepted answers.
+      Four independent recognizers — DECIMER, MolScribe, MolNexTR and a fine-tuned
+      GLM-4.1V — vote by molecular identity (InChIKey), and the winner must still survive
+      chemical parsing and an image round-trip. The answer is one canonical SMILES with a
+      confidence tier, an explicit abstention path, and a per-engine audit trace. On ACS
+      figures the quorum accepts 88.5% of crops at 86.2% precision.
     stack: Python · PyTorch · RDKit · HTTP service (per-engine workers) · Chrome extension
 
   - name: Molecule multimodal RAG
     group: systems
-    tagline: retrieval across text, figures, and multi-scale simulation
+    tagline: Retrieval across text, figures, and multi-scale simulation
     description: >
-      A molecular knowledge graph that treats depictions and simulations as first-class
-      retrieval modalities alongside text. Literature full text and figures are harvested,
-      segmented and passed through OCSR, so every record carries a structure keyed on its
-      parent InChIKey together with the DOI, figure, crop and engine votes that produced
-      it. Retrieval combines semantic text search, structure-similarity and exact-InChIKey
-      lookup, and structural retrieval over multi-scale simulation records — DFT properties
-      and MD trajectory observables — which is what lets a literature molecule be joined to
-      the formulations it appears in.
+      A molecular knowledge graph in which depictions and simulations are first-class
+      retrieval modalities, not just text. Literature text and figures are harvested and
+      passed through OCSR, so every record carries a structure keyed on its parent
+      InChIKey plus the DOI, figure and engine votes behind it. Retrieval mixes semantic
+      search, structure similarity, exact-InChIKey lookup and structural search over DFT
+      and MD records — which is what joins a molecule in a paper to the formulations it
+      appears in.
     stack: Python · RDKit · OPSIN · SQLite/FTS5 hybrid retrieval · graph expansion
 
   - name: ChatDFT
     group: systems
     url: https://github.com/yaniguan/ChatDFT
-    tagline: LLM + HPC agentic platform for quantum-chemistry workflows
+    tagline: LLM and HPC agentic platform for quantum-chemistry workflows
     description: >
       An agent system that turns a natural-language request into a complete DFT campaign:
       intent extraction, retrieval-augmented planning, input generation, HPC job
@@ -53,7 +49,7 @@ items:
   - name: ChemVisionAgent
     group: systems
     url: https://github.com/yaniguan/ChemVisionAgent
-    tagline: multimodal agent for chemistry data extraction
+    tagline: Multimodal agent for chemistry data extraction
     description: >
       Extracts structured chemical data — molecules, conditions and measurements — from
       figures, tables and scanned documents, pairing vision models with rule-based
@@ -63,7 +59,7 @@ items:
   - name: hpc_monitor
     group: tools
     url: https://github.com/yaniguan/hpc_monitor
-    tagline: real-time dashboard for HPC job queues and resource utilization
+    tagline: Real-time dashboard for HPC job queues and resource utilization
     stack: Python · Slurm
 
   - name: bookmark_with_extensions
@@ -75,5 +71,5 @@ items:
   - name: ChatBot
     group: tools
     url: https://github.com/yaniguan/ChatBot
-    tagline: conversational AI chatbot project
+    tagline: Conversational AI chatbot project
     stack: Python
