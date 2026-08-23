@@ -5,8 +5,8 @@ title: Outside the lab
 eyebrow: Yani Guan
 eyebrow_url: /
 description: >
-  Two things I do when I am not in front of a terminal: carry a camera, and
-  drive a very long way to somewhere empty.
+  Three things I do when I am not in front of a terminal: carry a camera,
+  drive a very long way to somewhere empty, and read.
 nav: false
 ---
 
@@ -335,4 +335,154 @@ the fig-\* classes in \_sass/\_about.scss). Add a row or a shape, not a new layo
     </div>
 
   </div>
+</section>
+
+<section class="about-section">
+  <h2 class="about-section-title">Reading</h2>
+
+  <p class="lst-desc">
+    Mostly Shakespeare, and mostly the plays — I have worked through most of the
+    thirty-six collected in the First Folio. The whole shelf now travels as one
+    front-lit slab, which is the least romantic and by some distance the most
+    practical reading setup I have owned.
+  </p>
+
+  <figure class="about-figure">
+    <svg viewBox="0 0 900 240" role="img" aria-labelledby="read-title read-desc">
+      <title id="read-title">A Shakespeare shelf and the Kindle it is read on</title>
+      <desc id="read-desc">
+        The thirty-six plays of the 1623 First Folio drawn as book spines in the
+        collection’s own three sections — fourteen comedies, ten histories, twelve
+        tragedies — beside a front-lit Kindle.
+      </desc>
+
+      <text class="fig-h" x="10" y="20">THE FIRST FOLIO</text>
+      <rect class="fig-panel" x="10" y="30" width="700" height="190" rx="6" />
+
+      <g>
+        <rect class="fig-line" x="38.0" y="86.0" width="13" height="92" rx="2" />
+        <path class="fig-line-soft" d="M39.5,124.6 H49.5" />
+        <rect class="fig-line" x="54.0" y="100.0" width="11" height="78" rx="2" />
+        <path class="fig-line-soft" d="M55.5,125.0 H63.5" />
+        <path class="fig-line-soft" d="M55.5,153.0 H63.5" />
+        <rect class="fig-line" x="68.0" y="92.0" width="14" height="86" rx="2" />
+        <path class="fig-line-soft" d="M69.5,123.8 H80.5" />
+        <rect class="fig-line" x="85.0" y="82.0" width="12" height="96" rx="2" />
+        <path class="fig-line-soft" d="M86.5,108.9 H95.5" />
+        <rect class="fig-line" x="100.0" y="96.0" width="15" height="82" rx="2" />
+        <path class="fig-line-soft" d="M101.5,132.9 H113.5" />
+        <path class="fig-line-soft" d="M101.5,155.0 H113.5" />
+        <rect class="fig-line" x="118.0" y="88.0" width="11" height="90" rx="2" />
+        <path class="fig-line-soft" d="M119.5,118.6 H127.5" />
+        <rect class="fig-line" x="132.0" y="104.0" width="13" height="74" rx="2" />
+        <path class="fig-line-soft" d="M133.5,133.6 H143.5" />
+        <path class="fig-line-soft" d="M133.5,155.8 H143.5" />
+        <rect class="fig-line" x="148.0" y="90.0" width="12" height="88" rx="2" />
+        <path class="fig-line-soft" d="M149.5,116.4 H158.5" />
+        <rect class="fig-line" x="163.0" y="84.0" width="14" height="94" rx="2" />
+        <path class="fig-line-soft" d="M164.5,124.4 H175.5" />
+        <rect class="fig-line" x="180.0" y="98.0" width="11" height="80" rx="2" />
+        <path class="fig-line-soft" d="M181.5,126.0 H189.5" />
+        <path class="fig-line-soft" d="M181.5,150.8 H189.5" />
+        <rect class="fig-line" x="194.0" y="92.0" width="13" height="86" rx="2" />
+        <path class="fig-line-soft" d="M195.5,114.4 H205.5" />
+        <rect class="fig-line" x="210.0" y="102.0" width="15" height="76" rx="2" />
+        <path class="fig-line-soft" d="M211.5,131.6 H223.5" />
+        <rect class="fig-line" x="228.0" y="88.0" width="12" height="90" rx="2" />
+        <path class="fig-line-soft" d="M229.5,125.8 H238.5" />
+        <rect class="fig-line" x="243.0" y="94.0" width="14" height="84" rx="2" />
+        <path class="fig-line-soft" d="M244.5,120.9 H255.5" />
+        <path class="fig-line-soft" d="M244.5,151.1 H255.5" />
+      </g>
+      <path class="fig-line" d="M32.0,178.5 H263.0" />
+      <text class="fig-t" x="147.5" y="198" text-anchor="middle">Comedies</text>
+      <text class="fig-s" x="147.5" y="212" text-anchor="middle">14 plays</text>
+
+      <g>
+        <rect class="fig-line" x="295.0" y="90.0" width="12" height="88" rx="2" />
+        <path class="fig-line-soft" d="M296.5,122.6 H305.5" />
+        <rect class="fig-line" x="310.0" y="84.0" width="14" height="94" rx="2" />
+        <path class="fig-line-soft" d="M311.5,110.3 H322.5" />
+        <rect class="fig-line" x="327.0" y="99.0" width="11" height="79" rx="2" />
+        <path class="fig-line-soft" d="M328.5,134.6 H336.5" />
+        <path class="fig-line-soft" d="M328.5,155.9 H336.5" />
+        <rect class="fig-line" x="341.0" y="93.0" width="13" height="85" rx="2" />
+        <path class="fig-line-soft" d="M342.5,121.9 H352.5" />
+        <rect class="fig-line" x="357.0" y="86.0" width="15" height="92" rx="2" />
+        <path class="fig-line-soft" d="M358.5,122.8 H370.5" />
+        <path class="fig-line-soft" d="M358.5,150.4 H370.5" />
+        <rect class="fig-line" x="375.0" y="101.0" width="12" height="77" rx="2" />
+        <path class="fig-line-soft" d="M376.5,124.1 H385.5" />
+        <rect class="fig-line" x="390.0" y="91.0" width="11" height="87" rx="2" />
+        <path class="fig-line-soft" d="M391.5,128.4 H399.5" />
+        <rect class="fig-line" x="404.0" y="83.0" width="14" height="95" rx="2" />
+        <path class="fig-line-soft" d="M405.5,116.2 H416.5" />
+        <path class="fig-line-soft" d="M405.5,145.7 H416.5" />
+        <rect class="fig-line" x="421.0" y="97.0" width="13" height="81" rx="2" />
+        <path class="fig-line-soft" d="M422.5,118.1 H432.5" />
+        <rect class="fig-line" x="437.0" y="89.0" width="12" height="89" rx="2" />
+        <path class="fig-line-soft" d="M438.5,123.7 H447.5" />
+      </g>
+      <path class="fig-line" d="M289.0,178.5 H455.0" />
+      <text class="fig-t" x="372.0" y="198" text-anchor="middle">Histories</text>
+      <text class="fig-s" x="372.0" y="212" text-anchor="middle">10 plays</text>
+
+      <g>
+        <rect class="fig-line" x="488.0" y="103.0" width="14" height="75" rx="2" />
+        <path class="fig-line-soft" d="M489.5,134.5 H500.5" />
+        <rect class="fig-line" x="505.0" y="87.0" width="11" height="91" rx="2" />
+        <path class="fig-line-soft" d="M506.5,116.1 H514.5" />
+        <path class="fig-line-soft" d="M506.5,148.9 H514.5" />
+        <rect class="fig-line" x="519.0" y="95.0" width="13" height="83" rx="2" />
+        <path class="fig-line-soft" d="M520.5,125.7 H530.5" />
+        <rect class="fig-line" x="535.0" y="85.0" width="12" height="93" rx="2" />
+        <path class="fig-line-soft" d="M536.5,111.0 H545.5" />
+        <rect class="fig-line" x="550.0" y="100.0" width="15" height="78" rx="2" />
+        <path class="fig-line-soft" d="M551.5,135.1 H563.5" />
+        <path class="fig-line-soft" d="M551.5,156.2 H563.5" />
+        <rect class="fig-line" x="568.0" y="92.0" width="11" height="86" rx="2" />
+        <path class="fig-line-soft" d="M569.5,121.2 H577.5" />
+        <rect class="fig-line" x="582.0" y="82.0" width="14" height="96" rx="2" />
+        <path class="fig-line-soft" d="M583.5,120.4 H594.5" />
+        <path class="fig-line-soft" d="M583.5,149.2 H594.5" />
+        <rect class="fig-line" x="599.0" y="98.0" width="12" height="80" rx="2" />
+        <path class="fig-line-soft" d="M600.5,122.0 H609.5" />
+        <rect class="fig-line" x="614.0" y="90.0" width="13" height="88" rx="2" />
+        <path class="fig-line-soft" d="M615.5,127.8 H625.5" />
+        <rect class="fig-line" x="630.0" y="104.0" width="14" height="74" rx="2" />
+        <path class="fig-line-soft" d="M631.5,129.9 H642.5" />
+        <path class="fig-line-soft" d="M631.5,152.8 H642.5" />
+        <rect class="fig-line" x="647.0" y="88.0" width="11" height="90" rx="2" />
+        <path class="fig-line-soft" d="M648.5,111.4 H656.5" />
+        <rect class="fig-line" x="661.0" y="94.0" width="13" height="84" rx="2" />
+        <path class="fig-line-soft" d="M662.5,126.8 H672.5" />
+      </g>
+      <path class="fig-line" d="M482.0,178.5 H680.0" />
+      <text class="fig-t" x="581.0" y="198" text-anchor="middle">Tragedies</text>
+      <text class="fig-s" x="581.0" y="212" text-anchor="middle">12 plays</text>
+
+      <text class="fig-h" x="724" y="20">READING NOW</text>
+      <rect class="fig-panel" x="724" y="30" width="166" height="190" rx="6" />
+      <g transform="translate(770,56)">
+        <rect class="fig-line" x="0" y="0" width="74" height="106" rx="7" />
+        <rect class="fig-line-soft" x="7" y="8" width="60" height="82" rx="2" />
+        <path class="fig-line-soft" d="M13,20 H61" />
+        <path class="fig-line-soft" d="M13,30 H65" />
+        <path class="fig-line-soft" d="M13,40 H57" />
+        <path class="fig-line-soft" d="M13,50 H65" />
+        <path class="fig-line-soft" d="M13,60 H51" />
+        <circle class="fig-line-soft" cx="37" cy="98" r="2.5" />
+      </g>
+      <text class="fig-t" x="807" y="198" text-anchor="middle">Kindle Paperwhite</text>
+      <text class="fig-s" x="807" y="212" text-anchor="middle">plain front-lit e-ink</text>
+    </svg>
+
+  </figure>
+
+  <p class="about-figure-hint">Scroll the shelf sideways →</p>
+
+  <p class="about-figure-caption">
+    The three sections are the First Folio’s own: the 1623 collection sorts its
+    thirty-six plays into fourteen comedies, ten histories and twelve tragedies.
+  </p>
 </section>
