@@ -1,3 +1,11 @@
 <div class="publications">
-  {% bibliography --file selected --sort_by year --order descending --group_by none %}
+  {%- comment -%}
+    jekyll-scholar 7.2 only recognises the switches listed in its own optparse
+    (see lib/jekyll/scholar/utilities.rb). An unknown switch such as --sort_by is
+    split into a bare "--", which OptionParser reads as "end of options" and
+    silently drops everything after it — which is why --group_by never applied.
+    Keep this to real switches only. Entry order comes from selected.bib, which
+    is already newest-first.
+  {%- endcomment -%}
+  {% bibliography --file selected --group_by none --max 5 %}
 </div>

@@ -355,6 +355,14 @@ html[data-theme="dark"] .about-page {
 .about-page .publications {
   margin-top: 0;
 
+  // Safety net: the five-entry limit is enforced by --max in
+  // _includes/selected_papers.liquid, and grouping is off there, so there is a
+  // single <ol> and no year headings. Both are re-asserted here so a regression
+  // in the tag arguments cannot flood the landing page.
+  h2.bibliography {
+    display: none;
+  }
+
   ol.bibliography {
     > li {
       margin-bottom: 0;
