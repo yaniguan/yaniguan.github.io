@@ -148,64 +148,71 @@ latest_posts:
     <div class="about-row">
       <div class="about-row-key">Multi-scale simulation</div>
       <div class="about-row-val">
-        DFT for electrons and interfaces, molecular dynamics for electrolytes, kinetic
-        Monte Carlo for surface kinetics, and P2D/cell models for the device — one ladder
-        from an electrode–electrolyte interface up to a full cell.
+        One ladder from an electrode–electrolyte interface up to a working cell:
+        electronic structure at the surface, molecular dynamics in the liquid, kinetic
+        Monte Carlo for the reaction network, P2D models for the device. Most of the
+        difficulty is in what has to survive the step between rungs.
       </div>
     </div>
 
     <div class="about-row">
       <div class="about-row-key">Electrolyte force fields</div>
       <div class="about-row-val">
-        Machine-learned polarizable force-field parameters predicted from structure, so a
-        formulation goes from SMILES to density, conductivity and solubility without weeks
-        of expert parameterization per chemistry.
+        Polarizable force-field parameters predicted from molecular structure rather than
+        fitted by hand, which turns weeks of per-chemistry expert work into a forward pass.
+        A formulation goes in as SMILES and comes out with density, conductivity and
+        solubility.
       </div>
     </div>
 
     <div class="about-row">
       <div class="about-row-key">Trajectory world models</div>
       <div class="about-row-val">
-        Representation learning on MD trajectories: latent-space pretraining with a
-        hierarchical frames → center-of-mass → atom decoder, so the model learns how an
-        electrolyte moves rather than only what it contains.
+        Most molecular representations describe a structure; this one describes motion.
+        Latent-space pretraining over MD trajectories, decoded hierarchically from frames
+        to center of mass to atoms, so the learned state carries how an electrolyte moves
+        and not only what is in it.
       </div>
     </div>
 
     <div class="about-row">
       <div class="about-row-key">Vision–language chemistry</div>
       <div class="about-row-val">
-        VLMs for optical chemical structure recognition (image→SMILES), and
-        <em>VERDICT</em> — a consensus engine where independent recognizers vote by
-        molecular identity, and the system abstains when they disagree.
+        Fine-tuned VLMs read structures straight out of document images (image→SMILES).
+        <em>VERDICT</em> turns several independent recognizers into a consensus engine that
+        votes on molecular identity and abstains when they disagree — on real literature
+        figures, knowing when to refuse is worth more than another point of accuracy.
       </div>
     </div>
 
     <div class="about-row">
       <div class="about-row-key">Scientific multimodality</div>
       <div class="about-row-val">
-        Text, figures and simulation output are three views of the same chemistry.
-        Contrastive learning and cross-scale alignment put them in one latent space, so a
-        molecule in a paper figure, its DFT properties and its MD behavior are the same
-        object to the model.
+        Text, figures and simulation output are three views of one chemistry that
+        normally sit in three disconnected systems. Contrastive learning with cross-scale
+        alignment puts them in a single latent space: the molecule drawn in a figure, the
+        DFT numbers computed for it, and the way it behaves in an MD box become one
+        object.
       </div>
     </div>
 
     <div class="about-row">
       <div class="about-row-key">Chemistry-aware post-training</div>
       <div class="about-row-val">
-        Reasoning traces built with GPT-5.5, chemistry-aware tokenization and a
-        chemistry-aware latent softmax, then SFT with LoRA on Qwen3.6-27B and GLM-4.7.
+        Reasoning traces distilled with GPT-5.5 supply the supervision, while
+        chemistry-aware tokenization and a chemistry-aware latent softmax let the model see
+        chemistry where a general tokenizer sees characters. Both feed LoRA SFT on
+        Qwen3.6-27B and GLM-4.7.
       </div>
     </div>
 
     <div class="about-row">
       <div class="about-row-key">Co-scientist</div>
       <div class="about-row-val">
-        Everything above composes into a tool-using co-scientist for electrolyte and cell
-        design: it reads the literature, queries simulations, and proposes the next
-        formulation — with leakage-safe benchmarks and default-deny governed job
-        submission.
+        The pieces above compose into a tool-using agent for electrolyte and cell design:
+        it reads the literature, queries the simulation stack, and proposes what to run
+        next. What decides whether it can be trusted is the unglamorous half — leakage-safe
+        benchmarks, and default-deny governed job submission.
       </div>
     </div>
 
