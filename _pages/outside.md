@@ -147,6 +147,7 @@ the fig-\* classes in \_sass/\_about.scss). Add a row or a shape, not a new layo
   <p class="lst-desc">
     Four cross-country runs, every one of them out of Los Angeles and back — no
     one-way flights, no shipped car. Same three people and the same dog each time.
+    Three of the four came home a different way than they went out.
   </p>
 
   <figure class="about-figure">
@@ -212,19 +213,20 @@ the fig-\* classes in \_sass/\_about.scss). Add a row or a shape, not a new layo
 
   <figure class="about-figure">
     <svg viewBox="0 0 900 420" role="img" aria-labelledby="map-title map-desc">
-      <title id="map-title">Four round trips out of Los Angeles</title>
+      <title id="map-title">Four road trips out of Los Angeles</title>
       <desc id="map-desc">
-        A map of the lower 48 with four routes leaving Los Angeles: north to Seattle in
-        2023, southeast in 2024 for a loop of the big Texas cities, east to Chicago in
-        2025, and all the way across to Boston in 2026. Every route was driven in both
-        directions.
+        A map of the lower 48 with four routes out of Los Angeles. Three are loops: up
+        the coast to Seattle in 2023 and back inland through Reno; out to a circuit of
+        the big Texas cities in 2024 and back on I-40; north through the Black Hills and
+        Nebraska to Chicago in 2025 and back over the Rockies through Denver. The fourth,
+        across to Boston in 2026, went out and back on the same road.
       </desc>
 
       <path class="fig-map" d="M 198.8,51.5 C 197.1,54.4 184.9,69.9 182.3,75.4 C 179.6,81.0 172.0,106.5 169.8,113.2 C 167.6,119.9 158.1,143.2 157.6,149.9 C 157.1,156.7 163.0,180.4 164.3,188.1 C 165.6,195.9 169.2,230.2 172.0,236.0 C 174.7,241.8 191.9,249.5 194.7,252.7 C 197.5,255.8 199.8,269.1 202.9,271.0 C 206.0,272.9 223.7,271.3 229.5,273.9 C 235.2,276.5 260.7,296.8 266.9,299.5 C 273.0,302.2 293.5,304.0 298.1,304.0 C 302.7,304.0 312.8,296.4 317.8,299.7 C 322.9,303.0 349.1,337.5 354.1,340.3 C 359.1,343.1 369.7,329.1 373.2,331.0 C 376.8,332.8 389.9,356.2 394.0,361.0 C 398.0,365.8 415.9,384.2 418.4,384.0 C 420.8,383.8 418.8,362.7 421.1,359.1 C 423.3,355.4 439.7,345.6 443.3,343.3 C 446.8,341.0 456.0,334.1 460.5,333.8 C 464.9,333.4 488.0,338.8 493.0,339.1 C 498.0,339.5 513.0,339.3 516.0,337.7 C 519.0,336.0 522.2,322.3 526.2,320.9 C 530.3,319.6 556.7,322.9 560.8,322.8 C 565.0,322.7 569.6,319.2 572.0,320.1 C 574.5,321.0 586.0,330.4 587.7,332.7 C 589.3,335.0 589.6,343.0 590.6,345.6 C 591.7,348.2 597.5,359.4 598.9,361.7 C 600.3,364.0 604.9,369.6 606.4,371.2 C 607.8,372.8 613.4,378.7 614.9,379.2 C 616.5,379.6 622.4,378.7 623.1,376.5 C 623.8,374.4 624.0,358.9 623.2,355.2 C 622.4,351.5 615.8,339.3 613.9,335.4 C 612.0,331.5 603.0,316.0 602.0,311.8 C 601.0,307.7 601.3,292.9 602.9,288.8 C 604.6,284.8 618.0,269.9 620.5,266.9 C 623.0,263.9 627.6,258.2 630.6,255.6 C 633.5,252.9 652.1,240.9 653.3,237.3 C 654.4,233.6 643.5,218.8 643.0,214.9 C 642.5,210.9 647.0,198.1 647.8,193.3 C 648.7,188.6 649.4,166.6 652.1,162.2 C 654.8,157.8 675.8,146.7 678.3,144.6 C 680.7,142.4 680.0,140.5 679.7,138.6 C 679.4,136.8 673.8,126.3 674.6,123.5 C 675.3,120.7 685.4,110.3 687.9,107.3 C 690.4,104.3 701.6,92.8 702.4,90.4 C 703.3,88.0 699.1,83.4 697.5,80.9 C 695.8,78.3 686.1,63.0 683.9,61.6 C 681.7,60.1 674.1,62.6 672.7,64.9 C 671.3,67.2 669.4,83.4 668.4,86.7 C 667.4,89.9 664.9,98.9 661.6,100.8 C 658.4,102.7 636.5,105.9 632.6,108.0 C 628.7,110.0 621.9,120.5 618.6,123.2 C 615.2,126.0 600.1,136.4 595.3,138.5 C 590.6,140.7 568.8,149.3 565.6,147.4 C 562.5,145.5 562.6,121.2 560.4,117.3 C 558.1,113.4 545.8,106.8 540.9,103.9 C 536.0,101.0 511.0,86.4 506.3,85.0 C 501.6,83.5 494.4,88.3 488.6,87.6 C 482.9,86.9 468.1,81.4 442.2,77.5 C 416.3,73.5 222.9,46.3 201.0,44.0 C 179.1,41.7 200.5,48.7 198.8,51.5 Z" />
 
-      <path class="fig-route" d="M 195.4,248.0 C 194.7,244.9 194.6,240.2 191.5,229.0 C 188.5,217.8 179.2,195.1 177.1,180.9 C 175.0,166.7 178.3,156.1 179.1,143.7 C 179.8,131.3 179.8,115.6 181.8,106.4 C 183.8,97.2 187.7,96.0 191.0,88.8 C 194.3,81.6 199.9,67.4 201.7,63.2" />
-      <path class="fig-route" d="M 195.4,248.0 C 206.1,251.6 247.5,262.8 259.8,269.4 C 272.1,275.9 259.4,282.3 269.1,287.5 C 278.8,292.6 303.2,295.6 317.9,300.2 C 332.6,304.9 342.4,309.1 357.1,315.3 C 371.9,321.5 396.8,335.5 406.5,337.4 C 416.2,339.2 412.6,333.7 415.3,326.3 C 418.1,318.9 421.2,298.7 423.0,293.2 C 424.8,287.7 423.1,286.4 426.3,293.1 C 429.6,299.8 439.7,326.5 442.4,333.2" />
-      <path class="fig-route" d="M 195.4,248.0 C 202.3,247.0 224.8,242.2 236.9,242.1 C 249.0,241.9 254.0,244.7 268.2,247.1 C 282.3,249.4 304.1,254.2 321.6,256.1 C 339.1,258.1 356.8,258.8 373.0,259.0 C 389.3,259.1 404.1,261.3 419.2,257.1 C 434.2,252.9 450.8,241.1 463.4,233.8 C 475.9,226.4 485.6,224.2 494.5,213.2 C 503.5,202.3 513.2,175.6 517.0,168.0" />
+      <path class="fig-route" d="M 195.4,248.0 C 193.0,246.6 186.1,245.8 181.1,239.4 C 176.2,233.1 168.2,215.5 165.7,209.8 C 163.2,204.1 166.1,208.8 166.0,205.3 C 165.8,201.8 166.4,195.4 165.0,188.7 C 163.5,182.0 158.1,172.3 157.2,165.0 C 156.3,157.7 158.5,151.0 159.5,144.9 C 160.5,138.9 161.7,134.1 163.3,128.6 C 164.8,123.1 166.9,117.4 169.0,112.0 C 171.0,106.6 173.0,102.2 175.4,96.5 C 177.8,90.7 180.1,81.9 183.3,77.3 C 186.5,72.7 191.6,71.3 194.6,68.9 C 197.7,66.6 198.4,61.3 201.7,63.2 C 204.9,65.1 209.9,74.8 214.0,80.3 C 218.1,85.8 225.8,89.1 226.3,96.1 C 226.9,103.1 221.7,115.5 217.4,122.3 C 213.1,129.2 204.9,131.1 200.6,137.3 C 196.4,143.5 192.4,153.4 191.7,159.4 C 191.1,165.3 194.9,165.5 196.9,173.0 C 199.0,180.6 202.6,197.6 204.0,204.6 C 205.3,211.7 205.9,210.3 205.1,215.4 C 204.3,220.4 200.8,229.8 199.2,235.2 C 197.6,240.7 196.0,245.9 195.4,248.0" />
+      <path class="fig-route" d="M 195.4,248.0 C 206.1,251.6 247.5,262.8 259.8,269.4 C 272.1,275.9 259.4,282.3 269.1,287.5 C 278.8,292.6 303.2,295.6 317.9,300.2 C 332.6,304.9 342.6,309.3 357.3,315.4 C 372.1,321.6 396.8,335.6 406.5,337.4 C 416.1,339.2 409.3,327.0 415.3,326.3 C 421.3,325.6 440.9,338.8 442.4,333.2 C 444.0,327.7 436.3,305.5 424.7,293.1 C 413.1,280.7 389.9,264.9 372.7,258.7 C 355.5,252.5 338.9,258.1 321.5,256.1 C 304.1,254.2 281.3,249.3 268.2,247.1 C 255.0,244.9 254.9,242.5 242.8,242.7 C 230.7,242.8 203.3,247.1 195.4,248.0" />
+      <path class="fig-route" d="M 195.4,248.0 C 201.8,244.6 223.3,233.6 234.0,227.6 C 244.6,221.6 251.8,220.9 259.2,211.9 C 266.5,202.9 270.2,181.0 278.0,173.4 C 285.7,165.9 296.1,169.8 305.7,166.5 C 315.4,163.2 325.8,157.8 335.9,153.3 C 346.1,148.9 355.5,141.1 366.7,139.8 C 378.0,138.4 393.3,143.8 403.5,145.4 C 413.8,147.0 422.8,143.6 428.2,149.4 C 433.6,155.1 430.7,175.6 435.8,179.9 C 440.9,184.2 445.2,177.1 458.8,175.1 C 472.3,173.1 510.2,164.4 517.0,168.0 C 523.7,171.7 504.9,192.0 499.1,197.3 C 493.3,202.5 490.2,197.6 482.0,199.5 C 473.7,201.4 472.5,209.2 449.6,208.7 C 426.7,208.1 368.3,197.2 344.7,195.9 C 321.0,194.6 320.9,200.1 307.8,200.9 C 294.7,201.7 274.3,198.8 266.2,200.7 C 258.1,202.5 264.5,207.4 259.2,211.9 C 253.8,216.4 244.6,221.6 234.0,227.6 C 223.3,233.6 201.8,244.6 195.4,248.0" />
       <path class="fig-route-em" d="M 195.4,248.0 C 201.8,244.6 217.9,235.7 234.0,227.6 C 250.0,219.5 273.0,204.8 291.4,199.5 C 309.9,194.2 318.3,194.4 344.7,195.9 C 371.0,197.5 424.6,205.8 449.6,208.7 C 474.6,211.5 480.4,215.6 494.5,213.2 C 508.6,210.9 522.3,198.8 534.2,194.7 C 546.0,190.5 555.5,191.2 565.6,188.3 C 575.6,185.5 584.3,179.8 594.3,177.4 C 604.2,175.0 615.6,176.5 625.3,174.0 C 634.9,171.4 643.8,168.8 652.1,162.0 C 660.3,155.3 670.9,138.4 674.7,133.6" />
 
       <circle class="fig-box" cx="317.9" cy="300.2" r="3.5" />
@@ -235,6 +237,19 @@ the fig-\* classes in \_sass/\_about.scss). Add a row or a shape, not a new layo
       <circle class="fig-dot" cx="415.3" cy="326.3" r="1.6" />
       <circle class="fig-box" cx="424.7" cy="293.1" r="3.5" />
       <circle class="fig-dot" cx="424.7" cy="293.1" r="1.6" />
+
+      <circle class="fig-box" cx="196.9" cy="173.0" r="3.5" />
+      <circle class="fig-dot" cx="196.9" cy="173.0" r="1.6" />
+      <text class="fig-s" x="205.9" y="176.0" text-anchor="start">Reno</text>
+      <circle class="fig-box" cx="366.7" cy="139.8" r="3.5" />
+      <circle class="fig-dot" cx="366.7" cy="139.8" r="1.6" />
+      <text class="fig-s" x="366.7" y="128.8" text-anchor="middle">Rapid City</text>
+      <circle class="fig-box" cx="435.8" cy="179.9" r="3.5" />
+      <circle class="fig-dot" cx="435.8" cy="179.9" r="1.6" />
+      <text class="fig-s" x="435.8" y="196.9" text-anchor="middle">Omaha</text>
+      <circle class="fig-box" cx="344.7" cy="195.9" r="3.5" />
+      <circle class="fig-dot" cx="344.7" cy="195.9" r="1.6" />
+      <text class="fig-s" x="344.7" y="184.9" text-anchor="middle">Denver</text>
 
       <circle class="fig-box" cx="195.4" cy="248.0" r="7.0" />
       <circle class="fig-dot" cx="195.4" cy="248.0" r="3.15" />
@@ -269,8 +284,9 @@ the fig-\* classes in \_sass/\_about.scss). Add a row or a shape, not a new layo
   <p class="about-figure-hint">Scroll the map sideways →</p>
 
   <p class="about-figure-caption">
-    The lines follow the interstates we actually took, not great circles. Each
-    one is drawn one way; all four were driven there and back.
+    The lines follow the roads we actually took, not great circles. Three of them
+    close into loops because the way home was not the way out; Boston is the one
+    that retraced itself.
   </p>
 
   <div class="about-rows">
@@ -279,7 +295,9 @@ the fig-\* classes in \_sass/\_about.scss). Add a row or a shape, not a new layo
       <div class="about-row-date">2023</div>
       <div class="about-row-val">
         <div class="about-role"><strong>Los Angeles → Seattle</strong><span>Toyota RAV4</span></div>
-        Up the coast and back down on I-5.
+        Up on Highway 1 and US-101, on the water almost the whole way — Big Sur,
+        San Francisco, the Oregon headlands. Home the other side of the mountains
+        on US-395, through Reno and down the eastern Sierra.
       </div>
     </div>
 
@@ -288,8 +306,9 @@ the fig-\* classes in \_sass/\_about.scss). Add a row or a shape, not a new layo
       <div class="about-row-val">
         <div class="about-role"><strong>Los Angeles → Texas</strong><span>Toyota RAV4</span></div>
         I-10 out through Phoenix, Tucson and the very long empty middle of West
-        Texas, then a loop of the big cities — El Paso, San Antonio, Austin,
-        Dallas–Fort Worth, Houston — a day in each.
+        Texas, then a circuit of the big cities — El Paso, San Antonio, Austin,
+        Houston, Dallas–Fort Worth — a day in each, and home the northern way on
+        I-40 through Amarillo, Albuquerque and Flagstaff.
       </div>
     </div>
 
@@ -297,7 +316,10 @@ the fig-\* classes in \_sass/\_about.scss). Add a row or a shape, not a new layo
       <div class="about-row-date">2025</div>
       <div class="about-row-val">
         <div class="about-role"><strong>Los Angeles → Chicago</strong><span>Toyota RAV4</span></div>
-        I-40 out to Oklahoma City, then I-44 and I-55 north. The RAV4's last long one.
+        The northern way out: Salt Lake City, across Wyoming, the Black Hills and
+        the Badlands in South Dakota, then down into Nebraska and along I-80 into
+        Chicago. Back through Kansas City and over the Rockies on I-70, with Denver
+        on the way. The RAV4's last long one.
       </div>
     </div>
 
@@ -306,8 +328,9 @@ the fig-\* classes in \_sass/\_about.scss). Add a row or a shape, not a new layo
       <div class="about-row-val">
         <div class="about-role"><strong>Los Angeles → Boston</strong><span>Tesla Model 3</span></div>
         Coast to coast on the I-70 corridor — Las Vegas, Denver, St. Louis,
-        Pittsburgh — with FSD driving most of it. Charging stops
-        set the rhythm of the day in a way gas stations never did.
+        Pittsburgh — and the one trip we drove out and back on the same road,
+        with FSD doing most of it. Charging stops set the rhythm of the day in a
+        way gas stations never did.
       </div>
     </div>
 

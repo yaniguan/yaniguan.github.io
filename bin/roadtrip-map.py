@@ -62,22 +62,38 @@ OUTLINE = [
 
 LA = (-118.24, 34.05)
 
-# Waypoints along the interstate actually driven, not a great circle.
+# Waypoints along the road actually driven, not a great circle. Three of the
+# four came home a different way, so those are single closed loops that start
+# and end at LA -- the shape is the point. Boston is one out-and-back line.
 ROUTES = [
     # key, class, waypoints
+    # 2023: up Highway 1 / US-101 on the coast, home inland on US-395.
     ("seattle", "fig-route", [
-        LA, (-119.0, 35.37), (-121.49, 38.58), (-122.3, 41.3),
-        (-123.1, 44.05), (-122.68, 45.52), (-122.33, 47.61)]),
-    # 2024 was not a single destination: I-10 out, then a loop of the big
-    # Texas cities with a day spent in each.
+        LA, (-119.70, 34.42), (-121.81, 36.27), (-121.90, 36.60),
+        (-122.42, 37.77), (-123.80, 39.31), (-124.16, 40.80),
+        (-124.28, 42.05), (-124.22, 43.37), (-124.05, 44.63),
+        (-123.83, 46.19), (-122.90, 47.04), (-122.33, 47.61),
+        (-120.51, 46.60), (-118.79, 45.67), (-119.05, 43.59),
+        (-120.35, 42.19), (-120.65, 40.42), (-119.81, 39.53),
+        (-118.40, 37.36), (-118.06, 36.60), (-118.17, 35.05), LA]),
+    # 2024: out on I-10, a circuit of the big Texas cities with a day in each,
+    # home on I-40.
     ("texas", "fig-route", [
         LA, (-112.07, 33.45), (-110.97, 32.22), (-106.49, 31.76),
-        (-102.9, 30.9), (-98.49, 29.42), (-97.74, 30.27),
-        (-97.1, 32.77), (-96.8, 32.78), (-95.37, 29.76)]),
+        (-102.88, 30.89), (-98.49, 29.42), (-97.74, 30.27),
+        (-95.37, 29.76), (-96.95, 32.78), (-101.83, 35.22),
+        (-106.61, 35.08), (-111.65, 35.20), (-114.05, 35.19), LA]),
+    # 2025: the northern way out through the Black Hills and Nebraska, home
+    # across the Rockies through Denver.
     ("chicago", "fig-route", [
-        LA, (-114.6, 35.15), (-111.65, 35.2), (-106.6, 35.08),
-        (-101.8, 35.2), (-97.5, 35.47), (-93.3, 37.2),
-        (-90.2, 38.63), (-87.63, 41.88)]),
+        LA, (-115.14, 36.17), (-113.06, 37.68), (-111.89, 40.76),
+        (-109.22, 41.59), (-106.31, 42.85), (-103.23, 44.08),
+        (-99.33, 43.81), (-96.73, 43.55), (-95.94, 41.26),
+        (-93.60, 41.60), (-87.63, 41.88), (-89.65, 39.80),
+        (-91.36, 39.71), (-94.58, 39.10), (-104.99, 39.74),
+        (-108.55, 39.06), (-112.58, 38.60), (-113.06, 37.68),
+        (-115.14, 36.17), LA]),
+    # 2026: the one that went out and back on the same road.
     ("boston", "fig-route-em", [
         LA, (-115.14, 36.17), (-110.16, 38.99), (-104.99, 39.74),
         (-94.58, 39.1), (-90.2, 38.63), (-86.16, 39.77),
@@ -102,8 +118,18 @@ LABELS = [
 ]
 
 # Unlabelled stops: the other Texas cities the 2024 loop stayed a day in.
-# Dallas and Fort Worth are one dot -- they are ~5px apart at this scale.
+# The TEXAS sub-label is what explains them. Dallas and Fort Worth are one
+# dot -- they are ~5px apart at this scale.
 STOPS = [(-106.49, 31.76), (-98.49, 29.42), (-97.74, 30.27), (-96.95, 32.78)]
+
+# Named turning points, in the quieter fig-s type so they stay subordinate to
+# the endpoints. These are what make each loop legible as a loop.
+WAYPOINTS = [
+    dict(at=(-119.81, 39.53), name="Reno", anchor="start", dx=9, dy=3),
+    dict(at=(-103.23, 44.08), name="Rapid City", anchor="middle", dx=0, dy=-11),
+    dict(at=(-95.94, 41.26), name="Omaha", anchor="middle", dx=0, dy=17),
+    dict(at=(-104.99, 39.74), name="Denver", anchor="middle", dx=0, dy=-11),
+]
 
 VIEWBOX = (900, 420)
 BOX = (142.0, 44.0, 718.0, 384.0)  # left, top, right, bottom of the drawing area
@@ -152,12 +178,13 @@ def render():
     parts = [
         u'<svg viewBox="0 0 %d %d" role="img" aria-labelledby="map-title map-desc">'
         % VIEWBOX,
-        u'      <title id="map-title">Four round trips out of Los Angeles</title>',
+        u'      <title id="map-title">Four road trips out of Los Angeles</title>',
         u'      <desc id="map-desc">',
-        u'        A map of the lower 48 with four routes leaving Los Angeles: north to Seattle in',
-        u'        2023, southeast in 2024 for a loop of the big Texas cities, east to Chicago in',
-        u'        2025, and all the way across to Boston in 2026. Every route was driven in both',
-        u'        directions.',
+        u'        A map of the lower 48 with four routes out of Los Angeles. Three are loops: up',
+        u'        the coast to Seattle in 2023 and back inland through Reno; out to a circuit of',
+        u'        the big Texas cities in 2024 and back on I-40; north through the Black Hills and',
+        u'        Nebraska to Chicago in 2025 and back over the Rockies through Denver. The fourth,',
+        u'        across to Boston in 2026, went out and back on the same road.',
         u'      </desc>',
         u'',
         # a coastline wants corners; the interstates genuinely do curve
@@ -174,6 +201,16 @@ def render():
             u'      <circle class="fig-box" cx="%.1f" cy="%.1f" r="3.5" />\n'
             u'      <circle class="fig-dot" cx="%.1f" cy="%.1f" r="1.6" />'
             % (cx, cy, cx, cy)
+        )
+    parts.append(u'')
+
+    for wp in WAYPOINTS:
+        cx, cy = P(*wp["at"])
+        parts.append(
+            u'      <circle class="fig-box" cx="%.1f" cy="%.1f" r="3.5" />\n'
+            u'      <circle class="fig-dot" cx="%.1f" cy="%.1f" r="1.6" />\n'
+            u'      <text class="fig-s" x="%.1f" y="%.1f" text-anchor="%s">%s</text>'
+            % (cx, cy, cx, cy, cx + wp["dx"], cy + wp["dy"], wp["anchor"], wp["name"])
         )
     parts.append(u'')
 
