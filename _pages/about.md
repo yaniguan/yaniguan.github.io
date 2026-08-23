@@ -12,6 +12,8 @@ profile:
   align: right
   image: profile.jpg
   image_circular: false
+  more_info: >
+    <a href="/outside/">Outside the lab</a> — cameras, and a lot of driving.
 
 selected_papers: true
 social: false

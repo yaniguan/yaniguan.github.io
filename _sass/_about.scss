@@ -19,6 +19,8 @@
   --about-ink-muted: #5f5f5f;
   // Ink for the hand-drawn figure and the notes card outline.
   --about-fig-line: #8a8a8a;
+  // One step back from the figure ink: coastlines and other pure backdrop.
+  --about-map-line: #b5b5b5;
 
   // Kramdown wraps stray text nodes in <p>; keep them from doubling up spacing.
   > p:empty {
@@ -30,6 +32,7 @@ html[data-theme="dark"] .about-page {
   --about-ink-soft: #cfcfcf;
   --about-ink-muted: #a3a3a3;
   --about-fig-line: #7d7d80;
+  --about-map-line: #5e5e64;
 }
 
 /* -----------------------------------------------------------------------------
@@ -128,6 +131,18 @@ html[data-theme="dark"] .about-page {
   p {
     margin: 0;
     color: inherit;
+  }
+
+  a {
+    color: var(--global-text-color);
+    text-decoration: none;
+    border-bottom: 1px solid var(--global-divider-color);
+
+    &:hover {
+      color: var(--global-theme-color);
+      border-bottom-color: currentColor;
+      text-decoration: none;
+    }
   }
 }
 
@@ -279,6 +294,11 @@ html[data-theme="dark"] .about-page {
     &:hover {
       color: var(--global-theme-color);
     }
+  }
+
+  // Same weight as the anchor, for a row whose subject is not a link.
+  strong {
+    font-weight: 600;
   }
 
   span {
@@ -555,6 +575,42 @@ html[data-theme="dark"] .about-page {
     stroke-linecap: round;
   }
 
+  // Backdrop for a map: present enough to read as a coastline, quiet enough
+  // that the routes drawn over it stay the subject.
+  .fig-map {
+    fill: none;
+    stroke: var(--about-map-line);
+    stroke-width: 1.1;
+    stroke-linejoin: round;
+  }
+
+  .fig-route {
+    fill: none;
+    stroke: var(--about-fig-line);
+    stroke-width: 1.5;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+
+  .fig-route-em {
+    fill: none;
+    stroke: var(--global-theme-color);
+    stroke-width: 1.8;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+
+  // Solid marks: the pip inside a .fig-box ring, an eye, a full stop.
+  .fig-dot {
+    fill: var(--about-ink-soft);
+    stroke: none;
+  }
+
+  .fig-dot-em {
+    fill: var(--global-theme-color);
+    stroke: none;
+  }
+
   text {
     font-family: inherit;
     fill: var(--about-ink-soft);
@@ -697,6 +753,35 @@ html[data-theme="dark"] .about-page {
   .notes-card-cta {
     align-self: flex-start;
     padding-left: calc(26px + 1rem);
+  }
+}
+
+/* -----------------------------------------------------------------------------
+ * Lead photo: one full-measure image opening a page, caption underneath.
+ * -------------------------------------------------------------------------- */
+
+.outside-lead {
+  margin: 0 0 2.5rem;
+
+  img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    box-shadow: none !important;
+  }
+
+  figure {
+    margin: 0;
+  }
+
+  figcaption,
+  .caption {
+    margin-top: 0.55rem;
+    font-size: 0.76rem;
+    letter-spacing: 0.02em;
+    line-height: 1.5;
+    text-align: left;
+    color: var(--about-ink-muted);
   }
 }
 
