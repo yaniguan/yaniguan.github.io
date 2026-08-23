@@ -1,0 +1,419 @@
+/*******************************************************************************
+ * About / landing page
+ *
+ * A quiet, typography-first layout: one hero block, then a stack of sections
+ * built from a single primitive — a left gutter (label or date) next to a
+ * single column of text. Everything else on the page (news table, jekyll-scholar
+ * bibliography) is toned down to match that primitive.
+ ******************************************************************************/
+
+.about-page {
+  --about-gutter: 190px;
+  --about-col-gap: 1.75rem;
+  --about-measure: 40em;
+  // One step softer than the body ink — readable enough for running text, which
+  // --global-text-color-light (#828282 on white) is not.
+  --about-ink-soft: #3d3d3d;
+  // Secondary/meta text: dark enough to clear WCAG AA, which the theme's
+  // --global-text-color-light (#828282) does not.
+  --about-ink-muted: #5f5f5f;
+
+  // Kramdown wraps stray text nodes in <p>; keep them from doubling up spacing.
+  > p:empty {
+    display: none;
+  }
+}
+
+html[data-theme="dark"] .about-page {
+  --about-ink-soft: #cfcfcf;
+  --about-ink-muted: #a3a3a3;
+}
+
+/* -----------------------------------------------------------------------------
+ * Hero
+ * -------------------------------------------------------------------------- */
+
+.about-hero {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.about-hero-main {
+  min-width: 0;
+}
+
+.about-name {
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+  margin: 0 0 0.55rem;
+}
+
+.about-affiliation {
+  font-size: 0.9rem;
+  line-height: 1.65;
+  color: var(--about-ink-muted);
+  margin: 0 0 1.25rem;
+  max-width: var(--about-measure);
+
+  a {
+    color: inherit;
+    text-decoration: none;
+    border-bottom: 1px solid var(--global-divider-color);
+
+    &:hover {
+      color: var(--global-theme-color);
+      border-bottom-color: currentColor;
+      text-decoration: none;
+    }
+  }
+}
+
+.about-tagline {
+  font-size: 1.02rem;
+  line-height: 1.75;
+  margin: 0 0 1.5rem;
+  max-width: var(--about-measure);
+}
+
+.about-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem 1.35rem;
+  font-size: 0.82rem;
+
+  a {
+    color: var(--global-text-color);
+    text-decoration: none;
+    padding-bottom: 2px;
+    border-bottom: 1px solid var(--global-divider-color);
+
+    &:hover {
+      color: var(--global-theme-color);
+      border-bottom-color: currentColor;
+      text-decoration: none;
+    }
+  }
+}
+
+.about-portrait {
+  order: -1;
+  width: 132px;
+  flex: 0 0 auto;
+
+  figure {
+    margin: 0;
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    box-shadow: none !important;
+  }
+}
+
+.about-portrait-note {
+  margin-top: 0.6rem;
+  font-size: 0.72rem;
+  line-height: 1.5;
+  color: var(--about-ink-muted);
+
+  p {
+    margin: 0;
+    color: inherit;
+  }
+}
+
+@media (min-width: 768px) {
+  .about-hero {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 3rem;
+    padding-bottom: 1rem;
+  }
+
+  .about-hero-main {
+    flex: 1 1 auto;
+  }
+
+  .about-name {
+    font-size: 2.4rem;
+  }
+
+  .about-portrait {
+    order: 0;
+    width: 224px;
+    padding-top: 0.5rem;
+  }
+}
+
+/* -----------------------------------------------------------------------------
+ * Sections
+ * -------------------------------------------------------------------------- */
+
+.about-section {
+  border-top: 1px solid var(--global-divider-color);
+  margin-top: 3rem;
+  padding-top: 1.6rem;
+}
+
+.about-section-title {
+  font-size: 0.72rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.13em;
+  color: var(--about-ink-muted);
+  margin: 0 0 1.5rem;
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+}
+
+.about-more {
+  margin: 0.4rem 0 0;
+  font-size: 0.8rem;
+
+  a {
+    color: var(--about-ink-muted);
+    text-decoration: none;
+
+    &:hover {
+      color: var(--global-theme-color);
+      text-decoration: none;
+    }
+
+    &::after {
+      content: " \2192";
+    }
+  }
+}
+
+/* -----------------------------------------------------------------------------
+ * Gutter rows (research themes, experience)
+ * -------------------------------------------------------------------------- */
+
+.about-row {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.3rem;
+  padding-bottom: 1.4rem;
+
+  &:last-child {
+    padding-bottom: 0.2rem;
+  }
+}
+
+.about-row-key {
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 1.55;
+  padding-top: 0.1rem;
+}
+
+.about-row-date {
+  font-size: 0.8rem;
+  line-height: 1.6;
+  color: var(--about-ink-muted);
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+
+.about-row-val {
+  font-size: 0.9rem;
+  line-height: 1.75;
+  color: var(--about-ink-soft);
+  max-width: 44em;
+
+  a {
+    color: inherit;
+    text-decoration: none;
+    border-bottom: 1px solid var(--global-divider-color);
+
+    &:hover {
+      color: var(--global-theme-color);
+      border-bottom-color: currentColor;
+      text-decoration: none;
+    }
+  }
+}
+
+.about-role {
+  margin-bottom: 0.15rem;
+  font-size: 0.9rem;
+  line-height: 1.55;
+  color: var(--global-text-color);
+
+  a {
+    color: var(--global-text-color);
+    font-weight: 600;
+    border-bottom: none;
+
+    &:hover {
+      color: var(--global-theme-color);
+    }
+  }
+
+  span {
+    color: var(--about-ink-muted);
+    font-weight: 400;
+
+    &::before {
+      content: "\00b7\00a0";
+      margin-left: 0.3rem;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .about-row {
+    grid-template-columns: var(--about-gutter) minmax(0, 1fr);
+    gap: 0 var(--about-col-gap);
+    padding-bottom: 1.5rem;
+  }
+
+  .about-row-date {
+    padding-top: 0.12rem;
+  }
+}
+
+/* -----------------------------------------------------------------------------
+ * News table, retuned to the gutter rhythm
+ * -------------------------------------------------------------------------- */
+
+.about-page .news {
+  .table-responsive {
+    max-height: none !important;
+    overflow: visible;
+  }
+
+  table {
+    width: 100%;
+    margin: 0;
+  }
+
+  th[scope="row"] {
+    width: var(--about-gutter) !important;
+    padding: 0 var(--about-col-gap) 1rem 0;
+    font-size: 0.8rem;
+    font-weight: 400;
+    line-height: 1.6;
+    color: var(--about-ink-muted);
+    font-variant-numeric: tabular-nums;
+    white-space: nowrap;
+    vertical-align: top;
+  }
+
+  td {
+    padding: 0 0 1rem;
+    font-size: 0.9rem;
+    line-height: 1.7;
+    color: var(--about-ink-soft);
+    vertical-align: top;
+
+    a {
+      color: inherit;
+      text-decoration: none;
+      border-bottom: 1px solid var(--global-divider-color);
+
+      &:hover {
+        color: var(--global-theme-color);
+        border-bottom-color: currentColor;
+        text-decoration: none;
+      }
+    }
+  }
+
+  tr:last-child {
+    th,
+    td {
+      padding-bottom: 0.2rem;
+    }
+  }
+
+  // On narrow screens the 190px gutter starves the text column: let the date
+  // cell shrink to its content instead.
+  @media (max-width: 767.98px) {
+    th[scope="row"] {
+      width: 1% !important;
+      padding-right: 1rem;
+    }
+  }
+}
+
+/* -----------------------------------------------------------------------------
+ * Selected publications: strip the badges, thumbnails and button chrome so the
+ * list reads as text. Only the five most recent entries stay on the landing
+ * page; the rest live on /publications/.
+ * -------------------------------------------------------------------------- */
+
+.about-page .publications {
+  margin-top: 0;
+
+  ol.bibliography {
+    > li {
+      margin-bottom: 0;
+      padding-bottom: 1.5rem;
+
+      &:nth-child(n + 6) {
+        display: none;
+      }
+    }
+
+    .col-sm-2.abbr,
+    .badges,
+    .preview {
+      display: none !important;
+    }
+
+    .col-sm-8,
+    .col-sm-10 {
+      flex: 0 0 100%;
+      width: 100%;
+      max-width: 100%;
+    }
+
+    .title {
+      font-size: 0.95rem;
+      font-weight: 600;
+      line-height: 1.55;
+      margin-bottom: 0.15rem;
+    }
+
+    .author,
+    .periodical {
+      font-size: 0.84rem;
+      line-height: 1.65;
+      color: var(--about-ink-soft);
+      font-style: normal;
+    }
+
+    .links {
+      margin-top: 0.4rem;
+
+      a.btn {
+        margin: 0 1rem 0 0 !important;
+        padding: 0 !important;
+        border: none !important;
+        border-radius: 0 !important;
+        background: transparent !important;
+        box-shadow: none !important;
+        font-size: 0.72rem;
+        font-weight: 500;
+        text-transform: uppercase;
+        letter-spacing: 0.07em;
+        color: var(--about-ink-muted);
+
+        &:hover {
+          color: var(--global-theme-color);
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}
