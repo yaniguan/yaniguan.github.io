@@ -9,21 +9,25 @@ ninja.data = [{
     handler: () => {
       window.location.href = "/";
     },
-  },{id: "nav-publications",
-          title: "Publications",
-          description: "",
+  },{id: "nav-papers-amp-code",
+          title: "Papers &amp; Code",
+          description: "Peer-reviewed papers, preprints, and the software I build alongside them.",
           section: "Navigation",
           handler: () => {
             window.location.href = "/publications/";
           },
-        },{id: "nav-software",
-          title: "Software",
-          description: "Open-source work in LLMs, agentic AI, and computational chemistry.",
-          section: "Navigation",
-          handler: () => {
-            window.location.href = "/software/";
-          },
-        },{id: "news-started-phd-journey-at-ucla",
+        },{id: "post-real-data-not-more-synthetic-data-closes-the-ocsr-gap",
+        
+          title: "Real data, not more synthetic data, closes the OCSR gap",
+        
+        description: "What 21 fine-tuned recognizers say about mixing synthetic and real training images",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/notes/real-data-ocsr/";
+          
+        },
+      },{id: "news-started-phd-journey-at-ucla",
           title: 'Started PhD journey at UCLA',
           description: "",
           section: "News",},{id: "news-presented-my-work-on-cu-dissolution-at-the-acs-fall-2024-conference-in-denver-co",
