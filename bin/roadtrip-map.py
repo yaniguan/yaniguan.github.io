@@ -62,43 +62,87 @@ OUTLINE = [
 
 LA = (-118.24, 34.05)
 
-# Waypoints along the road actually driven, not a great circle. Three of the
-# four came home a different way, so those are single closed loops that start
-# and end at LA -- the shape is the point. Boston is one out-and-back line.
+# Each trip is one continuous polyline out and back, so it closes into a loop
+# at LA -- the shape is the point. Stops are the ones actually made; the rest
+# are shape points that keep the line on the road rather than on a straight
+# line between stops. Where a leg was genuinely retraced the line doubles over
+# itself and simply reads as one line, which is the truth of it.
 ROUTES = [
     # key, class, waypoints
-    # 2023: up Highway 1 / US-101 on the coast, home inland on US-395.
+    # 2023: Highway 1 and US-101 the whole coast up, home inland on US-395.
     ("seattle", "fig-route", [
-        LA, (-119.70, 34.42), (-121.81, 36.27), (-121.90, 36.60),
-        (-122.42, 37.77), (-123.80, 39.31), (-124.16, 40.80),
-        (-124.28, 42.05), (-124.22, 43.37), (-124.05, 44.63),
-        (-123.83, 46.19), (-122.90, 47.04), (-122.33, 47.61),
-        (-120.51, 46.60), (-118.79, 45.67), (-119.05, 43.59),
-        (-120.35, 42.19), (-120.65, 40.42), (-119.81, 39.53),
-        (-118.40, 37.36), (-118.06, 36.60), (-118.17, 35.05), LA]),
-    # 2024: out on I-10, a circuit of the big Texas cities with a day in each,
-    # home on I-40.
+        LA,
+        (-119.70, 34.42), (-120.66, 35.28), (-121.81, 36.27),   # the coast road
+        (-121.90, 36.60),                                       # Monterey
+        (-122.42, 37.77),                                       # San Francisco
+        (-123.80, 39.31), (-124.16, 40.80), (-124.28, 42.05),
+        (-124.22, 43.37), (-124.06, 44.63),                     # the Oregon coast
+        (-123.96, 45.89),                                       # a coast town west of Portland
+        (-123.82, 46.98),
+        (-122.33, 47.61),                                       # Seattle
+        (-121.76, 46.85),                                       # Mount Rainier
+        (-122.68, 45.52),                                       # Portland
+        (-122.12, 45.58),                                       # the falls east of it
+        (-121.31, 44.06), (-121.78, 42.22), (-120.65, 40.42),   # US-97 / US-395
+        (-119.81, 39.53),                                       # Reno
+        (-118.40, 37.36), (-118.06, 36.60), (-118.17, 35.05),   # the eastern Sierra
+        LA]),
+    # 2024: out through Nevada and Arizona, a circuit of the Texas cities,
+    # home along I-10 through Carlsbad and Las Cruces.
     ("texas", "fig-route", [
-        LA, (-112.07, 33.45), (-110.97, 32.22), (-106.49, 31.76),
-        (-102.88, 30.89), (-98.49, 29.42), (-97.74, 30.27),
-        (-95.37, 29.76), (-96.95, 32.78), (-101.83, 35.22),
-        (-106.61, 35.08), (-111.65, 35.20), (-114.05, 35.19), LA]),
-    # 2025: the northern way out through the Black Hills and Nebraska, home
-    # across the Rockies through Denver.
+        LA,
+        (-115.14, 36.17),                                       # Las Vegas
+        (-111.65, 35.20), (-111.76, 34.87),                     # Flagstaff, Sedona
+        (-112.07, 33.45), (-110.97, 32.22),                     # Phoenix, Tucson
+        (-106.49, 31.76),                                       # El Paso
+        (-102.88, 30.89),
+        (-98.49, 29.42), (-97.74, 30.27), (-95.37, 29.76), (-96.80, 32.78),
+        (-99.73, 32.45), (-102.08, 31.99),                      # west across Texas
+        (-104.23, 32.42),                                       # Carlsbad
+        (-106.78, 32.31),                                       # Las Cruces
+        (-110.97, 32.22), (-112.07, 33.45),                     # back through Tucson, Phoenix
+        LA]),
+    # 2025: north up US-395 and across the Rockies to the Black Hills and
+    # Minneapolis, home through Denver and the Utah desert.
     ("chicago", "fig-route", [
-        LA, (-115.14, 36.17), (-113.06, 37.68), (-111.89, 40.76),
-        (-109.22, 41.59), (-106.31, 42.85), (-103.23, 44.08),
-        (-99.33, 43.81), (-96.73, 43.55), (-95.94, 41.26),
-        (-93.60, 41.60), (-87.63, 41.88), (-89.65, 39.80),
-        (-91.36, 39.71), (-94.58, 39.10), (-104.99, 39.74),
-        (-108.55, 39.06), (-112.58, 38.60), (-113.06, 37.68),
-        (-115.14, 36.17), LA]),
-    # 2026: the one that went out and back on the same road.
+        LA,
+        (-118.17, 35.05), (-118.97, 37.65),                     # Mammoth Lakes
+        (-119.81, 39.53),                                       # Reno
+        (-117.74, 40.97),                                       # Winnemucca
+        (-114.46, 42.56),                                       # Twin Falls
+        (-110.68, 43.79),                                       # Grand Teton
+        (-105.50, 44.29),                                       # Gillette
+        (-103.23, 44.08),                                       # Rapid City
+        (-93.27, 44.98),                                        # Minneapolis
+        (-87.63, 41.88),                                        # Chicago
+        (-93.60, 41.60),
+        (-96.67, 40.81),                                        # Lincoln
+        (-104.99, 39.74),                                       # Denver
+        (-109.55, 38.57),                                       # Moab
+        (-113.58, 37.10),                                       # St. George
+        (-115.14, 36.17),
+        LA]),
+    # 2026: the drive out to the SES AI internship. Same road for the western
+    # two-thirds both ways; the east comes home the other way round.
     ("boston", "fig-route-em", [
-        LA, (-115.14, 36.17), (-110.16, 38.99), (-104.99, 39.74),
-        (-94.58, 39.1), (-90.2, 38.63), (-86.16, 39.77),
-        (-82.99, 39.96), (-79.99, 40.44), (-76.88, 40.27),
-        (-74.0, 40.71), (-71.06, 42.36)]),
+        LA,
+        (-112.07, 33.45), (-111.65, 35.20),                     # Phoenix, then I-17/I-40
+        (-106.61, 35.08), (-101.83, 35.22), (-97.52, 35.47),
+        (-90.20, 38.63), (-86.16, 39.77), (-82.99, 39.96),
+        (-79.99, 40.44),                                        # Pittsburgh
+        (-75.66, 41.41), (-72.68, 41.76),
+        (-71.06, 42.36),                                        # Boston
+        (-73.76, 42.65), (-76.15, 43.05),
+        (-79.04, 43.08),                                        # Niagara Falls
+        (-81.69, 41.50), (-86.16, 39.77),
+        (-90.20, 38.63),                                        # St. Louis
+        (-93.29, 37.21), (-97.52, 35.47), (-101.83, 35.22),
+        (-106.61, 35.08),                                       # New Mexico
+        (-111.65, 35.20), (-112.07, 33.45),
+        LA]),
+    # The side trip taken from Boston during the two months there.
+    ("boston-ny", "fig-route-em", [
+        (-71.06, 42.36), (-71.41, 41.82), (-72.93, 41.31), (-74.01, 40.71)]),
 ]
 
 # Labelled endpoints. dx/dy offset the two text lines from the ring; set a
@@ -118,18 +162,31 @@ LABELS = [
 ]
 
 # Unlabelled stops: the other Texas cities the 2024 loop stayed a day in.
-# The TEXAS sub-label is what explains them. Dallas and Fort Worth are one
-# dot -- they are ~5px apart at this scale.
-STOPS = [(-106.49, 31.76), (-98.49, 29.42), (-97.74, 30.27), (-96.95, 32.78)]
+# The TEXAS sub-label is what explains them.
+STOPS = [(-106.49, 31.76), (-98.49, 29.42), (-97.74, 30.27), (-96.80, 32.78)]
 
-# Named turning points, in the quieter fig-s type so they stay subordinate to
-# the endpoints. These are what make each loop legible as a loop.
+# Named stops, in the quieter fig-s type so they stay subordinate to the four
+# endpoints. Deliberately not every stop -- the full itineraries are listed in
+# the rows under the map. These are the ones that make each loop legible.
 WAYPOINTS = [
-    dict(at=(-119.81, 39.53), name="Reno", anchor="start", dx=9, dy=3),
+    dict(at=(-122.68, 45.52), name="Portland", anchor="end", dx=-9, dy=3),
+    dict(at=(-119.81, 39.53), name="Reno", anchor="end", dx=-9, dy=3),
+    dict(at=(-110.68, 43.79), name="Grand Teton", anchor="middle", dx=0, dy=-11),
     dict(at=(-103.23, 44.08), name="Rapid City", anchor="middle", dx=0, dy=-11),
-    dict(at=(-95.94, 41.26), name="Omaha", anchor="middle", dx=0, dy=17),
-    dict(at=(-104.99, 39.74), name="Denver", anchor="middle", dx=0, dy=-11),
+    dict(at=(-93.27, 44.98), name="Minneapolis", anchor="start", dx=9, dy=3),
+    dict(at=(-104.99, 39.74), name="Denver", anchor="middle", dx=0, dy=16),
+    dict(at=(-109.55, 38.57), name="Moab", anchor="middle", dx=0, dy=16),
+    dict(at=(-104.23, 32.42), name="Carlsbad", anchor="middle", dx=0, dy=16),
+    dict(at=(-90.20, 38.63), name="St. Louis", anchor="end", dx=-9, dy=-4),
+    dict(at=(-79.04, 43.08), name="Niagara Falls", anchor="middle", dx=0, dy=-11),
+    dict(at=(-79.99, 40.44), name="Pittsburgh", anchor="middle", dx=0, dy=16),
+    dict(at=(-74.01, 40.71), name="New York", anchor="start", dx=9, dy=10),
 ]
+
+# Smoothing for the route lines. Kept tight: where a leg was retraced the
+# line is drawn twice, and a looser fit makes the two passes bow apart into
+# a sliver that reads as a spurious little loop.
+ROUTE_K = 0.11
 
 VIEWBOX = (900, 420)
 BOX = (142.0, 44.0, 718.0, 384.0)  # left, top, right, bottom of the drawing area
@@ -180,11 +237,13 @@ def render():
         % VIEWBOX,
         u'      <title id="map-title">Four road trips out of Los Angeles</title>',
         u'      <desc id="map-desc">',
-        u'        A map of the lower 48 with four routes out of Los Angeles. Three are loops: up',
-        u'        the coast to Seattle in 2023 and back inland through Reno; out to a circuit of',
-        u'        the big Texas cities in 2024 and back on I-40; north through the Black Hills and',
-        u'        Nebraska to Chicago in 2025 and back over the Rockies through Denver. The fourth,',
-        u'        across to Boston in 2026, went out and back on the same road.',
+        u'        A map of the lower 48 with four loops out of Los Angeles. 2023 goes up the',
+        u'        coast to Seattle and home inland through Portland and Reno. 2024 goes through',
+        u'        Las Vegas and Arizona to a circuit of the Texas cities and home past Carlsbad.',
+        u'        2025 goes north through the Tetons and the Black Hills to Minneapolis and',
+        u'        Chicago, and home through Denver and Moab. 2026 crosses to Boston through',
+        u'        Pittsburgh, with a side trip to New York, and comes home by Niagara Falls and',
+        u'        St. Louis.',
         u'      </desc>',
         u'',
         # a coastline wants corners; the interstates genuinely do curve
@@ -192,7 +251,7 @@ def render():
         u'',
     ]
     for _key, cls, pts in ROUTES:
-        parts.append(u'      <path class="%s" d="%s" />' % (cls, smooth([P(*c) for c in pts])))
+        parts.append(u'      <path class="%s" d="%s" />' % (cls, smooth([P(*c) for c in pts], k=ROUTE_K)))
     parts.append(u'')
 
     for ll in STOPS:

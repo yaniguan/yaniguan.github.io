@@ -786,6 +786,19 @@ html[data-theme="dark"] .about-page {
 }
 
 /* -----------------------------------------------------------------------------
+ * An itinerary: every stop in order, under the prose that summarises it. Long
+ * enough to wrap, so it gets its own line height rather than the row's.
+ * -------------------------------------------------------------------------- */
+
+.trip-stops {
+  margin: 0.6rem 0 0;
+  font-size: 0.78rem;
+  line-height: 1.9;
+  color: var(--about-ink-muted);
+  max-width: 44em;
+}
+
+/* -----------------------------------------------------------------------------
  * Loose text bits: a paragraph and a line of metadata, outside a gutter row.
  * -------------------------------------------------------------------------- */
 
