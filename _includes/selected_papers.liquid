@@ -4,8 +4,13 @@
     (see lib/jekyll/scholar/utilities.rb). An unknown switch such as --sort_by is
     split into a bare "--", which OptionParser reads as "end of options" and
     silently drops everything after it — which is why --group_by never applied.
-    Keep this to real switches only. Entry order comes from selected.bib, which
-    is already newest-first.
+    Keep this to real switches only.
+
+    Order does NOT come from the order of entries in selected.bib. jekyll-scholar
+    applies the global scholar.sort_by from _config.yml ("year, title", descending
+    then ascending), so these five are the first five after that sort: newest year
+    first, then alphabetical by title within the year. Adding an entry can push
+    another one off the end.
   {%- endcomment -%}
   {% bibliography --file selected --group_by none --max 5 %}
 </div>
