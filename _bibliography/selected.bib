@@ -3,6 +3,19 @@
 
 @string{aps = {American Physical Society,}}
 
+@article{guan2026verdict,
+  title={VERDICT: Agreement Beats Pixel-Space Verification in Real-Document OCSR},
+  author={Guan, Yani and Dong, Dengpan and Luo, Shuang and Wei, Zi and Han, Joah and Hannah, Dan and Zhang, Yumin and Hu, Qichao and Xu, Kang},
+  journal={arXiv preprint arXiv:2608.22183},
+  year={2026},
+  arxiv={2608.22183},
+  doi={10.48550/arXiv.2608.22183},
+  note={Label-free verification for image-to-SMILES at scale: agreement among four architecturally distinct recognizers reaches AUROC 0.916, while re-rendering a prediction and comparing pixels barely beats chance at 0.547.},
+  abstract={Optical Chemical Structure Recognition (OCSR) converts 2D molecular depictions in the published literature into SMILES, and is increasingly important for constructing large-scale chemical training datasets. Automation at that scale requires identifying unreliable predictions in the absence of ground truth. Three families of label-free signals were compared on 263 ACS journal depictions with verified ground truth: model confidence, re-rendering similarity, and agreement among recognizers. Pixel-space re-rendering performed little better than chance (AUROC 0.547, 95\% CI [0.465,0.629]), and an oracle-tuned threshold on it reduced correct labels per image from 0.745 to 0.205. Agreement among four architecturally distinct recognizers instead reached an AUROC of 0.916 ([0.880,0.952]). The two-of-four rule accepted 81.7\% of images at 88.8\% precision, the three-of-four rule 52.1\% at 98.5\%. The same pattern held on CLEF-IP, UOB, and USPTO. This distinction is obscured on synthetic benchmarks, where re-rendered predictions naturally resemble their inputs. A substance filter removed 2,193 false agreements on wildcards and R-group fragments, after which the three-of-four rule rejected all 68 generic depictions. VERDICT was then applied to PMC Open Access, producing 6,146 structure labels for 4,833 molecules; chemist adjudication of 400 released labels in two independent samples yielded precisions of 0.995 for the three-of-four tier and 0.958 for the two-of-four tier. VERDICT therefore enables validated labels for multimodal molecular databases linking structure images, machine-readable representations, and source-publication information. In SES AI's Molecular Universe platform, VERDICT further serves as an image-based interface for searching and retrieving molecular records.},
+  abbr={VERDICT},
+  selected={true}
+}
+
 @article{guan2026ocsr,
   title={Real Data Closes Synthetic-to-Real Gap in Optical Chemical Structure Recognition},
   author={Guan, Yani and Dong, Dengpan and Wei, Zi and Luo, Shuang and Hannah, Dan C and Zhang, Yumin and Xu, Kang},
