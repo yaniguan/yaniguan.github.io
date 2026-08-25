@@ -1,16 +1,25 @@
 <div class="publications">
   {%- comment -%}
-    jekyll-scholar 7.2 only recognises the switches listed in its own optparse
-    (see lib/jekyll/scholar/utilities.rb). An unknown switch such as --sort_by is
-    split into a bare "--", which OptionParser reads as "end of options" and
-    silently drops everything after it — which is why --group_by never applied.
-    Keep this to real switches only.
+    Order here is deliberate, not computed. jekyll-scholar has no --sort_by
+    switch (an unknown switch is split into a bare "--", which OptionParser
+    reads as "end of options" and silently drops everything after it), and it
+    applies the global scholar.sort_by from _config.yml to every bibliography
+    tag — including one restricted to a --file. That sort is "year, title",
+    so a single tag here lists the newest year first and then alphabetically
+    by title within it, which is not an order anyone chose.
 
-    Order does NOT come from the order of entries in selected.bib. jekyll-scholar
-    applies the global scholar.sort_by from _config.yml ("year, title", descending
-    then ascending), so these five are the first five after that sort: newest year
-    first, then alphabetical by title within the year. Adding an entry can push
-    another one off the end.
+    So each slot is pulled by hand instead. `rank` is a custom field on the
+    entries in selected.bib; to reorder the landing page, renumber it there.
+    Entries ranked above 5 are simply not rendered, so the file doubles as the
+    priority list for what moves up next.
+
+    Every entry in selected.bib is an @article, and --query @article is the
+    form already proven on the publications page, so the condition is narrowed
+    onto that rather than onto @*.
   {%- endcomment -%}
-  {% bibliography --file selected --group_by none --max 5 %}
+  {% bibliography --file selected --query @article[rank=1] --group_by none %}
+  {% bibliography --file selected --query @article[rank=2] --group_by none %}
+  {% bibliography --file selected --query @article[rank=3] --group_by none %}
+  {% bibliography --file selected --query @article[rank=4] --group_by none %}
+  {% bibliography --file selected --query @article[rank=5] --group_by none %}
 </div>

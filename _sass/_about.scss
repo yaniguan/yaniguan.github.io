@@ -390,26 +390,33 @@ html[data-theme="dark"] .about-page {
 
 /* -----------------------------------------------------------------------------
  * Selected publications: strip the badges, thumbnails and button chrome so the
- * list reads as text. Only the five most recent entries stay on the landing
- * page; the rest live on /publications/.
+ * list reads as text. Five hand-ordered entries stay on the landing page; the
+ * rest live on /publications/.
  * -------------------------------------------------------------------------- */
 
 .about-page .publications {
   margin-top: 0;
 
-  // Safety net: the five-entry limit is enforced by --max in
-  // _includes/selected_papers.liquid, and grouping is off there, so there is a
-  // single <ol> and no year headings. Both are re-asserted here so a regression
-  // in the tag arguments cannot flood the landing page.
+  // Grouping is off in _includes/selected_papers.liquid, so no year headings
+  // should be emitted; re-asserted here so a regression in the tag arguments
+  // cannot put them back.
   h2.bibliography {
     display: none;
   }
 
+  // The include pulls each slot with its own bibliography tag, so this is five
+  // single-item <ol>s rather than one list of five. Kill the list's own bottom
+  // margin: the gap between entries is the item's padding-bottom, and it has
+  // to stay the same whether entries are siblings or in separate lists.
   ol.bibliography {
+    margin-bottom: 0;
+
     > li {
       margin-bottom: 0;
       padding-bottom: 1.5rem;
 
+      // Dead while each list holds one item -- kept as the safety net for a
+      // revert to a single tag, which is what could flood the landing page.
       &:nth-child(n + 6) {
         display: none;
       }
