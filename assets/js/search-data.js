@@ -39,8 +39,8 @@ ninja.data = [{
           section: "News",},{id: "news-received-dissertation-year-award-at-ucla",
           title: 'Received Dissertation Year Award at UCLA',
           description: "",
-          section: "News",},{id: "news-excited-to-join-ses-ai-corp-as-an-applied-scientist-intern-for-six-months",
-          title: 'Excited to join SES AI Corp as an Applied Scientist Intern for six...',
+          section: "News",},{id: "news-excited-to-join-ses-ai-corp-as-an-applied-scientist-intern-for-the-summer",
+          title: 'Excited to join SES AI Corp as an Applied Scientist Intern for the...',
           description: "",
           section: "News",},{
         id: 'social-email',
