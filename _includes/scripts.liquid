@@ -70,6 +70,12 @@
   <script defer src="{{ '/assets/js/leaflet-setup.js' | relative_url | bust_file_cache }}" type="text/javascript"></script>
 {% endif %}
 
+{% if page.places %}
+  <!-- model-viewer, for the 3D place cards -->
+  <script type="module" src="https://cdn.jsdelivr.net/npm/@google/model-viewer@4.0.0/dist/model-viewer.min.js"></script>
+  <script defer src="{{ '/assets/js/places-setup.js' | relative_url | bust_file_cache }}" type="text/javascript"></script>
+{% endif %}
+
 {% if page.chart and page.chart.chartjs %}
   <!-- Chart.js -->
   <script

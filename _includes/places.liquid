@@ -1,0 +1,58 @@
+{%- comment -%}
+  A grid of 3D place cards from _data/places.yml. Each model turns slowly on its
+  own and can be dragged sideways; the camera is locked to a narrow band of
+  elevation so the buildings always read as icons, never from underneath.
+  The page needs `places: true` in its front matter to load <model-viewer>.
+{%- endcomment -%}
+{% assign places = site.data.places | sort: 'date' | reverse %}
+<div class="places-grid">
+  {% for place in places %}
+    {% if place.maps %}
+      {% assign maps_query = place.maps %}
+    {% else %}
+      {% assign maps_query = place.name | append: ', ' | append: place.location %}
+    {% endif %}
+    <figure class="place-card">
+      <model-viewer
+        class="place-model"
+        src="{{ place.model | relative_url }}"
+        {% if place.poster %}
+          poster="{{ place.poster | relative_url }}"
+        {% endif %}
+        alt="3D model of {{ place.name }}, {{ place.location }}"
+        loading="lazy"
+        camera-controls
+        disable-zoom
+        disable-pan
+        disable-tap
+        touch-action="pan-y"
+        interaction-prompt="none"
+        auto-rotate
+        auto-rotate-delay="0"
+        rotation-per-second="18deg"
+        camera-orbit="{{ place.orbit | default: 30 }}deg 70deg auto"
+        min-camera-orbit="-Infinity 60deg auto"
+        max-camera-orbit="Infinity 80deg auto"
+        environment-image="neutral"
+        shadow-intensity="0.8"
+        shadow-softness="1"
+        exposure="1.05"
+        tone-mapping="neutral"
+      ></model-viewer>
+      <figcaption>
+        <a
+          class="place-name"
+          href="https://www.google.com/maps/search/?api=1&query={{ maps_query | url_encode }}"
+          target="_blank"
+          rel="noopener noreferrer"
+          >{{ place.name }}</a
+        >
+        <span class="place-meta">
+          {{- place.location }} ·
+          <time datetime="{{ place.date | date: '%Y-%m-%d' }}">{{ place.date | date: '%b %Y' }}</time>
+        </span>
+        {% if place.note %}<span class="place-note">{{ place.note }}</span>{% endif %}
+      </figcaption>
+    </figure>
+  {% endfor %}
+</div>

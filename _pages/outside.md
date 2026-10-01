@@ -5,9 +5,11 @@ title: Outside the lab
 eyebrow: Yani Guan
 eyebrow_url: /
 description: >
-  Three things I do when I am not in front of a terminal: carry a camera,
-  read, and drive a very long way to somewhere empty.
+  What I do when I am not in front of a terminal: carry a camera, read,
+  drive a very long way to somewhere empty, and keep a small model of
+  wherever I end up.
 nav: false
+places: true
 ---
 
 {%- comment -%}
@@ -526,4 +528,15 @@ the fig-\* classes in \_sass/\_about.scss). Add a row or a shape, not a new layo
     </div>
 
   </div>
+</section>
+
+<section class="about-section">
+  <h2 class="about-section-title">Places</h2>
+
+  <p class="lst-desc">
+    A small clay model of somewhere I have been, built from a photo I took
+    there. Drag one sideways to walk round it; the name opens the map.
+  </p>
+
+  {% include places.liquid %}
 </section>

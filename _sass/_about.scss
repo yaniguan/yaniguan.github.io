@@ -806,6 +806,75 @@ html[data-theme="dark"] .about-page {
 }
 
 /* -----------------------------------------------------------------------------
+ * Places: one small 3D model per visit (_includes/places.liquid). The tile has
+ * no frame of its own; the model's soft shadow is the only ground it gets.
+ * -------------------------------------------------------------------------- */
+
+.places-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.6rem 1.2rem;
+  margin: 1.4rem 0 1rem;
+
+  @media (min-width: 768px) {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+.place-card {
+  margin: 0;
+
+  figcaption {
+    display: flex;
+    flex-direction: column;
+    gap: 0.1rem;
+    margin-top: 0.3rem;
+    text-align: center;
+  }
+}
+
+.place-model {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1;
+  height: auto;
+  background: transparent;
+  cursor: grab;
+  --poster-color: transparent;
+  --progress-bar-color: var(--global-divider-color);
+
+  &:active {
+    cursor: grabbing;
+  }
+
+  &:focus-visible {
+    outline: 1px dashed var(--global-divider-color);
+    outline-offset: 2px;
+  }
+}
+
+.place-name {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--global-text-color);
+  text-decoration: none;
+  border-bottom: none;
+
+  &:hover {
+    color: var(--global-theme-color);
+    text-decoration: none;
+  }
+}
+
+.place-meta,
+.place-note {
+  font-size: 0.78rem;
+  line-height: 1.5;
+  color: var(--about-ink-muted);
+  font-variant-numeric: tabular-nums;
+}
+
+/* -----------------------------------------------------------------------------
  * Loose text bits: a paragraph and a line of metadata, outside a gutter row.
  * -------------------------------------------------------------------------- */
 

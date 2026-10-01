@@ -1,0 +1,19 @@
+# Places I have been, rendered as small rotatable 3D models on /outside/.
+# Newest first is not required: _includes/places.liquid sorts by date.
+#
+# One entry per visit:
+#   name:     what the card says, e.g. "Griffith Observatory"
+#   location: city / region / country shown under the name
+#   date:     YYYY-MM-DD (the card shows "Mon YYYY")
+#   model:    path to a .glb under assets/models/ (see bin/place-model.sh)
+#   poster:   optional still image shown before the model loads
+#   maps:     optional Google Maps search text; defaults to "name, location"
+#   orbit:    optional starting angle in degrees (default 30), to turn the
+#             model's best side to the camera
+#   note:     optional one-liner
+#
+- name: Fishlake National Forest
+  location: Utah
+  date: 2026-09-26
+  model: assets/models/fishlake-national-forest.glb
+  orbit: 150
