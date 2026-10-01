@@ -538,5 +538,6 @@ the fig-\* classes in \_sass/\_about.scss). Add a row or a shape, not a new layo
     there. Drag one sideways to walk round it; the name opens the map.
   </p>
 
-  {% include places.liquid %}
+{% include places.liquid %}
+
 </section>

@@ -45,13 +45,16 @@
           href="https://www.google.com/maps/search/?api=1&query={{ maps_query | url_encode }}"
           target="_blank"
           rel="noopener noreferrer"
-          >{{ place.name }}</a
         >
+          {{- place.name -}}
+        </a>
         <span class="place-meta">
           {{- place.location }} ·
           <time datetime="{{ place.date | date: '%Y-%m-%d' }}">{{ place.date | date: '%b %Y' }}</time>
         </span>
-        {% if place.note %}<span class="place-note">{{ place.note }}</span>{% endif %}
+        {% if place.note -%}
+          <span class="place-note">{{ place.note }}</span>
+        {%- endif %}
       </figcaption>
     </figure>
   {% endfor %}
