@@ -1,0 +1,1 @@
+!function(){const e=window.matchMedia("(prefers-reduced-motion: reduce)"),o=()=>{document.querySelectorAll("model-viewer.place-model").forEach((o=>{o.autoRotate=!e.matches}))};o(),e.addEventListener("change",o)}();
