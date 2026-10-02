@@ -4,9 +4,10 @@ title: About
 permalink: /
 subtitle: Ph.D. Candidate, <a href='https://sautet.chem.ucla.edu/' target='_blank'>Sautet Group</a>, UCLA &nbsp;·&nbsp; Applied Scientist Intern, <a href='https://www.ses.ai/' target='_blank'>SES AI</a>
 tagline: >
-  I work on both halves of AI for chemistry: the multi-scale simulations that
-  produce the science, and the multimodal models, post-training and agents that
-  turn it into something a machine can reason with.
+  I build symmetry-aware neural networks for chemistry — E(3)-equivariant models
+  over atoms and trajectories, steerable encoders over molecule images, language
+  models that read 3D directions — along with the multi-scale simulations that
+  feed them and the GPU work that makes them trainable.
 
 profile:
   align: right
@@ -146,6 +147,70 @@ latest_posts:
   </p>
 
   <div class="about-rows">
+
+    <div class="about-row">
+      <div class="about-row-key"><a href="https://github.com/yaniguan/WignerFlow">E(3)-equivariant trajectory generation</a></div>
+      <div class="about-row-val">
+        <em>WignerFlow</em> replaces the MD integrator with an autoregressive
+        E(3)-equivariant transformer: from the last <i>k</i> frames it emits the frame
+        <i>n</i>·δ<i>t</i> ahead, directly. Each frame is encoded with eSCN-style SO(2)
+        convolutions — a Wigner-D rotation aligns every edge to the <i>z</i>-axis, which
+        collapses the l<sub>max</sub> = 2 tensor product from O(L<sup>6</sup>) to
+        O(L<sup>3</sup>) — and causal attention over time draws its logits from
+        invariants only, so the stack stays exactly equivariant. Two heads, MSE regression
+        and equivariant flow matching in displacement space, trained with pushforward
+        unrolling on a curriculum so 10<sup>4</sup>-step rollouts stay on the data
+        manifold; judged on RDF, VACF/VDOS, Li⁺ solvation-shell residence times and
+        energy drift against the reference force field.
+      </div>
+    </div>
+
+    <div class="about-row">
+      <div class="about-row-key"><a href="https://github.com/yaniguan/YLM">Irreps-to-text attention</a></div>
+      <div class="about-row-val">
+        Molecular language models — MolT5, 3D-MoLM, even EquiLLM — reduce geometry to
+        invariants before the LLM sees it, so they can name a dipole but not point one.
+        <em>YLM</em> lets text tokens query l ≥ 1 irreps directly: attention logits come
+        from invariants, values carry spherical-harmonic features, and anything with a
+        direction is only scaled or combined through Clebsch–Gordan products. Rotate the
+        molecule by <i>R</i> and the answer rotates by D(<i>R</i>), by construction. Each
+        token runs two streams, an invariant hidden state and an irreps side-stream;
+        parity labels keep (R)- and (S)- apart; a <code>&lt;VEC&gt;</code> /
+        <code>&lt;TENSOR&gt;</code> token hands off to an equivariant readout. Measured on
+        TensorQA, 85k structure–question pairs with GFN2-xTB force and dipole labels;
+        equivariance error below 10<sup>−9</sup> in float64.
+      </div>
+    </div>
+
+    <div class="about-row">
+      <div class="about-row-key"><a href="https://github.com/yaniguan/ouroboros-ocsr">Equivariant OCSR</a></div>
+      <div class="about-row-val">
+        <em>Ouroboros</em> carries the OCSR work forward with a symmetry prior instead of
+        more data: steerable C<sub>N</sub> CNNs (escnn, N ∈ {4, 8, 16}) and
+        group-equivariant self-attention as the image encoder, with the SMILES decoder
+        held fixed. Rotations only, never reflections — mirroring a wedge/hash drawing
+        inverts every stereocenter, so a D<sub>N</sub>-invariant encoder would be blind to
+        chirality. Arms are FLOP-matched (10.3 GFLOPs per image; the parameter-matched C8
+        would cost 127), equivariance holds to 10<sup>−6</sup> relative error on the 90°
+        grid in fp32, and the hypotheses on the synthetic-to-real gap were pre-registered
+        before the first training run. Recognition errors are then pushed through ETKDG
+        and MACE-OFF to price what a wrong diastereomer costs in energy.
+      </div>
+    </div>
+
+    <div class="about-row">
+      <div class="about-row-key">Equivariant models on GPUs</div>
+      <div class="about-row-val">
+        Equivariant networks spend their time in Clebsch–Gordan tensor products, so
+        throughput and memory are designed, not discovered. The fully connected e3nn
+        product with per-edge weights was ~40× too slow and gave way to channel-wise
+        (uvu) products; activation memory is budgeted from saved-tensor bytes before a job
+        is queued (the C8 attention encoder fits batch 137 on a 40 GB A100 in bf16); and
+        the profiling stage pits eager PyTorch against <code>torch.compile</code> and
+        cuEquivariance, and fp32 against tf32/bf16 with l ≥ 1 kept in fp32 — on V100s at
+        SDSC Expanse and L40S/A100 nodes on UCLA Hoffman2.
+      </div>
+    </div>
 
     <div class="about-row">
       <div class="about-row-key">Multi-scale simulation</div>
