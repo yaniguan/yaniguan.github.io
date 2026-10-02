@@ -32,11 +32,16 @@ latest_posts:
   <h2 class="about-section-title">Research</h2>
 
   <figure class="about-figure">
-    <svg viewBox="0 0 900 348" role="img" aria-labelledby="fig-title fig-desc">
+    <svg viewBox="0 0 900 362" role="img" aria-labelledby="fig-title fig-desc">
       <title id="fig-title">How the work fits together</title>
       <desc id="fig-desc">
-        Multi-scale simulation feeds a multimodal representation of chemistry, which is
-        post-trained into a co-scientist that proposes the next simulation.
+        Chemistry reaches a model in three forms: papers, structure drawings and 3D atoms
+        from multi-scale simulation. Each goes through an encoder matched to its symmetry:
+        a language model for text, SE(2)-equivariant encoders for drawings, E(3)-equivariant
+        networks for atoms. Irreps-to-text attention and contrastive alignment join them in
+        one latent space with retrieval over all three; post-training turns that into a
+        co-scientist that proposes the next simulation. GPU kernel and precision work sits
+        under every stage.
       </desc>
       <defs>
         <marker id="fig-arrow" viewBox="0 0 8 7" refX="6.4" refY="3" markerWidth="6" markerHeight="6" orient="auto">
@@ -44,96 +49,101 @@ latest_posts:
         </marker>
       </defs>
 
-      <!-- Panel A: simulation -->
-      <text class="fig-h" x="10" y="22">MULTI-SCALE SIMULATION</text>
-      <rect class="fig-panel" x="10" y="32" width="228" height="226" rx="6" />
+      <!-- Column A: where the chemistry is -->
+      <text class="fig-h" x="10" y="22">DATA</text>
+      <rect class="fig-panel" x="10" y="32" width="196" height="214" rx="6" />
 
-      <rect class="fig-box" x="28" y="46" width="192" height="38" rx="4" />
-      <text class="fig-t" x="38" y="62">DFT</text>
-      <text class="fig-s" x="38" y="76">electrons, interfaces</text>
+      <rect class="fig-box" x="22" y="48" width="172" height="44" rx="4" />
+      <text class="fig-t" x="32" y="66">Papers</text>
+      <text class="fig-s" x="32" y="81">methods, results, claims</text>
 
-      <rect class="fig-box" x="28" y="98" width="192" height="38" rx="4" />
-      <text class="fig-t" x="38" y="114">MD · polarizable FF</text>
-      <text class="fig-s" x="38" y="128">structure, transport, solvation</text>
+      <rect class="fig-box" x="22" y="118" width="172" height="44" rx="4" />
+      <text class="fig-t" x="32" y="136">Structure drawings</text>
+      <text class="fig-s" x="32" y="151">figures in the literature</text>
 
-      <rect class="fig-box" x="28" y="150" width="192" height="38" rx="4" />
-      <text class="fig-t" x="38" y="166">kMC</text>
-      <text class="fig-s" x="38" y="180">surface kinetics</text>
+      <rect class="fig-box" x="22" y="188" width="172" height="44" rx="4" />
+      <text class="fig-t" x="32" y="206">Multi-scale simulation</text>
+      <text class="fig-s" x="32" y="221">DFT · MD · kMC · P2D</text>
 
-      <rect class="fig-box" x="28" y="202" width="192" height="38" rx="4" />
-      <text class="fig-t" x="38" y="218">P2D · cell model</text>
-      <text class="fig-s" x="38" y="232">device response</text>
+      <path class="fig-line" d="M200,70 H242" marker-end="url(#fig-arrow)" />
+      <path class="fig-line" d="M200,140 H242" marker-end="url(#fig-arrow)" />
+      <path class="fig-line" d="M200,210 H242" marker-end="url(#fig-arrow)" />
 
-      <path class="fig-line" d="M124,84 V96" marker-end="url(#fig-arrow)" />
-      <path class="fig-line" d="M124,136 V148" marker-end="url(#fig-arrow)" />
-      <path class="fig-line" d="M124,188 V200" marker-end="url(#fig-arrow)" />
+      <!-- Column B: one encoder per form, matched to its symmetry -->
+      <text class="fig-h" x="236" y="22">ENCODER · MATCHED SYMMETRY</text>
+      <rect class="fig-panel" x="236" y="32" width="260" height="214" rx="6" />
 
-      <!-- Panel A to B -->
-      <path class="fig-line" d="M244,145 H280" marker-end="url(#fig-arrow)" />
+      <rect class="fig-box" x="248" y="48" width="236" height="44" rx="4" />
+      <text class="fig-t" x="258" y="66">Language model</text>
+      <text class="fig-s" x="258" y="81">tokens · no geometric group</text>
 
-      <!-- Panel B: multimodality -->
-      <text class="fig-h" x="286" y="22">SCIENTIFIC MULTIMODALITY</text>
-      <rect class="fig-panel" x="286" y="32" width="306" height="226" rx="6" />
-      <text class="fig-h" x="296" y="50">ONE CHEMISTRY, THREE MODALITIES</text>
+      <rect class="fig-box" x="248" y="118" width="236" height="44" rx="4" />
+      <text class="fig-t" x="258" y="136">SE(2)-equivariant encoders</text>
+      <text class="fig-s" x="258" y="151">C<tspan baseline-shift="sub" font-size="7">N</tspan> steerable CNN · Ouroboros · VERDICT</text>
 
-      <rect class="fig-box" x="296" y="58" width="92" height="40" rx="4" />
-      <text class="fig-t" x="342" y="76" text-anchor="middle">text</text>
-      <text class="fig-s" x="342" y="90" text-anchor="middle">papers</text>
+      <rect class="fig-box" x="248" y="188" width="236" height="44" rx="4" />
+      <text class="fig-t" x="258" y="206">E(3)-equivariant networks</text>
+      <text class="fig-s" x="258" y="221">polarizable FF · WignerFlow · world model</text>
 
-      <rect class="fig-box" x="396" y="58" width="92" height="40" rx="4" />
-      <text class="fig-t" x="442" y="76" text-anchor="middle">figures</text>
-      <text class="fig-s" x="442" y="90" text-anchor="middle">VLM · VERDICT</text>
+      <!-- Ouroboros: a recognised drawing becomes 3D atoms -->
+      <path class="fig-line-soft" d="M462,162 V184" marker-end="url(#fig-arrow)" />
+      <text class="fig-s" x="454" y="178" text-anchor="end">SMILES → ETKDG → MACE-OFF</text>
 
-      <rect class="fig-box" x="496" y="58" width="92" height="40" rx="4" />
-      <text class="fig-t" x="542" y="76" text-anchor="middle">simulations</text>
-      <text class="fig-s" x="542" y="90" text-anchor="middle">DFT → cell</text>
+      <!-- B to C: every encoder feeds the alignment column -->
+      <path class="fig-line-soft" d="M490,70 H516 M490,140 H516 M490,210 H516 M516,70 V210" />
+      <path class="fig-line" d="M516,74 H540" marker-end="url(#fig-arrow)" />
+      <path class="fig-line" d="M516,140 H540" marker-end="url(#fig-arrow)" />
 
-      <path class="fig-line-soft" d="M342,98 V104 M442,98 V104 M542,98 V104 M342,104 H542" />
-      <path class="fig-line" d="M442,104 V122" marker-end="url(#fig-arrow)" />
+      <!-- Column C: alignment -->
+      <text class="fig-h" x="532" y="22">ALIGNMENT</text>
+      <rect class="fig-panel" x="532" y="32" width="170" height="214" rx="6" />
 
-      <rect class="fig-box" x="296" y="124" width="292" height="32" rx="4" />
-      <text class="fig-t" x="442" y="144" text-anchor="middle">contrastive alignment across scales</text>
+      <rect class="fig-box" x="544" y="52" width="146" height="44" rx="4" />
+      <text class="fig-t" x="554" y="70">Irreps-to-text</text>
+      <text class="fig-s" x="554" y="85">YLM · text queries l ≥ 1</text>
 
-      <path class="fig-line" d="M442,156 V168" marker-end="url(#fig-arrow)" />
+      <rect class="fig-box" x="544" y="118" width="146" height="44" rx="4" />
+      <text class="fig-t" x="554" y="136">Contrastive alignment</text>
+      <text class="fig-s" x="554" y="151">one latent space</text>
 
-      <rect class="fig-box" x="296" y="170" width="292" height="32" rx="4" />
-      <text class="fig-t" x="442" y="190" text-anchor="middle">shared chemistry latent space</text>
+      <rect class="fig-box" x="544" y="188" width="146" height="44" rx="4" />
+      <text class="fig-t" x="554" y="206">Multimodal RAG</text>
+      <text class="fig-s" x="554" y="221">retrieval over all three</text>
 
-      <path class="fig-line" d="M442,202 V214" marker-end="url(#fig-arrow)" />
+      <path class="fig-line" d="M617,96 V114" marker-end="url(#fig-arrow)" />
+      <path class="fig-line" d="M617,162 V184" marker-end="url(#fig-arrow)" />
 
-      <rect class="fig-box" x="296" y="216" width="292" height="32" rx="4" />
-      <text class="fig-t" x="442" y="236" text-anchor="middle">multimodal RAG over all three</text>
+      <path class="fig-line" d="M696,140 H730" marker-end="url(#fig-arrow)" />
+      <path class="fig-line" d="M696,210 H730" marker-end="url(#fig-arrow)" />
 
-      <!-- Panel B to C -->
-      <path class="fig-line" d="M598,145 H634" marker-end="url(#fig-arrow)" />
+      <!-- Column D: reasoning -->
+      <text class="fig-h" x="722" y="22">POST-TRAINING &amp; AGENT</text>
+      <rect class="fig-panel" x="722" y="32" width="168" height="214" rx="6" />
 
-      <!-- Panel C: post-training -->
-      <text class="fig-h" x="640" y="22">POST-TRAINING &amp; CO-SCIENTIST</text>
-      <rect class="fig-panel" x="640" y="32" width="250" height="226" rx="6" />
+      <rect class="fig-box" x="734" y="48" width="144" height="44" rx="4" />
+      <text class="fig-t" x="744" y="66">Reasoning traces</text>
+      <text class="fig-s" x="744" y="81">distilled with GPT-5.5</text>
 
-      <rect class="fig-box" x="656" y="46" width="218" height="38" rx="4" />
-      <text class="fig-t" x="666" y="62">reasoning traces</text>
-      <text class="fig-s" x="666" y="76">distilled with GPT-5.5</text>
+      <rect class="fig-box" x="734" y="118" width="144" height="44" rx="4" />
+      <text class="fig-t" x="744" y="136">SFT · LoRA</text>
+      <text class="fig-s" x="744" y="151">Qwen3.6-27B · GLM-4.7</text>
 
-      <rect class="fig-box" x="656" y="98" width="218" height="38" rx="4" />
-      <text class="fig-t" x="666" y="114">chemistry-aware tokens</text>
-      <text class="fig-s" x="666" y="128">+ chemistry-aware latent softmax</text>
+      <rect class="fig-box-em" x="734" y="188" width="144" height="44" rx="4" />
+      <text class="fig-t-em" x="744" y="206">CO-SCIENTIST</text>
+      <text class="fig-s" x="744" y="221">reads · plans · runs jobs</text>
 
-      <rect class="fig-box" x="656" y="150" width="218" height="38" rx="4" />
-      <text class="fig-t" x="666" y="166">SFT · LoRA</text>
-      <text class="fig-s" x="666" y="180">Qwen3.6-27B · GLM-4.7</text>
-
-      <rect class="fig-box-em" x="656" y="202" width="218" height="40" rx="4" />
-      <text class="fig-t-em" x="666" y="220">CO-SCIENTIST</text>
-      <text class="fig-s" x="666" y="234">reads, plans, submits jobs</text>
-
-      <path class="fig-line" d="M765,84 V96" marker-end="url(#fig-arrow)" />
-      <path class="fig-line" d="M765,136 V148" marker-end="url(#fig-arrow)" />
-      <path class="fig-line" d="M765,188 V200" marker-end="url(#fig-arrow)" />
+      <path class="fig-line" d="M806,92 V114" marker-end="url(#fig-arrow)" />
+      <path class="fig-line" d="M806,162 V184" marker-end="url(#fig-arrow)" />
 
       <!-- Feedback loop -->
-      <path class="fig-line" d="M765,244 V296 Q765,304 757,304 H132 Q124,304 124,296 V262" marker-end="url(#fig-arrow)" />
-      <text class="fig-s" x="444" y="322" text-anchor="middle">proposes the next formulation — and runs the simulations that check it</text>
+      <path class="fig-line" d="M806,232 V262 Q806,270 798,270 H116 Q108,270 108,262 V236" marker-end="url(#fig-arrow)" />
+      <text class="fig-s" x="457" y="287" text-anchor="middle">proposes the next simulation — and submits the jobs that check it</text>
+
+      <!-- Compute: under every stage -->
+      <text class="fig-h" x="10" y="310">COMPUTE</text>
+      <rect class="fig-panel" x="10" y="318" width="880" height="36" rx="6" />
+      <text class="fig-t" x="24" y="340">GPU</text>
+      <text class="fig-s" x="58" y="340">Clebsch–Gordan tensor products · channel-wise (uvu) kernels · cuEquivariance · torch.compile · bf16 / tf32 · V100 · A100 · L40S</text>
     </svg>
 
   </figure>
@@ -141,76 +151,14 @@ latest_posts:
   <p class="about-figure-hint">Scroll the diagram sideways →</p>
 
   <p class="about-figure-caption">
-    Science on the left, AI enablement on the right. Simulation produces the data,
-    multimodal alignment turns it into representations, and the co-scientist closes the
-    loop by deciding what to simulate next.
+    Rows are the three forms chemistry reaches a model in; columns are what happens to
+    each. Every form gets an encoder that respects its symmetry — none for text, planar
+    rotations for drawings, E(3) for atoms — before alignment puts them in one space and
+    post-training turns that space into a co-scientist, whose proposals go back to
+    simulation. The GPU work is the floor all of it stands on.
   </p>
 
   <div class="about-rows">
-
-    <div class="about-row">
-      <div class="about-row-key"><a href="https://github.com/yaniguan/WignerFlow">E(3)-equivariant trajectory generation</a></div>
-      <div class="about-row-val">
-        <em>WignerFlow</em> replaces the MD integrator with an autoregressive
-        E(3)-equivariant transformer: from the last <i>k</i> frames it emits the frame
-        <i>n</i>·δ<i>t</i> ahead, directly. Each frame is encoded with eSCN-style SO(2)
-        convolutions — a Wigner-D rotation aligns every edge to the <i>z</i>-axis, which
-        collapses the l<sub>max</sub> = 2 tensor product from O(L<sup>6</sup>) to
-        O(L<sup>3</sup>) — and causal attention over time draws its logits from
-        invariants only, so the stack stays exactly equivariant. Two heads, MSE regression
-        and equivariant flow matching in displacement space, trained with pushforward
-        unrolling on a curriculum so 10<sup>4</sup>-step rollouts stay on the data
-        manifold; judged on RDF, VACF/VDOS, Li⁺ solvation-shell residence times and
-        energy drift against the reference force field.
-      </div>
-    </div>
-
-    <div class="about-row">
-      <div class="about-row-key"><a href="https://github.com/yaniguan/YLM">Irreps-to-text attention</a></div>
-      <div class="about-row-val">
-        Molecular language models — MolT5, 3D-MoLM, even EquiLLM — reduce geometry to
-        invariants before the LLM sees it, so they can name a dipole but not point one.
-        <em>YLM</em> lets text tokens query l ≥ 1 irreps directly: attention logits come
-        from invariants, values carry spherical-harmonic features, and anything with a
-        direction is only scaled or combined through Clebsch–Gordan products. Rotate the
-        molecule by <i>R</i> and the answer rotates by D(<i>R</i>), by construction. Each
-        token runs two streams, an invariant hidden state and an irreps side-stream;
-        parity labels keep (R)- and (S)- apart; a <code>&lt;VEC&gt;</code> /
-        <code>&lt;TENSOR&gt;</code> token hands off to an equivariant readout. Measured on
-        TensorQA, 85k structure–question pairs with GFN2-xTB force and dipole labels;
-        equivariance error below 10<sup>−9</sup> in float64.
-      </div>
-    </div>
-
-    <div class="about-row">
-      <div class="about-row-key"><a href="https://github.com/yaniguan/ouroboros-ocsr">Equivariant OCSR</a></div>
-      <div class="about-row-val">
-        <em>Ouroboros</em> carries the OCSR work forward with a symmetry prior instead of
-        more data: steerable C<sub>N</sub> CNNs (escnn, N ∈ {4, 8, 16}) and
-        group-equivariant self-attention as the image encoder, with the SMILES decoder
-        held fixed. Rotations only, never reflections — mirroring a wedge/hash drawing
-        inverts every stereocenter, so a D<sub>N</sub>-invariant encoder would be blind to
-        chirality. Arms are FLOP-matched (10.3 GFLOPs per image; the parameter-matched C8
-        would cost 127), equivariance holds to 10<sup>−6</sup> relative error on the 90°
-        grid in fp32, and the hypotheses on the synthetic-to-real gap were pre-registered
-        before the first training run. Recognition errors are then pushed through ETKDG
-        and MACE-OFF to price what a wrong diastereomer costs in energy.
-      </div>
-    </div>
-
-    <div class="about-row">
-      <div class="about-row-key">Equivariant models on GPUs</div>
-      <div class="about-row-val">
-        Equivariant networks spend their time in Clebsch–Gordan tensor products, so
-        throughput and memory are designed, not discovered. The fully connected e3nn
-        product with per-edge weights was ~40× too slow and gave way to channel-wise
-        (uvu) products; activation memory is budgeted from saved-tensor bytes before a job
-        is queued (the C8 attention encoder fits batch 137 on a 40 GB A100 in bf16); and
-        the profiling stage pits eager PyTorch against <code>torch.compile</code> and
-        cuEquivariance, and fp32 against tf32/bf16 with l ≥ 1 kept in fp32 — on V100s at
-        SDSC Expanse and L40S/A100 nodes on UCLA Hoffman2.
-      </div>
-    </div>
 
     <div class="about-row">
       <div class="about-row-key">Multi-scale simulation</div>
@@ -243,12 +191,62 @@ latest_posts:
     </div>
 
     <div class="about-row">
+      <div class="about-row-key"><a href="https://github.com/yaniguan/WignerFlow">E(3)-equivariant trajectory generation</a></div>
+      <div class="about-row-val">
+        <em>WignerFlow</em> replaces the MD integrator with an autoregressive
+        E(3)-equivariant transformer: from the last <i>k</i> frames it emits the frame
+        <i>n</i>·δ<i>t</i> ahead, directly. Each frame is encoded with eSCN-style SO(2)
+        convolutions — a Wigner-D rotation aligns every edge to the <i>z</i>-axis, which
+        collapses the l<sub>max</sub> = 2 tensor product from O(L<sup>6</sup>) to
+        O(L<sup>3</sup>) — and causal attention over time draws its logits from
+        invariants only, so the stack stays exactly equivariant. Two heads, MSE regression
+        and equivariant flow matching in displacement space, trained with pushforward
+        unrolling on a curriculum so 10<sup>4</sup>-step rollouts stay on the data
+        manifold; judged on RDF, VACF/VDOS, Li⁺ solvation-shell residence times and
+        energy drift against the reference force field.
+      </div>
+    </div>
+
+    <div class="about-row">
       <div class="about-row-key">Vision–language chemistry</div>
       <div class="about-row-val">
         Fine-tuned VLMs read structures straight out of document images (image→SMILES).
         <em>VERDICT</em> turns several independent recognizers into a consensus engine that
         votes on molecular identity and abstains when they disagree — on real literature
         figures, knowing when to refuse is worth more than another point of accuracy.
+      </div>
+    </div>
+
+    <div class="about-row">
+      <div class="about-row-key"><a href="https://github.com/yaniguan/ouroboros-ocsr">Equivariant OCSR</a></div>
+      <div class="about-row-val">
+        <em>Ouroboros</em> carries the OCSR work forward with a symmetry prior instead of
+        more data: steerable C<sub>N</sub> CNNs (escnn, N ∈ {4, 8, 16}) and
+        group-equivariant self-attention as the image encoder, with the SMILES decoder
+        held fixed. Rotations only, never reflections — mirroring a wedge/hash drawing
+        inverts every stereocenter, so a D<sub>N</sub>-invariant encoder would be blind to
+        chirality. Arms are FLOP-matched (10.3 GFLOPs per image; the parameter-matched C8
+        would cost 127), equivariance holds to 10<sup>−6</sup> relative error on the 90°
+        grid in fp32, and the hypotheses on the synthetic-to-real gap were pre-registered
+        before the first training run. Recognition errors are then pushed through ETKDG
+        and MACE-OFF to price what a wrong diastereomer costs in energy.
+      </div>
+    </div>
+
+    <div class="about-row">
+      <div class="about-row-key"><a href="https://github.com/yaniguan/YLM">Irreps-to-text attention</a></div>
+      <div class="about-row-val">
+        Molecular language models — MolT5, 3D-MoLM, even EquiLLM — reduce geometry to
+        invariants before the LLM sees it, so they can name a dipole but not point one.
+        <em>YLM</em> lets text tokens query l ≥ 1 irreps directly: attention logits come
+        from invariants, values carry spherical-harmonic features, and anything with a
+        direction is only scaled or combined through Clebsch–Gordan products. Rotate the
+        molecule by <i>R</i> and the answer rotates by D(<i>R</i>), by construction. Each
+        token runs two streams, an invariant hidden state and an irreps side-stream;
+        parity labels keep (R)- and (S)- apart; a <code>&lt;VEC&gt;</code> /
+        <code>&lt;TENSOR&gt;</code> token hands off to an equivariant readout. Measured on
+        TensorQA, 85k structure–question pairs with GFN2-xTB force and dipole labels;
+        equivariance error below 10<sup>−9</sup> in float64.
       </div>
     </div>
 
@@ -280,6 +278,20 @@ latest_posts:
         it reads the literature, queries the simulation stack, and proposes what to run
         next. What decides whether it can be trusted is the unglamorous half — leakage-safe
         benchmarks, and default-deny governed job submission.
+      </div>
+    </div>
+
+    <div class="about-row">
+      <div class="about-row-key">Equivariant models on GPUs</div>
+      <div class="about-row-val">
+        Equivariant networks spend their time in Clebsch–Gordan tensor products, so
+        throughput and memory are designed, not discovered. The fully connected e3nn
+        product with per-edge weights was ~40× too slow and gave way to channel-wise
+        (uvu) products; activation memory is budgeted from saved-tensor bytes before a job
+        is queued (the C8 attention encoder fits batch 137 on a 40 GB A100 in bf16); and
+        the profiling stage pits eager PyTorch against <code>torch.compile</code> and
+        cuEquivariance, and fp32 against tf32/bf16 with l ≥ 1 kept in fp32 — on V100s at
+        SDSC Expanse and L40S/A100 nodes on UCLA Hoffman2.
       </div>
     </div>
 

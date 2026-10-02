@@ -30,7 +30,8 @@ the fig-\* classes in \_sass/\_about.scss). Add a row or a shape, not a new layo
   <p class="lst-desc">
     Two Canon bodies, three fast EF zooms, and two DJI things for the frames a
     tripod cannot reach. Same instinct as the research, honestly: go look at the
-    thing directly instead of reading someone else's summary of it.
+    thing directly instead of reading someone else's summary of it. The footage
+    that moves goes up on <a href="https://www.youtube.com/channel/UCw0_ASuCQS4jrs21iHaBhoA">YouTube</a>.
   </p>
 
   <figure class="about-figure">
