@@ -42,6 +42,9 @@ ninja.data = [{
           section: "News",},{id: "news-excited-to-join-ses-ai-corp-as-an-applied-scientist-intern-for-the-summer",
           title: 'Excited to join SES AI Corp as an Applied Scientist Intern for the...',
           description: "",
+          section: "News",},{id: "news-started-three-projects-on-equivariant-networks-for-chemistry-wignerflow-an-autoregressive-e-3-equivariant-transformer-that-generates-md-trajectories-in-place-of-the-integrator-ylm-irreps-to-text-attention-that-lets-language-tokens-query-l-1-geometric-features-directly-and-ouroboros-steerable-se-2-equivariant-encoders-for-chemical-structure-recognition-on-the-gpu-side-channel-wise-tensor-products-replaced-e3nn-s-fully-connected-ones-for-a-40-speed-up-and-the-first-training-runs-are-queued-on-v100-nodes-at-sdsc-expanse-and-ucla-hoffman2",
+          title: 'Started three projects on equivariant networks for chemistry: WignerFlow, an autoregressive E(3)-equivariant transformer...',
+          description: "",
           section: "News",},{
         id: 'social-email',
         title: 'email',
