@@ -2,7 +2,7 @@
 layout: about
 title: About
 permalink: /
-subtitle: Ph.D. Candidate, <a href='https://sautet.chem.ucla.edu/' target='_blank'>Sautet Group</a>, UCLA &nbsp;·&nbsp; Applied Scientist Intern, <a href='https://www.ses.ai/' target='_blank'>SES AI</a>
+subtitle: Ph.D. Candidate, <a href='https://sautet.chem.ucla.edu/' target='_blank'>Sautet Group</a>, UCLA
 tagline: >
   I build symmetry-aware neural networks for chemistry — E(3)-equivariant models
   over atoms and trajectories, steerable encoders over molecule images, language
