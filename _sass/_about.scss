@@ -937,6 +937,49 @@ html[data-theme="dark"] .about-page {
   }
 }
 
+.note-tags {
+  margin: 0.6rem 0 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.note-tag {
+  padding: 0.05rem 0.55rem;
+  border: 1px solid var(--global-divider-color);
+  border-radius: 999px;
+  font-size: 0.75rem;
+  color: var(--about-ink-soft);
+}
+
+.note-pager {
+  display: flex;
+  justify-content: space-between;
+  gap: 1.5rem;
+  margin-top: 3rem;
+  max-width: 40em;
+
+  a {
+    display: block;
+    max-width: 48%;
+    font-size: 0.9rem;
+    line-height: 1.4;
+
+    span {
+      display: block;
+      font-size: 0.7rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--about-ink-soft);
+    }
+  }
+
+  .note-pager-next {
+    margin-left: auto;
+    text-align: right;
+  }
+}
+
 /* -----------------------------------------------------------------------------
  * Bibliography search box
  * -------------------------------------------------------------------------- */
