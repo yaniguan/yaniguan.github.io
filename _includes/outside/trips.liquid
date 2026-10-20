@@ -1,0 +1,75 @@
+{%- comment -%}
+  Road trips on /outside/, from _data/outside/trips.yml.
+
+  part="map":  the year chips and the (empty) Leaflet container. Both stay
+               hidden until outside.js has fetched Leaflet (the URLs and SRI
+               hashes ride along as data attributes, so the library only loads
+               once the section is near); the static SVG map that
+               follows them in the page is the fallback, and is hidden at the
+               same moment.
+  part="rows": one gutter row per trip -- the text alternative to the map.
+  part="data": the JSON the map is drawn from (trips, the shared start, and
+               any place in _data/places.yml with lat/lon).
+{%- endcomment -%}
+{%- assign trips = site.data.outside.trips.trips -%}
+
+{% if include.part == 'map' %}
+  <div class="trip-map-wrap" data-trip-map-wrap hidden>
+    <div class="outside-chips" role="group" aria-label="Highlight one trip on the map">
+      <button type="button" class="outside-chip" aria-pressed="true" data-year="all">All</button>
+      {% for trip in trips %}
+        <button type="button" class="outside-chip" aria-pressed="false" data-year="{{ trip.year }}" style="--trip-color: {{ trip.color }}">
+          <span class="trip-swatch" aria-hidden="true"></span>{{ trip.year }}
+        </button>
+      {% endfor %}
+    </div>
+    <div
+      id="trip-map"
+      class="trip-map"
+      role="region"
+      aria-label="Interactive map of the road trips out of Los Angeles. Every stop is also listed under the map."
+      data-leaflet-js="{{ site.third_party_libraries.leaflet.url.js }}"
+      data-leaflet-js-sri="{{ site.third_party_libraries.leaflet.integrity.js }}"
+      data-leaflet-css="{{ site.third_party_libraries.leaflet.url.css }}"
+      data-leaflet-css-sri="{{ site.third_party_libraries.leaflet.integrity.css }}"
+    ></div>
+    <p class="trip-map-hint">Click or tab into the map to zoom with the scroll wheel or the + and − keys; arrow keys pan.</p>
+  </div>
+{% elsif include.part == 'rows' %}
+  <div class="about-rows trip-rows">
+    {% for trip in trips %}
+      <div class="about-row trip-row" id="trip-{{ trip.year }}" data-year="{{ trip.year }}" style="--trip-color: {{ trip.color }}">
+        <div class="about-row-date"><span class="trip-swatch" aria-hidden="true"></span>{{ trip.year }}</div>
+        <div class="about-row-val">
+          <div class="about-role">
+            <strong>{{ trip.title }}</strong><span>{{ trip.car }}</span>
+          </div>
+          {{ trip.summary }}
+          <p class="trip-stops">
+            {{ trip.stops | join: ' → ' }}
+          </p>
+          <button type="button" class="trip-show" data-year="{{ trip.year }}" hidden>Show on the map</button>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+{% elsif include.part == 'data' %}
+  {%- assign map_places = '' | split: '' -%}
+  {%- for place in site.data.places -%}
+    {%- if place.lat and place.lon -%}
+      {%- assign map_places = map_places | push: place -%}
+    {%- endif -%}
+  {%- endfor -%}
+  <script type="application/json" id="outside-data">
+    {
+      "start": {{ site.data.outside.trips.start | jsonify }},
+      "trips": {{ trips | jsonify }},
+      "places": [
+        {%- for place in map_places -%}
+          {"name": {{ place.name | jsonify }}, "location": {{ place.location | jsonify }}, "lat": {{ place.lat | jsonify }}, "lon": {{ place.lon | jsonify }}, "id": {{ place.name | slugify | prepend: 'place-' | jsonify }}}
+          {%- unless forloop.last -%},{%- endunless -%}
+        {%- endfor -%}
+      ]
+    }
+  </script>
+{% endif %}

@@ -3,6 +3,8 @@
   own and can be dragged sideways; the camera is locked to a narrow band of
   elevation so the buildings always read as icons, never from underneath.
   The page needs `places: true` in its front matter to load <model-viewer>.
+  Each card's id is "place-" plus the slugified name, so the road-trip map
+  on /outside/ can link to it.
 {%- endcomment -%}
 {% assign places = site.data.places | sort: 'date' | reverse %}
 <div class="places-grid">
@@ -12,7 +14,7 @@
     {% else %}
       {% assign maps_query = place.name | append: ', ' | append: place.location %}
     {% endif %}
-    <figure class="place-card">
+    <figure class="place-card" id="place-{{ place.name | slugify }}">
       <model-viewer
         class="place-model"
         src="{{ place.model | relative_url }}"

@@ -11,9 +11,14 @@
 #   orbit:    optional starting angle in degrees (default 30), to turn the
 #             model's best side to the camera
 #   note:     optional one-liner
+#   lat/lon:  optional decimal degrees; puts a pin on the road-trip map that
+#             links back to this card
 #
 - name: Fishlake National Forest
   location: Utah
   date: 2026-09-26
   model: assets/models/fishlake-national-forest.glb
   orbit: 150
+  # Approximate: Fish Lake itself, not the exact spot the photo was taken.
+  lat: 38.55
+  lon: -111.71

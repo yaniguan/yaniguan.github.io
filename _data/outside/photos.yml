@@ -1,0 +1,37 @@
+# Photos on /outside/. The entry marked hero: true (or, failing that, the first
+# one) opens the page full-width; the rest fill the gallery in the Photos
+# section, in the order written here. Every photo opens in the lightbox.
+#
+# One entry per photo:
+#   src:     path under assets/img/ (.jpg / .jpeg / .png). The build writes
+#            -480/-800/-1400 .webp copies next to it, which the page uses.
+#   alt:     what is in the picture, for screen readers
+#   caption: the line under it, and in the lightbox
+#   tags:    optional list; filter chips appear once there is more than one tag
+#   hero:    optional, true for the photo that opens the page
+#   width/height: optional pixel size of the original file; set them so the
+#            page reserves the photo's space before it loads (no jump)
+#   lat/lon: optional, where it was taken
+#   trip:    optional year of the road trip it was taken on (see trips.yml)
+#
+- src: assets/img/whitesands.jpeg
+  alt: White Sands, New Mexico
+  caption: White Sands, New Mexico.
+  tags: [New Mexico]
+  hero: true
+  width: 1086
+  height: 724
+# Examples -- uncomment, point at a real file, and fill in:
+#
+# - src: assets/img/your-photo.jpg
+#   alt: What is in the picture
+#   caption: Where it was.
+#   tags: [Road trips]
+#   lat: 0.0
+#   lon: 0.0
+#   trip: 2025
+#
+# - src: assets/img/another-photo.jpg
+#   alt: What is in the picture
+#   caption: Where it was.
+#   tags: [Cities]

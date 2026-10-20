@@ -1,0 +1,92 @@
+{%- comment -%}
+  The First Folio shelf, from _data/outside/reading.yml: one spine per play in
+  the Folio's own order and sections, plus the "Reading now" card. Spines are
+  buttons, so they can be reached from the keyboard; outside.js adds the
+  section filters and the tooltip (title, section, Folio number, note). Without
+  JavaScript the titles are still printed on the spines.
+{%- endcomment -%}
+{%- assign reading = site.data.outside.reading -%}
+{%- assign total = 0 -%}
+{%- assign any_read = false -%}
+{%- for s in reading.sections -%}
+  {%- assign total = total | plus: s.plays.size -%}
+  {%- for p in s.plays -%}
+    {%- if p.read -%}{%- assign any_read = true -%}{%- endif -%}
+  {%- endfor -%}
+{%- endfor -%}
+
+<div class="shelf" data-shelf>
+  <div class="outside-chips" role="group" aria-label="Show plays by section" data-shelf-filters hidden>
+    <button type="button" class="outside-chip" aria-pressed="true" data-section="">
+      All <span class="chip-count">{{ total }}</span>
+    </button>
+    {% for s in reading.sections %}
+      <button type="button" class="outside-chip" aria-pressed="false" data-section="{{ s.name | slugify }}">
+        {{ s.name }}
+        <span class="chip-count">{{ s.plays.size }}</span>
+      </button>
+    {% endfor %}
+  </div>
+
+  <div class="shelf-body">
+    {% assign n = 0 %}
+    {% for s in reading.sections %}
+      {% assign section_slug = s.name | slugify %}
+      <div class="shelf-group shelf-{{ section_slug }}" data-section="{{ section_slug }}">
+        <h3 class="shelf-label">
+          {{ s.name }}
+          <span>{{ s.plays.size }} plays</span>
+        </h3>
+        <ul class="shelf-row">
+          {% for p in s.plays %}
+            {% assign n = n | plus: 1 %}
+            {% assign h = n | times: 7 | modulo: 5 %}
+            <li>
+              <button
+                type="button"
+                class="spine spine-h{{ h }}{% if p.read %} is-read{% endif %}"
+                data-section-name="{{ s.name }}"
+                data-folio="{{ n }}"
+                {% if p.note %}
+                  data-note="{{ p.note | escape }}"
+                {% endif %}
+              >
+                <span class="spine-title">{{ p.title }}</span>
+                {%- if p.read -%}
+                  <span class="sr-only"> (read)</span>
+                {%- endif -%}
+              </button>
+            </li>
+          {% endfor %}
+        </ul>
+      </div>
+    {% endfor %}
+
+    <div class="kindle-card">
+      <p class="kindle-card-h">Reading now</p>
+      <svg class="kindle-card-art" viewBox="0 0 76 108" aria-hidden="true" focusable="false">
+        <g transform="translate(1,1)">
+          <rect class="k-line" x="0" y="0" width="74" height="106" rx="7" />
+          <rect class="k-soft" x="7" y="8" width="60" height="82" rx="2" />
+          <path class="k-soft" d="M13,20 H61 M13,30 H65 M13,40 H57 M13,50 H65 M13,60 H51" />
+          <circle class="k-soft" cx="37" cy="98" r="2.5" />
+        </g>
+      </svg>
+      <p class="kindle-card-t">{{ reading.device }}</p>
+      {% if reading.device_note %}
+        <p class="kindle-card-s">{{ reading.device_note }}</p>
+      {% endif %}
+      {% if reading.now_reading %}
+        <p class="kindle-card-now"><span class="sr-only">Currently reading: </span>{{ reading.now_reading }}</p>
+      {% elsif jekyll.environment == 'development' %}
+        <p class="outside-placeholder">Placeholder — set now_reading in _data/outside/reading.yml</p>
+      {% endif %}
+    </div>
+  </div>
+
+  {% if any_read %}
+    <p class="shelf-key"><span class="shelf-key-mark" aria-hidden="true"></span> read</p>
+  {% endif %}
+
+  <div class="shelf-tip" role="tooltip" id="shelf-tip" hidden></div>
+</div>

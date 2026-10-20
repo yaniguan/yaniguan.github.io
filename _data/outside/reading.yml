@@ -1,0 +1,134 @@
+# The reading shelf on /outside/: the thirty-six plays of the 1623 First Folio
+# in the Folio's own order and its own three sections. Troilus and Cressida is
+# missing from the Folio's catalogue but is printed at the head of the
+# tragedies, which is where it sits here.
+#
+#   device:      the e-reader on the "Reading now" card
+#   device_note: the line under it
+#   now_reading: optional, the title currently open on it
+#
+# Per play (all optional, leave blank if unsure):
+#   read: true   marks the spine as read (a key appears once any are)
+#   note: one line shown when the spine is hovered or focused
+#
+device: Kindle Paperwhite
+device_note: plain front-lit e-ink
+now_reading:
+
+sections:
+  - name: Comedies
+    plays:
+      - title: The Tempest
+        read:
+        note:
+      - title: The Two Gentlemen of Verona
+        read:
+        note:
+      - title: The Merry Wives of Windsor
+        read:
+        note:
+      - title: Measure for Measure
+        read:
+        note:
+      - title: The Comedy of Errors
+        read:
+        note:
+      - title: Much Ado About Nothing
+        read:
+        note:
+      - title: Love's Labour's Lost
+        read:
+        note:
+      - title: A Midsummer Night's Dream
+        read:
+        note:
+      - title: The Merchant of Venice
+        read:
+        note:
+      - title: As You Like It
+        read:
+        note:
+      - title: The Taming of the Shrew
+        read:
+        note:
+      - title: All's Well That Ends Well
+        read:
+        note:
+      - title: Twelfth Night
+        read:
+        note:
+      - title: The Winter's Tale
+        read:
+        note:
+
+  - name: Histories
+    plays:
+      - title: King John
+        read:
+        note:
+      - title: Richard II
+        read:
+        note:
+      - title: Henry IV, Part 1
+        read:
+        note:
+      - title: Henry IV, Part 2
+        read:
+        note:
+      - title: Henry V
+        read:
+        note:
+      - title: Henry VI, Part 1
+        read:
+        note:
+      - title: Henry VI, Part 2
+        read:
+        note:
+      - title: Henry VI, Part 3
+        read:
+        note:
+      - title: Richard III
+        read:
+        note:
+      - title: Henry VIII
+        read:
+        note:
+
+  - name: Tragedies
+    plays:
+      - title: Troilus and Cressida
+        read:
+        note:
+      - title: Coriolanus
+        read:
+        note:
+      - title: Titus Andronicus
+        read:
+        note:
+      - title: Romeo and Juliet
+        read:
+        note:
+      - title: Timon of Athens
+        read:
+        note:
+      - title: Julius Caesar
+        read:
+        note:
+      - title: Macbeth
+        read:
+        note:
+      - title: Hamlet
+        read:
+        note:
+      - title: King Lear
+        read:
+        note:
+      - title: Othello
+        read:
+        note:
+      - title: Antony and Cleopatra
+        read:
+        note:
+      - title: Cymbeline
+        read:
+        note:

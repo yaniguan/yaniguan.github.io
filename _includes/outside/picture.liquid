@@ -1,0 +1,34 @@
+{%- comment -%}
+  A bare <picture> for the /outside/ photos, using the same -480/-800/-1400
+  .webp copies figure.liquid points at, without figure.liquid's <figure>
+  wrapper (these sit inside a link). If the .webp copies are missing the
+  <source> drops out and the original loads instead.
+
+  path, alt: required. sizes: the `sizes` attribute (default 95vw).
+  loading: "eager" for the photo at the top of the page (default lazy).
+  width, height: optional pixel size of the original, so the browser can
+  reserve the box before the image arrives (no layout shift).
+{%- endcomment -%}
+{%- assign img_path = include.path | remove: '.jpg' | remove: '.jpeg' | remove: '.png' | remove: '.tiff' | remove: '.gif' -%}
+{%- assign ext = include.path | split: '.' | last | downcase -%}
+<picture>
+  {% if site.imagemagick.enabled %}
+    {% if ext == 'jpg' or ext == 'jpeg' or ext == 'png' or ext == 'tiff' or ext == 'gif' %}
+      <source
+        srcset="{% for i in site.imagemagick.widths %}{{ img_path | relative_url }}-{{ i }}.webp {{ i }}w{% unless forloop.last %}, {% endunless %}{% endfor %}"
+        type="image/webp"
+        sizes="{{ include.sizes | default: '95vw' }}"
+      >
+    {% endif %}
+  {% endif %}
+  <img
+    src="{{ include.path | relative_url }}"
+    alt="{{ include.alt | escape }}"
+    {% if include.width and include.height %}
+      width="{{ include.width }}" height="{{ include.height }}"
+    {% endif %}
+    loading="{{ include.loading | default: 'lazy' }}"
+    decoding="async"
+    onerror="this.onerror=null;this.parentNode.querySelectorAll('source').forEach(function(s){s.remove();});"
+  >
+</picture>

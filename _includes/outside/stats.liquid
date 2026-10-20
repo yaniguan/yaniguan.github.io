@@ -1,0 +1,93 @@
+{%- comment -%}
+  The numbers strip under the lead photo. Every figure is counted from the
+  data files (or, for the camera bag, from `gear` in the page's front matter),
+  so it stays right as they change. The mileage is the one exception: it is
+  summed in assets/js/outside.js from the map waypoints, so it is hidden until
+  that script fills it in.
+{%- endcomment -%}
+{%- assign trips = site.data.outside.trips.trips -%}
+{%- assign stop_count = 0 -%}
+{%- if site.data.outside.trips.start -%}{%- assign stop_count = 1 -%}{%- endif -%}
+{%- for t in trips -%}
+  {%- assign stop_count = stop_count | plus: t.markers.size -%}
+{%- endfor -%}
+{%- assign play_count = 0 -%}
+{%- for s in site.data.outside.reading.sections -%}
+  {%- assign play_count = play_count | plus: s.plays.size -%}
+{%- endfor -%}
+{%- assign place_count = site.data.places.size -%}
+{%- assign body_count = page.gear.bodies.size | default: 0 -%}
+{%- assign lens_count = page.gear.lenses.size | default: 0 -%}
+
+<ul class="outside-stats" aria-label="In numbers">
+  <li>
+    <a href="#road-trips">
+      <span class="sr-only">
+        {{- trips.size }} road {% if trips.size == 1 %}trip{% else %}trips{% endif -%}
+      </span>
+      <span aria-hidden="true">
+        <span class="stat-num" data-count="{{ trips.size }}">{{ trips.size }}</span>
+        <span class="stat-label"
+          >road {% if trips.size == 1 %}trip{% else %}trips{% endif -%}
+        </span>
+      </span>
+    </a>
+  </li>
+  <li>
+    <a href="#road-trips">
+      <span class="sr-only">{{ stop_count }} named stops on the map</span>
+      <span aria-hidden="true">
+        <span class="stat-num" data-count="{{ stop_count }}">{{ stop_count }}</span>
+        <span class="stat-label">named stops on the map</span>
+      </span>
+    </a>
+  </li>
+  <li data-stat-miles hidden>
+    <a
+      href="#road-trips"
+      title="Straight lines between the map's waypoints, summed over every trip. The roads bend, so the real mileage was higher."
+    >
+      <span class="sr-only" data-stat-miles-text></span>
+      <span aria-hidden="true">
+        <span class="stat-num">≈&#8239;<span data-count="0">0</span></span>
+        <span class="stat-label">mi between waypoints</span>
+      </span>
+    </a>
+  </li>
+  <li>
+    <a href="#reading">
+      <span class="sr-only">{{ play_count }} plays on the shelf</span>
+      <span aria-hidden="true">
+        <span class="stat-num" data-count="{{ play_count }}">{{ play_count }}</span>
+        <span class="stat-label">plays on the shelf</span>
+      </span>
+    </a>
+  </li>
+  <li>
+    <a href="#places">
+      <span class="sr-only">
+        {{- place_count }}
+        {% if place_count == 1 %}place{% else %}places{% endif %} modelled in 3D</span
+      >
+      <span aria-hidden="true">
+        <span class="stat-num" data-count="{{ place_count }}">{{ place_count }}</span>
+        <span class="stat-label">
+          {%- if place_count == 1 %}place{% else %}places{% endif %} modelled</span
+        >
+      </span>
+    </a>
+  </li>
+  {% if body_count > 0 %}
+    <li>
+      <a href="#cameras">
+        <span class="sr-only">{{ body_count }} camera bodies and {{ lens_count }} lenses</span>
+        <span aria-hidden="true">
+          <span class="stat-num"
+            ><span data-count="{{ body_count }}">{{ body_count }}</span> · <span data-count="{{ lens_count }}">{{ lens_count }}</span></span
+          >
+          <span class="stat-label">bodies · lenses</span>
+        </span>
+      </a>
+    </li>
+  {% endif %}
+</ul>

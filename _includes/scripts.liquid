@@ -76,6 +76,14 @@
   <script defer src="{{ '/assets/js/places-setup.js' | relative_url | bust_file_cache }}" type="text/javascript"></script>
 {% endif %}
 
+{% if page.outside %}
+  <!--
+    The /outside/ page script (gallery, shelf, map, nav). It fetches Leaflet
+    itself once the road-trip map is near view.
+  -->
+  <script defer src="{{ '/assets/js/outside.js' | relative_url | bust_file_cache }}" type="text/javascript"></script>
+{% endif %}
+
 {% if page.chart and page.chart.chartjs %}
   <!-- Chart.js -->
   <script

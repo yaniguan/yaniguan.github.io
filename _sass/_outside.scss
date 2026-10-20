@@ -1,0 +1,895 @@
+/*******************************************************************************
+ * /outside/ — the interactive layer on top of the about-page vocabulary:
+ * numbers strip, section nav, photo gallery + lightbox, the First Folio shelf
+ * and the road-trip map. Markup lives in _includes/outside/, behaviour in
+ * assets/js/outside.js. Everything here reads fine before that script runs.
+ ******************************************************************************/
+
+.outside-page {
+  // Height of the fixed site navbar (see `body { padding-top }` in _layout).
+  --outside-nav-top: 56px;
+  // Room left above a section when a chip scrolls to it: the navbar plus the
+  // sticky chip row.
+  --outside-anchor-gap: calc(var(--outside-nav-top) + 3.6rem);
+}
+
+.outside-section,
+.outside-lead,
+.trip-map-wrap,
+.trip-row,
+.outside-page .place-card {
+  scroll-margin-top: var(--outside-anchor-gap);
+}
+
+/* -----------------------------------------------------------------------------
+ * Chips: the one control shape on the page — section nav, filters, years.
+ * -------------------------------------------------------------------------- */
+
+.outside-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin: 0 0 1.1rem;
+
+  &[hidden] {
+    display: none;
+  }
+}
+
+.outside-chip,
+.outside-nav a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.3rem 0.75rem;
+  border: 1px solid var(--global-divider-color);
+  border-radius: 999px;
+  background: transparent;
+  color: var(--about-ink-soft);
+  font: inherit;
+  font-size: 0.78rem;
+  line-height: 1.4;
+  white-space: nowrap;
+  text-decoration: none;
+  cursor: pointer;
+  transition:
+    border-color 0.15s ease,
+    color 0.15s ease,
+    background-color 0.15s ease;
+
+  &:hover {
+    color: var(--global-theme-color);
+    border-color: currentColor;
+    text-decoration: none;
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--global-theme-color);
+    outline-offset: 2px;
+  }
+
+  &[aria-pressed="true"],
+  &[aria-current="true"] {
+    color: var(--global-text-color);
+    border-color: var(--global-text-color);
+    font-weight: 600;
+  }
+}
+
+.chip-count {
+  color: var(--about-ink-muted);
+  font-weight: 400;
+  font-variant-numeric: tabular-nums;
+}
+
+/* -----------------------------------------------------------------------------
+ * Section nav: one row of chips that sticks under the site navbar and scrolls
+ * sideways on a narrow screen rather than wrapping.
+ * -------------------------------------------------------------------------- */
+
+.outside-nav {
+  position: sticky;
+  top: var(--outside-nav-top);
+  z-index: 20;
+  margin: 0 -0.25rem;
+  padding: 0.55rem 0.25rem;
+  background: var(--global-bg-color);
+  border-bottom: 1px solid var(--global-divider-color);
+
+  ul {
+    display: flex;
+    gap: 0.4rem;
+    margin: 0;
+    padding: 0.1rem 0.1rem;
+    list-style: none;
+    overflow-x: auto;
+    scrollbar-width: none;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
+  li {
+    flex: 0 0 auto;
+  }
+}
+
+/* -----------------------------------------------------------------------------
+ * Lead photo and numbers strip
+ * -------------------------------------------------------------------------- */
+
+.outside-intro .outside-lead {
+  margin-bottom: 1.6rem;
+}
+
+.photo-link {
+  display: block;
+  border-radius: 5px;
+  cursor: zoom-in;
+
+  &:focus-visible {
+    outline: 2px solid var(--global-theme-color);
+    outline-offset: 3px;
+  }
+
+  picture,
+  img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+  }
+}
+
+.outside-stats {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0;
+  margin: 0 0 1.4rem;
+  padding: 0;
+  list-style: none;
+  border-top: 1px solid var(--global-divider-color);
+
+  li {
+    border-bottom: 1px solid var(--global-divider-color);
+
+    &[hidden] {
+      display: none;
+    }
+  }
+
+  a {
+    display: block;
+    height: 100%;
+    padding: 0.75rem 0.5rem 0.7rem 0;
+    color: inherit;
+    text-decoration: none;
+
+    &:hover .stat-num,
+    &:focus-visible .stat-num {
+      color: var(--global-theme-color);
+    }
+
+    &:focus-visible {
+      outline: 2px solid var(--global-theme-color);
+      outline-offset: -2px;
+    }
+  }
+
+  @media (min-width: 576px) {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+.stat-num {
+  display: block;
+  font-size: 1.45rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+  color: var(--global-text-color);
+  font-variant-numeric: tabular-nums;
+  transition: color 0.15s ease;
+}
+
+.stat-label {
+  display: block;
+  margin-top: 0.15rem;
+  font-size: 0.74rem;
+  line-height: 1.4;
+  color: var(--about-ink-muted);
+}
+
+/* -----------------------------------------------------------------------------
+ * Gallery: CSS columns, so mixed portrait/landscape photos pack without a
+ * layout library.
+ * -------------------------------------------------------------------------- */
+
+.photo-grid {
+  columns: 1;
+  column-gap: 1rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  @media (min-width: 576px) {
+    columns: 2;
+  }
+
+  @media (min-width: 768px) {
+    columns: 3;
+  }
+}
+
+.photo-tile {
+  break-inside: avoid;
+  margin: 0 0 1rem;
+
+  &[hidden] {
+    display: none;
+  }
+
+  figure {
+    margin: 0;
+  }
+}
+
+.photo-caption {
+  margin-top: 0.4rem;
+  font-size: 0.76rem;
+  line-height: 1.5;
+  color: var(--about-ink-muted);
+}
+
+// Development-only stand-in for content that has not been written yet; the
+// includes never emit it in a production build.
+.outside-placeholder {
+  margin: 0;
+  padding: 1.2rem 1rem;
+  border: 1.5px dashed var(--about-fig-line);
+  border-radius: 6px;
+  font-size: 0.78rem;
+  line-height: 1.5;
+  color: var(--about-ink-muted);
+  text-align: center;
+  overflow-wrap: anywhere;
+}
+
+/* -----------------------------------------------------------------------------
+ * Lightbox: a native <dialog>, so focus containment and Esc come for free.
+ * -------------------------------------------------------------------------- */
+
+.lightbox {
+  width: 100vw;
+  max-width: 100vw;
+  height: 100vh;
+  height: 100dvh;
+  max-height: 100dvh;
+  margin: 0;
+  padding: 3.25rem 3.5rem 2.5rem;
+  border: 0;
+  background: transparent;
+  color: #f2f2f2;
+  overflow: hidden;
+
+  &::backdrop {
+    background: rgba(10, 10, 12, 0.92);
+  }
+
+  &[open] {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  @media (max-width: 575.98px) {
+    padding: 3.25rem 0.75rem 4.5rem;
+  }
+}
+
+.lightbox-figure {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 100%;
+  max-height: 100%;
+  margin: 0;
+}
+
+.lightbox-img {
+  display: block;
+  max-width: 100%;
+  max-height: calc(100dvh - 9rem);
+  width: auto;
+  height: auto;
+  border-radius: 4px;
+  object-fit: contain;
+}
+
+.lightbox-caption {
+  margin-top: 0.7rem;
+  font-size: 0.82rem;
+  line-height: 1.5;
+  text-align: center;
+  color: #e6e6e6;
+}
+
+.lightbox-count {
+  position: absolute;
+  top: 1rem;
+  left: 1.1rem;
+  margin: 0;
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  color: #cfcfcf;
+  font-variant-numeric: tabular-nums;
+}
+
+.lightbox-btn {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.6rem;
+  height: 2.6rem;
+  padding: 0;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.35);
+  color: #fff;
+  font-size: 1.5rem;
+  line-height: 1;
+  cursor: pointer;
+
+  &:hover {
+    border-color: #fff;
+  }
+
+  &:focus-visible {
+    outline: 2px solid #fff;
+    outline-offset: 2px;
+  }
+
+  &[hidden] {
+    display: none;
+  }
+}
+
+.lightbox-close {
+  top: 0.6rem;
+  right: 0.75rem;
+}
+
+.lightbox-prev,
+.lightbox-next {
+  top: 50%;
+  transform: translateY(-50%);
+
+  @media (max-width: 575.98px) {
+    top: auto;
+    bottom: 0.9rem;
+    transform: none;
+  }
+}
+
+.lightbox-prev {
+  left: 0.6rem;
+
+  @media (max-width: 575.98px) {
+    left: calc(50% - 3rem);
+  }
+}
+
+.lightbox-next {
+  right: 0.6rem;
+
+  @media (max-width: 575.98px) {
+    right: calc(50% - 3rem);
+  }
+}
+
+/* -----------------------------------------------------------------------------
+ * The First Folio shelf. Spines are buttons with their title set vertically;
+ * height varies a little (spine-h0..4) so a row reads as books, not a bar
+ * chart. Each section is tinted from the theme colours via a pseudo-element,
+ * so the text sits on the plain page colour plus a wash and keeps AA contrast.
+ * -------------------------------------------------------------------------- */
+
+.shelf {
+  position: relative;
+  margin: 1.4rem 0 1rem;
+}
+
+// One shelf per row, label under its own shelf line; from md up the Kindle
+// card takes a right-hand column beside the stacked shelves.
+.shelf-body {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 1.6rem;
+
+  @media (min-width: 768px) {
+    grid-template-columns: minmax(0, 1fr) 10.5rem;
+    column-gap: 2rem;
+  }
+}
+
+.shelf-group {
+  display: flex;
+  flex-direction: column-reverse;
+  min-width: 0;
+  grid-column: 1;
+
+  &[hidden] {
+    display: none;
+  }
+}
+
+.shelf-label {
+  margin: 0.55rem 0 0;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--global-text-color);
+
+  span {
+    margin-left: 0.3rem;
+    font-weight: 400;
+    font-size: 0.74rem;
+    color: var(--about-ink-muted);
+  }
+}
+
+// A single row of spines that never wraps; when it is wider than the column it
+// scrolls sideways inside itself. The top padding leaves room for a lifted,
+// outlined spine so the scroll box does not clip it.
+.shelf-row {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: flex-end;
+  gap: 3px;
+  margin: 0;
+  padding: 0.9rem 0.45rem 0;
+  list-style: none;
+  border-bottom: 2px solid var(--about-fig-line);
+  overflow-x: auto;
+  overflow-y: hidden;
+  overscroll-behavior-x: contain;
+  scrollbar-width: thin;
+
+  &:focus-visible {
+    outline: 2px solid var(--global-theme-color);
+    outline-offset: 2px;
+  }
+
+  li {
+    display: flex;
+    flex: 0 0 auto;
+  }
+}
+
+.spine {
+  --spine-wash: var(--global-theme-color);
+  --spine-wash-opacity: 0.1;
+  position: relative;
+  display: flex;
+  align-items: stretch;
+  height: 9rem;
+  min-width: 1.6rem;
+  margin: 0;
+  padding: 0.55rem 0.3rem;
+  border: 1.3px solid var(--about-fig-line);
+  border-bottom: 0;
+  border-radius: 3px 3px 0 0;
+  background: transparent;
+  color: var(--about-ink-soft);
+  font: inherit;
+  font-size: 0.68rem;
+  line-height: 1.25;
+  letter-spacing: 0.02em;
+  text-align: start;
+  cursor: pointer;
+  isolation: isolate;
+  transition:
+    transform 0.15s ease,
+    color 0.15s ease,
+    border-color 0.15s ease;
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    border-radius: inherit;
+    background: var(--spine-wash);
+    opacity: var(--spine-wash-opacity);
+  }
+
+  &:hover,
+  &:focus-visible,
+  &.is-active {
+    color: var(--global-text-color);
+    border-color: var(--global-theme-color);
+    transform: translateY(-6px);
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--global-theme-color);
+    outline-offset: 2px;
+  }
+
+  // A small mark at the foot of the spine for a play marked read: true.
+  &.is-read::after {
+    content: "";
+    position: absolute;
+    bottom: 0.3rem;
+    left: 50%;
+    width: 6px;
+    height: 6px;
+    margin-left: -3px;
+    border-radius: 50%;
+    background: var(--global-theme-color);
+  }
+}
+
+// The title runs up the spine. It lives on a span rather than the button
+// because older browsers ignore writing-mode on form controls; as a stretched
+// flex item it gets the button's height, so a long title wraps into a second
+// column (a thicker book) instead of running off the end.
+.spine-title {
+  writing-mode: vertical-rl;
+  pointer-events: none;
+}
+
+.spine-h0 {
+  height: 8.6rem;
+}
+.spine-h1 {
+  height: 9.4rem;
+}
+.spine-h2 {
+  height: 8.2rem;
+}
+.spine-h3 {
+  height: 9.8rem;
+}
+.spine-h4 {
+  height: 9rem;
+}
+
+.shelf-histories .spine {
+  --spine-wash: var(--about-fig-line);
+  --spine-wash-opacity: 0.14;
+}
+
+.shelf-tragedies .spine {
+  --spine-wash: var(--global-text-color);
+  --spine-wash-opacity: 0.12;
+}
+
+.shelf-key {
+  margin: 0.8rem 0 0;
+  font-size: 0.74rem;
+  color: var(--about-ink-muted);
+}
+
+.shelf-key-mark {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  margin-right: 0.3rem;
+  border-radius: 50%;
+  background: var(--global-theme-color);
+  vertical-align: middle;
+}
+
+.shelf-tip {
+  position: absolute;
+  z-index: 5;
+  max-width: min(17rem, 100%);
+  padding: 0.5rem 0.7rem;
+  border: 1px solid var(--about-fig-line);
+  border-radius: 6px;
+  background: var(--global-bg-color);
+  box-shadow: 3px 3px 0 var(--global-divider-color);
+  font-size: 0.78rem;
+  line-height: 1.45;
+  color: var(--about-ink-soft);
+  pointer-events: auto;
+
+  &[hidden] {
+    display: none;
+  }
+
+  strong {
+    display: block;
+    font-weight: 600;
+    color: var(--global-text-color);
+  }
+
+  span {
+    display: block;
+    color: var(--about-ink-muted);
+  }
+}
+
+// The Kindle, as a card at the end of the shelf; drawn in the figure inks.
+.kindle-card {
+  justify-self: start;
+  align-self: start;
+  width: 10.5rem;
+  max-width: 100%;
+  min-width: 0;
+  padding: 0.75rem 0.85rem 0.85rem;
+
+  @media (min-width: 768px) {
+    grid-column: 2;
+    grid-row: 1 / span 3;
+  }
+  border: 1.2px dashed var(--global-divider-color);
+  border-radius: 6px;
+  text-align: center;
+
+  p {
+    margin: 0;
+  }
+
+  .outside-placeholder {
+    margin-top: 0.6rem;
+    padding: 0.5rem;
+    font-size: 0.7rem;
+    overflow-wrap: anywhere;
+  }
+}
+
+.kindle-card-h {
+  font-size: 0.6rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--about-ink-muted);
+  text-align: left;
+}
+
+.kindle-card-art {
+  display: block;
+  width: 4.2rem;
+  height: auto;
+  margin: 0.7rem auto 0.6rem;
+  overflow: visible;
+
+  .k-line,
+  .k-soft {
+    fill: none;
+    stroke-width: 1.3;
+    stroke-linecap: round;
+  }
+
+  .k-line {
+    stroke: var(--about-fig-line);
+  }
+
+  .k-soft {
+    stroke: var(--global-divider-color);
+  }
+}
+
+.kindle-card-t {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--global-text-color);
+}
+
+.kindle-card-s {
+  font-size: 0.7rem;
+  color: var(--about-ink-muted);
+}
+
+.kindle-card-now {
+  margin-top: 0.5rem !important;
+  font-size: 0.76rem;
+  font-style: italic;
+  color: var(--about-ink-soft);
+}
+
+/* -----------------------------------------------------------------------------
+ * Road-trip map. The Leaflet container is isolated (z-index: 0) so its panes,
+ * which run to z-index 1000, stay underneath the sticky section nav.
+ * -------------------------------------------------------------------------- */
+
+.trip-map-wrap {
+  margin: 0 0 1rem;
+
+  &[hidden] {
+    display: none;
+  }
+}
+
+.trip-map-fallback[hidden] {
+  display: none;
+}
+
+.about-page .trip-map {
+  position: relative;
+  z-index: 0;
+  height: clamp(320px, 62vw, 470px);
+  border: 1px solid var(--global-divider-color);
+  border-radius: 6px;
+  background: var(--global-bg-color);
+  font-family: inherit;
+
+  &:focus-visible {
+    outline: 2px solid var(--global-theme-color);
+    outline-offset: 2px;
+  }
+}
+
+.trip-map-hint {
+  margin: 0.45rem 0 0;
+  font-size: 0.74rem;
+  color: var(--about-ink-muted);
+}
+
+.trip-swatch {
+  display: inline-block;
+  flex: 0 0 auto;
+  width: 0.7rem;
+  height: 0.7rem;
+  margin-right: 0.4rem;
+  border-radius: 50%;
+  background: var(--trip-color, var(--about-fig-line));
+  vertical-align: -0.05rem;
+
+  .outside-chip & {
+    margin-right: 0;
+  }
+}
+
+// Map markers drawn as plain HTML (divIcon), so Leaflet makes them focusable.
+.trip-map-start,
+.trip-map-place {
+  border: 2px solid #fff;
+  border-radius: 50%;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.45);
+
+  &:focus-visible {
+    outline: 2px solid var(--global-theme-color);
+    outline-offset: 2px;
+  }
+}
+
+.trip-map-start {
+  background: #1f1f1f;
+}
+
+// Square rather than round, to read apart from the trip stops. (No rotate:
+// Leaflet positions markers with an inline transform.)
+.trip-map-place {
+  border-radius: 3px;
+  background: var(--global-theme-color);
+}
+
+// Popup contents sit on Leaflet's own white popup in both themes, so they use
+// fixed inks rather than the theme variables.
+.trip-popup-name {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #1f1f1f;
+}
+
+.trip-popup-meta {
+  display: block;
+  margin-top: 0.1rem;
+  font-size: 0.76rem;
+  color: #4a4a4a;
+}
+
+.trip-popup-link {
+  display: inline-block;
+  margin-top: 0.3rem;
+  font-size: 0.76rem;
+  // The dark theme's link colour is too light for the white popup.
+  color: #1d5a8a;
+}
+
+// Trip rows: the active one (picked on the map or here) gets its colour in
+// the gutter; the whole row is a target once the map is up.
+.trip-row {
+  border-radius: 6px;
+  transition: background-color 0.2s ease;
+
+  &.is-selectable {
+    cursor: pointer;
+  }
+
+  &.is-active {
+    .about-row-date {
+      color: var(--global-text-color);
+      font-weight: 600;
+    }
+
+    .trip-swatch {
+      box-shadow:
+        0 0 0 3px var(--global-bg-color),
+        0 0 0 4.5px var(--trip-color);
+    }
+  }
+}
+
+.trip-show {
+  margin: 0.45rem 0 0;
+  padding: 0;
+  border: 0;
+  border-bottom: 1px solid var(--global-divider-color);
+  background: none;
+  color: var(--about-ink-muted);
+  font: inherit;
+  font-size: 0.76rem;
+  cursor: pointer;
+
+  &:hover {
+    color: var(--global-theme-color);
+    border-bottom-color: currentColor;
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--global-theme-color);
+    outline-offset: 2px;
+  }
+
+  &[hidden] {
+    display: none;
+  }
+}
+
+/* -----------------------------------------------------------------------------
+ * Motion. All of it is opt-in twice over: the script only adds .outside-reveal
+ * when reduced motion is off, and the rules only exist when the media query
+ * agrees. Without JavaScript nothing is ever hidden.
+ * -------------------------------------------------------------------------- */
+
+@media (prefers-reduced-motion: no-preference) {
+  .outside-reveal .outside-section {
+    transition:
+      opacity 0.6s ease,
+      transform 0.6s ease;
+  }
+
+  .outside-reveal .outside-section:not(.is-revealed) {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .outside-chip,
+  .outside-nav a,
+  .spine,
+  .stat-num,
+  .trip-row {
+    transition: none;
+  }
+
+  .spine:hover,
+  .spine:focus-visible,
+  .spine.is-active {
+    transform: none;
+  }
+}
+
+@media print {
+  .outside-nav,
+  .trip-map-wrap,
+  .lightbox {
+    display: none !important;
+  }
+
+  .trip-map-fallback {
+    display: block !important;
+  }
+
+  .outside-section {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}

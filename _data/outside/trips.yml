@@ -1,0 +1,290 @@
+# Road trips on /outside/. The interactive map, the trip rows under it and the
+# numbers in the stats strip are all built from this file.
+#
+# start: where every trip begins and ends -- name, lat, lon, optional note.
+#
+# trips: one entry per trip, oldest first.
+#   year:       shown in the row's gutter and on the map's year chips
+#   title:      "Los Angeles → Somewhere"
+#   car:        shown after the title
+#   color:      line colour on the map. Keep it mid-tone so it reads on both the
+#               light and the dark map tiles (Esri Light / Dark Gray Canvas).
+#   summary:    the paragraph under the title
+#   stops:      the full itinerary, in order; rendered joined with " → "
+#   route:      [lat, lon] waypoints for the map line, out and back to LA. Taken
+#               from ROUTES in bin/roadtrip-map.py, which writes (lon, lat): flip
+#               the pair when copying. Shape points, so not every one is a stop.
+#   side_route: optional detour taken from mid-trip -- name plus its own route
+#   markers:    named stops drawn on the map -- name, lat, lon, optional note.
+#               endpoint: true marks the far end of the trip (drawn larger).
+#
+# The markers are the labelled points in bin/roadtrip-map.py (LABELS,
+# WAYPOINTS, and the unlabelled Texas STOPS, named here from the 2024
+# itinerary).
+
+start:
+  name: Los Angeles
+  lat: 34.05
+  lon: -118.24
+  note: start and finish
+
+trips:
+  - year: 2023
+    title: Los Angeles → Seattle
+    car: Toyota RAV4
+    color: "#2f7fc1"
+    summary: >-
+      Highway 1 and US-101 the whole way up, on the water for most of it — Big
+      Sur, Monterey, San Francisco, the Oregon headlands, and a coast town west
+      of Portland whose name I have lost. A few days in the national parks around
+      Seattle, then home the other side of the mountains: Portland, the falls
+      just east of it, and US-395 down through Reno and the eastern Sierra.
+    stops:
+      - Los Angeles
+      - Monterey
+      - San Francisco
+      - a coast town west of Portland
+      - Seattle
+      - the national parks around it
+      - Portland
+      - the falls east of it
+      - Reno
+      - Los Angeles
+    route:
+      - [34.05, -118.24] # Los Angeles
+      - [34.42, -119.70] # the coast road
+      - [35.28, -120.66]
+      - [36.27, -121.81]
+      - [36.60, -121.90] # Monterey
+      - [37.77, -122.42] # San Francisco
+      - [39.31, -123.80]
+      - [40.80, -124.16]
+      - [42.05, -124.28]
+      - [43.37, -124.22]
+      - [44.63, -124.06] # the Oregon coast
+      - [45.89, -123.96] # a coast town west of Portland
+      - [46.98, -123.82]
+      - [47.61, -122.33] # Seattle
+      - [46.85, -121.76] # Mount Rainier
+      - [45.52, -122.68] # Portland
+      - [45.58, -122.12] # the falls east of it
+      - [44.06, -121.31] # US-97 / US-395
+      - [42.22, -121.78]
+      - [40.42, -120.65]
+      - [39.53, -119.81] # Reno
+      - [37.36, -118.40] # the eastern Sierra
+      - [36.60, -118.06]
+      - [35.05, -118.17]
+      - [34.05, -118.24] # Los Angeles
+    markers:
+      - name: Seattle
+        lat: 47.61
+        lon: -122.33
+        endpoint: true
+      - name: Portland
+        lat: 45.52
+        lon: -122.68
+      - name: Reno
+        lat: 39.53
+        lon: -119.81
+
+  - year: 2024
+    title: Los Angeles → Texas
+    car: Toyota RAV4
+    color: "#d0632a"
+    summary: >-
+      Las Vegas and the red rock at Sedona on the way out, then I-10 east into
+      a circuit of the Texas cities with a day in each. Home along the New Mexico
+      line through Carlsbad and Las Cruces.
+    stops:
+      - Los Angeles
+      - Las Vegas
+      - Sedona
+      - Tucson
+      - El Paso
+      - San Antonio
+      - Austin
+      - Houston
+      - Dallas
+      - Carlsbad
+      - Las Cruces
+      - Phoenix
+      - Los Angeles
+    route:
+      - [34.05, -118.24] # Los Angeles
+      - [36.17, -115.14] # Las Vegas
+      - [35.20, -111.65] # Flagstaff
+      - [34.87, -111.76] # Sedona
+      - [33.45, -112.07] # Phoenix
+      - [32.22, -110.97] # Tucson
+      - [31.76, -106.49] # El Paso
+      - [30.89, -102.88]
+      - [29.42, -98.49] # San Antonio
+      - [30.27, -97.74] # Austin
+      - [29.76, -95.37] # Houston
+      - [32.78, -96.80] # Dallas
+      - [32.45, -99.73] # west across Texas
+      - [31.99, -102.08]
+      - [32.42, -104.23] # Carlsbad
+      - [32.31, -106.78] # Las Cruces
+      - [32.22, -110.97] # back through Tucson, Phoenix
+      - [33.45, -112.07]
+      - [34.05, -118.24] # Los Angeles
+    markers:
+      - name: Houston
+        lat: 29.76
+        lon: -95.37
+        endpoint: true
+        note: a day in each city
+      - name: El Paso
+        lat: 31.76
+        lon: -106.49
+      - name: San Antonio
+        lat: 29.42
+        lon: -98.49
+      - name: Austin
+        lat: 30.27
+        lon: -97.74
+      - name: Dallas
+        lat: 32.78
+        lon: -96.80
+      - name: Carlsbad
+        lat: 32.42
+        lon: -104.23
+
+  - year: 2025
+    title: Los Angeles → Chicago
+    car: Toyota RAV4
+    color: "#3f9b4f"
+    summary: >-
+      Up US-395 to Mammoth Lakes, then across Nevada and Idaho to the Tetons and
+      the Black Hills, and east through Minneapolis into Chicago. Home the middle
+      way: Lincoln, Denver, over the Rockies, and out through the Utah desert at
+      Moab. The RAV4's last long one.
+    stops:
+      - Los Angeles
+      - Mammoth Lakes
+      - Winnemucca
+      - Twin Falls
+      - Grand Teton
+      - Gillette
+      - Rapid City
+      - Minneapolis
+      - Chicago
+      - Lincoln
+      - Denver
+      - Moab
+      - St. George
+      - Los Angeles
+    route:
+      - [34.05, -118.24] # Los Angeles
+      - [35.05, -118.17]
+      - [37.65, -118.97] # Mammoth Lakes
+      - [39.53, -119.81] # Reno
+      - [40.97, -117.74] # Winnemucca
+      - [42.56, -114.46] # Twin Falls
+      - [43.79, -110.68] # Grand Teton
+      - [44.29, -105.50] # Gillette
+      - [44.08, -103.23] # Rapid City
+      - [44.98, -93.27] # Minneapolis
+      - [41.88, -87.63] # Chicago
+      - [41.60, -93.60]
+      - [40.81, -96.67] # Lincoln
+      - [39.74, -104.99] # Denver
+      - [38.57, -109.55] # Moab
+      - [37.10, -113.58] # St. George
+      - [36.17, -115.14]
+      - [34.05, -118.24] # Los Angeles
+    markers:
+      - name: Chicago
+        lat: 41.88
+        lon: -87.63
+        endpoint: true
+      - name: Grand Teton
+        lat: 43.79
+        lon: -110.68
+      - name: Rapid City
+        lat: 44.08
+        lon: -103.23
+      - name: Minneapolis
+        lat: 44.98
+        lon: -93.27
+      - name: Denver
+        lat: 39.74
+        lon: -104.99
+      - name: Moab
+        lat: 38.57
+        lon: -109.55
+
+  - year: 2026
+    title: Los Angeles → Boston
+    car: Tesla Model 3
+    color: "#b04fa8"
+    summary: >-
+      The drive out to the SES AI internship: Phoenix, then straight across to
+      Pittsburgh and Boston. Two months there, with a run down to New York in the
+      middle, and home by Niagara Falls, St. Louis and New Mexico. FSD did most
+      of the driving; charging stops set the rhythm of the day in a way gas
+      stations never did.
+    stops:
+      - Los Angeles
+      - Phoenix
+      - Pittsburgh
+      - Boston
+      - New York and back, mid-stay
+      - Niagara Falls
+      - St. Louis
+      - New Mexico
+      - Phoenix
+      - Los Angeles
+    route:
+      - [34.05, -118.24] # Los Angeles
+      - [33.45, -112.07] # Phoenix, then I-17/I-40
+      - [35.20, -111.65]
+      - [35.08, -106.61]
+      - [35.22, -101.83]
+      - [35.47, -97.52]
+      - [38.63, -90.20]
+      - [39.77, -86.16]
+      - [39.96, -82.99]
+      - [40.44, -79.99] # Pittsburgh
+      - [41.41, -75.66]
+      - [41.76, -72.68]
+      - [42.36, -71.06] # Boston
+      - [42.65, -73.76]
+      - [43.05, -76.15]
+      - [43.08, -79.04] # Niagara Falls
+      - [41.50, -81.69]
+      - [39.77, -86.16]
+      - [38.63, -90.20] # St. Louis
+      - [37.21, -93.29]
+      - [35.47, -97.52]
+      - [35.22, -101.83]
+      - [35.08, -106.61] # New Mexico
+      - [35.20, -111.65]
+      - [33.45, -112.07]
+      - [34.05, -118.24] # Los Angeles
+    side_route:
+      name: Boston → New York
+      route:
+        - [42.36, -71.06] # Boston
+        - [41.82, -71.41]
+        - [41.31, -72.93]
+        - [40.71, -74.01] # New York
+    markers:
+      - name: Boston
+        lat: 42.36
+        lon: -71.06
+        endpoint: true
+      - name: Pittsburgh
+        lat: 40.44
+        lon: -79.99
+      - name: New York
+        lat: 40.71
+        lon: -74.01
+      - name: Niagara Falls
+        lat: 43.08
+        lon: -79.04
+      - name: St. Louis
+        lat: 38.63
+        lon: -90.20

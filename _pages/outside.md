@@ -10,21 +10,46 @@ description: >
   wherever I end up.
 nav: false
 places: true
+outside: true
+page_class: outside-page
+# Counted for the numbers strip; the drawing in the Cameras section is separate.
+gear:
+  bodies: [Canon R5, Canon 6D Mark II]
+  lenses: [EF 16–35mm f/2.8, EF 24–70mm f/2.8, EF 70–200mm f/2.8]
 ---
 
 {%- comment -%}
-Both drawings reuse the landing page's diagram vocabulary (.about-figure plus
+The drawings reuse the landing page's diagram vocabulary (.about-figure plus
 the fig-\* classes in \_sass/\_about.scss). Add a row or a shape, not a new layout.
+
+Content lives in \_data/outside/ (photos, reading, trips) and \_data/places.yml;
+the interactive parts are assets/js/outside.js and \_sass/\_outside.scss, loaded
+by `outside: true` above. Every include sits inside an HTML block so Markdown
+leaves its indentation alone.
 {%- endcomment -%}
 
-<div class="outside-lead">
-  {%
-    include figure.liquid path="assets/img/whitesands.jpeg" class="img-fluid"
-    alt="White Sands, New Mexico" caption="White Sands, New Mexico." sizes="(min-width: 768px) 720px, 95vw"
-  %}
+<div class="outside-intro">
+  {% include outside/photos.liquid part="hero" %}
+  {% include outside/stats.liquid %}
 </div>
 
-<section class="about-section">
+<nav class="outside-nav" aria-label="Sections on this page">
+  <ul>
+    {% if site.data.outside.photos.size > 0 or jekyll.environment == "development" %}
+      <li><a href="#photos">Photos</a></li>
+    {% endif %}
+    <li><a href="#cameras">Cameras</a></li>
+    <li><a href="#reading">Reading</a></li>
+    <li><a href="#road-trips">Road trips</a></li>
+    <li><a href="#places">Places</a></li>
+  </ul>
+</nav>
+
+<div class="outside-gallery">
+  {% include outside/photos.liquid part="gallery" %}
+</div>
+
+<section class="about-section outside-section" id="cameras">
   <h2 class="about-section-title">Cameras</h2>
 
   <p class="lst-desc">
@@ -144,7 +169,7 @@ the fig-\* classes in \_sass/\_about.scss). Add a row or a shape, not a new layo
   </p>
 </section>
 
-<section class="about-section">
+<section class="about-section outside-section" id="reading">
   <h2 class="about-section-title">Reading</h2>
 
   <p class="lst-desc">
@@ -154,139 +179,7 @@ the fig-\* classes in \_sass/\_about.scss). Add a row or a shape, not a new layo
     practical reading setup I have owned.
   </p>
 
-  <figure class="about-figure">
-    <svg viewBox="0 0 900 240" role="img" aria-labelledby="read-title read-desc">
-      <title id="read-title">A Shakespeare shelf and the Kindle it is read on</title>
-      <desc id="read-desc">
-        The thirty-six plays of the 1623 First Folio drawn as book spines in the
-        collection’s own three sections — fourteen comedies, ten histories, twelve
-        tragedies — beside a front-lit Kindle.
-      </desc>
-
-      <text class="fig-h" x="10" y="20">THE FIRST FOLIO</text>
-      <rect class="fig-panel" x="10" y="30" width="700" height="190" rx="6" />
-
-      <g>
-        <rect class="fig-line" x="38.0" y="86.0" width="13" height="92" rx="2" />
-        <path class="fig-line-soft" d="M39.5,124.6 H49.5" />
-        <rect class="fig-line" x="54.0" y="100.0" width="11" height="78" rx="2" />
-        <path class="fig-line-soft" d="M55.5,125.0 H63.5" />
-        <path class="fig-line-soft" d="M55.5,153.0 H63.5" />
-        <rect class="fig-line" x="68.0" y="92.0" width="14" height="86" rx="2" />
-        <path class="fig-line-soft" d="M69.5,123.8 H80.5" />
-        <rect class="fig-line" x="85.0" y="82.0" width="12" height="96" rx="2" />
-        <path class="fig-line-soft" d="M86.5,108.9 H95.5" />
-        <rect class="fig-line" x="100.0" y="96.0" width="15" height="82" rx="2" />
-        <path class="fig-line-soft" d="M101.5,132.9 H113.5" />
-        <path class="fig-line-soft" d="M101.5,155.0 H113.5" />
-        <rect class="fig-line" x="118.0" y="88.0" width="11" height="90" rx="2" />
-        <path class="fig-line-soft" d="M119.5,118.6 H127.5" />
-        <rect class="fig-line" x="132.0" y="104.0" width="13" height="74" rx="2" />
-        <path class="fig-line-soft" d="M133.5,133.6 H143.5" />
-        <path class="fig-line-soft" d="M133.5,155.8 H143.5" />
-        <rect class="fig-line" x="148.0" y="90.0" width="12" height="88" rx="2" />
-        <path class="fig-line-soft" d="M149.5,116.4 H158.5" />
-        <rect class="fig-line" x="163.0" y="84.0" width="14" height="94" rx="2" />
-        <path class="fig-line-soft" d="M164.5,124.4 H175.5" />
-        <rect class="fig-line" x="180.0" y="98.0" width="11" height="80" rx="2" />
-        <path class="fig-line-soft" d="M181.5,126.0 H189.5" />
-        <path class="fig-line-soft" d="M181.5,150.8 H189.5" />
-        <rect class="fig-line" x="194.0" y="92.0" width="13" height="86" rx="2" />
-        <path class="fig-line-soft" d="M195.5,114.4 H205.5" />
-        <rect class="fig-line" x="210.0" y="102.0" width="15" height="76" rx="2" />
-        <path class="fig-line-soft" d="M211.5,131.6 H223.5" />
-        <rect class="fig-line" x="228.0" y="88.0" width="12" height="90" rx="2" />
-        <path class="fig-line-soft" d="M229.5,125.8 H238.5" />
-        <rect class="fig-line" x="243.0" y="94.0" width="14" height="84" rx="2" />
-        <path class="fig-line-soft" d="M244.5,120.9 H255.5" />
-        <path class="fig-line-soft" d="M244.5,151.1 H255.5" />
-      </g>
-      <path class="fig-line" d="M32.0,178.5 H263.0" />
-      <text class="fig-t" x="147.5" y="198" text-anchor="middle">Comedies</text>
-      <text class="fig-s" x="147.5" y="212" text-anchor="middle">14 plays</text>
-
-      <g>
-        <rect class="fig-line" x="295.0" y="90.0" width="12" height="88" rx="2" />
-        <path class="fig-line-soft" d="M296.5,122.6 H305.5" />
-        <rect class="fig-line" x="310.0" y="84.0" width="14" height="94" rx="2" />
-        <path class="fig-line-soft" d="M311.5,110.3 H322.5" />
-        <rect class="fig-line" x="327.0" y="99.0" width="11" height="79" rx="2" />
-        <path class="fig-line-soft" d="M328.5,134.6 H336.5" />
-        <path class="fig-line-soft" d="M328.5,155.9 H336.5" />
-        <rect class="fig-line" x="341.0" y="93.0" width="13" height="85" rx="2" />
-        <path class="fig-line-soft" d="M342.5,121.9 H352.5" />
-        <rect class="fig-line" x="357.0" y="86.0" width="15" height="92" rx="2" />
-        <path class="fig-line-soft" d="M358.5,122.8 H370.5" />
-        <path class="fig-line-soft" d="M358.5,150.4 H370.5" />
-        <rect class="fig-line" x="375.0" y="101.0" width="12" height="77" rx="2" />
-        <path class="fig-line-soft" d="M376.5,124.1 H385.5" />
-        <rect class="fig-line" x="390.0" y="91.0" width="11" height="87" rx="2" />
-        <path class="fig-line-soft" d="M391.5,128.4 H399.5" />
-        <rect class="fig-line" x="404.0" y="83.0" width="14" height="95" rx="2" />
-        <path class="fig-line-soft" d="M405.5,116.2 H416.5" />
-        <path class="fig-line-soft" d="M405.5,145.7 H416.5" />
-        <rect class="fig-line" x="421.0" y="97.0" width="13" height="81" rx="2" />
-        <path class="fig-line-soft" d="M422.5,118.1 H432.5" />
-        <rect class="fig-line" x="437.0" y="89.0" width="12" height="89" rx="2" />
-        <path class="fig-line-soft" d="M438.5,123.7 H447.5" />
-      </g>
-      <path class="fig-line" d="M289.0,178.5 H455.0" />
-      <text class="fig-t" x="372.0" y="198" text-anchor="middle">Histories</text>
-      <text class="fig-s" x="372.0" y="212" text-anchor="middle">10 plays</text>
-
-      <g>
-        <rect class="fig-line" x="488.0" y="103.0" width="14" height="75" rx="2" />
-        <path class="fig-line-soft" d="M489.5,134.5 H500.5" />
-        <rect class="fig-line" x="505.0" y="87.0" width="11" height="91" rx="2" />
-        <path class="fig-line-soft" d="M506.5,116.1 H514.5" />
-        <path class="fig-line-soft" d="M506.5,148.9 H514.5" />
-        <rect class="fig-line" x="519.0" y="95.0" width="13" height="83" rx="2" />
-        <path class="fig-line-soft" d="M520.5,125.7 H530.5" />
-        <rect class="fig-line" x="535.0" y="85.0" width="12" height="93" rx="2" />
-        <path class="fig-line-soft" d="M536.5,111.0 H545.5" />
-        <rect class="fig-line" x="550.0" y="100.0" width="15" height="78" rx="2" />
-        <path class="fig-line-soft" d="M551.5,135.1 H563.5" />
-        <path class="fig-line-soft" d="M551.5,156.2 H563.5" />
-        <rect class="fig-line" x="568.0" y="92.0" width="11" height="86" rx="2" />
-        <path class="fig-line-soft" d="M569.5,121.2 H577.5" />
-        <rect class="fig-line" x="582.0" y="82.0" width="14" height="96" rx="2" />
-        <path class="fig-line-soft" d="M583.5,120.4 H594.5" />
-        <path class="fig-line-soft" d="M583.5,149.2 H594.5" />
-        <rect class="fig-line" x="599.0" y="98.0" width="12" height="80" rx="2" />
-        <path class="fig-line-soft" d="M600.5,122.0 H609.5" />
-        <rect class="fig-line" x="614.0" y="90.0" width="13" height="88" rx="2" />
-        <path class="fig-line-soft" d="M615.5,127.8 H625.5" />
-        <rect class="fig-line" x="630.0" y="104.0" width="14" height="74" rx="2" />
-        <path class="fig-line-soft" d="M631.5,129.9 H642.5" />
-        <path class="fig-line-soft" d="M631.5,152.8 H642.5" />
-        <rect class="fig-line" x="647.0" y="88.0" width="11" height="90" rx="2" />
-        <path class="fig-line-soft" d="M648.5,111.4 H656.5" />
-        <rect class="fig-line" x="661.0" y="94.0" width="13" height="84" rx="2" />
-        <path class="fig-line-soft" d="M662.5,126.8 H672.5" />
-      </g>
-      <path class="fig-line" d="M482.0,178.5 H680.0" />
-      <text class="fig-t" x="581.0" y="198" text-anchor="middle">Tragedies</text>
-      <text class="fig-s" x="581.0" y="212" text-anchor="middle">12 plays</text>
-
-      <text class="fig-h" x="724" y="20">READING NOW</text>
-      <rect class="fig-panel" x="724" y="30" width="166" height="190" rx="6" />
-      <g transform="translate(770,56)">
-        <rect class="fig-line" x="0" y="0" width="74" height="106" rx="7" />
-        <rect class="fig-line-soft" x="7" y="8" width="60" height="82" rx="2" />
-        <path class="fig-line-soft" d="M13,20 H61" />
-        <path class="fig-line-soft" d="M13,30 H65" />
-        <path class="fig-line-soft" d="M13,40 H57" />
-        <path class="fig-line-soft" d="M13,50 H65" />
-        <path class="fig-line-soft" d="M13,60 H51" />
-        <circle class="fig-line-soft" cx="37" cy="98" r="2.5" />
-      </g>
-      <text class="fig-t" x="807" y="198" text-anchor="middle">Kindle Paperwhite</text>
-      <text class="fig-s" x="807" y="212" text-anchor="middle">plain front-lit e-ink</text>
-    </svg>
-
-  </figure>
-
-  <p class="about-figure-hint">Scroll the shelf sideways →</p>
+{% include outside/shelf.liquid %}
 
   <p class="about-figure-caption">
     The three sections are the First Folio’s own: the 1623 collection sorts its
@@ -294,7 +187,7 @@ the fig-\* classes in \_sass/\_about.scss). Add a row or a shape, not a new layo
   </p>
 </section>
 
-<section class="about-section">
+<section class="about-section outside-section" id="road-trips">
   <h2 class="about-section-title">Road trips</h2>
 
   <p class="lst-desc">
@@ -364,6 +257,14 @@ the fig-\* classes in \_sass/\_about.scss). Add a row or a shape, not a new layo
 
   </figure>
 
+{% include outside/trips.liquid part="map" %}
+
+{%- comment -%}
+The static map is generated by bin/roadtrip-map.py. It stays as the no-JS
+(and no-Leaflet) fallback; outside.js hides it once the live map is up.
+{%- endcomment -%}
+
+  <div class="trip-map-fallback" data-trip-map-fallback>
   <figure class="about-figure">
     <svg viewBox="0 0 900 420" role="img" aria-labelledby="map-title map-desc">
       <title id="map-title">Four road trips out of Los Angeles</title>
@@ -462,6 +363,7 @@ the fig-\* classes in \_sass/\_about.scss). Add a row or a shape, not a new layo
   </figure>
 
   <p class="about-figure-hint">Scroll the map sideways →</p>
+  </div>
 
   <p class="about-figure-caption">
     The lines follow the roads we actually took, not great circles, so each one
@@ -469,69 +371,13 @@ the fig-\* classes in \_sass/\_about.scss). Add a row or a shape, not a new layo
     line simply doubles over itself. Every stop is listed below.
   </p>
 
-  <div class="about-rows">
+{% include outside/trips.liquid part="rows" %}
 
-    <div class="about-row">
-      <div class="about-row-date">2023</div>
-      <div class="about-row-val">
-        <div class="about-role"><strong>Los Angeles → Seattle</strong><span>Toyota RAV4</span></div>
-        Highway 1 and US-101 the whole way up, on the water for most of it — Big
-        Sur, Monterey, San Francisco, the Oregon headlands, and a coast town west
-        of Portland whose name I have lost. A few days in the national parks around
-        Seattle, then home the other side of the mountains: Portland, the falls
-        just east of it, and US-395 down through Reno and the eastern Sierra.
-        <p class="trip-stops">
-          Los Angeles → Monterey → San Francisco → a coast town west of Portland → Seattle → the national parks around it → Portland → the falls east of it → Reno → Los Angeles
-        </p>
-      </div>
-    </div>
+{% include outside/trips.liquid part="data" %}
 
-    <div class="about-row">
-      <div class="about-row-date">2024</div>
-      <div class="about-row-val">
-        <div class="about-role"><strong>Los Angeles → Texas</strong><span>Toyota RAV4</span></div>
-        Las Vegas and the red rock at Sedona on the way out, then I-10 east into
-        a circuit of the Texas cities with a day in each. Home along the New Mexico
-        line through Carlsbad and Las Cruces.
-        <p class="trip-stops">
-          Los Angeles → Las Vegas → Sedona → Tucson → El Paso → San Antonio → Austin → Houston → Dallas → Carlsbad → Las Cruces → Phoenix → Los Angeles
-        </p>
-      </div>
-    </div>
-
-    <div class="about-row">
-      <div class="about-row-date">2025</div>
-      <div class="about-row-val">
-        <div class="about-role"><strong>Los Angeles → Chicago</strong><span>Toyota RAV4</span></div>
-        Up US-395 to Mammoth Lakes, then across Nevada and Idaho to the Tetons and
-        the Black Hills, and east through Minneapolis into Chicago. Home the middle
-        way: Lincoln, Denver, over the Rockies, and out through the Utah desert at
-        Moab. The RAV4's last long one.
-        <p class="trip-stops">
-          Los Angeles → Mammoth Lakes → Winnemucca → Twin Falls → Grand Teton → Gillette → Rapid City → Minneapolis → Chicago → Lincoln → Denver → Moab → St. George → Los Angeles
-        </p>
-      </div>
-    </div>
-
-    <div class="about-row">
-      <div class="about-row-date">2026</div>
-      <div class="about-row-val">
-        <div class="about-role"><strong>Los Angeles → Boston</strong><span>Tesla Model 3</span></div>
-        The drive out to the SES AI internship: Phoenix, then straight across to
-        Pittsburgh and Boston. Two months there, with a run down to New York in the
-        middle, and home by Niagara Falls, St. Louis and New Mexico. FSD did most
-        of the driving; charging stops set the rhythm of the day in a way gas
-        stations never did.
-        <p class="trip-stops">
-          Los Angeles → Phoenix → Pittsburgh → Boston → New York and back, mid-stay → Niagara Falls → St. Louis → New Mexico → Phoenix → Los Angeles
-        </p>
-      </div>
-    </div>
-
-  </div>
 </section>
 
-<section class="about-section">
+<section class="about-section outside-section" id="places">
   <h2 class="about-section-title">Places</h2>
 
   <p class="lst-desc">
