@@ -2,7 +2,7 @@
 layout: about
 title: About
 permalink: /
-subtitle: Ph.D. Candidate, UCLA
+subtitle: Ph.D. Candidate, UCLA · Ph.D. expected December 2026
 tagline: >
   I build symmetry-aware neural networks for chemistry — E(3)-equivariant models
   over atoms and trajectories, steerable encoders over molecule images, language
