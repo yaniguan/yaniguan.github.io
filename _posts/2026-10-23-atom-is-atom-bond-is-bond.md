@@ -136,8 +136,10 @@ key. In my slide comic, the model cheerfully agrees to go label more real drawin
 adds, fairly, that even with high confidence "there is no ground truth. Is it reliable?" That
 question became VERDICT.
 
+<figure class="nf nf-wide"><img width="720" height="260" src="{{ '/assets/img/notes/icons/verdict.svg' | relative_url }}" alt="VERDICT: four readers vote"></figure>
+
 <div class="n-card" markdown="1">
-<p class="n-card-title"><img width="720" height="260" src="{{ '/assets/img/notes/icons/verdict.svg' | relative_url }}" alt="">VERDICT</p>
+<p class="n-card-title">VERDICT</p>
 Instead of trusting one model, VERDICT asks four: my fine-tuned VLM plus three open-source readers,
 DECIMER, MolScribe and MolNexTR, each built differently. It compares their answers by chemical
 identity (InChIKey), not raw strings, because two different SMILES strings can describe the same

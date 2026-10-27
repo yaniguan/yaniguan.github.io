@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 280" width="720" height="280">
 <title>Three heads, one latent space: recipe, snapshot and trajectory encoders aligned for properties and reverse design</title>
-<style>.w{fill:#fff;stroke:#23395b;stroke-width:2.5;stroke-linejoin:round}.p{fill:#dceef5;stroke:#23395b;stroke-width:2.5;stroke-linejoin:round}.g{fill:none;stroke:#23395b;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}.t{font-family:Helvetica,Arial,sans-serif;fill:#23395b;font-size:13px}.b{font-weight:700;font-size:14px}.s{font-size:10.5px}.m{text-anchor:middle}.v{stroke:#23395b;stroke-width:2;fill:#fff}</style>
+<style>.w{fill:#fff;stroke:#23395b;stroke-width:2.5;stroke-linejoin:round}.p{fill:#dceef5;stroke:#23395b;stroke-width:2.5;stroke-linejoin:round}.g{fill:none;stroke:#23395b;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}.t{font-family:Helvetica,Arial,sans-serif;fill:#23395b;font-size:13px}.b{font-weight:700;font-size:14px}.s{font-size:13px}.m{text-anchor:middle}.v{stroke:#23395b;stroke-width:2;fill:#fff}</style>
 <defs><marker id="hn" viewBox="0 0 10 10" refX="7.5" refY="5" markerWidth="10" markerHeight="10" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path d="M1.5 1.5L8 5L1.5 8.5" fill="none" stroke="#23395b" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></marker></defs>
 <rect width="720" height="280" fill="#fff"/>
 <ellipse cx="430" cy="140" rx="80" ry="104" fill="#dceef5" stroke="#23395b" stroke-width="2.5"/>
