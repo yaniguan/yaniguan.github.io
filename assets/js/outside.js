@@ -1,5 +1,5 @@
 // /outside/: the interactive layer -- numbers that count up, the sticky section
-// nav, photo filters and lightbox, the First Folio shelf, the Leaflet road-trip
+// nav, photo lightbox, the First Folio shelf, the Leaflet road-trip
 // map and a quiet scroll reveal. Each piece upgrades markup that already reads
 // fine without JavaScript, and quietly does nothing if its markup (or Leaflet)
 // is missing. Data for the map comes from the #outside-data JSON block, which
@@ -170,31 +170,9 @@
     targets.forEach((link, el) => io.observe(el));
   }
 
-  // -------------------------------------------------------- photos + lightbox
+  // -------------------------------------------------------------- lightbox
 
   function initPhotos() {
-    const filters = root.querySelector("[data-photo-filters]");
-    if (filters) {
-      const buttons = Array.from(filters.querySelectorAll("button[data-tag]"));
-      const tiles = Array.from(root.querySelectorAll(".photo-tile[data-tags]"));
-      const status = root.querySelector("[data-photo-status]");
-      filters.hidden = false;
-      buttons.forEach((btn) =>
-        btn.addEventListener("click", () => {
-          const tag = btn.dataset.tag;
-          pressOne(buttons, btn);
-          let shown = 0;
-          tiles.forEach((tile) => {
-            const tags = tile.dataset.tags ? tile.dataset.tags.split("|") : [];
-            const on = !tag || tags.indexOf(tag) !== -1;
-            tile.hidden = !on;
-            if (on) shown++;
-          });
-          if (status) status.textContent = shown + (shown === 1 ? " photo" : " photos") + (tag ? " tagged " + tag : "");
-        })
-      );
-    }
-
     const dialog = root.querySelector("[data-lightbox-dialog]");
     const links = Array.from(root.querySelectorAll("a[data-lightbox]"));
     if (!dialog || typeof dialog.showModal !== "function" || !links.length) return;

@@ -2,12 +2,11 @@
   Photos on /outside/, from _data/outside/photos.yml.
 
   part="hero":    the full-width photo that opens the page
-  part="gallery": the Photos section (every other photo, with tag filters
-                  once there is more than one tag) and the lightbox <dialog>
+  part="lightbox": the lightbox <dialog> the hero opens in
 
-  Without JavaScript each photo is a plain link to the full-size file. The
-  "Photos" chip in the section nav points at the gallery when there is one,
-  and at the hero when there is not.
+  Only the hero is shown; the rest of the photography lives on Flickr (linked
+  from the Cameras section). Without JavaScript the hero is a plain link to
+  the full-size file.
 {%- endcomment -%}
 {%- assign photos = site.data.outside.photos -%}
 {%- assign hero = null -%}
@@ -16,29 +15,9 @@
 {%- endfor -%}
 {%- if hero == null -%}{%- assign hero = photos | first -%}{%- endif -%}
 
-{%- assign gallery = '' | split: '' -%}
-{%- assign tags = '' | split: '' -%}
-{%- for p in photos -%}
-  {%- if p.src != hero.src -%}
-    {%- assign gallery = gallery | push: p -%}
-    {%- for t in p.tags -%}
-      {%- assign tags = tags | push: t -%}
-    {%- endfor -%}
-  {%- endif -%}
-{%- endfor -%}
-{%- assign tags = tags | uniq -%}
-
-{%- assign has_gallery = false -%}
-{%- if gallery.size > 0 or jekyll.environment == 'development' -%}{%- assign has_gallery = true -%}{%- endif -%}
-
 {% if include.part == 'hero' %}
   {% if hero %}
-    <div
-      class="outside-lead"
-      {% unless has_gallery %}
-        id="photos"
-      {% endunless %}
-    >
+    <div class="outside-lead" id="photos">
       <figure>
         <a class="photo-link" href="{{ hero.src | relative_url }}" data-lightbox data-caption="{{ hero.caption | escape }}">
           {% include outside/picture.liquid path=hero.src alt=hero.alt width=hero.width height=hero.height sizes="(min-width: 930px) 900px, 95vw" loading="eager" %}
@@ -53,43 +32,7 @@
       <p class="outside-placeholder">Placeholder — add a photo with hero: true in _data/outside/photos.yml</p>
     </div>
   {% endif %}
-{% elsif include.part == 'gallery' %}
-  {% if has_gallery %}
-    <section class="about-section outside-section" id="photos">
-      <h2 class="about-section-title">Photos</h2>
-
-      {% if tags.size > 1 %}
-        <div class="outside-chips" role="group" aria-label="Filter photos by tag" data-photo-filters hidden>
-          <button type="button" class="outside-chip" aria-pressed="true" data-tag="">All</button>
-          {% for t in tags %}
-            <button type="button" class="outside-chip" aria-pressed="false" data-tag="{{ t | escape }}">{{ t }}</button>
-          {% endfor %}
-        </div>
-        <p class="sr-only" aria-live="polite" data-photo-status></p>
-      {% endif %}
-
-      <ul class="photo-grid">
-        {% for p in gallery %}
-          <li class="photo-tile" data-tags="{{ p.tags | join: '|' | escape }}">
-            <figure>
-              <a class="photo-link" href="{{ p.src | relative_url }}" data-lightbox data-caption="{{ p.caption | escape }}">
-                {% include outside/picture.liquid path=p.src alt=p.alt width=p.width height=p.height sizes="(min-width: 768px) 300px, (min-width: 576px) 45vw, 95vw" %}
-              </a>
-              {% if p.caption %}
-                <figcaption class="photo-caption">{{ p.caption }}</figcaption>
-              {% endif %}
-            </figure>
-          </li>
-        {% endfor %}
-        {% if gallery.size == 0 and jekyll.environment == 'development' %}
-          <li class="photo-tile">
-            <p class="outside-placeholder">Placeholder — add photos in _data/outside/photos.yml</p>
-          </li>
-        {% endif %}
-      </ul>
-    </section>
-  {% endif %}
-
+{% elsif include.part == 'lightbox' %}
   <dialog class="lightbox" aria-label="Photo viewer" data-lightbox-dialog>
     <figure class="lightbox-figure">
       <img class="lightbox-img" src="data:," alt="">

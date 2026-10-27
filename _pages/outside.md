@@ -35,9 +35,6 @@ leaves its indentation alone.
 
 <nav class="outside-nav" aria-label="Sections on this page">
   <ul>
-    {% if site.data.outside.photos.size > 0 or jekyll.environment == "development" %}
-      <li><a href="#photos">Photos</a></li>
-    {% endif %}
     <li><a href="#cameras">Cameras</a></li>
     <li><a href="#reading">Reading</a></li>
     <li><a href="#road-trips">Road trips</a></li>
@@ -45,9 +42,7 @@ leaves its indentation alone.
   </ul>
 </nav>
 
-<div class="outside-gallery">
-  {% include outside/photos.liquid part="gallery" %}
-</div>
+{% include outside/photos.liquid part="lightbox" %}
 
 <section class="about-section outside-section" id="cameras">
   <h2 class="about-section-title">Cameras</h2>
@@ -56,7 +51,8 @@ leaves its indentation alone.
     Two Canon bodies, three fast EF zooms, and two DJI things for the frames a
     tripod cannot reach. Same instinct as the research, honestly: go look at the
     thing directly instead of reading someone else's summary of it. The footage
-    that moves goes up on <a href="https://www.youtube.com/channel/UCw0_ASuCQS4jrs21iHaBhoA">YouTube</a>.
+    that moves goes up on <a href="https://www.youtube.com/channel/UCw0_ASuCQS4jrs21iHaBhoA">YouTube</a>,
+    and the stills go on <a href="https://www.flickr.com/photos/205150673@N08/">Flickr</a>.
   </p>
 
   <figure class="about-figure">
