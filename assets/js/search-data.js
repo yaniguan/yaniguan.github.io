@@ -122,6 +122,9 @@ ninja.data = [{
           section: "News",},{id: "news-started-three-equivariant-network-projects-for-chemistry-wignerflow-ylm-and-ouroboros",
           title: 'Started three equivariant-network projects for chemistry: WignerFlow, YLM, and Ouroboros.',
           description: "",
+          section: "News",},{id: "news-will-graduate-from-ucla-with-a-ph-d-in-december-2026",
+          title: 'Will graduate from UCLA with a Ph.D. in December 2026.',
+          description: "",
           section: "News",},{
         id: 'social-email',
         title: 'email',
