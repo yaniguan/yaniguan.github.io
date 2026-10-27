@@ -30,7 +30,7 @@
 <rect class="q" x="406" y="83" width="170" height="34" rx="17"/>
 <rect class="q" x="406" y="133" width="170" height="34" rx="17"/>
 <rect class="q" x="406" y="183" width="170" height="34" rx="17"/>
-<g class="t b" style="font-size:12.5px"><text x="491" y="104.5">continued pretraining</text><text x="491" y="154.5">property post-training</text><text x="491" y="204.5">cross-view alignment</text></g>
+<g class="t b" style="font-size:13.5px"><text x="491" y="104.5">continued pretraining</text><text x="491" y="154.5">property post-training</text><text x="491" y="204.5">cross-view alignment</text></g>
 <rect x="614" y="112" width="92" height="76" rx="16" fill="#1fa3a3" stroke="#23395b" stroke-width="2.5"/>
 <text class="t b" x="660" y="146" style="fill:#fff;font-size:22px">5 × 3</text>
 <text class="t b" x="660" y="171" style="fill:#fff">= 15 runs</text>
