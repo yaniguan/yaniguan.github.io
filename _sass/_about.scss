@@ -678,6 +678,15 @@ html[data-theme="dark"] .about-page {
   margin: 2.6rem 0 0;
 }
 
+/* Placed right under the intro: a little more air and a slightly larger title. */
+.notes-card--lead {
+  margin: 0.4rem 0 2.8rem;
+
+  .notes-card-title {
+    font-size: 1.02rem;
+  }
+}
+
 .notes-card-link {
   display: flex;
   align-items: flex-start;

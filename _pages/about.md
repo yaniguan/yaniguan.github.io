@@ -28,6 +28,26 @@ latest_posts:
   enabled: false
 ---
 
+<aside class="notes-card notes-card--lead">
+  <a class="notes-card-link" href="{{ '/notes/' | relative_url }}">
+    <span class="notes-card-mark" aria-hidden="true">
+      <svg viewBox="0 0 24 24">
+        <path d="M5 19.2 L6.6 14.4 L16.4 4.6 a2 2 0 0 1 2.8 2.8 L9.4 17.2 Z" />
+        <path d="M14.2 6.8 L17 9.6" />
+        <path d="M5 19.2 L9.4 17.2" />
+      </svg>
+    </span>
+    <span class="notes-card-body">
+      <span class="notes-card-title">Notes</span>
+      <span class="notes-card-desc">
+        Short write-ups on LLM pretraining, post-training and alignment, vision–language
+        models, and what building VERDICT taught me about SFT, DPO and LoRA.
+      </span>
+    </span>
+    <span class="notes-card-cta">Read</span>
+  </a>
+</aside>
+
 <section class="about-section">
   <h2 class="about-section-title">Research</h2>
 
@@ -297,25 +317,6 @@ latest_posts:
 
   </div>
 
-  <aside class="notes-card">
-    <a class="notes-card-link" href="{{ '/notes/' | relative_url }}">
-      <span class="notes-card-mark" aria-hidden="true">
-        <svg viewBox="0 0 24 24">
-          <path d="M5 19.2 L6.6 14.4 L16.4 4.6 a2 2 0 0 1 2.8 2.8 L9.4 17.2 Z" />
-          <path d="M14.2 6.8 L17 9.6" />
-          <path d="M5 19.2 L9.4 17.2" />
-        </svg>
-      </span>
-      <span class="notes-card-body">
-        <span class="notes-card-title">Notes</span>
-        <span class="notes-card-desc">
-          Short write-ups on LLM pretraining, post-training and alignment, vision–language
-          models, and what building VERDICT taught me about SFT, DPO and LoRA.
-        </span>
-      </span>
-      <span class="notes-card-cta">Read</span>
-    </a>
-  </aside>
 </section>
 
 <section class="about-section">
