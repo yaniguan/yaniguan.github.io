@@ -300,6 +300,8 @@
       currentTrigger = trigger;
       currentNote = note;
       note.innerHTML = source.innerHTML;
+      // The note sits outside the book's own element, so carry its binding colour over.
+      note.style.setProperty('--book-color', window.getComputedStyle(trigger).getPropertyValue('--book-color'));
       note.id = panel.id + '-note';
       note.hidden = false;
       trigger.setAttribute('aria-describedby', note.id);
@@ -346,12 +348,13 @@
     if (window.ResizeObserver) new ResizeObserver(layoutMood).observe(room.querySelector('.reading-mood-plot'));
     window.addEventListener('resize', layoutMood);
 
+    // A group filter hides library cards and dims the books in every other view.
+    let activeGroup = '';
     const groupButtons = Array.from(room.querySelectorAll('[data-group]'));
     groupButtons.forEach((button) => button.addEventListener('click', () => {
+      activeGroup = button.dataset.group;
       pressOne(groupButtons, button);
-      room.querySelectorAll('.reading-library').forEach((card) => {
-        card.hidden = !!button.dataset.group && card.dataset.groupId !== button.dataset.group;
-      });
+      applyCluster();
       dismiss();
     }));
 
@@ -377,14 +380,21 @@
 
     function applyCluster() {
       bookNodes.forEach((node) => {
-        const match = !activeCluster || (node.dataset.clusters || '').split(' ').includes(activeCluster);
-        node.classList.toggle('is-dimmed', !match);
-        node.classList.toggle('is-connected', !!activeCluster && match);
+        const inCluster = !activeCluster || (node.dataset.clusters || '').split(' ').includes(activeCluster);
+        const inGroup = !activeGroup || node.dataset.groupId === activeGroup;
+        if (node.classList.contains('reading-library')) {
+          node.hidden = !inGroup;
+          node.classList.toggle('is-dimmed', !inCluster);
+        } else {
+          node.classList.toggle('is-dimmed', !(inCluster && inGroup));
+        }
+        node.classList.toggle('is-connected', !!activeCluster && inCluster && inGroup);
       });
       const shared = new Map();
       markers.forEach((marker, n) => {
         const b = reading.books.find((book) => book.n === n);
-        shared.set(marker, shared.get(marker) || !activeCluster || b.clusters.includes(activeCluster));
+        const match = (!activeCluster || b.clusters.includes(activeCluster)) && (!activeGroup || b.group === activeGroup);
+        shared.set(marker, shared.get(marker) || match);
       });
       shared.forEach((match, marker) => marker.setOpacity(match ? 1 : 0.25));
     }
@@ -446,7 +456,8 @@
             icon: L.divIcon({className: 'reading-pin', iconSize: [28, 32], iconAnchor: [14, 32],
               html: '<span style="--book-color:' + escapeHtml(group.color) + '">' + (books.length > 1 ? books.length : escapeHtml(first.symbol)) + '</span>'})
           }).addTo(atlas);
-          const popup = books.map((b) => '<strong>' + escapeHtml(b.title) + '</strong><span>' + escapeHtml(b.place.name) + '</span><p>' + escapeHtml(b.review) + '</p>').join('<hr>');
+          const popup = books.map((b) => '<strong>' + escapeHtml(b.title) + '</strong><span>' + escapeHtml(b.place.name) + '</span><p lang="zh">' + escapeHtml(b.review) + '</p>' +
+            (b.review_en ? '<p class="reading-map-popup-en" lang="en">' + escapeHtml(b.review_en) + '</p>' : '')).join('<hr>');
           marker.bindPopup('<div class="reading-map-popup">' + popup + '</div>', {maxHeight: 300});
           books.forEach((b) => markers.set(b.n, marker));
         });

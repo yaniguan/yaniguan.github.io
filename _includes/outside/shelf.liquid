@@ -2,10 +2,10 @@
 <div class="reading-room" data-reading>
   <div class="reading-heading"><span>私人藏书 / PERSONAL COLLECTION</span><span>{{ reading.books.size }} books · {{ reading.groups.size }} groups</span></div>
   <div class="reading-tabs" role="tablist" aria-label="书架视图 / Reading views" hidden>
-    <button type="button" role="tab" id="reading-tab-table" aria-controls="reading-table" aria-selected="true" tabindex="0">元素周期表 / Periodic table</button>
-    <button type="button" role="tab" id="reading-tab-mood" aria-controls="reading-mood" aria-selected="false" tabindex="-1">阅读坐标 / Mood map</button>
-    <button type="button" role="tab" id="reading-tab-world" aria-controls="reading-world" aria-selected="false" tabindex="-1">书带你去哪 / Book atlas</button>
-    <button type="button" role="tab" id="reading-tab-cards" aria-controls="reading-cards" aria-selected="false" tabindex="-1">借书卡 / Library cards</button>
+    <button type="button" role="tab" id="reading-tab-table" aria-controls="reading-table" aria-selected="true" tabindex="0"><span lang="zh">元素周期表</span> <span>Periodic table</span></button>
+    <button type="button" role="tab" id="reading-tab-mood" aria-controls="reading-mood" aria-selected="false" tabindex="-1"><span lang="zh">阅读坐标</span> <span>Mood map</span></button>
+    <button type="button" role="tab" id="reading-tab-world" aria-controls="reading-world" aria-selected="false" tabindex="-1"><span lang="zh">书带你去哪</span> <span>Book atlas</span></button>
+    <button type="button" role="tab" id="reading-tab-cards" aria-controls="reading-cards" aria-selected="false" tabindex="-1"><span lang="zh">借书卡</span> <span>Library cards</span></button>
   </div>
   <ul class="reading-legend" aria-label="分类 / Groups">
     <li><button type="button" data-group="" aria-pressed="true">全部 / All</button></li>
@@ -61,7 +61,7 @@
     <div class="reading-mood-y"><span>笑了 ↑<br>Made me laugh</span><span>哭了 ↓<br>Made me cry</span></div>
     <div class="reading-mood-scroll"><div class="reading-mood-plot">
       {% for book in reading.books %}{% assign group = reading.groups | where: 'id', book.group | first %}
-        <button type="button" class="reading-dot reading-book" data-book="{{ book.n }}" data-clusters="{{ book.clusters | join: ' ' }}" style="--book-color: {{ group.color }}; left: {{ book.map.x | times: 100 }}%; bottom: {{ book.map.y | times: 100 }}%" aria-label="{{ book.title | escape }} · {{ book.review | escape }}"><span class="reading-dot-label">{{ book.title }}</span></button>
+        <button type="button" class="reading-dot reading-book" data-book="{{ book.n }}" data-clusters="{{ book.clusters | join: ' ' }}" data-group-id="{{ book.group }}" data-shade="{{ book.shade }}" style="--book-color: {{ group.color }}; left: {{ book.map.x | times: 100 }}%; bottom: {{ book.map.y | times: 100 }}%" aria-label="{{ book.title | escape }} · {{ book.review | escape }}"><span class="reading-dot-label">{{ book.title }}</span></button>
       {% endfor %}
     </div></div>
     </div>
@@ -85,12 +85,12 @@
           {% elsif lon >= 95 and lat >= 0 %}{% assign book_region = 'East Asia' %}
           {% elsif lon >= -25 and lon < 60 and lat >= 35 %}{% assign book_region = 'Europe' %}
           {% elsif lon >= -25 and lon < 65 %}{% assign book_region = 'Middle East & Africa' %}{% endif %}
-          {% if book_region == region %}<li class="reading-book" data-clusters="{{ book.clusters | join: ' ' }}"><button type="button" disabled data-map-book="{{ book.n }}" title="{{ book.title | escape }} · {{ book.place.name | escape }}">{{ book.title }} · {{ book.place.name }}</button></li>{% endif %}
+          {% if book_region == region %}<li class="reading-book" data-clusters="{{ book.clusters | join: ' ' }}" data-group-id="{{ book.group }}"><button type="button" disabled data-map-book="{{ book.n }}" title="{{ book.title | escape }} · {{ book.place.name | escape }}">{{ book.title }} · {{ book.place.name }}</button></li>{% endif %}
         {% endif %}{% endfor %}
       </ul></section>{% endfor %}
     </div></details>
     <h4>无处不在，或在脑海里 / Everywhere, or inside your head</h4>
-    <ul class="reading-placeless">{% for book in reading.books %}{% unless book.place %}<li class="reading-book" data-clusters="{{ book.clusters | join: ' ' }}">{{ book.title }}</li>{% endunless %}{% endfor %}</ul>
+    <ul class="reading-placeless">{% for book in reading.books %}{% unless book.place %}<li class="reading-book" data-clusters="{{ book.clusters | join: ' ' }}" data-group-id="{{ book.group }}">{{ book.title }}</li>{% endunless %}{% endfor %}</ul>
   </section>
   <section id="reading-cards" class="reading-panel" role="tabpanel" aria-labelledby="reading-tab-cards" tabindex="0">
     <h3 class="reading-view-title">图书馆借书卡 / Return whenever</h3>
@@ -101,8 +101,8 @@
         <div class="reading-card-inner"><div class="reading-card-front">
           <div class="reading-card-top"><span>借书证 / READER’S CARD</span><span>{{ book.n | prepend: '00' | slice: -3, 3 }}</span></div>
           <span class="reading-cover" aria-hidden="true">{{ book.symbol }}</span><h4>{{ book.title }}</h4>{% if book.title_en %}<p class="reading-card-en">{{ book.title_en }}</p>{% endif %}<p class="reading-card-author">{{ book.author }}</p>
-          <p class="reading-card-review" lang="zh">{{ book.review }}</p><span class="reading-due">归还期限 / DUE<br>随时 / WHENEVER</span><span class="reading-card-group">{{ group.label }}{% if book.tag %} · {{ book.tag }}{% endif %}</span>
-        </div><div class="reading-card-back"><span>题外话 / IN THE MARGINS</span><h4>{{ book.title }}</h4>{% for line in book.unexpected %}<p lang="zh">{{ line }}</p>{% endfor %}<span class="reading-back-symbol" aria-hidden="true">{{ book.symbol }}</span></div></div>
+          <p class="reading-card-review" lang="zh">{{ book.review }}</p>{% if book.review_en %}<p class="reading-card-review-en" lang="en">{{ book.review_en }}</p>{% endif %}<span class="reading-due">归还期限 / DUE<br>随时 / WHENEVER</span><span class="reading-card-group">{{ group.label }}{% if book.tag %} · {{ book.tag }}{% endif %}</span>
+        </div><div class="reading-card-back"><span>题外话 / IN THE MARGINS</span><h4>{{ book.title }}</h4>{% for line in book.unexpected %}{% assign i = forloop.index0 %}<p><span lang="zh">{{ line }}</span>{% if book.unexpected_en[i] %}<span class="reading-margin-en" lang="en">{{ book.unexpected_en[i] }}</span>{% endif %}</p>{% endfor %}<span class="reading-back-symbol" aria-hidden="true">{{ book.symbol }}</span></div></div>
       </article>
     {% endfor %}</div>
   </section>

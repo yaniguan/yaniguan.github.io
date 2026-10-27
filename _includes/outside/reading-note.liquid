@@ -2,6 +2,7 @@
 <strong class="reading-note-title">{{ b.title }}</strong>
 {% if b.title_en %}<span class="reading-note-en">{{ b.title_en }}</span>{% endif %}
 <span class="reading-note-author">{{ b.author }}{% if b.tag %} · {{ b.tag }}{% endif %}</span>
-<p lang="zh">{{ b.review }}</p>
-<div class="reading-margins" lang="zh">{% for line in b.unexpected %}<p>{{ line }}</p>{% endfor %}</div>
+<p class="reading-note-review" lang="zh">{{ b.review }}</p>
+{% if b.review_en %}<p class="reading-note-review-en" lang="en">{{ b.review_en }}</p>{% endif %}
+<div class="reading-margins"><span class="reading-margins-label">题外话 / In the margins</span>{% for line in b.unexpected %}{% assign i = forloop.index0 %}<p><span lang="zh">{{ line }}</span>{% if b.unexpected_en[i] %}<span class="reading-margin-en" lang="en">{{ b.unexpected_en[i] }}</span>{% endif %}</p>{% endfor %}</div>
 {% if b.pages %}<a class="reading-page-source" href="{{ b.pages_source }}" target="_blank" rel="noopener">{{ b.pages }} 页 / pages · 来源 / source ↗</a>{% endif %}

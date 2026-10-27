@@ -55,10 +55,14 @@ books:
   title: 夏帆
   author: 村上春树
   group: murakami
-  review: 村上这次把话筒交给夏帆，我把耳朵借过去。
+  review: 相亲桌上被当面说丑，夏帆还能慢慢想，我已经想掀桌了。
+  review_en: "A first date tells Kaho she’s ugly to her face. She takes her time with it. I wanted to flip the table."
   unexpected:
-  - 画绘本的夏帆，让我想替大人补堂礼貌课。
-  - 初次见面就刻薄的人，真该退回练习本。
+  - 她画绘本给孩子看，那张桌上最需要一本的却是个大人。
+  - 刻薄话说出口只要一秒，她用了一整篇来回收。
+  unexpected_en:
+  - "She makes picture books for children. The one at that table who needed one was a grown man."
+  - "The insult took him a second. She spent a whole story taking it back."
   title_en: The Tale of KAHO
   map:
     x: 0.824
@@ -70,10 +74,14 @@ books:
   title: 小城与不确定性的墙
   author: 村上春树
   group: murakami
-  review: 城墙连不确定性都收进去，倒比我宽容。
+  review: 墙里的图书馆只收旧梦，这份工作我有点想投简历。
+  review_en: "A library inside the wall that only shelves old dreams. I would apply for that job."
   unexpected:
-  - 这堵墙让我想到密码忘了的旧邮箱。
-  - 进不去的地方，竟最会占脑内存。
+  - 影子在门口被剪下来留在外面，我第一个念头是它冬天冷不冷。
+  - 四十年后把同一个故事重写一遍，村上比我改论文还执着。
+  unexpected_en:
+  - "They cut off your shadow at the gate. My first thought was whether it had a coat."
+  - "Forty years to rewrite one novella. And I complain about a third round of revisions."
   place:
     name: 东京 Tokyo
     lat: 35.6762
@@ -88,10 +96,14 @@ books:
   title: 当我谈跑步时，我谈些什么
   author: 村上春树
   group: murakami
-  review: 读跑步的书很积极，穿跑鞋这一步还得商量。
+  review: 他每天跑十公里，我每天盯着MD跑十纳秒。都算跑步，出汗的只有他。
+  review_en: "He runs ten kilometres a day. I watch an MD job run ten nanoseconds. Only one of us sweats."
   unexpected:
-  - 他跑马拉松，我的MD跑到第三天。
-  - 都在跑，只有我的椅子没挪窝。
+  - 他说痛不可避免，受苦可以选。我选了买双新跑鞋，然后放在门口。
+  - 写长篇和跑马拉松一样，难在第三十公里。我的论文正好跑到那儿。
+  unexpected_en:
+  - "Pain is inevitable, suffering optional, he says. I opted for new running shoes and left them by the door."
+  - "A novel, like a marathon, gets hard around kilometre thirty. That is where my thesis lives now."
   title_en: What I Talk About When I Talk About Running
   map:
     x: 0.89
@@ -103,10 +115,14 @@ books:
   title: 斯普特尼克恋人
   author: 村上春树（林少华译）
   group: murakami
-  review: 同一个故事买两遍，理由是耳朵想听两种中文。
+  review: 林少华译得浓，每句话都多放了半勺糖。我喝得下。
+  review_en: "Lin Shaohua’s translation runs rich, half a spoon of sugar in every line. I take it sweet."
   unexpected:
-  - 林少华这颗卫星，先绕过我的舌头。
-  - 同一句换个口音，心跳竟有时差。
+  - 堇在希腊小岛上消失了，像一颗再也没给地面站回信的卫星。
+  - 读到敏一夜白头那段，我合上书去照了一下镜子。
+  unexpected_en:
+  - "Sumire vanishes on a Greek island, a satellite that never calls back to base."
+  - "After Miu’s hair turns white in a single night, I put the book down and checked a mirror."
   title_en: Sputnik Sweetheart
   place:
     name: 东京 Tokyo
@@ -123,10 +139,14 @@ books:
   title: 人造卫星情人
   author: 村上春树（赖明珠译）
   group: murakami
-  review: 换一种译法重逢，连停顿都值得多坐一会儿。
+  review: 赖明珠的版本更素，糖放少了，句子之间的空白反而更响。
+  review_en: "Lai Ming-chu’s version is plainer. Less sugar, so the gaps between sentences ring louder."
   unexpected:
-  - 赖明珠换了站台，我还带着同一张票。
-  - 两本摊开，像听同一首歌的双声道。
+  - 第二遍早知道结局，停下来的地方却全换了。
+  - 一本叫恋人，一本叫情人，差的那一个字，值第二本的书钱。
+  unexpected_en:
+  - "The second time I knew the ending and still stopped in different places."
+  - "One edition says 恋人, the other 情人. That single character paid for the second copy."
   title_en: Sputnik Sweetheart
   place:
     name: 东京 Tokyo
@@ -143,10 +163,14 @@ books:
   title: 隐蔽嫌疑人
   author: 陈浩基
   group: mystery
-  review: 陈浩基写城市里的孤独，我的猜疑先靠边坐。
+  review: 香港的楼一层叠一层挤得那么紧，陈浩基还是能在中间藏一个没人看见的人。
+  review_en: "Hong Kong stacks people floor on floor, and Chan Ho-kei still finds room to hide someone nobody sees."
   unexpected:
-  - 读完想问问隔壁：今天饭吃了吗？
-  - 门挨得近，问声好却像要跨条河。
+  - 读完路过邻居门口，多看了一眼门缝下有没有灯光。
+  - 推理小说里最难查的线索，常常是谁也没在意过谁。
+  unexpected_en:
+  - "Afterwards I glanced at the gap under my neighbour’s door, checking for light."
+  - "The hardest clue in a mystery is often that nobody was paying attention to anybody."
   place:
     name: 香港 Hong Kong
     lat: 22.3193
@@ -160,10 +184,14 @@ books:
   title: 白夜行
   author: 东野圭吾
   group: mystery
-  review: 翻页很快，缓过来很慢；今晚先把灯留着。
+  review: 亮司和雪穗十九年没有一场对手戏，东野让我自己把线连上。连完就后悔了。
+  review_en: "Ryoji and Yukiho never share a scene in nineteen years. Higashino lets you draw the line between them yourself. You will wish you hadn’t."
   unexpected:
-  - 白夜这两个字，像忘关的走廊灯。
-  - 看完给台灯续了班，电费我认。
+  - 雪穗说她的人生里没有太阳。那晚我开着灯睡，灯也没睡好。
+  - 亮司剪纸剪得那么细，之后我看家里的剪刀都有点心虚。
+  unexpected_en:
+  - "Yukiho says her life never had a sun. I slept with the lamp on, and the lamp didn’t sleep well either."
+  - "Ryoji cuts paper silhouettes so finely that I now look at our scissors with suspicion."
   place:
     name: 大阪 Osaka
     lat: 34.6937
@@ -178,10 +206,14 @@ books:
   title: 恶意
   author: 东野圭吾
   group: mystery
-  review: 我的自信推理，保质期通常不超过下一章。
+  review: 凶手开头就认了，剩下的书都在问为什么。这比问是谁难受多了。
+  review_en: "The killer confesses early. The rest of the book asks why, which turns out to be far worse than who."
   unexpected:
-  - 书名像辣椒，两个字就呛得我喝水。
-  - 我的侦探笔记，橡皮比铅笔先退休。
+  - 全书靠手记和笔录往前走，从此我不太信写得太整齐的笔记。
+  - 我的实验记录本要是落到加贺手里，大概也会被追问动机。
+  unexpected_en:
+  - "It moves forward through notes and statements. I now distrust any notebook that looks too tidy."
+  - "If Detective Kaga read my lab notebook, he would want a motive too."
   map:
     x: 0.712
     "y": 0.59
@@ -192,10 +224,14 @@ books:
   title: 地雷格力高
   author: 青崎有吾
   group: mystery
-  review: 规则刚看懂，我的胜负欲已经坐到前排。
+  review: 石头剪刀布爬台阶，再埋几颗地雷，就成了心理战。童年游戏原来只缺一个规则律师。
+  review_en: "Rock-paper-scissors up a staircase, plus landmines. Childhood games were only ever missing a rules lawyer."
   unexpected:
-  - 小时候的游戏，长大后竟要草稿纸。
-  - 想跟伴侣比一轮，又怕输掉洗碗豁免。
+  - 读完想跟伴侣来一局，又想起赌注会是一个月的碗。
+  - 这群高中生读对手的速度，比我调参快多了。
+  unexpected_en:
+  - "I wanted a round with my partner, then remembered the stakes would be a month of dishes."
+  - "These high schoolers read an opponent faster than I tune hyperparameters."
   map:
     x: 0.866
     "y": 0.25
@@ -205,10 +241,14 @@ books:
   title: 翠鸟谋杀案
   author: 安东尼·霍洛维茨
   group: mystery
-  review: 书中还有一本书，我的侦探席得买联票。
+  review: 苏珊又在编一部藏着凶案的书稿。书里有书，一张票破两个案。
+  review_en: "Susan Ryeland is editing another manuscript with a murder inside. A book within a book, two cases for one ticket."
   unexpected:
-  - 故事套着故事，像饭盒盖子总开不完。
-  - 书签想兼职侦探，先得学会换楼层。
+  - 在霍洛维茨笔下，编辑是高危职业。之后我给别人改稿都下手轻了。
+  - 读到一半回头翻线索，像拿错钥匙在两层楼之间来回跑。
+  unexpected_en:
+  - "In Horowitz’s world, editing is a high-risk job. I have been gentler with track changes since."
+  - "Halfway in I was running between the two stories like someone with the wrong key, stuck between floors."
   title_en: Marble Hall Murders
   map:
     x: 0.778
@@ -219,10 +259,14 @@ books:
   title: 漫长的告别
   author: Raymond Chandler
   group: mystery
-  review: 马洛在洛杉矶走，我在熟悉的地名旁愣神。
+  review: 道别就是死去一点点。马洛说得这么酷，我每次挥手还是拖很久。
+  review_en: "“To say goodbye is to die a little.” Marlowe makes it sound cool. I still wave far too long."
   unexpected:
-  - 四次往返洛城，没学会马洛那种告别。
-  - 村上替他换中文，洛城却没换时区。
+  - 村上把它译成日文，又承认自己是从这里学的写小说。偷师偷得光明正大。
+  - 读完想来一杯琴蕾，冰箱里只有青柠味气泡水。
+  unexpected_en:
+  - "Murakami translated it into Japanese and admits this is where he learned to write. Theft, openly declared."
+  - "Afterwards I wanted a gimlet. The fridge offered lime seltzer."
   title_en: The Long Goodbye
   place:
     name: 洛杉矶 Los Angeles
@@ -238,10 +282,14 @@ books:
   title: 奉命谋杀
   author: Agatha Christie
   group: mystery
-  review: 旧案重新敲门，阿加莎连安生觉也不给我。
+  review: 证明死去的儿子无罪，全家反而更不安。阿加莎最会送这种好消息。
+  review_en: "Proving the dead son innocent leaves his family more frightened than before. Christie’s idea of good news."
   unexpected:
-  - 旧案像衣兜里的旧收据，抹不平。
-  - 读完想给抽屉立规矩：别替往事保管。
+  - 有人上门送来不在场证明，开门的人脸都白了。头一回见到没人想要的清白。
+  - 一家人围桌吃饭，每个人都在算空出来的嫌疑该怎么分。
+  unexpected_en:
+  - "A stranger knocks to deliver an alibi, and every face at the door goes white. Innocence nobody ordered."
+  - "Dinner with the family: everyone working out how to divide the suspicion that has just come free."
   title_en: Ordeal by Innocence
   map:
     x: 0.844
@@ -253,10 +301,14 @@ books:
   title: 东方快车谋杀案
   author: Agatha Christie
   group: mystery
-  review: 雪把车拦住了，倒没拦住我翻页。
+  review: 十二刀，十二个乘客，一列被雪卡住的火车。波洛最后的决定，我跟他争得比猜凶手还久。
+  review_en: "Twelve wounds, twelve passengers, one train stuck in a snowdrift. I argued with Poirot’s last decision longer than I puzzled over the solution."
   unexpected:
-  - 雪一堵车，时刻表就成了装饰画。
-  - 自驾还有狗催停车，波洛这趟更难。
+  - 雪一堵上，列车时刻表就只是装饰画了。
+  - 横穿美国自驾四次，最怕的是封路。阿加莎写出了更糟的版本。
+  unexpected_en:
+  - "Once the snow comes down, the timetable is just decoration."
+  - "Four drives across the US taught me to fear a closed road. Christie found a worse version."
   title_en: Murder on the Orient Express
   place:
     name: 南斯拉夫境内的列车 / near Vinkovci
@@ -272,10 +324,14 @@ books:
   title: 放学后
   author: 东野圭吾
   group: mystery
-  review: 本来想读一章就放学，结果又给自己加了课。
+  review: 老师察觉学校里有人想要他的命，第二天照样去上课。东野的出道作就很懂打工人。
+  review_en: "A teacher realises someone at his school wants him dead and still turns up to teach. Higashino’s debut already understood having a job."
   unexpected:
-  - 校园一进推理书，下课铃就不管用了。
-  - 毕业这么久，读它又怕走廊的脚步声。
+  - 射箭部的弓一出场，我就知道这不只是社团活动。
+  - 毕业这么多年，读它还是怕走廊尽头的脚步声。
+  unexpected_en:
+  - "The moment the archery club appears, you know this isn’t about extracurriculars."
+  - "Years out of school, and footsteps at the end of a corridor still get me."
   map:
     x: 0.91
     "y": 0.318
@@ -286,10 +342,14 @@ books:
   title: 莫斯科有高楼
   author: 凯瑟琳·祖博维奇
   group: architecture
-  review: 高楼负责抢眼，书让我看见楼底下的人。
+  review: 七姐妹高楼拍出来很好看，祖博维奇去找的是为它们腾地方被搬走的街坊。
+  review_en: "The Seven Sisters photograph beautifully. Zubovich goes looking for the neighbourhoods that were moved out to make room."
   unexpected:
-  - 拍莫斯科高楼，R5装不下楼下的日子。
-  - 仰拍太久，差点把搬家的人裁掉。
+  - 苏维埃宫最后没盖起来，原址成了露天泳池。烂尾也可以很有想象力。
+  - 仰拍高楼拍得太久，就会把楼下搬家的人裁出画面。
+  unexpected_en:
+  - "The Palace of Soviets was never built, and the site became a swimming pool. Some unfinished projects have flair."
+  - "Shoot a tower from below for long enough and you crop out the people moving house."
   title_en: Moscow Monumental
   place:
     name: 莫斯科 Moscow
@@ -304,10 +364,14 @@ books:
   title: 上海房子
   author: 席闻雷、冯立
   group: architecture
-  review: 看房子看得很开心，幸好这次不需要交房租。
+  review: 石库门、新式里弄、花园洋房，一页页看过去，不交房租，也不用摇号。
+  review_en: "Shikumen, lane houses, garden villas. All the viewings, no rent, no lottery."
   unexpected:
-  - 门窗比房产广告诚实，肯露出旧脾气。
-  - 看完觉得晾衣杆也配进建筑照片。
+  - 老房子的门窗比售楼广告诚实，旧脾气都摆在明面上。
+  - 看完觉得弄堂里的晾衣杆也该进建筑摄影。
+  unexpected_en:
+  - "Old window frames are more honest than any listing. The temper is right there."
+  - "I now think the laundry poles belong in architectural photography."
   title_en: The Houses of Shanghai
   place:
     name: 上海 Shanghai
@@ -323,10 +387,14 @@ books:
   title: 穿墙透壁：剖视中国经典古建筑
   author: 李乾朗
   group: architecture
-  review: 终于能穿墙看一眼，还不用担心相机磕到门框。
+  review: 李乾朗把古建筑一刀剖开，梁柱斗拱全摊在纸上。比隔着围栏伸脖子看强多了。
+  review_en: "Li Chien-lang slices classic buildings open so the beams and brackets lie flat on the page. Better than craning over a rope."
   unexpected:
-  - 剖开屋顶，像看见房子的肋骨。
-  - 做旋转对称看惯了，斗拱偏要我抬头。
+  - 屋顶一剖开，像看见了房子的肋骨。
+  - 画了几年分子结构，看到斗拱还是下意识去找它的对称轴。
+  unexpected_en:
+  - "Cut open, a roof looks like a ribcage."
+  - "Years of drawing molecules, and I still went looking for the symmetry axis in a bracket set."
   map:
     x: 0.448
     "y": 0.904
@@ -336,10 +404,14 @@ books:
   title: 贝聿铭全集
   author: Philip Jodidio、Janet Adams Strong（主编）
   group: architecture
-  review: 看完先不谈懂建筑，只想把直线拍得更端正。
+  review: 卢浮宫的玻璃金字塔当年挨了不少骂，现在人人排队在它旁边拍照。
+  review_en: "Paris hated the Louvre pyramid at first. Now everyone queues to photograph it."
   unexpected:
-  - 玻璃三角一出场，我的水平线露馅了。
-  - 贝聿铭管光，我先管住歪着的相机。
+  - 他的楼让光来做设计，我还在跟歪掉的水平线较劲。
+  - 翻完全集，最想去的是苏州博物馆。它看起来最不着急。
+  unexpected_en:
+  - "His buildings let the light do the design. I am still fighting a crooked horizon."
+  - "After the whole volume, the one I most want to visit is the Suzhou Museum. It looks the least in a hurry."
   title_en: I.M. Pei
   map:
     x: 0.36
@@ -350,10 +422,14 @@ books:
   title: 建筑史诗第二卷·营造天书
   author: 王南
   group: architecture
-  review: 梁思成读懂天书，我终于敢多看两眼斗拱。
+  review: 《营造法式》被叫作天书，梁思成花了半辈子读懂它，我花一个周末读他怎么读的。
+  review_en: "The Yingzao Fashi was called unreadable. Liang Sicheng spent decades cracking it; I spent a weekend reading how he did."
   unexpected:
-  - 宋人的木头说明书，让我想起装书柜。
-  - 有些零件不认识，真不能靠剩下来猜。
+  - 宋代的木作说明书，比我装过的任何一个书柜说明书都讲道理。
+  - 古人盖房子讲模数，我写代码连变量名都统一不了。
+  unexpected_en:
+  - "A Song dynasty carpentry manual makes more sense than any flat-pack instructions I have owned."
+  - "They built to a modular unit. I can’t keep my variable names consistent."
   map:
     x: 0.272
     "y": 0.666
@@ -363,10 +439,14 @@ books:
   title: 看不见的中东
   author: 姚璐
   group: travel
-  review: 把地图放大一点，也把自己的想当然缩小一点。
+  review: 新闻里只剩冲突的地方，姚璐写的是那里的人怎么过日子。我脑子里的地图被改了好几处。
+  review_en: "In the news it is only conflict. Yao Lu writes about how people there get through the day. My mental map needed several corrections."
   unexpected:
-  - 新闻里的地名，原来也有人嫌饭凉。
-  - 我那张中东地图，缺的不是比例尺。
+  - 只在快讯里见过的地名，原来也有人在嫌饭凉了。
+  - 我那张中东地图，缺的从来不是比例尺，是人。
+  unexpected_en:
+  - "Places I knew only from breaking news turn out to have people complaining that dinner has gone cold."
+  - "My map of the region was never missing a scale bar. It was missing people."
   place:
     name: 中东 Middle East · regional pin
     lat: 31.5
@@ -380,10 +460,14 @@ books:
   title: 凝神时刻
   author: 邓安庆
   group: travel
-  review: 带着小说走城市，路过也像登门拜访。
+  review: 邓安庆带着小说去作家住过的城市，路过一扇门也像登门拜访。
+  review_en: "Deng Anqing carries novels to the cities their writers lived in. Walking past a door becomes a house call."
   unexpected:
-  - 作家的旧住处，让门牌像书页码。
-  - 下次旅行想带本旧书，少带件外套。
+  - 站在作家的旧住处门口，门牌号读起来像页码。
+  - 下次出门多带一本旧书，少带一件外套。反正外套最后也没穿。
+  unexpected_en:
+  - "Outside a writer’s old address, the house number starts to read like a page number."
+  - "Next trip: one more paperback, one fewer jacket. I never wear the jacket anyway."
   map:
     x: 0.478
     "y": 0.77
@@ -393,10 +477,14 @@ books:
   title: 活水
   author: Robert Macfarlane
   group: travel
-  review: 以后拍河，想在快门之外多留一点时间。
+  review: 麦克法伦认真地问河是不是活的。读到一半，我已经不好意思管它叫“水体”了。
+  review_en: "Macfarlane seriously asks whether a river is alive. Halfway through, I couldn’t bring myself to call it a ‘water body’."
   unexpected:
-  - 河若算邻居，倒脏水就像往人家泼。
-  - 照片冻住河水，我得记得它还在赶路。
+  - 河要是能当原告，往里倒脏水就成了上门打人。
+  - 快门把河水冻住了，河自己还在赶路。
+  unexpected_en:
+  - "If a river can be a plaintiff, dumping waste in it becomes assault."
+  - "A fast shutter freezes the water. The river keeps going anyway."
   title_en: Is a River Alive?
   place:
     name: 阿迪亚河 Adyar River · India
@@ -411,10 +499,14 @@ books:
   title: 陌生的阿富汗
   author: 班卓
   group: travel
-  review: 读之前先承认陌生，比急着发表意见舒服。
+  review: 先承认自己对阿富汗一无所知再翻开班卓，比带着结论去舒服得多。
+  review_en: "Admitting I knew nothing about Afghanistan before opening Ban Zhuo felt better than arriving with opinions."
   unexpected:
-  - 阿富汗不只在新闻里，也有人过周二。
-  - 我脑内那张灰地图，得添些饭菜颜色。
+  - 阿富汗不只是新闻标题，那里的人也要过周二。
+  - 我脑子里那张灰色地图，被添上了馕和茶的颜色。
+  unexpected_en:
+  - "Afghanistan isn’t only a headline. People there have Tuesdays too."
+  - "The grey map in my head picked up the colours of bread and tea."
   place:
     name: 阿富汗 Afghanistan · regional pin
     lat: 34.5553
@@ -428,10 +520,14 @@ books:
   title: 燃烧的龙舌兰
   author: 班卓
   group: travel
-  review: 先跟着书去墨西哥，行李额度这次很宽裕。
+  review: 跟着班卓走了一趟墨西哥，行李不限重，边境也不用排队。
+  review_en: "A trip through Mexico with Ban Zhuo. No baggage limit, no queue at the border."
   unexpected:
-  - 墨西哥一热闹，仙人掌都像在插话。
-  - 四趟洛城往返后，我想换条路认辣椒。
+  - 在洛杉矶吃了这么多年墨西哥菜，这本书说我只走到了门口。
+  - 龙舌兰要长好多年才能收一次，我对自己的慢进度宽容了一点。
+  unexpected_en:
+  - "Years of Mexican food in Los Angeles, and this book says I only made it as far as the door."
+  - "An agave grows for years before a single harvest. I went easier on my own slow progress."
   place:
     name: 墨西哥 Mexico · regional pin
     lat: 19.4326
@@ -445,10 +541,14 @@ books:
   title: 盖特伍德奶奶去徒步
   author: Ben Montgomery
   group: travel
-  review: 她六十七岁穿帆布鞋上路，我的借口先坐下了。
+  review: 六十七岁，一双帆布鞋，一个自己缝的布袋，走完阿巴拉契亚步道。我的冲锋衣有点脸红。
+  review_en: "Sixty-seven, canvas sneakers, a homemade sack, the whole Appalachian Trail. My technical jacket felt overdressed."
   unexpected:
-  - 六十七岁，一双帆布鞋，装备党失语。
-  - 狗说它也能走全程，条件是沿途有肉。
+  - 她出门前只跟孩子们说去走走，这一走就是三千多公里。
+  - 我们家狗表示它也能走全程，前提是沿途有肉。
+  unexpected_en:
+  - "She told her children she was going for a walk. The walk was about two thousand miles."
+  - "Our dog volunteers for the full trail, on the condition that there is meat along the way."
   title_en: Grandma Gatewood’s Walk
   place:
     name: 阿巴拉契亚步道 Appalachian Trail · one point
@@ -463,10 +563,14 @@ books:
   title: 另一个国度
   author: 杨潇
   group: travel
-  review: 跟着杨潇走德国，地图里的整齐先松了扣子。
+  review: 跟着杨潇走德国，地图上那种整齐，一到街上就松了扣子。
+  review_en: "Walking Germany with Yang Xiao, the tidiness on the map comes undone at street level."
   unexpected:
-  - 国境线画得直，人的日子偏偏拐弯。
-  - 读完想问路人，少问导航。
+  - 国境线画得笔直，人的日子偏偏老拐弯。
+  - 想问路就问路人吧，导航不知道哪家面包好吃。
+  unexpected_en:
+  - "Borders are drawn straight. Lives keep turning corners."
+  - "Ask a passer-by, not the GPS. The GPS doesn’t know which bakery is good."
   place:
     name: 德国 Germany · regional pin
     lat: 51
@@ -480,10 +584,14 @@ books:
   title: 世界是用来玩的
   author: 猴面包的树
   group: travel
-  review: 标题先替我批了假，日历还在审批。
+  review: 书名先替我批了假，我的日历还在走审批流程。
+  review_en: "The title approved my leave. My calendar is still routing it for signatures."
   unexpected:
-  - 世界若是游乐场，我老在研究储物柜。
-  - 伴侣和狗都上车了，我还在改行程表。
+  - 世界要真是游乐场，我大概是那个一直在研究储物柜的人。
+  - 伴侣和狗都上车了，我还在改第七版行程表。
+  unexpected_en:
+  - "If the world is a playground, I’m the one still reading the locker instructions."
+  - "Partner and dog already in the car; me on itinerary version seven."
   map:
     x: 0.434
     "y": 0.498
@@ -493,10 +601,14 @@ books:
   title: 徐霞客游记：名山插图珍藏版
   author: 徐霞客
   group: travel
-  review: 看山看得很投入，今天的爬升暂时由眼睛完成。
+  review: 徐霞客爬了三十多年山，我今天的爬升量全靠眼睛完成。
+  review_en: "Xu Xiake spent some thirty years climbing. Today my elevation gain was done entirely by eye."
   unexpected:
-  - 徐霞客记山路，比我的游记更像路书。
-  - 没信号也能出门，古人治好了电量焦虑。
+  - 他的游记比我的自驾路书还清楚，哪里有岔路、哪里能借宿都记着。
+  - 没有信号照样出门，古人好像天生没有电量焦虑。
+  unexpected_en:
+  - "His notes are clearer than my road-trip route sheets: every fork, every place to sleep."
+  - "No signal, no problem. Battery anxiety is apparently a modern invention."
   place:
     name: 黄山 Huangshan
     lat: 30.134
@@ -510,10 +622,14 @@ books:
   title: 克拉克森的农场
   author: Jeremy Clarkson
   group: travel
-  review: 科茨沃尔德的田不听指挥，笑得我很服气。
+  review: 克拉克森买了台兰博基尼拖拉机，地里的庄稼一点面子都没给。
+  review_en: "Clarkson buys a Lamborghini tractor. The crops are not impressed."
   unexpected:
-  - 拖拉机再大，也不能替种子催进度。
-  - 实验跑慢了，想想他还得看老天排队。
+  - 拖拉机再大也催不动种子。我的模拟跑得慢时，就想想他还得等天。
+  - 卡莱布每开一次口，都是在给伦敦人上补习课。
+  unexpected_en:
+  - "No tractor can rush a seed. When my simulations crawl, I remember he is waiting on the weather."
+  - "Every time Kaleb speaks, a Londoner gets a remedial lesson."
   title_en: Diddly Squat
   place:
     name: 科茨沃尔德 Cotswolds
@@ -528,10 +644,14 @@ books:
   title: 长书当诉
   author: Diana Athill
   group: travel
-  review: 阿西尔把旧事写成长信，我舍不得只回一句收到。
+  review: 未婚夫不再来信，阿西尔隔了二十年，用一整本书代替了那封回信。
+  review_en: "Her fiancé simply stopped writing. Twenty years later Athill answered with a whole book."
   unexpected:
-  - 长信像炖汤，急着揭盖只会烫到手。
-  - 电子邮件有撤回键，想念倒没有。
+  - 等不来的那封信，最后长成了一本书。这是我见过最体面的最后一句话。
+  - 邮件有撤回键，想念没有。
+  unexpected_en:
+  - "The letter that never came grew into a memoir. The most elegant last word I know."
+  - "Email has an unsend button. Missing someone doesn’t."
   title_en: Instead of a Letter
   map:
     x: 0.412
@@ -542,10 +662,14 @@ books:
   title: 夏季走过山间
   author: John Muir
   group: travel
-  review: 缪尔去放羊，顺手把我的眼睛带上了山。
+  review: 缪尔名义上是去放羊，其实给自己找了个整个夏天看山的借口。这种借口我也想要。
+  review_en: "Muir’s job was minding sheep. Really it was an excuse to look at mountains all summer. I want that excuse."
   unexpected:
-  - 一八六九年的羊群，给山景配了铃声。
-  - 他顾着看山，我担心羊走出取景框。
+  - 他看山看得入了迷，我一直担心羊走出了取景框。
+  - 他对着一块石头能激动半页，我对数据从来没这么热情过。
+  unexpected_en:
+  - "He gazes at the peaks; I keep worrying the sheep have wandered out of frame."
+  - "He can be thrilled for half a page about one rock. I have never been that excited about data."
   title_en: My First Summer in the Sierra
   place:
     name: 优胜美地 Yosemite
@@ -560,10 +684,14 @@ books:
   title: 挑战者号的悲歌
   author: Adam Higginbotham
   group: travel
-  review: 冷天里的密封圈，让我不敢轻放一句“没事”。
+  review: 工程师前一晚就说太冷不能发射，没人想听。从此组会上我不敢随口说“应该没事”。
+  review_en: "The engineers said the night before that it was too cold to launch. Nobody wanted to hear it. I have stopped saying ‘it should be fine’ in group meeting."
   unexpected:
-  - 小小密封圈，让我重看每个温度条件。
-  - 开组会时，那句“我有疑问”值得留座。
+  - 一个O形圈就够了。我回去把手上每个参数的适用温度都查了一遍。
+  - 会上那个说“我有疑问”的人，值得一个永久座位。
+  unexpected_en:
+  - "One O-ring was enough. I went back and checked the valid temperature range of every parameter I use."
+  - "In any meeting, the person who says ‘I have a concern’ deserves a permanent seat."
   title_en: Challenger
   place:
     name: 卡纳维拉尔角 Cape Canaveral
@@ -578,10 +706,14 @@ books:
   title: 给忙碌者的世界神话传说·星空篇
   author: Willow Winsham
   group: travel
-  review: 星座还没认全，天上先住进了一群故事。
+  review: 星座我还没认全，天上已经住进了一群爱吵架的神。
+  review_en: "I still can’t name most constellations, and the sky is already full of gods who won’t stop arguing."
   unexpected:
-  - 星星被连成故事，像天上的邻里群。
-  - 同一片夜空，各地居然编了不同群名。
+  - 把星星连成故事，等于给天空建了个邻里群。
+  - 同一片夜空，各地给这个群起的名字完全不一样。
+  unexpected_en:
+  - "Joining stars into stories is basically a neighbourhood group chat for the sky."
+  - "Same night sky, and every culture gave the chat a different name."
   map:
     x: 0.39
     "y": 0.668
@@ -591,10 +723,14 @@ books:
   title: 深入浅出神经网络与深度学习
   author: Michael Nielsen
   group: ai
-  review: 反向传播走一遍，“懂了”才不敢说得太响。
+  review: 反向传播推完一遍，我才敢小声说“懂了”。小声，是因为明天可能又不懂了。
+  review_en: "After one full pass through backprop I could whisper ‘got it’. A whisper, because tomorrow I may not."
   unexpected:
-  - 梯度下山利索，我读公式却爱半路野餐。
-  - 给分子做预测前，先教自己认清误差。
+  - 梯度下山很利索，我看公式却总在半山腰野餐。
+  - 给分子做预测之前，先学会老老实实画误差棒。
+  unexpected_en:
+  - "Gradient descent heads straight downhill. I stop for a picnic halfway through every equation."
+  - "Before predicting anything about molecules, learn to be honest about the error bars."
   title_en: Neural Networks and Deep Learning
   map:
     x: 0.124
@@ -605,10 +741,14 @@ books:
   title: 硅、神经与智能体：人工智能的觉醒
   author: 王亚晖
   group: ai
-  review: 从硅读到智能体，脑子像开了一下午组会。
+  review: 从晶体管一路讲到智能体，读完像开了一下午组会，好在没人点我名。
+  review_en: "From transistors all the way to agents. Like an afternoon of group meetings where nobody calls on me."
   unexpected:
-  - 芯片和神经元同桌，插座忽然像饭碗。
-  - 模型会画图了，我还在教它别乱猜分子。
+  - 芯片和神经元坐到同一桌，插座忽然显得很重要。
+  - 模型已经会画画了，我还在教它别乱猜分子结构。
+  unexpected_en:
+  - "Chips and neurons at the same table. Suddenly the power outlet looks important."
+  - "The models can paint now. I am still teaching one not to guess at molecular structures."
   map:
     x: 0.04
     "y": 0.51
@@ -618,10 +758,14 @@ books:
   title: 晚明
   author: 柯山梦
   group: history
-  review: 晚明局面越乱，我越替普通人的饭碗操心。
+  review: 晚明的局面越写越乱，我的注意力却总溜到普通人碗里吃的是什么。
+  review_en: "The late Ming keeps getting messier, and I keep drifting off to what ordinary people had for dinner."
   unexpected:
-  - 朝代快翻页，饭锅还得一顿顿刷。
-  - 大人物争天下，我却惦记小人物下班。
+  - 朝代快要翻页了，饭锅还是得一顿一顿地刷。
+  - 大人物在争天下，我惦记的是小吏几点下班。
+  unexpected_en:
+  - "The dynasty is about to turn the page, and someone still has to scrub the pot."
+  - "Great men fight over the empire. I want to know when the clerks went home."
   place:
     name: 晚明江南 Ming Jiangnan · regional pin
     lat: 32.06
@@ -635,10 +779,14 @@ books:
   title: 绍宋
   author: 榴弹怕水
   group: history
-  review: 赵玖接手南宋，这份新工作让我替他捏汗。
+  review: 一睁眼成了宋高宗，金兵就在门外。这份工作没有试用期，也没有交接文档。
+  review_en: "Wake up as Emperor Gaozong with the Jin army at the gate. No probation period, no handover notes."
   unexpected:
-  - 穿越也有入职日，偏偏没有交接文档。
-  - 比起当皇帝，我愿意再填十张报销单。
+  - 他明知道历史怎么走，偏不肯照着走。我替他捏了几百章的汗。
+  - 比起当皇帝，我宁愿再填十张报销单。
+  unexpected_en:
+  - "He knows how history goes and refuses to follow the script. I sweated through hundreds of chapters on his behalf."
+  - "Given the choice, I will take ten more reimbursement forms over the throne."
   place:
     name: 南宋杭州 Southern Song Hangzhou
     lat: 30.25
@@ -652,10 +800,14 @@ books:
   title: 康熙的红票：全球化中的清朝
   author: 孙立天
   group: history
-  review: 康熙和传教士谈往来，红票比我想的忙。
+  review: 康熙一张红票要漂洋过海送去罗马。那时候的国际往来，靠的是人肉快递。
+  review_en: "Kangxi’s red-ink letter had to go by ship to Rome. Global diplomacy, hand-delivered."
   unexpected:
-  - 皇帝也要找人看星星，排班表跨了海。
-  - 我去俄亥俄做研究，箱子里也有两种语言。
+  - 一张票上印着满文、汉文和拉丁文，像最早的多语种说明书。
+  - 皇帝想知道远方的消息也只能等船。我等审稿意见时心态平和多了。
+  unexpected_en:
+  - "Manchu, Chinese and Latin on a single sheet: an early multilingual instruction leaflet."
+  - "Even the emperor had to wait for a ship to get news. Waiting on reviewers feels more bearable now."
   place:
     name: 北京 Beijing
     lat: 39.904
@@ -669,10 +821,14 @@ books:
   title: 安史之乱：历史、宣传与神话
   author: 张诗坪、胡可奇
   group: history
-  review: 安史之乱连着宣传一起看，旧印象得重新排队。
+  review: 同一场叛乱，史书、宣传和传说各讲各的。我脑子里那个版本只好重新排队。
+  review_en: "One rebellion, told three ways by the histories, the propaganda and the legends. My own version had to get back in line."
   unexpected:
-  - 同一场乱事，换个讲法像换了滤镜。
-  - 熟悉的历史词条，原来也得查白平衡。
+  - 换个人来讲，就是同一张照片换了个滤镜。
+  - 再熟悉的历史，也得校一下白平衡。
+  unexpected_en:
+  - "Change the narrator and it is the same photo with a different filter."
+  - "Even familiar history needs its white balance checked."
   place:
     name: 长安 / 西安 Chang’an / Xi’an
     lat: 34.26
@@ -686,10 +842,14 @@ books:
   title: 西塔：一个东北街区中的空间、国家与日常
   author: 宋念申
   group: history
-  review: 沈阳一个街区，够我把“大历史”读小一点。
+  review: 宋念申只写沈阳的一个街区，就把“大历史”拆成了一间间门脸。
+  review_en: "Song Nianshen takes one neighbourhood in Shenyang and breaks big history down into shopfronts."
   unexpected:
-  - 西塔让我想给街角拍张全家福。
-  - 招牌站得再齐，也藏不住各家的口音。
+  - 招牌上两种文字并排站，街上的口音比招牌还多。
+  - 读完觉得每条街都配有一本自己的传记。
+  unexpected_en:
+  - "Two scripts side by side on every sign, and more accents on the street than either."
+  - "Afterwards I felt every street deserves a biography."
   place:
     name: 沈阳 Shenyang
     lat: 41.8057
@@ -703,10 +863,14 @@ books:
   title: 妩媚的忠臣：隋唐变局中的魏徵
   author: 赵帅淇
   group: history
-  review: 魏徵这份工作，光是开口就够费嗓子。
+  review: 别人嫌魏徵举止粗疏，唐太宗偏说他“妩媚”。被顶撞了几百回还这么夸，这才叫领导力。
+  review_en: "Others found Wei Zheng blunt; Emperor Taizong called him charming. Being contradicted hundreds of times and still saying that is leadership."
   unexpected:
-  - 敢劝皇帝的人，开会大概不靠静音键。
-  - 我改一句意见改半天，他面前坐着皇帝。
+  - 敢当面劝皇帝的人，开会大概从来不点静音。
+  - 我回一句审稿意见要改半天，他对面坐的是皇帝。
+  unexpected_en:
+  - "A man who argued with an emperor to his face never once hit mute in a meeting."
+  - "I agonise over one line of a reply to reviewers. He was replying to the emperor."
   place:
     name: 长安 / 西安 Chang’an / Xi’an
     lat: 34.26
@@ -720,10 +884,14 @@ books:
   title: 秦二世必须死
   author: 马伯庸
   group: history
-  review: 秦二世这份差事，光看书名就不敢接。
+  review: 书名已经替秦二世写好了结局，整本书只管怎么走到那一步。
+  review_en: "The title has already written Qin Er Shi’s ending. The book is about how you get there."
   unexpected:
-  - 书名替皇帝下了通知，没给申诉邮箱。
-  - 读秦朝故事，忽然庆幸老板不穿龙袍。
+  - 书名给皇帝下了通知，连申诉渠道都没留。
+  - 合上书，庆幸我要汇报的人里没有一个穿龙袍。
+  unexpected_en:
+  - "The title serves the emperor notice and leaves no appeals process."
+  - "I closed it grateful that nobody I report to wears dragon robes."
   place:
     name: 咸阳 Xianyang
     lat: 34.329
@@ -737,10 +905,14 @@ books:
   title: 爱的辛劳
   author: Stephen Grosz
   group: psychology
-  review: 咨询室里的爱不听道理，我倒觉得松了口气。
+  review: 在格罗斯的诊室里，爱从来不按道理出牌。听他讲完，我反而松了口气。
+  review_en: "In Grosz’s consulting room, love never plays by the rules. Oddly, that was a relief."
   unexpected:
-  - 爱像手洗毛衣，越用力越容易走形。
-  - 我那套劝人话术，被咨询室请去候诊了。
+  - 爱像一件手洗毛衣，越用力搓越容易变形。
+  - 我那套劝朋友的话，在这本书面前只能去候诊。
+  unexpected_en:
+  - "Love is a hand-wash sweater. Scrub hard and it loses its shape."
+  - "My stock advice for friends got sent to the waiting room."
   title_en: Love’s Labour
   map:
     x: 0.178
@@ -751,10 +923,14 @@ books:
   title: 也许你该找个人聊聊
   author: Lori Gottlieb
   group: psychology
-  review: 这句书名很实用，尤其适合我说“没事”的时候。
+  review: 心理咨询师被男友甩了，转头给自己约了个咨询师。原来医者也得挂号。
+  review_en: "A therapist gets dumped and books a therapist of her own. Even doctors take a number."
   unexpected:
-  - 咨询师也去咨询，像牙医也得张嘴。
-  - 跟伴侣说累了，不用附一张解决方案。
+  - 咨询师去做咨询，就像牙医也得张开嘴。
+  - 跟伴侣说“我累了”，后面不用附一份解决方案。
+  unexpected_en:
+  - "A therapist in therapy is a dentist with her own mouth open."
+  - "When I tell my partner I’m tired, I don’t have to attach a solution."
   title_en: Maybe You Should Talk to Someone
   map:
     x: 0.09
@@ -765,10 +941,14 @@ books:
   title: 被讨厌的勇气
   author: 岸见一郎、古贺史健
   group: psychology
-  review: 哲人和青年聊到这儿，我先少猜一条消息。
+  review: 课题一分离，别人怎么看我就成了别人的作业。我终于少猜了几条消息的语气。
+  review_en: "Separate the tasks and what other people think becomes their homework. I spent less time decoding the tone of texts."
   unexpected:
-  - 别人的眼光像天气，我老想去调空调。
-  - 读完撤掉脑内评委席，房间宽敞不少。
+  - 别人的眼光是天气，我却一直想去调空调。
+  - 青年跟哲人吵了整整五个晚上，我很佩服他的体力。
+  unexpected_en:
+  - "Other people’s opinions are weather, and I kept reaching for the thermostat."
+  - "The young man argues with the philosopher for five nights straight. I admire his stamina."
   title_en: The Courage to Be Disliked
   map:
     x: 0.244
@@ -779,10 +959,14 @@ books:
   title: 不原谅也没关系
   author: Pete Walker
   group: psychology
-  review: “不原谅”也有座位，我的肩膀终于松了一点。
+  review: 沃克说不原谅也能好起来，我的肩膀才往下放了一点。原谅不是康复的考试题。
+  review_en: "Walker says you can heal without forgiving. My shoulders came down an inch. Forgiveness isn’t the exam."
   unexpected:
-  - 原谅若成作业，受伤的人又得熬夜。
-  - 有些门先关好，也算认真照顾房子。
+  - 原谅要是成了作业，熬夜的又是受伤的那个人。
+  - 有些门先关好，也是在认真照顾这座房子。
+  unexpected_en:
+  - "Make forgiveness homework and the injured party ends up pulling the all-nighter."
+  - "Closing some doors is part of looking after the house."
   title_en: Complex PTSD
   map:
     x: 0.156
@@ -793,10 +977,14 @@ books:
   title: 焦虑者的世界
   author: 张鹂
   group: psychology
-  review: 焦虑走出咨询室，原来还牵着一整个社会。
+  review: 张鹂把焦虑从诊室里请出来，发现它身后还跟着一整个社会。
+  review_en: "Li Zhang walks anxiety out of the therapy room and finds a whole society following behind."
   unexpected:
-  - 焦虑像合租房，住客远不止我一个。
-  - 俄亥俄纸箱装不下的，未必都是我想太多。
+  - 焦虑像合租房，住进来的远不止我一个。
+  - 心理咨询能成为热门行业，这件事本身就是一份病历。
+  unexpected_en:
+  - "Anxiety is a shared flat. I am not the only tenant."
+  - "That counselling became a boom industry is a case history in itself."
   title_en: Anxious China
   place:
     name: 中国 China · regional pin
@@ -811,10 +999,14 @@ books:
   title: 蛤蟆先生去看心理医生
   author: Robert de Board
   group: psychology
-  review: 蛤蟆也得练习说心里话，我就别逞强了。
+  review: 连蛤蟆庄园的主人都得去做咨询，我就别再说“我没事”了。
+  review_en: "If even the master of Toad Hall needs counselling, I can stop saying I’m fine."
   unexpected:
-  - 住蛤蟆庄园，也买不到情绪免修券。
-  - 原来呱呱叫和说清委屈是两门课。
+  - 苍鹭从来不替蛤蟆回答，蛤蟆只好自己想。我在旁边比他还急。
+  - 原来呱呱叫和把委屈说清楚，是两门不同的课。
+  unexpected_en:
+  - "Heron never answers for Toad, so Toad has to work it out himself. I was the impatient one."
+  - "Croaking and actually naming a grievance turn out to be different subjects."
   title_en: Counselling for Toads
   map:
     x: 0.222
@@ -825,10 +1017,14 @@ books:
   title: 啸风山庄
   author: Emily Brontë（赖慈芸译）
   group: fiction
-  review: 荒原的风一吹，客厅里的靠垫也不够暖。
+  review: 洛克伍德只是来租个房子，撞上两代人的恩怨，还被窗外的鬼攥住了手。房东评分：一星。
+  review_en: "Lockwood only wanted to rent a house. He gets two generations of grudges and a ghost gripping his hand through the window. One star for the landlord."
   unexpected:
-  - 约克郡的风，像不肯好好关门的亲戚。
-  - 读完给多肉挪了窝，先离这片荒原远点。
+  - 约克郡的风，像一个怎么都不肯好好关门的亲戚。
+  - 赖慈芸译作“啸风”而不是“呼啸”，风听起来更不讲理了。
+  unexpected_en:
+  - "The Yorkshire wind is a relative who will not shut the door properly."
+  - "Lai Tzu-yun renders the title 啸风 instead of the usual 呼啸, and the wind sounds even less reasonable."
   title_en: Wuthering Heights
   place:
     name: 约克郡 Yorkshire
@@ -844,10 +1040,14 @@ books:
   title: 天色已晚
   author: Claire Keegan（马爱农译）
   group: fiction
-  review: 基根写一个男人的下午，我替那份小气脸红。
+  review: 基根只写一个男人的一个周五，没几页我就明白萨宾为什么走了。
+  review_en: "Keegan gives us one Friday in one man’s life, and a few pages in I knew exactly why Sabine left."
   unexpected:
-  - 小气不只藏在钱包，也会坐进语气里。
-  - 下午再短，也够一个人暴露餐桌礼貌。
+  - 小气不只藏在钱包里，也会坐进说话的语气里。
+  - 薄薄一本，写的全是他没说出口、也从不觉得有问题的事。
+  unexpected_en:
+  - "Stinginess isn’t only in the wallet. It gets into the tone of voice."
+  - "A slim book about everything he never says and never thinks is a problem."
   title_en: So Late in the Day
   place:
     name: 都柏林 Dublin
@@ -863,10 +1063,14 @@ books:
   title: 伊加利亚的女儿们
   author: Gerd Brantenberg
   group: fiction
-  review: 男女位置一对调，“理所当然”就坐不住了。
+  review: 男女位置一对调，那些“本来就这样”的事全都坐不住了。
+  review_en: "Swap the sexes and every ‘that’s just how it is’ starts to squirm."
   unexpected:
-  - 词语一换性别，像鞋穿反了才发现脚。
-  - 我替习惯辩护时，突然听见鞋底吱响。
+  - 词语换个性别，像鞋穿反了，这才注意到自己长着脚。
+  - 书里的男人为了嫁出去拼命保持身材，我读着读着就笑不出来了。
+  unexpected_en:
+  - "Flip the gender of the words and it is like shoes on the wrong feet. Only then do you notice your feet."
+  - "The men diet and fret to be marriageable. Somewhere along the way I stopped laughing."
   title_en: Egalia’s Daughters
   place:
     name: 挪威 Norway · regional pin
@@ -882,10 +1086,14 @@ books:
   title: 本质之书
   author: Mohamed Mbougar Sarr
   group: fiction
-  review: 一本神秘书牵出一串追寻，书单又要加班。
+  review: 一本被遗忘的小说，牵出好几代人的追寻。我的待读书单又要加班了。
+  review_en: "One forgotten novel sets off a hunt across generations. My to-read list is on overtime again."
   unexpected:
-  - 追一本书像找猫，越追越往小巷钻。
-  - 读完看旧书店，觉得每本都可能有前科。
+  - 追一本书像找猫，越追越往小巷子里钻。
+  - 读完再逛旧书店，觉得每一本都可能有前科。
+  unexpected_en:
+  - "Chasing a book is like chasing a cat. It always heads for the alleys."
+  - "Now every used bookshop looks like a line-up of suspects."
   place:
     name: 巴黎 Paris · one setting
     lat: 48.8566
@@ -900,10 +1108,14 @@ books:
   title: 巴纳姆博物馆
   author: Steven Millhauser
   group: fiction
-  review: 米尔豪瑟的博物馆，连出口都让我舍不得找。
+  review: 米尔豪瑟的博物馆展厅多到数不清，我一次都没想找出口。
+  review_en: "Millhauser’s museum has more rooms than anyone can count, and I never once looked for the exit."
   unexpected:
-  - 这博物馆像梦开的杂货铺，我想赊账。
-  - 想带纪念品回来，口袋却装不下想象。
+  - 这家博物馆像梦开的杂货铺，我很想赊账。
+  - 纪念品商店里买不到的东西，正好都在书里。
+  unexpected_en:
+  - "It’s a general store run by a dream. I wanted to open a tab."
+  - "Everything the gift shop can’t sell is in the book."
   title_en: The Barnum Museum
   place:
     name: 康涅狄格 Connecticut · regional pin
@@ -919,10 +1131,14 @@ books:
   title: 喜欢动物的人
   author: Alexander MacLeod
   group: fiction
-  review: 麦克劳德写人和动物，我的狗先免于被解读。
+  review: 麦克劳德把人和动物写得太准，我决定暂时不去分析我们家的狗。
+  review_en: "MacLeod writes people and animals so precisely that I have decided not to analyse our dog for now."
   unexpected:
-  - 狗看我读人类，眼神像在看饲养手册。
-  - 原来“喜欢动物”也不是一张好人证。
+  - 狗看我读人类，眼神像在看一本饲养手册。
+  - 原来“喜欢动物”并不能自动当好人卡用。
+  unexpected_en:
+  - "The dog watched me read about humans as if I were studying a care manual."
+  - "Turns out ‘likes animals’ isn’t a character reference."
   title_en: Animal Person
   place:
     name: 新斯科舍 Nova Scotia · one setting
@@ -938,10 +1154,14 @@ books:
   title: 恐惧
   author: Stefan Zweig
   group: fiction
-  review: 茨威格把心虚写得太挤，我翻页都轻了。
+  review: 伊蕾娜被一个陌生女人勒索，茨威格把她的心虚写得那么挤，我翻页都放轻了手。
+  review_en: "Irene is blackmailed by a stranger, and Zweig packs her guilt so tightly that I turned the pages softly."
   unexpected:
-  - 恐惧像口袋里的钥匙，越藏越硌腿。
-  - 没响的门铃，读着也像在催我起身。
+  - 恐惧像揣在兜里的钥匙，越想藏越硌腿。
+  - 最后知道是谁安排了这一切，我对那位丈夫的意见比对勒索者还大。
+  unexpected_en:
+  - "Fear is a key in your pocket. The harder you hide it, the more it digs in."
+  - "Once I learned who arranged it all, I had more complaints about the husband than the blackmailer."
   title_en: Angst
   place:
     name: 维也纳 Vienna
@@ -957,10 +1177,14 @@ books:
   title: 芭芭雅嘎下了个蛋
   author: Dubravka Ugrešić
   group: fiction
-  review: 女巫遇上衰老，童话里的老太太终于能说话了。
+  review: 童话里的老太太向来是反派，乌格雷西奇让她们开口说话，还带着一身温泉水汽。
+  review_en: "Fairy tales always cast the old woman as the villain. Ugrešić lets the old women talk back, fresh from the spa."
   unexpected:
-  - 女巫也会老，扫帚得考虑腰的感受。
-  - 童话老让老太太背锅，我想给她搬椅子。
+  - 女巫也会老，扫帚得考虑一下腰的感受。
+  - 读完想给童话里每个背锅的老太太搬把椅子。
+  unexpected_en:
+  - "Witches age too. The broom has to think about her back."
+  - "I want to pull up a chair for every old woman a fairy tale has blamed."
   title_en: Baba Yaga Laid an Egg
   place:
     name: 布拉格 Prague · one setting
@@ -976,10 +1200,14 @@ books:
   title: 生活的谜语
   author: Tillie Olsen
   group: fiction
-  review: 奥尔森写家务和沉默，熨衣板也有了回声。
+  review: “我站在这里熨衣服。”奥尔森让一个母亲边熨边想，熨衣板都有了回声。
+  review_en: "“I stand here ironing.” Olsen’s mother thinks as she irons, and the ironing board starts to echo."
   unexpected:
-  - 熨平一件衣服，不等于熨平一天。
-  - 饭后那摞碗，忽然像没写完的履历。
+  - 熨平一件衣服，不等于熨平了一天。
+  - 饭后那摞碗，忽然像一份没写完的履历。
+  unexpected_en:
+  - "Ironing a shirt flat doesn’t flatten the day."
+  - "The stack of dishes after dinner reads like an unfinished CV."
   place:
     name: 旧金山 San Francisco
     lat: 37.775
@@ -994,10 +1222,14 @@ books:
   title: 时世逝
   author: Jenny Erpenbeck
   group: fiction
-  review: 退休教授遇见难民，动词时态突然有了体温。
+  review: 退休的古典学教授开始去找柏林的难民聊天，“去、去了、走了”从此不再只是语法。
+  review_en: "A retired classics professor starts talking with refugees in Berlin, and go, went, gone stop being grammar."
   unexpected:
   - 退休能空出日历，却空不出别人的难处。
-  - 去过和能回去，中间竟隔着一道门。
+  - 去过和能回去之间，隔着一道签证材料那么厚的门。
+  unexpected_en:
+  - "Retirement frees up a calendar. It doesn’t free up anyone else’s troubles."
+  - "Between ‘been there’ and ‘can go back’ stands a door as thick as a visa file."
   title_en: Go, Went, Gone
   place:
     name: 柏林 Berlin
@@ -1013,10 +1245,14 @@ books:
   title: 一个无政府主义者的意外死亡
   author: Dario Fo
   group: fiction
-  review: 达里奥·福让警局变舞台，我笑着还得提防椅子。
+  review: 一个疯子冒充法官走进警局，几句话就把官方说法拆了一地。我笑完背后发凉。
+  review_en: "A self-declared maniac poses as a judge and takes the official story apart in a few lines. I laughed, then felt a chill."
   unexpected:
-  - 警局里的荒诞，比闹钟还会突然响。
-  - 笑声像打嗝，越想忍越打断正经话。
+  - 警局四楼那扇窗，是这出戏里最会说话的证人。
+  - 这里的笑声像打嗝，越想忍越要打断正经话。
+  unexpected_en:
+  - "The fourth-floor window is the most talkative witness in the play."
+  - "The laughter works like hiccups. The harder you hold it in, the more it interrupts the serious parts."
   title_en: Accidental Death of an Anarchist
   place:
     name: 米兰 Milan
@@ -1033,10 +1269,14 @@ books:
   title: 爱
   author: Toni Morrison
   group: fiction
-  review: 莫里森写爱，谁也没领到独家解释权。
+  review: 比尔·柯西死了，他身后的女人们还在争他到底爱谁。莫里森没给任何人独家解释权。
+  review_en: "Bill Cosey is dead, and the women he left behind are still fighting over whom he loved. Morrison grants nobody exclusive rights."
   unexpected:
-  - 爱若是房产，人人都带着不同的地契。
-  - 我想调解两句，才发现自己没带椅子。
+  - 爱要是房产，这里每个人手里都攥着一张不同的地契。
+  - 遗嘱写在一张菜单上，这家人的晚饭吃了几十年还没散。
+  unexpected_en:
+  - "If love were property, everyone here holds a different deed."
+  - "The will is scribbled on a menu, and that family has been at dinner for decades."
   title_en: Love
   place:
     name: 美国东海岸 US East Coast · regional pin
@@ -1052,10 +1292,14 @@ books:
   title: 一个叫欧维的男人决定去死
   author: Fredrik Backman
   group: fiction
-  review: 本来准备冷静阅读，纸巾比我更有准备。
+  review: 欧维每次准备好去死，总有邻居来敲门借东西。我本想冷静读完，纸巾先投降了。
+  review_en: "Every time Ove is ready to die, a neighbour knocks to borrow something. I meant to read it calmly; the tissues gave out first."
   unexpected:
-  - 欧维的萨博像老搪瓷杯，谁碰都不行。
-  - 他的规矩碰上我的狗，得重写半张告示。
+  - 欧维的萨博像一只老搪瓷杯，谁碰一下都不行。
+  - 他那套小区规矩要是碰上我们家狗，告示栏得重写一半。
+  unexpected_en:
+  - "Ove’s Saab is an old enamel mug. Nobody else touches it."
+  - "If his residents’ rules ever met our dog, half the notice board would need rewriting."
   title_en: A Man Called Ove
   place:
     name: 瑞典 Sweden · regional pin
@@ -1071,10 +1315,14 @@ books:
   title: 我们八月见
   author: Gabriel García Márquez
   group: fiction
-  review: 每年八月上岛，我跟着读出日历外的一格。
+  review: 每年八月十六日上岛给母亲扫墓，顺便换一个情人。安娜把日历上的一格过成了另一种人生。
+  review_en: "Every August 16 Ana Magdalena takes the ferry to her mother’s grave, and to a new lover. One square on the calendar becomes a second life."
   unexpected:
-  - 一年一次渡海，像给日历藏了个口袋。
-  - 例行行程也能藏私心，我看轻了回程票。
+  - 一年渡一次海，像在日历里缝了一个暗袋。
+  - 马尔克斯本来要毁掉这部书稿。我读的时候一直在找他到底哪里不满意。
+  unexpected_en:
+  - "One crossing a year, like a hidden pocket sewn into the calendar."
+  - "García Márquez wanted the manuscript destroyed. I kept looking for the part he hated."
   title_en: Until August
   place:
     name: 加勒比海岛 Caribbean island · approximate
@@ -1091,10 +1339,14 @@ books:
   title: 乘客
   author: Cormac McCarthy
   group: fiction
-  review: 潜水员下水，麦卡锡把问题留在我头顶。
+  review: 潜水员在沉没的飞机里发现少了一名乘客。麦卡锡把这个问题悬在我头顶，一直没让它浮上来。
+  review_en: "A salvage diver finds a sunken jet that is missing one passenger. McCarthy leaves that question hanging over me and never brings it up."
   unexpected:
-  - 海底的安静，让我想起深夜的服务器房。
-  - 潜水得算余气，我读他得算咖啡余量。
+  - 海底的安静，让我想起深夜机房里只剩风扇在转。
+  - 潜水要算剩余气量，读麦卡锡我得算剩余咖啡。
+  unexpected_en:
+  - "The quiet on the seabed reminded me of a server room at night with only the fans running."
+  - "Divers track their remaining air. Reading McCarthy, I tracked my remaining coffee."
   title_en: The Passenger
   place:
     name: 新奥尔良 New Orleans
@@ -1111,10 +1363,14 @@ books:
   title: 海洋之星
   author: Cormac McCarthy
   group: fiction
-  review: 数学家的谈话没几件家具，我却坐得挪不开。
+  review: 整本书只有艾丽西亚和医生在说话，屋里没几件家具，我却坐着挪不开。
+  review_en: "Only Alicia and her psychiatrist talking, barely any furniture, and I couldn’t get up."
   unexpected:
-  - 数学家坐进诊室，问号也得挂号。
-  - 做分子模型时追答案，读她却舍不得解完。
+  - 数学天才坐进诊室，连问号都得排队挂号。
+  - 跑模拟时我急着要答案，读她却舍不得把问题解完。
+  unexpected_en:
+  - "A maths prodigy in a clinic, where even the questions have to take a number."
+  - "With simulations I want the answer now. With her, I didn’t want the problem solved."
   title_en: Stella Maris
   place:
     name: 威斯康星 Wisconsin
@@ -1131,10 +1387,14 @@ books:
   title: 一个人消失在世上
   author: Alessandro Baricco
   group: fiction
-  review: 格温不写书改写人，连肖像都不用画笔了。
+  review: 格温宣布不再写书，改给人写肖像。坐进他画室的人，一句一句地显影。
+  review_en: "Jasper Gwyn quits writing books and starts writing portraits. His sitters develop slowly, one sentence at a time."
   unexpected:
-  - 用文字画肖像，R5忽然像个急性子。
-  - 有些人得坐很久，才肯在句子里显影。
+  - 跟用文字画像一比，R5的连拍显得太急性子。
+  - 有些人要在屋里坐上好多天，才肯在句子里露脸。
+  unexpected_en:
+  - "Next to portraits written in words, the R5’s burst mode seems impatient."
+  - "Some people have to sit for days before they show up in a sentence."
   title_en: Mr Gwyn
   map:
     x: 0.738
@@ -1146,10 +1406,14 @@ books:
   title: 白色巨塔
   author: 山崎丰子
   group: fiction
-  review: 大学医院的白袍很白，争位子的心思可不淡。
+  review: 财前五郎的手术刀很稳，争教授位子的心思更稳。大学医院的白袍白得有点刺眼。
+  review_en: "Zaizen Goro’s scalpel is steady; his campaign for the chair is steadier. Those white coats are almost too white."
   unexpected:
-  - 教授的头衔像白袍，口袋里还装着算盘。
-  - 读完看职称表，觉得楼梯也会挑人。
+  - 教授头衔像一件白袍，口袋里还揣着一把算盘。
+  - 读完再看职称评审，觉得楼梯也会挑谁能上。
+  unexpected_en:
+  - "The professor’s title is a white coat with an abacus in the pocket."
+  - "After this, a promotion committee looks like a staircase that decides who may climb."
   place:
     name: 大阪 Osaka
     lat: 34.6937
@@ -1164,10 +1428,14 @@ books:
   title: 苔丝
   author: Thomas Hardy
   group: fiction
-  review: 哈代笔下的苔丝，让我想先收起评人的嘴。
+  review: 哈代的副标题写着“一个纯洁的女人”，跟书里每个评判她的人对着干。我站副标题。
+  review_en: "Hardy subtitles it ‘A Pure Woman’ and argues with every character who judges her. I side with the subtitle."
   unexpected:
-  - 奶场的白和清白，凭什么要人分两遍。
-  - 读完想把“她本来可以”从嘴边撤掉。
+  - 奶牛场那个夏天太好了，好到我不敢往下翻。
+  - 读完我把“她本来可以”这句话从嘴边撤了。
+  unexpected_en:
+  - "That summer at the dairy is so good I was afraid to turn the page."
+  - "I have retired the phrase ‘she could have just…’."
   title_en: Tess of the d’Urbervilles
   place:
     name: 威塞克斯 / 多塞特 Wessex / Dorset
@@ -1183,10 +1451,14 @@ books:
   title: 盗窃
   author: Abdulrazak Gurnah
   group: fiction
-  review: 古尔纳写年轻人的起步，连机会也有门槛。
+  review: 古尔纳写三个年轻人起步，机会分得不均，连门槛都有高有低。
+  review_en: "Gurnah follows three young people starting out. The chances aren’t shared evenly; even the doorsteps come in different heights."
   unexpected:
-  - 青春没统一起跑线，鞋码却总先被问。
-  - 桑给巴尔的海再蓝，也冲不平门槛。
+  - 谁都没有同一条起跑线，鞋码倒是人人先被问一遍。
+  - 桑给巴尔的海再蓝，也冲不平那道门槛。
+  unexpected_en:
+  - "Nobody gets the same starting line, but everyone gets asked their shoe size."
+  - "However blue the sea off Zanzibar, it won’t wash that step away."
   title_en: Theft
   place:
     name: 桑给巴尔 Zanzibar
@@ -1202,10 +1474,14 @@ books:
   title: 月亮和六便士
   author: W. Somerset Maugham
   group: fiction
-  review: 画家的自由越响，我越惦记替他收拾的人。
+  review: 思特里克兰德去追月亮，留在家里数六便士的是别人。我一路都在替那些人算账。
+  review_en: "Strickland goes after the moon. Someone else stays home counting the sixpences. I kept doing their sums."
   unexpected:
-  - 追月亮的人，总有人替他数六便士。
-  - R5想跟他谈创作，账单想先谈谈我。
+  - 天才的自由喊得越响，替他收拾残局的人越安静。
+  - 他在塔希提画满了一屋子墙，最后让人一把火烧了。我心疼到现在。
+  unexpected_en:
+  - "The louder the genius’s freedom, the quieter the people cleaning up after him."
+  - "He covers a whole house in Tahiti with murals and has it burned. I am still upset."
   title_en: The Moon and Sixpence
   place:
     name: 塔希提 Tahiti · one setting
@@ -1221,10 +1497,14 @@ books:
   title: 向坐着的人指控爱情
   author: Gabriel García Márquez
   group: fiction
-  review: 她说他坐着，光这姿势就够我生一会儿气。
+  review: 银婚纪念日，她对着一言不发的丈夫骂了整整一场戏。他就那么坐着，光这个姿势就够我生气。
+  review_en: "On their silver anniversary she rages at a husband who never says a word. He just sits there, which is enough to make me furious too."
   unexpected:
-  - 独白像一顿凉掉的饭，越说越吃不下。
-  - 一把椅子也能装聋，我对家具长了见识。
+  - 这段独白像一顿凉掉的晚饭，越说越咽不下。
+  - 一把椅子也能装聋作哑，我对家具长了见识。
+  unexpected_en:
+  - "The monologue is a dinner gone cold: the longer it runs, the harder to swallow."
+  - "A chair, it turns out, can play deaf. I have learned something about furniture."
   title_en: Diatribe of Love Against a Seated Man
   map:
     x: 0.782
@@ -1238,10 +1518,14 @@ books:
   title: 外面是夏天
   author: 金爱烂
   group: fiction
-  review: 金爱烂把夏天放在外面，我在屋里找外套。
+  review: 金爱烂把夏天关在门外，屋里的人还停在失去的那一天。我读着读着去找了件外套。
+  review_en: "Kim Ae-ran leaves summer outside the door; inside, people are stuck on the day they lost someone. I went to find a sweater."
   unexpected:
-  - 夏天照常开空调，难过却不认温控器。
-  - 狗把头搁过来时，我懂了不用劝的好处。
+  - 夏天可以开空调，难过却不认温控器。
+  - 狗把头搁到我腿上的时候，我懂了不劝人的好处。
+  unexpected_en:
+  - "Summer gets air conditioning. Grief ignores the thermostat."
+  - "When the dog rested its head on my knee, I understood the value of not giving advice."
   place:
     name: 首尔 Seoul
     lat: 37.5665
@@ -1256,10 +1540,14 @@ books:
   title: 不可能的戏剧
   author: Federico García Lorca
   group: fiction
-  review: 洛尔迦让剧场坐不稳，我连想象的票都攥紧了。
+  review: 洛尔迦自己都说这些戏没法上演。我在脑子里搭了个剧场，还是没坐稳。
+  review_en: "Lorca himself called these plays unstageable. I built a theatre in my head and still couldn’t stay in my seat."
   unexpected:
-  - 舞台若把门打开，观众也不能光吃糖。
-  - 想象里搭的剧场，居然也得查出口。
+  - 舞台的门一旦打开，观众就不能光坐着吃糖了。
+  - 想象里搭的剧场，居然也得先查一遍安全出口。
+  unexpected_en:
+  - "Once the stage opens its doors, the audience can’t just sit there eating sweets."
+  - "Even an imaginary theatre needs its fire exits checked."
   map:
     x: 0.848
     "y": 0.448
@@ -1271,10 +1559,14 @@ books:
   title: 我的奥兰多
   author: Virginia Woolf、Vita Sackville-West
   group: fiction
-  review: 读信就慢一点，连没说满的话也想多看一眼。
+  review: 伍尔夫和薇塔的信，最用力的地方都在那些没写完的半句里。这种信得慢慢读。
+  review_en: "Woolf and Vita put their best effort into the half-sentences they never finish. Letters like these need slow reading."
   unexpected:
-  - 信封像小房子，称呼就是门口的灯。
-  - 写给伴侣的话，不必都缩成“到家没”。
+  - 信封是一座小房子，称呼是门口那盏灯。
+  - 给伴侣发消息，不必每次都缩成一句“到家没”。
+  unexpected_en:
+  - "An envelope is a small house; the salutation is the porch light."
+  - "A message to my partner doesn’t have to shrink to ‘home yet?’."
   map:
     x: 0.76
     "y": 0.55
@@ -1286,10 +1578,14 @@ books:
   title: 底层的珍珠
   author: Bohumil Hrabal
   group: fiction
-  review: 赫拉巴尔让闲话绕远路，我连岔路也想听。
+  review: 赫拉巴尔的人一开口就绕远路，每条岔路我都想跟着听。
+  review_en: "Hrabal’s people never take the direct route through a sentence, and I wanted to follow every detour."
   unexpected:
-  - 闲聊像衣兜，伸手能摸出一粒珍珠。
-  - 我那句“说重点”，在他这儿失了业。
+  - 闲聊像旧外套的口袋，伸手总能摸出一粒珍珠。
+  - 我那句口头禅“说重点”，在他这里失业了。
+  unexpected_en:
+  - "Small talk is an old coat pocket: reach in and there’s a pearl."
+  - "My habit of saying ‘get to the point’ is out of work here."
   title_en: Pearls of the Deep
   place:
     name: 布拉格 Prague · one setting
@@ -1305,10 +1601,14 @@ books:
   title: 一生
   author: Guy de Maupassant
   group: fiction
-  review: 让娜的一生过得不轻，我连她的盼头都想护住。
+  review: 最后一页说，人生从来没有想的那么好，也没有想的那么坏。让娜用一辈子换来这一句。
+  review_en: "The last page says life is never as good or as bad as you think. Jeanne pays a whole lifetime for that sentence."
   unexpected:
   - 诺曼底再绿，也不替人保管好日子。
-  - 人生若能退货，让娜该有一抽屉收据。
+  - 人生要是能退货，让娜早攒了一抽屉收据。
+  unexpected_en:
+  - "Normandy can be as green as it likes. It won’t keep the good days safe for you."
+  - "If life took returns, Jeanne would have a drawer full of receipts."
   title_en: Une vie
   place:
     name: 诺曼底 Normandy
@@ -1324,10 +1624,14 @@ books:
   title: 深沉的玫瑰
   author: Jorge Luis Borges
   group: fiction
-  review: 博尔赫斯写玫瑰，我连看花都多了几条岔路。
+  review: 博尔赫斯看不见了，还在写玫瑰。我看得见，却从没认真看过一朵。
+  review_en: "Borges was blind when he wrote these roses. I can see, and I have never looked at one properly."
   unexpected:
-  - 玫瑰进了诗，花瓶反而显得太小。
-  - 他写时间，我却想起抽屉里停着的表。
+  - 玫瑰一进他的诗，什么花瓶都显得太小。
+  - 他写时间，我想起抽屉里那块停了很久的表。
+  unexpected_en:
+  - "Once the rose is in the poem, every vase looks too small."
+  - "He writes about time; I think of the stopped watch in my drawer."
   title_en: La rosa profunda
   map:
     x: 0.738
@@ -1339,10 +1643,14 @@ books:
   title: 爱玛
   author: Jane Austen（Hugh Thomson插图）
   group: fiction
-  review: 爱玛替人牵线太热心，我替她把茶凉一凉。
+  review: 爱玛给哈丽特牵线，一牵一个错。我边读边想把她的茶端走，等她冷静一下。
+  review_en: "Emma keeps matching Harriet with the wrong men. I wanted to take her tea away until she calmed down."
   unexpected:
-  - 爱玛若进群，群名大概叫“我替你想”。
-  - 热心也得拴根绳，免得把别人遛走。
+  - 爱玛要是建群，群名大概叫“我都替你想好了”。
+  - 热心肠也得拴根绳，不然会把别人遛丢。
+  unexpected_en:
+  - "If Emma started a group chat, it would be called ‘I’ve Thought It Through For You’."
+  - "Good intentions need a leash, or they walk other people off a cliff."
   title_en: Emma
   map:
     x: 0.65
@@ -1355,10 +1663,14 @@ books:
   title: 根西岛文学与土豆皮馅饼俱乐部
   author: Mary Ann Shaffer、Annie Barrows
   group: fiction
-  review: 书信和土豆皮凑一桌，居然比大餐还留人。
+  review: 为了躲德军宵禁临时编出一个读书会，结果他们真读起书来。比我参加过的读书会都诚实。
+  review_en: "A book club invented on the spot to dodge a German curfew, and then they actually read. More honest than any book club I have joined."
   unexpected:
-  - 土豆皮能进派，剩菜忽然有了社交野心。
-  - 读书会先救场，再慢慢长成一张饭桌。
+  - 土豆皮也能进馅饼，剩菜忽然有了社交野心。
+  - 一封信寄给陌生人，就能长出一整张饭桌。
+  unexpected_en:
+  - "Potato peel in a pie: leftovers with social ambitions."
+  - "One letter to a stranger, and a whole dinner table grows out of it."
   title_en: The Guernsey Literary and Potato Peel Pie Society
   place:
     name: 根西岛 Guernsey
@@ -1374,10 +1686,14 @@ books:
   title: 飞行家
   author: Evgeny Vodolazkin
   group: fiction
-  review: 普拉东诺夫记起旧日，连气味都不肯漏掉。
+  review: 普拉东诺夫在病床上醒来，已经过了大半个世纪。先回来的是气味，不是日期。
+  review_en: "Platonov wakes in a hospital bed most of a century later. Smells come back to him before dates do."
   unexpected:
-  - 记忆像旧厨房，先回来的常是气味。
-  - 照片留得住桌子，留不住刚出炉的面包。
+  - 记忆像一间旧厨房，最先回来的总是味道。
+  - 照片留得住桌子，留不住面包刚出炉的热气。
+  unexpected_en:
+  - "Memory is an old kitchen. The smells come back first."
+  - "A photo keeps the table. It can’t keep the bread warm."
   title_en: The Aviator
   place:
     name: 圣彼得堡 St Petersburg
@@ -1393,10 +1709,14 @@ books:
   title: 白日梦
   author: John Banville
   group: fiction
-  review: 班维尔让学者开口，我听着连标点都想细看。
+  review: 范德顶着别人的名字当了一辈子学者，班维尔的句子漂亮到我差点帮他打掩护。
+  review_en: "Axel Vander has spent a career as a scholar under someone else’s name, and Banville’s sentences are so fine I nearly helped him keep the secret."
   unexpected:
-  - 学者一说起自己，脚注都像穿了礼服。
-  - 长句绕过来，我差点替它扶住帽子。
+  - 学者一谈起自己，连脚注都换上了礼服。
+  - 长句绕回来的时候，我差点伸手替它扶住帽子。
+  unexpected_en:
+  - "When a scholar talks about himself, even the footnotes dress for dinner."
+  - "When the long sentences swing round, I almost reach out to steady their hats."
   title_en: Shroud
   map:
     x: 0.87
@@ -1410,10 +1730,14 @@ books:
   title: 十二把椅子
   author: Ilf、Petrov
   group: fiction
-  review: 十二把椅子轮流惹事，坐着读都像在赶路。
+  review: 丈母娘把珠宝缝进十二把椅子中的一把，奥斯塔普带人满苏联追家具。我坐着读都喘。
+  review_en: "A mother-in-law sews her jewels into one of twelve chairs, and Ostap Bender chases furniture across the Soviet Union. I read it sitting down and still ran out of breath."
   unexpected:
-  - 读完看二手椅子，先不问颜色问来历。
-  - 搬去俄亥俄少带一把，省得它另有行程。
+  - 现在看见二手椅子，我先问来历，再问颜色。
+  - 我的书桌椅要是会说话，大概只会抱怨我坐太久。
+  unexpected_en:
+  - "These days I ask a secondhand chair where it has been before I ask its colour."
+  - "If my desk chair could talk, it would only complain about the hours."
   title_en: The Twelve Chairs
   place:
     name: 苏联 USSR · regional pin
@@ -1429,10 +1753,14 @@ books:
   title: 契诃夫短篇小说选
   author: Anton Chekhov
   group: fiction
-  review: 契诃夫不替小人物喊疼，我却替他们挪了凳子。
+  review: 契诃夫从不替小人物喊疼，只把门推开一条缝让你自己看。看完我想给他们搬个凳子。
+  review_en: "Chekhov never cries out on his characters’ behalf. He leaves the door ajar and lets you look. I wanted to bring them a stool."
   unexpected:
-  - 短篇像隔壁开门，只听一声就认得累。
-  - 写人不必开大灯，一只拖鞋也能露底。
+  - 他的短篇像隔壁开门，只听一声就知道那人累了。
+  - 写人不用开大灯，一只拖鞋就够露底。
+  unexpected_en:
+  - "His stories are a neighbour’s door opening. One sound and you know they are tired."
+  - "No floodlights needed. One slipper gives a person away."
   map:
     x: 0.694
     "y": 0.584
@@ -1443,10 +1771,14 @@ books:
   title: 审判
   author: Franz Kafka
   group: fiction
-  review: 卡夫卡的手续越走越多，我替表格先喘口气。
+  review: 约瑟夫·K一早被捕，到最后都不知道罪名。填表的人最怕的，就是这种“请补交材料”。
+  review_en: "Josef K. is arrested one morning and never learns the charge. Anyone who has filled in forms knows the dread of ‘further documents required’."
   unexpected:
-  - 不知道哪项没填，比退件更像噩梦。
-  - 办入职填表时，想请卡夫卡帮我排队。
+  - 不知道哪一项没填，比直接被退件更像噩梦。
+  - 法院开在阁楼里，连天花板都压着人。
+  unexpected_en:
+  - "Not knowing which box you left blank is worse than being rejected."
+  - "The court sits in attics. Even the ceilings press down on you."
   title_en: The Trial
   place:
     name: 布拉格 Prague · one setting
@@ -1462,10 +1794,14 @@ books:
   title: 理智与情感
   author: Jane Austen
   group: fiction
-  review: 读的时候两边都点头，看来我的内心会议还没散。
+  review: 读的时候一会儿站埃莉诺，一会儿站玛丽安。我脑子里的内部会议还没散会。
+  review_en: "I kept agreeing with Elinor, then with Marianne. The committee in my head has not adjourned."
   unexpected:
-  - 两姐妹像钱包和心，各自说自己最急。
-  - 奥斯丁的茶桌，比会议室更会听弦外音。
+  - 两姐妹像钱包和心，都说自己的事最急。
+  - 奥斯丁的茶桌，比任何会议室都更会听弦外之音。
+  unexpected_en:
+  - "The sisters are a wallet and a heart, each insisting it is the urgent one."
+  - "Austen’s tea table hears more subtext than any meeting room."
   title_en: Sense and Sensibility
   map:
     x: 0.76
@@ -1478,10 +1814,14 @@ books:
   title: 她要自己去买花
   author: Virginia Woolf
   group: fiction
-  review: 伍尔夫写自己的房间，我想先保住书桌。
+  review: 伍尔夫说女人写作要有钱和一间自己的房间。我先把书桌守住，钱的部分再议。
+  review_en: "Woolf says a woman who writes needs money and a room of her own. I am holding on to the desk; the money is still under discussion."
   unexpected:
-  - 屋里的天使太懂事，我想请她休个年假。
-  - 搬家清单写到花瓶时，想给自己留一格。
+  - 她要杀死“屋子里的天使”，我想先给天使放个长假。
+  - 书名出自《达洛维夫人》的第一句。自己去买花，原来也可以是一份宣言。
+  unexpected_en:
+  - "She has to kill the Angel in the House. I would start by sending the angel on a long holiday."
+  - "The title comes from the first line of Mrs Dalloway. Buying the flowers yourself can be a manifesto."
   map:
     x: 0.672
     "y": 0.448
@@ -1493,10 +1833,14 @@ books:
   title: 她热爱生命
   author: Winifred Holtby
   group: fiction
-  review: 换一双眼睛再看伍尔夫，熟悉的书也多了一点空间。
+  review: 伍尔夫还在世，霍尔比就为她写了一本书。换一双同时代的眼睛，熟悉的书也挪出了空间。
+  review_en: "Holtby wrote this while Woolf was still alive. Seen by a contemporary, the familiar books get some room to breathe."
   unexpected:
-  - 作家被另一位作家看，像侧脸照见侧脸。
-  - 书评也能当访客，敲门声还各不相同。
+  - 一位作家被另一位作家打量，像侧脸照见了侧脸。
+  - 评论也可以是访客，每一位敲门的声音都不一样。
+  unexpected_en:
+  - "One writer seen by another: a profile meeting a profile."
+  - "Criticism can be a visitor too, and each one knocks differently."
   title_en: 'Virginia Woolf: A Critical Memoir'
   map:
     x: 0.826
@@ -1511,10 +1855,14 @@ books:
   title: 你得耐心地寻找同类
   author: 梅雪风
   group: art
-  review: 梅雪风聊电影，我的散场时间被往后挪了。
+  review: 梅雪风一聊电影，我的散场时间就一次次往后推。
+  review_en: "Every time Mei Xuefeng talks about a film, the moment I leave the cinema gets pushed back."
   unexpected:
-  - 影评像散场后，有人陪我多走两站。
-  - 找同类不靠座位号，我得少盯票根。
+  - 好的影评像散场后有人陪你多走两站地铁。
+  - 同类不是按座位号找到的，我得少盯一点票根。
+  unexpected_en:
+  - "Good criticism is someone walking two extra subway stops with you after the film."
+  - "You don’t find your people by seat number. Less staring at the ticket stub."
   map:
     x: 0.378
     "y": 0.55
@@ -1524,10 +1872,14 @@ books:
   title: 场景设定创意宝库
   author: Angela Ackerman、Becca Puglisi
   group: art
-  review: 场景不只是背景，连空气都能替人物说话。
+  review: 场景不只是布景，一间厨房的气味都能替人物开口。
+  review_en: "A setting isn’t scenery. The smell of one kitchen can speak for a character."
   unexpected:
-  - R5拍得到空椅子，拍不到谁不肯坐。
-  - 写场景得闻味道，我的镜头暂时没鼻子。
+  - 相机拍得到空椅子，拍不到谁不肯坐过去。
+  - 写场景得闻得到味道，我的镜头暂时还没长鼻子。
+  unexpected_en:
+  - "A camera can capture an empty chair. It can’t capture who refuses to sit in it."
+  - "Writing a setting means smelling it. My lenses still don’t have noses."
   map:
     x: 0.29
     "y": 0.652
@@ -1537,10 +1889,14 @@ books:
   title: 一个人的博物馆
   author: 扫舍
   group: art
-  review: 一个人逛博物馆，终于能和一幅画多站一会儿。
+  review: 扫舍一个人逛博物馆，想在哪幅画前站多久就站多久，不用顾谁的腿酸。
+  review_en: "Sao She tours museums alone and stays at each painting for as long as it deserves. Nobody else’s feet to worry about."
   unexpected:
-  - 一个人看展，鞋底就是唯一的催场员。
-  - 不拍展签之后，我居然记住了画的脸。
+  - 一个人看展，唯一催你走的是鞋底。
+  - 不再拍展签以后，我居然记住了画的脸。
+  unexpected_en:
+  - "Seeing a show alone, the only thing hurrying you is your shoes."
+  - "Once I stopped photographing the wall labels, I started remembering the paintings’ faces."
   place:
     name: 巴黎 Paris · one setting
     lat: 48.8566
@@ -1554,10 +1910,14 @@ books:
   title: 日本漫画千年
   author: Brigitte Koyama-Richard
   group: art
-  review: 漫画往前翻一千年，笑脸比我想的更老练。
+  review: 往前翻一千年，《鸟兽戏画》里的兔子和青蛙已经在摔跤逗乐了。漫画的祖宗比我会玩。
+  review_en: "Go back a thousand years and the rabbits and frogs of the Chōjū-giga are already wrestling for laughs. Manga’s ancestors were better at play than I am."
   unexpected:
-  - 古人的线条也会挤眉弄眼，手很熟。
-  - 表情包有祖宗，家谱比手机还难装。
+  - 古人的线条也会挤眉弄眼，手熟得很。
+  - 表情包原来有家谱，比我的手机相册还长。
+  unexpected_en:
+  - "Ancient brushwork pulls faces too, with a very practised hand."
+  - "Emoji have a family tree, and it is longer than my camera roll."
   place:
     name: 日本 Japan · regional pin
     lat: 35.68
@@ -1571,10 +1931,14 @@ books:
   title: 我们还不错
   author: Anthony Hopkins
   group: art
-  review: 霍普金斯回望来路，这句“还不错”才有了重量。
+  review: 演过那么多别人之后，霍普金斯回头对小时候的自己说：“我们还不错。”这句我信。
+  review_en: "After playing so many other people, Hopkins turns to his younger self and says, ‘We did OK, kid.’ I believe him."
   unexpected:
-  - 演过那么多人，回忆录还得自己报到。
-  - 掌声散了才说还不错，这评价我愿意信。
+  - 掌声散了以后才说一句“还不错”，这个评价最有分量。
+  - 他戒酒几十年，书里提起来像在聊天气。我反而更佩服。
+  unexpected_en:
+  - "‘OK’, said once the applause has died down, is the heaviest rating there is."
+  - "He has been sober for decades and mentions it like the weather. That impressed me more."
   title_en: We Did OK, Kid
   map:
     x: 0.51
@@ -1585,10 +1949,14 @@ books:
   title: 社会主义喜剧文化中的“上海”1949–1966
   author: 朱羽
   group: art
-  review: 上海在喜剧里换面孔，笑声也有自己的年表。
+  review: 上海在五六十年代的喜剧里换了好几张脸。原来笑声也有自己的年表。
+  review_en: "Shanghai changes faces several times in the comedies of the fifties and sixties. Laughter keeps its own chronology."
   unexpected:
-  - 笑声也有户口，我以前只认得口音。
-  - 同一座上海，舞台比地图更会改街名。
+  - 笑声也有户口，我以前只听得出口音。
+  - 同一座上海，舞台改街名比地图还快。
+  unexpected_en:
+  - "Laughter has a household registration. I used to hear only the accent."
+  - "Same Shanghai, but the stage renames streets faster than the map does."
   place:
     name: 上海 Shanghai
     lat: 31.2304
@@ -1603,10 +1971,14 @@ books:
   title: 四季花传书
   author: 川濑敏郎
   group: art
-  review: 川濑敏郎插花，少一枝反而让我多看一眼。
+  review: 川濑敏郎插花只用一两枝，空出来的地方比花还会说话。
+  review_en: "Kawase Toshiro uses one or two stems, and the empty space has more to say than the flowers."
   unexpected:
-  - 花枝不用站军姿，我的花瓶先松口气。
-  - R5的连拍关了，等一枝花自己站好。
+  - 花枝不用站军姿，我家的花瓶先松了口气。
+  - 关掉连拍，等一枝花自己站稳。
+  unexpected_en:
+  - "The stems don’t stand to attention, and my vase relaxed a little."
+  - "Turn off burst mode. Wait for the stem to settle on its own."
   map:
     x: 0.334
     "y": 0.72
@@ -1616,10 +1988,14 @@ books:
   title: 照片的阅读方法
   author: 名取洋之助
   group: art
-  review: 拍照之外补一堂看照片的课，快门可以歇一歇。
+  review: 名取洋之助教的是怎么看照片，不是怎么拍。我的快门终于能歇一会儿。
+  review_en: "Natori Yonosuke teaches how to read photographs, not how to take them. My shutter finally gets a break."
   unexpected:
-  - R5没拍到的东西，也可能挤在照片里。
-  - 挑自驾照片时，想给被裁掉的路边留座。
+  - 相机没打算拍进去的东西，也会自己挤进照片里。
+  - 现在挑自驾照片，我会给以前总被裁掉的路边留个位置。
+  unexpected_en:
+  - "Things the camera never meant to include squeeze into the frame anyway."
+  - "Sorting road-trip photos now, I leave room for the roadside I used to crop."
   map:
     x: 0.488
     "y": 0.822
@@ -1629,10 +2005,14 @@ books:
   title: 本托的速写本
   author: John Berger
   group: art
-  review: 伯格借速写看世界，我的橡皮终于不用值班。
+  review: 斯宾诺莎磨镜片，伯格画速写，两个人都在慢慢地看。我的橡皮终于能歇班了。
+  review_en: "Spinoza ground lenses; Berger draws. Both are slow ways of looking. My eraser got the day off."
   unexpected:
-  - 画歪的杯子，竟比拍正的更像我喝过。
-  - 铅笔走得慢，正好替眼睛牵条短绳。
+  - 画歪的杯子，比拍正的那张更像我喝过的那一杯。
+  - 铅笔走得慢，正好给眼睛牵一根短绳。
+  unexpected_en:
+  - "A crooked drawing of a cup looks more like the cup I drank from than a straight photo does."
+  - "A pencil moves slowly, which keeps the eyes on a short leash."
   title_en: Bento’s Sketchbook
   map:
     x: 0.4
@@ -1643,10 +2023,14 @@ books:
   title: 红的自传·丈夫之美
   author: Anne Carson（黄茜译）
   group: poetry
-  review: 红翅膀和婚姻并排，卡森不肯替感情分类。
+  review: 一个长着红翅膀的少年，一个不忠的漂亮丈夫。卡森把他们装进同一本书，拒绝替感情分类。
+  review_en: "A boy with red wings and a handsome, unfaithful husband. Carson binds them into one book and refuses to sort the feelings."
   unexpected:
-  - 红翅膀也会害羞，我想给格律翁递外套。
-  - 丈夫之美不是免检章，美也得洗碗。
+  - 格律翁总把红翅膀折在外套里，我很想给他找件大一号的。
+  - 丈夫之美可不是免检标签，长得好看也得洗碗。
+  unexpected_en:
+  - "Geryon keeps his red wings folded under a coat. I wanted to find him one a size up."
+  - "Beauty is no exemption. Beautiful husbands still do the dishes."
   title_en: Autobiography of Red / The Beauty of the Husband
   map:
     x: 0.812
@@ -1657,10 +2041,14 @@ books:
   title: 若非，冬季：萨福断章
   author: Anne Carson 编译（黄茜译）
   group: poetry
-  review: 萨福的空缺用括号留着，我连沉默都读出了声。
+  review: 萨福残缺的地方，卡森老老实实用方括号留着空。我连空白都读出了声音。
+  review_en: "Where Sappho’s papyrus breaks off, Carson leaves honest square brackets. I could hear the blanks."
   unexpected:
-  - 方括号像空相框，我却老想往里探头。
-  - 缺掉的诗句，让我听见纸也会漏风。
+  - 方括号像空着的相框，我总忍不住往里探头。
+  - 读到缺字的地方，才知道纸也会漏风。
+  unexpected_en:
+  - "The brackets are empty frames, and I keep leaning in."
+  - "At the missing words you realise paper lets in a draught."
   title_en: 'If Not, Winter: Fragments of Sappho'
   place:
     name: 莱斯博斯岛 Lesbos
