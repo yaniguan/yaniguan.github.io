@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 280" width="720" height="280">
+<title>Cell co-scientist pipeline: molecule, electrolyte and cell representations plus other information (data, simulation logs, tool usage) feed a fine-tuned LLM inside the DeepSeek Harness, producing a cell co-scientist</title>
+<defs><marker id="h" viewBox="0 0 10 10" refX="8" refY="5" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" orient="auto-start-reverse"><path d="M1 1L9 5L1 9" fill="none" stroke="#23395b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></marker></defs>
+<style>.w{fill:#fff;stroke:#23395b;stroke-width:2.5;stroke-linejoin:round}.p{fill:#dceef5;stroke:#23395b;stroke-width:2;stroke-linejoin:round}.o{fill:#1fa3a3;stroke:#23395b;stroke-width:2}.g{fill:none;stroke:#23395b;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round}.a{fill:none;stroke:#23395b;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round;marker-end:url(#h)}.t{font-family:Helvetica,Arial,sans-serif;fill:#23395b;font-size:13px}.b{font-weight:700;font-size:14px}.s{font-size:11px}.u{fill:#1fa3a3}.m{text-anchor:middle}</style>
+<rect width="720" height="280" fill="#fff"/>
+<g transform="translate(14 14)">
+<rect class="w" width="204" height="54" rx="14"/>
+<g transform="translate(28 27)"><path class="g" d="M-12 -7L0 -14L12 -7V7L0 14L-12 7Z" stroke-width="2"/><circle class="o" cx="0" cy="-14" r="4"/><circle class="p" cx="12" cy="7" r="4"/><circle class="p" cx="-12" cy="7" r="4"/></g>
+<text class="t b" x="56" y="24">molecule reps</text><text class="t s u" x="56" y="41">Part 1 · 396 numbers</text></g>
+<g transform="translate(14 80)">
+<rect class="w" width="204" height="54" rx="14"/>
+<g transform="translate(28 29)"><path d="M0 -16C8 -6 13 0 13 5a13 13 0 0 1 -26 0C-13 0 -8 -6 0 -16Z" fill="#dceef5" stroke="#23395b" stroke-width="2" stroke-linejoin="round"/><circle cx="-4" cy="5" r="3" fill="#1fa3a3"/><circle cx="5" cy="1" r="2.5" fill="#e07a5f"/></g>
+<text class="t b" x="56" y="24">electrolyte reps</text><text class="t s u" x="56" y="41">Part 2 · 274 numbers</text></g>
+<g transform="translate(14 146)">
+<rect class="w" width="204" height="54" rx="14"/>
+<g transform="translate(28 28)"><rect x="-10" y="-14" width="20" height="28" rx="3" fill="#fff" stroke="#23395b" stroke-width="2"/><rect x="-4" y="-18" width="8" height="4" rx="1" fill="#23395b"/><rect x="-6" y="-2" width="12" height="12" rx="1.5" fill="#8fa98a"/></g>
+<text class="t b" x="56" y="24">cell reps</text><text class="t s u" x="56" y="41">Part 3 · 105 numbers</text></g>
+<g transform="translate(14 212)">
+<rect class="w" width="204" height="54" rx="14"/>
+<rect class="w" x="14" y="9" width="28" height="36" rx="4" stroke-width="2"/><path class="g" d="M20 19H36M20 27H33M20 35H29" stroke-width="1.6"/>
+<circle cx="40" cy="40" r="7" fill="#e07a5f" stroke="#23395b" stroke-width="1.8"/><path d="M40 36V41M40 44V44.5" stroke="#fff" stroke-width="2" stroke-linecap="round"/>
+<text class="t b" x="56" y="24">other information</text><text class="t s u" x="56" y="41">data, logs, tool usage</text></g>
+<path class="a" d="M222 41Q238 41 242 104M222 107Q236 107 242 128M222 173Q236 173 242 152M222 239Q238 239 242 176"/>
+<rect x="246" y="14" width="236" height="252" rx="18" fill="#f6fafc" stroke="#23395b" stroke-width="2.5" stroke-dasharray="7 6"/>
+<text class="t s m" x="364" y="34" style="font-weight:700">DeepSeek Harness</text>
+<g stroke="#23395b" stroke-width="1.4">
+<rect x="276" y="46" width="12" height="14" rx="2" fill="#1fa3a3"/><rect x="291" y="46" width="12" height="14" rx="2" fill="#1fa3a3"/><rect x="306" y="46" width="12" height="14" rx="2" fill="#1fa3a3"/><rect x="321" y="46" width="12" height="14" rx="2" fill="#1fa3a3"/>
+<rect x="336" y="46" width="12" height="14" rx="2" fill="#dceef5"/><rect x="351" y="46" width="12" height="14" rx="2" fill="#dceef5"/><rect x="366" y="46" width="12" height="14" rx="2" fill="#dceef5"/><rect x="381" y="46" width="12" height="14" rx="2" fill="#dceef5"/>
+<rect x="396" y="46" width="12" height="14" rx="2" fill="#8fa98a"/><rect x="411" y="46" width="12" height="14" rx="2" fill="#8fa98a"/><rect x="426" y="46" width="12" height="14" rx="2" fill="#8fa98a"/><rect x="441" y="46" width="12" height="14" rx="2" fill="#8fa98a"/></g>
+<text class="t s m" x="364" y="76">12 soft tokens + text evidence</text>
+<rect x="276" y="86" width="176" height="74" rx="14" fill="#dceef5" stroke="#23395b" stroke-width="2.5"/>
+<path class="g" d="M298 106h22v22h-22z" stroke-width="2"/><path d="M302 102v4M309 102v4M316 102v4M302 128v4M309 128v4M316 128v4M294 110h4M294 117h4M294 124h4M320 110h4M320 117h4M320 124h4" stroke="#23395b" stroke-width="1.8" stroke-linecap="round"/>
+<rect x="303" y="111" width="12" height="12" rx="2" fill="#1fa3a3"/>
+<text class="t b" x="334" y="116">fine-tuned LLM</text><text class="t s u" x="334" y="134">QLoRA + projectors</text>
+<path class="g" d="M310 164v14M364 164v14M418 164v14" stroke-width="2"/>
+<g transform="translate(262 182)"><rect class="w" width="64" height="40" rx="10" stroke-width="2"/><text class="t s m" x="32" y="24">tools</text></g>
+<g transform="translate(332 182)"><rect class="w" width="64" height="40" rx="10" stroke-width="2"/><text class="t s m" x="32" y="24">workspace</text></g>
+<g transform="translate(402 182)"><rect class="w" width="64" height="40" rx="10" stroke-width="2"/><text class="t s m" x="32" y="24">planner</text></g>
+<text class="t s m u" x="364" y="248">answers carry their evidence chain</text>
+<path class="a" d="M486 140H520"/>
+<rect class="w" x="526" y="52" width="180" height="176" rx="16"/>
+<circle cx="580" cy="100" r="16" fill="#dceef5" stroke="#23395b" stroke-width="2.5"/>
+<path d="M556 148c0 -18 10 -26 24 -26s24 8 24 26" fill="#dceef5" stroke="#23395b" stroke-width="2.5" stroke-linejoin="round"/>
+<rect x="628" y="92" width="46" height="40" rx="8" fill="#1fa3a3" stroke="#23395b" stroke-width="2.2"/>
+<circle cx="642" cy="110" r="3.5" fill="#fff"/><circle cx="660" cy="110" r="3.5" fill="#fff"/><path d="M651 92v-8" stroke="#23395b" stroke-width="2.2" stroke-linecap="round"/><circle cx="651" cy="82" r="3" fill="#e07a5f"/>
+<path d="M650 140l6 6l12 -12" fill="none" stroke="#8fa98a" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/>
+<text class="t b m" x="616" y="180">cell</text><text class="t b m" x="616" y="197">co-scientist</text>
+<text class="t s m u" x="616" y="215">explains with sources</text>
+</svg>

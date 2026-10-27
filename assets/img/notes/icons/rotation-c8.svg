@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 200" width="240" height="200">
+<title>C8 rotations: a molecule drawing with eight rotation arrows 45 degrees apart</title>
+<style>.n{fill:none;stroke:#23395b;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round}.t{font-family:Helvetica,Arial,sans-serif;fill:#23395b;font-size:13px;text-anchor:middle}.b{font-weight:700}.s{font-size:10.5px}.c{font-size:15px}.r{fill:none;stroke-width:2.5;stroke-linecap:round}</style>
+<defs><marker id="rn" viewBox="0 0 10 10" refX="7.5" refY="5" markerWidth="9" markerHeight="9" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path d="M1.5 1.5L8 5L1.5 8.5" fill="none" stroke="#23395b" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></marker><marker id="rt" viewBox="0 0 10 10" refX="7.5" refY="5" markerWidth="9" markerHeight="9" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path d="M1.5 1.5L8 5L1.5 8.5" fill="none" stroke="#1fa3a3" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></marker></defs>
+<rect width="240" height="200" fill="#fff"/>
+<circle cx="120" cy="88" r="62" fill="none" stroke="#dceef5" stroke-width="10"/>
+<g class="r">
+<path d="M181.66 94.48A62 62 0 0 1 170.16 124.44" stroke="#1fa3a3" marker-end="url(#rt)"/>
+<path d="M159.02 136.18A62 62 0 0 1 129.7 149.24" stroke="#23395b" marker-end="url(#rn)"/>
+<path d="M113.52 149.66A62 62 0 0 1 83.56 138.16" stroke="#1fa3a3" marker-end="url(#rt)"/>
+<path d="M71.82 127.02A62 62 0 0 1 58.76 97.7" stroke="#23395b" marker-end="url(#rn)"/>
+<path d="M58.34 81.52A62 62 0 0 1 69.84 51.56" stroke="#1fa3a3" marker-end="url(#rt)"/>
+<path d="M80.98 39.82A62 62 0 0 1 110.3 26.76" stroke="#23395b" marker-end="url(#rn)"/>
+<path d="M126.48 26.34A62 62 0 0 1 156.44 37.84" stroke="#1fa3a3" marker-end="url(#rt)"/>
+<path d="M168.18 48.98A62 62 0 0 1 181.24 78.3" stroke="#23395b" marker-end="url(#rn)"/>
+</g>
+<path class="n" d="M120 66L140.9 81.2L132.9 105.8L107.1 105.8L99.1 81.2Z"/>
+<path class="n" d="M116 66V50M124 66V50"/>
+<circle cx="140.9" cy="81.2" r="7.5" fill="#fff"/><circle cx="99.1" cy="81.2" r="7.5" fill="#fff"/><circle cx="120" cy="46" r="7.5" fill="#fff"/>
+<g class="t b"><text x="140.9" y="86" fill="#1fa3a3">O</text><text x="99.1" y="86" fill="#1fa3a3">O</text><text x="120" y="51" fill="#e07a5f">O</text></g>
+<text class="t s" x="208" y="30" style="fill:#1fa3a3">45°</text>
+<text class="t b c" x="120" y="186">C8: same molecule</text>
+</svg>

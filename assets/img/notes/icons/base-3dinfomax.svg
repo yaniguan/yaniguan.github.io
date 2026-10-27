@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 200" width="240" height="200">
+<title>3D InfoMax: two views of one molecule pulled together, a different molecule pushed away</title>
+<style>.p{fill:#dceef5;stroke:#23395b;stroke-width:2.5;stroke-linejoin:round}.w{fill:#fff;stroke:#23395b;stroke-width:2.5;stroke-linejoin:round}.t{font-family:Helvetica,Arial,sans-serif;fill:#23395b;font-size:13px;text-anchor:middle}.b{font-weight:700}.s{font-size:10.5px}.c{font-size:15px}.a{fill:#dceef5;stroke:#23395b;stroke-width:1.8}.o{fill:#1fa3a3;stroke:#23395b;stroke-width:1.8}</style>
+<defs><marker id="it" viewBox="0 0 10 10" refX="7.5" refY="5" markerWidth="10" markerHeight="10" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path d="M1.5 1.5L8 5L1.5 8.5" fill="none" stroke="#1fa3a3" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></marker><marker id="ic" viewBox="0 0 10 10" refX="7.5" refY="5" markerWidth="10" markerHeight="10" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path d="M1.5 1.5L8 5L1.5 8.5" fill="none" stroke="#e07a5f" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></marker></defs>
+<rect width="240" height="200" fill="#fff"/>
+<path d="M44 40Q44 34 50 34H138Q144 34 144 40" fill="none" stroke="#1fa3a3" stroke-width="2" stroke-linecap="round"/>
+<text class="t s" x="94" y="27" style="fill:#1fa3a3">pull together</text>
+<rect class="w" x="40" y="50" width="50" height="58" rx="10"/>
+<rect class="p" x="98" y="50" width="50" height="58" rx="10"/>
+<path d="M65 66L78.3 75.7L73.2 91.3L56.8 91.3L51.7 75.7Z" fill="none" stroke="#23395b" stroke-width="1.8" stroke-linejoin="round"/>
+<circle class="a" cx="65" cy="66" r="4"/><circle class="o" cx="78.3" cy="75.7" r="4"/><circle class="a" cx="73.2" cy="91.3" r="4"/><circle class="a" cx="56.8" cy="91.3" r="4"/><circle class="o" cx="51.7" cy="75.7" r="4"/>
+<path d="M123 80L123 64M123 80L110 90M123 80L136 90" stroke="#23395b" stroke-width="3" stroke-linecap="round"/>
+<circle cx="123" cy="64" r="5" fill="#fff" stroke="#23395b" stroke-width="1.8"/><circle cx="123" cy="80" r="6" fill="#fff" stroke="#23395b" stroke-width="1.8"/><circle cx="136" cy="90" r="5" fill="#e07a5f" stroke="#23395b" stroke-width="1.8"/><circle cx="110" cy="91" r="7" fill="#1fa3a3" stroke="#23395b" stroke-width="1.8"/>
+<path d="M12 79H32" fill="none" stroke="#1fa3a3" stroke-width="2.5" stroke-linecap="round" marker-end="url(#it)"/>
+<rect x="186" y="54" width="44" height="50" rx="10" fill="#fff" stroke="#e07a5f" stroke-width="2.5" stroke-dasharray="5 3"/>
+<path d="M196 90L208 70L220 90" fill="none" stroke="#23395b" stroke-width="2" stroke-linejoin="round"/>
+<circle cx="196" cy="90" r="4.5" fill="#e07a5f" stroke="#23395b" stroke-width="1.8"/><circle cx="208" cy="70" r="4.5" fill="#8fa98a" stroke="#23395b" stroke-width="1.8"/><circle cx="220" cy="90" r="4.5" fill="#e07a5f" stroke="#23395b" stroke-width="1.8"/>
+<path d="M157 79H177" fill="none" stroke="#e07a5f" stroke-width="2.5" stroke-linecap="round" marker-start="url(#ic)" marker-end="url(#ic)"/>
+<text class="t s" x="200" y="44" style="fill:#e07a5f">push away</text>
+<text class="t s" x="65" y="124">2D view</text><text class="t s" x="123" y="124">3D view</text><text class="t s" x="208" y="120">other</text>
+<text class="t s" x="120" y="166">same molecule close, others apart</text>
+<text class="t b c" x="120" y="188">3D InfoMax</text>
+</svg>

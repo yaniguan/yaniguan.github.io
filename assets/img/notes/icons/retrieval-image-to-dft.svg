@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 200" width="240" height="200">
+<title>Retrieval from a molecule image to DFT-computed electronic properties</title>
+<style>.p{fill:#dceef5;stroke:#23395b;stroke-width:2.5;stroke-linejoin:round}.w{fill:#fff;stroke:#23395b;stroke-width:2.5;stroke-linejoin:round}.g{fill:none;stroke:#23395b;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}.t{font-family:Helvetica,Arial,sans-serif;fill:#23395b;font-size:12px;text-anchor:middle}.b{font-weight:700}.s{font-size:10.5px}.c{font-size:15px}.l{text-anchor:start;font-size:9px;font-weight:700}</style>
+<defs><marker id="rd" viewBox="0 0 10 10" refX="7.5" refY="5" markerWidth="10" markerHeight="10" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path d="M1.5 1.5L8 5L1.5 8.5" fill="none" stroke="#1fa3a3" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></marker><marker id="rc" viewBox="0 0 10 10" refX="7.5" refY="5" markerWidth="7" markerHeight="7" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path d="M1.5 1.5L8 5L1.5 8.5" fill="none" stroke="#e07a5f" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></marker></defs>
+<rect width="240" height="200" fill="#fff"/>
+<rect class="w" x="14" y="36" width="80" height="88" rx="12"/>
+<path class="g" d="M54 66L71.1 78.4L64.6 98.6L43.4 98.6L36.9 78.4ZM51 66V56M57 66V56"/>
+<circle cx="71.1" cy="78.4" r="6" fill="#fff"/><circle cx="36.9" cy="78.4" r="6" fill="#fff"/><circle cx="54" cy="51" r="6" fill="#fff"/>
+<g class="t b"><text x="71.1" y="82.5" fill="#1fa3a3">O</text><text x="36.9" y="82.5" fill="#1fa3a3">O</text><text x="54" y="55" fill="#e07a5f">O</text></g>
+<text class="t s" x="54" y="117">image</text>
+<path d="M102 80H136" fill="none" stroke="#1fa3a3" stroke-width="2.5" stroke-linecap="round" marker-end="url(#rd)"/>
+<rect class="p" x="146" y="36" width="80" height="88" rx="12"/>
+<path d="M156 56H188M156 96H188" stroke="#23395b" stroke-width="2.5" stroke-linecap="round"/>
+<circle cx="166" cy="96" r="3.5" fill="#1fa3a3"/><circle cx="178" cy="96" r="3.5" fill="#1fa3a3"/>
+<path d="M172 61V91" fill="none" stroke="#e07a5f" stroke-width="2" stroke-linecap="round" marker-start="url(#rc)" marker-end="url(#rc)"/>
+<g class="t l"><text x="192" y="59">LUMO</text><text x="192" y="99">HOMO</text><text x="176" y="80" style="fill:#e07a5f">gap</text></g>
+<text class="t s" x="186" y="117">DFT</text>
+<text class="t s" x="120" y="164">electronic properties computed by DFT</text>
+<text class="t b c" x="120" y="187">image → DFT</text>
+</svg>

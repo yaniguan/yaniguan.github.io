@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 200" width="240" height="200">
+<title>World-model rollout: each predicted state feeds the next, and drift grows</title>
+<style>.w{fill:#fff;stroke:#23395b;stroke-width:2.5;stroke-linejoin:round}.p{fill:#dceef5;stroke:#23395b;stroke-width:2.5;stroke-linejoin:round}.t{font-family:Helvetica,Arial,sans-serif;fill:#23395b;font-size:13px;text-anchor:middle}.b{font-weight:700}.s{font-size:10px}.c{font-size:15px}</style>
+<defs><marker id="wn" viewBox="0 0 10 10" refX="7.5" refY="5" markerWidth="10" markerHeight="10" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path d="M1.5 1.5L8 5L1.5 8.5" fill="none" stroke="#23395b" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></marker></defs>
+<rect width="240" height="200" fill="#fff"/>
+<rect class="w" x="14" y="30" width="52" height="40" rx="10"/>
+<rect class="p" x="94" y="30" width="52" height="40" rx="10"/>
+<rect class="p" x="174" y="30" width="52" height="40" rx="10" stroke-dasharray="5 3"/>
+<g class="t b"><text x="40" y="55">t</text><text x="120" y="55">t+1</text><text x="200" y="55">t+2</text></g>
+<g fill="none" stroke="#23395b" stroke-width="2.5" stroke-linecap="round"><path d="M68 50H90" marker-end="url(#wn)"/><path d="M148 50H170" marker-end="url(#wn)"/></g>
+<text class="t s" x="79" y="22">predict</text><text class="t s" x="159" y="22">predict</text>
+<path d="M120 74C120 88 200 88 200 74" fill="none" stroke="#1fa3a3" stroke-width="2" stroke-dasharray="3 3" stroke-linecap="round" marker-end="url(#wn)"/>
+<text class="t s" x="160" y="98" style="fill:#1fa3a3">output becomes input</text>
+<path d="M30 140L210 108L210 160Z" fill="#e07a5f" opacity=".15"/>
+<path d="M24 106V154H220" fill="none" stroke="#23395b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M30 136C80 130 140 136 210 132" fill="none" stroke="#23395b" stroke-width="2.2" stroke-dasharray="5 4" stroke-linecap="round"/>
+<path d="M30 136C80 132 150 124 210 112" fill="none" stroke="#e07a5f" stroke-width="2.6" stroke-linecap="round"/>
+<path d="M210 116V128" fill="none" stroke="#e07a5f" stroke-width="2" stroke-linecap="round" marker-start="url(#wn)" marker-end="url(#wn)"/>
+<text class="t s" x="70" y="122" style="fill:#e07a5f">rollout</text><text class="t s" x="88" y="148">reference</text>
+<text class="t b c" x="120" y="186">world-model rollout</text>
+<text class="t s" x="186" y="148" style="fill:#e07a5f">drift grows</text>
+</svg>

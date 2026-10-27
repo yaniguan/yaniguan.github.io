@@ -20,7 +20,7 @@ ninja.data = [{
         
           title: "A summer of molecules, puddles, and batteries",
         
-        description: "An overview of my Applied Scientist internship at SES AI, told across three scales",
+        description: "Overview of a three-part series on my Applied Scientist internship at SES AI: molecules make up electrolytes, electrolytes go into batteries, and each part builds on the representations of the one before",
         section: "Posts",
         handler: () => {
           
@@ -31,7 +31,7 @@ ninja.data = [{
         
           title: "From molecules to batteries",
         
-        description: "Part 3 of my SES AI internship: a simulation ladder, multiscale alignment, and a world model for battery aging",
+        description: "Part 3, cells: the electrolyte formulations from Part 2 go into real batteries, and the molecule and electrolyte representations from Parts 1 and 2 stack up into a representation of the cell. Multiscale simulations around a 252-formulation experiment, alignment between scales, an aging world model that learns how a cell evolves instead of guessing one lifetime number, and a cell co-scientist that closes the series",
         section: "Posts",
         handler: () => {
           
@@ -42,7 +42,7 @@ ninja.data = [{
         
           title: "Teaching a puddle to dance",
         
-        description: "Part 2 of my SES AI internship: force fields, liquids that clump, and learning from 40,000 molecular movies",
+        description: "Part 2, electrolytes: the molecules recognized and represented in Part 1 become the salt, solvents and additives of a liquid. Extending a polarizable force field, a fitting loop that learns from its own failures, three heads that compress 40,000 molecular movies into one latent space, and an electrolyte co-scientist trained on all of it",
         section: "Posts",
         handler: () => {
           
@@ -53,7 +53,7 @@ ninja.data = [{
         
           title: "Atom is atom, bond is bond",
         
-        description: "Part 1 of my SES AI internship: teaching models to read molecules from real papers, and then to see them in 3D",
+        description: "Part 1, molecules: the first layer everything else in the series builds on. Teaching models to recognize molecules in real papers (hand-drawn ones too), check their own answers, and turn them into vectors and a multimodal database that the electrolytes of Part 2 are later mixed from",
         section: "Posts",
         handler: () => {
           

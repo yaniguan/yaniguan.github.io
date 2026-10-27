@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 200" width="240" height="200">
+<title>Chirality: left and right hands are mirror images, like wedge and dash stereo bonds</title>
+<style>.k{fill:#dceef5;stroke:#23395b;stroke-width:2.5;stroke-linejoin:round}.t{font-family:Helvetica,Arial,sans-serif;fill:#23395b;font-size:13px;text-anchor:middle}.b{font-weight:700}.s{font-size:10px}</style>
+<defs>
+<g id="chh">
+<rect class="k" x="86" y="60" width="11" height="34" rx="5.5" transform="rotate(35 91 90)"/>
+<rect class="k" x="46" y="24" width="10" height="44" rx="5"/>
+<rect class="k" x="57" y="18" width="10" height="50" rx="5"/>
+<rect class="k" x="68" y="20" width="10" height="48" rx="5"/>
+<rect class="k" x="79" y="28" width="10" height="40" rx="5"/>
+<rect class="k" x="44" y="56" width="48" height="50" rx="13"/>
+<rect x="50" y="104" width="36" height="12" rx="3" fill="#1fa3a3" stroke="#23395b" stroke-width="2.5"/>
+</g>
+<g id="chs">
+<path d="M72 152L56 162M72 152L88 162" stroke="#23395b" stroke-width="2.5" stroke-linecap="round"/>
+<path d="M72 152L56.6 129.66L51.4 134.34Z" fill="#23395b" stroke="#23395b" stroke-width="1.5" stroke-linejoin="round"/>
+<path d="M75.76 146.33L77.24 147.67M79.51 140.66L82.49 143.34M83.27 134.99L87.73 139.01M87.03 129.32L92.97 134.68" stroke="#23395b" stroke-width="2.2" stroke-linecap="round"/>
+<circle cx="50" cy="128" r="5.5" fill="#e07a5f" stroke="#23395b" stroke-width="2"/>
+<circle cx="94" cy="128" r="5.5" fill="#8fa98a" stroke="#23395b" stroke-width="2"/>
+<circle cx="56" cy="162" r="4" fill="#fff" stroke="#23395b" stroke-width="2"/>
+<circle cx="88" cy="162" r="4" fill="#fff" stroke="#23395b" stroke-width="2"/>
+<circle cx="72" cy="152" r="3" fill="#23395b"/>
+</g>
+</defs>
+<rect width="240" height="200" fill="#fff"/>
+<rect x="116" y="18" width="8" height="152" rx="4" fill="#dceef5"/>
+<path d="M120 18V170" stroke="#23395b" stroke-width="1.6" stroke-dasharray="4 4"/>
+<text class="t s" x="120" y="12">mirror</text>
+<use href="#chh"/>
+<use href="#chh" transform="matrix(-1 0 0 1 240 0)"/>
+<use href="#chs"/>
+<use href="#chs" transform="matrix(-1 0 0 1 240 0)"/>
+<text class="t b" x="120" y="190" style="font-size:12.5px">mirror image = different molecule</text>
+</svg>

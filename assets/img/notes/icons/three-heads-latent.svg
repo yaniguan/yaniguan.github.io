@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 280" width="720" height="280">
+<title>Three heads, one latent: recipe, snapshot and trajectory encoders map into a shared 128-d space used for retrieval, alignment and property prediction</title>
+<defs><marker id="h" viewBox="0 0 10 10" refX="8" refY="5" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" orient="auto-start-reverse"><path d="M1 1L9 5L1 9" fill="none" stroke="#23395b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></marker></defs>
+<style>.w{fill:#fff;stroke:#23395b;stroke-width:2.5;stroke-linejoin:round}.p{fill:#dceef5;stroke:#23395b;stroke-width:2;stroke-linejoin:round}.o{fill:#1fa3a3;stroke:#23395b;stroke-width:2}.g{fill:none;stroke:#23395b;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round}.a{fill:none;stroke:#23395b;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round;marker-end:url(#h)}.t{font-family:Helvetica,Arial,sans-serif;fill:#23395b;font-size:13px}.b{font-weight:700;font-size:14px}.s{font-size:11px}.u{fill:#1fa3a3}.m{text-anchor:middle}</style>
+<rect width="720" height="280" fill="#fff"/>
+<g transform="translate(16 22)">
+<rect class="w" width="190" height="62" rx="14"/>
+<rect class="p" x="12" y="14" width="34" height="8" rx="4"/><rect x="12" y="14" width="26" height="8" rx="4" fill="#1fa3a3"/>
+<rect class="p" x="12" y="27" width="34" height="8" rx="4"/><rect x="12" y="27" width="16" height="8" rx="4" fill="#1fa3a3"/>
+<rect class="p" x="12" y="40" width="34" height="8" rx="4"/><rect x="12" y="40" width="9" height="8" rx="4" fill="#1fa3a3"/>
+<text class="t b" x="58" y="28">recipe</text><text class="t s u" x="58" y="45">what's in the bottle</text></g>
+<g transform="translate(16 109)">
+<rect class="w" width="190" height="62" rx="14"/>
+<rect class="g" x="12" y="12" width="36" height="38" rx="4" stroke-width="2"/>
+<g class="o"><circle cx="22" cy="22" r="3.5"/><circle cx="38" cy="38" r="3.5"/></g><g class="p"><circle cx="36" cy="22" r="3"/><circle cx="22" cy="40" r="3"/><circle cx="30" cy="31" r="3"/></g>
+<text class="t b" x="58" y="28">snapshot</text><text class="t s u" x="58" y="45">one frame of atoms</text></g>
+<g transform="translate(16 196)">
+<rect class="w" width="190" height="62" rx="14"/>
+<rect class="p" x="22" y="12" width="26" height="30" rx="3"/><rect class="p" x="17" y="17" width="26" height="30" rx="3"/><rect class="w" x="12" y="22" width="26" height="30" rx="3" stroke-width="2"/>
+<circle cx="22" cy="34" r="3" fill="#1fa3a3"/><circle cx="29" cy="42" r="3" fill="#e07a5f"/>
+<text class="t b" x="58" y="28">trajectory</text><text class="t s u" x="58" y="45">motion over time</text></g>
+<path class="a" d="M210 53Q250 53 270 110M210 140H266M210 227Q250 227 270 170"/>
+<rect x="276" y="70" width="168" height="140" rx="16" fill="#dceef5" stroke="#23395b" stroke-width="2.5"/>
+<g fill="#1fa3a3" stroke="#23395b" stroke-width="1.6"><rect x="294" y="98" width="16" height="16" rx="2"/><rect x="310" y="98" width="16" height="16" rx="2" fill="#fff"/><rect x="326" y="98" width="16" height="16" rx="2"/><rect x="342" y="98" width="16" height="16" rx="2"/><rect x="358" y="98" width="16" height="16" rx="2" fill="#fff"/><rect x="374" y="98" width="16" height="16" rx="2"/><rect x="390" y="98" width="16" height="16" rx="2" fill="#fff"/><rect x="406" y="98" width="16" height="16" rx="2"/></g>
+<g><circle cx="318" cy="148" r="5" fill="#1fa3a3"/><circle cx="330" cy="156" r="5" fill="#e07a5f"/><circle cx="324" cy="164" r="5" fill="#8fa98a"/><circle cx="392" cy="150" r="5" fill="#fff" stroke="#23395b" stroke-width="1.6"/><circle cx="404" cy="160" r="5" fill="#fff" stroke="#23395b" stroke-width="1.6"/></g>
+<path d="M346 156H380" stroke="#9fb3c8" stroke-width="1.8" stroke-dasharray="3 4"/>
+<text class="t b m" x="360" y="89">shared latent</text>
+<text class="t s m" x="360" y="134">128 numbers</text>
+<text class="t s m" x="360" y="194">same liquid sits together</text>
+<path class="a" d="M448 110Q470 53 506 53M448 140H502M448 170Q470 227 506 227"/>
+<g transform="translate(512 22)">
+<rect class="w" width="192" height="62" rx="14"/>
+<circle class="g" cx="28" cy="27" r="11"/><path class="g" d="M36 35L46 46"/>
+<text class="t b" x="58" y="28">retrieval</text><text class="t s u" x="58" y="45">find its own movie</text></g>
+<g transform="translate(512 109)">
+<rect class="w" width="192" height="62" rx="14"/>
+<circle cx="18" cy="31" r="7" fill="#1fa3a3" stroke="#23395b" stroke-width="2"/><circle cx="40" cy="31" r="7" fill="#dceef5" stroke="#23395b" stroke-width="2"/><path d="M25 31H33" stroke="#1fa3a3" stroke-width="2.5"/>
+<text class="t b" x="58" y="28">alignment</text><text class="t s u" x="58" y="45">recipe ↔ frame ↔ motion</text></g>
+<g transform="translate(512 196)">
+<rect class="w" width="192" height="62" rx="14"/>
+<path class="g" d="M12 48H46" stroke-width="2"/><rect x="15" y="32" width="7" height="16" fill="#dceef5" stroke="#23395b" stroke-width="1.8"/><rect x="26" y="22" width="7" height="26" fill="#1fa3a3" stroke="#23395b" stroke-width="1.8"/><rect x="37" y="14" width="7" height="34" fill="#e07a5f" stroke="#23395b" stroke-width="1.8"/>
+<text class="t b" x="58" y="28">properties</text><text class="t s u" x="58" y="45">conductivity, viscosity…</text></g>
+</svg>
