@@ -11,3 +11,18 @@ ses-internship:
     1: Molecules
     2: Electrolytes
     3: Cells
+
+ucla-thesis:
+  title: "UCLA PhD thesis"
+  blurb: "Three stops through coordination at electrochemical interfaces: water response, copper dissolution, and reactivity on silver."
+  parts: 3
+  badge: square
+  icons:
+    0: /assets/img/notes/icons-thesis/series-interface.svg
+    1: /assets/img/notes/icons-thesis/part-capacitance.svg
+    2: /assets/img/notes/icons-thesis/part-dissolution.svg
+    3: /assets/img/notes/icons-thesis/part-reactivity.svg
+  scale_labels:
+    1: Capacitance
+    2: Dissolution
+    3: "Reactivity: Pb + Cs in CO2RR"

@@ -5,6 +5,8 @@
 .series-steps::before { content: ""; position: absolute; left: 21px; top: 24px; bottom: 24px; width: 2px; background: var(--global-divider-color); }
 .series-step { display: flex; gap: .9rem; align-items: flex-start; padding: .45rem 0; position: relative; }
 .series-step-icon { flex: 0 0 auto; width: 44px; height: 44px; border-radius: 50%; border: 2px solid var(--global-divider-color); background: #fff; overflow: hidden; display: flex; align-items: center; justify-content: center; position: relative; z-index: 1; }
+.series-badge-square .series-step-icon { border-radius: 16px; width: 64px; height: 64px; border-color: #c96a2b; background: #efeaf8; }
+.series-badge-square .series-steps::before { left: 31px; background: #c96a2b; }
 .series-step-icon img { width: 100%; height: 100%; object-fit: contain; }
 
 
