@@ -41,20 +41,18 @@ And not only for neat drawings: people sketch molecules by hand, too. A recogniz
 textbook-perfect drawings is reading half the library.
 </div></div>
 
-### Same molecule, many outfits
+### Same molecule, many drawing styles
 
 The catch is that papers draw the same molecule in wildly different styles: thin double bonds,
 atom labels the size of a dust mite, wedge bonds, scans that look like they went through a fax
 machine twice.
 
-<figure class="nf nf-wide"><img width="720" height="260" src="{{ '/assets/img/notes/icons/same-molecule-outfits.svg' | relative_url }}" alt="The same FEC molecule drawn four ways: clean, with thin bonds, with tiny labels, and wobbly hand-drawn" loading="lazy"><figcaption>Same molecule, four outfits. To a chemist, obviously the same. To a model trained on one style, strangers.</figcaption></figure>
+<figure class="nf nf-wide"><img width="720" height="260" src="{{ '/assets/img/notes/icons/same-molecule-outfits.svg' | relative_url }}" alt="The same FEC molecule drawn four ways: clean, with thin bonds, with tiny labels, and wobbly hand-drawn" loading="lazy"><figcaption>The same molecule drawn four ways. A chemist sees one molecule; a model trained on one style may not.</figcaption></figure>
 
-My slides tell this as a little comic. Cartoon me holds up a drawing and asks the model "who are
-you?", and the right answer is "NaPF6 in FEC." A chemist looks at every outfit and shrugs with the
-line that became my motto for the summer: atom is atom, bond is bond. The style doesn't matter. The
-model, at first, disagreed.
-
-<div class="nf-row"><figure><img width="240" height="200" src="{{ '/assets/img/notes/icons/me-scientist.svg' | relative_url }}" alt="Friendly flat avatar of a scientist with glasses and a lab coat" loading="lazy"><figcaption>Me, the cartoon star of my slides</figcaption></figure><figure><img width="240" height="200" src="{{ '/assets/img/notes/icons/model-screen.svg' | relative_url }}" alt="A computer monitor with an atom on its screen" loading="lazy"><figcaption>The model, my co-star</figcaption></figure></div>
+The way I thought about it was simple: atom is atom, bond is bond. However a paper draws FEC, it's
+the same atoms joined by the same bonds, and that's all recognition should care about. A model
+trained mostly on one drawing style doesn't work that way, though. Show it the same molecule in an
+unfamiliar style and it can easily get it wrong.
 
 ### Synthetic data is endless, real data is the exam
 
@@ -131,10 +129,10 @@ score can miss the scientific goal.
 
 ## VERDICT: four readers and permission to say "I don't know" {#verdict}
 
-Once the model could read, the next problem was trust, because on a real page there is no answer
-key. In my slide comic, the model cheerfully agrees to go label more real drawings in papers, then
-adds, fairly, that even with high confidence "there is no ground truth. Is it reliable?" That
-question became VERDICT.
+Once the model could read, the next problem was trust. My plan was to run it over many more real
+drawings from papers and use its answers as new training labels. But on a real page there is no
+answer key, so even when the model was confident, I had no direct way to tell whether it was right.
+Working out how to check it became VERDICT.
 
 <figure class="nf nf-wide"><img width="720" height="260" src="{{ '/assets/img/notes/icons/verdict.svg' | relative_url }}" alt="VERDICT: four readers vote"></figure>
 
@@ -157,8 +155,8 @@ Agreement separates right from wrong answers with an AUROC of about 0.916, versu
 checking how similar a redrawn image looks to the original, which is barely better than a coin
 flip. I ran VERDICT over about 38K real crops from papers and fed the labels with 3-of-4 agreement
 back into training. The retraining gains were mixed, so I report data quality and model improvement
-separately. My slides had a joke here, "99.5% accuracy (reported by me)", which is exactly the kind
-of number VERDICT exists to be suspicious of.
+separately. The whole point of VERDICT is that I didn't want to take any single model's word for
+how accurate it was.
 
 <hr>
 
@@ -381,7 +379,7 @@ which records a conclusion used.
 
 ### Retrieval, starting from a picture
 
-My slide calls it "scientific multi-modal retrieval and alignment": SMILES and 2D graphs, the image
+What I was building was scientific multimodal retrieval and alignment: SMILES and 2D graphs, the image
 from the paper, the paper's description, 3D geometry, and non-text values from multi-scale
 simulations, all linked by the same molecule. Image ↔ text ↔ 3D geometry ↔ DFT ↔ MD.
 
