@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 140" width="720" height="140">
+<title>Ion movie timeline: 5,000 frames, 4 ps apart, 20 ns in total</title>
+<style>.f{fill:#dceef5;stroke:#23395b;stroke-width:2.5;stroke-linejoin:round}.t{font-family:Helvetica,Arial,sans-serif;fill:#23395b;font-size:12px;text-anchor:middle}.b{font-weight:700}.s{font-size:11px}.i{fill:#e07a5f;stroke:#23395b;stroke-width:1.5}</style>
+<defs><marker id="tl" viewBox="0 0 10 10" refX="7.5" refY="5" markerWidth="9" markerHeight="9" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path d="M1.5 1.5L8 5L1.5 8.5" fill="none" stroke="#1fa3a3" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></marker><marker id="tn" viewBox="0 0 10 10" refX="7.5" refY="5" markerWidth="10" markerHeight="10" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path d="M1.5 1.5L8 5L1.5 8.5" fill="none" stroke="#23395b" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></marker></defs>
+<rect width="720" height="140" fill="#fff"/>
+<g class="t s"><text x="60" y="17">frame 1</text><text x="120" y="17">frame 2</text><text x="180" y="17">frame 3</text><text x="240" y="17">frame 4</text><text x="640" y="17">frame 5,000</text></g>
+<rect class="f" x="40" y="24" width="40" height="34" rx="6"/>
+<rect class="f" x="100" y="24" width="40" height="34" rx="6"/>
+<rect class="f" x="160" y="24" width="40" height="34" rx="6"/>
+<rect class="f" x="220" y="24" width="40" height="34" rx="6"/>
+<rect class="f" x="620" y="24" width="40" height="34" rx="6"/>
+<g fill="#1fa3a3"><circle cx="48" cy="32" r="3"/><circle cx="70" cy="30" r="3"/><circle cx="54" cy="50" r="3"/><circle cx="72" cy="48" r="3"/><circle cx="109" cy="33" r="3"/><circle cx="129" cy="31" r="3"/><circle cx="106" cy="49" r="3"/><circle cx="131" cy="49" r="3"/><circle cx="169" cy="31" r="3"/><circle cx="191" cy="30" r="3"/><circle cx="168" cy="50" r="3"/><circle cx="193" cy="49" r="3"/><circle cx="228" cy="33" r="3"/><circle cx="234" cy="50" r="3"/><circle cx="252" cy="49" r="3"/><circle cx="630" cy="30" r="3"/><circle cx="636" cy="50" r="3"/><circle cx="645" cy="31" r="3"/><circle cx="650" cy="51" r="3"/></g>
+<circle class="i" cx="50" cy="41" r="4.5"/><circle class="i" cx="117" cy="40" r="4.5"/><circle class="i" cx="182" cy="41" r="4.5"/><circle class="i" cx="246" cy="38" r="4.5"/><circle class="i" cx="653" cy="40" r="4.5"/>
+<path d="M626 42q8 -6 14 0t8 -2" fill="none" stroke="#e07a5f" stroke-width="1.5" stroke-dasharray="2 2" stroke-linecap="round"/>
+<g fill="#23395b"><circle cx="440" cy="41" r="3"/><circle cx="460" cy="41" r="3"/><circle cx="480" cy="41" r="3"/></g>
+<path d="M30 74H690" fill="none" stroke="#23395b" stroke-width="2.5" stroke-linecap="round" marker-end="url(#tn)"/>
+<path d="M60 68V80M120 68V80M180 68V80M240 68V80M640 68V80" stroke="#23395b" stroke-width="2.5" stroke-linecap="round"/>
+<path d="M300 71V77M320 71V77M340 71V77M360 71V77M380 71V77M400 71V77M420 71V77M440 71V77M460 71V77M480 71V77M500 71V77M520 71V77M540 71V77M560 71V77M580 71V77M600 71V77M620 71V77" stroke="#23395b" stroke-width="1.4" opacity=".45"/>
+<text class="t s" x="700" y="94" style="text-anchor:end">time</text>
+<path d="M64 90H116" fill="none" stroke="#1fa3a3" stroke-width="2.2" stroke-linecap="round" marker-start="url(#tl)" marker-end="url(#tl)"/>
+<text class="t b" x="90" y="106" style="fill:#1fa3a3">4 ps apart</text>
+<path d="M60 112V124M640 112V124M62 118H638" fill="none" stroke="#23395b" stroke-width="2" stroke-linecap="round"/>
+<rect x="282" y="108" width="136" height="20" rx="10" fill="#fff"/>
+<text class="t b" x="350" y="122.5" style="font-size:13px">20 ns total</text>
+</svg>

@@ -1,0 +1,32 @@
+{%- comment -%}
+  Series nav for a note. Usage: {% include note_series_nav.liquid %}
+  Needs front matter `series:` (key in _data/note_series.yml) and `part:` (0 = overview).
+{%- endcomment -%}
+{%- if page.series -%}
+{%- assign s = site.data.note_series[page.series] -%}
+{%- assign items = site.posts | where: 'series', page.series | sort: 'part' -%}
+{%- assign total = s.parts -%}
+{%- assign pct = page.part | times: 100 | divided_by: total -%}
+<nav class="series-nav" aria-label="Series navigation">
+<div class="series-nav-head">
+<span class="series-nav-title">{{ s.title }}</span>
+<span class="series-nav-step">{% if page.part == 0 %}Overview · {{ total }} parts{% else %}Part {{ page.part }} of {{ total }}{% endif %}</span>
+</div>
+<div class="series-nav-bar"><span style="width: {{ pct }}%"></span></div>
+<ol class="series-nav-dots">
+{%- for p in items -%}
+<li class="{% if p.url == page.url %}is-current{% endif %}"><a href="{{ p.url | relative_url }}" title="{{ p.title }}">{% if p.part == 0 %}Overview{% else %}{{ s.scale_labels[p.part] }}{% endif %}</a></li>
+{%- endfor -%}
+</ol>
+<div class="series-nav-pn">
+{%- assign prev = nil -%}{%- assign next = nil -%}
+{%- assign pp = page.part | minus: 1 -%}{%- assign np = page.part | plus: 1 -%}
+{%- for p in items -%}
+{%- if p.part == pp -%}{%- assign prev = p -%}{%- endif -%}
+{%- if p.part == np -%}{%- assign next = p -%}{%- endif -%}
+{%- endfor -%}
+<span>{% if prev %}<a href="{{ prev.url | relative_url }}">← {% if prev.part == 0 %}Overview{% else %}Part {{ prev.part }}{% endif %}: {{ prev.title }}</a>{% endif %}</span>
+<span>{% if next %}<a href="{{ next.url | relative_url }}">Part {{ next.part }}: {{ next.title }} →</a>{% endif %}</span>
+</div>
+</nav>
+{%- endif -%}

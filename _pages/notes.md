@@ -19,7 +19,15 @@ below). Nothing here needs editing. HTML is emitted at column 0 on purpose.
 <p class="lst-desc">Nothing published yet.</p>
 {% else %}
 <div class="about-rows">
+{%- assign shown_series = '' -%}
 {% for post in site.posts %}
+{%- if post.series -%}
+{%- unless shown_series contains post.series -%}
+{%- assign shown_series = shown_series | append: post.series | append: ' ' -%}
+{% include note_series_block.liquid series=post.series %}
+{%- endunless -%}
+{%- continue -%}
+{%- endif -%}
 <div class="about-row">
 <div class="about-row-date">{{ post.date | date: '%b %Y' }}</div>
 <div class="about-row-val">

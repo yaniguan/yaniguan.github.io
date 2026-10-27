@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 200" width="240" height="200">
+<title>GraphMVP: a 2D graph and a 3D shape reconstruct each other</title>
+<style>.n{fill:none;stroke:#23395b;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round}.p{fill:#dceef5;stroke:#23395b;stroke-width:2.5;stroke-linejoin:round}.w{fill:#fff;stroke:#23395b;stroke-width:2.5;stroke-linejoin:round}.t{font-family:Helvetica,Arial,sans-serif;fill:#23395b;font-size:13px;text-anchor:middle}.b{font-weight:700}.s{font-size:10.5px}.c{font-size:15px}.a{fill:#dceef5;stroke:#23395b;stroke-width:2}.o{fill:#1fa3a3;stroke:#23395b;stroke-width:2}</style>
+<defs><marker id="gt" viewBox="0 0 10 10" refX="7.5" refY="5" markerWidth="10" markerHeight="10" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path d="M1.5 1.5L8 5L1.5 8.5" fill="none" stroke="#1fa3a3" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></marker><marker id="gc" viewBox="0 0 10 10" refX="7.5" refY="5" markerWidth="10" markerHeight="10" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path d="M1.5 1.5L8 5L1.5 8.5" fill="none" stroke="#e07a5f" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></marker></defs>
+<rect width="240" height="200" fill="#fff"/>
+<rect class="w" x="14" y="40" width="80" height="80" rx="12"/>
+<rect class="p" x="146" y="40" width="80" height="80" rx="12"/>
+<path d="M54 60L73 73.8L65.8 96.2L42.2 96.2L35 73.8Z" fill="none" stroke="#23395b" stroke-width="2" stroke-linejoin="round"/>
+<circle class="a" cx="54" cy="60" r="5"/><circle class="o" cx="73" cy="73.8" r="5"/><circle class="a" cx="65.8" cy="96.2" r="5"/><circle class="a" cx="42.2" cy="96.2" r="5"/><circle class="o" cx="35" cy="73.8" r="5"/>
+<path d="M186 82L204 66" stroke="#23395b" stroke-width="2" opacity=".45"/>
+<path d="M186 82L186 58M186 82L166 96M186 82L206 98" stroke="#23395b" stroke-width="3.5" stroke-linecap="round"/>
+<circle cx="204" cy="66" r="5" fill="#fff" stroke="#23395b" stroke-width="1.6" opacity=".7"/>
+<circle cx="186" cy="58" r="6" fill="#fff" stroke="#23395b" stroke-width="2"/>
+<circle cx="186" cy="82" r="8" fill="#fff" stroke="#23395b" stroke-width="2"/>
+<circle cx="206" cy="98" r="7" fill="#e07a5f" stroke="#23395b" stroke-width="2"/>
+<circle cx="166" cy="96" r="9" fill="#1fa3a3" stroke="#23395b" stroke-width="2"/>
+<path d="M100 56Q120 30 140 56" fill="none" stroke="#1fa3a3" stroke-width="2.5" stroke-linecap="round" marker-end="url(#gt)"/>
+<path d="M140 104Q120 130 100 104" fill="none" stroke="#e07a5f" stroke-width="2.5" stroke-linecap="round" marker-end="url(#gc)"/>
+<text class="t s" x="120" y="30" style="fill:#1fa3a3">rebuild</text>
+<text class="t s" x="120" y="138" style="fill:#e07a5f">rebuild</text>
+<text class="t b" x="54" y="138">2D</text><text class="t b" x="186" y="138">3D</text>
+<text class="t s" x="120" y="166">2D and 3D reconstruct each other</text>
+<text class="t b c" x="120" y="188">GraphMVP</text>
+</svg>

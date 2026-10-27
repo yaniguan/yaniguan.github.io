@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 280" width="720" height="280">
+<title>Cell representation stack: molecule representations from Part 1, the electrolyte 128-d latent from Part 2, and cell design and conditions stack into one cell representation</title>
+<defs><marker id="h" viewBox="0 0 10 10" refX="8" refY="5" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" orient="auto-start-reverse"><path d="M1 1L9 5L1 9" fill="none" stroke="#23395b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></marker></defs>
+<style>.w{fill:#fff;stroke:#23395b;stroke-width:2.5;stroke-linejoin:round}.p{fill:#dceef5;stroke:#23395b;stroke-width:2;stroke-linejoin:round}.o{fill:#1fa3a3;stroke:#23395b;stroke-width:2}.g{fill:none;stroke:#23395b;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round}.a{fill:none;stroke:#23395b;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round;marker-end:url(#h)}.t{font-family:Helvetica,Arial,sans-serif;fill:#23395b;font-size:13px}.b{font-weight:700;font-size:14px}.s{font-size:11px}.u{fill:#1fa3a3}.m{text-anchor:middle}</style>
+<rect width="720" height="280" fill="#fff"/>
+<path d="M36 196L60 178H396L372 196Z" fill="#c4e2ec" stroke="#23395b" stroke-width="2"/>
+<rect x="36" y="196" width="336" height="56" rx="6" fill="#dceef5" stroke="#23395b" stroke-width="2.5"/>
+<g transform="translate(62 224)"><path class="g" d="M-12 -8L0 -15L12 -8V8L0 15L-12 8Z" stroke-width="2"/><circle class="o" cx="0" cy="-15" r="4"/><circle class="p" cx="12" cy="8" r="4"/><circle class="p" cx="-12" cy="8" r="4"/></g>
+<text class="t b" x="92" y="220">molecule representations</text><text class="t s u" x="92" y="238">Part 1: 1D / 2D / 3D views of each component</text>
+<path d="M36 124L60 106H396L372 124Z" fill="#a9dcd8" stroke="#23395b" stroke-width="2"/>
+<rect x="36" y="124" width="336" height="56" rx="6" fill="#fff" stroke="#1fa3a3" stroke-width="2.8"/>
+<g transform="translate(62 152)"><path d="M0 -16C8 -6 13 0 13 6a13 13 0 0 1 -26 0C-13 0 -8 -6 0 -16Z" fill="#dceef5" stroke="#23395b" stroke-width="2" stroke-linejoin="round"/><circle cx="-4" cy="6" r="3" fill="#1fa3a3"/><circle cx="5" cy="2" r="2.5" fill="#e07a5f"/></g>
+<text class="t b" x="92" y="148">electrolyte latent</text><text class="t s u" x="92" y="166">Part 2: 128 numbers per liquid</text>
+<g fill="#1fa3a3" stroke="#23395b" stroke-width="1.4"><rect x="290" y="136" width="9" height="22" rx="2"/><rect x="301" y="136" width="9" height="22" rx="2" fill="#fff"/><rect x="312" y="136" width="9" height="22" rx="2"/><rect x="323" y="136" width="9" height="22" rx="2"/><rect x="334" y="136" width="9" height="22" rx="2" fill="#fff"/><rect x="345" y="136" width="9" height="22" rx="2"/><rect x="356" y="136" width="9" height="22" rx="2" fill="#fff"/></g>
+<path d="M36 52L60 34H396L372 52Z" fill="#d6e3d3" stroke="#23395b" stroke-width="2"/>
+<rect x="36" y="52" width="336" height="56" rx="6" fill="#fff" stroke="#8fa98a" stroke-width="2.8"/>
+<g transform="translate(62 80)"><rect x="-10" y="-14" width="20" height="28" rx="3" fill="#fff" stroke="#23395b" stroke-width="2"/><rect x="-4" y="-18" width="8" height="4" rx="1" fill="#23395b"/><rect x="-6" y="-2" width="12" height="12" rx="1.5" fill="#8fa98a"/></g>
+<text class="t b" x="92" y="76">design &amp; conditions</text><text class="t s u" x="92" y="94">cell build, temperature, C-rate, protocol</text>
+<path d="M372 196L396 178V36" fill="none" stroke="#23395b" stroke-width="2"/>
+<path class="g" d="M410 52Q422 52 422 64V128Q422 144 434 144Q422 144 422 160V224Q422 236 410 236" stroke-width="2.2"/>
+<path class="a" d="M440 144H474"/>
+<rect class="w" x="482" y="54" width="222" height="180" rx="18"/>
+<rect x="562" y="76" width="62" height="88" rx="8" fill="#dceef5" stroke="#23395b" stroke-width="2.5"/>
+<rect x="580" y="68" width="26" height="8" rx="2" fill="#23395b"/>
+<rect x="570" y="120" width="46" height="36" rx="4" fill="#1fa3a3"/><path d="M570 130H616" stroke="#fff" stroke-width="1.6"/><path d="M570 142H616" stroke="#fff" stroke-width="1.6"/>
+<g fill="#1fa3a3" stroke="#23395b" stroke-width="1.4"><rect x="531" y="176" width="14" height="14" rx="2" fill="#8fa98a"/><rect x="547" y="176" width="14" height="14" rx="2"/><rect x="563" y="176" width="14" height="14" rx="2" fill="#fff"/><rect x="579" y="176" width="14" height="14" rx="2"/><rect x="595" y="176" width="14" height="14" rx="2" fill="#dceef5"/><rect x="611" y="176" width="14" height="14" rx="2" fill="#dceef5"/><rect x="627" y="176" width="14" height="14" rx="2"/><rect x="643" y="176" width="14" height="14" rx="2" fill="#8fa98a"/></g>
+<text class="t b m" x="593" y="216">cell representation</text>
+<text class="t s m" x="204" y="272">reuse, don't restart: scales stack up into one vector for the cell</text>
+</svg>

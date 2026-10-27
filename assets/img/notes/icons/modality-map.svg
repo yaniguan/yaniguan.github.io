@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 360" width="720" height="360">
+<title>Modality map: one molecule identity key linking image, text, structure, DFT and MD</title>
+<style>.w{fill:#fff;stroke:#23395b;stroke-width:2.5;stroke-linejoin:round}.g{fill:none;stroke:#23395b;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}.t{font-family:Helvetica,Arial,sans-serif;fill:#23395b;font-size:13px}.b{font-weight:700;font-size:14px}.u{fill:#1fa3a3;font-size:12px}.m{text-anchor:middle}.s{font-size:11px}</style>
+<rect width="720" height="360" fill="#fff"/>
+<g fill="none" stroke="#1fa3a3" stroke-width="2.5" stroke-linecap="round" stroke-dasharray="1 6"><path d="M312 160L240 101M309 235L240 281M408 160L480 101M411 235L480 281M360 138V80"/></g>
+<circle cx="360" cy="200" r="62" fill="#dceef5" stroke="#23395b" stroke-width="2.5"/>
+<circle class="g" cx="344" cy="184" r="9" stroke-width="2.8"/><path class="g" d="M350.5 190.5L370 210M362 202l5 -5M367 207l5 -5" stroke-width="2.8"/>
+<text class="t b m" x="360" y="232">InChIKey</text>
+<text class="t s m" x="360" y="248">molecule identity</text>
+<rect class="w" x="20" y="70" width="220" height="62" rx="14"/>
+<rect class="g" x="32" y="84" width="36" height="34" rx="4"/><path class="g" d="M50 92L57 96V104L50 108L43 104V96Z" stroke="#1fa3a3"/>
+<text class="t b" x="80" y="96">paper image</text><text class="t u" x="80" y="116">drawing style</text>
+<rect class="w" x="20" y="250" width="220" height="62" rx="14"/>
+<path class="g" d="M34 266H66M34 274H62M34 282H66M34 290H54"/><path d="M34 298H60" stroke="#1fa3a3" stroke-width="3" stroke-linecap="round"/>
+<text class="t b" x="80" y="276">paper text</text><text class="t u" x="80" y="296">context &amp; reported use</text>
+<rect class="w" x="250" y="18" width="220" height="62" rx="14"/>
+<path class="g" d="M268 60L276 44L288 52L298 40"/><circle cx="268" cy="60" r="4" fill="#dceef5" stroke="#23395b" stroke-width="1.8"/><circle cx="276" cy="44" r="4" fill="#1fa3a3" stroke="#23395b" stroke-width="1.8"/><circle cx="288" cy="52" r="5" fill="#dceef5" stroke="#23395b" stroke-width="1.8"/><circle cx="298" cy="40" r="3" fill="#e07a5f" stroke="#23395b" stroke-width="1.8"/>
+<text class="t b" x="310" y="44">1D / 2D / 3D structure</text><text class="t u" x="310" y="64">bonds &amp; shape</text>
+<rect class="w" x="480" y="70" width="220" height="62" rx="14"/>
+<path class="g" d="M494 116H520M494 88H520"/><circle cx="502" cy="116" r="3" fill="#1fa3a3"/><circle cx="512" cy="116" r="3" fill="#1fa3a3"/><path d="M526 112V92" stroke="#e07a5f" stroke-width="2" stroke-linecap="round"/><path d="M523 95l3 -3l3 3M523 109l3 3l3 -3" fill="none" stroke="#e07a5f" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<text class="t b" x="540" y="96">DFT properties</text><text class="t u" x="540" y="116">electronic energies</text>
+<rect class="w" x="480" y="250" width="220" height="62" rx="14"/>
+<rect class="g" x="494" y="264" width="34" height="34" rx="4"/><g fill="#1fa3a3"><circle cx="503" cy="274" r="3"/><circle cx="519" cy="272" r="3"/><circle cx="510" cy="287" r="3"/><circle cx="521" cy="291" r="3"/></g><circle cx="502" cy="291" r="3.5" fill="#e07a5f"/><path d="M499 286q4 -6 2 -10" fill="none" stroke="#e07a5f" stroke-width="1.5" stroke-dasharray="2 2"/>
+<text class="t b" x="540" y="276">MD properties</text><text class="t u" x="540" y="296">liquid behaviour</text>
+<text class="t s m" x="360" y="344">same molecule = same key, so every view of it is linked in one database</text>
+</svg>

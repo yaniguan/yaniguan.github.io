@@ -1,0 +1,27 @@
+{%- comment -%}
+  Series block for the notes index. Usage: {% include note_series_block.liquid series='ses-internship' %}
+{%- endcomment -%}
+{%- assign key = include.series -%}
+{%- assign s = site.data.note_series[key] -%}
+{%- assign items = site.posts | where: 'series', key | sort: 'part' -%}
+{%- assign overview = items | where: 'part', 0 | first -%}
+<section class="series-block">
+<div class="about-row">
+<div class="about-row-date">{{ overview.date | date: '%b %Y' }}</div>
+<div class="about-row-val">
+<div class="series-block-eyebrow">Series · {{ s.parts }} parts</div>
+<div class="about-role"><a href="{{ overview.url | relative_url }}">{{ s.title }}</a></div>
+{{ s.blurb }} <a href="{{ overview.url | relative_url }}">Start with the overview →</a>
+<ol class="series-steps">
+{%- for p in items -%}{%- if p.part > 0 -%}
+<li class="series-step series-step-{{ p.part }}">
+<span class="series-step-icon"><img src="{{ s.icons[p.part] | relative_url }}" alt="" loading="lazy"></span>
+<span class="series-step-body"><span class="series-step-num">Part {{ p.part }} · {{ s.scale_labels[p.part] }}</span>
+<a href="{{ p.url | relative_url }}">{{ p.title }}</a>
+<span class="series-step-desc">{{ p.description }}</span></span>
+</li>
+{%- endif -%}{%- endfor -%}
+</ol>
+</div>
+</div>
+</section>

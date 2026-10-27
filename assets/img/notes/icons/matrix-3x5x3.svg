@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 300" width="720" height="300">
+<title>3 descriptions, 5 base models, 3 trainings: 5 × 3 = 15 runs</title>
+<style>.w{fill:#fff;stroke:#23395b;stroke-width:2.5;stroke-linejoin:round}.p{fill:#dceef5;stroke:#23395b;stroke-width:2.5;stroke-linejoin:round}.q{fill:#fff;stroke:#1fa3a3;stroke-width:2.5;stroke-linejoin:round}.t{font-family:Helvetica,Arial,sans-serif;fill:#23395b;font-size:13px;text-anchor:middle}.b{font-weight:700}.s{font-size:10.5px}.h{font-size:14px;font-weight:700;fill:#1fa3a3}</style>
+<defs><marker id="xn" viewBox="0 0 10 10" refX="7.5" refY="5" markerWidth="10" markerHeight="10" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path d="M1.5 1.5L8 5L1.5 8.5" fill="none" stroke="#23395b" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></marker></defs>
+<rect width="720" height="300" fill="#fff"/>
+<g class="t h"><text x="71" y="36">3 descriptions</text><text x="266" y="36">5 base models</text><text x="491" y="36">3 trainings</text><text x="660" y="36">runs</text></g>
+<g fill="none" stroke="#23395b" stroke-width="1.6" opacity=".5">
+<path d="M126 100C161 100 161 250 196 250"/>
+<path d="M126 150C161 150 161 115 196 115M126 150C161 150 161 160 196 160M126 150C161 150 161 205 196 205"/>
+<path d="M126 200C161 200 161 70 196 70M126 200C161 200 161 115 196 115M126 200C161 200 161 160 196 160M126 200C161 200 161 205 196 205"/>
+</g>
+<g fill="none" stroke="#1fa3a3" stroke-width="1.6" opacity=".45">
+<path d="M336 70C371 70 371 100 406 100M336 70C371 70 371 150 406 150M336 70C371 70 371 200 406 200"/>
+<path d="M336 115C371 115 371 100 406 100M336 115C371 115 371 150 406 150M336 115C371 115 371 200 406 200"/>
+<path d="M336 160C371 160 371 100 406 100M336 160C371 160 371 150 406 150M336 160C371 160 371 200 406 200"/>
+<path d="M336 205C371 205 371 100 406 100M336 205C371 205 371 150 406 150M336 205C371 205 371 200 406 200"/>
+<path d="M336 250C371 250 371 100 406 100M336 250C371 250 371 150 406 150M336 250C371 250 371 200 406 200"/>
+</g>
+<g fill="none" stroke="#23395b" stroke-width="2.2" stroke-linecap="round"><path d="M576 100C595 100 590 150 606 150"/><path d="M576 200C595 200 590 150 606 150"/><path d="M576 150H607" marker-end="url(#xn)"/></g>
+<rect class="w" x="16" y="83" width="110" height="34" rx="17"/>
+<rect class="w" x="16" y="133" width="110" height="34" rx="17"/>
+<rect class="w" x="16" y="183" width="110" height="34" rx="17"/>
+<g class="t b"><text x="71" y="104.5">1D string</text><text x="71" y="154.5">2D graph</text><text x="71" y="204.5">3D geometry</text></g>
+<rect class="p" x="196" y="55" width="140" height="30" rx="15"/>
+<rect class="p" x="196" y="100" width="140" height="30" rx="15"/>
+<rect class="p" x="196" y="145" width="140" height="30" rx="15"/>
+<rect class="p" x="196" y="190" width="140" height="30" rx="15"/>
+<rect class="p" x="196" y="235" width="140" height="30" rx="15"/>
+<g class="t b"><text x="266" y="74.5">Uni-Mol2</text><text x="266" y="119.5">GraphMVP</text><text x="266" y="164.5">3D InfoMax</text><text x="266" y="209.5">MoleculeSDE</text><text x="266" y="254.5">SMI-TED</text></g>
+<rect class="q" x="406" y="83" width="170" height="34" rx="17"/>
+<rect class="q" x="406" y="133" width="170" height="34" rx="17"/>
+<rect class="q" x="406" y="183" width="170" height="34" rx="17"/>
+<g class="t b" style="font-size:12.5px"><text x="491" y="104.5">continued pretraining</text><text x="491" y="154.5">property post-training</text><text x="491" y="204.5">cross-view alignment</text></g>
+<rect x="614" y="112" width="92" height="76" rx="16" fill="#1fa3a3" stroke="#23395b" stroke-width="2.5"/>
+<text class="t b" x="660" y="146" style="fill:#fff;font-size:22px">5 × 3</text>
+<text class="t b" x="660" y="171" style="fill:#fff">= 15 runs</text>
+<text class="t s" x="161" y="288">lines: which views each base reads</text>
+<text class="t s" x="371" y="288">every base × every training</text>
+</svg>

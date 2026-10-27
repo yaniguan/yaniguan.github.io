@@ -15,7 +15,9 @@ layout: default
     </p>
   </header>
 
+  {% include note_series_nav.liquid %}
   <article class="about-body note-body">{{ content }}</article>
+  {% include note_series_nav.liquid %}
 
   <p class="about-more" style="margin-top: 2.5rem">
     <a href="{{ '/notes/' | relative_url }}">All notes</a>

@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 200" width="240" height="200">
+<title>Hand-drawn molecule: a wobbly pencil-drawn ring with a pencil</title>
+<style>.h{fill:none;stroke:#23395b;stroke-width:2.6;stroke-linecap:round;stroke-linejoin:round}.k{stroke:#23395b;stroke-width:2;stroke-linejoin:round}.t{font-family:Helvetica,Arial,sans-serif;fill:#23395b;font-size:13px;text-anchor:middle}.b{font-weight:700}.s{font-size:10.5px}.c{font-size:15px}</style>
+<rect width="240" height="200" fill="#fff"/>
+<g class="h">
+<path d="M98 51Q118 59 136 71"/><path d="M135 69Q138 92 134 114"/><path d="M136 111Q118 124 99 133"/><path d="M102 132Q82 123 64 113"/><path d="M66 115Q63 92 66 70"/><path d="M64 73Q82 60 102 52"/>
+<path d="M101 61Q114 66 127 76"/><path d="M127 108Q115 117 101 123"/><path d="M73 107Q71 92 74 77"/>
+<path d="M100 52Q98 40 101 28"/>
+</g>
+<text class="t b" x="104" y="22" style="font-style:italic;font-size:15px" transform="rotate(-6 104 18)">OH</text>
+<path d="M144 132q-6 4 -12 3q-5 -1 -9 3" fill="none" stroke="#23395b" stroke-width="1.5" stroke-linecap="round" opacity=".6"/>
+<g transform="translate(146 130) rotate(-50)">
+<path class="k" d="M0 0L14 -6L14 6Z" fill="#f6d5c8"/>
+<path d="M0 0L5 -2.2L5 2.2Z" fill="#23395b"/>
+<rect class="k" x="14" y="-6" width="50" height="12" fill="#8fa98a"/>
+<path d="M16 0H62" stroke="#fff" stroke-width="1.5" opacity=".7"/>
+<rect class="k" x="64" y="-6" width="7" height="12" fill="#dceef5"/>
+<rect class="k" x="71" y="-6" width="11" height="12" rx="3" fill="#e07a5f"/>
+</g>
+<text class="t s" x="120" y="166">same molecule, wobbly lines</text>
+<text class="t b c" x="120" y="188">hand-drawn</text>
+</svg>
