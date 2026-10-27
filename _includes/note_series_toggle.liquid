@@ -1,0 +1,16 @@
+{%- comment -%}
+  Collapsed Notion-style toggle for a de-emphasized series on the notes index.
+{%- endcomment -%}
+{%- assign key = include.series -%}
+{%- assign s = site.data.note_series[key] -%}
+{%- assign items = site.posts | where: 'series', key | sort: 'part' -%}
+{%- assign overview = items | where: 'part', 0 | first -%}
+<details class="series-toggle series-toggle-{{ key }}">
+<summary>UCLA Ph.D. thesis: where I learned scientific reasoning and engineering, one electrochemical interface at a time.</summary>
+<ul class="series-toggle-list">
+<li><a href="{{ overview.url | relative_url }}">{{ overview.title }}</a> <span class="series-toggle-tag">overview</span></li>
+{%- for p in items -%}{%- if p.part > 0 %}
+<li><a href="{{ p.url | relative_url }}">{{ p.title }}</a> <span class="series-toggle-tag">part {{ p.part }}</span></li>
+{%- endif -%}{%- endfor %}
+</ul>
+</details>

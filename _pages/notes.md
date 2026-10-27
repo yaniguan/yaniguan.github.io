@@ -22,9 +22,12 @@ below). Nothing here needs editing. HTML is emitted at column 0 on purpose.
 {%- assign shown_series = '' -%}
 {% for post in site.posts %}
 {%- if post.series -%}
-{%- unless shown_series contains post.series -%}
+{%- unless shown_series contains post.series or post.series == 'ucla-thesis' -%}
 {%- assign shown_series = shown_series | append: post.series | append: ' ' -%}
 {% include note_series_block.liquid series=post.series %}
+{%- if post.series == 'ses-internship' -%}
+{% include note_series_toggle.liquid series='ucla-thesis' %}
+{%- endif -%}
 {%- endunless -%}
 {%- continue -%}
 {%- endif -%}

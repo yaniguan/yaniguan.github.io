@@ -92,3 +92,14 @@
   .note-body figure.nf:has(img[width="720"]), .note-body figure.nf-wide { padding-bottom: .4rem; }
   .note-body figure.nf figcaption { position: sticky; left: 0; max-width: calc(100vw - 2rem); }
 }
+
+/* Notion-style collapsed toggle (UCLA thesis series) */
+.series-toggle { margin: .25rem 0 .75rem; font-size: .92rem; }
+.series-toggle > summary { list-style: none; cursor: pointer; display: flex; align-items: baseline; gap: .4rem; padding: .2rem .3rem; border-radius: 4px; color: var(--global-text-color-light); }
+.series-toggle > summary::-webkit-details-marker { display: none; }
+.series-toggle > summary::before { content: "▸"; flex: 0 0 auto; display: inline-block; font-size: .8em; transition: transform .15s ease; }
+.series-toggle[open] > summary::before { transform: rotate(90deg); }
+.series-toggle > summary:hover { background: var(--global-divider-color); }
+.series-toggle-list { list-style: none; margin: .2rem 0 0 1.35rem; padding: 0; }
+.series-toggle-list li { padding: .12rem 0; }
+.series-toggle-tag { font-size: .72rem; letter-spacing: .06em; text-transform: uppercase; color: var(--global-text-color-light); margin-left: .3rem; }
