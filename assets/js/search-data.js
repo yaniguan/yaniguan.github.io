@@ -16,7 +16,51 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/publications/";
           },
-        },{id: "post-real-data-not-more-synthetic-data-closes-the-ocsr-gap",
+        },{id: "post-a-summer-of-molecules-puddles-and-batteries",
+        
+          title: "A summer of molecules, puddles, and batteries",
+        
+        description: "An overview of my Applied Scientist internship at SES AI, told across three scales",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/notes/summer-of-molecules-puddles-batteries/";
+          
+        },
+      },{id: "post-from-molecules-to-batteries",
+        
+          title: "From molecules to batteries",
+        
+        description: "Part 3 of my SES AI internship: a simulation ladder, multiscale alignment, and a world model for battery aging",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/notes/from-molecules-to-batteries/";
+          
+        },
+      },{id: "post-teaching-a-puddle-to-dance",
+        
+          title: "Teaching a puddle to dance",
+        
+        description: "Part 2 of my SES AI internship: force fields, liquids that clump, and learning from 40,000 molecular movies",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/notes/teaching-a-puddle-to-dance/";
+          
+        },
+      },{id: "post-atom-is-atom-bond-is-bond",
+        
+          title: "Atom is atom, bond is bond",
+        
+        description: "Part 1 of my SES AI internship: teaching models to read molecules from real papers, and then to see them in 3D",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/notes/atom-is-atom-bond-is-bond/";
+          
+        },
+      },{id: "post-real-data-not-more-synthetic-data-closes-the-ocsr-gap",
         
           title: "Real data, not more synthetic data, closes the OCSR gap",
         
