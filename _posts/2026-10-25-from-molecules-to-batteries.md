@@ -32,8 +32,8 @@ formulations built around additives, and a lot of questions about it.
 
 Within each comparison the electrodes were held fixed and the additives changed, so any change in
 performance can be pinned on the recipe. The question is simple to say: change the recipe, and what
-changes in capacity retention, cycle life, resistance and rate? On my slides that's cycling,
-storage, charging and rate.
+changes in capacity retention, cycle life, resistance and rate? In practice that meant looking at
+cycling, storage, charging and rate tests.
 
 <div class="nf-row"><figure><img width="240" height="200" src="{{ '/assets/img/notes/icons/delta-recipe.svg' | relative_url }}" alt="Three bottles with sliders, labeled Delta recipe" loading="lazy"><figcaption>Δrecipe: nudge the additives...</figcaption></figure><figure><img width="240" height="200" src="{{ '/assets/img/notes/icons/delta-performance.svg' | relative_url }}" alt="A capacity-versus-cycle curve next to a battery, labeled Delta performance" loading="lazy"><figcaption>...and see Δperformance.</figcaption></figure></div>
 
@@ -50,7 +50,7 @@ real measurements stay the reference. Simulations get to advise; they don't get 
 ## A cell is a stack of representations {#a-cell-is-a-stack-of-representations}
 
 The idea that unlocked this part is that nothing from Parts 1 and 2 had to be thrown away. Both
-were, underneath the jokes, a lot of representation learning.
+were, at heart, representation learning.
 
 ### Reuse, don't restart
 
@@ -62,9 +62,8 @@ design and operating conditions on top.
 
 <figure class="nf nf-wide"><img width="720" height="280" src="{{ '/assets/img/notes/icons/cell-representation-stack.svg' | relative_url }}" alt="Three stacked layers: molecule representations from Part 1 at the bottom, the electrolyte 128-number latent from Part 2 in the middle, design and conditions on top, merging into one cell representation" loading="lazy"><figcaption>Reuse, don't restart: molecules (Part 1) + electrolyte latent (Part 2) + design and conditions = a cell representation.</figcaption></figure>
 
-Scales stacking up into a cell, like Lego bricks that were secretly designed to fit together. The
-storyline of the series is that molecules make up electrolytes and electrolytes go into cells, and
-here the representations follow the same path.
+Molecules make up electrolytes and electrolytes go into cells, and here the representations follow
+the same path.
 
 <div class="nf-row"><figure><img width="240" height="200" src="{{ '/assets/img/notes/icons/scale-molecule.svg' | relative_url }}" alt="Molecule icon: a small five-membered ring molecule" loading="lazy"><figcaption>molecule vectors</figcaption></figure><figure><img width="240" height="200" src="{{ '/assets/img/notes/icons/scale-electrolyte.svg' | relative_url }}" alt="Electrolyte icon: a droplet with Li+ and solvent molecules" loading="lazy"><figcaption>+ electrolyte latent</figcaption></figure><figure><img width="240" height="200" src="{{ '/assets/img/notes/icons/scale-cell.svg' | relative_url }}" alt="Battery cell icon: a pouch cell with plus and minus tabs" loading="lazy"><figcaption>= cell representation</figcaption></figure></div>
 
@@ -82,7 +81,7 @@ something to the next.
 
 ### Six rungs
 
-Here are the six rungs, in the order on my slides.
+Here are the six rungs, from the smallest scale to the largest.
 
 <div class="n-grid three">
 <div class="n-card" markdown="1">
@@ -94,7 +93,7 @@ point for the liquid.
 <div class="n-card" markdown="1">
 <p class="n-card-title"><img width="240" height="200" src="{{ '/assets/img/notes/icons/rung-md.svg' | relative_url }}" alt="">2. MD</p>
 How molecules organize and move in the liquid: solvation, aggregation, diffusion and conductivity.
-This is the PFF from Part 2, back for an encore, and it supplies what arrives at the electrode.
+This is the PFF from Part 2, and it supplies what arrives at the electrode.
 </div>
 <div class="n-card" markdown="1">
 <p class="n-card-title"><img width="240" height="200" src="{{ '/assets/img/notes/icons/rung-interface.svg' | relative_url }}" alt="">3. Interface reactions</p>
@@ -105,7 +104,7 @@ moves for the next rung.
 <div class="n-card" markdown="1">
 <p class="n-card-title"><img width="240" height="200" src="{{ '/assets/img/notes/icons/rung-kmc.svg' | relative_url }}" alt="">4. kMC</p>
 Kinetic Monte Carlo thinks in states, events and rates, like a board game where each move happens
-with some probability per unit time, to ask what happens next over long times. On the slide, kMC
+with some probability per unit time, to ask what happens next over long times. In my setup, kMC
 sits inside the cell model, the next rung.
 </div>
 <div class="n-card" markdown="1">
@@ -157,7 +156,6 @@ ones, so the links are real.
 
 The second finding is that molecules don't get you to a battery just via alignment. Matching a
 molecule's identity across views could be strong while the links to the real DOE stayed weaker.
-Knowing exactly who someone is doesn't tell you how they'll do at their new job.
 
 ### Property heads
 
@@ -166,8 +164,7 @@ chemistry inputs only, the normalized error (MAE across DOE targets) fell from 0
 using modality dropout, which means randomly hiding inputs during training so the model learns to
 cope when some are missing. It cost a little when every input was available (0.2442 → 0.2542), a
 trade I'll happily take. And the uncertainty was overconfident: nominal 90% intervals covered only
-about 68–78%. When the model said "I'm 90% sure," it should have said "eh, maybe 70%." Good to know,
-and now it's written down.
+about 68–78%, so the stated uncertainty needs widening before anyone relies on it.
 
 <hr>
 

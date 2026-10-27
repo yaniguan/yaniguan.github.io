@@ -25,8 +25,8 @@ part: 2
 
 ## How do molecules move in a liquid? {#how-do-molecules-move-in-a-liquid}
 
-The question on my slides for this part was "how do molecules move in their micro-environment?",
-and it starts with what an electrolyte actually is.
+The question I worked on for this part was how molecules move in their micro-environment, and it
+starts with what an electrolyte actually is.
 
 ### A crowded dance floor
 
@@ -119,8 +119,8 @@ solvent was fine and the problem lived in the salt model.
 
 <div class="n-callout"><img width="240" height="200" src="{{ '/assets/img/notes/icons/electrolyte-jobs.svg' | relative_url }}" alt=""><div markdown="1">
 An electrolyte has many jobs, and a rulebook that only nails small clusters can still flunk all of
-them in the liquid. The lesson I now believe in my bones: a low DFT fitting error doesn't protect
-the liquid, and MD validation is part of parameter development, not a final demo.
+them in the liquid. What I learned is that a low DFT fitting error doesn't protect the liquid, and
+MD validation is part of parameter development, not a final demo.
 </div></div>
 
 <hr>
@@ -132,8 +132,8 @@ recursive self-improvement system, PFF RSI.
 
 <div class="n-card" markdown="1">
 <p class="n-card-title">PFF RSI</p>
-The slide version is a simple cycle: fit the force field, validate in MD, record the failures,
-refine the next fit. When a brand-new molecule shows up, the loop runs on its own: sample, fit,
+At its core it's a simple cycle: fit the force field, validate in MD, record the failures, refine
+the next fit. When a brand-new molecule shows up, the loop runs on its own: sample, fit,
 guard, check in MD, learn, repeat.
 </div>
 
@@ -141,7 +141,7 @@ guard, check in MD, learn, repeat.
 
 ### Four layers under the cycle
 
-Underneath the cycle, the slide stacks four layers.
+Underneath the cycle, I built four layers.
 
 <div class="n-grid">
 <div class="n-card" markdown="1">
@@ -191,8 +191,7 @@ something small enough to search, compare and predict with.
 
 ### Three views of the same liquid
 
-I looked at the same liquid through three views, each with its own encoder, or "head," in the same
-order as my slides.
+I looked at the same liquid through three views, each with its own encoder, or "head."
 
 <div class="n-grid three">
 <div class="n-card" markdown="1">
@@ -224,14 +223,13 @@ For retrieval, retrieval@10 (is the matching liquid in the top 10?) was 84.1% wi
 representation versus 82.4% from the static snapshot alone, so a single frame already knows a lot.
 For conductivity, the model reached R² 0.976, close to a strong descriptor baseline, and adding
 trajectory features improved conductivity error in 18 of 21 held-out chemistry groups: motion helps,
-especially on chemistry the model hasn't seen. On my summary slide the property heads came out at
-R² 0.906, 0.936 and 0.987 for conductivity, viscosity and solubility. One more finding I'm fond of:
-the representation carried over from lithium to sodium electrolytes with only a simple alignment
-step. Same dance, different lead dancer.
+especially on chemistry the model hasn't seen. Across the property heads, I got R² 0.906, 0.936
+and 0.987 for conductivity, viscosity and solubility. The representation also carried over from
+lithium to sodium electrolytes with only a simple alignment step.
 
-From there the slides go two steps further. Reverse design starts from the properties you want and
-looks for recipes that land there. I also tried trajectory generation, rolling the movie forward
-with GRU, TCN and causal-transformer models, which I'll leave as a teaser.
+From there I took two more steps. Reverse design starts from the properties you want and looks for
+recipes that land there. I also tried trajectory generation, rolling the movie forward with GRU,
+TCN and causal-transformer models, though I won't go into that here.
 
 ### Inside the snapshot encoder
 
@@ -310,7 +308,7 @@ repeat (no burning GPU time on the same run twice), and can recover after a fail
 trajectories stay on the tool side; the LLM sees summaries, not 5,000 frames of coordinates.
 </details>
 
-<figure class="nf nf-wide"><img width="720" height="340" src="{{ '/assets/img/notes/icons/project-map.svg' | relative_url }}" alt="Project map: the molecule loop (VERDICT, paper mining, VLM SFT, multimodal RAG) and the electrolyte branches (DFT samplings for Li and Na, multi-fit, PFF RSI, DIY PFF; 40K MD, representation, generation, retrieval) feeding an electrolyte co-scientist" loading="lazy"><figcaption>Where it all lands on my project map: both electrolyte branches feed the co-scientist.</figcaption></figure>
+<figure class="nf nf-wide"><img width="720" height="340" src="{{ '/assets/img/notes/icons/project-map.svg' | relative_url }}" alt="Project map: the molecule loop (VERDICT, paper mining, VLM SFT, multimodal RAG) and the electrolyte branches (DFT samplings for Li and Na, multi-fit, PFF RSI, DIY PFF; 40K MD, representation, generation, retrieval) feeding an electrolyte co-scientist" loading="lazy"><figcaption>The project map: both electrolyte branches feed the co-scientist.</figcaption></figure>
 
 ### Three tool fixes I'm proud of
 
@@ -324,8 +322,8 @@ the tool rejects it clearly.
 </div>
 <div class="n-card" markdown="1">
 <p class="n-card-title">Error messages</p>
-Short error messages made the model guess over and over, like someone jiggling a locked door; now
-errors spell out the full argument contract.
+With short error messages, the model kept retrying with guessed arguments; now errors spell out
+the full argument contract.
 </div>
 <div class="n-card" markdown="1">
 <p class="n-card-title">Identity</p>

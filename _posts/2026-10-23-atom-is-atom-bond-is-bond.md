@@ -121,8 +121,8 @@ model had learned to win the preference game, not to read molecules. A second at
 validity but still landed at roughly half the accuracy of plain SFT, so I kept SFT.
 
 <div class="n-callout warm"><img width="240" height="200" src="{{ '/assets/img/notes/icons/dpo-detour.svg' | relative_url }}" alt=""><div markdown="1">
-Pretty loss, wrong molecules. The lesson I now repeat to anyone who'll listen: a pretty training
-score can miss the scientific goal.
+Pretty loss, wrong molecules. What I took from it is that a pretty training score can miss the
+scientific goal.
 </div></div>
 
 <hr>
