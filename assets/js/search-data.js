@@ -16,7 +16,51 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/publications/";
           },
-        },{id: "post-a-summer-of-molecules-puddles-and-batteries",
+        },{id: "post-who-is-bonded-to-whom",
+        
+          title: "Who is bonded to whom?",
+        
+        description: "Part 0, Overview: three stops through my UCLA PhD thesis, from water and capacitance to Cu dissolution, molecular hydrogen shuttles, and Cs-assisted CO2 activation",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/notes/coordination-at-electrochemical-interfaces/";
+          
+        },
+      },{id: "post-borrowed-hydrogen-and-a-nearly-bare-cation",
+        
+          title: "Borrowed hydrogen and a nearly bare cation",
+        
+        description: "Part 3, Reactivity: Pb + Cs in CO2RR: hydride shuttles offer a route to amination, while partial Cs desolvation strengthens contact with activated CO2 in a separate Ag system",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/notes/borrowed-hydrogen-and-a-bare-cation/";
+          
+        },
+      },{id: "post-when-the-cathode-dissolves",
+        
+          title: "When the cathode dissolves",
+        
+        description: "Part 2, Dissolution: amines help Cu exchange metallic neighbors for nitrogen ligands, so negative polarization reduces metal loss without always eliminating it",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/notes/when-the-cathode-dissolves/";
+          
+        },
+      },{id: "post-capacitance-before-reduction",
+        
+          title: "Capacitance before reduction",
+        
+        description: "Part 1, Capacitance: acetone and methylamine change Cu double-layer capacitance in opposite directions, and the surrounding water explains why molecular polarizability is not enough",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/notes/capacitance-before-reduction/";
+          
+        },
+      },{id: "post-a-summer-of-molecules-puddles-and-batteries",
         
           title: "A summer of molecules, puddles, and batteries",
         
