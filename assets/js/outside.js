@@ -1,5 +1,5 @@
 // /outside/: the interactive layer -- numbers that count up, the sticky section
-// nav, photo lightbox, the First Folio shelf, the Leaflet road-trip
+// nav, photo lightbox, the reading room, the Leaflet road-trip
 // map and a quiet scroll reveal. Each piece upgrades markup that already reads
 // fine without JavaScript, and quietly does nothing if its markup (or Leaflet)
 // is missing. Data for the map comes from the #outside-data JSON block, which
@@ -254,104 +254,215 @@
     });
   }
 
-  // -------------------------------------------------------------------- shelf
+  // ------------------------------------------------------------- reading room
+  function initReading() {
+    const room = root.querySelector('[data-reading]');
+    if (!room) return;
+    const reading = JSON.parse(room.querySelector('#reading-data').textContent);
+    const tabs = Array.from(room.querySelectorAll('[role="tab"]'));
+    const panels = Array.from(room.querySelectorAll('.reading-panel'));
+    const clusterButtons = Array.from(room.querySelectorAll('[data-cluster]'));
+    const bookNodes = Array.from(room.querySelectorAll('.reading-book'));
+    let activeCluster = '';
+    let atlas = null;
+    let atlasPromise = null;
+    const markers = new Map();
+    const elements = Array.from(room.querySelectorAll('.reading-element'));
+    let currentTrigger = null;
+    let currentNote = null;
+    let hideTimer;
 
-  function initShelf() {
-    const shelf = root.querySelector("[data-shelf]");
-    if (!shelf) return;
-    const tip = shelf.querySelector(".shelf-tip");
-    const spines = Array.from(shelf.querySelectorAll(".spine"));
-    const groups = Array.from(shelf.querySelectorAll(".shelf-group"));
-    let active = null;
-    let hideTimer = 0;
-
-    function hideTip(now) {
-      window.clearTimeout(hideTimer);
-      const go = () => {
-        if (tip) tip.hidden = true;
-        if (active) {
-          active.classList.remove("is-active");
-          active.removeAttribute("aria-describedby");
-          active = null;
-        }
-      };
-      if (now) go();
-      else hideTimer = window.setTimeout(go, 150);
+    function dismiss() {
+      clearTimeout(hideTimer);
+      if (currentNote) currentNote.hidden = true;
+      if (currentTrigger) currentTrigger.removeAttribute('aria-describedby');
+      currentNote = null;
+      currentTrigger = null;
     }
-
-    const filters = shelf.querySelector("[data-shelf-filters]");
-    if (filters) {
-      const buttons = Array.from(filters.querySelectorAll("button[data-section]"));
-      filters.hidden = false;
-      buttons.forEach((btn) =>
-        btn.addEventListener("click", () => {
-          const want = btn.dataset.section;
-          pressOne(buttons, btn);
-          groups.forEach((g) => {
-            g.hidden = !!want && g.dataset.section !== want;
-          });
-          hideTip(true);
-        })
-      );
+    function positionNote() {
+      if (!currentNote || !currentTrigger) return;
+      const rect = currentTrigger.getBoundingClientRect();
+      const width = currentNote.offsetWidth;
+      const height = currentNote.offsetHeight;
+      const left = Math.max(12, Math.min(rect.left, window.innerWidth - width - 12));
+      let top = rect.bottom + 8;
+      if (top + height > window.innerHeight - 12) top = Math.max(12, rect.top - height - 8);
+      currentNote.style.left = left + 'px';
+      currentNote.style.top = top + 'px';
     }
-
-    if (!tip) return;
-
-    function place(spine) {
-      tip.style.left = "0px";
-      tip.style.top = "0px";
-      const box = shelf.getBoundingClientRect();
-      const b = spine.getBoundingClientRect();
-      const w = tip.offsetWidth;
-      const h = tip.offsetHeight;
-      const left = Math.max(0, Math.min(b.left - box.left + b.width / 2 - w / 2, box.width - w));
-      // Above the spine, unless that would tuck it under the sticky nav.
-      let top = b.top - box.top - h - 10;
-      if (b.top - h - 10 < 120) top = b.bottom - box.top + 8;
-      tip.style.left = left + "px";
-      tip.style.top = top + "px";
+    function showNote(trigger, n) {
+      clearTimeout(hideTimer);
+      const panel = trigger.closest('.reading-panel');
+      const note = panel.querySelector('.reading-inspector');
+      const source = document.getElementById('reading-detail-' + n);
+      if (!note || !source) return;
+      if (currentTrigger !== trigger) dismiss();
+      currentTrigger = trigger;
+      currentNote = note;
+      note.innerHTML = source.innerHTML;
+      note.id = panel.id + '-note';
+      note.hidden = false;
+      trigger.setAttribute('aria-describedby', note.id);
+      positionNote();
     }
-
-    function showTip(spine) {
-      window.clearTimeout(hideTimer);
-      if (active && active !== spine) {
-        active.classList.remove("is-active");
-        active.removeAttribute("aria-describedby");
-      }
-      active = spine;
-      const title = spine.querySelector(".spine-title");
-      let meta = spine.dataset.sectionName + " · Folio no. " + spine.dataset.folio;
-      if (spine.classList.contains("is-read")) meta += " · read";
-      // The title repeats the button's own name, so it is hidden from the
-      // description; the section, number and note are what it adds.
-      let html = '<strong aria-hidden="true">' + escapeHtml(title ? title.textContent : "") + "</strong>";
-      html += "<span>" + escapeHtml(meta) + "</span>";
-      if (spine.dataset.note) html += "<span>" + escapeHtml(spine.dataset.note) + "</span>";
-      tip.innerHTML = html;
-      tip.hidden = false;
-      spine.classList.add("is-active");
-      spine.setAttribute("aria-describedby", tip.id);
-      place(spine);
+    function delayDismiss() {
+      clearTimeout(hideTimer);
+      hideTimer = window.setTimeout(() => {
+        if (currentTrigger === document.activeElement || (currentNote && currentNote.contains(document.activeElement))) return;
+        dismiss();
+      }, 220);
     }
+    elements.forEach((el) => {
+      const summary = el.querySelector('summary');
+      summary.addEventListener('click', (e) => { e.preventDefault(); showNote(summary, el.dataset.book); });
+      summary.addEventListener('focus', () => showNote(summary, el.dataset.book));
+      summary.addEventListener('mouseenter', () => showNote(summary, el.dataset.book));
+      summary.addEventListener('mouseleave', delayDismiss);
+      summary.addEventListener('blur', delayDismiss);
+    });
+    room.querySelectorAll('.reading-dot').forEach((dot) => {
+      dot.addEventListener('focus', () => showNote(dot, dot.dataset.book));
+      dot.addEventListener('mouseenter', () => showNote(dot, dot.dataset.book));
+      dot.addEventListener('click', () => showNote(dot, dot.dataset.book));
+      dot.addEventListener('mouseleave', delayDismiss);
+      dot.addEventListener('blur', delayDismiss);
+    });
+    room.querySelectorAll('.reading-inspector').forEach((note) => {
+      note.addEventListener('mouseenter', () => clearTimeout(hideTimer));
+      note.addEventListener('mouseleave', delayDismiss);
+      note.addEventListener('focusout', delayDismiss);
+    });
+    document.addEventListener('keydown', (e) => { if (e.key === 'Escape') dismiss(); });
+    document.addEventListener('pointerdown', (e) => {
+      if (currentNote && !currentNote.contains(e.target) && !currentTrigger.contains(e.target)) dismiss();
+    });
+    window.addEventListener('resize', dismiss);
+    window.addEventListener('scroll', dismiss, {passive: true});
+    room.querySelector('.reading-table-scroll').addEventListener('scroll', dismiss, {passive: true});
 
-    spines.forEach((spine) => {
-      spine.addEventListener("mouseenter", () => showTip(spine));
-      spine.addEventListener("mouseleave", () => {
-        if (document.activeElement !== spine) hideTip();
+    function applyCluster() {
+      bookNodes.forEach((node) => {
+        const match = !activeCluster || (node.dataset.clusters || '').split(' ').includes(activeCluster);
+        node.classList.toggle('is-dimmed', !match);
+        node.classList.toggle('is-connected', !!activeCluster && match);
       });
-      spine.addEventListener("focus", () => showTip(spine));
-      spine.addEventListener("blur", () => hideTip());
-      spine.addEventListener("click", () => showTip(spine));
+      const shared = new Map();
+      markers.forEach((marker, n) => {
+        const b = reading.books.find((book) => book.n === n);
+        shared.set(marker, shared.get(marker) || !activeCluster || b.clusters.includes(activeCluster));
+      });
+      shared.forEach((match, marker) => marker.setOpacity(match ? 1 : 0.25));
+    }
+    clusterButtons.forEach((btn) => btn.addEventListener('click', () => {
+      activeCluster = btn.dataset.cluster;
+      pressOne(clusterButtons, btn);
+      applyCluster();
+      dismiss();
+    }));
+    room.querySelector('.reading-clusters').hidden = false;
+
+    room.querySelectorAll('.reading-library').forEach((card) => {
+      const toggle = card.querySelector('.reading-card-toggle');
+      const front = card.querySelector('.reading-card-front');
+      const back = card.querySelector('.reading-card-back');
+      toggle.hidden = false;
+      back.setAttribute('aria-hidden', 'true');
+      function flip() {
+        const flipped = card.classList.toggle('is-flipped');
+        toggle.setAttribute('aria-pressed', String(flipped));
+        front.setAttribute('aria-hidden', String(flipped));
+        back.setAttribute('aria-hidden', String(!flipped));
+      }
+      toggle.addEventListener('click', flip);
+      card.addEventListener('click', (e) => { if (!e.target.closest('button, a')) flip(); });
     });
-    // The tooltip can be hovered without vanishing, and Esc dismisses it.
-    tip.addEventListener("mouseenter", () => window.clearTimeout(hideTimer));
-    tip.addEventListener("mouseleave", () => hideTip());
-    document.addEventListener("keydown", (e) => {
-      if (e.key === "Escape" && !tip.hidden) hideTip(true);
+
+    function ensureAtlas() {
+      const el = room.querySelector('#reading-map');
+      const status = room.querySelector('.reading-map-status');
+      if (atlas) { window.requestAnimationFrame(() => atlas.invalidateSize()); return; }
+      if (atlasPromise) return;
+      status.textContent = '正在打开地图 / Opening the atlas…';
+      atlasPromise = loadLeaflet(el).then((L) => {
+        el.hidden = false;
+        atlas = L.map(el, {scrollWheelZoom: false, minZoom: 1, worldCopyJump: true}).setView([28, 10], 2);
+        let tiles;
+        function setTiles() {
+          if (tiles) atlas.removeLayer(tiles);
+          tiles = L.tileLayer(document.documentElement.getAttribute('data-theme') === 'dark' ? TILES.dark : TILES.light,
+            {attribution: ATTRIBUTION, maxNativeZoom: 16, maxZoom: 18}).addTo(atlas);
+          tiles.on('tileerror', () => { status.textContent = '底图暂不可用；地点清单仍可用。 / Basemap unavailable; use the place index below.'; });
+        }
+        setTiles();
+        new MutationObserver(setTiles).observe(document.documentElement, {attributes: true, attributeFilter: ['data-theme']});
+        // Books sharing a location share one pin, so none is buried underneath another.
+        const locations = new Map();
+        reading.books.forEach((book) => {
+          if (!book.place || !validLatLng(book.place.lat, book.place.lon)) return;
+          const key = book.place.lat + ',' + book.place.lon;
+          if (!locations.has(key)) locations.set(key, []);
+          locations.get(key).push(book);
+        });
+        locations.forEach((books) => {
+          const first = books[0];
+          const group = reading.groups.find((g) => g.id === first.group);
+          const marker = L.marker([first.place.lat, first.place.lon], {
+            title: books.map((b) => b.title).join(' · '),
+            icon: L.divIcon({className: 'reading-pin', iconSize: [28, 32], iconAnchor: [14, 32],
+              html: '<span style="--book-color:' + escapeHtml(group.color) + '">' + (books.length > 1 ? books.length : escapeHtml(first.symbol)) + '</span>'})
+          }).addTo(atlas);
+          const popup = books.map((b) => '<strong>' + escapeHtml(b.title) + '</strong><span>' + escapeHtml(b.place.name) + '</span><p>' + escapeHtml(b.review) + '</p>').join('<hr>');
+          marker.bindPopup('<div class="reading-map-popup">' + popup + '</div>', {maxHeight: 300});
+          books.forEach((b) => markers.set(b.n, marker));
+        });
+        room.querySelectorAll('[data-map-book]').forEach((button) => { button.disabled = !markers.has(Number(button.dataset.mapBook)); });
+        // A shared pin remains visible if any of its books belongs to the selected thread.
+        applyCluster();
+        atlas.on('focus click', () => atlas.scrollWheelZoom.enable());
+        atlas.on('blur', () => atlas.scrollWheelZoom.disable());
+        window.requestAnimationFrame(() => atlas.invalidateSize());
+        status.textContent = '点击或用键盘选择书签；同地的书共用一针。 / Select a pin; books at the same place share one. The complete index is below.';
+      }).catch(() => {
+        if (atlas) { atlas.remove(); atlas = null; }
+        el.hidden = true;
+        room.querySelectorAll('[data-map-book]').forEach((button) => { button.disabled = true; });
+        status.textContent = '地图暂不可用，请看下面的地点清单。 / Map unavailable; all book places are listed below.';
+      });
+    }
+    room.querySelectorAll('[data-map-book]').forEach((button) => button.addEventListener('click', () => {
+      const marker = markers.get(Number(button.dataset.mapBook));
+      if (atlas && marker) {
+        atlas.setView(marker.getLatLng(), 6, {animate: !prefersReduced()});
+        marker.openPopup();
+        room.querySelector('#reading-map').focus({preventScroll: true});
+        room.querySelector('#reading-map').scrollIntoView({block: 'nearest', behavior: prefersReduced() ? 'auto' : 'smooth'});
+      }
+    }));
+    function activate(tab, focus) {
+      dismiss();
+      tabs.forEach((t) => {
+        const selected = t === tab;
+        t.setAttribute('aria-selected', String(selected));
+        t.tabIndex = selected ? 0 : -1;
+      });
+      panels.forEach((panel) => { panel.hidden = panel.id !== tab.getAttribute('aria-controls'); });
+      if (focus) tab.focus();
+      if (tab.getAttribute('aria-controls') === 'reading-world') ensureAtlas();
+    }
+    tabs.forEach((tab, i) => {
+      tab.addEventListener('click', () => activate(tab, false));
+      tab.addEventListener('keydown', (e) => {
+        let target;
+        if (e.key === 'ArrowRight') target = (i + 1) % tabs.length;
+        if (e.key === 'ArrowLeft') target = (i - 1 + tabs.length) % tabs.length;
+        if (e.key === 'Home') target = 0;
+        if (e.key === 'End') target = tabs.length - 1;
+        if (target !== undefined) { e.preventDefault(); activate(tabs[target], true); }
+      });
     });
-    window.addEventListener("resize", () => hideTip(true));
-    // A narrow shelf row scrolls sideways; the tooltip would be left behind.
-    shelf.querySelectorAll(".shelf-row").forEach((row) => row.addEventListener("scroll", () => hideTip(true), { passive: true }));
+    room.classList.add('is-enhanced');
+    activate(tabs[0], false);
+    room.querySelector('.reading-tabs').hidden = false;
   }
 
   // ---------------------------------------------------------------- trip map
@@ -363,10 +474,11 @@
   };
   const ATTRIBUTION = "Tiles &copy; Esri &mdash; Esri, DeLorme, NAVTEQ";
 
-  // Leaflet itself (script and stylesheet) is only fetched once the road-trip
-  // section is getting close; the URLs and SRI hashes come from _config.yml via
-  // data attributes on #trip-map.
+  // Both maps share one script/style promise. URLs and SRI hashes come from
+  // _config.yml via each map container; the book atlas loads on tab selection.
+  let leafletPromise = null;
   function loadLeaflet(el) {
+    if (leafletPromise) return leafletPromise;
     if (window.L) return Promise.resolve(window.L);
     const d = el.dataset;
     if (!d.leafletJs || !d.leafletCss) return Promise.reject(new Error("no Leaflet URL"));
@@ -394,7 +506,8 @@
       script.onerror = reject;
       document.head.appendChild(script);
     });
-    return Promise.all([js, css]).then((loaded) => loaded[0]);
+    leafletPromise = Promise.all([js, css]).then((loaded) => loaded[0]);
+    return leafletPromise;
   }
 
   function validLatLng(lat, lon) {
@@ -685,7 +798,7 @@
     root.classList.add("outside-reveal");
   }
 
-  [initStats, initNav, initPhotos, initShelf, initMap, initReveal].forEach((init) => {
+  [initStats, initNav, initPhotos, initReading, initMap, initReveal].forEach((init) => {
     try {
       init();
     } catch (err) {

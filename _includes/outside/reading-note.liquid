@@ -1,0 +1,7 @@
+{%- assign b = include.book -%}
+<strong class="reading-note-title">{{ b.title }}</strong>
+{% if b.title_en %}<span class="reading-note-en">{{ b.title_en }}</span>{% endif %}
+<span class="reading-note-author">{{ b.author }}{% if b.tag %} · {{ b.tag }}{% endif %}</span>
+<p lang="zh">{{ b.review }}</p>
+<div class="reading-margins" lang="zh">{% for line in b.unexpected %}<p>{{ line }}</p>{% endfor %}</div>
+{% if b.pages %}<a class="reading-page-source" href="{{ b.pages_source }}" target="_blank" rel="noopener">{{ b.pages }} 页 / pages · 来源 / source ↗</a>{% endif %}

@@ -1,134 +1,1672 @@
-# The reading shelf on /outside/: the thirty-six plays of the 1623 First Folio
-# in the Folio's own order and its own three sections. Troilus and Cressida is
-# missing from the Folio's catalogue but is printed at the head of the
-# tragedies, which is where it sits here.
-#
-#   device:      the e-reader on the "Reading now" card
-#   device_note: the line under it
-#   now_reading: optional, the title currently open on it
-#
-# Per play (all optional, leave blank if unsure):
-#   read: true   marks the spine as read (a key appears once any are)
-#   note: one line shown when the spine is hovered or focused
-#
-device: Kindle Paperwhite
-device_note: plain front-lit e-ink
-now_reading:
-
-sections:
-  - name: Comedies
-    plays:
-      - title: The Tempest
-        read:
-        note:
-      - title: The Two Gentlemen of Verona
-        read:
-        note:
-      - title: The Merry Wives of Windsor
-        read:
-        note:
-      - title: Measure for Measure
-        read:
-        note:
-      - title: The Comedy of Errors
-        read:
-        note:
-      - title: Much Ado About Nothing
-        read:
-        note:
-      - title: Love's Labour's Lost
-        read:
-        note:
-      - title: A Midsummer Night's Dream
-        read:
-        note:
-      - title: The Merchant of Venice
-        read:
-        note:
-      - title: As You Like It
-        read:
-        note:
-      - title: The Taming of the Shrew
-        read:
-        note:
-      - title: All's Well That Ends Well
-        read:
-        note:
-      - title: Twelfth Night
-        read:
-        note:
-      - title: The Winter's Tale
-        read:
-        note:
-
-  - name: Histories
-    plays:
-      - title: King John
-        read:
-        note:
-      - title: Richard II
-        read:
-        note:
-      - title: Henry IV, Part 1
-        read:
-        note:
-      - title: Henry IV, Part 2
-        read:
-        note:
-      - title: Henry V
-        read:
-        note:
-      - title: Henry VI, Part 1
-        read:
-        note:
-      - title: Henry VI, Part 2
-        read:
-        note:
-      - title: Henry VI, Part 3
-        read:
-        note:
-      - title: Richard III
-        read:
-        note:
-      - title: Henry VIII
-        read:
-        note:
-
-  - name: Tragedies
-    plays:
-      - title: Troilus and Cressida
-        read:
-        note:
-      - title: Coriolanus
-        read:
-        note:
-      - title: Titus Andronicus
-        read:
-        note:
-      - title: Romeo and Juliet
-        read:
-        note:
-      - title: Timon of Athens
-        read:
-        note:
-      - title: Julius Caesar
-        read:
-        note:
-      - title: Macbeth
-        read:
-        note:
-      - title: Hamlet
-        read:
-        note:
-      - title: King Lear
-        read:
-        note:
-      - title: Othello
-        read:
-        note:
-      - title: Antony and Cleopatra
-        read:
-        note:
-      - title: Cymbeline
-        read:
-        note:
+---
+groups:
+- id: murakami
+  label: 村上春树 / Murakami
+  color: "#9575b5"
+- id: mystery
+  label: 推理 / Mystery
+  color: "#6887b6"
+- id: architecture
+  label: 建筑 / Architecture
+  color: "#c58c56"
+- id: travel
+  label: 旅行与非虚构 / Travel & nonfiction
+  color: "#5e9b8b"
+- id: ai
+  label: 人工智能 / AI
+  color: "#7e9f54"
+- id: history
+  label: 历史 / History
+  color: "#b37662"
+- id: psychology
+  label: 心理 / Psychology
+  color: "#cb8297"
+- id: fiction
+  label: 文学 / Literary fiction
+  color: "#8394a8"
+- id: art
+  label: 艺术、设计与摄影 / Art, design & photography
+  color: "#b39b4b"
+- id: poetry
+  label: 诗 / Poetry
+  color: "#a185aa"
+clusters:
+- id: woolf
+  label: 伍尔夫 / Woolf
+- id: austen
+  label: 奥斯丁 / Austen
+- id: christie
+  label: 克里斯蒂 / Christie
+- id: marquez
+  label: 马尔克斯 / García Márquez
+- id: higashino
+  label: 东野 / Higashino
+- id: mccarthy
+  label: 同行的一对 / McCarthy
+- id: chandler
+  label: 钱德勒—村上 / Chandler–Murakami
+- id: shanghai
+  label: 两种上海 / Shanghai
+- id: translations
+  label: 一书两译 / Two translations
+books:
+- "n": 1
+  symbol: Aa
+  title: 夏帆
+  author: 村上春树
+  group: murakami
+  review: 新书先占一个位置，我的待办清单表示不服。
+  unexpected:
+  - 2026，书架也有新成员。
+  - 搬家的纸箱先别封口。
+  title_en: The Tale of KAHO
+  map:
+    x: 0.824
+    "y": 0.298
+  clusters:
+  - chandler
+- "n": 2
+  symbol: Ab
+  title: 小城与不确定性的墙
+  author: 村上春树
+  group: murakami
+  review: 不确定性已经够多了，我居然还主动翻开这本。
+  unexpected:
+  - 给没想明白的事留个座位。
+  - 今晚不急着下结论。
+  place:
+    name: 东京 Tokyo
+    lat: 35.6762
+    lon: 139.6503
+  map:
+    x: 0.736
+    "y": 0.4
+  clusters:
+  - chandler
+- "n": 3
+  symbol: Ac
+  title: 当我谈跑步时，我谈些什么
+  author: 村上春树
+  group: murakami
+  review: 读跑步的书很积极，穿跑鞋这一步还得商量。
+  unexpected:
+  - MD跑完不算我跑完。
+  - 椅子对此没有意见。
+  title_en: What I Talk About When I Talk About Running
+  map:
+    x: 0.89
+    "y": 0.502
+  clusters:
+  - chandler
+- "n": 4
+  symbol: Ad
+  title: 斯普特尼克恋人
+  author: 村上春树（林少华译）
+  group: murakami
+  review: 同一个故事买两遍，理由是耳朵想听两种中文。
+  unexpected:
+  - 另一本叫《人造卫星情人》。
+  - 这次重复购买有理有据。
+  title_en: Sputnik Sweetheart
+  place:
+    name: 东京 Tokyo
+    lat: 35.6762
+    lon: 139.6503
+  map:
+    x: 0.802
+    "y": 0.604
+  clusters:
+  - chandler
+  - translations
+- "n": 5
+  symbol: Ae
+  title: 人造卫星情人
+  author: 村上春树（赖明珠译）
+  group: murakami
+  review: 换一种译法重逢，连停顿都值得多坐一会儿。
+  unexpected:
+  - 和林少华译本并排放。
+  - 书架允许一题多解。
+  title_en: Sputnik Sweetheart
+  place:
+    name: 东京 Tokyo
+    lat: 35.6762
+    lon: 139.6503
+  map:
+    x: 0.714
+    "y": 0.264
+  clusters:
+  - chandler
+  - translations
+- "n": 6
+  symbol: Af
+  title: 隐蔽嫌疑人
+  author: 陈浩基
+  group: mystery
+  review: 我负责怀疑所有人，作者负责让我收回意见。
+  unexpected:
+  - 这页先不折角。
+  - 免得暴露我猜错的位置。
+  place:
+    name: 香港 Hong Kong
+    lat: 22.3193
+    lon: 114.1694
+  map:
+    x: 0.888
+    "y": 0.386
+  clusters: []
+- "n": 7
+  symbol: Ag
+  title: 白夜行
+  author: 东野圭吾
+  group: mystery
+  review: 翻页很快，缓过来很慢；今晚先把灯留着。
+  unexpected:
+  - 不适合接着回工作邮件。
+  - 给自己留一点安静。
+  place:
+    name: 大阪 Osaka
+    lat: 34.6937
+    lon: 135.5023
+  map:
+    x: 0.8
+    "y": 0.16999999999999998
+  clusters:
+  - higashino
+- "n": 8
+  symbol: Ah
+  title: 恶意
+  author: 东野圭吾
+  group: mystery
+  review: 我的自信推理，保质期通常不超过下一章。
+  unexpected:
+  - 读完再讨论。
+  - 现在一个字也不多说。
+  map:
+    x: 0.712
+    "y": 0.59
+  clusters:
+  - higashino
+- "n": 9
+  symbol: Ai
+  title: 地雷格力高
+  author: 青崎有吾
+  group: mystery
+  review: 脑子说再来一轮，睡眠说你们自己看着办。
+  unexpected:
+  - 认真想过才好意思认输。
+  - 便签上全是临时答案。
+  map:
+    x: 0.866
+    "y": 0.25
+  clusters: []
+- "n": 10
+  symbol: Aj
+  title: 翠鸟谋杀案
+  author: 安东尼·霍洛维茨
+  group: mystery
+  review: 看推理时我很会立论，也很会悄悄撤回。
+  unexpected:
+  - 侦探席暂时借我坐坐。
+  - 结案以前不发言。
+  title_en: Marble Hall Murders
+  map:
+    x: 0.778
+    "y": 0.352
+  clusters: []
+- "n": 11
+  symbol: Ak
+  title: 漫长的告别
+  author: Raymond Chandler
+  group: mystery
+  review: 在熟悉的城市名字旁边，读出一点不熟悉的心情。
+  unexpected:
+  - 村上也翻译过这本。
+  - 这条线从洛杉矶接回书架。
+  title_en: The Long Goodbye
+  place:
+    name: 洛杉矶 Los Angeles
+    lat: 34.0522
+    lon: -118.2437
+  map:
+    x: 0.69
+    "y": 0.454
+  clusters:
+  - chandler
+- "n": 12
+  symbol: Al
+  title: 奉命谋杀
+  author: Agatha Christie
+  group: mystery
+  review: 猜得很认真，猜对与否先保密，主要是给我留点面子。
+  unexpected:
+  - 和《东方快车谋杀案》挨着。
+  - 便签先当临时侦探证。
+  title_en: Ordeal by Innocence
+  map:
+    x: 0.844
+    "y": 0.556
+  clusters:
+  - christie
+- "n": 13
+  symbol: Am
+  title: 东方快车谋杀案
+  author: Agatha Christie
+  group: mystery
+  review: 车先开着，我的判断晚点到站。
+  unexpected:
+  - 只讨论阅读心情。
+  - 绝不讨论谁值得怀疑。
+  title_en: Murder on the Orient Express
+  place:
+    name: 南斯拉夫境内的列车 / near Vinkovci
+    lat: 45.2883
+    lon: 18.8047
+  map:
+    x: 0.756
+    "y": 0.216
+  clusters:
+  - christie
+- "n": 14
+  symbol: An
+  title: 放学后
+  author: 东野圭吾
+  group: mystery
+  review: 本来想读一章就放学，结果又给自己加了课。
+  unexpected:
+  - 与《恶意》《白夜行》同组。
+  - 铃响了也不急着合书。
+  map:
+    x: 0.91
+    "y": 0.318
+  clusters:
+  - higashino
+- "n": 15
+  symbol: Ao
+  title: 莫斯科有高楼
+  author: 凯瑟琳·祖博维奇
+  group: architecture
+  review: 抬头看楼之前，先把目光往纸上多放一会儿。
+  unexpected:
+  - 广角镜头暂时休息。
+  - 建筑也值得慢慢对焦。
+  title_en: Moscow Monumental
+  place:
+    name: 莫斯科 Moscow
+    lat: 55.7558
+    lon: 37.6173
+  map:
+    x: 0.382
+    "y": 0.7
+  clusters: []
+- "n": 16
+  symbol: Ap
+  title: 上海房子
+  author: 席闻雷、冯立
+  group: architecture
+  review: 看房子看得很开心，幸好这次不需要交房租。
+  unexpected:
+  - 和那本上海喜剧研究隔空串门。
+  - 窗边的位置留给光。
+  title_en: The Houses of Shanghai
+  place:
+    name: 上海 Shanghai
+    lat: 31.2304
+    lon: 121.4737
+  map:
+    x: 0.294
+    "y": 0.802
+  clusters:
+  - shanghai
+- "n": 17
+  symbol: Aq
+  title: 穿墙透壁：剖视中国经典古建筑
+  author: 李乾朗
+  group: architecture
+  review: 终于能穿墙看一眼，还不用担心相机磕到门框。
+  unexpected:
+  - 剖面图让我多停了几页。
+  - 旋转对称之外还有好看的细节。
+  map:
+    x: 0.448
+    "y": 0.904
+  clusters: []
+- "n": 18
+  symbol: Ar
+  title: 贝聿铭全集
+  author: Philip Jodidio、Janet Adams Strong（主编）
+  group: architecture
+  review: 看完先不谈懂建筑，只想把直线拍得更端正。
+  unexpected:
+  - 相机网格线开起来。
+  - 手里的咖啡先放平。
+  title_en: I.M. Pei
+  map:
+    x: 0.36
+    "y": 0.564
+  clusters: []
+- "n": 19
+  symbol: As
+  title: 建筑史诗第二卷·营造天书
+  author: 王南
+  group: architecture
+  review: 纸上的建筑可以反复走进去，膝盖对此很满意。
+  unexpected:
+  - 这回不用查停车位。
+  - 一张图能看好久。
+  map:
+    x: 0.272
+    "y": 0.666
+  clusters: []
+- "n": 20
+  symbol: At
+  title: 看不见的中东
+  author: 姚璐
+  group: travel
+  review: 把地图放大一点，也把自己的想当然缩小一点。
+  unexpected:
+  - 不急着圈出打卡点。
+  - 先认真听别人说话。
+  place:
+    name: 中东 Middle East · regional pin
+    lat: 31.5
+    lon: 36
+  map:
+    x: 0.566
+    "y": 0.668
+  clusters: []
+- "n": 21
+  symbol: Au
+  title: 凝神时刻
+  author: 邓安庆
+  group: travel
+  review: 读得慢一点，好像一天也没有那么赶。
+  unexpected:
+  - 把通知先关掉。
+  - 散步也不用记录里程。
+  map:
+    x: 0.478
+    "y": 0.77
+  clusters: []
+- "n": 22
+  symbol: Av
+  title: 活水
+  author: Robert Macfarlane
+  group: travel
+  review: 以后拍河，想在快门之外多留一点时间。
+  unexpected:
+  - 书走过厄瓜多尔、印度和加拿大。
+  - 地图先标印度的阿迪亚河。
+  title_en: Is a River Alive?
+  place:
+    name: 阿迪亚河 Adyar River · India
+    lat: 13.0105
+    lon: 80.252
+  map:
+    x: 0.39
+    "y": 0.43
+  clusters: []
+- "n": 23
+  symbol: Aw
+  title: 陌生的阿富汗
+  author: 班卓
+  group: travel
+  review: 读之前先承认陌生，比急着发表意见舒服。
+  unexpected:
+  - 空白留得多一点。
+  - 旅行清单不是标准答案。
+  place:
+    name: 阿富汗 Afghanistan · regional pin
+    lat: 34.5553
+    lon: 69.2075
+  map:
+    x: 0.544
+    "y": 0.532
+  clusters: []
+- "n": 24
+  symbol: Ax
+  title: 燃烧的龙舌兰
+  author: 班卓
+  group: travel
+  review: 先跟着书去墨西哥，行李额度这次很宽裕。
+  unexpected:
+  - 副驾驶不用报路。
+  - 狗的座位也不用挪。
+  place:
+    name: 墨西哥 Mexico · regional pin
+    lat: 19.4326
+    lon: -99.1332
+  map:
+    x: 0.456
+    "y": 0.634
+  clusters: []
+- "n": 25
+  symbol: Ay
+  title: 盖特伍德奶奶去徒步
+  author: Ben Montgomery
+  group: travel
+  review: 读完想出门走走，先从不找借口开始。
+  unexpected:
+  - 鞋带比计划更需要先处理。
+  - 今天也可以只走一小段。
+  title_en: Grandma Gatewood’s Walk
+  place:
+    name: 阿巴拉契亚步道 Appalachian Trail · one point
+    lat: 37.396
+    lon: -79.861
+  map:
+    x: 0.61
+    "y": 0.736
+  clusters: []
+- "n": 26
+  symbol: Az
+  title: 另一个国度
+  author: 杨潇
+  group: travel
+  review: 看别人怎么走，也检查自己习惯怎么想。
+  unexpected:
+  - 公路旅行之外还有步行的速度。
+  - 导航暂时静音。
+  place:
+    name: 德国 Germany · regional pin
+    lat: 51
+    lon: 10
+  map:
+    x: 0.522
+    "y": 0.396
+  clusters: []
+- "n": 27
+  symbol: Ba
+  title: 世界是用来玩的
+  author: 猴面包的树
+  group: travel
+  review: 标题先替我批了假，日历还在审批。
+  unexpected:
+  - 带相机是加分项。
+  - 玩得开心不需要成绩单。
+  map:
+    x: 0.434
+    "y": 0.498
+  clusters: []
+- "n": 28
+  symbol: Bb
+  title: 徐霞客游记：名山插图珍藏版
+  author: 徐霞客
+  group: travel
+  review: 看山看得很投入，今天的爬升暂时由眼睛完成。
+  unexpected:
+  - 地图标黄山，只是旅程的一站。
+  - 插图值得单独多看一次。
+  place:
+    name: 黄山 Huangshan
+    lat: 30.134
+    lon: 118.165
+  map:
+    x: 0.588
+    "y": 0.6
+  clusters: []
+- "n": 29
+  symbol: Bc
+  title: 克拉克森的农场
+  author: Jeremy Clarkson
+  group: travel
+  review: 隔着书页看忙乱，居然也是一种放松。
+  unexpected:
+  - 今日不写效率报告。
+  - 笑出声不用压低音量。
+  title_en: Diddly Squat
+  place:
+    name: 科茨沃尔德 Cotswolds
+    lat: 51.929
+    lon: -1.545
+  map:
+    x: 0.5
+    "y": 0.87
+  clusters: []
+- "n": 30
+  symbol: Bd
+  title: 长书当诉
+  author: Diana Athill
+  group: travel
+  review: 有人肯慢慢说，我就愿意慢慢听。
+  unexpected:
+  - 长一点也没关系。
+  - 回复可以等心里想清楚。
+  title_en: Instead of a Letter
+  map:
+    x: 0.412
+    "y": 0.804
+  clusters: []
+- "n": 31
+  symbol: Be
+  title: 夏季走过山间
+  author: John Muir
+  group: travel
+  review: 还没背起包，眼睛已经想往山里跑了。
+  unexpected:
+  - 优胜美地先在地图上见。
+  - 相机电池记得充满。
+  title_en: My First Summer in the Sierra
+  place:
+    name: 优胜美地 Yosemite
+    lat: 37.745
+    lon: -119.594
+  map:
+    x: 0.566
+    "y": 0.464
+  clusters: []
+- "n": 32
+  symbol: Bf
+  title: 挑战者号的悲歌
+  author: Adam Higginbotham
+  group: travel
+  review: 读得很沉，合书后不想立刻把安静填满。
+  unexpected:
+  - 科研里的疑问值得说出口。
+  - 今天不催自己读完。
+  title_en: Challenger
+  place:
+    name: 卡纳维拉尔角 Cape Canaveral
+    lat: 28.608
+    lon: -80.604
+  map:
+    x: 0.478
+    "y": 0.08
+  clusters: []
+- "n": 33
+  symbol: Bg
+  title: 给忙碌者的世界神话传说·星空篇
+  author: Willow Winsham
+  group: travel
+  review: 忙到没空抬头时，先借几页把脖子松一松。
+  unexpected:
+  - 不用带三脚架。
+  - 今晚想真的看看天。
+  map:
+    x: 0.39
+    "y": 0.668
+  clusters: []
+- "n": 34
+  symbol: Bh
+  title: 深入浅出神经网络与深度学习
+  author: Michael Nielsen
+  group: ai
+  review: 标题说深入浅出，我负责在深入的地方多待一会儿。
+  unexpected:
+  - 给分子做AI也得补基本功。
+  - 懂了和跑通了是两件事。
+  title_en: Neural Networks and Deep Learning
+  map:
+    x: 0.124
+    "y": 0.85
+  clusters: []
+- "n": 35
+  symbol: Bi
+  title: 硅、神经与智能体：人工智能的觉醒
+  author: 王亚晖
+  group: ai
+  review: 白天想模型，晚上还看模型；休息方式有待优化。
+  unexpected:
+  - 电解液的任务明天再跑。
+  - 今晚允许只翻书。
+  map:
+    x: 0.04
+    "y": 0.51
+  clusters: []
+- "n": 36
+  symbol: Bj
+  title: 晚明
+  author: 柯山梦
+  group: history
+  review: 读着读着忘了时间，抬头发现我也该吃饭了。
+  unexpected:
+  - 历史小说也会让日历失灵。
+  - 先把晚饭救回来。
+  place:
+    name: 晚明江南 Ming Jiangnan · regional pin
+    lat: 32.06
+    lon: 118.797
+  map:
+    x: 0.59
+    "y": 0.382
+  clusters: []
+- "n": 37
+  symbol: Bk
+  title: 绍宋
+  author: 榴弹怕水
+  group: history
+  review: 给长篇留足时间，比给自己立阅读军令状管用。
+  unexpected:
+  - 杭州先在纸上走走。
+  - 不立今晚读完的flag。
+  place:
+    name: 南宋杭州 Southern Song Hangzhou
+    lat: 30.25
+    lon: 120.15
+  map:
+    x: 0.502
+    "y": 0.484
+  clusters: []
+- "n": 38
+  symbol: Bl
+  title: 康熙的红票：全球化中的清朝
+  author: 孙立天
+  group: history
+  review: 看历史时最喜欢发现，自己的旧印象还可以修改。
+  unexpected:
+  - 便签不是最终结论。
+  - 有空再翻回去对照。
+  place:
+    name: 北京 Beijing
+    lat: 39.904
+    lon: 116.407
+  map:
+    x: 0.414
+    "y": 0.586
+  clusters: []
+- "n": 39
+  symbol: Bm
+  title: 安史之乱：历史、宣传与神话
+  author: 张诗坪、胡可奇
+  group: history
+  review: 先慢一点下判断，这条阅读习惯也适合带回实验室。
+  unexpected:
+  - 问题旁边多留一点空。
+  - 不把熟悉当成知道。
+  place:
+    name: 长安 / 西安 Chang’an / Xi’an
+    lat: 34.26
+    lon: 108.94
+  map:
+    x: 0.568
+    "y": 0.246
+  clusters: []
+- "n": 40
+  symbol: Bn
+  title: 西塔：一个东北街区中的空间、国家与日常
+  author: 宋念申
+  group: history
+  review: 一个街区值得一本书，我走街串巷的速度又该慢了。
+  unexpected:
+  - 相机喜欢街角。
+  - 书提醒我别只看构图。
+  place:
+    name: 沈阳 Shenyang
+    lat: 41.8057
+    lon: 123.4315
+  map:
+    x: 0.48
+    "y": 0.348
+  clusters: []
+- "n": 41
+  symbol: Bo
+  title: 妩媚的忠臣：隋唐变局中的魏徵
+  author: 赵帅淇
+  group: history
+  review: 书名先把我拉住，后面就把自己的成见放一放。
+  unexpected:
+  - 人物标签先别贴死。
+  - 便签可以随时改。
+  place:
+    name: 长安 / 西安 Chang’an / Xi’an
+    lat: 34.26
+    lon: 108.94
+  map:
+    x: 0.392
+    "y": 0.45
+  clusters: []
+- "n": 42
+  symbol: Bp
+  title: 秦二世必须死
+  author: 马伯庸
+  group: history
+  review: 标题很坚决，我只负责翻页，绝不替剧情抢答。
+  unexpected:
+  - 这是小说，放心入座。
+  - 答案留在书里。
+  place:
+    name: 咸阳 Xianyang
+    lat: 34.329
+    lon: 108.708
+  map:
+    x: 0.546
+    "y": 0.552
+  clusters: []
+- "n": 43
+  symbol: Bq
+  title: 爱的辛劳
+  author: Stephen Grosz
+  group: psychology
+  review: 有些页想慢慢看，像给自己留一杯温水。
+  unexpected:
+  - 不用每句话都立刻解释。
+  - 安静也可以算回应。
+  title_en: Love’s Labour
+  map:
+    x: 0.178
+    "y": 0.604
+  clusters: []
+- "n": 44
+  symbol: Br
+  title: 也许你该找个人聊聊
+  author: Lori Gottlieb
+  group: psychology
+  review: 这句书名很实用，尤其适合我说“没事”的时候。
+  unexpected:
+  - 不用把情绪整理好才开口。
+  - 听人说话也别急着debug。
+  title_en: Maybe You Should Talk to Someone
+  map:
+    x: 0.09
+    "y": 0.264
+  clusters: []
+- "n": 45
+  symbol: Bs
+  title: 被讨厌的勇气
+  author: 岸见一郎、古贺史健
+  group: psychology
+  review: 道理先记下，真轮到自己时还得慢慢练。
+  unexpected:
+  - 不是一次性通关的任务。
+  - 今天少揣测一条消息。
+  title_en: The Courage to Be Disliked
+  map:
+    x: 0.244
+    "y": 0.366
+  clusters: []
+- "n": 46
+  symbol: Bt
+  title: 不原谅也没关系
+  author: Pete Walker
+  group: psychology
+  review: 读到可以不勉强自己的地方，我把肩膀放低了一点。
+  unexpected:
+  - 这本不设阅读期限。
+  - 觉得累了就合上。
+  title_en: Complex PTSD
+  map:
+    x: 0.156
+    "y": 0.468
+  clusters: []
+- "n": 47
+  symbol: Bu
+  title: 焦虑者的世界
+  author: 张鹂
+  group: psychology
+  review: 原来焦虑也值得放远一点看，不只盯着自己。
+  unexpected:
+  - 搬去OSU的清单可以分几天写。
+  - 今天先做好一件事。
+  title_en: Anxious China
+  place:
+    name: 中国 China · regional pin
+    lat: 35.86
+    lon: 104.19
+  map:
+    x: 0.31
+    "y": 0.57
+  clusters: []
+- "n": 48
+  symbol: Bv
+  title: 蛤蟆先生去看心理医生
+  author: Robert de Board
+  group: psychology
+  review: 读得很亲切，今天也试着对自己客气一点。
+  unexpected:
+  - 不给心情打绩效分。
+  - 慢一点回答也可以。
+  title_en: Counselling for Toads
+  map:
+    x: 0.222
+    "y": 0.23
+  clusters: []
+- "n": 49
+  symbol: Bw
+  title: 啸风山庄
+  author: Emily Brontë（赖慈芸译）
+  group: fiction
+  review: 书名有风，我读完想把外套裹紧一点。
+  unexpected:
+  - 译名也有自己的声音。
+  - 今晚喝点热的。
+  title_en: Wuthering Heights
+  place:
+    name: 约克郡 Yorkshire
+    lat: 53.831
+    lon: -1.954
+  map:
+    x: 0.694
+    "y": 0.312
+  shade: european
+  clusters: []
+- "n": 50
+  symbol: Bx
+  title: 天色已晚
+  author: Claire Keegan（马爱农译）
+  group: fiction
+  review: 薄薄一本，也能让我在最后一页多坐一会儿。
+  unexpected:
+  - 不能按厚度安排缓冲时间。
+  - 读完先不刷手机。
+  title_en: So Late in the Day
+  place:
+    name: 都柏林 Dublin
+    lat: 53.35
+    lon: -6.26
+  map:
+    x: 0.848
+    "y": 0.414
+  shade: european
+  clusters: []
+- "n": 51
+  symbol: By
+  title: 伊加利亚的女儿们
+  author: Gerd Brantenberg
+  group: fiction
+  review: 换个角度看熟悉的词，我的脑子挪了挪椅子。
+  unexpected:
+  - 习惯用语也值得回头看。
+  - 今天少说一句“本来就这样”。
+  title_en: Egalia’s Daughters
+  place:
+    name: 挪威 Norway · regional pin
+    lat: 60.47
+    lon: 8.47
+  map:
+    x: 0.76
+    "y": 0.516
+  shade: european
+  clusters: []
+- "n": 52
+  symbol: Bz
+  title: 本质之书
+  author: Mohamed Mbougar Sarr
+  group: fiction
+  review: 有些书让我想继续找书，这本属于会扩张书单的那类。
+  unexpected:
+  - 从塞内加尔连到巴黎。
+  - 书架空间需要重新估算。
+  place:
+    name: 巴黎 Paris · one setting
+    lat: 48.8566
+    lon: 2.3522
+  map:
+    x: 0.672
+    "y": 0.176
+  shade: world
+  clusters: []
+- "n": 53
+  symbol: Ca
+  title: 巴纳姆博物馆
+  author: Steven Millhauser
+  group: fiction
+  review: 允许自己读得有点迷糊，反而逛得很开心。
+  unexpected:
+  - 不带讲解器也可以。
+  - 好奇心先走在前面。
+  title_en: The Barnum Museum
+  place:
+    name: 康涅狄格 Connecticut · regional pin
+    lat: 41.6
+    lon: -72.7
+  map:
+    x: 0.826
+    "y": 0.278
+  shade: american
+  clusters: []
+- "n": 54
+  symbol: Cb
+  title: 喜欢动物的人
+  author: Alexander MacLeod
+  group: fiction
+  review: 我确实喜欢动物，但这本不能只凭书名认亲。
+  unexpected:
+  - 狗对我的书单没有审核权。
+  - 对零食倒是很有意见。
+  title_en: Animal Person
+  place:
+    name: 新斯科舍 Nova Scotia · one setting
+    lat: 44.65
+    lon: -63.57
+  map:
+    x: 0.738
+    "y": 0.38
+  shade: world
+  clusters: []
+- "n": 55
+  symbol: Cc
+  title: 恐惧
+  author: Stefan Zweig
+  group: fiction
+  review: 读的时候连翻页都轻了一点，合书才记得呼气。
+  unexpected:
+  - 杯子先放稳。
+  - 今晚选点轻松的接着看。
+  title_en: Angst
+  place:
+    name: 维也纳 Vienna
+    lat: 48.208
+    lon: 16.373
+  map:
+    x: 0.65
+    "y": 0.482
+  shade: european
+  clusters: []
+- "n": 56
+  symbol: Cd
+  title: 芭芭雅嘎下了个蛋
+  author: Dubravka Ugrešić
+  group: fiction
+  review: 先被书名逗住，再慢慢把阅读速度交出去。
+  unexpected:
+  - 地图只落一枚布拉格的针。
+  - 书还会走向克罗地亚和保加利亚。
+  title_en: Baba Yaga Laid an Egg
+  place:
+    name: 布拉格 Prague · one setting
+    lat: 50.0755
+    lon: 14.4378
+  map:
+    x: 0.804
+    "y": 0.584
+  shade: european
+  clusters: []
+- "n": 57
+  symbol: Ce
+  title: 生活的谜语
+  author: Tillie Olsen
+  group: fiction
+  review: 读完不急着猜谜底，先把心里那一点酸放好。
+  unexpected:
+  - 有些页需要留白。
+  - 不把共鸣写成标准答案。
+  place:
+    name: 旧金山 San Francisco
+    lat: 37.775
+    lon: -122.419
+  map:
+    x: 0.716
+    "y": 0.11
+  shade: american
+  clusters: []
+- "n": 58
+  symbol: Cf
+  title: 时世逝
+  author: Jenny Erpenbeck
+  group: fiction
+  review: 合书以后，觉得认真听完一句话也很有分量。
+  unexpected:
+  - 不抢着总结别人的处境。
+  - 先把手机放下。
+  title_en: Go, Went, Gone
+  place:
+    name: 柏林 Berlin
+    lat: 52.52
+    lon: 13.405
+  map:
+    x: 0.87
+    "y": 0.346
+  shade: european
+  clusters: []
+- "n": 59
+  symbol: Cg
+  title: 一个无政府主义者的意外死亡
+  author: Dario Fo
+  group: fiction
+  review: 这次给台词留点空间，脑内剧场自己开门了。
+  unexpected:
+  - 戏剧，适合试着念出声。
+  - 观众暂时只有我。
+  title_en: Accidental Death of an Anarchist
+  place:
+    name: 米兰 Milan
+    lat: 45.464
+    lon: 9.19
+  map:
+    x: 0.782
+    "y": 0.448
+  shade: european
+  tag: PLAY / 戏剧
+  clusters: []
+- "n": 60
+  symbol: Ch
+  title: 爱
+  author: Toni Morrison
+  group: fiction
+  review: 这么短的书名，我却读得一点也不想快。
+  unexpected:
+  - 不用急着解释这个字。
+  - 给余味留个下午。
+  title_en: Love
+  place:
+    name: 美国东海岸 US East Coast · regional pin
+    lat: 35.5
+    lon: -76.5
+  map:
+    x: 0.694
+    "y": 0.55
+  shade: american
+  clusters: []
+- "n": 61
+  symbol: Ci
+  title: 一个叫欧维的男人决定去死
+  author: Fredrik Backman
+  group: fiction
+  review: 本来准备冷静阅读，纸巾比我更有准备。
+  unexpected:
+  - 狗听不懂我为什么吸鼻子。
+  - 也可能只是不想懂。
+  title_en: A Man Called Ove
+  place:
+    name: 瑞典 Sweden · regional pin
+    lat: 59.33
+    lon: 18.07
+  map:
+    x: 0.848
+    "y": 0.21
+  shade: european
+  clusters: []
+- "n": 62
+  symbol: Cj
+  title: 我们八月见
+  author: Gabriel García Márquez
+  group: fiction
+  review: 先把日历放下，借这个书名给自己留一点夏天。
+  unexpected:
+  - 和另一册马尔克斯碰个面。
+  - 八月以后也可以翻开。
+  title_en: Until August
+  place:
+    name: 加勒比海岛 Caribbean island · approximate
+    lat: 12.3
+    lon: -72
+  map:
+    x: 0.76
+    "y": 0.312
+  shade: world
+  clusters:
+  - marquez
+- "n": 63
+  symbol: Ck
+  title: 乘客
+  author: Cormac McCarthy
+  group: fiction
+  review: 读得不算轻松，但愿意给这些句子再多一点时间。
+  unexpected:
+  - 和《海洋之星》是一对。
+  - 两本一起留在手边。
+  title_en: The Passenger
+  place:
+    name: 新奥尔良 New Orleans
+    lat: 29.951
+    lon: -90.072
+  map:
+    x: 0.672
+    "y": 0.414
+  shade: american
+  clusters:
+  - mccarthy
+- "n": 64
+  symbol: Cl
+  title: 海洋之星
+  author: Cormac McCarthy
+  group: fiction
+  review: 这一本也不催我交答案，那我就慢慢读。
+  unexpected:
+  - 接着《乘客》放。
+  - 书架上的结对同行。
+  title_en: Stella Maris
+  place:
+    name: 威斯康星 Wisconsin
+    lat: 43.784
+    lon: -88.788
+  map:
+    x: 0.826
+    "y": 0.516
+  shade: american
+  clusters:
+  - mccarthy
+- "n": 65
+  symbol: Cm
+  title: 一个人消失在世上
+  author: Alessandro Baricco
+  group: fiction
+  review: 读着想把外界音量调小一点，这个愿望很具体。
+  unexpected:
+  - 邮件窗口先最小化。
+  - 留半小时给纸上的人。
+  title_en: Mr Gwyn
+  map:
+    x: 0.738
+    "y": 0.176
+  shade: european
+  clusters: []
+- "n": 66
+  symbol: Cn
+  title: 白色巨塔
+  author: 山崎丰子
+  group: fiction
+  review: 读到忘了看钟，合书又想安静地坐一会儿。
+  unexpected:
+  - 研究工作先放在门外。
+  - 今晚不加一轮任务。
+  place:
+    name: 大阪 Osaka
+    lat: 34.6937
+    lon: 135.5023
+  map:
+    x: 0.65
+    "y": 0.278
+  shade: japanese
+  clusters: []
+- "n": 67
+  symbol: Co
+  title: 苔丝
+  author: Thomas Hardy
+  group: fiction
+  review: 看得心里发紧，只好对自己今天温柔一点。
+  unexpected:
+  - 下一本先选薄一点的。
+  - 不是因为这一本文字太多。
+  title_en: Tess of the d’Urbervilles
+  place:
+    name: 威塞克斯 / 多塞特 Wessex / Dorset
+    lat: 50.748
+    lon: -2.344
+  map:
+    x: 0.804
+    "y": 0.16999999999999998
+  shade: european
+  clusters: []
+- "n": 68
+  symbol: Cp
+  title: 盗窃
+  author: Abdulrazak Gurnah
+  group: fiction
+  review: 阅读时把急着评价的习惯放一边，耳朵反而空出来了。
+  unexpected:
+  - 先听完再说。
+  - 便签上可以只有问号。
+  title_en: Theft
+  place:
+    name: 桑给巴尔 Zanzibar
+    lat: -6.165
+    lon: 39.202
+  map:
+    x: 0.716
+    "y": 0.482
+  shade: world
+  clusters: []
+- "n": 69
+  symbol: Cq
+  title: 月亮和六便士
+  author: W. Somerset Maugham
+  group: fiction
+  review: 读完先去看看天，再低头看看自己的待办事项。
+  unexpected:
+  - 伦敦、巴黎、塔希提，地图选最后一站。
+  - 不用给所有选择打分。
+  title_en: The Moon and Sixpence
+  place:
+    name: 塔希提 Tahiti · one setting
+    lat: -17.65
+    lon: -149.426
+  map:
+    x: 0.87
+    "y": 0.584
+  shade: european
+  clusters: []
+- "n": 70
+  symbol: Cr
+  title: 向坐着的人指控爱情
+  author: Gabriel García Márquez
+  group: fiction
+  review: 这本我想念出声，椅子上的自己先认真听着。
+  unexpected:
+  - 戏剧，换一种读法。
+  - 和《我们八月见》串个门。
+  title_en: Diatribe of Love Against a Seated Man
+  map:
+    x: 0.782
+    "y": 0.244
+  shade: world
+  tag: PLAY / 戏剧
+  clusters:
+  - marquez
+- "n": 71
+  symbol: Cs
+  title: 外面是夏天
+  author: 金爱烂
+  group: fiction
+  review: 书名很暖，读的时候还是想抱紧一个靠垫。
+  unexpected:
+  - 温度由自己补上。
+  - 不用立刻恢复元气。
+  place:
+    name: 首尔 Seoul
+    lat: 37.5665
+    lon: 126.978
+  map:
+    x: 0.694
+    "y": 0.346
+  shade: world
+  clusters: []
+- "n": 72
+  symbol: Ct
+  title: 不可能的戏剧
+  author: Federico García Lorca
+  group: fiction
+  review: 读剧本时我有一座免费剧场，灯光靠想象。
+  unexpected:
+  - 戏剧这一格再添一张票。
+  - 不需要抢前排。
+  map:
+    x: 0.848
+    "y": 0.448
+  shade: european
+  tag: PLAY / 戏剧
+  clusters: []
+- "n": 73
+  symbol: Cu
+  title: 我的奥兰多
+  author: Virginia Woolf、Vita Sackville-West
+  group: fiction
+  review: 读信就慢一点，连没说满的话也想多看一眼。
+  unexpected:
+  - 伍尔夫小队三本会合。
+  - 回信不必像交论文。
+  map:
+    x: 0.76
+    "y": 0.55
+  shade: european
+  clusters:
+  - woolf
+- "n": 74
+  symbol: Cv
+  title: 底层的珍珠
+  author: Bohumil Hrabal
+  group: fiction
+  review: 愿意多听几句闲话，有时比赶着翻页更开心。
+  unexpected:
+  - 先别看下一项待办。
+  - 允许一句话绕点路。
+  title_en: Pearls of the Deep
+  place:
+    name: 布拉格 Prague · one setting
+    lat: 50.0755
+    lon: 14.4378
+  map:
+    x: 0.672
+    "y": 0.21
+  shade: european
+  clusters: []
+- "n": 75
+  symbol: Cw
+  title: 一生
+  author: Guy de Maupassant
+  group: fiction
+  review: 两个字的书名，合书以后却很难只写两句话。
+  unexpected:
+  - 今天的笔记可以短。
+  - 心里那一段先留着。
+  title_en: Une vie
+  place:
+    name: 诺曼底 Normandy
+    lat: 49.44
+    lon: 0.37
+  map:
+    x: 0.826
+    "y": 0.312
+  shade: european
+  clusters: []
+- "n": 76
+  symbol: Cx
+  title: 深沉的玫瑰
+  author: Jorge Luis Borges
+  group: fiction
+  review: 读诗不用拼速度，今天就停在这一页也很好。
+  unexpected:
+  - 诗，另有两本卡森作邻居。
+  - 有些句子值得轻声念。
+  title_en: La rosa profunda
+  map:
+    x: 0.738
+    "y": 0.414
+  shade: world
+  clusters: []
+- "n": 77
+  symbol: Cy
+  title: 爱玛
+  author: Jane Austen（Hugh Thomson插图）
+  group: fiction
+  review: 读得很有兴致，插图又替我多留了一会儿客。
+  unexpected:
+  - 与《理智与情感》成双。
+  - 看图也算认真读书。
+  title_en: Emma
+  map:
+    x: 0.65
+    "y": 0.87
+  shade: european
+  clusters:
+  - austen
+- "n": 78
+  symbol: Cz
+  title: 根西岛文学与土豆皮馅饼俱乐部
+  author: Mary Ann Shaffer、Annie Barrows
+  group: fiction
+  review: 书名长得像点菜单，我还是愉快地读了下去。
+  unexpected:
+  - 地图替我找到根西岛。
+  - 晚饭另想办法。
+  title_en: The Guernsey Literary and Potato Peel Pie Society
+  place:
+    name: 根西岛 Guernsey
+    lat: 49.455
+    lon: -2.586
+  map:
+    x: 0.804
+    "y": 0.176
+  shade: world
+  clusters: []
+- "n": 79
+  symbol: Da
+  title: 飞行家
+  author: Evgeny Vodolazkin
+  group: fiction
+  review: 翻得慢一点，好让心里的声音赶上来。
+  unexpected:
+  - 不追赶阅读进度。
+  - 先给这一页一点时间。
+  title_en: The Aviator
+  place:
+    name: 圣彼得堡 St Petersburg
+    lat: 59.934
+    lon: 30.335
+  map:
+    x: 0.716
+    "y": 0.278
+  shade: european
+  clusters: []
+- "n": 80
+  symbol: Db
+  title: 白日梦
+  author: John Banville
+  group: fiction
+  review: 以为看书是休息，结果句子又把脑子叫醒了。
+  unexpected:
+  - 中文版叫《白日梦》。
+  - 原作名是Shroud。
+  title_en: Shroud
+  map:
+    x: 0.87
+    "y": 0.38
+  shade: european
+  clusters: []
+  pages: 346
+  pages_source: https://book.douban.com/subject/37669072/
+- "n": 81
+  symbol: Dc
+  title: 十二把椅子
+  author: Ilf、Petrov
+  group: fiction
+  review: 书架上再多几把椅子，今晚的笑声也坐得下。
+  unexpected:
+  - 椅子不列入搬家家具清单。
+  - 能笑一会儿就很好。
+  title_en: The Twelve Chairs
+  place:
+    name: 苏联 USSR · regional pin
+    lat: 55.75
+    lon: 37.62
+  map:
+    x: 0.782
+    "y": 0.87
+  shade: european
+  clusters: []
+- "n": 82
+  symbol: Dd
+  title: 契诃夫短篇小说选
+  author: Anton Chekhov
+  group: fiction
+  review: 短篇很适合偷一点时间，但余味不肯准时下班。
+  unexpected:
+  - 不按篇幅估算心情。
+  - 下一篇明天也在。
+  map:
+    x: 0.694
+    "y": 0.584
+  shade: european
+  clusters: []
+- "n": 83
+  symbol: De
+  title: 审判
+  author: Franz Kafka
+  group: fiction
+  review: 看得有点憋气，今晚先把自己的待办清单缩短。
+  unexpected:
+  - 不给每个问号安排答案。
+  - 去散步不是逃课。
+  title_en: The Trial
+  place:
+    name: 布拉格 Prague · one setting
+    lat: 50.0755
+    lon: 14.4378
+  map:
+    x: 0.848
+    "y": 0.244
+  shade: european
+  clusters: []
+- "n": 84
+  symbol: Df
+  title: 理智与情感
+  author: Jane Austen
+  group: fiction
+  review: 读的时候两边都点头，看来我的内心会议还没散。
+  unexpected:
+  - 和《爱玛》互相照应。
+  - 今晚不急着投票。
+  title_en: Sense and Sensibility
+  map:
+    x: 0.76
+    "y": 0.346
+  shade: european
+  clusters:
+  - austen
+- "n": 85
+  symbol: Dg
+  title: 她要自己去买花
+  author: Virginia Woolf
+  group: fiction
+  review: 标题替我做了一个很好的决定：出去走走。
+  unexpected:
+  - 和书信、霍尔特比那本连起来。
+  - 花不用等特别的日子。
+  map:
+    x: 0.672
+    "y": 0.448
+  shade: european
+  clusters:
+  - woolf
+- "n": 86
+  symbol: Dh
+  title: 她热爱生命
+  author: Winifred Holtby
+  group: fiction
+  review: 换一双眼睛再看伍尔夫，熟悉的书也多了一点空间。
+  unexpected:
+  - 这次是霍尔特比在读她。
+  - 三本放一起，方便来回翻。
+  title_en: 'Virginia Woolf: A Critical Memoir'
+  map:
+    x: 0.826
+    "y": 0.55
+  shade: european
+  clusters:
+  - woolf
+  pages: 232
+  pages_source: https://book.douban.com/subject/38584626/
+- "n": 87
+  symbol: Di
+  title: 你得耐心地寻找同类
+  author: 梅雪风
+  group: art
+  review: 这个书名适合贴在桌边，提醒自己别着急。
+  unexpected:
+  - 找书也可以靠缘分。
+  - 不把孤单排进日程表。
+  map:
+    x: 0.378
+    "y": 0.55
+  clusters: []
+- "n": 88
+  symbol: Dj
+  title: 场景设定创意宝库
+  author: Angela Ackerman、Becca Puglisi
+  group: art
+  review: 翻着翻着想拿笔，画得怎样先不归这本书管。
+  unexpected:
+  - 镜头之外也练习观察。
+  - 细节比装备便宜。
+  map:
+    x: 0.29
+    "y": 0.652
+  clusters: []
+- "n": 89
+  symbol: Dk
+  title: 一个人的博物馆
+  author: 扫舍
+  group: art
+  review: 一个人逛也很好，停多久不用互相等。
+  unexpected:
+  - 巴黎先在纸上见。
+  - 相机暂时不举起来。
+  place:
+    name: 巴黎 Paris · one setting
+    lat: 48.8566
+    lon: 2.3522
+  map:
+    x: 0.444
+    "y": 0.754
+  clusters: []
+- "n": 90
+  symbol: Dl
+  title: 日本漫画千年
+  author: Brigitte Koyama-Richard
+  group: art
+  review: 看图看得很开心，回头才发现自己又坐久了。
+  unexpected:
+  - 这一页值得放大看。
+  - 文字也记得慢慢读。
+  place:
+    name: 日本 Japan · regional pin
+    lat: 35.68
+    lon: 139.65
+  map:
+    x: 0.356
+    "y": 0.856
+  clusters: []
+- "n": 91
+  symbol: Dm
+  title: 我们还不错
+  author: Anthony Hopkins
+  group: art
+  review: 这个标题适合念给今天的自己听，不用很响。
+  unexpected:
+  - 先收下这一点安慰。
+  - 今晚不追加自我考核。
+  title_en: We Did OK, Kid
+  map:
+    x: 0.51
+    "y": 0.516
+  clusters: []
+- "n": 92
+  symbol: Dn
+  title: 社会主义喜剧文化中的“上海”1949–1966
+  author: 朱羽
+  group: art
+  review: 同一座上海换本书再看，我的旧画面就没那么固定了。
+  unexpected:
+  - 和《上海房子》牵一条线。
+  - 街景之外再添一种目光。
+  place:
+    name: 上海 Shanghai
+    lat: 31.2304
+    lon: 121.4737
+  map:
+    x: 0.422
+    "y": 0.618
+  clusters:
+  - shanghai
+- "n": 93
+  symbol: Do
+  title: 四季花传书
+  author: 川濑敏郎
+  group: art
+  review: 看花看得忘了时间，这次不需要计算花期。
+  unexpected:
+  - 构图先从少一点开始。
+  - 空白也留在画面里。
+  map:
+    x: 0.334
+    "y": 0.72
+  clusters: []
+- "n": 94
+  symbol: Dp
+  title: 照片的阅读方法
+  author: 名取洋之助
+  group: art
+  review: 拍照之外补一堂看照片的课，快门可以歇一歇。
+  unexpected:
+  - 先看边角再看中心。
+  - 自己的照片也值得重看。
+  map:
+    x: 0.488
+    "y": 0.822
+  clusters: []
+- "n": 95
+  symbol: Dq
+  title: 本托的速写本
+  author: John Berger
+  group: art
+  review: 看完想画两笔，橡皮说别紧张，我也在。
+  unexpected:
+  - 不上传也可以画。
+  - 今天给手一点空闲。
+  title_en: Bento’s Sketchbook
+  map:
+    x: 0.4
+    "y": 0.924
+  clusters: []
+- "n": 96
+  symbol: Dr
+  title: 红的自传·丈夫之美
+  author: Anne Carson（黄茜译）
+  group: poetry
+  review: 两部放在一起读，我的心情没有按目录分区。
+  unexpected:
+  - 黄茜译，下一本也是。
+  - 一位译者把两本牵到一起。
+  title_en: Autobiography of Red / The Beauty of the Husband
+  map:
+    x: 0.812
+    "y": 0.214
+  clusters: []
+- "n": 97
+  symbol: Ds
+  title: 若非，冬季：萨福断章
+  author: Anne Carson 编译（黄茜译）
+  group: poetry
+  review: 空白那么多，我反而愿意在这一页待得更久。
+  unexpected:
+  - 又遇见黄茜的中文。
+  - 没写满也可以很好。
+  title_en: 'If Not, Winter: Fragments of Sappho'
+  place:
+    name: 莱斯博斯岛 Lesbos
+    lat: 39.2
+    lon: 26.3
+  map:
+    x: 0.96
+    "y": 0.316
+  clusters: []

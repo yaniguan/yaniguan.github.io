@@ -36,7 +36,7 @@ leaves its indentation alone.
 <nav class="outside-nav" aria-label="Sections on this page">
   <ul>
     <li><a href="#cameras">Cameras</a></li>
-    <li><a href="#reading">Reading</a></li>
+    <li><a href="#reading">阅读 / Reading</a></li>
     <li><a href="#road-trips">Road trips</a></li>
     <li><a href="#places">Places</a></li>
   </ul>
@@ -166,20 +166,19 @@ leaves its indentation alone.
 </section>
 
 <section class="about-section outside-section" id="reading">
-  <h2 class="about-section-title">Reading</h2>
-
+  <h2 class="about-section-title">阅读 / Reading</h2>
   <p class="lst-desc">
-    Mostly Shakespeare, and mostly the plays — I have worked through most of the
-    thirty-six collected in the First Folio. The whole shelf now travels as one
-    front-lit slab, which is the least romantic and by some distance the most
-    practical reading setup I have owned.
+    At UCLA, my computational chemistry PhD has meant plenty of molecules,
+    electrolytes, batteries, and AI. Before the next chapter—a postdoc at OSU—here
+    are 97 books making a competing claim on my attention. Some help me think;
+    some help me stop. They share shelf space with road-trip plans for my partner,
+    our dog, and whichever camera comes along.
   </p>
-
-{% include outside/shelf.liquid %}
-
+  {% include outside/shelf.liquid %}
   <p class="about-figure-caption">
-    The three sections are the First Folio’s own: the 1623 collection sorts its
-    thirty-six plays into fourteen comedies, ten histories and twelve tragedies.
+    One Murakami novel, two Chinese translations: a perfectly reasonable use of
+    shelf space. Anne Carson gets two books in Huang Qian’s translation, too.
+    These are personal notes, not homework; the library cards have no real due dates.
   </p>
 </section>
 

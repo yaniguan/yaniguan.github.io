@@ -1,92 +1,98 @@
-{%- comment -%}
-  The First Folio shelf, from _data/outside/reading.yml: one spine per play in
-  the Folio's own order and sections, plus the "Reading now" card. Spines are
-  buttons, so they can be reached from the keyboard; outside.js adds the
-  section filters and the tooltip (title, section, Folio number, note). Without
-  JavaScript the titles are still printed on the spines.
-{%- endcomment -%}
 {%- assign reading = site.data.outside.reading -%}
-{%- assign total = 0 -%}
-{%- assign any_read = false -%}
-{%- for s in reading.sections -%}
-  {%- assign total = total | plus: s.plays.size -%}
-  {%- for p in s.plays -%}
-    {%- if p.read -%}{%- assign any_read = true -%}{%- endif -%}
-  {%- endfor -%}
-{%- endfor -%}
-
-<div class="shelf" data-shelf>
-  <div class="outside-chips" role="group" aria-label="Show plays by section" data-shelf-filters hidden>
-    <button type="button" class="outside-chip" aria-pressed="true" data-section="">
-      All <span class="chip-count">{{ total }}</span>
-    </button>
-    {% for s in reading.sections %}
-      <button type="button" class="outside-chip" aria-pressed="false" data-section="{{ s.name | slugify }}">
-        {{ s.name }}
-        <span class="chip-count">{{ s.plays.size }}</span>
-      </button>
-    {% endfor %}
+<div class="reading-room" data-reading>
+  <div class="reading-heading"><span>私人藏书 / PERSONAL COLLECTION</span><span>{{ reading.books.size }} books · {{ reading.groups.size }} groups</span></div>
+  <div class="reading-tabs" role="tablist" aria-label="书架视图 / Reading views" hidden>
+    <button type="button" role="tab" id="reading-tab-table" aria-controls="reading-table" aria-selected="true" tabindex="0">元素周期表 / Periodic table</button>
+    <button type="button" role="tab" id="reading-tab-mood" aria-controls="reading-mood" aria-selected="false" tabindex="-1">阅读坐标 / Mood map</button>
+    <button type="button" role="tab" id="reading-tab-world" aria-controls="reading-world" aria-selected="false" tabindex="-1">书带你去哪 / Book atlas</button>
+    <button type="button" role="tab" id="reading-tab-cards" aria-controls="reading-cards" aria-selected="false" tabindex="-1">借书卡 / Library cards</button>
   </div>
-
-  <div class="shelf-body">
-    {% assign n = 0 %}
-    {% for s in reading.sections %}
-      {% assign section_slug = s.name | slugify %}
-      <div class="shelf-group shelf-{{ section_slug }}" data-section="{{ section_slug }}">
-        <h3 class="shelf-label">
-          {{ s.name }}
-          <span>{{ s.plays.size }} plays</span>
-        </h3>
-        <ul class="shelf-row">
-          {% for p in s.plays %}
-            {% assign n = n | plus: 1 %}
-            {% assign h = n | times: 7 | modulo: 5 %}
-            <li>
-              <button
-                type="button"
-                class="spine spine-h{{ h }}{% if p.read %} is-read{% endif %}"
-                data-section-name="{{ s.name }}"
-                data-folio="{{ n }}"
-                {% if p.note %}
-                  data-note="{{ p.note | escape }}"
-                {% endif %}
-              >
-                <span class="spine-title">{{ p.title }}</span>
-                {%- if p.read -%}
-                  <span class="sr-only"> (read)</span>
-                {%- endif -%}
-              </button>
-            </li>
-          {% endfor %}
-        </ul>
+  <ul class="reading-legend" aria-label="分类 / Groups">
+    {% for group in reading.groups %}<li style="--book-color: {{ group.color }}"><i aria-hidden="true"></i>{{ group.label }}</li>{% endfor %}
+  </ul>
+  <p class="reading-fiction-key reading-note">文学装帧 / Fiction bindings: <span style="--book-color:#9b8b9c">日本 / Japanese</span> · <span style="--book-color:#8394a8">欧洲 / European</span> · <span style="--book-color:#7d9c97">美国 / American</span> · <span style="--book-color:#b0967c">世界 / World</span></p>
+  <div class="reading-clusters" hidden>
+    <span>牵根线 / Follow a thread:</span>
+    <button type="button" data-cluster="" aria-pressed="true">全部 / All</button>
+    {% for cluster in reading.clusters %}<button type="button" data-cluster="{{ cluster.id }}" aria-pressed="false">{{ cluster.label }}</button>{% endfor %}
+  </div>
+  <section id="reading-table" class="reading-panel" role="tabpanel" aria-labelledby="reading-tab-table" tabindex="0">
+    <h3 class="reading-view-title">书的元素周期表 / A periodic table of books</h3>
+    <p class="reading-note">97种私人元素。数字是书的编号；原子量只借用已核实的页数。 / Numbers index the books; a mass appears only for verified page counts.</p>
+    <p class="reading-scroll-hint">横向滑动看全表 / Scroll sideways for the full table →</p>
+    <div class="reading-table-scroll" tabindex="0" role="region" aria-label="完整元素周期表 / Full periodic table">
+      <div class="reading-periodic">
+        <div class="reading-table-title" aria-hidden="true"><strong>书 / Bk</strong><span>Some useful.<br>All welcome.</span></div>
+        {% for book in reading.books %}
+          {%- assign group = reading.groups | where: 'id', book.group | first -%}
+          {%- assign n = book.n -%}
+          {%- if n <= 2 -%}{%- assign row = 1 -%}{%- assign col = 1 -%}{%- if n == 2 -%}{%- assign col = 18 -%}{%- endif -%}
+          {%- elsif n <= 10 -%}{%- assign row = 2 -%}{%- assign col = n | minus: 2 -%}{%- if n >= 5 -%}{%- assign col = col | plus: 10 -%}{%- endif -%}
+          {%- elsif n <= 18 -%}{%- assign row = 3 -%}{%- assign col = n | minus: 10 -%}{%- if n >= 13 -%}{%- assign col = col | plus: 10 -%}{%- endif -%}
+          {%- elsif n <= 36 -%}{%- assign row = 4 -%}{%- assign col = n | minus: 18 -%}
+          {%- elsif n <= 54 -%}{%- assign row = 5 -%}{%- assign col = n | minus: 36 -%}
+          {%- elsif n <= 56 -%}{%- assign row = 6 -%}{%- assign col = n | minus: 54 -%}
+          {%- elsif n <= 71 -%}{%- assign row = 9 -%}{%- assign col = n | minus: 54 -%}
+          {%- elsif n <= 86 -%}{%- assign row = 6 -%}{%- assign col = n | minus: 68 -%}
+          {%- elsif n <= 88 -%}{%- assign row = 7 -%}{%- assign col = n | minus: 86 -%}
+          {%- else -%}{%- assign row = 10 -%}{%- assign col = n | minus: 86 -%}{%- endif -%}
+          <div class="reading-cell reading-book" data-clusters="{{ book.clusters | join: ' ' }}" data-shade="{{ book.shade }}" style="--book-color: {{ group.color }}; grid-row: {{ row }}; grid-column: {{ col }}">
+            <details class="reading-element" data-book="{{ book.n }}">
+              <summary aria-label="{{ book.n }} · {{ book.title | escape }} · {{ book.author | escape }}" aria-controls="reading-detail-{{ book.n }}"><span class="reading-atomic">{{ book.n }}</span><strong>{{ book.symbol }}</strong><span class="reading-tile-title">{{ book.title }}</span>{% if book.pages %}<small>{{ book.pages }}</small>{% endif %}</summary>
+              <div class="reading-detail" id="reading-detail-{{ book.n }}">{% include outside/reading-note.liquid book=book %}</div>
+            </details>
+          </div>
+        {% endfor %}
+        <span class="reading-series" style="grid-row: 6; grid-column: 3">57–71<br>↓</span><span class="reading-series" style="grid-row: 7; grid-column: 3">89–103<br>↓</span>
+        {% for col in (4..18) %}<span class="reading-empty" style="grid-row: 7; grid-column: {{ col }}">still<br>reading</span>{% endfor %}
+        {% for col in (12..17) %}<span class="reading-empty" style="grid-row: 10; grid-column: {{ col }}">still<br>reading</span>{% endfor %}
+        <span class="reading-strip-label" style="grid-row: 9; grid-column: 1 / 3">镧系 / Ln</span><span class="reading-strip-label" style="grid-row: 10; grid-column: 1 / 3">锕系 / An</span>
       </div>
-    {% endfor %}
-
-    <div class="kindle-card">
-      <p class="kindle-card-h">Reading now</p>
-      <svg class="kindle-card-art" viewBox="0 0 76 108" aria-hidden="true" focusable="false">
-        <g transform="translate(1,1)">
-          <rect class="k-line" x="0" y="0" width="74" height="106" rx="7" />
-          <rect class="k-soft" x="7" y="8" width="60" height="82" rx="2" />
-          <path class="k-soft" d="M13,20 H61 M13,30 H65 M13,40 H57 M13,50 H65 M13,60 H51" />
-          <circle class="k-soft" cx="37" cy="98" r="2.5" />
-        </g>
-      </svg>
-      <p class="kindle-card-t">{{ reading.device }}</p>
-      {% if reading.device_note %}
-        <p class="kindle-card-s">{{ reading.device_note }}</p>
-      {% endif %}
-      {% if reading.now_reading %}
-        <p class="kindle-card-now"><span class="sr-only">Currently reading: </span>{{ reading.now_reading }}</p>
-      {% elsif jekyll.environment == 'development' %}
-        <p class="outside-placeholder">Placeholder — set now_reading in _data/outside/reading.yml</p>
-      {% endif %}
     </div>
-  </div>
-
-  {% if any_read %}
-    <p class="shelf-key"><span class="shelf-key-mark" aria-hidden="true"></span> read</p>
-  {% endif %}
-
-  <div class="shelf-tip" role="tooltip" id="shelf-tip" hidden></div>
+    <p class="reading-note">悬停、聚焦或点击方格看书评。 / Hover, focus or select a tile for its notes. Esc closes the note.</p>
+    <div class="reading-inspector" aria-label="书的笔记 / Book notes" hidden></div>
+  </section>
+  <section id="reading-mood" class="reading-panel" role="tabpanel" aria-labelledby="reading-tab-mood" tabindex="0">
+    <h3 class="reading-view-title">阅读坐标 / No peer review required</h3>
+    <p class="reading-note">全凭感觉，不是评分；今天的我也可能不同意昨天的我。 / Gut feelings, not ratings. Tomorrow I may move the dots.</p>
+    <p class="reading-scroll-hint">小屏可横向滑动 / On small screens, scroll sideways →</p>
+    <div class="reading-mood-frame">
+    <div class="reading-mood-y"><span>笑了 ↑<br>Made me laugh</span><span>哭了 ↓<br>Made me cry</span></div>
+    <div class="reading-mood-scroll"><div class="reading-mood-plot">
+      {% for book in reading.books %}{% assign group = reading.groups | where: 'id', book.group | first %}
+        <button type="button" class="reading-dot reading-book" data-book="{{ book.n }}" data-clusters="{{ book.clusters | join: ' ' }}" style="--book-color: {{ group.color }}; left: {{ book.map.x | times: 100 }}%; bottom: {{ book.map.y | times: 100 }}%" aria-label="{{ book.title | escape }} · {{ book.review | escape }}"><span>{{ book.symbol }}</span><span class="reading-dot-label">{{ book.title }}</span></button>
+      {% endfor %}
+    </div></div>
+    </div>
+    <div class="reading-mood-x"><span>有用 / Useful</span><span>完全没用但快乐 / Useless but happy →</span></div>
+    <div class="reading-inspector" aria-label="书的笔记 / Book notes" hidden></div>
+  </section>
+  <section id="reading-world" class="reading-panel" role="tabpanel" aria-labelledby="reading-tab-world" tabindex="0">
+    <h3 class="reading-view-title">书带你去哪 / Places between the pages</h3>
+    <p class="reading-note">标的是书里的地方，不是我的阅读地点。跨越多地的书选一站；区域与虚构地点用近似坐标。 / Book settings, not where I read. One stop per book; regional and fictional pins are approximate.</p>
+    <div id="reading-map" class="reading-map" role="region" aria-label="书中地点地图 / Map of book settings" hidden
+      data-leaflet-js="{{ site.third_party_libraries.leaflet.url.js }}" data-leaflet-js-sri="{{ site.third_party_libraries.leaflet.integrity.js }}"
+      data-leaflet-css="{{ site.third_party_libraries.leaflet.url.css }}" data-leaflet-css-sri="{{ site.third_party_libraries.leaflet.integrity.css }}"></div>
+    <p class="reading-map-status reading-note" role="status">地点清单随时可用。 / The place index works even without the map.</p>
+    <details class="reading-place-index" open><summary>地点索引 / Place index</summary><ul class="reading-place-list">
+      {% for book in reading.books %}{% if book.place %}<li class="reading-book" data-clusters="{{ book.clusters | join: ' ' }}"><button type="button" disabled data-map-book="{{ book.n }}">{{ book.title }}</button><span>{{ book.place.name }}</span></li>{% endif %}{% endfor %}
+    </ul></details>
+    <h4>无处不在，或在脑海里 / Everywhere, or inside your head</h4>
+    <ul class="reading-placeless">{% for book in reading.books %}{% unless book.place %}<li class="reading-book" data-clusters="{{ book.clusters | join: ' ' }}">{{ book.title }}</li>{% endunless %}{% endfor %}</ul>
+  </section>
+  <section id="reading-cards" class="reading-panel" role="tabpanel" aria-labelledby="reading-tab-cards" tabindex="0">
+    <h3 class="reading-view-title">图书馆借书卡 / Return whenever</h3>
+    <p class="reading-note">不用逾期费。点击或按 Enter / Space 翻面看两句题外话。 / No late fees. Select a card to turn it over.</p>
+    <div class="reading-card-grid">{% for book in reading.books %}{% assign group = reading.groups | where: 'id', book.group | first %}
+      <article class="reading-library reading-book" data-clusters="{{ book.clusters | join: ' ' }}" data-shade="{{ book.shade }}" style="--book-color: {{ group.color }}">
+        <button type="button" class="reading-card-toggle" aria-pressed="false" aria-label="翻面 / Flip {{ book.title | escape }}" hidden>翻面 / Flip ↻</button>
+        <div class="reading-card-inner"><div class="reading-card-front">
+          <div class="reading-card-top"><span>借书证 / READER’S CARD</span><span>{{ book.n | prepend: '00' | slice: -3, 3 }}</span></div>
+          <span class="reading-cover" aria-hidden="true">{{ book.symbol }}</span><h4>{{ book.title }}</h4>{% if book.title_en %}<p class="reading-card-en">{{ book.title_en }}</p>{% endif %}<p class="reading-card-author">{{ book.author }}</p>
+          <p class="reading-card-review" lang="zh">{{ book.review }}</p><span class="reading-due">归还期限 / DUE<br>随时 / WHENEVER</span><span class="reading-card-group">{{ group.label }}{% if book.tag %} · {{ book.tag }}{% endif %}</span>
+        </div><div class="reading-card-back"><span>题外话 / IN THE MARGINS</span><h4>{{ book.title }}</h4>{% for line in book.unexpected %}<p lang="zh">{{ line }}</p>{% endfor %}<span class="reading-back-symbol" aria-hidden="true">{{ book.symbol }}</span></div></div>
+      </article>
+    {% endfor %}</div>
+  </section>
+  <script id="reading-data" type="application/json">{{ reading | jsonify | replace: '</', '<\/' }}</script>
 </div>

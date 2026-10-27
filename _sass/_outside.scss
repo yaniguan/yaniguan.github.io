@@ -1,6 +1,6 @@
 /*******************************************************************************
  * /outside/ — the interactive layer on top of the about-page vocabulary:
- * numbers strip, section nav, lead photo + lightbox, the First Folio shelf
+ * numbers strip, section nav, lead photo + lightbox, the reading room
  * and the road-trip map. Markup lives in _includes/outside/, behaviour in
  * assets/js/outside.js. Everything here reads fine before that script runs.
  ******************************************************************************/
@@ -348,306 +348,186 @@
   }
 }
 
-/* -----------------------------------------------------------------------------
- * The First Folio shelf. Spines are buttons with their title set vertically;
- * height varies a little (spine-h0..4) so a row reads as books, not a bar
- * chart. Each section is tinted from the theme colours via a pseudo-element,
- * so the text sits on the plain page colour plus a wash and keeps AA contrast.
- * -------------------------------------------------------------------------- */
-
-.shelf {
-  position: relative;
-  margin: 1.4rem 0 1rem;
-}
-
-// One shelf per row, label under its own shelf line; from md up the Kindle
-// card takes a right-hand column beside the stacked shelves.
-.shelf-body {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr);
-  gap: 1.6rem;
-
-  @media (min-width: 768px) {
-    grid-template-columns: minmax(0, 1fr) 10.5rem;
-    column-gap: 2rem;
-  }
-}
-
-.shelf-group {
-  display: flex;
-  flex-direction: column-reverse;
+/* The reading room: one collection, four ways to wander. */
+.reading-room {
+  --reading-line: var(--global-divider-color);
+  --reading-paper: var(--global-bg-color);
+  --reading-ink: var(--global-text-color);
+  color: var(--reading-ink);
   min-width: 0;
-  grid-column: 1;
-
-  &[hidden] {
-    display: none;
-  }
-}
-
-.shelf-label {
-  margin: 0.55rem 0 0;
-  font-size: 0.8rem;
-  font-weight: 600;
-  color: var(--global-text-color);
-
-  span {
-    margin-left: 0.3rem;
-    font-weight: 400;
-    font-size: 0.74rem;
-    color: var(--about-ink-muted);
-  }
-}
-
-// A single row of spines that never wraps; when it is wider than the column it
-// scrolls sideways inside itself. The top padding leaves room for a lifted,
-// outlined spine so the scroll box does not clip it.
-.shelf-row {
-  display: flex;
-  flex-wrap: nowrap;
-  align-items: flex-end;
-  gap: 3px;
-  margin: 0;
-  padding: 0.9rem 0.45rem 0;
-  list-style: none;
-  border-bottom: 2px solid var(--about-fig-line);
-  overflow-x: auto;
-  overflow-y: hidden;
-  overscroll-behavior-x: contain;
-  scrollbar-width: thin;
-
-  &:focus-visible {
+  margin: 1.8rem 0 1rem;
+  font-size: .85rem;
+  [hidden] { display: none !important; }
+  button { font: inherit; color: inherit; cursor: pointer; }
+  button:focus-visible, summary:focus-visible, [tabindex]:focus-visible, a:focus-visible {
     outline: 2px solid var(--global-theme-color);
-    outline-offset: 2px;
-  }
-
-  li {
-    display: flex;
-    flex: 0 0 auto;
+    outline-offset: 3px;
   }
 }
-
-.spine {
-  --spine-wash: var(--global-theme-color);
-  --spine-wash-opacity: 0.1;
-  position: relative;
-  display: flex;
-  align-items: stretch;
-  height: 9rem;
-  min-width: 1.6rem;
-  margin: 0;
-  padding: 0.55rem 0.3rem;
-  border: 1.3px solid var(--about-fig-line);
-  border-bottom: 0;
-  border-radius: 3px 3px 0 0;
-  background: transparent;
-  color: var(--about-ink-soft);
-  font: inherit;
-  font-size: 0.68rem;
-  line-height: 1.25;
-  letter-spacing: 0.02em;
-  text-align: start;
-  cursor: pointer;
-  isolation: isolate;
-  transition:
-    transform 0.15s ease,
-    color 0.15s ease,
-    border-color 0.15s ease;
-
-  &::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    z-index: -1;
-    border-radius: inherit;
-    background: var(--spine-wash);
-    opacity: var(--spine-wash-opacity);
+.reading-heading {
+  display: flex; justify-content: space-between; flex-wrap: wrap; gap: .5rem;
+  border-top: 2px solid var(--reading-ink); padding: .7rem 0;
+  font: .65rem var(--global-font-family, monospace); letter-spacing: .08em;
+}
+.reading-tabs {
+  display: grid; grid-template-columns: repeat(4, minmax(0, 1fr));
+  border: 1px solid var(--reading-line); border-radius: 4px; overflow: hidden;
+  button {
+    min-height: 3.4rem; padding: .65rem .4rem; background: transparent; border: 0;
+    border-right: 1px solid var(--reading-line); font-size: .76rem;
+    &:last-child { border-right: 0; }
+    &[aria-selected="true"] { background: var(--reading-ink); color: var(--reading-paper); }
+    &:focus-visible { outline-offset: -4px; }
   }
-
-  &:hover,
-  &:focus-visible,
-  &.is-active {
-    color: var(--global-text-color);
-    border-color: var(--global-theme-color);
-    transform: translateY(-6px);
-  }
-
-  &:focus-visible {
-    outline: 2px solid var(--global-theme-color);
-    outline-offset: 2px;
-  }
-
-  // A small mark at the foot of the spine for a play marked read: true.
-  &.is-read::after {
-    content: "";
-    position: absolute;
-    bottom: 0.3rem;
-    left: 50%;
-    width: 6px;
-    height: 6px;
-    margin-left: -3px;
-    border-radius: 50%;
-    background: var(--global-theme-color);
+  @media (max-width: 575px) { grid-template-columns: repeat(2, minmax(0,1fr)); button { border-bottom: 1px solid var(--reading-line); } }
+}
+.reading-legend {
+  display: flex; flex-wrap: wrap; gap: .45rem 1rem; list-style: none;
+  padding: 0; margin: 1rem 0; font-size: .66rem; color: var(--about-ink-muted);
+  li { display: flex; align-items: center; gap: .35rem; }
+  i { width: .55rem; height: .55rem; border-radius: 2px; background: var(--book-color); flex-shrink: 0; }
+}
+.reading-fiction-key { font-size: .62rem; span { border-bottom: 3px solid var(--book-color); padding-bottom: .1rem; } }
+.reading-clusters {
+  display: flex; flex-wrap: wrap; gap: .4rem; align-items: center; margin-bottom: 1.3rem;
+  font-size: .65rem;
+  > span { color: var(--about-ink-muted); }
+  button { padding: .22rem .5rem; border: 1px solid var(--reading-line); border-radius: 20px; background: transparent;
+    &[aria-pressed="true"] { border-color: var(--reading-ink); text-decoration: underline; text-underline-offset: .2em; }
   }
 }
-
-// The title runs up the spine. It lives on a span rather than the button
-// because older browsers ignore writing-mode on form controls; as a stretched
-// flex item it gets the button's height, so a long title wraps into a second
-// column (a thicker book) instead of running off the end.
-.spine-title {
-  writing-mode: vertical-rl;
-  pointer-events: none;
+.reading-panel { margin: 1.3rem 0 2rem; min-width: 0; }
+.reading-view-title { font-size: 1.05rem; font-weight: 500; margin: 0 0 .5rem; }
+.reading-note { font-size: .72rem; line-height: 1.7; color: var(--about-ink-muted); margin: .5rem 0 1rem; }
+.reading-scroll-hint { font-size: .66rem; text-align: right; color: var(--about-ink-muted); }
+.reading-table-scroll { overflow-x: auto; padding: .4rem .25rem .8rem; scrollbar-width: thin; }
+.reading-periodic {
+  display: grid; grid-template-columns: repeat(18, minmax(0,1fr));
+  grid-template-rows: repeat(7, 78px) 12px repeat(2,78px);
+  gap: 4px; min-width: 1000px; position: relative;
 }
-
-.spine-h0 {
-  height: 8.6rem;
+.reading-table-title { grid-column: 4 / 12; grid-row: 1 / 3; align-self: center; padding-left: 1rem;
+  display: flex; align-items: center; gap: 1.2rem;
+  strong { font-size: 2.5rem; font-weight: 400; }
+  span { font-size: .75rem; color: var(--about-ink-muted); line-height: 1.7; }
 }
-.spine-h1 {
-  height: 9.4rem;
-}
-.spine-h2 {
-  height: 8.2rem;
-}
-.spine-h3 {
-  height: 9.8rem;
-}
-.spine-h4 {
-  height: 9rem;
-}
-
-.shelf-histories .spine {
-  --spine-wash: var(--about-fig-line);
-  --spine-wash-opacity: 0.14;
-}
-
-.shelf-tragedies .spine {
-  --spine-wash: var(--global-text-color);
-  --spine-wash-opacity: 0.12;
-}
-
-.shelf-key {
-  margin: 0.8rem 0 0;
-  font-size: 0.74rem;
-  color: var(--about-ink-muted);
-}
-
-.shelf-key-mark {
-  display: inline-block;
-  width: 6px;
-  height: 6px;
-  margin-right: 0.3rem;
-  border-radius: 50%;
-  background: var(--global-theme-color);
-  vertical-align: middle;
-}
-
-.shelf-tip {
-  position: absolute;
-  z-index: 5;
-  max-width: min(17rem, 100%);
-  padding: 0.5rem 0.7rem;
-  border: 1px solid var(--about-fig-line);
-  border-radius: 6px;
-  background: var(--global-bg-color);
-  box-shadow: 3px 3px 0 var(--global-divider-color);
-  font-size: 0.78rem;
-  line-height: 1.45;
-  color: var(--about-ink-soft);
-  pointer-events: auto;
-
-  &[hidden] {
-    display: none;
+.reading-cell { min-width: 0; position: relative; border-radius: 3px; }
+.reading-element {
+  height: 100%;
+  summary {
+    display: flex; flex-direction: column; position: relative; height: 100%; padding: .25rem;
+    background: var(--reading-paper); border: 1px solid var(--book-color); border-top: 4px solid var(--book-color);
+    border-radius: 3px; cursor: pointer; list-style: none;
+    &::-webkit-details-marker { display: none; }
+    &::before { content: ''; background: var(--book-color); opacity: .13; position: absolute; inset: 0; pointer-events: none; }
+    > * { position: relative; }
+    strong { display: block; font: 500 1.35rem Georgia, serif; line-height: 1.1; }
+    small { font: .53rem monospace; margin-top: auto; }
   }
-
-  strong {
-    display: block;
-    font-weight: 600;
-    color: var(--global-text-color);
-  }
-
-  span {
-    display: block;
-    color: var(--about-ink-muted);
-  }
+  &[open] { z-index: 3; }
+  .reading-detail { position: absolute; z-index: 5; width: 280px; padding: 1rem; background: var(--reading-paper); border: 1px solid var(--reading-line); box-shadow: 0 5px 20px #0002; }
 }
-
-// The Kindle, as a card at the end of the shelf; drawn in the figure inks.
-.kindle-card {
-  justify-self: start;
-  align-self: start;
-  width: 10.5rem;
-  max-width: 100%;
-  min-width: 0;
-  padding: 0.75rem 0.85rem 0.85rem;
-
-  @media (min-width: 768px) {
-    grid-column: 2;
-    grid-row: 1 / span 3;
-  }
-  border: 1.2px dashed var(--global-divider-color);
-  border-radius: 6px;
-  text-align: center;
-
-  p {
-    margin: 0;
-  }
-
-  .outside-placeholder {
-    margin-top: 0.6rem;
-    padding: 0.5rem;
-    font-size: 0.7rem;
-    overflow-wrap: anywhere;
-  }
+.reading-atomic { font: .57rem monospace; }
+.reading-tile-title { overflow: hidden; white-space: nowrap; text-overflow: ellipsis; font-size: .54rem; margin-top: .15rem; }
+.reading-series, .reading-empty, .reading-strip-label { display: flex; align-items: center; justify-content: center; font: .57rem monospace; color: var(--about-ink-muted); }
+.reading-series { border: 1px dashed var(--reading-line); text-align: center; }
+.reading-empty { border: 1px dashed var(--reading-line); opacity: .4; text-align: center; }
+.reading-strip-label { justify-content: flex-end; padding-right: .6rem; }
+.is-enhanced .reading-element .reading-detail { display: none; }
+.reading-inspector {
+  position: fixed; z-index: 1100; width: 320px; max-width: calc(100vw - 24px); max-height: calc(100dvh - 24px);
+  overflow-y: auto; padding: 1.1rem; border: 1px solid var(--reading-line); border-radius: 5px;
+  background: var(--reading-paper); color: var(--reading-ink); box-shadow: 0 8px 30px #0003;
+  font-size: .82rem; line-height: 1.7;
+  > p { margin: .8rem 0; }
 }
-
-.kindle-card-h {
-  font-size: 0.6rem;
-  font-weight: 600;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: var(--about-ink-muted);
-  text-align: left;
+.reading-note-title { display: block; font-size: 1rem; }
+.reading-note-en, .reading-note-author { display: block; color: var(--about-ink-muted); font-size: .72rem; }
+.reading-margins { padding: .6rem 0 .2rem .8rem; border-left: 2px solid var(--reading-line); p { margin: 0 0 .3rem; } }
+.reading-page-source { display: inline-block; margin-top: .7rem; font-size: .65rem; }
+.reading-book { transition: opacity .15s; }
+.reading-book.is-dimmed { opacity: .24; }
+.reading-book.is-connected { outline: 2px solid var(--global-theme-color); outline-offset: 2px; }
+// Fiction keeps its shared family color, with a distinct binding for each region.
+.reading-book[data-shade="japanese"] { --book-color: #9b8b9c !important; }
+.reading-book[data-shade="european"] { --book-color: #8394a8 !important; }
+.reading-book[data-shade="american"] { --book-color: #7d9c97 !important; }
+.reading-book[data-shade="world"] { --book-color: #b0967c !important; }
+.reading-mood-y, .reading-mood-x { display: flex; justify-content: space-between; gap: .5rem; font-size: .66rem; color: var(--about-ink-muted); }
+.reading-mood-frame { display: grid; grid-template-columns: 52px minmax(0,1fr); gap: .4rem; }
+.reading-mood-y { flex-direction: column; margin: .8rem 0; line-height: 1.5; font-size: .58rem; }
+.reading-mood-x { margin: .5rem 0 0 58px; }
+.reading-mood-scroll { overflow-x: auto; padding: 12px; border: 1px solid var(--reading-line); }
+.reading-mood-plot {
+  position: relative; height: 470px; min-width: 660px;
+  background-image: linear-gradient(to right, var(--reading-line) 1px, transparent 1px), linear-gradient(to top, var(--reading-line) 1px, transparent 1px);
+  background-size: 25% 25%; border-bottom: 1px solid var(--reading-line); border-right: 1px solid var(--reading-line);
 }
-
-.kindle-card-art {
-  display: block;
-  width: 4.2rem;
-  height: auto;
-  margin: 0.7rem auto 0.6rem;
-  overflow: visible;
-
-  .k-line,
-  .k-soft {
-    fill: none;
-    stroke-width: 1.3;
-    stroke-linecap: round;
-  }
-
-  .k-line {
-    stroke: var(--about-fig-line);
-  }
-
-  .k-soft {
-    stroke: var(--global-divider-color);
-  }
+.reading-dot {
+  position: absolute; transform: translate(-50%,50%); width: 25px; height: 25px;
+  border: 2px solid var(--book-color); border-radius: 5px; padding: 0; background: var(--reading-paper);
+  font: .6rem monospace !important;
+  &:hover, &:focus { z-index: 5; opacity: 1; }
 }
-
-.kindle-card-t {
-  font-size: 0.78rem;
-  font-weight: 600;
-  color: var(--global-text-color);
+.reading-dot-label { display: none; }
+.reading-room:not(.is-enhanced) .reading-dot:hover .reading-dot-label,
+.reading-room:not(.is-enhanced) .reading-dot:focus .reading-dot-label {
+  display: block; position: absolute; bottom: 110%; left: 0; width: max-content; max-width: 210px;
+  background: var(--reading-paper); border: 1px solid var(--reading-line); padding: .5rem;
 }
-
-.kindle-card-s {
-  font-size: 0.7rem;
-  color: var(--about-ink-muted);
+.reading-map { height: 430px; width: 100%; border: 1px solid var(--reading-line); border-radius: 5px; isolation: isolate; z-index: 0; }
+.reading-pin { background: transparent; border: 0;
+  > span { display: grid; place-items: center; height: 28px; border: 2px solid white; border-radius: 4px 4px 4px 0; background: var(--book-color); color: #161616; box-shadow: 0 1px 4px #0008; font: bold 11px monospace; }
 }
-
-.kindle-card-now {
-  margin-top: 0.5rem !important;
-  font-size: 0.76rem;
-  font-style: italic;
-  color: var(--about-ink-soft);
+.reading-map-popup { color: #222; font-size: 12px; strong, span { display: block; } span { color: #555; } p { margin: .4rem 0; } }
+.reading-place-index { margin: 1rem 0 1.5rem; summary { cursor: pointer; font-size: .8rem; } }
+.reading-place-list { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: .7rem 1.5rem; padding: 1rem 0; list-style: none;
+  li { border-bottom: 1px solid var(--reading-line); padding-bottom: .4rem; }
+  button { display: block; border: 0; padding: 0; text-align: left; background: none; text-decoration: underline; text-underline-offset: .2em; &:disabled { cursor: default; text-decoration: none; } }
+  span { display: block; font-size: .68rem; color: var(--about-ink-muted); margin-top: .2rem; }
+  @media (max-width:575px) { grid-template-columns: 1fr; }
+}
+.reading-placeless { display: flex; flex-wrap: wrap; list-style: none; padding: 0; gap: .4rem; li { border: 1px solid var(--reading-line); padding: .25rem .45rem; font-size: .7rem; border-radius: 3px; } }
+.reading-card-grid { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 1.1rem;
+  @media (max-width: 900px) { grid-template-columns: repeat(2, minmax(0,1fr)); }
+  @media (max-width: 575px) { grid-template-columns: 1fr; }
+}
+.reading-library { position: relative; min-width: 0; perspective: 1000px; border-radius: 3px; }
+.reading-card-inner { height: 100%; position: relative; }
+.reading-card-front, .reading-card-back {
+  padding: .9rem 1rem 3rem; border: 1px solid var(--reading-line); border-top: 5px solid var(--book-color);
+  border-radius: 3px; background-color: var(--reading-paper); color: var(--reading-ink);
+  background-image: repeating-linear-gradient(transparent 0,transparent 25px,var(--reading-line) 26px,transparent 27px);
+  h4 { font-size: .97rem; line-height: 1.6; margin: .7rem 0 .3rem; overflow-wrap: anywhere; }
+}
+.reading-card-top { display: flex; justify-content: space-between; gap: .3rem; font: .57rem monospace; letter-spacing: .04em; }
+.reading-cover { display: inline-grid; place-items: center; width: 37px; height: 48px; margin-top: .8rem; border: 1px solid var(--book-color); border-left: 6px solid var(--book-color); border-radius: 1px 3px 3px 1px; font: 1rem Georgia,serif; box-shadow: 2px 2px 0 var(--reading-line); }
+.reading-card-en { font-size: .68rem; color: var(--about-ink-muted); margin: 0 0 .3rem; }
+.reading-card-author { font-size: .72rem; margin: .25rem 0; }
+.reading-card-review { font-size: .8rem; line-height: 1.9; margin: 1rem 0; }
+.reading-due { display: inline-block; transform: rotate(-5deg); padding: .3rem .5rem; border: 2px solid var(--book-color); font: .65rem/1.5 monospace; letter-spacing: .04em; margin: .4rem 0 .8rem; }
+.reading-card-group { display: block; font-size: .6rem; color: var(--about-ink-muted); }
+.reading-card-toggle { position: absolute; right: .7rem; bottom: .65rem; z-index: 2; border: 1px solid var(--reading-line); background: var(--reading-paper); padding: .25rem .5rem; border-radius: 2px; font-size: .65rem !important; }
+.reading-card-back { > span:first-child { font: .6rem monospace; } p { font-size: .87rem; line-height: 1.9; margin: 1.5rem 0; } }
+.reading-back-symbol { display: block; margin-top: 2rem; font: 3rem Georgia,serif; color: var(--about-ink-muted); opacity: .4; }
+.is-enhanced {
+  .reading-card-inner { display: grid; transform-style: preserve-3d; transition: transform .4s ease; }
+  .reading-card-front, .reading-card-back { grid-area: 1 / 1; backface-visibility: hidden; }
+  .reading-card-back { transform: rotateY(180deg); visibility: hidden; }
+  .reading-library { cursor: pointer; }
+  .reading-library.is-flipped { .reading-card-inner { transform: rotateY(180deg); } .reading-card-back { visibility: visible; } .reading-card-front { visibility: hidden; } }
+}
+@media (prefers-reduced-motion: reduce) { .reading-book, .is-enhanced .reading-card-inner { transition: none; } }
+@media print {
+  .reading-tabs, .reading-clusters, .reading-map, .reading-card-toggle, .reading-inspector { display: none !important; }
+  .reading-room .reading-panel[hidden] { display: block !important; }
+  .reading-table-scroll, .reading-mood-scroll { overflow: visible; }
+  .reading-periodic { min-width: 0; }
+  .reading-card-grid { grid-template-columns: repeat(2,minmax(0,1fr)); }
+  .reading-library { break-inside: avoid; }
+  .reading-book.is-dimmed { opacity: 1; }
+  .is-enhanced .reading-card-inner { transform: none !important; }
+  .is-enhanced .reading-card-front { visibility: visible !important; }
 }
 
 /* -----------------------------------------------------------------------------
@@ -823,17 +703,12 @@
 @media (prefers-reduced-motion: reduce) {
   .outside-chip,
   .outside-nav a,
-  .spine,
   .stat-num,
   .trip-row {
     transition: none;
   }
 
-  .spine:hover,
-  .spine:focus-visible,
-  .spine.is-active {
-    transform: none;
-  }
+
 }
 
 @media print {

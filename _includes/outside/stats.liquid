@@ -11,10 +11,7 @@
 {%- for t in trips -%}
   {%- assign stop_count = stop_count | plus: t.markers.size -%}
 {%- endfor -%}
-{%- assign play_count = 0 -%}
-{%- for s in site.data.outside.reading.sections -%}
-  {%- assign play_count = play_count | plus: s.plays.size -%}
-{%- endfor -%}
+{%- assign book_count = site.data.outside.reading.books.size -%}
 {%- assign place_count = site.data.places.size -%}
 {%- assign body_count = page.gear.bodies.size | default: 0 -%}
 {%- assign lens_count = page.gear.lenses.size | default: 0 -%}
@@ -56,10 +53,10 @@
   </li>
   <li>
     <a href="#reading">
-      <span class="sr-only">{{ play_count }} plays on the shelf</span>
+      <span class="sr-only">{{ book_count }} books on the shelf</span>
       <span aria-hidden="true">
-        <span class="stat-num" data-count="{{ play_count }}">{{ play_count }}</span>
-        <span class="stat-label">plays on the shelf</span>
+        <span class="stat-num" data-count="{{ book_count }}">{{ book_count }}</span>
+        <span class="stat-label">books on the shelf</span>
       </span>
     </a>
   </li>
