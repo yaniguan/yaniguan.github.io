@@ -8,7 +8,8 @@
     <button type="button" role="tab" id="reading-tab-cards" aria-controls="reading-cards" aria-selected="false" tabindex="-1">借书卡 / Library cards</button>
   </div>
   <ul class="reading-legend" aria-label="分类 / Groups">
-    {% for group in reading.groups %}<li style="--book-color: {{ group.color }}"><i aria-hidden="true"></i>{{ group.label }}</li>{% endfor %}
+    <li><button type="button" data-group="" aria-pressed="true">全部 / All</button></li>
+    {% for group in reading.groups %}<li style="--book-color: {{ group.color }}"><button type="button" data-group="{{ group.id }}" aria-pressed="false"><i aria-hidden="true"></i>{{ group.label }}</button></li>{% endfor %}
   </ul>
   <p class="reading-fiction-key reading-note">文学装帧 / Fiction bindings: <span style="--book-color:#9b8b9c">日本 / Japanese</span> · <span style="--book-color:#8394a8">欧洲 / European</span> · <span style="--book-color:#7d9c97">美国 / American</span> · <span style="--book-color:#b0967c">世界 / World</span></p>
   <div class="reading-clusters" hidden>
@@ -36,7 +37,7 @@
           {%- elsif n <= 86 -%}{%- assign row = 6 -%}{%- assign col = n | minus: 68 -%}
           {%- elsif n <= 88 -%}{%- assign row = 7 -%}{%- assign col = n | minus: 86 -%}
           {%- else -%}{%- assign row = 10 -%}{%- assign col = n | minus: 86 -%}{%- endif -%}
-          <div class="reading-cell reading-book" data-clusters="{{ book.clusters | join: ' ' }}" data-shade="{{ book.shade }}" style="--book-color: {{ group.color }}; grid-row: {{ row }}; grid-column: {{ col }}">
+          <div class="reading-cell reading-book" data-clusters="{{ book.clusters | join: ' ' }}" data-group-id="{{ book.group }}" data-shade="{{ book.shade }}" style="--book-color: {{ group.color }}; grid-row: {{ row }}; grid-column: {{ col }}">
             <details class="reading-element" data-book="{{ book.n }}">
               <summary aria-label="{{ book.n }} · {{ book.title | escape }} · {{ book.author | escape }}" aria-controls="reading-detail-{{ book.n }}"><span class="reading-atomic">{{ book.n }}</span><strong>{{ book.symbol }}</strong><span class="reading-tile-title">{{ book.title }}</span>{% if book.pages %}<small>{{ book.pages }}</small>{% endif %}</summary>
               <div class="reading-detail" id="reading-detail-{{ book.n }}">{% include outside/reading-note.liquid book=book %}</div>
@@ -44,8 +45,8 @@
           </div>
         {% endfor %}
         <span class="reading-series" style="grid-row: 6; grid-column: 3">57–71<br>↓</span><span class="reading-series" style="grid-row: 7; grid-column: 3">89–103<br>↓</span>
-        {% for col in (4..18) %}<span class="reading-empty" style="grid-row: 7; grid-column: {{ col }}">still<br>reading</span>{% endfor %}
-        {% for col in (12..17) %}<span class="reading-empty" style="grid-row: 10; grid-column: {{ col }}">still<br>reading</span>{% endfor %}
+        {% for col in (4..18) %}<span class="reading-empty" style="grid-row: 7; grid-column: {{ col }}"><span class="reading-future-number">{{ col | plus: 100 }}</span>still<br>reading</span>{% endfor %}
+        {% for col in (12..17) %}<span class="reading-empty" style="grid-row: 10; grid-column: {{ col }}"><span class="reading-future-number">{{ col | plus: 86 }}</span>still<br>reading</span>{% endfor %}
         <span class="reading-strip-label" style="grid-row: 9; grid-column: 1 / 3">镧系 / Ln</span><span class="reading-strip-label" style="grid-row: 10; grid-column: 1 / 3">锕系 / An</span>
       </div>
     </div>
@@ -60,7 +61,7 @@
     <div class="reading-mood-y"><span>笑了 ↑<br>Made me laugh</span><span>哭了 ↓<br>Made me cry</span></div>
     <div class="reading-mood-scroll"><div class="reading-mood-plot">
       {% for book in reading.books %}{% assign group = reading.groups | where: 'id', book.group | first %}
-        <button type="button" class="reading-dot reading-book" data-book="{{ book.n }}" data-clusters="{{ book.clusters | join: ' ' }}" style="--book-color: {{ group.color }}; left: {{ book.map.x | times: 100 }}%; bottom: {{ book.map.y | times: 100 }}%" aria-label="{{ book.title | escape }} · {{ book.review | escape }}"><span>{{ book.symbol }}</span><span class="reading-dot-label">{{ book.title }}</span></button>
+        <button type="button" class="reading-dot reading-book" data-book="{{ book.n }}" data-clusters="{{ book.clusters | join: ' ' }}" style="--book-color: {{ group.color }}; left: {{ book.map.x | times: 100 }}%; bottom: {{ book.map.y | times: 100 }}%" aria-label="{{ book.title | escape }} · {{ book.review | escape }}"><span class="reading-dot-label">{{ book.title }}</span></button>
       {% endfor %}
     </div></div>
     </div>
@@ -74,9 +75,20 @@
       data-leaflet-js="{{ site.third_party_libraries.leaflet.url.js }}" data-leaflet-js-sri="{{ site.third_party_libraries.leaflet.integrity.js }}"
       data-leaflet-css="{{ site.third_party_libraries.leaflet.url.css }}" data-leaflet-css-sri="{{ site.third_party_libraries.leaflet.integrity.css }}"></div>
     <p class="reading-map-status reading-note" role="status">地点清单随时可用。 / The place index works even without the map.</p>
-    <details class="reading-place-index" open><summary>地点索引 / Place index</summary><ul class="reading-place-list">
-      {% for book in reading.books %}{% if book.place %}<li class="reading-book" data-clusters="{{ book.clusters | join: ' ' }}"><button type="button" disabled data-map-book="{{ book.n }}">{{ book.title }}</button><span>{{ book.place.name }}</span></li>{% endif %}{% endfor %}
-    </ul></details>
+    <details class="reading-place-index" open><summary>地点索引 / Place index</summary><div class="reading-place-regions">
+      {% assign regions = 'East Asia|Europe|Americas|Middle East & Africa|Oceania/other' | split: '|' %}
+      {% for region in regions %}<section class="reading-place-region"><h4>{{ region }}</h4><ul class="reading-place-list">
+        {% for book in reading.books %}{% if book.place %}
+          {% assign lat = book.place.lat %}{% assign lon = book.place.lon %}
+          {% assign book_region = 'Oceania/other' %}
+          {% if lon < -30 %}{% assign book_region = 'Americas' %}
+          {% elsif lon >= 95 and lat >= 0 %}{% assign book_region = 'East Asia' %}
+          {% elsif lon >= -25 and lon < 60 and lat >= 35 %}{% assign book_region = 'Europe' %}
+          {% elsif lon >= -25 and lon < 65 %}{% assign book_region = 'Middle East & Africa' %}{% endif %}
+          {% if book_region == region %}<li class="reading-book" data-clusters="{{ book.clusters | join: ' ' }}"><button type="button" disabled data-map-book="{{ book.n }}" title="{{ book.title | escape }} · {{ book.place.name | escape }}">{{ book.title }} · {{ book.place.name }}</button></li>{% endif %}
+        {% endif %}{% endfor %}
+      </ul></section>{% endfor %}
+    </div></details>
     <h4>无处不在，或在脑海里 / Everywhere, or inside your head</h4>
     <ul class="reading-placeless">{% for book in reading.books %}{% unless book.place %}<li class="reading-book" data-clusters="{{ book.clusters | join: ' ' }}">{{ book.title }}</li>{% endunless %}{% endfor %}</ul>
   </section>
@@ -84,7 +96,7 @@
     <h3 class="reading-view-title">图书馆借书卡 / Return whenever</h3>
     <p class="reading-note">不用逾期费。点击或按 Enter / Space 翻面看两句题外话。 / No late fees. Select a card to turn it over.</p>
     <div class="reading-card-grid">{% for book in reading.books %}{% assign group = reading.groups | where: 'id', book.group | first %}
-      <article class="reading-library reading-book" data-clusters="{{ book.clusters | join: ' ' }}" data-shade="{{ book.shade }}" style="--book-color: {{ group.color }}">
+      <article class="reading-library reading-book" data-clusters="{{ book.clusters | join: ' ' }}" data-group-id="{{ book.group }}" data-shade="{{ book.shade }}" style="--book-color: {{ group.color }}">
         <button type="button" class="reading-card-toggle" aria-pressed="false" aria-label="翻面 / Flip {{ book.title | escape }}" hidden>翻面 / Flip ↻</button>
         <div class="reading-card-inner"><div class="reading-card-front">
           <div class="reading-card-top"><span>借书证 / READER’S CARD</span><span>{{ book.n | prepend: '00' | slice: -3, 3 }}</span></div>

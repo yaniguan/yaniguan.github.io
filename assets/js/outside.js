@@ -320,6 +320,41 @@
       summary.addEventListener('mouseleave', delayDismiss);
       summary.addEventListener('blur', delayDismiss);
     });
+    // Place each dot near its original coordinates, choosing the nearest free
+    // point on a deterministic spiral. Recompute in pixels after tab/size changes.
+    function layoutMood() {
+      const plot = room.querySelector('.reading-mood-plot');
+      const width = plot.clientWidth, height = plot.clientHeight;
+      if (!width || !height) return;
+      const placed = [];
+      room.querySelectorAll('.reading-dot').forEach((dot) => {
+        const book = reading.books.find((b) => b.n === Number(dot.dataset.book));
+        const baseX = book.map.x * width, baseY = book.map.y * height;
+        let x, y;
+        for (let step = 0; step < 5000; step++) {
+          const radius = 2 * Math.sqrt(step);
+          const angle = step * 2.399963 + book.n;
+          x = Math.max(8, Math.min(width - 8, baseX + radius * Math.cos(angle)));
+          y = Math.max(8, Math.min(height - 8, baseY + radius * Math.sin(angle)));
+          if (placed.every((p) => Math.hypot(p.x - x, p.y - y) >= 15)) break;
+        }
+        placed.push({x, y});
+        dot.style.left = x + 'px';
+        dot.style.bottom = y + 'px';
+      });
+    }
+    if (window.ResizeObserver) new ResizeObserver(layoutMood).observe(room.querySelector('.reading-mood-plot'));
+    window.addEventListener('resize', layoutMood);
+
+    const groupButtons = Array.from(room.querySelectorAll('[data-group]'));
+    groupButtons.forEach((button) => button.addEventListener('click', () => {
+      pressOne(groupButtons, button);
+      room.querySelectorAll('.reading-library').forEach((card) => {
+        card.hidden = !!button.dataset.group && card.dataset.groupId !== button.dataset.group;
+      });
+      dismiss();
+    }));
+
     room.querySelectorAll('.reading-dot').forEach((dot) => {
       dot.addEventListener('focus', () => showNote(dot, dot.dataset.book));
       dot.addEventListener('mouseenter', () => showNote(dot, dot.dataset.book));
@@ -448,6 +483,7 @@
       panels.forEach((panel) => { panel.hidden = panel.id !== tab.getAttribute('aria-controls'); });
       if (focus) tab.focus();
       if (tab.getAttribute('aria-controls') === 'reading-world') ensureAtlas();
+      if (tab.getAttribute('aria-controls') === 'reading-mood') layoutMood();
     }
     tabs.forEach((tab, i) => {
       tab.addEventListener('click', () => activate(tab, false));
