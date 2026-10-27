@@ -1,1 +1,21 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="240" height="200" viewBox="0 0 240 200" role="img"><title>Partial covalent character in cesium coordination</title><g font-family="Avenir Next, Segoe UI, Helvetica, Arial, sans-serif" fill="#2b2350"><rect x="4" y="4" width="232" height="192" rx="28" fill="#efeaf8"/><rect x="28" y="83" width="184" height="12" rx="6" fill="#d9e3fb"/><rect x="28" y="83" width="130" height="12" rx="6" fill="#2d5bd7"/><rect x="152" y="72" width="9" height="34" rx="0" fill="#2b2350"/><text x="49" y="131" text-anchor="middle" font-size="18" fill="#2b2350">ionic</text><text x="173" y="131" text-anchor="middle" font-size="18" fill="#2b2350">covalent</text><text x="120" y="176" text-anchor="middle" font-size="20" fill="#2b2350">partial covalent</text></g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="240" height="200" viewBox="0 0 240 200" role="img">
+<title>Cs+ and an oxygen of bent CO2: mostly ionic contact with a partial covalent overlap</title>
+<defs>
+<style>.ln,.lc,.lb,.lp{fill:none;stroke-width:3;stroke-linecap:round;stroke-linejoin:round}.ln{stroke:#2b2350}.lc{stroke:#c96a2b}.lb{stroke:#2d5bd7}.lp{stroke:#d8cfee}.dt{stroke-dasharray:0.5 6.5}.ds{stroke-dasharray:6 6}.t{font-family:"Avenir Next","Segoe UI",Helvetica,Arial,sans-serif;font-size:15px;fill:#2b2350}.b{font-weight:700}.i{font-style:italic;fill:#6d55b5}.w{fill:#fff}.m{text-anchor:middle}.e{text-anchor:end}.s14{font-size:14px}.s16{font-size:16px}.s18{font-size:18px}.s20{font-size:20px}</style>
+<g id="o"><circle r="8" fill="#2d5bd7"/><circle cx="-2.5" cy="-2.5" r="2.5" fill="#9fb6f0"/></g>
+<g id="c"><circle r="8" fill="#2b2350"/><circle cx="-2.5" cy="-2.5" r="2.5" fill="#6d61a0"/></g>
+</defs>
+<rect x="4" y="4" width="232" height="192" rx="18" fill="#f6f2fb"/>
+<text class="t i m" x="120" y="34">mostly ionic, partly shared</text>
+<ellipse cx="112" cy="88" rx="22" ry="13" fill="#d8cfee"/>
+<ellipse cx="134" cy="88" rx="20" ry="12" fill="#b4c5f5" opacity=".8"/>
+<path class="ln" d="M154 88L176 102L198 90"/>
+<use xlink:href="#o" x="154" y="88"/><use xlink:href="#c" x="176" y="102"/><use xlink:href="#o" x="198" y="90"/>
+<circle cx="72" cy="88" r="27" fill="#8a77c4"/><circle cx="72" cy="88" r="23" fill="#5b4596"/>
+<text class="t b w s18 m" x="72" y="94">Cs⁺</text>
+<path class="ln" d="M44 148H196"/>
+<path class="lp" d="M120 140V156"/>
+<circle cx="84" cy="148" r="9" fill="#c96a2b"/><circle cx="81" cy="145" r="3" fill="#eab38a"/>
+<text class="t m" x="48" y="178">ionic</text>
+<text class="t m" x="190" y="178">covalent</text>
+</svg>

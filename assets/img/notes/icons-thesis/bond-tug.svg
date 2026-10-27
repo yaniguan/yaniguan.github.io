@@ -1,1 +1,26 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="240" height="200" viewBox="0 0 240 200" role="img"><title>Metal bonds compete with ligand coordination</title><g font-family="Avenir Next, Segoe UI, Helvetica, Arial, sans-serif" fill="#2b2350"><rect x="4" y="4" width="232" height="192" rx="28" fill="#efeaf8"/><path d="M48 72L112 101L48 130" fill="none" stroke="#c96a2b" stroke-width="4" stroke-linecap="butt" stroke-linejoin="miter"/><circle cx="42" cy="72" r="13" fill="#c96a2b"/><circle cx="42" cy="130" r="13" fill="#c96a2b"/><circle cx="117" cy="101" r="23" fill="#c96a2b"/><text x="117" y="108" text-anchor="middle" font-size="21" fill="#2b2350">Cu</text><path d="M141 101H181" fill="none" stroke="#2b2350" stroke-width="4" stroke-linecap="butt" stroke-linejoin="miter"/><circle cx="195" cy="101" r="18" fill="#2d5bd7"/><text x="195" y="108" text-anchor="middle" font-size="21" fill="#fff">N</text><path d="M94 46L50 46" fill="none" stroke="#2b2350" stroke-width="4" stroke-linecap="butt" stroke-linejoin="miter"/><polygon points="50,46 61.0,40.0 61.0,52.0" fill="#2b2350"/><path d="M146 46L190 46" fill="none" stroke="#2b2350" stroke-width="4" stroke-linecap="butt" stroke-linejoin="miter"/><polygon points="190,46 179.0,52.0 179.0,40.0" fill="#2b2350"/><text x="120" y="178" text-anchor="middle" font-size="20" fill="#2b2350">metal vs ligand</text></g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="240" height="200" viewBox="0 0 240 200" role="img">
+<title>Bond redistribution: a Cu atom trades metallic neighbors for ammine ligands</title>
+<defs>
+<style>.ln,.lc,.lb,.lp{fill:none;stroke-width:3;stroke-linecap:round;stroke-linejoin:round}.ln{stroke:#2b2350}.lc{stroke:#c96a2b}.lb{stroke:#2d5bd7}.lp{stroke:#d8cfee}.dt{stroke-dasharray:0.5 6.5}.ds{stroke-dasharray:6 6}.t{font-family:"Avenir Next","Segoe UI",Helvetica,Arial,sans-serif;font-size:15px;fill:#2b2350}.b{font-weight:700}.i{font-style:italic;fill:#6d55b5}.w{fill:#fff}.m{text-anchor:middle}.e{text-anchor:end}.s14{font-size:14px}.s16{font-size:16px}.s18{font-size:18px}.s20{font-size:20px}</style>
+<g id="cu"><circle r="11" fill="#c96a2b"/><circle cx="-3.5" cy="-3.5" r="3.5" fill="#eab38a"/></g>
+<g id="n"><circle r="8" fill="#8a6fd1"/><circle cx="-2.5" cy="-2.5" r="2.5" fill="#cbbdf0"/></g>
+<circle id="h" r="5" fill="#b4c5f5"/>
+</defs>
+<rect x="4" y="4" width="232" height="192" rx="18" fill="#f6f2fb"/>
+<text class="t i m" x="120" y="34">a quiet tug-of-war</text>
+<path class="lc dt" d="M106 104L59 93M106 104L59 115"/>
+<path class="ln" d="M106 104L132 78M106 104L142 104M106 104L132 130"/>
+<path class="ln" d="M132 78L124 63M132 78L141 63M132 78L148 74M142 104L159 104M142 104L153 91M142 104L153 117M132 130L124 145M132 130L141 145M132 130L148 134"/>
+<g>
+<use xlink:href="#cu" x="40" y="60"/><use xlink:href="#cu" x="40" y="82"/><use xlink:href="#cu" x="40" y="104"/><use xlink:href="#cu" x="40" y="126"/><use xlink:href="#cu" x="40" y="148"/>
+<use xlink:href="#cu" x="59" y="71"/><use xlink:href="#cu" x="59" y="93"/><use xlink:href="#cu" x="59" y="115"/><use xlink:href="#cu" x="59" y="137"/>
+</g>
+<use xlink:href="#h" x="124" y="63"/><use xlink:href="#h" x="141" y="63"/><use xlink:href="#h" x="148" y="74"/>
+<use xlink:href="#h" x="159" y="104"/><use xlink:href="#h" x="153" y="91"/><use xlink:href="#h" x="153" y="117"/>
+<use xlink:href="#h" x="124" y="145"/><use xlink:href="#h" x="141" y="145"/><use xlink:href="#h" x="148" y="134"/>
+<use xlink:href="#n" x="132" y="78"/><use xlink:href="#n" x="142" y="104"/><use xlink:href="#n" x="132" y="130"/>
+<circle cx="106" cy="104" r="15" fill="#d6e0fa"/>
+<use xlink:href="#cu" x="106" y="104"/>
+<text class="t b m" x="62" y="182" style="fill:#c96a2b">Cu–Cu ↓</text>
+<text class="t b m" x="178" y="182" style="fill:#6d55b5">Cu–N ↑</text>
+</svg>

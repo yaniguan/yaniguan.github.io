@@ -1,1 +1,24 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="240" height="200" viewBox="0 0 240 200" role="img"><title>Amine-assisted copper dissolution</title><g font-family="Avenir Next, Segoe UI, Helvetica, Arial, sans-serif" fill="#2b2350"><rect x="4" y="4" width="232" height="192" rx="28" fill="#efeaf8"/><circle cx="39" cy="148" r="12" fill="#c96a2b"/><circle cx="66" cy="148" r="12" fill="#c96a2b"/><circle cx="93" cy="148" r="12" fill="#c96a2b"/><circle cx="120" cy="148" r="12" fill="#c96a2b"/><circle cx="147" cy="148" r="12" fill="#c96a2b"/><circle cx="174" cy="148" r="12" fill="#c96a2b"/><circle cx="201" cy="148" r="12" fill="#c96a2b"/><circle cx="117" cy="103" r="16" fill="#c96a2b"/><path d="M117 87V69M108 50L92 43M126 50L142 43" fill="none" stroke="#2b2350" stroke-width="4" stroke-linecap="butt" stroke-linejoin="miter"/><text x="117" y="63" text-anchor="middle" font-size="23" fill="#2d5bd7">N</text><text x="79" y="46" text-anchor="middle" font-size="18" fill="#2d5bd7">H</text><text x="155" y="46" text-anchor="middle" font-size="18" fill="#2d5bd7">H</text><path d="M184 118L184 71" fill="none" stroke="#2b2350" stroke-width="4" stroke-linecap="butt" stroke-linejoin="miter"/><polygon points="184,71 190.0,82.0 178.0,82.0" fill="#2b2350"/><text x="120" y="184" text-anchor="middle" font-size="20" fill="#2b2350">Cu + amine</text></g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="240" height="200" viewBox="0 0 240 200" role="img">
+<title>Cu dissolution: a kink atom leaves the step as a linear two-ammine complex</title>
+<defs>
+<style>.ln,.lc,.lb,.lp{fill:none;stroke-width:3;stroke-linecap:round;stroke-linejoin:round}.ln{stroke:#2b2350}.lc{stroke:#c96a2b}.lb{stroke:#2d5bd7}.lp{stroke:#d8cfee}.dt{stroke-dasharray:0.5 6.5}.ds{stroke-dasharray:6 6}.t{font-family:"Avenir Next","Segoe UI",Helvetica,Arial,sans-serif;font-size:15px;fill:#2b2350}.b{font-weight:700}.i{font-style:italic;fill:#6d55b5}.w{fill:#fff}.m{text-anchor:middle}.e{text-anchor:end}.s14{font-size:14px}.s16{font-size:16px}.s18{font-size:18px}.s20{font-size:20px}</style>
+<marker id="ac" viewBox="0 0 12 12" refX="9" refY="6" markerWidth="12" markerHeight="12" markerUnits="userSpaceOnUse" orient="auto"><path d="M1 1.5L11 6L1 10.5Z" fill="#c96a2b"/></marker>
+<g id="cu"><circle r="11" fill="#c96a2b"/><circle cx="-3.5" cy="-3.5" r="3.5" fill="#eab38a"/></g>
+<g id="n"><circle r="8" fill="#8a6fd1"/><circle cx="-2.5" cy="-2.5" r="2.5" fill="#cbbdf0"/></g>
+<circle id="h" r="5" fill="#b4c5f5"/>
+<g id="nl"><path class="ln" d="M0 0L-8-15M0 0L-8 15M0 0H-17"/><use xlink:href="#n"/><use xlink:href="#h" x="-8" y="-15"/><use xlink:href="#h" x="-8" y="15"/><use xlink:href="#h" x="-17"/></g>
+<g id="nr"><path class="ln" d="M0 0L8-15M0 0L8 15M0 0H17"/><use xlink:href="#n"/><use xlink:href="#h" x="8" y="-15"/><use xlink:href="#h" x="8" y="15"/><use xlink:href="#h" x="17"/></g>
+</defs>
+<rect x="4" y="4" width="232" height="192" rx="18" fill="#f6f2fb"/>
+<text class="t b s16 m" x="166" y="44">[Cu(NH₃)₂]²⁺</text>
+<path class="lc" d="M136 140C146 124 158 116 164 104" marker-end="url(#ac)"/>
+<g>
+<use xlink:href="#cu" x="31" y="170"/><use xlink:href="#cu" x="53" y="170"/><use xlink:href="#cu" x="75" y="170"/><use xlink:href="#cu" x="97" y="170"/><use xlink:href="#cu" x="119" y="170"/><use xlink:href="#cu" x="141" y="170"/><use xlink:href="#cu" x="163" y="170"/><use xlink:href="#cu" x="185" y="170"/><use xlink:href="#cu" x="207" y="170"/>
+<use xlink:href="#cu" x="42" y="151"/><use xlink:href="#cu" x="64" y="151"/><use xlink:href="#cu" x="86" y="151"/><use xlink:href="#cu" x="108" y="151"/>
+</g>
+<circle class="lc ds" cx="130" cy="151" r="10" style="stroke-dasharray:4 4.4"/>
+<path class="ln" d="M140 84H192"/>
+<use xlink:href="#nl" x="140" y="84"/>
+<use xlink:href="#nr" x="192" y="84"/>
+<use xlink:href="#cu" x="166" y="84"/>
+</svg>

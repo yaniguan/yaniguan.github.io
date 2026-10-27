@@ -1,1 +1,41 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="720" height="220" viewBox="0 0 720 220" role="img"><title>Series capacitance of layered screening regions</title><g font-family="Avenir Next, Segoe UI, Helvetica, Arial, sans-serif" fill="#2b2350"><rect x="4" y="4" width="712" height="212" rx="28" fill="#efeaf8"/><rect x="40" y="39" width="124" height="100" rx="0" fill="#c96a2b"/><rect x="164" y="39" width="95" height="100" rx="0" fill="#f6dcc7"/><rect x="259" y="39" width="239" height="100" rx="0" fill="#d9e3fb"/><rect x="498" y="39" width="181" height="100" rx="0" fill="#fff"/><text x="102" y="95" text-anchor="middle" font-size="22" fill="#2b2350">metal</text><text x="211" y="73" text-anchor="middle" font-size="18" fill="#2b2350">weak</text><text x="211" y="96" text-anchor="middle" font-size="18" fill="#2b2350">screening</text><text x="211" y="122" text-anchor="middle" font-size="20" fill="#2b2350">d₁, ε₁</text><text x="378" y="95" text-anchor="middle" font-size="24" fill="#2b2350">d₂, ε₂</text><text x="588" y="95" text-anchor="middle" font-size="22" fill="#2b2350">bulk</text><text x="360" y="187" text-anchor="middle" font-size="28" fill="#2b2350">1/C = Σ d/ε₀ε</text></g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="720" height="220" viewBox="0 0 720 220" role="img">
+<title>Capacitors in series: Cu, a first water layer, frozen explicit water, and continuum solvent each add d over epsilon to 1/C</title>
+<defs>
+<style>.ln,.lc,.lb,.lp{fill:none;stroke-width:3;stroke-linecap:round;stroke-linejoin:round}.ln{stroke:#2b2350}.lc{stroke:#c96a2b}.lb{stroke:#2d5bd7}.lp{stroke:#d8cfee}.dt{stroke-dasharray:0.5 6.5}.ds{stroke-dasharray:6 6}.t{font-family:"Avenir Next","Segoe UI",Helvetica,Arial,sans-serif;font-size:15px;fill:#2b2350}.b{font-weight:700}.i{font-style:italic;fill:#6d55b5}.w{fill:#fff}.m{text-anchor:middle}.e{text-anchor:end}.s14{font-size:14px}.s16{font-size:16px}.s18{font-size:18px}.s20{font-size:20px}</style>
+<g id="o"><circle r="8" fill="#2d5bd7"/><circle cx="-2.5" cy="-2.5" r="2.5" fill="#9fb6f0"/></g>
+<circle id="h" r="5" fill="#b4c5f5"/>
+<g id="wd"><path class="ln" d="M-13.4 10.4L0 0L13.4 10.4"/><use xlink:href="#o"/><use xlink:href="#h" x="-13.4" y="10.4"/><use xlink:href="#h" x="13.4" y="10.4"/></g>
+<g id="wu"><path class="ln" d="M-13.4-10.4L0 0L13.4-10.4"/><use xlink:href="#o"/><use xlink:href="#h" x="-13.4" y="-10.4"/><use xlink:href="#h" x="13.4" y="-10.4"/></g>
+<g id="wl"><path class="ln" d="M-10.4-13.4L0 0L-10.4 13.4"/><use xlink:href="#o"/><use xlink:href="#h" x="-10.4" y="-13.4"/><use xlink:href="#h" x="-10.4" y="13.4"/></g>
+<g id="wt1"><path class="ln" d="M16.85 2.29L0 0L-6.44 15.73"/><use xlink:href="#o"/><use xlink:href="#h" x="16.85" y="2.29"/><use xlink:href="#h" x="-6.44" y="15.73"/></g>
+<g id="wt2"><path class="ln" d="M-14.38 9.07L0 0L-5.18-16.19"/><use xlink:href="#o"/><use xlink:href="#h" x="-14.38" y="9.07"/><use xlink:href="#h" x="-5.18" y="-16.19"/></g>
+</defs>
+<rect x="4" y="4" width="712" height="212" rx="18" fill="#f6f2fb"/>
+<rect x="22" y="22" width="58" height="128" rx="6" fill="#c96a2b"/>
+<rect x="29" y="30" width="7" height="112" rx="3.5" fill="#eab38a"/>
+<text class="t b w s16 m" x="56" y="92">Cu</text>
+
+<rect x="92" y="22" width="130" height="128" rx="10" fill="#e9e3f6"/>
+<text class="t b m" x="157" y="44">first layer</text>
+<use xlink:href="#wl" x="128" y="82"/>
+<use xlink:href="#wl" x="128" y="124"/>
+<use xlink:href="#wt2" x="190" y="86"/>
+<use xlink:href="#wt1" x="180" y="116"/>
+
+<rect x="234" y="22" width="210" height="128" rx="10" fill="#e2e9fb"/>
+<text class="t b m" x="339" y="44">explicit water, frozen</text>
+<use xlink:href="#wd" x="272" y="76"/>
+<use xlink:href="#wu" x="334" y="86"/>
+<use xlink:href="#wd" x="400" y="76"/>
+<use xlink:href="#wt1" x="268" y="114"/>
+<use xlink:href="#wt2" x="352" y="130"/>
+<use xlink:href="#wu" x="408" y="132"/>
+
+<rect x="456" y="22" width="240" height="128" rx="10" fill="#d1ddfa"/>
+<text class="t b m" x="576" y="44">continuum</text>
+<text class="t m" x="576" y="116" style="font-size:44px;font-style:italic;fill:#2d5bd7">ε</text>
+
+<path class="ln" d="M40 184H86M94 184H146M154 184H206M214 184H252M86 170V198M94 170V198M146 170V198M154 170V198M206 170V198M214 170V198"/>
+<text class="t b s18 m" x="476" y="184">1/C = d₁/ε₁ + d₂/ε₂ + d₃/ε₃</text>
+<text class="t i m" x="476" y="206">a thin, poor screener gets a loud vote</text>
+</svg>

@@ -1,1 +1,28 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="240" height="200" viewBox="0 0 240 200" role="img"><title>Molecular coordination at the electrode interface</title><g font-family="Avenir Next, Segoe UI, Helvetica, Arial, sans-serif" fill="#2b2350"><rect x="4" y="4" width="232" height="192" rx="28" fill="#efeaf8"/><circle cx="39" cy="151" r="12" fill="#c96a2b"/><circle cx="66" cy="151" r="12" fill="#c96a2b"/><circle cx="93" cy="151" r="12" fill="#c96a2b"/><circle cx="120" cy="151" r="12" fill="#c96a2b"/><circle cx="147" cy="151" r="12" fill="#c96a2b"/><circle cx="174" cy="151" r="12" fill="#c96a2b"/><circle cx="201" cy="151" r="12" fill="#c96a2b"/><rect x="27" y="153" width="186" height="14" rx="0" fill="#c96a2b"/><g transform="translate(45 110) scale(0.8)"><path d="M-12 12L0 0L12 12" fill="none" stroke="#2b2350" stroke-width="4" stroke-linecap="butt" stroke-linejoin="miter"/><circle cx="0" cy="0" r="8" fill="#2d5bd7"/><circle cx="-12" cy="12" r="5" fill="#fff"/><circle cx="12" cy="12" r="5" fill="#fff"/></g><g transform="translate(85 110) scale(0.8)"><path d="M-12 12L0 0L12 12" fill="none" stroke="#2b2350" stroke-width="4" stroke-linecap="butt" stroke-linejoin="miter"/><circle cx="0" cy="0" r="8" fill="#2d5bd7"/><circle cx="-12" cy="12" r="5" fill="#fff"/><circle cx="12" cy="12" r="5" fill="#fff"/></g><g transform="translate(125 110) scale(0.8)"><path d="M-12 12L0 0L12 12" fill="none" stroke="#2b2350" stroke-width="4" stroke-linecap="butt" stroke-linejoin="miter"/><circle cx="0" cy="0" r="8" fill="#2d5bd7"/><circle cx="-12" cy="12" r="5" fill="#fff"/><circle cx="12" cy="12" r="5" fill="#fff"/></g><g transform="translate(165 110) scale(0.8)"><path d="M-12 12L0 0L12 12" fill="none" stroke="#2b2350" stroke-width="4" stroke-linecap="butt" stroke-linejoin="miter"/><circle cx="0" cy="0" r="8" fill="#2d5bd7"/><circle cx="-12" cy="12" r="5" fill="#fff"/><circle cx="12" cy="12" r="5" fill="#fff"/></g><path d="M103 57L122 39L143 59" fill="none" stroke="#2b2350" stroke-width="4" stroke-linecap="butt" stroke-linejoin="miter"/><circle cx="103" cy="57" r="10" fill="#2d5bd7"/><circle cx="122" cy="39" r="12" fill="#2d5bd7"/><circle cx="143" cy="59" r="10" fill="#2d5bd7"/><path d="M197 79H205V127H197" fill="none" stroke="#2d5bd7" stroke-width="4" stroke-linecap="butt" stroke-linejoin="miter"/><text x="120" y="187" text-anchor="middle" font-size="20" fill="#2b2350">interface</text></g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="240" height="200" viewBox="0 0 240 200" role="img">
+<title>Who is bonded to whom: water and an amine on a Cu surface</title>
+<defs>
+<style>.ln,.lc,.lb,.lp{fill:none;stroke-width:3;stroke-linecap:round;stroke-linejoin:round}.ln{stroke:#2b2350}.lc{stroke:#c96a2b}.lb{stroke:#2d5bd7}.lp{stroke:#d8cfee}.dt{stroke-dasharray:0.5 6.5}.ds{stroke-dasharray:6 6}.t{font-family:"Avenir Next","Segoe UI",Helvetica,Arial,sans-serif;font-size:15px;fill:#2b2350}.b{font-weight:700}.i{font-style:italic;fill:#6d55b5}.w{fill:#fff}.m{text-anchor:middle}.e{text-anchor:end}.s14{font-size:14px}.s16{font-size:16px}.s18{font-size:18px}.s20{font-size:20px}</style>
+<g id="cu"><circle r="11" fill="#c96a2b"/><circle cx="-3.5" cy="-3.5" r="3.5" fill="#eab38a"/></g>
+<g id="o"><circle r="8" fill="#2d5bd7"/><circle cx="-2.5" cy="-2.5" r="2.5" fill="#9fb6f0"/></g>
+<g id="n"><circle r="8" fill="#8a6fd1"/><circle cx="-2.5" cy="-2.5" r="2.5" fill="#cbbdf0"/></g>
+<circle id="h" r="5" fill="#b4c5f5"/>
+<g id="wd"><path class="ln" d="M-13.4 10.4L0 0L13.4 10.4"/><use xlink:href="#o"/><use xlink:href="#h" x="-13.4" y="10.4"/><use xlink:href="#h" x="13.4" y="10.4"/></g>
+<g id="wu"><path class="ln" d="M-13.4-10.4L0 0L13.4-10.4"/><use xlink:href="#o"/><use xlink:href="#h" x="-13.4" y="-10.4"/><use xlink:href="#h" x="13.4" y="-10.4"/></g>
+<g id="wt1"><path class="ln" d="M16.85 2.29L0 0L-6.44 15.73"/><use xlink:href="#o"/><use xlink:href="#h" x="16.85" y="2.29"/><use xlink:href="#h" x="-6.44" y="15.73"/></g>
+<g id="wt2"><path class="ln" d="M-14.38 9.07L0 0L-5.18-16.19"/><use xlink:href="#o"/><use xlink:href="#h" x="-14.38" y="9.07"/><use xlink:href="#h" x="-5.18" y="-16.19"/></g>
+<g id="nh3"><path class="ln" d="M0 0L-15-8M0 0L15-8M0 0V-17"/><use xlink:href="#n"/><use xlink:href="#h" x="-15" y="-8"/><use xlink:href="#h" x="15" y="-8"/><use xlink:href="#h" y="-17"/></g>
+</defs>
+<rect x="4" y="4" width="232" height="192" rx="18" fill="#f6f2fb"/>
+<text class="t i m s16" x="120" y="38">who is bonded to whom?</text>
+<use xlink:href="#wt1" x="42" y="76"/>
+<use xlink:href="#wt2" x="198" y="86"/>
+<path class="ln dt" d="M128 118L155 123"/>
+<path class="ln dt" d="M164 133V146"/>
+<g>
+<use xlink:href="#cu" x="43" y="177"/><use xlink:href="#cu" x="65" y="177"/><use xlink:href="#cu" x="87" y="177"/><use xlink:href="#cu" x="109" y="177"/><use xlink:href="#cu" x="131" y="177"/><use xlink:href="#cu" x="153" y="177"/><use xlink:href="#cu" x="175" y="177"/><use xlink:href="#cu" x="197" y="177"/>
+<use xlink:href="#cu" x="32" y="158"/><use xlink:href="#cu" x="54" y="158"/><use xlink:href="#cu" x="76" y="158"/><use xlink:href="#cu" x="98" y="158"/><use xlink:href="#cu" x="120" y="158"/><use xlink:href="#cu" x="142" y="158"/><use xlink:href="#cu" x="164" y="158"/><use xlink:href="#cu" x="186" y="158"/><use xlink:href="#cu" x="208" y="158"/>
+</g>
+<use xlink:href="#wd" x="64" y="126"/>
+<use xlink:href="#wu" x="110" y="128"/>
+<use xlink:href="#nh3" x="164" y="124"/>
+</svg>
