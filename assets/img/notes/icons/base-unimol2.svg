@@ -1,22 +1,22 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 200" width="240" height="200">
 <title>Uni-Mol2: a masked atom recovered from its neighbours in 3D space</title>
-<style>.n{fill:none;stroke:#23395b;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round}.p{fill:#dceef5;stroke:#23395b;stroke-width:2.5}.t{font-family:Helvetica,Arial,sans-serif;fill:#23395b;font-size:13px;text-anchor:middle}.b{font-weight:700}.s{font-size:10.5px}.c{font-size:15px}</style>
+<style>.n{fill:none;stroke:#23395b;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round}.p{fill:#dceef5;stroke:#23395b;stroke-width:2.5}.t{font-family:Helvetica,Arial,sans-serif;fill:#23395b;font-size:22px;text-anchor:middle}.b{font-weight:700}.c{font-size:24px}</style>
 <defs><marker id="au" viewBox="0 0 10 10" refX="7.5" refY="5" markerWidth="10" markerHeight="10" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path d="M1.5 1.5L8 5L1.5 8.5" fill="none" stroke="#1fa3a3" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></marker></defs>
 <rect width="240" height="200" fill="#fff"/>
-<g fill="none" stroke="#9fb3c8" stroke-width="1.5" stroke-dasharray="4 4" stroke-linejoin="round"><rect x="62" y="22" width="110" height="100" rx="4"/><rect x="34" y="44" width="110" height="100" rx="4"/><path d="M34 44L62 22M144 44L172 22M144 144L172 122M34 144L62 122"/></g>
-<path d="M136 108L98 54" fill="none" stroke="#1fa3a3" stroke-width="2" stroke-dasharray="2 4" stroke-linecap="round"/>
-<path class="n" d="M66 114L100 92L98 54L66 66M100 92L136 108"/>
-<circle class="p" cx="66" cy="114" r="11"/>
-<circle class="p" cx="100" cy="92" r="11"/>
-<circle cx="98" cy="54" r="10" fill="#8fa98a" stroke="#23395b" stroke-width="2.5"/>
-<circle class="p" cx="66" cy="66" r="9"/>
-<circle cx="136" cy="108" r="13" fill="#fff" stroke="#e07a5f" stroke-width="2.5" stroke-dasharray="4 3"/>
-<text class="t b" x="136" y="113" style="fill:#e07a5f;font-size:15px">?</text>
-<text class="t s" x="124" y="78" style="fill:#1fa3a3">d</text>
-<path d="M151 102C170 98 180 90 186 80" fill="none" stroke="#1fa3a3" stroke-width="2.5" stroke-linecap="round" marker-end="url(#au)"/>
-<circle cx="200" cy="62" r="16" fill="#1fa3a3" stroke="#23395b" stroke-width="2.5"/>
-<text class="t b" x="200" y="67.5" style="fill:#fff;font-size:15px">O</text>
-<text class="t s" x="200" y="96">recovered</text>
-<text class="t s" x="120" y="166">mask atoms, recover them in 3D</text>
-<text class="t b c" x="120" y="188">Uni-Mol2</text>
+<g fill="none" stroke="#9fb3c8" stroke-width="1.5" stroke-dasharray="4 4" stroke-linejoin="round"><rect x="44" y="16" width="92" height="84" rx="4"/><rect x="20" y="36" width="92" height="84" rx="4"/><path d="M20 36L44 16M112 36L136 16M112 120L136 100M20 120L44 100"/></g>
+<path d="M110 100L74 50" fill="none" stroke="#1fa3a3" stroke-width="2" stroke-dasharray="2 4" stroke-linecap="round"/>
+<path class="n" d="M46 104L76 84L74 50L46 60M76 84L110 100"/>
+<circle class="p" cx="46" cy="104" r="10"/>
+<circle class="p" cx="76" cy="84" r="10"/>
+<circle cx="74" cy="50" r="9" fill="#8fa98a" stroke="#23395b" stroke-width="2.5"/>
+<circle class="p" cx="46" cy="60" r="8"/>
+<circle cx="110" cy="100" r="14" fill="#fff" stroke="#e07a5f" stroke-width="2.5" stroke-dasharray="4 3"/>
+<text class="t b" x="110" y="108" style="fill:#e07a5f">?</text>
+<text class="t" x="104" y="72" style="fill:#1fa3a3">d</text>
+<path d="M126 94C150 92 166 84 176 76" fill="none" stroke="#1fa3a3" stroke-width="2.5" stroke-linecap="round" marker-end="url(#au)"/>
+<circle cx="198" cy="56" r="18" fill="#1fa3a3" stroke="#23395b" stroke-width="2.5"/>
+<text class="t b" x="198" y="64" style="fill:#fff">O</text>
+<text class="t" x="184" y="124">recovered</text>
+<text class="t" x="120" y="162">mask, then recover</text>
+<text class="t b c" x="120" y="190">Uni-Mol2</text>
 </svg>

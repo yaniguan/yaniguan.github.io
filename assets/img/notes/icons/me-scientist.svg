@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 200" width="240" height="200">
+<title>Scientist: woman with glasses and a laboratory coat</title>
+<defs><marker id="h" viewBox="0 0 10 10" refX="8" refY="5" markerUnits="userSpaceOnUse" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1L9 5L1 9" fill="none" stroke="#23395b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></marker></defs>
+<style>.n,.a{fill:none;stroke:#23395b;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round}.a{marker-end:url(#h)}.p,.w,.o,.c,.s{stroke:#23395b;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round}.p{fill:#dceef5}.w{fill:#fff}.o{fill:#1fa3a3}.c{fill:#e07a5f}.s{fill:#8fa98a}.t{font-family:Helvetica,Arial,sans-serif;fill:#23395b;font-size:22px;text-anchor:middle}.b{font-weight:700}</style>
+<rect width="240" height="200" fill="#fff"/>
+<path class="n" d="M77 90V62C77 5 163 5 163 62V102Z" /><path class="w" d="M82 88Q120 107 158 88L178 156H62Z" /><path class="n" d="M97 96L120 144L143 96M120 144V158M144 133H161" /><circle class="p" cx="120" cy="63" r="33"/><path class="n" d="M88 49Q110 53 130 30Q143 47 151 51" /><rect class="w" x="94" y="54" width="23" height="17" rx="6"/><rect class="w" x="123" y="54" width="23" height="17" rx="6"/><path class="n" d="M117 61H123M109 81Q120 89 131 81" /><text class="t b" x="120" y="187" style="font-size:22px">Scientist</text>
+</svg>

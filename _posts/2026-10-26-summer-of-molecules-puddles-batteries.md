@@ -8,153 +8,164 @@ series: ses-internship
 part: 0
 ---
 
-For my internship I left my UCLA computational chemistry desk for a while and joined SES AI, a
-battery company, as an Applied Scientist intern, and followed one question up three scales:
-molecules, the electrolytes they make up, and the cells those electrolytes go into. Along the way I
-taught models to read molecules off real paper figures (59.8% exact on 331 journal figures), to
-watch about 40,000 molecular-dynamics movies of electrolytes, and to learn how a battery cell ages
-step by step instead of guessing one lifetime number. This post is the map; the three parts are the
-territory.
+<p class="n-lede">For my internship I left my UCLA computational chemistry desk for a while and joined SES AI, a battery company, as an Applied Scientist intern. The problem was that today's AI is very good with pictures and text, while chemistry and batteries live in 3D geometry, in physical time, and in scales that connect, where a tiny change in one molecule shows up much later as a battery that lasts longer (or doesn't). So the work ended up as a grid rather than a straight line: three scales stacked on top of each other, each known through several kinds of data, with the same small method run at every level.</p>
 
-## The one question
+<nav class="n-toc" markdown="1">
+**In this post**
+1. [The picture in one diagram](#the-picture-in-one-diagram)
+2. [The scale axis: molecule, electrolyte, cell](#the-scale-axis)
+3. [The modality axis: many ways to know each layer](#the-modality-axis)
+4. [The same loop at every layer](#the-same-loop-at-every-layer)
+5. [How representations flow upward](#how-representations-flow-upward)
+6. [The three parts](#the-three-parts)
+7. [What this got us](#what-this-got-us)
+</nav>
+
+## The picture in one diagram {#the-picture-in-one-diagram}
 
 The official title I gave the work was "multiscale multimodal intelligence across molecules,
-electrolytes, and cells," which is a mouthful, so here's the version I'd tell you over coffee.
-Today's AI models are very good with pictures and text. They can describe a cat photo and write a
-poem about it. But chemistry and batteries don't really live in pictures and text. They live in 3D
-geometry, where atoms actually sit in space; in physical time, how those atoms jiggle, drift and
-react over nanoseconds to months; and in scales that connect, where a tiny change in one molecule
-shows up, much later, as a battery that lasts longer (or doesn't).
+electrolytes, and cells," which is a mouthful, so here it is as one picture instead.
 
-<div class="nf-row"><figure><img width="240" height="200" src="{{ '/assets/img/notes/icons/3d-geometry.svg' | relative_url }}" alt="A ball-and-stick molecule drawn with depth and xyz axes" loading="lazy"><figcaption>3D geometry</figcaption></figure><figure><img width="720" height="140" src="{{ '/assets/img/notes/icons/ion-timeline.svg' | relative_url }}" alt="A timeline of simulation frames, 4 picoseconds apart, 20 nanoseconds in total" loading="lazy"><figcaption>Physical time</figcaption></figure><figure><img width="240" height="200" src="{{ '/assets/img/notes/icons/alignment-scales.svg' | relative_url }}" alt="Six scales from molecules to experiments joined in a ring, held together by conditions" loading="lazy"><figcaption>Connected scales</figcaption></figure></div>
+<figure class="nf nf-wide"><img width="720" height="493" src="{{ '/assets/img/notes/icons/overview-layers.svg' | relative_url }}" alt="A grid with three scale layers from bottom to top, molecule, electrolyte and cell, and five modality columns: images and text, 1D/2D/3D structure, DFT and MD trajectories, multiscale simulations, and experiments. Each row ends in a small loop from data to representation to alignment to co-scientist, and upward arrows on the left carry molecule vectors into the electrolyte layer and a 128-d electrolyte latent into the cell layer" loading="lazy"><figcaption>Rows are scales, columns are kinds of data, the loop on the right runs at every row, and the arrows on the left carry what one layer learned up to the next.</figcaption></figure>
 
-So the question I kept asking all internship was whether AI can understand not just pictures and
-text, but 3D geometry, physical time, and how the scales connect.
+Read it in three directions. Up the rows is the scale axis: what the thing is. Across the columns is
+the modality axis: how we get to know it. And the loop on the right of every row is the method, the
+same four steps each time. The short sections below take one direction at a time.
 
-## Three scales, one storyline
+<hr>
 
-The storyline follows the stuff itself: molecules make up electrolytes, and electrolytes go into
-cells. Think of a battery like a city. The molecules are the people. The electrolyte is the crowd,
-the liquid the ions swim through, made of salt, solvents and additives. The cell is the whole city,
-with its traffic jams, heat waves and aging infrastructure. You can't understand a city from one
-person's ID card, and you can't understand a crowd without watching it move, so the work split into
-three parts, each building on the last.
+## The scale axis: molecule, electrolyte, cell {#the-scale-axis}
 
-<div class="nf-row"><figure><img width="160" height="152" src="{{ '/assets/img/notes/series/molecule.webp' | relative_url }}" alt="Molecule icon" loading="lazy"><figcaption>Molecules</figcaption></figure><figure><img width="160" height="160" src="{{ '/assets/img/notes/series/electrolyte.webp' | relative_url }}" alt="Electrolyte icon" loading="lazy"><figcaption>make up electrolytes</figcaption></figure><figure><img width="142" height="160" src="{{ '/assets/img/notes/series/cell.webp' | relative_url }}" alt="Battery cell icon" loading="lazy"><figcaption>which go into cells</figcaption></figure></div>
+Each row is a layer, and each layer is made of the one below it: molecules make up electrolytes,
+and electrolytes go into cells.
 
-I kept redrawing the project map all summer. The left side is molecules, from paper drawings to 3D
-geometry and energies. The right side is electrolytes, from quantum reference data to force fields,
-and from 40K MD trajectories to learned representations, both feeding an electrolyte co-scientist.
+Think of a battery like a city. The molecules are the people. The electrolyte is the crowd, the
+liquid the ions swim through, made of salt, solvents and additives. The cell is the whole city, with
+its traffic jams, heat waves and aging infrastructure. You can't understand a city from one person's
+ID card, and you can't understand a crowd without watching it move, so the work split into three
+parts, one per layer, each building on the last.
 
-<figure class="nf"><img width="720" height="342" src="{{ '/assets/img/notes/internship-overview/map.webp' | relative_url }}" alt="Map of the internship projects: the molecule loop (VERDICT, paper mining, VLM fine-tuning, multimodal RAG) and the electrolyte branches (force-field fitting and MD trajectory representation learning) feeding an electrolyte co-scientist" loading="lazy"><figcaption>The map I kept redrawing all internship.</figcaption></figure>
+<hr>
 
-## Part 1: molecules, the foundation
+## The modality axis: many ways to know each layer {#the-modality-axis}
 
-Part 1 starts from a plain problem: right now, mostly humans can read the molecule drawings in
-papers, and papers draw the same molecule in a dozen outfits, sometimes by hand. A chemist shrugs and
-says "atom is atom, bond is bond." A model trained on neat, computer-rendered drawings panics.
+At every layer, no single kind of data tells the whole story, and the layers don't even share the
+same kinds. Here is what each row of the diagram actually holds.
 
-<div class="nf-row"><figure><img width="240" height="200" src="{{ '/assets/img/notes/icons/hand-drawn.svg' | relative_url }}" alt="A wobbly pencil-drawn ring molecule next to a pencil" loading="lazy"><figcaption>Hand-drawn too</figcaption></figure><figure><img width="240" height="200" src="{{ '/assets/img/notes/icons/lora.svg' | relative_url }}" alt="A frozen weight block with a small trainable low-rank adapter" loading="lazy"><figcaption>VLM post-training</figcaption></figure><figure><img width="500" height="484" src="{{ '/assets/img/notes/molecules/verdict.webp' | relative_url }}" alt="VERDICT logo" loading="lazy"><figcaption>VERDICT</figcaption></figure><figure><img width="240" height="200" src="{{ '/assets/img/notes/icons/rotation-c8.svg' | relative_url }}" alt="A molecule drawing ringed by eight rotation arrows" loading="lazy"><figcaption>Rotation-aware recognition</figcaption></figure></div>
+<div class="n-grid three">
+<div class="n-card" markdown="1">
+<p class="n-card-title"><img width="240" height="200" src="{{ '/assets/img/notes/icons/multimodal-database.svg' | relative_url }}" alt="">Molecule</p>
+- Images and text: molecule drawings in real papers (hand-drawn ones too) and what the paper says
+  about them
+- 1D/2D/3D structure: SMILES and fingerprints, atom graphs, 3D conformers
+- DFT and MD properties: energies, HOMO/LUMO, how readily it gets reduced; solvation, density,
+  diffusion, transport
+</div>
+<div class="n-card" markdown="1">
+<p class="n-card-title"><img width="240" height="200" src="{{ '/assets/img/notes/icons/md-snapshot.svg' | relative_url }}" alt="">Electrolyte</p>
+- Recipes: components, amounts and conditions like temperature
+- DFT clusters: the ion with one partner, or a solvent and an anion competing for it
+- MD trajectories: about 40,000 of them, 5,000 frames each, roughly 200 million frames
+- Conductivity data, including the public CALiSol dataset
+</div>
+<div class="n-card" markdown="1">
+<p class="n-card-title"><img width="240" height="200" src="{{ '/assets/img/notes/icons/sim-to-real.svg' | relative_url }}" alt="">Cell</p>
+- Multiscale simulations: DFT, MD, interface reactions, kMC, P2D/SPMe and 3D temperature and
+  stress fields
+- Experiments: a 252-formulation, additive-centered DOE
+- Design and test conditions: protocol, temperature, C-rate
+</div>
+</div>
 
-I post-trained vision-language models to read real paper figures and found that the real bottleneck
-is the gap between rendered and real images. I built VERDICT, four independent readers that would
-rather say "I'm not sure" than make something up, and a rotation-aware recognizer that knows a
-rotated drawing is the same molecule but a mirrored one might not be. Then I turned recognized
-molecules into vectors, using 1D, 2D and 3D descriptions, five public base models and three kinds of
-training, and asked honestly what 3D really adds.
+None of this is text in the way a chatbot would like. That was the question I kept asking all
+internship: can AI understand not just pictures and text, but 3D geometry, physical time, and how
+the scales connect?
 
-<figure class="nf"><img width="240" height="200" src="{{ '/assets/img/notes/icons/multimodal-database.svg' | relative_url }}" alt="A database cylinder linked to image, text, DFT and MD records" loading="lazy"><figcaption>Every recognized molecule becomes a hub for its image, text, DFT and MD data.</figcaption></figure>
+<hr>
 
-It all ends in a truly multimodal database, delivered through the MU product and a Chrome
-extension: start from a molecule picture and jump to what the paper says, its DFT properties, or its
-MD properties. Read it here: [Atom is atom, bond is bond]({{ '/notes/atom-is-atom-bond-is-bond/' | relative_url }}).
+## The same loop at every layer {#the-same-loop-at-every-layer}
 
-## Part 2: electrolytes, molecules mixed into a liquid
+Only when I laid the three parts side by side did I notice that every layer runs the same loop:
+gather the data, learn a representation, align the different views of the same thing, then hand it
+to a co-scientist that helps decide what to do next. Prediction sits on top of the aligned space at
+every layer.
 
-Part 2 takes the molecules from Part 1 and makes them the salt, solvents and additives of an
-electrolyte, which looks like a boring puddle and is really a dance floor. Lithium ions grab solvent
-partners, anions cut in, everything shuffles.
+<figure class="nf nf-wide"><img width="720" height="300" src="{{ '/assets/img/notes/icons/method-per-scale.svg' | relative_url }}" alt="A grid of three rows, molecules, electrolytes and cells, each going through the same four steps: represent, align, predict, co-scientist" loading="lazy"><figcaption>The same loop three times over, each row reusing what the row below learned.</figcaption></figure>
 
-<figure class="nf"><img width="540" height="540" src="{{ '/assets/img/notes/internship-overview/electrolyte.webp' | relative_url }}" alt="Cartoon of an electrolyte droplet surrounded by its jobs: solvation, ion transport, redox stability, and interphase formation" loading="lazy"><figcaption>An electrolyte has a lot of jobs: wrap the ions (solvation), move them (transport), survive the voltage (redox stability), and help build a protective skin on the electrodes (interphase).</figcaption></figure>
+| | Data | Representation | Alignment | Co-scientist / decision |
+|---|---|---|---|---|
+| Molecule | paper figures read by VLMs, checked by VERDICT | 1D/2D/3D vectors | 2D ↔ 3D partners (InfoNCE), keyed by InChIKey | multimodal database in MU and a Chrome extension |
+| Electrolyte | polarizable force field, ~40,000 MD movies | recipe, snapshot and trajectory heads | three-way contrastive, one 128-d latent | electrolyte co-scientist |
+| Cell | 252-formulation DOE plus a simulation ladder | stacked molecule, electrolyte and cell reps | cross-scale links, conditions as the glue | aging world model, cell co-scientist, decision API |
 
-To simulate that dance you need a rulebook, a force field, and a movie projector, molecular
-dynamics. I extended a polarizable force field (PFF) to 627+ molecules and 20+ anions, got humbled
-when fits that looked perfect on small clusters made the liquid clump (more than 50 of 80 versions
-failed), and distilled those failures into PFF RSI, a fitting loop that turns every saved mistake
-into an automatic check.
+<div class="n-callout"><img width="240" height="200" src="{{ '/assets/img/notes/icons/dpo-detour.svg' | relative_url }}" alt=""><div markdown="1">
+One lesson also kept showing up at every layer: a pretty number on the training objective is not
+the same as the scientific goal. A preference model can score beautifully and still get molecules
+wrong. A force field can nail tiny clusters and still ruin the liquid. An alignment can match
+molecules perfectly and still say almost nothing about real batteries. So most of my summer went
+into the checks: agreement between independent readers, liquid simulations inside the fitting loop,
+calibration against real measurements.
+</div></div>
 
-<figure class="nf nf-wide"><img width="720" height="280" src="{{ '/assets/img/notes/icons/pff-rsi-loop.svg' | relative_url }}" alt="Loop diagram: sample, fit, guard against known failures, MD check, learn, back to sample" loading="lazy"><figcaption>PFF RSI: sample → fit → guard against known failures → MD check → learn → repeat.</figcaption></figure>
+<hr>
 
-Then I taught a model to watch about 40,000 of these movies through three heads: the recipe (what's
-in the bottle), a snapshot (one frozen frame of atoms) and the trajectory (how everything moves over
-time), all compressed into one shared 128-number space used for retrieval, alignment and property
-prediction.
+## How representations flow upward {#how-representations-flow-upward}
 
-<figure class="nf nf-wide"><img width="720" height="280" src="{{ '/assets/img/notes/icons/three-heads-latent.svg' | relative_url }}" alt="Recipe, snapshot and trajectory encoders feeding one shared latent space used for retrieval, alignment and properties" loading="lazy"><figcaption>Three heads, one latent space, three uses.</figcaption></figure>
+The layers aren't three separate projects, because what one layer learns becomes input to the next.
+Nothing from the lower rows gets thrown away.
 
-Finally, I curated everything I'd learned (task records, simulation logs and bugs, tool definitions)
-to fine-tune an open-weight LLM and put it inside a harness of tools and checks: an electrolyte
-co-scientist that explains failed runs and prepares new ones, with a researcher reviewing what it
-proposes. Read it here: [Teaching a puddle to dance]({{ '/notes/teaching-a-puddle-to-dance/' | relative_url }}).
+### Molecule vectors become ingredients
 
-## Part 3: cells, electrolytes inside batteries
+Part 1 turns every recognized molecule into vectors. In the electrolyte layer those vectors become
+ingredients on the recipe side: a formulation network takes one vector per molecule, plus mixing
+ratios, salt concentration and temperature, and predicts how the mixture behaves.
 
-Part 3 puts the electrolyte formulations from Part 2 into cells and reaches the question everyone at
-a battery company actually cares about: if I change the recipe, say by adding an additive, what
-happens to the battery? Does it cycle longer, store better, charge faster?
+<figure class="nf nf-wide"><img width="720" height="300" src="{{ '/assets/img/notes/icons/formulation-network.svg' | relative_url }}" alt="EC, EMC and LiPF6 each pass through an encoder, combine with ratios, concentration and temperature in a formulation network, and predict conductivity, viscosity and density" loading="lazy"><figcaption>Molecule vectors plus ratios and conditions: the first arrow up.</figcaption></figure>
 
-<div class="nf-row"><figure><img width="540" height="540" src="{{ '/assets/img/notes/cells/delta-recipe.webp' | relative_url }}" alt="Delta recipe: bottles with sliders" loading="lazy"><figcaption>Δrecipe</figcaption></figure><figure><img width="540" height="540" src="{{ '/assets/img/notes/cells/delta-performance.webp' | relative_url }}" alt="Delta performance: cycling, storage, charging, rate" loading="lazy"><figcaption>Δperformance</figcaption></figure></div>
+### The electrolyte latent and molecules build the cell
 
-The central idea is that nothing from Parts 1 and 2 gets thrown away. Both were mostly
-representation learning, so a cell can be represented by stacking the learned molecule
-representations and the electrolyte latent, with the cell's design and conditions on top. Real
-experiments are slow and expensive, so around a 252-formulation additive experiment I built a ladder
-of simulations, one rung per scale: from electrons (DFT) to the liquid (MD), to bonds breaking at the
-electrode surface (interface reactions), to how that surface evolves over long times (kMC), to
-voltage, capacity and aging (P2D / SPMe), all the way up to temperature and stress across the whole
-cell (3D fields). Then I aligned those scales in one shared space and found that test conditions are
-the glue that holds them together.
+Part 2 turns every electrolyte into 128 numbers in a shared latent space, learned from recipes,
+snapshots and trajectories. In Part 3 a cell is represented by stacking those pieces: the molecule
+representations for each component, the electrolyte latent for the mixture, and the cell's own
+design and operating conditions on top. The cell co-scientist reads the same stack, with 396
+molecular, 274 electrolyte and 105 cell features per record in its early version.
 
-<figure class="nf nf-wide"><img width="720" height="280" src="{{ '/assets/img/notes/icons/cell-representation-stack.svg' | relative_url }}" alt="Molecule representations, the electrolyte latent, and design and conditions stacked into one cell representation" loading="lazy"><figcaption>Molecules (Part 1) + electrolyte latent (Part 2) + design and conditions = a cell representation.</figcaption></figure>
+<figure class="nf nf-wide"><img width="720" height="280" src="{{ '/assets/img/notes/icons/cell-representation-stack.svg' | relative_url }}" alt="Three stacked layers: molecule representations from Part 1 at the bottom, the electrolyte 128-number latent from Part 2 in the middle, design and conditions on top, merging into one cell representation" loading="lazy"><figcaption>Molecules (Part 1) + electrolyte latent (Part 2) + design and conditions = a cell representation.</figcaption></figure>
 
-The part I'm most excited about is the aging world model. Instead of a black box that predicts
-lifetime as one number, it learns the whole evolution process: given the cell's design, its current
-state and how it's being used, predict the next state, and roll that forward into a full aging
-curve. Learning the process rather than the endpoint is also where I started to see what I'd call
-knowledge emergence, which I'm still working to confirm properly.
+<hr>
 
-<figure class="nf nf-wide"><img width="720" height="280" src="{{ '/assets/img/notes/icons/blackbox-vs-rollout.svg' | relative_url }}" alt="Left: a black box turning inputs into one lifetime number. Right: a model rolling out a full aging curve state by state" loading="lazy"><figcaption>From a black-box lifetime number to learning the whole evolution.</figcaption></figure>
+## The three parts {#the-three-parts}
 
-It ends with a cell co-scientist that reasons over representations from all three parts, plus a
-decision API that hands the agent's small, repetitive judgment calls to a typed decision model so
-the reasoning model can focus on reasoning. Read it here: [From molecules to batteries]({{ '/notes/from-molecules-to-batteries/' | relative_url }}).
+Each part walks through one row of the diagram in detail, in the order the stuff itself is built.
 
-## The same four steps at every scale
+<div class="n-grid three">
+<div class="n-card" markdown="1">
+<p class="n-card-title"><img width="240" height="200" src="{{ '/assets/img/notes/icons/scale-molecule.svg' | relative_url }}" alt="">Part 1: molecules</p>
+[Atom is atom, bond is bond]({{ '/notes/atom-is-atom-bond-is-bond/' | relative_url }}). Reading
+molecules off real paper figures (59.8% exact on 331 journal figures), VERDICT's four readers that
+may abstain, a rotation-aware recognizer, and 1D/2D/3D vectors in a multimodal database.
+</div>
+<div class="n-card" markdown="1">
+<p class="n-card-title"><img width="240" height="200" src="{{ '/assets/img/notes/icons/scale-electrolyte.svg' | relative_url }}" alt="">Part 2: electrolytes</p>
+[Teaching a puddle to dance]({{ '/notes/teaching-a-puddle-to-dance/' | relative_url }}). A
+polarizable force field for 627+ molecules and 20+ anions, PFF RSI learning from more than 50 failed
+versions out of 80, three heads over about 40,000 MD movies, and an electrolyte co-scientist.
+</div>
+<div class="n-card" markdown="1">
+<p class="n-card-title"><img width="240" height="200" src="{{ '/assets/img/notes/icons/scale-cell.svg' | relative_url }}" alt="">Part 3: cells</p>
+[From molecules to batteries]({{ '/notes/from-molecules-to-batteries/' | relative_url }}). A
+six-rung simulation ladder around a 252-formulation DOE, scales held together by test conditions, an
+aging world model that learns the whole evolution step by step, and a cell co-scientist.
+</div>
+</div>
 
-Only when I laid the three parts side by side did I notice they follow the same four steps:
-represent, align, predict, and hand the result to a co-scientist. For molecules, that's VLMs and
-VERDICT reading drawings plus 1D/2D/3D representations, aligned views, property prediction, and the
-multimodal database. For electrolytes, it's three heads into a 128-d latent, then properties, then
-the electrolyte co-scientist. For cells, it's stacked representations and multiscale alignment, then
-regression and classification heads plus the world model, then the cell co-scientist.
+<hr>
 
-<figure class="nf nf-wide"><img width="720" height="300" src="{{ '/assets/img/notes/icons/method-per-scale.svg' | relative_url }}" alt="A grid of three rows, molecules, electrolytes and cells, each going through the same four steps: represent, align, predict, co-scientist" loading="lazy"><figcaption>Represent → align → predict → co-scientist, three times over.</figcaption></figure>
-
-One lesson also kept showing up at every scale: a pretty number on the training objective is not the
-same as the scientific goal. A preference model can score beautifully and still get molecules wrong.
-A force field can nail tiny clusters and still ruin the liquid. An alignment can match molecules
-perfectly and still say almost nothing about real batteries. So most of my summer was spent building
-the checks: agreement between independent readers, liquid simulations inside the fitting loop,
-calibration against real measurements. Less glamorous than a leaderboard, but it's what lets you
-trust the answer.
-
-<figure class="nf"><img width="240" height="200" src="{{ '/assets/img/notes/icons/dpo-detour.svg' | relative_url }}" alt="A beautifully falling training loss curve next to a crossed-out molecule labeled 0 to 2 percent exact match" loading="lazy"><figcaption>Pretty loss, wrong molecules: the first time I learned this lesson, but not the last.</figcaption></figure>
-
-## What this got us
+## What this got us {#what-this-got-us}
 
 I started from batteries and ended up with a method. Batteries were just where I happened to begin;
-the method should transfer to most systems like them, the ones built as molecules, then mixtures,
+the method should transfer to similar multiscale systems, the ones built as molecules, then mixtures,
 then devices, where the important structure lives in drawings, geometry and simulations rather than
 text, and where experiments are scarce but simulation is possible. It's still a living method, and I
-keep adding pieces as the field moves. Grab a snack: Part 1 starts at the foundation, with a molecule
+keep adding pieces as the field moves. Grab a snack: Part 1 starts at the bottom row, with a molecule
 and a computer trying to figure out who it is.

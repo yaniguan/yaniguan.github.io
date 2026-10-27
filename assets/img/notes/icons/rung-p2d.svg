@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 200" width="240" height="200">
+<title>P2D and SPMe: through-thickness cell layers and particle radius</title>
+<defs><marker id="h" viewBox="0 0 10 10" refX="8" refY="5" markerUnits="userSpaceOnUse" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1L9 5L1 9" fill="none" stroke="#23395b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></marker></defs>
+<style>.n,.a{fill:none;stroke:#23395b;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round}.a{marker-end:url(#h)}.p,.w,.o,.c,.s{stroke:#23395b;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round}.p{fill:#dceef5}.w{fill:#fff}.o{fill:#1fa3a3}.c{fill:#e07a5f}.s{fill:#8fa98a}.t{font-family:Helvetica,Arial,sans-serif;fill:#23395b;font-size:22px;text-anchor:middle}.b{font-weight:700}</style>
+<rect width="240" height="200" fill="#fff"/>
+<rect class="o" x="35" y="26" width="48" height="108" rx="3"/><rect class="p" x="83" y="26" width="28" height="108" rx="0"/><rect class="c" x="111" y="26" width="48" height="108" rx="3"/><path class="n" d="M174 75L190 75" /><circle class="p" cx="197" cy="75" r="24"/><path class="a" d="M197 75L216 75" /><text class="t" x="199" y="118" style="font-size:22px">r</text><path class="a" d="M35 151L157 151" /><text class="t" x="95" y="132" style="font-size:22px">x</text><text class="t b" x="120" y="187" style="font-size:22px">P2D / SPMe</text>
+</svg>

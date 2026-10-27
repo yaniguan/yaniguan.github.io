@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 200" width="240" height="200">
 <title>Chirality: left and right hands are mirror images, like wedge and dash stereo bonds</title>
-<style>.k{fill:#dceef5;stroke:#23395b;stroke-width:2.5;stroke-linejoin:round}.t{font-family:Helvetica,Arial,sans-serif;fill:#23395b;font-size:13px;text-anchor:middle}.b{font-weight:700}.s{font-size:10px}</style>
+<style>.k{fill:#dceef5;stroke:#23395b;stroke-width:2.5;stroke-linejoin:round}.t{font-family:Helvetica,Arial,sans-serif;fill:#23395b;font-size:22px;text-anchor:middle}.b{font-weight:700}</style>
 <defs>
 <g id="chh">
 <rect class="k" x="86" y="60" width="11" height="34" rx="5.5" transform="rotate(35 91 90)"/>
@@ -23,12 +23,11 @@
 </g>
 </defs>
 <rect width="240" height="200" fill="#fff"/>
-<rect x="116" y="18" width="8" height="152" rx="4" fill="#dceef5"/>
-<path d="M120 18V170" stroke="#23395b" stroke-width="1.6" stroke-dasharray="4 4"/>
-<text class="t s" x="120" y="12">mirror</text>
-<use href="#chh"/>
-<use href="#chh" transform="matrix(-1 0 0 1 240 0)"/>
-<use href="#chs"/>
-<use href="#chs" transform="matrix(-1 0 0 1 240 0)"/>
-<text class="t b" x="120" y="190" style="font-size:12.5px">mirror image = different molecule</text>
+<rect x="116" y="30" width="8" height="112" rx="4" fill="#dceef5"/>
+<path d="M120 30V142" stroke="#23395b" stroke-width="1.6" stroke-dasharray="4 4"/>
+<text class="t" x="120" y="22">mirror</text>
+<g transform="translate(15.84 5.28) scale(.78)"><use href="#chh"/><use href="#chs"/></g>
+<g transform="matrix(-1 0 0 1 240 0) translate(15.84 5.28) scale(.78)"><use href="#chh"/><use href="#chs"/></g>
+<text class="t" x="120" y="166">mirror image =</text>
+<text class="t b" x="120" y="192">different molecule</text>
 </svg>

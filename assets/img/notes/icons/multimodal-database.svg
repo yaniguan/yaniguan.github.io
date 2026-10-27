@@ -1,24 +1,24 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 200" width="240" height="200">
-<title>Multimodal database: image, text, DFT and MD records linked to one store</title>
-<style>.p{fill:#dceef5;stroke:#23395b;stroke-width:2.5;stroke-linejoin:round}.w{fill:#fff;stroke:#23395b;stroke-width:2.5;stroke-linejoin:round}.g{fill:none;stroke:#23395b;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}.t{font-family:Helvetica,Arial,sans-serif;fill:#23395b;font-size:12px;text-anchor:middle}.b{font-weight:700}.s{font-size:10.5px}.c{font-size:15px}</style>
+<title>Multimodal database: image, text, DFT and MD records linked to one store by the same molecule</title>
+<style>.p{fill:#dceef5;stroke:#23395b;stroke-width:2.5;stroke-linejoin:round}.w{fill:#fff;stroke:#23395b;stroke-width:2.5;stroke-linejoin:round}.g{fill:none;stroke:#23395b;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}.t{font-family:Helvetica,Arial,sans-serif;fill:#23395b;font-size:22px;text-anchor:middle}.b{font-weight:700}.c{font-size:24px}</style>
 <rect width="240" height="200" fill="#fff"/>
-<g fill="none" stroke="#1fa3a3" stroke-width="2" stroke-linecap="round"><path d="M76 40C88 40 86 58 92 64"/><path d="M164 40C152 40 154 58 148 64"/><path d="M76 136C86 136 84 122 88 116"/><path d="M164 136C154 136 156 122 152 116"/></g>
-<path class="p" d="M86 64V122A34 10 0 0 0 154 122V64"/>
-<ellipse class="w" cx="120" cy="64" rx="34" ry="10"/>
-<path class="g" d="M86 84A34 10 0 0 0 154 84M86 104A34 10 0 0 0 154 104" stroke-width="2"/>
-<path d="M120 88L127 92V100L120 104L113 100V92Z" fill="#1fa3a3" stroke="#23395b" stroke-width="1.8" stroke-linejoin="round" transform="translate(0 4)"/>
-<rect class="w" x="12" y="25" width="64" height="30" rx="9"/>
-<rect class="g" x="20" y="34" width="14" height="12" rx="2"/><path d="M22 44l4 -5l3 3l3 -2" fill="none" stroke="#1fa3a3" stroke-width="1.6" stroke-linejoin="round"/>
-<text class="t b" x="54" y="44">image</text>
-<rect class="w" x="164" y="25" width="64" height="30" rx="9"/>
-<path class="g" d="M172 35H184M172 40H186M172 45H181"/>
-<text class="t b" x="206" y="44">text</text>
-<rect class="w" x="12" y="121" width="64" height="30" rx="9"/>
-<path class="g" d="M20 131H34M20 143H34"/><circle cx="24" cy="143" r="2" fill="#1fa3a3"/><circle cx="30" cy="143" r="2" fill="#1fa3a3"/>
-<text class="t b" x="54" y="140">DFT</text>
-<rect class="w" x="164" y="121" width="64" height="30" rx="9"/>
-<g fill="#1fa3a3"><circle cx="174" cy="131" r="2.2"/><circle cx="182" cy="134" r="2.2"/><circle cx="176" cy="142" r="2.2"/></g><circle cx="184" cy="143" r="2.6" fill="#e07a5f"/>
-<text class="t b" x="206" y="140">MD</text>
-<text class="t s" x="120" y="170">all linked by the same molecule</text>
-<text class="t b c" x="120" y="190">multimodal database</text>
+<g fill="none" stroke="#1fa3a3" stroke-width="2" stroke-linecap="round"><path d="M100 30C110 30 96 52 100 62"/><path d="M140 30C130 30 144 52 140 62"/><path d="M100 126C110 126 96 106 100 98"/><path d="M140 126C130 126 144 106 140 98"/></g>
+<path class="p" d="M90 56V98A30 9 0 0 0 150 98V56"/>
+<ellipse class="w" cx="120" cy="56" rx="30" ry="9"/>
+<path class="g" d="M90 82A30 9 0 0 0 150 82" stroke-width="2"/>
+<path d="M120 68L127 72V80L120 84L113 80V72Z" fill="#1fa3a3" stroke="#23395b" stroke-width="1.8" stroke-linejoin="round"/>
+<rect class="w" x="4" y="12" width="96" height="34" rx="9"/>
+<rect class="g" x="12" y="22" width="16" height="14" rx="2"/><path d="M14 34l4 -5l3 3l4 -3" fill="none" stroke="#1fa3a3" stroke-width="1.6" stroke-linejoin="round"/>
+<text class="t b" x="63" y="37">image</text>
+<rect class="w" x="140" y="12" width="96" height="34" rx="9"/>
+<path class="g" d="M148 23H162M148 29H164M148 35H158"/>
+<text class="t b" x="200" y="37">text</text>
+<rect class="w" x="4" y="110" width="96" height="34" rx="9"/>
+<path class="g" d="M12 121H28M12 133H28"/><circle cx="17" cy="133" r="2" fill="#1fa3a3"/><circle cx="23" cy="133" r="2" fill="#1fa3a3"/>
+<text class="t b" x="63" y="135">DFT</text>
+<rect class="w" x="140" y="110" width="96" height="34" rx="9"/>
+<g fill="#1fa3a3"><circle cx="150" cy="120" r="2.2"/><circle cx="158" cy="123" r="2.2"/><circle cx="152" cy="132" r="2.2"/></g><circle cx="160" cy="133" r="2.6" fill="#e07a5f"/>
+<text class="t b" x="200" y="135">MD</text>
+<text class="t" x="120" y="168">linked by molecule</text>
+<text class="t b" x="120" y="193">multimodal database</text>
 </svg>

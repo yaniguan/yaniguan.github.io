@@ -1,23 +1,23 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 200" width="240" height="200">
 <title>3D geometry: ball-and-stick molecule with depth</title>
-<style>.n{fill:none;stroke:#23395b;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round}.t{font-family:Helvetica,Arial,sans-serif;fill:#23395b;font-size:13px;text-anchor:middle}.b{font-weight:700}.s{font-size:10.5px}.c{font-size:15px}.k{stroke:#23395b;stroke-width:2.5}</style>
+<style>.n{fill:none;stroke:#23395b;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round}.t{font-family:Helvetica,Arial,sans-serif;fill:#23395b;font-size:22px;text-anchor:middle}.b{font-weight:700}.c{font-size:24px}.k{stroke:#23395b;stroke-width:2.5}</style>
 <defs><marker id="an3" viewBox="0 0 10 10" refX="7.5" refY="5" markerWidth="8" markerHeight="8" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path d="M1.5 1.5L8 5L1.5 8.5" fill="none" stroke="#23395b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></marker></defs>
 <rect width="240" height="200" fill="#fff"/>
 <g stroke="#23395b" stroke-linecap="round">
-<path d="M126 86L168 58M126 86L92 62" stroke-width="3" opacity=".45"/>
-<path d="M126 86L124 40M126 86L82 118M126 86L166 124" stroke-width="5"/>
-<path d="M126 86L124 40M126 86L82 118M126 86L166 124" stroke="#fff" stroke-width="1.6"/>
+<path d="M146 78L188 50M146 78L112 54" stroke-width="3" opacity=".45"/>
+<path d="M146 78L144 32M146 78L102 110M146 78L186 116" stroke-width="5"/>
+<path d="M146 78L144 32M146 78L102 110M146 78L186 116" stroke="#fff" stroke-width="1.6"/>
 </g>
-<circle cx="168" cy="58" r="9" fill="#dceef5" stroke="#23395b" stroke-width="2" opacity=".7"/>
-<circle cx="92" cy="62" r="8" fill="#8fa98a" stroke="#23395b" stroke-width="2" opacity=".6"/>
-<circle class="k" cx="124" cy="40" r="11" fill="#dceef5"/>
-<circle class="k" cx="126" cy="86" r="15" fill="#dceef5"/>
-<circle class="k" cx="166" cy="124" r="14" fill="#e07a5f"/>
-<circle class="k" cx="82" cy="118" r="17" fill="#1fa3a3"/>
-<g fill="#fff" opacity=".85"><circle cx="120" cy="80" r="4"/><circle cx="120" cy="36" r="3"/><circle cx="161" cy="119" r="3.5"/><circle cx="76" cy="111" r="4.5"/></g>
-<path d="M150 150A40 12 0 0 1 104 156" fill="none" stroke="#1fa3a3" stroke-width="2.2" stroke-linecap="round" stroke-dasharray="1 5"/>
-<g fill="none" stroke="#23395b" stroke-width="2" stroke-linecap="round"><path d="M28 162H52" marker-end="url(#an3)"/><path d="M28 162V138" marker-end="url(#an3)"/><path d="M28 162L14 174" marker-end="url(#an3)" opacity=".6"/></g>
-<text class="t s" x="60" y="166">x</text><text class="t s" x="28" y="132">y</text><text class="t s" x="12" y="186">z</text>
-<text class="t s" x="136" y="172">where atoms sit</text>
-<text class="t b c" x="136" y="190">3D geometry</text>
+<circle cx="188" cy="50" r="9" fill="#dceef5" stroke="#23395b" stroke-width="2" opacity=".7"/>
+<circle cx="112" cy="54" r="8" fill="#8fa98a" stroke="#23395b" stroke-width="2" opacity=".6"/>
+<circle class="k" cx="144" cy="32" r="11" fill="#dceef5"/>
+<circle class="k" cx="146" cy="78" r="15" fill="#dceef5"/>
+<circle class="k" cx="186" cy="116" r="14" fill="#e07a5f"/>
+<circle class="k" cx="102" cy="110" r="17" fill="#1fa3a3"/>
+<g fill="#fff" opacity=".85"><circle cx="140" cy="72" r="4"/><circle cx="140" cy="28" r="3"/><circle cx="181" cy="111" r="3.5"/><circle cx="96" cy="103" r="4.5"/></g>
+<path d="M176 140A40 9 0 0 1 128 142" fill="none" stroke="#1fa3a3" stroke-width="2.2" stroke-linecap="round" stroke-dasharray="1 5"/>
+<g fill="none" stroke="#23395b" stroke-width="2" stroke-linecap="round"><path d="M30 76H56" marker-end="url(#an3)"/><path d="M30 76V50" marker-end="url(#an3)"/><path d="M30 76L14 90" marker-end="url(#an3)" opacity=".6"/></g>
+<text class="t" x="68" y="84">x</text><text class="t" x="30" y="40">y</text><text class="t" x="12" y="114">z</text>
+<text class="t" x="120" y="168">where atoms sit</text>
+<text class="t b c" x="120" y="194">3D geometry</text>
 </svg>

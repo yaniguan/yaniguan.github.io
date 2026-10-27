@@ -2,7 +2,7 @@
 layout: about
 title: About
 permalink: /
-subtitle: Ph.D. Candidate, <a href='https://sautet.chem.ucla.edu/' target='_blank'>Sautet Group</a>, UCLA
+subtitle: Ph.D. Candidate, UCLA
 tagline: >
   I build symmetry-aware neural networks for chemistry — E(3)-equivariant models
   over atoms and trajectories, steerable encoders over molecule images, language
@@ -346,7 +346,7 @@ latest_posts:
       <div class="about-row-date">2022 — present</div>
       <div class="about-row-val">
         <div class="about-role">
-          <a href="https://sautet.chem.ucla.edu/">UCLA, Sautet Group</a>
+          UCLA
           <span>Ph.D. Research</span>
         </div>
         DFT and multi-scale modeling of electrochemical interfaces, electrode

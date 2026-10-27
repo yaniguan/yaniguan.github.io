@@ -1,21 +1,19 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 200" width="240" height="200">
-<title>Retrieval from a molecule image to the paper's description</title>
-<style>.p{fill:#dceef5;stroke:#23395b;stroke-width:2.5;stroke-linejoin:round}.w{fill:#fff;stroke:#23395b;stroke-width:2.5;stroke-linejoin:round}.g{fill:none;stroke:#23395b;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}.t{font-family:Helvetica,Arial,sans-serif;fill:#23395b;font-size:12px;text-anchor:middle}.b{font-weight:700}.s{font-size:10.5px}.c{font-size:15px}</style>
+<title>Retrieval from a molecule image to the paper's description of it</title>
+<style>.p{fill:#dceef5;stroke:#23395b;stroke-width:2.5;stroke-linejoin:round}.w{fill:#fff;stroke:#23395b;stroke-width:2.5;stroke-linejoin:round}.g{fill:none;stroke:#23395b;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}.t{font-family:Helvetica,Arial,sans-serif;fill:#23395b;font-size:22px;text-anchor:middle}.b{font-weight:700}.c{font-size:24px}</style>
 <defs><marker id="rx" viewBox="0 0 10 10" refX="7.5" refY="5" markerWidth="10" markerHeight="10" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path d="M1.5 1.5L8 5L1.5 8.5" fill="none" stroke="#1fa3a3" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></marker></defs>
 <rect width="240" height="200" fill="#fff"/>
-<rect class="w" x="14" y="36" width="80" height="88" rx="12"/>
-<path class="g" d="M54 66L71.1 78.4L64.6 98.6L43.4 98.6L36.9 78.4ZM51 66V56M57 66V56"/>
-<circle cx="71.1" cy="78.4" r="6" fill="#fff"/><circle cx="36.9" cy="78.4" r="6" fill="#fff"/><circle cx="54" cy="51" r="6" fill="#fff"/>
-<g class="t b"><text x="71.1" y="82.5" fill="#1fa3a3">O</text><text x="36.9" y="82.5" fill="#1fa3a3">O</text><text x="54" y="55" fill="#e07a5f">O</text></g>
-<text class="t s" x="54" y="117">image</text>
-<path d="M102 80H136" fill="none" stroke="#1fa3a3" stroke-width="2.5" stroke-linecap="round" marker-end="url(#rx)"/>
-<rect class="p" x="146" y="36" width="80" height="88" rx="12"/>
-<text x="158" y="64" style="font-family:Georgia,serif;font-size:24px;fill:#e07a5f">“</text>
-<path class="g" d="M172 54H214M172 62H208M158 72H214"/>
-<rect x="155" y="78" width="62" height="13" rx="4" fill="#fff" stroke="#1fa3a3" stroke-width="1.6"/>
-<text class="t b" x="186" y="88.5" style="font-size:9.5px;fill:#1fa3a3">a solvent</text>
-<path class="g" d="M158 98H212M158 106H196"/>
-<text class="t s" x="186" y="119">paper text</text>
-<text class="t s" x="120" y="164">the paper's description of it</text>
-<text class="t b c" x="120" y="187">image → text</text>
+<rect class="w" x="8" y="14" width="88" height="110" rx="12"/>
+<path class="g" d="M52 60L72 74.5L64.4 98L39.6 98L32 74.5ZM47 60V44M57 60V44"/>
+<circle cx="72" cy="74.5" r="12" fill="#fff"/><circle cx="32" cy="74.5" r="12" fill="#fff"/><circle cx="52" cy="36" r="12" fill="#fff"/>
+<g class="t b"><text x="72" y="82.5" fill="#1fa3a3">O</text><text x="32" y="82.5" fill="#1fa3a3">O</text><text x="52" y="44" fill="#e07a5f">O</text></g>
+<path d="M102 69H130" fill="none" stroke="#1fa3a3" stroke-width="2.5" stroke-linecap="round" marker-end="url(#rx)"/>
+<rect class="p" x="136" y="14" width="96" height="110" rx="12"/>
+<text x="146" y="48" style="font-family:Georgia,serif;font-size:30px;fill:#e07a5f">“</text>
+<path class="g" d="M164 32H220M164 42H212M148 54H220"/>
+<rect x="141" y="62" width="86" height="30" rx="5" fill="#fff" stroke="#1fa3a3" stroke-width="1.8"/>
+<text class="t b" x="184" y="84" style="fill:#1fa3a3">solvent</text>
+<path class="g" d="M148 102H218M148 112H198"/>
+<text class="t" x="120" y="154">what the paper says</text>
+<text class="t b c" x="120" y="186">image → text</text>
 </svg>

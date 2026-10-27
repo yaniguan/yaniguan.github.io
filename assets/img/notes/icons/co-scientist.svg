@@ -1,30 +1,28 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 200" width="240" height="200">
 <title>Co-scientist: a researcher and an assistant sharing a tool registry and evidence cards labelled measured, computed and predicted</title>
-<style>.w{fill:#fff;stroke:#23395b;stroke-width:2.5;stroke-linejoin:round}.p{fill:#dceef5;stroke:#23395b;stroke-width:2.5;stroke-linejoin:round}.g{fill:none;stroke:#23395b;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}.t{font-family:Helvetica,Arial,sans-serif;fill:#23395b;font-size:10.5px;text-anchor:middle}.b{font-weight:700}.c{font-size:15px}.h{fill:#fff;font-size:10px;font-weight:700}</style>
+<style>.w{fill:#fff;stroke:#23395b;stroke-width:2.5;stroke-linejoin:round}.p{fill:#dceef5;stroke:#23395b;stroke-width:2.5;stroke-linejoin:round}.g{fill:none;stroke:#23395b;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}.t{font-family:Helvetica,Arial,sans-serif;fill:#23395b;font-size:22px;text-anchor:middle}.b{font-weight:700}.c{font-size:24px}.h{fill:#fff;font-weight:700}</style>
 <rect width="240" height="200" fill="#fff"/>
-<g fill="none" stroke="#1fa3a3" stroke-width="1.8" stroke-dasharray="3 3" stroke-linecap="round"><path d="M58 60H72M168 60H178"/><path d="M120 76V92M44 108V92H196V108"/></g>
-<circle class="p" cx="38" cy="44" r="12"/>
-<path class="p" d="M18 88Q18 62 38 62Q58 62 58 88Z"/>
-<path d="M30 76l8 6l8 -6" fill="none" stroke="#1fa3a3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-<rect class="p" x="180" y="34" width="44" height="34" rx="11"/>
-<circle cx="194" cy="49" r="3" fill="#23395b"/><circle cx="210" cy="49" r="3" fill="#23395b"/>
-<path d="M196 57q6 5 12 0" fill="none" stroke="#23395b" stroke-width="2" stroke-linecap="round"/>
-<path d="M202 34V26" stroke="#23395b" stroke-width="2.5" stroke-linecap="round"/><circle cx="202" cy="24" r="3.5" fill="#e07a5f" stroke="#23395b" stroke-width="1.8"/>
-<path class="w" d="M190 68V78H214V68"/>
-<rect class="w" x="74" y="38" width="92" height="38" rx="10"/>
-<text class="t" x="120" y="30">tool registry</text>
+<g fill="none" stroke="#1fa3a3" stroke-width="1.8" stroke-dasharray="3 3" stroke-linecap="round"><path d="M52 34H70M170 34H182"/></g>
+<circle class="p" cx="32" cy="20" r="11"/>
+<path class="p" d="M14 60Q14 34 32 34Q50 34 50 60Z"/>
+<path d="M25 47l7 6l7 -6" fill="none" stroke="#1fa3a3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<rect class="p" x="184" y="18" width="42" height="32" rx="10"/>
+<circle cx="197" cy="32" r="3" fill="#23395b"/><circle cx="213" cy="32" r="3" fill="#23395b"/>
+<path d="M199 40q6 5 12 0" fill="none" stroke="#23395b" stroke-width="2" stroke-linecap="round"/>
+<path d="M205 18V11" stroke="#23395b" stroke-width="2.5" stroke-linecap="round"/><circle cx="205" cy="9" r="3.5" fill="#e07a5f" stroke="#23395b" stroke-width="1.8"/>
+<path class="w" d="M193 50V60H217V50"/>
+<rect class="w" x="72" y="4" width="96" height="60" rx="10"/>
+<text class="t" x="120" y="26">tools</text>
+<g transform="translate(0 -14)">
 <path class="g" d="M82 47H91L95 51V67H82ZM85 56H92M85 61H90"/>
 <circle class="g" cx="107" cy="52" r="4"/><path class="g" d="M110 55L117 66" stroke-width="3"/>
 <path d="M126 67V61M132 67V53M138 67V58" stroke="#1fa3a3" stroke-width="3.5" stroke-linecap="round"/>
 <circle class="g" cx="154" cy="57" r="7"/><path class="g" d="M150.5 57l2.5 2.5l4.5 -5" stroke="#8fa98a" stroke-width="2.2"/>
-<rect class="w" x="12" y="108" width="64" height="44" rx="8"/>
-<rect class="w" x="88" y="108" width="64" height="44" rx="8"/>
-<rect class="w" x="164" y="108" width="64" height="44" rx="8"/>
-<path d="M12 124V116A8 8 0 0 1 20 108H68A8 8 0 0 1 76 116V124Z" fill="#8fa98a" stroke="#23395b" stroke-width="2.5" stroke-linejoin="round"/>
-<path d="M88 124V116A8 8 0 0 1 96 108H144A8 8 0 0 1 152 116V124Z" fill="#1fa3a3" stroke="#23395b" stroke-width="2.5" stroke-linejoin="round"/>
-<path d="M164 124V116A8 8 0 0 1 172 108H220A8 8 0 0 1 228 116V124Z" fill="#e07a5f" stroke="#23395b" stroke-width="2.5" stroke-linejoin="round"/>
-<g class="t h"><text x="44" y="120">measured</text><text x="120" y="120">computed</text><text x="196" y="120">predicted</text></g>
-<path class="g" d="M20 133H60M20 141H50M96 133H136M96 141H126M172 133H212M172 141H202" stroke="#9fb3c8" stroke-width="1.8"/>
-<text class="t b" x="120" y="170" style="font-weight:400">every value tagged by its source</text>
+</g>
+<rect x="20" y="72" width="128" height="26" rx="8" fill="#8fa98a" stroke="#23395b" stroke-width="2.2"/>
+<rect x="20" y="102" width="128" height="26" rx="8" fill="#1fa3a3" stroke="#23395b" stroke-width="2.2"/>
+<rect x="20" y="132" width="128" height="26" rx="8" fill="#e07a5f" stroke="#23395b" stroke-width="2.2"/>
+<g class="t h"><text x="84" y="93">measured</text><text x="84" y="123">computed</text><text x="84" y="153">predicted</text></g>
+<path class="g" d="M160 85H220M160 115H206M160 145H214" stroke="#9fb3c8" stroke-width="3"/>
 <text class="t b c" x="120" y="190">co-scientist</text>
 </svg>

@@ -1,30 +1,29 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 200" width="240" height="200">
-<title>MU browser extension: a paper figure with a side panel of linked text, DFT and MD</title>
-<style>.p{fill:#dceef5;stroke:#23395b;stroke-width:2.5;stroke-linejoin:round}.w{fill:#fff;stroke:#23395b;stroke-width:2.5;stroke-linejoin:round}.g{fill:none;stroke:#23395b;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}.t{font-family:Helvetica,Arial,sans-serif;fill:#23395b;font-size:11px;text-anchor:middle}.b{font-weight:700}.s{font-size:10.5px}.c{font-size:15px}</style>
+<title>MU browser extension: click a paper figure and a side panel shows linked text, DFT and MD</title>
+<style>.p{fill:#dceef5;stroke:#23395b;stroke-width:2.5;stroke-linejoin:round}.w{fill:#fff;stroke:#23395b;stroke-width:2.5;stroke-linejoin:round}.g{fill:none;stroke:#23395b;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}.t{font-family:Helvetica,Arial,sans-serif;fill:#23395b;font-size:22px;text-anchor:middle}.b{font-weight:700}.c{font-size:24px}</style>
 <defs><marker id="mt" viewBox="0 0 10 10" refX="7.5" refY="5" markerWidth="9" markerHeight="9" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path d="M1.5 1.5L8 5L1.5 8.5" fill="none" stroke="#1fa3a3" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></marker></defs>
 <rect width="240" height="200" fill="#fff"/>
-<rect class="w" x="12" y="16" width="216" height="140" rx="12"/>
-<path d="M12 40V28A12 12 0 0 1 24 16H216A12 12 0 0 1 228 28V40Z" fill="#dceef5"/>
-<path d="M12 40H228" stroke="#23395b" stroke-width="2"/>
-<rect class="w" x="12" y="16" width="216" height="140" rx="12" fill="none"/>
-<g fill="#23395b" opacity=".5"><circle cx="25" cy="28" r="3"/><circle cx="35" cy="28" r="3"/><circle cx="45" cy="28" r="3"/></g>
-<rect x="56" y="22" width="116" height="12" rx="6" fill="#fff" stroke="#23395b" stroke-width="1.6"/>
-<g fill="#1fa3a3"><rect x="184" y="22" width="24" height="16" rx="3"/><circle cx="196" cy="21" r="4.5"/><circle cx="209" cy="30" r="4.5"/></g>
-<text class="t b" x="196" y="34" style="fill:#fff;font-size:9.5px">MU</text>
-<path class="g" d="M22 50H96M22 56H80" stroke="#9fb3c8"/>
-<rect x="24" y="64" width="84" height="56" rx="6" fill="#fff" stroke="#1fa3a3" stroke-width="2" stroke-dasharray="4 3"/>
-<path class="g" d="M58 76L66 80.5V89.5L58 94L50 89.5V80.5ZM53 82.5L58 79.5M66 89.5L74 94M74 94V102" stroke-width="2"/>
-<text class="t b" x="78" y="112" style="font-size:9px">OH</text>
-<path class="g" d="M22 130H104M22 137H92M22 144H98" stroke="#9fb3c8"/>
-<path d="M112 92H140" fill="none" stroke="#1fa3a3" stroke-width="2.2" stroke-linecap="round" stroke-dasharray="3 3" marker-end="url(#mt)"/>
-<rect x="146" y="46" width="74" height="102" rx="9" fill="#dceef5" stroke="#23395b" stroke-width="2"/>
-<rect class="w" x="153" y="56" width="60" height="24" rx="7" stroke-width="1.8"/>
-<rect class="w" x="153" y="86" width="60" height="24" rx="7" stroke-width="1.8"/>
-<rect class="w" x="153" y="116" width="60" height="24" rx="7" stroke-width="1.8"/>
-<path class="g" d="M160 64H170M160 68H172M160 72H167" stroke-width="1.4"/>
-<path class="g" d="M160 93H172M160 103H172" stroke-width="1.4"/><circle cx="163" cy="103" r="1.8" fill="#1fa3a3"/><circle cx="169" cy="103" r="1.8" fill="#1fa3a3"/>
-<g fill="#1fa3a3"><circle cx="162" cy="124" r="2"/><circle cx="169" cy="127" r="2"/><circle cx="163" cy="132" r="2"/></g><circle cx="170" cy="133" r="2.3" fill="#e07a5f"/>
-<g class="t b"><text x="192" y="72">text</text><text x="192" y="102">DFT</text><text x="192" y="132">MD</text></g>
-<text class="t s" x="120" y="172">pick a figure, see linked data</text>
-<text class="t b c" x="120" y="191">MU extension</text>
+<rect class="w" x="10" y="8" width="220" height="136" rx="12"/>
+<path d="M10 42V20A12 12 0 0 1 22 8H218A12 12 0 0 1 230 20V42Z" fill="#dceef5"/>
+<path d="M10 42H230" stroke="#23395b" stroke-width="2"/>
+<rect class="w" x="10" y="8" width="220" height="136" rx="12" fill="none"/>
+<g fill="#23395b" opacity=".5"><circle cx="23" cy="25" r="3"/><circle cx="33" cy="25" r="3"/></g>
+<rect x="44" y="18" width="122" height="14" rx="7" fill="#fff" stroke="#23395b" stroke-width="1.6"/>
+<rect x="176" y="13" width="46" height="25" rx="5" fill="#1fa3a3"/>
+<text class="t b" x="199" y="33" style="fill:#fff">MU</text>
+<rect x="20" y="52" width="90" height="62" rx="6" fill="#fff" stroke="#1fa3a3" stroke-width="2" stroke-dasharray="4 3"/>
+<path class="g" d="M44 66L53 71V81L44 86L35 81V71ZM38.5 73.5L44 70.5M53 81L62 86M62 86V94" stroke-width="2"/>
+<text class="t b" x="88" y="106">OH</text>
+<path class="g" d="M20 124H104M20 132H90" stroke="#9fb3c8"/>
+<path d="M114 83H132" fill="none" stroke="#1fa3a3" stroke-width="2.2" stroke-linecap="round" stroke-dasharray="3 3" marker-end="url(#mt)"/>
+<rect x="138" y="48" width="86" height="92" rx="9" fill="#dceef5" stroke="#23395b" stroke-width="2"/>
+<rect class="w" x="144" y="53" width="74" height="26" rx="7" stroke-width="1.8"/>
+<rect class="w" x="144" y="81" width="74" height="26" rx="7" stroke-width="1.8"/>
+<rect class="w" x="144" y="109" width="74" height="26" rx="7" stroke-width="1.8"/>
+<path class="g" d="M150 61H158M150 66H160M150 71H156" stroke-width="1.4"/>
+<path class="g" d="M150 89H160M150 99H160" stroke-width="1.4"/><circle cx="153" cy="99" r="1.8" fill="#1fa3a3"/><circle cx="158" cy="99" r="1.8" fill="#1fa3a3"/>
+<g fill="#1fa3a3"><circle cx="151" cy="117" r="2"/><circle cx="157" cy="120" r="2"/><circle cx="152" cy="126" r="2"/></g><circle cx="158" cy="127" r="2.3" fill="#e07a5f"/>
+<g class="t b"><text x="188" y="74">text</text><text x="188" y="102">DFT</text><text x="188" y="130">MD</text></g>
+<text class="t" x="120" y="168">click a figure</text>
+<text class="t b c" x="120" y="194">MU extension</text>
 </svg>

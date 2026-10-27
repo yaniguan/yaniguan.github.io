@@ -1,21 +1,20 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 200" width="240" height="200">
-<title>LoRA: a big frozen weight block with a small trainable low-rank adapter clipped on</title>
-<style>.t{font-family:Helvetica,Arial,sans-serif;fill:#23395b;font-size:12px;text-anchor:middle}.b{font-weight:700}.s{font-size:10.5px}.c{font-size:15px}.a{fill:#1fa3a3;stroke:#23395b;stroke-width:2.5;stroke-linejoin:round}</style>
+<title>LoRA: a big frozen weight block with a small trainable low-rank adapter (rank 16) clipped on</title>
+<style>.t{font-family:Helvetica,Arial,sans-serif;fill:#23395b;font-size:22px;text-anchor:middle}.b{font-weight:700}.c{font-size:24px}.a{fill:#1fa3a3;stroke:#23395b;stroke-width:2.5;stroke-linejoin:round}</style>
 <rect width="240" height="200" fill="#fff"/>
-<rect x="20" y="30" width="100" height="100" rx="8" fill="#dceef5"/>
-<path d="M40 30V130M60 30V130M80 30V130M100 30V130M20 50H120M20 70H120M20 90H120M20 110H120" stroke="#9fb3c8" stroke-width="1.2"/>
-<rect x="20" y="30" width="100" height="100" rx="8" fill="none" stroke="#23395b" stroke-width="2.5"/>
-<circle cx="70" cy="80" r="16" fill="#fff" stroke="#23395b" stroke-width="2"/>
-<path d="M70 69V91M60.5 74.5L79.5 85.5M60.5 85.5L79.5 74.5M66 70l4 3l4 -3M66 90l4 -3l4 3" fill="none" stroke="#23395b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M134 74V86M128 80H140" stroke="#23395b" stroke-width="2.5" stroke-linecap="round"/>
-<rect class="a" x="150" y="30" width="14" height="100" rx="4"/>
-<text class="t b" x="168.5" y="84">·</text>
-<rect class="a" x="174" y="73" width="52" height="14" rx="4"/>
-<path d="M112 38V22Q112 16 118 16H151Q157 16 157 22V38" fill="none" stroke="#e07a5f" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-<circle cx="134.5" cy="16" r="3" fill="#e07a5f"/>
-<g class="t b"><text x="157" y="146">B</text><text x="200" y="102">A</text></g>
-<text class="t s" x="200" y="66" style="fill:#1fa3a3">rank 16</text>
-<text class="t s" x="70" y="146">frozen W</text>
-<text class="t s" x="120" y="166">small trainable low-rank adapter</text>
-<text class="t b c" x="120" y="188">LoRA</text>
+<rect x="16" y="30" width="84" height="84" rx="8" fill="#dceef5"/>
+<path d="M37 30V114M58 30V114M79 30V114M16 51H100M16 72H100M16 93H100" stroke="#9fb3c8" stroke-width="1.2"/>
+<rect x="16" y="30" width="84" height="84" rx="8" fill="none" stroke="#23395b" stroke-width="2.5"/>
+<circle cx="58" cy="72" r="15" fill="#fff" stroke="#23395b" stroke-width="2"/>
+<path d="M58 62V82M49.3 67L66.7 77M49.3 77L66.7 67M54 63l4 3l4 -3M54 81l4 -3l4 3" fill="none" stroke="#23395b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M114 66V78M108 72H120" stroke="#23395b" stroke-width="2.5" stroke-linecap="round"/>
+<rect class="a" x="128" y="30" width="14" height="84" rx="4"/>
+<rect class="a" x="156" y="65" width="66" height="14" rx="4"/>
+<path d="M94 38V22Q94 14 102 14H127Q135 14 135 22V38" fill="none" stroke="#e07a5f" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="114.5" cy="14" r="3" fill="#e07a5f"/>
+<g class="t b"><text x="135" y="140">B</text><text x="189" y="104">A</text></g>
+<text class="t" x="189" y="54" style="fill:#1fa3a3">rank 16</text>
+<text class="t" x="58" y="140">frozen W</text>
+<text class="t" x="120" y="166">trainable adapter</text>
+<text class="t b c" x="120" y="193">LoRA</text>
 </svg>

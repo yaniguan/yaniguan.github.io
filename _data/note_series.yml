@@ -3,10 +3,10 @@ ses-internship:
   blurb: "Three scales, one storyline: molecules make up electrolytes, and electrolytes go into cells."
   parts: 3
   icons:
-    0: /assets/img/notes/series/molecule.webp
-    1: /assets/img/notes/series/molecule.webp
-    2: /assets/img/notes/series/electrolyte.webp
-    3: /assets/img/notes/series/cell.webp
+    0: /assets/img/notes/icons/scale-molecule.svg
+    1: /assets/img/notes/icons/scale-molecule.svg
+    2: /assets/img/notes/icons/scale-electrolyte.svg
+    3: /assets/img/notes/icons/scale-cell.svg
   scale_labels:
     1: Molecules
     2: Electrolytes

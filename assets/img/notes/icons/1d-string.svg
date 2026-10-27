@@ -1,15 +1,15 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 200" width="240" height="200">
 <title>1D string: a SMILES ribbon and fingerprint bits</title>
-<style>.n{fill:none;stroke:#23395b;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round}.p{fill:#dceef5;stroke:#23395b;stroke-width:2.5;stroke-linejoin:round}.w{fill:#fff;stroke:#23395b;stroke-width:2.5;stroke-linejoin:round}.t{font-family:Helvetica,Arial,sans-serif;fill:#23395b;font-size:13px;text-anchor:middle}.b{font-weight:700}.s{font-size:10.5px}.c{font-size:15px}.tc{fill:#1fa3a3}.cc{fill:#e07a5f}</style>
+<style>.n{fill:none;stroke:#23395b;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round}.p{fill:#dceef5;stroke:#23395b;stroke-width:2.5;stroke-linejoin:round}.w{fill:#fff;stroke:#23395b;stroke-width:2.5;stroke-linejoin:round}.t{font-family:Helvetica,Arial,sans-serif;fill:#23395b;font-size:22px;text-anchor:middle}.b{font-weight:700}.c{font-size:24px}.tc{fill:#1fa3a3}.cc{fill:#e07a5f}</style>
 <defs><marker id="an" viewBox="0 0 10 10" refX="7.5" refY="5" markerWidth="10" markerHeight="10" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path d="M1.5 1.5L8 5L1.5 8.5" fill="none" stroke="#23395b" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></marker></defs>
 <rect width="240" height="200" fill="#fff"/>
-<text class="t s" x="120" y="26">SMILES</text>
-<path class="p" d="M14 36H226L216 56L226 76H14L24 56Z"/>
-<text class="t b" x="120" y="62" style="font-size:18px;letter-spacing:1px">C<tspan class="tc">1</tspan>COC(=<tspan class="cc">O</tspan>)O<tspan class="tc">1</tspan></text>
-<path class="n" d="M120 84V104" marker-end="url(#an)"/>
-<rect class="w" x="36" y="112" width="168" height="24" rx="5"/>
-<g fill="#1fa3a3"><rect x="38.5" y="114.5" width="9" height="19" rx="2"/><rect x="66.5" y="114.5" width="9" height="19" rx="2"/><rect x="80.5" y="114.5" width="9" height="19" rx="2"/><rect x="122.5" y="114.5" width="9" height="19" rx="2"/><rect x="150.5" y="114.5" width="9" height="19" rx="2"/><rect x="192.5" y="114.5" width="9" height="19" rx="2"/></g>
-<path d="M50 112v24M64 112v24M78 112v24M92 112v24M106 112v24M120 112v24M134 112v24M148 112v24M162 112v24M176 112v24M190 112v24" stroke="#23395b" stroke-width="1.3"/>
-<text class="t s" x="120" y="153">fingerprint bits</text>
-<text class="t b c" x="120" y="184">1D string</text>
+<text class="t" x="120" y="22">SMILES</text>
+<path class="p" d="M8 30H232L221 50L232 70H8L19 50Z"/>
+<text class="t b" x="120" y="58">C<tspan class="tc">1</tspan>COC(=<tspan class="cc">O</tspan>)O<tspan class="tc">1</tspan></text>
+<path class="n" d="M120 75V88" marker-end="url(#an)"/>
+<rect class="w" x="36" y="94" width="168" height="24" rx="5"/>
+<g fill="#1fa3a3"><rect x="38.5" y="96.5" width="9" height="19" rx="2"/><rect x="66.5" y="96.5" width="9" height="19" rx="2"/><rect x="80.5" y="96.5" width="9" height="19" rx="2"/><rect x="122.5" y="96.5" width="9" height="19" rx="2"/><rect x="150.5" y="96.5" width="9" height="19" rx="2"/><rect x="192.5" y="96.5" width="9" height="19" rx="2"/></g>
+<path d="M50 94v24M64 94v24M78 94v24M92 94v24M106 94v24M120 94v24M134 94v24M148 94v24M162 94v24M176 94v24M190 94v24" stroke="#23395b" stroke-width="1.3"/>
+<text class="t" x="120" y="146">fingerprint bits</text>
+<text class="t b c" x="120" y="188">1D string</text>
 </svg>

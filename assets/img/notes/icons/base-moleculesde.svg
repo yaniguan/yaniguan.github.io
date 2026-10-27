@@ -1,22 +1,21 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 200" width="240" height="200">
 <title>MoleculeSDE: generating 3D from 2D and 2D from 3D through a noisy diffusion path</title>
-<style>.p{fill:#dceef5;stroke:#23395b;stroke-width:2.5;stroke-linejoin:round}.w{fill:#fff;stroke:#23395b;stroke-width:2.5;stroke-linejoin:round}.t{font-family:Helvetica,Arial,sans-serif;fill:#23395b;font-size:13px;text-anchor:middle}.b{font-weight:700}.s{font-size:10.5px}.c{font-size:15px}.a{fill:#dceef5;stroke:#23395b;stroke-width:2}.o{fill:#1fa3a3;stroke:#23395b;stroke-width:2}</style>
+<style>.p{fill:#dceef5;stroke:#23395b;stroke-width:2.5;stroke-linejoin:round}.w{fill:#fff;stroke:#23395b;stroke-width:2.5;stroke-linejoin:round}.t{font-family:Helvetica,Arial,sans-serif;fill:#23395b;font-size:22px;text-anchor:middle}.b{font-weight:700}.c{font-size:24px}.a{fill:#dceef5;stroke:#23395b;stroke-width:2}.o{fill:#1fa3a3;stroke:#23395b;stroke-width:2}</style>
 <defs><marker id="sn" viewBox="0 0 10 10" refX="7.5" refY="5" markerWidth="10" markerHeight="10" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path d="M1.5 1.5L8 5L1.5 8.5" fill="none" stroke="#23395b" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></marker><marker id="st" viewBox="0 0 10 10" refX="7.5" refY="5" markerWidth="10" markerHeight="10" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path d="M1.5 1.5L8 5L1.5 8.5" fill="none" stroke="#1fa3a3" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></marker></defs>
 <rect width="240" height="200" fill="#fff"/>
-<rect class="w" x="14" y="50" width="70" height="70" rx="12"/>
-<rect class="p" x="156" y="50" width="70" height="70" rx="12"/>
-<path d="M49 68L65.2 79.8L59 98.9L39 98.9L32.8 79.8Z" fill="none" stroke="#23395b" stroke-width="2" stroke-linejoin="round"/>
-<circle class="a" cx="49" cy="68" r="4.5"/><circle class="o" cx="65.2" cy="79.8" r="4.5"/><circle class="a" cx="59" cy="98.9" r="4.5"/><circle class="a" cx="39" cy="98.9" r="4.5"/><circle class="o" cx="32.8" cy="79.8" r="4.5"/>
-<path d="M191 86L207 72" stroke="#23395b" stroke-width="2" opacity=".45"/>
-<path d="M191 86L191 66M191 86L174 98M191 86L208 100" stroke="#23395b" stroke-width="3.5" stroke-linecap="round"/>
-<circle cx="207" cy="72" r="4.5" fill="#fff" stroke="#23395b" stroke-width="1.6" opacity=".7"/><circle cx="191" cy="66" r="5.5" fill="#fff" stroke="#23395b" stroke-width="2"/><circle cx="191" cy="86" r="7" fill="#fff" stroke="#23395b" stroke-width="2"/><circle cx="208" cy="100" r="6" fill="#e07a5f" stroke="#23395b" stroke-width="2"/><circle cx="174" cy="99" r="8" fill="#1fa3a3" stroke="#23395b" stroke-width="2"/>
-<path d="M92 72H148" fill="none" stroke="#23395b" stroke-width="2.5" stroke-linecap="round" marker-end="url(#sn)"/>
-<path d="M148 100H92" fill="none" stroke="#1fa3a3" stroke-width="2.5" stroke-linecap="round" marker-end="url(#st)"/>
-<path d="M98 44q5 -9 10 0t10 0t10 0t10 0" fill="none" stroke="#e07a5f" stroke-width="2.2" stroke-linecap="round"/>
-<g fill="#e07a5f"><circle cx="104" cy="56" r="1.6"/><circle cx="113" cy="52" r="1.3"/><circle cx="122" cy="58" r="1.8"/><circle cx="131" cy="53" r="1.4"/><circle cx="140" cy="57" r="1.6"/><circle cx="108" cy="30" r="1.3"/><circle cx="127" cy="31" r="1.6"/><circle cx="137" cy="34" r="1.2"/></g>
-<text class="t s" x="120" y="88">generate</text>
-<text class="t s" x="120" y="22" style="fill:#e07a5f">noise → structure</text>
-<text class="t b" x="49" y="138">2D</text><text class="t b" x="191" y="138">3D</text>
-<text class="t s" x="120" y="166">2D ⇄ 3D generation + contrast</text>
-<text class="t b c" x="120" y="188">MoleculeSDE</text>
+<rect class="w" x="14" y="54" width="70" height="70" rx="12"/>
+<rect class="p" x="156" y="54" width="70" height="70" rx="12"/>
+<path d="M49 72L65.2 83.8L59 102.9L39 102.9L32.8 83.8Z" fill="none" stroke="#23395b" stroke-width="2" stroke-linejoin="round"/>
+<circle class="a" cx="49" cy="72" r="4.5"/><circle class="o" cx="65.2" cy="83.8" r="4.5"/><circle class="a" cx="59" cy="102.9" r="4.5"/><circle class="a" cx="39" cy="102.9" r="4.5"/><circle class="o" cx="32.8" cy="83.8" r="4.5"/>
+<path d="M191 90L207 76" stroke="#23395b" stroke-width="2" opacity=".45"/>
+<path d="M191 90L191 70M191 90L174 102M191 90L208 104" stroke="#23395b" stroke-width="3.5" stroke-linecap="round"/>
+<circle cx="207" cy="76" r="4.5" fill="#fff" stroke="#23395b" stroke-width="1.6" opacity=".7"/><circle cx="191" cy="70" r="5.5" fill="#fff" stroke="#23395b" stroke-width="2"/><circle cx="191" cy="90" r="7" fill="#fff" stroke="#23395b" stroke-width="2"/><circle cx="208" cy="104" r="6" fill="#e07a5f" stroke="#23395b" stroke-width="2"/><circle cx="174" cy="103" r="8" fill="#1fa3a3" stroke="#23395b" stroke-width="2"/>
+<path d="M92 80H148" fill="none" stroke="#23395b" stroke-width="2.5" stroke-linecap="round" marker-end="url(#sn)"/>
+<path d="M148 104H92" fill="none" stroke="#1fa3a3" stroke-width="2.5" stroke-linecap="round" marker-end="url(#st)"/>
+<path d="M98 48q5 -9 10 0t10 0t10 0t10 0" fill="none" stroke="#e07a5f" stroke-width="2.2" stroke-linecap="round"/>
+<g fill="#e07a5f"><circle cx="104" cy="60" r="1.6"/><circle cx="113" cy="56" r="1.3"/><circle cx="122" cy="62" r="1.8"/><circle cx="131" cy="57" r="1.4"/><circle cx="140" cy="61" r="1.6"/><circle cx="96" cy="36" r="1.3"/><circle cx="144" cy="36" r="1.2"/></g>
+<text class="t" x="120" y="24" style="fill:#e07a5f">noise → structure</text>
+<text class="t b" x="49" y="146">2D</text><text class="t b" x="191" y="146">3D</text>
+<text class="t" x="120" y="170">both directions</text>
+<text class="t b c" x="120" y="195">MoleculeSDE</text>
 </svg>

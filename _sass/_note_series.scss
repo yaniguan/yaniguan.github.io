@@ -6,8 +6,8 @@
 .series-step { display: flex; gap: .9rem; align-items: flex-start; padding: .45rem 0; position: relative; }
 .series-step-icon { flex: 0 0 auto; width: 44px; height: 44px; border-radius: 50%; border: 2px solid var(--global-divider-color); background: #fff; overflow: hidden; display: flex; align-items: center; justify-content: center; position: relative; z-index: 1; }
 .series-step-icon img { width: 100%; height: 100%; object-fit: contain; }
-.series-step-1 .series-step-icon { transform: scale(.82); }
-.series-step-3 .series-step-icon { transform: scale(1.12); }
+
+
 .series-step-body { display: flex; flex-direction: column; font-size: .92rem; }
 .series-step-num { font-size: .72rem; letter-spacing: .06em; text-transform: uppercase; color: var(--global-text-color-light); }
 .series-step-body a { font-weight: 600; }
@@ -33,3 +33,44 @@
 .note-body .nf-row figcaption { font-size: .78rem; }
 .note-body p + p { margin-top: .2rem; }
 @media (max-width: 576px) { .note-body .nf-row figure { flex-basis: 40%; } }
+
+// ---------------------------------------------------------------------------
+// Notion-like note components
+// ---------------------------------------------------------------------------
+.note-body { max-width: 46em; }
+.note-body p, .note-body li { text-align: justify; hyphens: auto; -webkit-hyphens: auto; word-spacing: -0.02em; text-justify: inter-word; }
+.note-body h2 { font-size: 1.3rem; margin: 0 0 .9rem; padding-top: .2rem; }
+.note-body h3 { font-size: 1.05rem; margin: 1.8rem 0 .6rem; color: var(--global-text-color); }
+.note-body hr { border: 0; border-top: 1px solid var(--global-divider-color); margin: 2.6rem 0 2rem; }
+.note-body .n-lede { font-size: 1.06rem; line-height: 1.75; color: var(--global-text-color); }
+.note-body .n-toc { border-left: 3px solid var(--global-theme-color); padding: .4rem 0 .4rem 1rem; margin: 1.4rem 0 1.6rem; font-size: .9rem; }
+.note-body .n-toc p { margin: 0 0 .3rem; font-weight: 600; text-align: left; }
+.note-body .n-toc ol, .note-body .n-toc ul { margin: 0; padding-left: 1.1rem; }
+.note-body .n-toc li { margin: .1rem 0; text-align: left; }
+.note-body .n-stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: .7rem; margin: 1.4rem 0 1.8rem; }
+.note-body .n-stat { border: 1px solid var(--global-divider-color); border-radius: 10px; padding: .7rem .8rem; background: rgba(31,163,168,.05); }
+.note-body .n-stat b { display: block; font-size: 1.35rem; line-height: 1.2; color: #23395b; font-weight: 700; }
+.note-body .n-stat span { display: block; font-size: .8rem; line-height: 1.35; color: var(--global-text-color-light); margin-top: .2rem; }
+.note-body .n-callout { display: flex; gap: .85rem; align-items: flex-start; background: #eef6f8; border-radius: 10px; padding: .9rem 1.1rem; margin: 1.4rem 0; }
+.note-body .n-callout > img { flex: 0 0 44px; width: 44px; height: 44px; margin-top: .15rem; }
+.note-body .n-callout > div > p:last-child { margin-bottom: 0; }
+.note-body .n-callout p { margin: 0 0 .5rem; }
+.note-body .n-callout.warm { background: #fbf0ec; }
+.note-body .n-card { border: 1px solid var(--global-divider-color); border-radius: 12px; padding: 1rem 1.15rem; margin: 1.3rem 0; background: var(--global-bg-color); }
+.note-body .n-card > h4, .note-body .n-card .n-card-title { font-size: .98rem; font-weight: 700; margin: 0 0 .45rem; display: flex; align-items: center; gap: .55rem; }
+.note-body .n-card .n-card-title img { width: 36px; height: 36px; }
+.note-body .n-card p:last-child { margin-bottom: 0; }
+.note-body .n-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .9rem; margin: 1.3rem 0; }
+.note-body .n-grid.three { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.note-body .n-grid > .n-card { margin: 0; }
+.note-body .n-grid p, .note-body .n-grid li { text-align: left; hyphens: manual; font-size: .92rem; line-height: 1.6; }
+.note-body details.n-details { border: 1px solid var(--global-divider-color); border-radius: 10px; padding: .55rem 1rem; margin: 1.2rem 0; }
+.note-body details.n-details > summary { cursor: pointer; font-weight: 600; font-size: .93rem; list-style: none; }
+.note-body details.n-details > summary::before { content: "▸"; display: inline-block; width: 1.1em; transition: transform .15s; }
+.note-body details.n-details[open] > summary::before { transform: rotate(90deg); }
+.note-body details.n-details[open] > summary { margin-bottom: .6rem; }
+.note-body figure.nf.nf-wide img { width: 100%; }
+@media (max-width: 640px) {
+  .note-body .n-grid, .note-body .n-grid.three { grid-template-columns: 1fr; }
+  .note-body p, .note-body li { text-align: left; }
+}
