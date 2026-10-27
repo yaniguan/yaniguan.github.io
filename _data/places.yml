@@ -22,3 +22,29 @@
   # Approximate: Fish Lake itself, not the exact spot the photo was taken.
   lat: 38.55
   lon: -111.71
+
+- name: Honolulu
+  location: Oʻahu, Hawaiʻi
+  date: 2024-10-01
+  model: assets/models/honolulu-oahu.glb
+  note: Diamond Head keeps watch so the beach can stay off duty.
+  lat: 21.2620
+  lon: -157.8055
+
+- name: Big Island
+  location: Hawaiʻi Island, Hawaiʻi
+  date: 2025-09-01
+  model: assets/models/big-island-kilauea.glb
+  maps: Hawaiʻi Volcanoes National Park
+  note: The only place where the ground is still under construction.
+  lat: 19.4069
+  lon: -155.2834
+
+- name: Maui
+  location: Hawaiʻi
+  date: 2026-10-01
+  model: assets/models/maui-haleakala.glb
+  maps: Haleakalā National Park
+  note: Haleakalā, where the clouds are the ones looking up.
+  lat: 20.7097
+  lon: -156.2533
