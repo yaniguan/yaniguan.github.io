@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 140" width="720" height="140">
 <title>Ion movie timeline: 5,000 frames, 4 ps apart, 20 ns in total</title>
-<style>.f{fill:#dceef5;stroke:#23395b;stroke-width:2.5;stroke-linejoin:round}.t{font-family:Helvetica,Arial,sans-serif;fill:#23395b;font-size:12px;text-anchor:middle}.b{font-weight:700}.s{font-size:11px}.i{fill:#e07a5f;stroke:#23395b;stroke-width:1.5}</style>
+<style>.f{fill:#dceef5;stroke:#23395b;stroke-width:2.5;stroke-linejoin:round}.t{font-family:Helvetica,Arial,sans-serif;fill:#23395b;font-size:13px;text-anchor:middle}.b{font-weight:700}.s{font-size:13px}.i{fill:#e07a5f;stroke:#23395b;stroke-width:1.5}</style>
 <defs><marker id="tl" viewBox="0 0 10 10" refX="7.5" refY="5" markerWidth="9" markerHeight="9" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path d="M1.5 1.5L8 5L1.5 8.5" fill="none" stroke="#1fa3a3" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></marker><marker id="tn" viewBox="0 0 10 10" refX="7.5" refY="5" markerWidth="10" markerHeight="10" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path d="M1.5 1.5L8 5L1.5 8.5" fill="none" stroke="#23395b" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></marker></defs>
 <rect width="720" height="140" fill="#fff"/>
 <g class="t s"><text x="60" y="17">frame 1</text><text x="120" y="17">frame 2</text><text x="180" y="17">frame 3</text><text x="240" y="17">frame 4</text><text x="640" y="17">frame 5,000</text></g>
