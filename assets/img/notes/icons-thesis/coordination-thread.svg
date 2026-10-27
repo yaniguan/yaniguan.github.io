@@ -1,1 +1,64 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="720" height="240" viewBox="0 0 720 240" role="img"><title>Coordination connects capacitance, dissolution, and reactivity</title><g font-family="Avenir Next, Segoe UI, Helvetica, Arial, sans-serif" fill="#2b2350"><rect x="4" y="4" width="712" height="232" rx="28" fill="#efeaf8"/><path d="M105 108H615" fill="none" stroke="#2d5bd7" stroke-width="4" stroke-linecap="butt" stroke-linejoin="miter"/><rect x="60" y="48" width="140" height="123" rx="22" fill="#fff"/><rect x="290" y="48" width="140" height="123" rx="22" fill="#fff"/><rect x="520" y="48" width="140" height="123" rx="22" fill="#fff"/><rect x="87" y="72" width="15" height="72" rx="0" fill="#c96a2b"/><rect x="157" y="72" width="15" height="72" rx="0" fill="#2b2350"/><g transform="translate(130 104) scale(1)"><path d="M-12 12L0 0L12 12" fill="none" stroke="#2b2350" stroke-width="4" stroke-linecap="butt" stroke-linejoin="miter"/><circle cx="0" cy="0" r="8" fill="#2d5bd7"/><circle cx="-12" cy="12" r="5" fill="#fff"/><circle cx="12" cy="12" r="5" fill="#fff"/></g><circle cx="319" cy="140" r="12" fill="#c96a2b"/><circle cx="346" cy="140" r="12" fill="#c96a2b"/><circle cx="373" cy="140" r="12" fill="#c96a2b"/><circle cx="400" cy="140" r="12" fill="#c96a2b"/><circle cx="360" cy="102" r="14" fill="#c96a2b"/><path d="M360 88V72" fill="none" stroke="#2b2350" stroke-width="4" stroke-linecap="butt" stroke-linejoin="miter"/><text x="360" y="66" text-anchor="middle" font-size="20" fill="#2d5bd7">N</text><circle cx="566" cy="108" r="23" fill="#2b2350"/><text x="566" y="115" text-anchor="middle" font-size="18" fill="#fff">Cs<tspan dy="-8" font-size="16">+</tspan></text><path d="M594 122L610 104L629 122" fill="none" stroke="#2b2350" stroke-width="4" stroke-linecap="butt" stroke-linejoin="miter"/><text x="130" y="195" text-anchor="middle" font-size="18" fill="#2b2350">capacitance</text><text x="360" y="195" text-anchor="middle" font-size="18" fill="#2b2350">dissolution</text><text x="590" y="195" text-anchor="middle" font-size="18" fill="#2b2350">reactivity</text><text x="360" y="229" text-anchor="middle" font-size="22" fill="#2b2350">who is bonded to whom</text></g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="720" height="240" viewBox="0 0 720 240" role="img">
+<title>One thread through four interfaces: water on Cu, a Cu atom leaving with ammine ligands, PbH4 passing hydrogen to an imine, and Cs+ touching bent CO2 on Ag</title>
+<defs>
+<style>.ln,.lc,.lb,.lp{fill:none;stroke-width:3;stroke-linecap:round;stroke-linejoin:round}.ln{stroke:#2b2350}.lc{stroke:#c96a2b}.lb{stroke:#2d5bd7}.lp{stroke:#d8cfee}.dt{stroke-dasharray:0.5 6.5}.ds{stroke-dasharray:6 6}.t{font-family:"Avenir Next","Segoe UI",Helvetica,Arial,sans-serif;font-size:15px;fill:#2b2350}.b{font-weight:700}.i{font-style:italic;fill:#6d55b5}.w{fill:#fff}.m{text-anchor:middle}.e{text-anchor:end}.s14{font-size:14px}.s16{font-size:16px}.s18{font-size:18px}.s20{font-size:20px}</style>
+<marker id="ac" viewBox="0 0 12 12" refX="9" refY="6" markerWidth="12" markerHeight="12" markerUnits="userSpaceOnUse" orient="auto"><path d="M1 1.5L11 6L1 10.5Z" fill="#c96a2b"/></marker>
+<marker id="ab" viewBox="0 0 12 12" refX="9" refY="6" markerWidth="12" markerHeight="12" markerUnits="userSpaceOnUse" orient="auto"><path d="M1 1.5L11 6L1 10.5Z" fill="#2d5bd7"/></marker>
+<g id="cu"><circle r="11" fill="#c96a2b"/><circle cx="-3.5" cy="-3.5" r="3.5" fill="#eab38a"/></g>
+<g id="ag"><circle r="11" fill="#cdc3ea"/><circle cx="-3.5" cy="-3.5" r="3.5" fill="#f6f2fb"/></g>
+<g id="o"><circle r="8" fill="#2d5bd7"/><circle cx="-2.5" cy="-2.5" r="2.5" fill="#9fb6f0"/></g>
+<g id="c"><circle r="8" fill="#2b2350"/><circle cx="-2.5" cy="-2.5" r="2.5" fill="#6d61a0"/></g>
+<g id="n"><circle r="8" fill="#8a6fd1"/><circle cx="-2.5" cy="-2.5" r="2.5" fill="#cbbdf0"/></g>
+<circle id="h" r="5" fill="#b4c5f5"/>
+<g id="wd"><path class="ln" d="M-13.4 10.4L0 0L13.4 10.4"/><use xlink:href="#o"/><use xlink:href="#h" x="-13.4" y="10.4"/><use xlink:href="#h" x="13.4" y="10.4"/></g>
+<g id="wu"><path class="ln" d="M-13.4-10.4L0 0L13.4-10.4"/><use xlink:href="#o"/><use xlink:href="#h" x="-13.4" y="-10.4"/><use xlink:href="#h" x="13.4" y="-10.4"/></g>
+<g id="wt1"><path class="ln" d="M16.85 2.29L0 0L-6.44 15.73"/><use xlink:href="#o"/><use xlink:href="#h" x="16.85" y="2.29"/><use xlink:href="#h" x="-6.44" y="15.73"/></g>
+<g id="wa"><path class="ln" d="M10.4-13.4L0 0L10.4 13.4"/><use xlink:href="#o"/><use xlink:href="#h" x="10.4" y="-13.4"/><use xlink:href="#h" x="10.4" y="13.4"/></g>
+<g id="nl"><path class="ln" d="M0 0L-8-15M0 0L-8 15M0 0H-17"/><use xlink:href="#n"/><use xlink:href="#h" x="-8" y="-15"/><use xlink:href="#h" x="-8" y="15"/><use xlink:href="#h" x="-17"/></g>
+<g id="nr"><path class="ln" d="M0 0L8-15M0 0L8 15M0 0H17"/><use xlink:href="#n"/><use xlink:href="#h" x="8" y="-15"/><use xlink:href="#h" x="8" y="15"/><use xlink:href="#h" x="17"/></g>
+<g id="cu5"><use xlink:href="#cu" x="-33" y="19"/><use xlink:href="#cu" x="-11" y="19"/><use xlink:href="#cu" x="11" y="19"/><use xlink:href="#cu" x="33" y="19"/><use xlink:href="#cu" x="-44"/><use xlink:href="#cu" x="-22"/><use xlink:href="#cu"/><use xlink:href="#cu" x="22"/><use xlink:href="#cu" x="44"/></g>
+<g id="ag5"><use xlink:href="#ag" x="-33" y="19"/><use xlink:href="#ag" x="-11" y="19"/><use xlink:href="#ag" x="11" y="19"/><use xlink:href="#ag" x="33" y="19"/><use xlink:href="#ag" x="-44"/><use xlink:href="#ag" x="-22"/><use xlink:href="#ag"/><use xlink:href="#ag" x="22"/><use xlink:href="#ag" x="44"/></g>
+</defs>
+<rect x="4" y="4" width="712" height="232" rx="18" fill="#f6f2fb"/>
+<path class="lc" d="M16 210Q56 196 96 210T186 210T276 210T366 210T456 210T546 210T636 210T704 210"/>
+
+<use xlink:href="#cu5" x="96" y="140"/>
+<use xlink:href="#wd" x="74" y="104"/>
+<use xlink:href="#wu" x="118" y="108"/>
+<use xlink:href="#wt1" x="94" y="56"/>
+<text class="t m" x="96" y="186">water reorganizes</text>
+
+<use xlink:href="#cu5" x="276" y="140"/>
+<circle cx="276" cy="140" r="11" fill="#f6f2fb"/>
+<circle class="lc" cx="276" cy="140" r="10" style="stroke-dasharray:4 4.4"/>
+<path class="lc" d="M276 126V98" marker-end="url(#ac)"/>
+<path class="ln" d="M250 78H302"/>
+<use xlink:href="#nl" x="250" y="78"/>
+<use xlink:href="#nr" x="302" y="78"/>
+<use xlink:href="#cu" x="276" y="78"/>
+<text class="t m" x="276" y="186">a Cu atom walks off</text>
+
+<use xlink:href="#ag5" x="456" y="140"/>
+<path class="ln" d="M430 86V62M430 86L409 98M430 86L422 109"/>
+<use xlink:href="#h" x="430" y="62"/><use xlink:href="#h" x="409" y="98"/><use xlink:href="#h" x="422" y="109"/>
+<circle cx="430" cy="86" r="16" fill="#8a77c4"/><circle cx="430" cy="86" r="13" fill="#5b4596"/>
+<text class="t b w s14 m" x="430" y="91">Pb</text>
+<path class="lb dt" d="M446 78L452 75"/>
+<use xlink:href="#h" x="458" y="72"/>
+<path class="lb" d="M465 68Q480 60 485 73" marker-end="url(#ab)"/>
+<path class="ln" d="M488 82H516M488 90H516"/>
+<use xlink:href="#c" x="486" y="86"/><use xlink:href="#n" x="518" y="86"/>
+<text class="t m" x="456" y="186">hydrogen gets passed</text>
+
+<use xlink:href="#ag5" x="636" y="140"/>
+<path class="ln dt" d="M614 82L633.4 113.1"/>
+<path class="ln" d="M633.4 113.1L650 120L666.6 113.1"/>
+<use xlink:href="#o" x="633.4" y="113.1"/><use xlink:href="#c" x="650" y="120"/><use xlink:href="#o" x="666.6" y="113.1"/>
+<use xlink:href="#wa" transform="translate(584.9 71.4) rotate(200)"/>
+<circle cx="614" cy="82" r="18" fill="#8a77c4"/><circle cx="614" cy="82" r="15" fill="#5b4596"/>
+<text class="t b w s14 m" x="614" y="87">Cs⁺</text>
+<text class="t m" x="636" y="186">a cation moves in</text>
+
+<circle cx="96" cy="210" r="7" fill="#c96a2b"/><circle cx="276" cy="210" r="7" fill="#c96a2b"/><circle cx="456" cy="210" r="7" fill="#c96a2b"/><circle cx="636" cy="210" r="7" fill="#c96a2b"/>
+<circle cx="94" cy="208" r="2.5" fill="#eab38a"/><circle cx="274" cy="208" r="2.5" fill="#eab38a"/><circle cx="454" cy="208" r="2.5" fill="#eab38a"/><circle cx="634" cy="208" r="2.5" fill="#eab38a"/>
+</svg>

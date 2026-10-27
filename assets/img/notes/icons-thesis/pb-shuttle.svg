@@ -1,1 +1,52 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="720" height="300" viewBox="0 0 720 300" role="img"><title>Proposed lead hydride shuttle</title><g font-family="Avenir Next, Segoe UI, Helvetica, Arial, sans-serif" fill="#2b2350"><rect x="4" y="4" width="712" height="292" rx="28" fill="#efeaf8"/><rect x="70" y="36" width="246" height="66" rx="16" fill="#fff"/><circle cx="100" cy="69" r="12" fill="#c96a2b"/><text x="210" y="76" text-anchor="middle" font-size="21" fill="#2b2350">Pb on H–Ag</text><rect x="404" y="36" width="246" height="66" rx="16" fill="#fff"/><circle cx="434" cy="69" r="12" fill="#c96a2b"/><text x="544" y="76" text-anchor="middle" font-size="21" fill="#2b2350">PbH₄ in solution</text><rect x="404" y="193" width="246" height="66" rx="16" fill="#fff"/><circle cx="434" cy="226" r="12" fill="#c96a2b"/><text x="544" y="233" text-anchor="middle" font-size="21" fill="#2b2350">H to imine</text><rect x="70" y="193" width="246" height="66" rx="16" fill="#fff"/><circle cx="100" cy="226" r="12" fill="#c96a2b"/><text x="210" y="233" text-anchor="middle" font-size="21" fill="#2b2350">Pb returns</text><path d="M325 69L393 69" fill="none" stroke="#2b2350" stroke-width="4" stroke-linecap="butt" stroke-linejoin="miter"/><polygon points="393,69 382.0,75.0 382.0,63.0" fill="#2b2350"/><path d="M527 111L527 184" fill="none" stroke="#2b2350" stroke-width="4" stroke-linecap="butt" stroke-linejoin="miter"/><polygon points="527,184 521.0,173.0 533.0,173.0" fill="#2b2350"/><path d="M395 226L325 226" fill="none" stroke="#2b2350" stroke-width="4" stroke-linecap="butt" stroke-linejoin="miter"/><polygon points="325,226 336.0,220.0 336.0,232.0" fill="#2b2350"/><path d="M193 184L193 111" fill="none" stroke="#2b2350" stroke-width="4" stroke-linecap="butt" stroke-linejoin="miter"/><polygon points="193,111 199.0,122.0 187.0,122.0" fill="#2b2350"/></g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="720" height="300" viewBox="0 0 720 300" role="img">
+<title>Proposed PbH4/PbH2 shuttle: Ag supplies H to Pb, PbH4 hands two H to the imine, PbH2 returns to Ag</title>
+<defs>
+<style>.ln,.lc,.lb,.lp{fill:none;stroke-width:3;stroke-linecap:round;stroke-linejoin:round}.ln{stroke:#2b2350}.lc{stroke:#c96a2b}.lb{stroke:#2d5bd7}.lp{stroke:#d8cfee}.dt{stroke-dasharray:0.5 6.5}.ds{stroke-dasharray:6 6}.t{font-family:"Avenir Next","Segoe UI",Helvetica,Arial,sans-serif;font-size:15px;fill:#2b2350}.b{font-weight:700}.i{font-style:italic;fill:#6d55b5}.w{fill:#fff}.m{text-anchor:middle}.e{text-anchor:end}.s14{font-size:14px}.s16{font-size:16px}.s18{font-size:18px}.s20{font-size:20px}</style>
+<marker id="ah" viewBox="0 0 12 12" refX="9" refY="6" markerWidth="12" markerHeight="12" markerUnits="userSpaceOnUse" orient="auto"><path d="M1 1.5L11 6L1 10.5Z" fill="#2b2350"/></marker>
+<marker id="ab" viewBox="0 0 12 12" refX="9" refY="6" markerWidth="12" markerHeight="12" markerUnits="userSpaceOnUse" orient="auto"><path d="M1 1.5L11 6L1 10.5Z" fill="#2d5bd7"/></marker>
+<g id="ag"><circle r="11" fill="#cdc3ea"/><circle cx="-3.5" cy="-3.5" r="3.5" fill="#f6f2fb"/></g>
+<g id="c"><circle r="8" fill="#2b2350"/><circle cx="-2.5" cy="-2.5" r="2.5" fill="#6d61a0"/></g>
+<g id="n"><circle r="8" fill="#8a6fd1"/><circle cx="-2.5" cy="-2.5" r="2.5" fill="#cbbdf0"/></g>
+<circle id="h" r="5" fill="#b4c5f5"/>
+<g id="pb"><circle r="16" fill="#8a77c4"/><circle r="13" fill="#5b4596"/><text class="t b w s14 m" y="5">Pb</text></g>
+<g id="pbh2"><path class="ln" d="M0 0L-20-14M0 0L20-14"/><use xlink:href="#h" x="-20" y="-14"/><use xlink:href="#h" x="20" y="-14"/><use xlink:href="#pb"/></g>
+<g id="ag8"><use xlink:href="#ag"/><use xlink:href="#ag" x="22"/><use xlink:href="#ag" x="44"/><use xlink:href="#ag" x="66"/><use xlink:href="#ag" x="88"/><use xlink:href="#ag" x="110"/><use xlink:href="#ag" x="132"/><use xlink:href="#ag" x="154"/></g>
+</defs>
+<rect x="4" y="4" width="712" height="292" rx="18" fill="#f6f2fb"/>
+<clipPath id="tile"><rect x="4" y="4" width="712" height="292" rx="18"/></clipPath>
+<g clip-path="url(#tile)">
+<use xlink:href="#ag8" x="37" y="281"/><use xlink:href="#ag8" x="213" y="281"/><use xlink:href="#ag8" x="389" y="281"/><use xlink:href="#ag8" x="565" y="281"/>
+<use xlink:href="#ag8" x="26" y="262"/><use xlink:href="#ag8" x="202" y="262"/><use xlink:href="#ag8" x="378" y="262"/><use xlink:href="#ag8" x="554" y="262"/>
+</g>
+<use xlink:href="#h" x="59" y="247"/><use xlink:href="#h" x="103" y="247"/><use xlink:href="#h" x="235" y="247"/><use xlink:href="#h" x="279" y="247"/><use xlink:href="#h" x="455" y="247"/><use xlink:href="#h" x="631" y="247"/><use xlink:href="#h" x="675" y="247"/>
+<text class="t b s16 m" x="150" y="190">PbH₂ on Ag</text>
+<use xlink:href="#pbh2" x="150" y="226"/>
+
+<path class="lb" d="M140 170C150 110 220 90 300 98" marker-end="url(#ab)"/>
+<text class="t i m" x="222" y="140">+2 H from Ag</text>
+<text class="t s14 m" x="222" y="160">steps 0.68, 0.51 eV</text>
+
+<text class="t b s16 m" x="330" y="56">PbH₄</text>
+<path class="ln" d="M330 104V80M330 104L309 116M330 104L351 116M330 104L322 127"/>
+<use xlink:href="#h" x="330" y="80"/><use xlink:href="#h" x="309" y="116"/><use xlink:href="#h" x="351" y="116"/><use xlink:href="#h" x="322" y="127"/>
+<use xlink:href="#pb" x="330" y="104"/>
+
+<path class="lb" d="M362 104H508" marker-end="url(#ab)"/>
+<text class="t i m" x="436" y="92">2 H to the imine</text>
+<text class="t b m" x="436" y="126">0.39 eV</text>
+
+<text class="t b s16 m" x="568" y="56">imine</text>
+<path class="ln" d="M548 100H588M548 108H588M548 104L528 90M548 104L528 118M588 104L608 90"/>
+<use xlink:href="#c" x="528" y="90"/><use xlink:href="#c" x="528" y="118"/><use xlink:href="#c" x="608" y="90"/>
+<use xlink:href="#c" x="548" y="104"/><use xlink:href="#n" x="588" y="104"/>
+<text class="t b s16 m" x="662" y="110">→ amine</text>
+
+<path class="ln" d="M568 132V180" marker-end="url(#ah)"/>
+<use xlink:href="#pbh2" x="568" y="214"/>
+
+<path class="ln" d="M540 216L184 222" marker-end="url(#ah)"/>
+<text class="t i m" x="370" y="206">PbH₂ comes back for more</text>
+
+<text class="t b s18 m" x="380" y="158">round trip required</text>
+<text class="t i m" x="380" y="182">side road: Pb hydride + water → H₂, 0.5–0.8 eV</text>
+</svg>

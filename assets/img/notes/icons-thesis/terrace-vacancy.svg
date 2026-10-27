@@ -1,1 +1,25 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="240" height="200" viewBox="0 0 240 200" role="img"><title>Terrace vacancy cost compared with an undercoordinated kink</title><g font-family="Avenir Next, Segoe UI, Helvetica, Arial, sans-serif" fill="#2b2350"><rect x="4" y="4" width="232" height="192" rx="28" fill="#efeaf8"/><circle cx="40" cy="78" r="11" fill="#c96a2b"/><circle cx="67" cy="78" r="11" fill="#c96a2b"/><circle cx="94" cy="78" r="11" fill="#c96a2b"/><circle cx="121" cy="78" r="11" fill="#c96a2b"/><circle cx="148" cy="78" r="11" fill="#c96a2b"/><circle cx="175" cy="78" r="11" fill="#c96a2b"/><circle cx="202" cy="78" r="11" fill="#c96a2b"/><circle cx="40" cy="53" r="11" fill="#c96a2b"/><circle cx="67" cy="53" r="11" fill="#c96a2b"/><circle cx="94" cy="53" r="11" fill="#c96a2b"/><circle cx="148" cy="53" r="11" fill="#c96a2b"/><circle cx="175" cy="53" r="11" fill="#c96a2b"/><circle cx="202" cy="53" r="11" fill="#c96a2b"/><rect x="110" y="42" width="23" height="22" rx="0" fill="#f6dcc7"/><text x="120" y="113" text-anchor="middle" font-size="20" fill="#c96a2b">terrace ~1.5 eV</text><circle cx="71" cy="158" r="10" fill="#c96a2b"/><circle cx="96" cy="158" r="10" fill="#c96a2b"/><circle cx="121" cy="158" r="10" fill="#c96a2b"/><circle cx="146" cy="158" r="10" fill="#c96a2b"/><circle cx="171" cy="158" r="10" fill="#c96a2b"/><circle cx="71" cy="137" r="10" fill="#c96a2b"/><circle cx="96" cy="137" r="10" fill="#c96a2b"/><text x="177" y="143" text-anchor="middle" font-size="18" fill="#2b2350">kink</text></g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="240" height="200" viewBox="0 0 240 200" role="img">
+<title>A Cu atom leaves a flat terrace and the vacancy stays in the bookkeeping</title>
+<defs>
+<style>.ln,.lc,.lb,.lp{fill:none;stroke-width:3;stroke-linecap:round;stroke-linejoin:round}.ln{stroke:#2b2350}.lc{stroke:#c96a2b}.lb{stroke:#2d5bd7}.lp{stroke:#d8cfee}.dt{stroke-dasharray:0.5 6.5}.ds{stroke-dasharray:6 6}.t{font-family:"Avenir Next","Segoe UI",Helvetica,Arial,sans-serif;font-size:15px;fill:#2b2350}.b{font-weight:700}.i{font-style:italic;fill:#6d55b5}.w{fill:#fff}.m{text-anchor:middle}.e{text-anchor:end}.s14{font-size:14px}.s16{font-size:16px}.s18{font-size:18px}.s20{font-size:20px}</style>
+<marker id="ac" viewBox="0 0 12 12" refX="9" refY="6" markerWidth="12" markerHeight="12" markerUnits="userSpaceOnUse" orient="auto"><path d="M1 1.5L11 6L1 10.5Z" fill="#c96a2b"/></marker>
+<g id="cu"><circle r="11" fill="#c96a2b"/><circle cx="-3.5" cy="-3.5" r="3.5" fill="#eab38a"/></g>
+<g id="n"><circle r="8" fill="#8a6fd1"/><circle cx="-2.5" cy="-2.5" r="2.5" fill="#cbbdf0"/></g>
+<circle id="h" r="5" fill="#b4c5f5"/>
+<g id="nl"><path class="ln" d="M0 0L-8-15M0 0L-8 15M0 0H-17"/><use xlink:href="#n"/><use xlink:href="#h" x="-8" y="-15"/><use xlink:href="#h" x="-8" y="15"/><use xlink:href="#h" x="-17"/></g>
+<g id="nr"><path class="ln" d="M0 0L8-15M0 0L8 15M0 0H17"/><use xlink:href="#n"/><use xlink:href="#h" x="8" y="-15"/><use xlink:href="#h" x="8" y="15"/><use xlink:href="#h" x="17"/></g>
+</defs>
+<rect x="4" y="4" width="232" height="192" rx="18" fill="#f6f2fb"/>
+<text class="t i m" x="120" y="32">who pays for the hole?</text>
+<path class="lc" d="M120 120V88" marker-end="url(#ac)"/>
+<path class="ln" d="M94 70H146"/>
+<use xlink:href="#nl" x="94" y="70"/>
+<use xlink:href="#nr" x="146" y="70"/>
+<use xlink:href="#cu" x="120" y="70"/>
+<g>
+<use xlink:href="#cu" x="32" y="172"/><use xlink:href="#cu" x="54" y="172"/><use xlink:href="#cu" x="76" y="172"/><use xlink:href="#cu" x="98" y="172"/><use xlink:href="#cu" x="120" y="172"/><use xlink:href="#cu" x="142" y="172"/><use xlink:href="#cu" x="164" y="172"/><use xlink:href="#cu" x="186" y="172"/><use xlink:href="#cu" x="208" y="172"/>
+<use xlink:href="#cu" x="43" y="153"/><use xlink:href="#cu" x="65" y="153"/><use xlink:href="#cu" x="87" y="153"/><use xlink:href="#cu" x="109" y="153"/><use xlink:href="#cu" x="131" y="153"/><use xlink:href="#cu" x="153" y="153"/><use xlink:href="#cu" x="175" y="153"/><use xlink:href="#cu" x="197" y="153"/>
+<use xlink:href="#cu" x="32" y="134"/><use xlink:href="#cu" x="54" y="134"/><use xlink:href="#cu" x="76" y="134"/><use xlink:href="#cu" x="98" y="134"/><use xlink:href="#cu" x="142" y="134"/><use xlink:href="#cu" x="164" y="134"/><use xlink:href="#cu" x="186" y="134"/><use xlink:href="#cu" x="208" y="134"/>
+</g>
+<circle class="lc" cx="120" cy="134" r="10" style="stroke-dasharray:4 4.4"/>
+</svg>

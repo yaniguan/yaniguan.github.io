@@ -1,1 +1,57 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="720" height="260" viewBox="0 0 720 260" role="img"><title>From a copper kink to a dissolved amine complex</title><g font-family="Avenir Next, Segoe UI, Helvetica, Arial, sans-serif" fill="#2b2350"><rect x="4" y="4" width="712" height="252" rx="28" fill="#efeaf8"/><text x="130" y="222" text-anchor="middle" font-size="20" fill="#2b2350">kink</text><text x="360" y="222" text-anchor="middle" font-size="20" fill="#2b2350">adatom + NH₃</text><text x="590" y="222" text-anchor="middle" font-size="20" fill="#2b2350">complex in solution</text><circle cx="60" cy="153" r="12" fill="#c96a2b"/><circle cx="87" cy="153" r="12" fill="#c96a2b"/><circle cx="114" cy="153" r="12" fill="#c96a2b"/><circle cx="141" cy="153" r="12" fill="#c96a2b"/><circle cx="168" cy="153" r="12" fill="#c96a2b"/><circle cx="60" cy="127" r="12" fill="#c96a2b"/><circle cx="87" cy="127" r="12" fill="#c96a2b"/><circle cx="114" cy="127" r="12" fill="#c96a2b"/><circle cx="141" cy="127" r="12" fill="#c96a2b"/><circle cx="290" cy="153" r="12" fill="#c96a2b"/><circle cx="317" cy="153" r="12" fill="#c96a2b"/><circle cx="344" cy="153" r="12" fill="#c96a2b"/><circle cx="371" cy="153" r="12" fill="#c96a2b"/><circle cx="398" cy="153" r="12" fill="#c96a2b"/><circle cx="425" cy="153" r="12" fill="#c96a2b"/><circle cx="360" cy="101" r="16" fill="#c96a2b"/><path d="M360 84V66" fill="none" stroke="#2b2350" stroke-width="4" stroke-linecap="butt" stroke-linejoin="miter"/><text x="360" y="59" text-anchor="middle" font-size="22" fill="#2d5bd7">NH₃</text><circle cx="590" cy="109" r="19" fill="#c96a2b"/><path d="M570 109H546M610 109H635M590 89V68" fill="none" stroke="#2b2350" stroke-width="4" stroke-linecap="butt" stroke-linejoin="miter"/><text x="522" y="116" text-anchor="middle" font-size="20" fill="#2d5bd7">NH₃</text><text x="661" y="116" text-anchor="middle" font-size="20" fill="#2d5bd7">NH₃</text><text x="590" y="58" text-anchor="middle" font-size="20" fill="#2d5bd7">NH₃</text><path d="M204 96L251 96" fill="none" stroke="#2b2350" stroke-width="4" stroke-linecap="butt" stroke-linejoin="miter"/><polygon points="251,96 240.0,102.0 240.0,90.0" fill="#2b2350"/><path d="M435 96L479 96" fill="none" stroke="#2b2350" stroke-width="4" stroke-linecap="butt" stroke-linejoin="miter"/><polygon points="479,96 468.0,102.0 468.0,90.0" fill="#2b2350"/></g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="720" height="260" viewBox="0 0 720 260" role="img">
+<title>An ammonia binds a kink Cu atom, lowers the cost of moving it to an adatom site, and more ligands pull it off the surface</title>
+<defs>
+<style>.ln,.lc,.lb,.lp{fill:none;stroke-width:3;stroke-linecap:round;stroke-linejoin:round}.ln{stroke:#2b2350}.lc{stroke:#c96a2b}.lb{stroke:#2d5bd7}.lp{stroke:#d8cfee}.dt{stroke-dasharray:0.5 6.5}.ds{stroke-dasharray:6 6}.t{font-family:"Avenir Next","Segoe UI",Helvetica,Arial,sans-serif;font-size:15px;fill:#2b2350}.b{font-weight:700}.i{font-style:italic;fill:#6d55b5}.w{fill:#fff}.m{text-anchor:middle}.e{text-anchor:end}.s14{font-size:14px}.s16{font-size:16px}.s18{font-size:18px}.s20{font-size:20px}</style>
+<marker id="ah" viewBox="0 0 12 12" refX="9" refY="6" markerWidth="12" markerHeight="12" markerUnits="userSpaceOnUse" orient="auto"><path d="M1 1.5L11 6L1 10.5Z" fill="#2b2350"/></marker>
+<marker id="ac" viewBox="0 0 12 12" refX="9" refY="6" markerWidth="12" markerHeight="12" markerUnits="userSpaceOnUse" orient="auto"><path d="M1 1.5L11 6L1 10.5Z" fill="#c96a2b"/></marker>
+<g id="cu"><circle r="11" fill="#c96a2b"/><circle cx="-3.5" cy="-3.5" r="3.5" fill="#eab38a"/></g>
+<g id="n"><circle r="8" fill="#8a6fd1"/><circle cx="-2.5" cy="-2.5" r="2.5" fill="#cbbdf0"/></g>
+<circle id="h" r="5" fill="#b4c5f5"/>
+<g id="nh3"><path class="ln" d="M0 0L-15-8M0 0L15-8M0 0V-17"/><use xlink:href="#n"/><use xlink:href="#h" x="-15" y="-8"/><use xlink:href="#h" x="15" y="-8"/><use xlink:href="#h" y="-17"/></g>
+<g id="nd"><path class="ln" d="M0 0L-15 8M0 0L15 8M0 0V17"/><use xlink:href="#n"/><use xlink:href="#h" x="-15" y="8"/><use xlink:href="#h" x="15" y="8"/><use xlink:href="#h" y="17"/></g>
+<g id="nl"><path class="ln" d="M0 0L-8-15M0 0L-8 15M0 0H-17"/><use xlink:href="#n"/><use xlink:href="#h" x="-8" y="-15"/><use xlink:href="#h" x="-8" y="15"/><use xlink:href="#h" x="-17"/></g>
+<g id="nr"><path class="ln" d="M0 0L8-15M0 0L8 15M0 0H17"/><use xlink:href="#n"/><use xlink:href="#h" x="8" y="-15"/><use xlink:href="#h" x="8" y="15"/><use xlink:href="#h" x="17"/></g>
+<g id="low"><use xlink:href="#cu" x="-99"/><use xlink:href="#cu" x="-77"/><use xlink:href="#cu" x="-55"/><use xlink:href="#cu" x="-33"/><use xlink:href="#cu" x="-11"/><use xlink:href="#cu" x="11"/><use xlink:href="#cu" x="33"/><use xlink:href="#cu" x="55"/><use xlink:href="#cu" x="77"/><use xlink:href="#cu" x="99"/></g>
+<g id="up"><use xlink:href="#cu" x="-88"/><use xlink:href="#cu" x="-66"/><use xlink:href="#cu" x="-44"/><use xlink:href="#cu" x="-22"/></g>
+</defs>
+<rect x="4" y="4" width="712" height="252" rx="18" fill="#f6f2fb"/>
+
+<text class="t b s16 m" x="125" y="36">1 · an amine finds the kink</text>
+<text class="t i m" x="125" y="62">kink: 6 Cu neighbors, terrace: 9</text>
+<use xlink:href="#low" x="125" y="228"/>
+<use xlink:href="#up" x="125" y="209"/>
+<circle cx="125" cy="209" r="15" fill="#d6e0fa"/>
+<use xlink:href="#cu" x="125" y="209"/>
+<path class="ln dt" d="M125 179V196"/>
+<use xlink:href="#nh3" x="125" y="170"/>
+
+<path class="ln" d="M226 130H254" marker-end="url(#ah)"/>
+
+<text class="t b s16 m" x="360" y="36">2 · kink → adatom</text>
+<text class="t i m" x="360" y="62">bare: ≈1 eV</text>
+<text class="t i m" x="360" y="82">with NH₃: 0.1–0.3 eV</text>
+<use xlink:href="#low" x="360" y="228"/>
+<use xlink:href="#up" x="360" y="209"/>
+<circle class="lc" cx="360" cy="209" r="10" style="stroke-dasharray:4 4.4"/>
+<path class="lc" d="M368 196Q382 178 394 194" marker-end="url(#ac)"/>
+<circle cx="404" cy="209" r="15" fill="#d6e0fa"/>
+<use xlink:href="#cu" x="404" y="209"/>
+<path class="ln dt" d="M404 179V196"/>
+<use xlink:href="#nh3" x="404" y="170"/>
+
+<path class="ln" d="M461 130H489" marker-end="url(#ah)"/>
+
+<text class="t b s16 m" x="595" y="36">3 · more N, less metal</text>
+<text class="t i m" x="595" y="62">Cu–Cu bonding ≈ halved</text>
+<use xlink:href="#low" x="595" y="228"/>
+<use xlink:href="#up" x="595" y="209"/>
+<circle class="lc" cx="595" cy="209" r="10" style="stroke-dasharray:4 4.4"/>
+<path class="lc" d="M690 204V150" marker-end="url(#ac)"/>
+<path class="ln" d="M622 112V168M594 140H650"/>
+<use xlink:href="#nh3" x="622" y="112"/>
+<use xlink:href="#nl" x="594" y="140"/>
+<use xlink:href="#nr" x="650" y="140"/>
+<use xlink:href="#nd" x="622" y="168"/>
+<circle cx="622" cy="140" r="15" fill="#d6e0fa"/>
+<use xlink:href="#cu" x="622" y="140"/>
+</svg>
