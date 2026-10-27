@@ -1,20 +1,19 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 200" width="240" height="200">
-<title>Alignment across scales: molecules to DFT to electrolyte MD to interface to electrode to experiments, glued by conditions</title>
-<style>.w{fill:#fff;stroke:#23395b;stroke-width:2.5}.g{fill:none;stroke:#23395b;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}.t{font-family:Helvetica,Arial,sans-serif;fill:#23395b;font-size:10.5px;text-anchor:middle}.b{font-weight:700}.c{font-size:15px}</style>
+<title>Alignment across scales: molecules to DFT to electrolyte MD to interface (SEI) to electrode cell to lab experiments, glued by conditions; thick lines are strong links, dashed are weak</title>
+<style>.w{fill:#fff;stroke:#23395b;stroke-width:2.5}.g{fill:none;stroke:#23395b;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}.t{font-family:Helvetica,Arial,sans-serif;fill:#23395b;font-size:22px;text-anchor:middle}.b{font-weight:700}.c{font-size:24px}</style>
 <rect width="240" height="200" fill="#fff"/>
-<g fill="none" stroke-linecap="round"><path d="M56 44H100" stroke="#1fa3a3" stroke-width="6"/><path d="M140 44H184" stroke="#1fa3a3" stroke-width="5"/><path d="M204 64V104" stroke="#1fa3a3" stroke-width="4"/><path d="M184 124H140" stroke="#1fa3a3" stroke-width="2.8"/><path d="M100 124H56" stroke="#e07a5f" stroke-width="2" stroke-dasharray="4 4"/></g>
-<g fill="none" stroke="#8fa98a" stroke-width="1.6" stroke-dasharray="1.5 3" stroke-linecap="round"><path d="M100 75L78 47M140 75L162 47M158 84H201M140 93L162 121M100 93L78 121"/></g>
-<rect x="82" y="75" width="76" height="18" rx="9" fill="#8fa98a" stroke="#23395b" stroke-width="2"/>
-<text class="t b" x="120" y="88" style="fill:#fff;font-size:11px">conditions</text>
-<circle class="w" cx="36" cy="44" r="20"/><circle class="w" cx="120" cy="44" r="20"/><circle class="w" cx="204" cy="44" r="20"/>
-<circle class="w" cx="204" cy="124" r="20"/><circle class="w" cx="120" cy="124" r="20"/><circle class="w" cx="36" cy="124" r="20"/>
-<path class="g" d="M36 35L43.8 39.5V48.5L36 53L28.2 48.5V39.5Z" stroke="#1fa3a3" stroke-width="2.2"/>
-<ellipse cx="113" cy="44" rx="7" ry="4.5" fill="#8fa98a" stroke="#23395b" stroke-width="1.4" transform="rotate(-25 113 44)"/><ellipse cx="127" cy="44" rx="7" ry="4.5" fill="#e07a5f" stroke="#23395b" stroke-width="1.4" transform="rotate(25 127 44)"/><circle cx="120" cy="44" r="2.5" fill="#23395b"/>
-<g fill="#1fa3a3"><circle cx="196" cy="36" r="2.6"/><circle cx="210" cy="36" r="2.6"/><circle cx="214" cy="48" r="2.6"/><circle cx="196" cy="50" r="2.6"/></g><text class="t b" x="205" y="48" style="font-size:8px">MD</text>
-<rect x="191" y="125" width="26" height="9" fill="#dceef5" stroke="#23395b" stroke-width="1.4"/><path d="M191 121q4.3 -4 8.7 0t8.7 0t8.6 0" fill="none" stroke="#1fa3a3" stroke-width="2" stroke-linecap="round"/><path d="M196 125l-3 9M203 125l-3 9M210 125l-3 9M217 125l-3 9" stroke="#23395b" stroke-width="1"/>
-<g fill="#dceef5" stroke="#23395b" stroke-width="1.4"><circle cx="113" cy="120" r="5"/><circle cx="124" cy="117" r="4"/><circle cx="127" cy="128" r="5.5"/><circle cx="115" cy="131" r="3.5"/></g>
-<path class="g" d="M31 112V120L25 134Q24 136 27 136H45Q48 136 47 134L41 120V112M29 112H43"/><path d="M27.5 129H44.5" stroke="#1fa3a3" stroke-width="2"/>
-<g class="t"><text x="36" y="16">molecules</text><text x="120" y="16">DFT</text><text x="204" y="16">electrolyte</text><text x="204" y="158">interface</text><text x="120" y="158">electrode</text><text x="36" y="158">experiments</text></g>
-<text class="t" x="120" y="173" style="font-size:9.5px">thick = strong link · dashed = weak link</text>
-<text class="t b c" x="120" y="192">alignment across scales</text>
+<g fill="none" stroke-linecap="round"><path d="M58 50H98" stroke="#1fa3a3" stroke-width="6"/><path d="M142 50H182" stroke="#1fa3a3" stroke-width="5"/><path d="M202 72V108" stroke="#1fa3a3" stroke-width="4"/><path d="M182 130H142" stroke="#1fa3a3" stroke-width="2.8"/><path d="M98 130H58" stroke="#e07a5f" stroke-width="2" stroke-dasharray="4 4"/></g>
+<g fill="none" stroke="#8fa98a" stroke-width="1.6" stroke-dasharray="1.5 3" stroke-linecap="round"><path d="M80 78L54 64M160 78L186 64M80 102L54 116M160 102L186 116"/></g>
+<rect x="56" y="76" width="128" height="28" rx="14" fill="#8fa98a" stroke="#23395b" stroke-width="2"/>
+<text class="t b" x="120" y="98" style="fill:#fff">conditions</text>
+<circle class="w" cx="38" cy="50" r="20"/><circle class="w" cx="120" cy="50" r="20"/><circle class="w" cx="202" cy="50" r="20"/>
+<circle class="w" cx="202" cy="130" r="20"/><circle class="w" cx="120" cy="130" r="20"/><circle class="w" cx="38" cy="130" r="20"/>
+<path class="g" d="M38 41L45.8 45.5V54.5L38 59L30.2 54.5V45.5Z" stroke="#1fa3a3" stroke-width="2.2"/>
+<ellipse cx="113" cy="50" rx="7" ry="4.5" fill="#8fa98a" stroke="#23395b" stroke-width="1.4" transform="rotate(-25 113 50)"/><ellipse cx="127" cy="50" rx="7" ry="4.5" fill="#e07a5f" stroke="#23395b" stroke-width="1.4" transform="rotate(25 127 50)"/><circle cx="120" cy="50" r="2.5" fill="#23395b"/>
+<g fill="#1fa3a3"><circle cx="194" cy="42" r="3"/><circle cx="210" cy="43" r="3"/><circle cx="212" cy="57" r="3"/><circle cx="195" cy="58" r="3"/></g><circle cx="203" cy="50" r="4" fill="#e07a5f"/>
+<rect x="189" y="131" width="26" height="9" fill="#dceef5" stroke="#23395b" stroke-width="1.4"/><path d="M189 127q4.3 -4 8.7 0t8.7 0t8.6 0" fill="none" stroke="#1fa3a3" stroke-width="2" stroke-linecap="round"/><path d="M194 131l-3 9M201 131l-3 9M208 131l-3 9M215 131l-3 9" stroke="#23395b" stroke-width="1"/>
+<g fill="#dceef5" stroke="#23395b" stroke-width="1.4"><circle cx="113" cy="126" r="5"/><circle cx="124" cy="123" r="4"/><circle cx="127" cy="134" r="5.5"/><circle cx="115" cy="137" r="3.5"/></g>
+<path class="g" d="M33 118V126L27 140Q26 142 29 142H47Q50 142 49 140L43 126V118M31 118H45"/><path d="M29.5 135H46.5" stroke="#1fa3a3" stroke-width="2"/>
+<g class="t"><text x="38" y="22">mol</text><text x="120" y="22">DFT</text><text x="202" y="22">MD</text><text x="202" y="174">SEI</text><text x="120" y="174">cell</text><text x="38" y="174">lab</text></g>
+<text class="t b" x="120" y="197">across scales</text>
 </svg>

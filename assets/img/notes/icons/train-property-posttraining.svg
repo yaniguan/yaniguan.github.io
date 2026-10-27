@@ -1,23 +1,19 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 200" width="240" height="200">
-<title>Property post-training: a model with heads for energy, HOMO/LUMO, dipole and volume</title>
-<style>.n{fill:none;stroke:#23395b;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}.p{fill:#dceef5;stroke:#23395b;stroke-width:2.5;stroke-linejoin:round}.w{fill:#fff;stroke:#23395b;stroke-width:2.5;stroke-linejoin:round}.t{font-family:Helvetica,Arial,sans-serif;fill:#23395b;font-size:13px;text-anchor:middle}.b{font-weight:700}.s{font-size:10.5px}.c{font-size:15px}.l{text-anchor:start;font-size:12px}.d{fill:#1fa3a3;stroke:#23395b;stroke-width:1.6}</style>
+<title>Property post-training: a model with heads that predict energy, HOMO/LUMO, dipole and volume from the vector</title>
+<style>.n{fill:none;stroke:#23395b;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}.p{fill:#dceef5;stroke:#23395b;stroke-width:2.5;stroke-linejoin:round}.w{fill:#fff;stroke:#23395b;stroke-width:2.5;stroke-linejoin:round}.t{font-family:Helvetica,Arial,sans-serif;fill:#23395b;font-size:22px;text-anchor:middle}.b{font-weight:700}.c{font-size:24px}.d{fill:#1fa3a3;stroke:#23395b;stroke-width:1.6}</style>
 <rect width="240" height="200" fill="#fff"/>
-<path d="M86 80C104 80 102 30 120 30M86 80C104 80 102 62 120 62M86 80C104 80 102 94 120 94M86 80C104 80 102 126 120 126" fill="none" stroke="#1fa3a3" stroke-width="2.2" stroke-linecap="round"/>
-<rect class="w" x="14" y="50" width="72" height="60" rx="14"/>
-<path d="M32 66L50 73L68 66M32 80L50 73L68 80M32 94L50 87L68 94M32 66L50 87M32 94L50 73M50 87L68 80" fill="none" stroke="#9fb3c8" stroke-width="1.4"/>
-<circle class="d" cx="32" cy="66" r="4"/><circle class="d" cx="32" cy="80" r="4"/><circle class="d" cx="32" cy="94" r="4"/>
-<circle cx="50" cy="73" r="4" fill="#dceef5" stroke="#23395b" stroke-width="1.6"/><circle cx="50" cy="87" r="4" fill="#dceef5" stroke="#23395b" stroke-width="1.6"/>
-<circle class="d" cx="68" cy="66" r="4"/><circle class="d" cx="68" cy="80" r="4"/><circle class="d" cx="68" cy="94" r="4"/>
-<text class="t s" x="50" y="126">model</text>
-<rect class="p" x="120" y="18" width="110" height="24" rx="12"/>
-<rect class="p" x="120" y="50" width="110" height="24" rx="12"/>
-<rect class="p" x="120" y="82" width="110" height="24" rx="12"/>
-<rect class="p" x="120" y="114" width="110" height="24" rx="12"/>
-<path class="n" d="M130 37H142M130 31H142M130 24H142" stroke="#e07a5f"/>
-<path class="n" d="M130 57H142M130 67H142" stroke-dasharray="3 2"/><path class="n" d="M136 60V64"/>
-<path class="n" d="M129 94H141" marker-end="none"/><path class="n" d="M137 90L141 94L137 98"/><text x="131" y="91" class="t s" style="fill:#e07a5f;font-size:8px">+</text>
-<path class="n" d="M130 122H139V131H130ZM130 122L133 119H142L139 122M142 119V128L139 131"/>
-<g class="t l"><text x="148" y="34.5">energy</text><text x="148" y="66.5">HOMO/LUMO</text><text x="148" y="98.5">dipole</text><text x="148" y="130.5">volume</text></g>
-<text class="t s" x="120" y="166">predict physics from the vector</text>
-<text class="t b c" x="120" y="188">property post-training</text>
+<path d="M60 74C72 74 66 23 78 23M60 74C72 74 66 55 78 55M60 74C72 74 66 87 78 87M60 74C72 74 66 119 78 119" fill="none" stroke="#1fa3a3" stroke-width="2.2" stroke-linecap="round"/>
+<rect class="w" x="6" y="46" width="54" height="56" rx="12"/>
+<path d="M19 60L33 66L47 60M19 74L33 66L47 74M19 88L33 82L47 88M19 60L33 82M19 88L33 66M33 82L47 74" fill="none" stroke="#9fb3c8" stroke-width="1.4"/>
+<circle class="d" cx="19" cy="60" r="3.5"/><circle class="d" cx="19" cy="74" r="3.5"/><circle class="d" cx="19" cy="88" r="3.5"/>
+<circle cx="33" cy="66" r="3.5" fill="#dceef5" stroke="#23395b" stroke-width="1.6"/><circle cx="33" cy="82" r="3.5" fill="#dceef5" stroke="#23395b" stroke-width="1.6"/>
+<circle class="d" cx="47" cy="60" r="3.5"/><circle class="d" cx="47" cy="74" r="3.5"/><circle class="d" cx="47" cy="88" r="3.5"/>
+<text class="t" x="33" y="128">model</text>
+<rect class="p" x="78" y="9" width="156" height="28" rx="14"/>
+<rect class="p" x="78" y="41" width="156" height="28" rx="14"/>
+<rect class="p" x="78" y="73" width="156" height="28" rx="14"/>
+<rect class="p" x="78" y="105" width="156" height="28" rx="14"/>
+<g class="t"><text x="156" y="31">energy</text><text x="156" y="63">HOMO/LUMO</text><text x="156" y="95">dipole</text><text x="156" y="127">volume</text></g>
+<text class="t" x="120" y="166">predict properties</text>
+<text class="t b c" x="120" y="193">post-training</text>
 </svg>

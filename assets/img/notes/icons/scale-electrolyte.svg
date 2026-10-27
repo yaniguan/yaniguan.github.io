@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 200" width="240" height="200">
+<title>Electrolyte: lithium ions and solvent molecules</title>
+<defs><marker id="h" viewBox="0 0 10 10" refX="8" refY="5" markerUnits="userSpaceOnUse" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1L9 5L1 9" fill="none" stroke="#23395b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></marker></defs>
+<style>.n,.a{fill:none;stroke:#23395b;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round}.a{marker-end:url(#h)}.p,.w,.o,.c,.s{stroke:#23395b;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round}.p{fill:#dceef5}.w{fill:#fff}.o{fill:#1fa3a3}.c{fill:#e07a5f}.s{fill:#8fa98a}.t{font-family:Helvetica,Arial,sans-serif;fill:#23395b;font-size:22px;text-anchor:middle}.b{font-weight:700}</style>
+<rect width="240" height="200" fill="#fff"/>
+<path class="p" d="M120 28C105 51 76 79 76 104A44 44 0 0 0 164 104C164 79 135 51 120 28Z" /><text class="t b" x="120" y="105" style="font-size:24px">Li+</text><path class="n" d="M93 116L105 127M143 114L132 131" /><circle class="o" cx="92" cy="115" r="6"/><circle class="c" cx="145" cy="115" r="6"/><circle class="p" cx="105" cy="128" r="5"/><text class="t b" x="120" y="187" style="font-size:22px">Electrolyte</text>
+</svg>

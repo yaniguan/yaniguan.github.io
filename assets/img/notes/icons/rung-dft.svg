@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 200" width="240" height="200">
+<title>DFT: electron transfer and lithium coordination</title>
+<defs><marker id="h" viewBox="0 0 10 10" refX="8" refY="5" markerUnits="userSpaceOnUse" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1L9 5L1 9" fill="none" stroke="#23395b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></marker></defs>
+<style>.n,.a{fill:none;stroke:#23395b;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round}.a{marker-end:url(#h)}.p,.w,.o,.c,.s{stroke:#23395b;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round}.p{fill:#dceef5}.w{fill:#fff}.o{fill:#1fa3a3}.c{fill:#e07a5f}.s{fill:#8fa98a}.t{font-family:Helvetica,Arial,sans-serif;fill:#23395b;font-size:22px;text-anchor:middle}.b{font-weight:700}</style>
+<rect width="240" height="200" fill="#fff"/>
+<ellipse class="p" cx="62" cy="65" rx="28" ry="39"/><ellipse class="p" cx="179" cy="65" rx="28" ry="39"/><circle class="o" cx="66" cy="60" r="6"/><path class="a" d="M96 49L145 49" /><text class="t" x="120" y="32" style="font-size:22px">e−</text><text class="t b" x="120" y="125" style="font-size:22px">Li+</text><path class="n" d="M100 118L74 104M141 118L165 104" stroke-dasharray="3 4"/><circle class="o" cx="65" cy="100" r="8"/><circle class="o" cx="174" cy="100" r="8"/><text class="t b" x="120" y="187" style="font-size:22px">DFT</text>
+</svg>

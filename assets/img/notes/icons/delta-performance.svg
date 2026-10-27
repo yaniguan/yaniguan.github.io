@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 200" width="240" height="200">
+<title>Performance change: capacity versus cycling with a battery</title>
+<defs><marker id="h" viewBox="0 0 10 10" refX="8" refY="5" markerUnits="userSpaceOnUse" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1L9 5L1 9" fill="none" stroke="#23395b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></marker></defs>
+<style>.n,.a{fill:none;stroke:#23395b;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round}.a{marker-end:url(#h)}.p,.w,.o,.c,.s{stroke:#23395b;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round}.p{fill:#dceef5}.w{fill:#fff}.o{fill:#1fa3a3}.c{fill:#e07a5f}.s{fill:#8fa98a}.t{font-family:Helvetica,Arial,sans-serif;fill:#23395b;font-size:22px;text-anchor:middle}.b{font-weight:700}</style>
+<rect width="240" height="200" fill="#fff"/>
+<path class="n" d="M45 27V134H220" /><path class="n" d="M49 47Q115 49 155 71T216 111" style="stroke:#e07a5f"/><path class="n" d="M49 41Q115 42 161 55T216 72" style="stroke:#1fa3a3"/><text class="t" x="15" y="85" style="font-size:22px">Q</text><text class="t" x="128" y="160" style="font-size:22px">cycle</text><rect class="p" x="168" y="18" width="41" height="24" rx="3"/><path class="n" d="M210 25H216V35H210" /><text class="t b" x="120" y="187" style="font-size:22px">Δ performance</text>
+</svg>

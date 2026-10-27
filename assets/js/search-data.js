@@ -60,17 +60,6 @@ ninja.data = [{
             window.location.href = "/notes/atom-is-atom-bond-is-bond/";
           
         },
-      },{id: "post-real-data-not-more-synthetic-data-closes-the-ocsr-gap",
-        
-          title: "Real data, not more synthetic data, closes the OCSR gap",
-        
-        description: "What 21 fine-tuned recognizers say about mixing synthetic and real training images",
-        section: "Posts",
-        handler: () => {
-          
-            window.location.href = "/notes/real-data-ocsr/";
-          
-        },
       },{id: "news-started-phd-journey-at-ucla",
           title: 'Started PhD journey at UCLA',
           description: "",

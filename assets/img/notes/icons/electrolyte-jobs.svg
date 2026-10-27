@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 200" width="240" height="200">
+<title>Four electrolyte jobs: solvation, ion transport, redox stability and interphase</title>
+<defs><marker id="h" viewBox="0 0 10 10" refX="8" refY="5" markerUnits="userSpaceOnUse" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1L9 5L1 9" fill="none" stroke="#23395b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></marker></defs>
+<style>.n,.a{fill:none;stroke:#23395b;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round}.a{marker-end:url(#h)}.p,.w,.o,.c,.s{stroke:#23395b;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round}.p{fill:#dceef5}.w{fill:#fff}.o{fill:#1fa3a3}.c{fill:#e07a5f}.s{fill:#8fa98a}.t{font-family:Helvetica,Arial,sans-serif;fill:#23395b;font-size:22px;text-anchor:middle}.b{font-weight:700}</style>
+<rect width="240" height="200" fill="#fff"/>
+<path class="p" d="M120 67C111 79 96 92 96 106A24 24 0 0 0 144 106C144 92 129 79 120 67Z"/><text class="t" x="120" y="27" style="font-size:22px">solvation</text><text class="t" x="120" y="183" style="font-size:22px">interphase</text><text class="t" x="120" y="58" style="font-size:22px">ion transport</text><text class="t" x="120" y="150" style="font-size:22px">redox stability</text><path class="n" d="M86 77L109 92M154 77L135 92M94 130L108 117M146 130L134 117" /><circle class="o" cx="120" cy="100" r="17"/><text class="t b" x="120" y="108" style="font-size:22px">+</text>
+</svg>
