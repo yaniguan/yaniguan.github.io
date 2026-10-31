@@ -169,7 +169,7 @@ leaves its indentation alone.
   <h2 class="about-section-title">阅读 / Reading</h2>
   <p class="lst-desc">
     At UCLA, my computational chemistry PhD has meant plenty of molecules,
-    electrolytes, batteries, and AI. Before the next chapter—a postdoc at OSU—here
+    electrolytes, batteries, and AI. Here
     are 97 books making a competing claim on my attention. Some help me think;
     some help me stop. They share shelf space with road-trip plans for my partner,
     our dog, and whichever camera comes along.
