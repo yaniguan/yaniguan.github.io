@@ -163,7 +163,7 @@ latest_posts:
       <text class="fig-h" x="10" y="310">COMPUTE</text>
       <rect class="fig-panel" x="10" y="318" width="880" height="36" rx="6" />
       <text class="fig-t" x="24" y="340">GPU</text>
-      <text class="fig-s" x="58" y="340">Clebsch–Gordan tensor products · channel-wise (uvu) kernels · cuEquivariance · torch.compile · bf16 / tf32 · V100 · A100 · L40S</text>
+      <text class="fig-s" x="58" y="340">Clebsch–Gordan tensor products · channel-wise (uvu) kernels · cuEquivariance · torch.compile · bf16 / tf32 · A100</text>
     </svg>
 
   </figure>
@@ -183,135 +183,104 @@ latest_posts:
     <div class="about-row">
       <div class="about-row-key">Multi-scale simulation</div>
       <div class="about-row-val">
-        One ladder from an electrode–electrolyte interface up to a working cell:
-        electronic structure at the surface, molecular dynamics in the liquid, kinetic
-        Monte Carlo for the reaction network, P2D models for the device. Most of the
-        difficulty is in what has to survive the step between rungs.
+        One ladder from an electrode–electrolyte interface to a working cell: DFT at the
+        surface, MD in the liquid, kinetic Monte Carlo for the reaction network, P2D for the
+        device. The hard part is what survives each step between rungs.
       </div>
     </div>
 
     <div class="about-row">
       <div class="about-row-key">Electrolyte force fields</div>
       <div class="about-row-val">
-        Polarizable force-field parameters predicted from molecular structure rather than
-        fitted by hand, which turns weeks of per-chemistry expert work into a forward pass.
-        A formulation goes in as SMILES and comes out with density, conductivity and
-        solubility.
+        Polarizable force-field parameters predicted from molecular structure instead of
+        fitted by hand: SMILES in, density, conductivity and solubility out.
       </div>
     </div>
 
     <div class="about-row">
       <div class="about-row-key">Trajectory world models</div>
       <div class="about-row-val">
-        Most molecular representations describe a structure; this one describes motion.
-        Latent-space pretraining over MD trajectories, decoded hierarchically from frames
-        to center of mass to atoms, so the learned state carries how an electrolyte moves
-        and not only what is in it.
+        Latent-space pretraining over MD trajectories, decoded hierarchically from frames to
+        center of mass to atoms, so the representation captures how an electrolyte moves,
+        not just what is in it.
       </div>
     </div>
 
     <div class="about-row">
       <div class="about-row-key"><a href="https://github.com/yaniguan/WignerFlow">E(3)-equivariant trajectory generation</a></div>
       <div class="about-row-val">
-        <em>WignerFlow</em> replaces the MD integrator with an autoregressive
-        E(3)-equivariant transformer: from the last <i>k</i> frames it emits the frame
-        <i>n</i>·δ<i>t</i> ahead, directly. Each frame is encoded with eSCN-style SO(2)
-        convolutions — a Wigner-D rotation aligns every edge to the <i>z</i>-axis, which
-        collapses the l<sub>max</sub> = 2 tensor product from O(L<sup>6</sup>) to
-        O(L<sup>3</sup>) — and causal attention over time draws its logits from
-        invariants only, so the stack stays exactly equivariant. Two heads, MSE regression
-        and equivariant flow matching in displacement space, trained with pushforward
-        unrolling on a curriculum so 10<sup>4</sup>-step rollouts stay on the data
-        manifold; judged on RDF, VACF/VDOS, Li⁺ solvation-shell residence times and
-        energy drift against the reference force field.
+        <em>WignerFlow</em> replaces the MD integrator with an autoregressive E(3)-equivariant
+        transformer: eSCN SO(2) convolutions cut the tensor product from O(L<sup>6</sup>) to
+        O(L<sup>3</sup>), and temporal attention uses invariant-only logits. MSE and
+        equivariant flow-matching heads, trained with a pushforward unrolling curriculum, keep
+        10<sup>4</sup>-step rollouts stable; evaluated on RDF, VACF, Li⁺ residence times and
+        energy drift.
       </div>
     </div>
 
     <div class="about-row">
       <div class="about-row-key">Vision–language chemistry</div>
       <div class="about-row-val">
-        Fine-tuned VLMs read structures straight out of document images (image→SMILES).
-        <em>VERDICT</em> turns several independent recognizers into a consensus engine that
-        votes on molecular identity and abstains when they disagree — on real literature
-        figures, knowing when to refuse is worth more than another point of accuracy.
+        Fine-tuned VLMs for image→SMILES. <em>VERDICT</em> combines independent recognizers
+        into a consensus engine that abstains when they disagree.
       </div>
     </div>
 
     <div class="about-row">
       <div class="about-row-key"><a href="https://github.com/yaniguan/ouroboros-ocsr">Equivariant OCSR</a></div>
       <div class="about-row-val">
-        <em>Ouroboros</em> carries the OCSR work forward with a symmetry prior instead of
-        more data: steerable C<sub>N</sub> CNNs (escnn, N ∈ {4, 8, 16}) and
-        group-equivariant self-attention as the image encoder, with the SMILES decoder
-        held fixed. Rotations only, never reflections — mirroring a wedge/hash drawing
-        inverts every stereocenter, so a D<sub>N</sub>-invariant encoder would be blind to
-        chirality. Arms are FLOP-matched (10.3 GFLOPs per image; the parameter-matched C8
-        would cost 127), equivariance holds to 10<sup>−6</sup> relative error on the 90°
-        grid in fp32, and the hypotheses on the synthetic-to-real gap were pre-registered
-        before the first training run. Recognition errors are then pushed through ETKDG
-        and MACE-OFF to price what a wrong diastereomer costs in energy.
+        <em>Ouroboros</em> uses steerable C<sub>N</sub> CNNs (N ∈ {4, 8, 16}) as the image
+        encoder — rotations but not reflections, since mirroring flips stereocenters
+        (ruling out D<sub>N</sub>). Arms are FLOP-matched at 10.3 GFLOPs, equivariance holds
+        to 10<sup>−6</sup>, hypotheses were pre-registered, and recognition errors are priced
+        in energy via ETKDG + MACE-OFF.
       </div>
     </div>
 
     <div class="about-row">
       <div class="about-row-key"><a href="https://github.com/yaniguan/YLM">Irreps-to-text attention</a></div>
       <div class="about-row-val">
-        Molecular language models — MolT5, 3D-MoLM, even EquiLLM — reduce geometry to
-        invariants before the LLM sees it, so they can name a dipole but not point one.
-        <em>YLM</em> lets text tokens query l ≥ 1 irreps directly: attention logits come
-        from invariants, values carry spherical-harmonic features, and anything with a
-        direction is only scaled or combined through Clebsch–Gordan products. Rotate the
-        molecule by <i>R</i> and the answer rotates by D(<i>R</i>), by construction. Each
-        token runs two streams, an invariant hidden state and an irreps side-stream;
-        parity labels keep (R)- and (S)- apart; a <code>&lt;VEC&gt;</code> /
-        <code>&lt;TENSOR&gt;</code> token hands off to an equivariant readout. Measured on
-        TensorQA, 85k structure–question pairs with GFN2-xTB force and dipole labels;
-        equivariance error below 10<sup>−9</sup> in float64.
+        <em>YLM</em> lets text tokens attend to l ≥ 1 irreps with invariant logits and
+        Clebsch–Gordan products, so rotating the molecule by <i>R</i> rotates the answer by
+        D(<i>R</i>); parity separates R/S, and <code>&lt;VEC&gt;</code> /
+        <code>&lt;TENSOR&gt;</code> tokens trigger an equivariant readout. Evaluated on
+        TensorQA (85k GFN2-xTB pairs), with equivariance error &lt; 10<sup>−9</sup> in fp64.
       </div>
     </div>
 
     <div class="about-row">
       <div class="about-row-key">Scientific multimodality</div>
       <div class="about-row-val">
-        Text, figures and simulation output are three views of one chemistry that
-        normally sit in three disconnected systems. Contrastive learning with cross-scale
-        alignment puts them in a single latent space: the molecule drawn in a figure, the
-        DFT numbers computed for it, and the way it behaves in an MD box become one
-        object.
+        Contrastive learning with cross-scale alignment puts text, figures and simulation
+        output in one latent space, so a drawn molecule, its DFT numbers and its MD behavior
+        become one object.
       </div>
     </div>
 
     <div class="about-row">
       <div class="about-row-key">Chemistry-aware post-training</div>
       <div class="about-row-val">
-        Reasoning traces distilled with GPT-5.5 supply the supervision, while
-        chemistry-aware tokenization and a chemistry-aware latent softmax let the model see
-        chemistry where a general tokenizer sees characters. Both feed LoRA SFT on
-        Qwen3.6-27B and GLM-4.7.
+        Distilled reasoning traces plus chemistry-aware tokenization and latent softmax, fed
+        into LoRA SFT on Qwen3.6-27B and GLM-4.7.
       </div>
     </div>
 
     <div class="about-row">
       <div class="about-row-key">Co-scientist</div>
       <div class="about-row-val">
-        The pieces above compose into a tool-using agent for electrolyte and cell design:
-        it reads the literature, queries the simulation stack, and proposes what to run
-        next. What decides whether it can be trusted is the unglamorous half — leakage-safe
-        benchmarks, and default-deny governed job submission.
+        A tool-using agent for electrolyte and cell design that reads the literature, queries
+        the simulation stack and proposes the next run — kept honest by leakage-safe
+        benchmarks and default-deny job submission.
       </div>
     </div>
 
     <div class="about-row">
       <div class="about-row-key">Equivariant models on GPUs</div>
       <div class="about-row-val">
-        Equivariant networks spend their time in Clebsch–Gordan tensor products, so
-        throughput and memory are designed, not discovered. The fully connected e3nn
-        product with per-edge weights was ~40× too slow and gave way to channel-wise
-        (uvu) products; activation memory is budgeted from saved-tensor bytes before a job
-        is queued (the C8 attention encoder fits batch 137 on a 40 GB A100 in bf16); and
-        the profiling stage pits eager PyTorch against <code>torch.compile</code> and
-        cuEquivariance, and fp32 against tf32/bf16 with l ≥ 1 kept in fp32 — on V100s at
-        SDSC Expanse and L40S/A100 nodes on UCLA Hoffman2.
+        Channel-wise (uvu) tensor products replace the fully connected e3nn product (~40×
+        faster); activation memory is budgeted before launch (batch 137 on a 40 GB A100 in
+        bf16); profiling compares eager, <code>torch.compile</code> and cuEquivariance, and
+        fp32 vs tf32/bf16 with l ≥ 1 kept in fp32.
       </div>
     </div>
 
