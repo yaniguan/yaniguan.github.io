@@ -48,3 +48,12 @@
   note: Haleakalā, where the clouds are the ones looking up.
   lat: 20.7097
   lon: -156.2533
+
+- name: Maui from the air
+  location: Hawaiʻi
+  date: 2026-10-02
+  model: assets/models/maui-helicopter.glb
+  maps: West Maui Mountains
+  note: The waterfalls no road on Maui will take you to.
+  lat: 20.88
+  lon: -156.58
