@@ -27,7 +27,7 @@ it. Everything is emitted at column 0 — indented HTML becomes a code block.
 <div class="about-rows">
 {% for item in site.data.software.items %}{% if item.group == group.id %}
 <div class="about-row">
-<div class="about-row-key">{% if item.url %}<a href="{{ item.url }}">{{ item.name }}</a>{% else %}{{ item.name }}{% endif %}</div>
+<div class="about-row-key">{% if item.icon %}<img src="{{ item.icon | relative_url }}" alt="" style="height:1.1em;width:auto;vertical-align:-0.15em;margin:0 0.3em 0 0;display:inline;">{% endif %}{% if item.url %}<a href="{{ item.url }}">{{ item.name }}</a>{% else %}{{ item.name }}{% endif %}</div>
 <div class="about-row-val">
 {% if item.tagline %}<div class="sw-lead">{{ item.tagline }}</div>{% endif %}
 {{ item.description }}

@@ -1,16 +1,58 @@
 # Software listed on /publications/.
 #
 # To add a project: append an item below. `group` must match one of the group ids
-# in `groups`; `url` and `stack` are optional. Keep descriptions to what the code
+# in `groups`; `url`, `icon` and `stack` are optional (`icon` is a path under
+# /assets/img/, shown inline before the name). Keep descriptions to what the code
 # actually does today.
 
 groups:
+  - id: equivariant
+    title: Equivariant ML for chemistry
   - id: systems
     title: Systems
   - id: tools
     title: Tools & experiments
 
 items:
+  - name: WignerFlow
+    group: equivariant
+    url: https://github.com/yaniguan/WignerFlow
+    icon: /assets/img/WignerFlow-icon.svg
+    tagline: Equivariant generative model that produces MD trajectories without an integrator
+    description: >
+      Given the last few frames, an E(3)-equivariant network (eSCN-style SO(2) convolutions
+      with Wigner-D alignment, l_max = 2, causal attention over time) predicts the frame
+      50 fs ahead with a flow-matching head. On Lennard-Jones argon (256 atoms), 4 of 5
+      training seeds run 10⁴-step rollouts without crashing, and the best match OpenMM
+      temperature, RDF, VACF and diffusion within v0 tolerances. Rollout speed is 25.8 ns/day on one A100.
+    stack: Python · PyTorch · OpenMM · flow matching · A100 profiling
+
+  - name: Ouroboros
+    group: equivariant
+    url: https://github.com/yaniguan/ouroboros-ocsr
+    icon: /assets/img/ouroboros-ocsr-icon.svg
+    tagline: Rotation-aware optical chemical structure recognition
+    description: >
+      Turns a molecule drawing into SMILES with stereochemistry, and compares a standard
+      CNN, a rotation-augmented CNN and a C8 steerable (rotation-equivariant) encoder under
+      one shared decoder and evaluation protocol. Best result on 298 real images: 54.0%
+      exact match (ACS 40%, UOB 84%, USPTO 37.8%) with an A + C ensemble and beam 5.
+      Includes an interactive rotation lab.
+    stack: Python · PyTorch · escnn steerable CNNs · RDKit · Transformer decoder
+
+  - name: YLM
+    group: equivariant
+    url: https://github.com/yaniguan/YLM
+    icon: /assets/img/YLM-icon.svg
+    tagline: Language tokens that read 3D vectors and tensors directly
+    description: >
+      An Irreps-to-Text cross-attention layer: text tokens attend to SE(3)-equivariant atom
+      features with invariant weights, so a question such as "what is the force on this
+      oxygen?" returns a vector that rotates exactly with the molecule (error ~2e-6).
+      On the TensorQA-v0 benchmark (84,757 questions on 20k QM9 molecules) it reaches force
+      cosine 0.96, versus 0.11 when the question text is removed.
+    stack: Python · PyTorch · MatSciBERT / MiniLM · QM9
+
   - name: VERDICT
     group: systems
     tagline: Consensus optical chemical structure recognition, with a browser extension
@@ -40,36 +82,38 @@ items:
     url: https://github.com/yaniguan/ChatDFT
     tagline: LLM and HPC agentic platform for quantum-chemistry workflows
     description: >
-      An agent system that turns a natural-language request into a complete DFT campaign:
-      intent extraction, retrieval-augmented planning, input generation, HPC job
-      scheduling, and result interpretation, with structured evaluation loops around each
-      stage.
-    stack: Python · LLM agents · RAG · REST API · HPC schedulers
+      Turns a natural-language request into production DFT calculations: an agent chain
+      parses intent, proposes reaction hypotheses with RAG, builds structures, prepares VASP
+      inputs, submits batch jobs to PBS/Slurm and analyses the results (adsorption and free
+      energies). Bayesian optimisation of DFT parameters needs 73% fewer evaluations than a
+      grid search.
+    stack: Python · LLM agents · RAG · ASE / pymatgen · VASP · PBS/Slurm · AWS EKS
 
   - name: ChemVisionAgent
     group: systems
     url: https://github.com/yaniguan/ChemVisionAgent
-    tagline: Multimodal agent for chemistry data extraction
+    tagline: Multimodal agent for reasoning over scientific images
     description: >
-      Extracts structured chemical data — molecules, conditions and measurements — from
-      figures, tables and scanned documents, pairing vision models with rule-based
-      chemical validation.
-    stack: Python · vision-language models · RDKit
+      A ReAct agent that answers questions about spectra, XRD patterns, microscopy and
+      molecule images by calling composable vision skills, returning structured data with
+      per-skill confidence and a low-confidence flag. Includes a capability-audit
+      benchmark and LoRA fine-tuning for Qwen-VL.
+    stack: Python · vision-language models (Claude, Qwen-VL) · FastAPI · Streamlit
 
   - name: hpc_monitor
     group: tools
     url: https://github.com/yaniguan/hpc_monitor
-    tagline: Real-time dashboard for HPC job queues and resource utilization
-    stack: Python · Slurm
+    tagline: Submit and monitor HPC jobs over SSH from one dashboard
+    stack: Python · SSH · PBS/Slurm
 
   - name: bookmark_with_extensions
     group: tools
     url: https://github.com/yaniguan/bookmark_with_extensions
-    tagline: Chrome extension for bookmark management
-    stack: JavaScript · Chrome extension
+    tagline: Bookmark manager web app with a companion browser extension
+    stack: TypeScript · Next.js · Supabase · Chrome extension
 
   - name: ChatBot
     group: tools
     url: https://github.com/yaniguan/ChatBot
-    tagline: Conversational AI chatbot project
-    stack: Python
+    tagline: Modular MCP agent with an arXiv paper-fetching tool
+    stack: Python · MCP · FastAPI
