@@ -6,6 +6,6 @@ related_posts: false
 ---
 
 Started three equivariant-network projects for chemistry:
-<a href="https://github.com/yaniguan/WignerFlow" target="_blank">WignerFlow</a>,
-<a href="https://github.com/yaniguan/YLM" target="_blank">YLM</a>, and
-<a href="https://github.com/yaniguan/ouroboros-ocsr" target="_blank">Ouroboros</a>.
+<img src="/assets/img/WignerFlow-icon.svg" alt="WignerFlow icon" style="height:1em;width:auto;vertical-align:-0.125em;margin:0 0.2em 0 0;display:inline;"><a href="https://github.com/yaniguan/WignerFlow" target="_blank">WignerFlow</a>,
+<img src="/assets/img/YLM-icon.svg" alt="YLM icon" style="height:1em;width:auto;vertical-align:-0.125em;margin:0 0.2em 0 0;display:inline;"><a href="https://github.com/yaniguan/YLM" target="_blank">YLM</a>, and
+<img src="/assets/img/ouroboros-ocsr-icon.svg" alt="Ouroboros icon" style="height:1em;width:auto;vertical-align:-0.125em;margin:0 0.2em 0 0;display:inline;"><a href="https://github.com/yaniguan/ouroboros-ocsr" target="_blank">Ouroboros</a>.
