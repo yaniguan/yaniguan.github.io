@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-<img src="/assets/img/google-antigravity-icon.svg" alt="Google Antigravity" style="height:1em;width:auto;vertical-align:-0.125em;margin:0 0.25em 0 0;display:inline;"> Awarded 6-month API sponsorship from Google Antigravity for Science.
+<img src="/assets/img/google-antigravity-icon.svg" alt="Google Antigravity" style="height:1em;width:auto;vertical-align:-0.125em;margin:0 0.25em 0 0;display:inline;"> Selected for six months of upgraded Google Antigravity access for scientific research.
