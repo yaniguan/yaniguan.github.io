@@ -125,8 +125,8 @@ ninja.data = [{
           section: "News",},{id: "news-will-graduate-from-ucla-with-a-ph-d-in-december-2026",
           title: 'Will graduate from UCLA with a Ph.D. in December 2026.',
           description: "",
-          section: "News",},{id: "news-awarded-6-month-api-sponsorship-from-google-antigravity-for-science",
-          title: 'Awarded 6-month API sponsorship from Google Antigravity for Science.',
+          section: "News",},{id: "news-selected-for-six-months-of-upgraded-google-antigravity-access-for-scientific-research",
+          title: 'Selected for six months of upgraded Google Antigravity access for scientific research.',
           description: "",
           section: "News",},{
         id: 'social-email',
