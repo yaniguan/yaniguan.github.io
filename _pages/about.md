@@ -338,21 +338,6 @@ latest_posts:
     </div>
 
     <div class="about-row">
-      <div class="about-row-key">labbench-posttrain — personal, ongoing</div>
-      <div class="about-row-val">
-        Later personal work, not SES. A post-training repo with two tracks: Scientist (SFT,
-        DPO, reward modeling, GRPO, distillation) and Operator (protocols to actions,
-        physical constraints as rewards). Dataset v0 has 49,139 records from 20 public
-        sources; the Operator side includes 23,880 SFT examples and 9,867 preference pairs,
-        most from automatic parses and synthetic corruptions, so they are weak labels, not
-        lab observations. SFT, DPO and GRPO pipelines pass CPU smoke tests (GRPO smoke
-        rewards can be zero because a random model does not emit valid structured answers).
-        No GPU training yet, so no quality numbers. A LAB-Bench eval harness and BioProBench
-        RL environments are in review.
-      </div>
-    </div>
-
-    <div class="about-row">
       <div class="about-row-key">Equivariant models on GPUs</div>
       <div class="about-row-val">
         Channel-wise (uvu) tensor products replace the fully connected e3nn product (~40×
