@@ -7,7 +7,8 @@ tagline: >
   I build symmetry-aware neural networks for chemistry — E(3)-equivariant models
   over atoms and trajectories, steerable encoders over molecule images, language
   models that read 3D directions — along with the multi-scale simulations that
-  feed them and the GPU work that makes them trainable.
+  feed them, the GPU work that makes them trainable, and the post-training and
+  evals that check whether they got the chemistry right.
 
 profile:
   align: right
@@ -41,7 +42,9 @@ latest_posts:
       <span class="notes-card-title">Notes</span>
       <span class="notes-card-desc">
         Short write-ups on LLM pretraining, post-training and alignment, vision–language
-        models, and what building VERDICT taught me about SFT, DPO and LoRA.
+        models, and what building VERDICT taught me about SFT, DPO and LoRA. Newest: a
+        four-part series on my SES summer — including a DPO run with 90–97% preference
+        accuracy and 0–2% exact match.
       </span>
     </span>
     <span class="notes-card-cta">Read</span>
@@ -52,7 +55,7 @@ latest_posts:
   <h2 class="about-section-title">Research</h2>
 
   <figure class="about-figure">
-    <svg viewBox="0 0 900 362" role="img" aria-labelledby="fig-title fig-desc">
+    <svg viewBox="0 0 972 362" role="img" aria-labelledby="fig-title fig-desc">
       <title id="fig-title">How the work fits together</title>
       <desc id="fig-desc">
         Chemistry reaches a model in three forms: papers, structure drawings and 3D atoms
@@ -136,32 +139,32 @@ latest_posts:
       <path class="fig-line" d="M696,140 H730" marker-end="url(#fig-arrow)" />
       <path class="fig-line" d="M696,210 H730" marker-end="url(#fig-arrow)" />
 
-      <!-- Column D: reasoning -->
+      <!-- Column D: post-training and agent -->
       <text class="fig-h" x="722" y="22">POST-TRAINING &amp; AGENT</text>
-      <rect class="fig-panel" x="722" y="32" width="168" height="214" rx="6" />
+      <rect class="fig-panel" x="722" y="32" width="238" height="214" rx="6" />
 
-      <rect class="fig-box" x="734" y="48" width="144" height="44" rx="4" />
-      <text class="fig-t" x="744" y="66">Reasoning traces</text>
-      <text class="fig-s" x="744" y="81">distilled with GPT-5.5</text>
+      <rect class="fig-box" x="734" y="48" width="214" height="44" rx="4" />
+      <text class="fig-t" x="744" y="66">TASK + TOOL DATA</text>
+      <text class="fig-s" x="744" y="81">254,527 rows · leak-safe splits</text>
 
-      <rect class="fig-box" x="734" y="118" width="144" height="44" rx="4" />
-      <text class="fig-t" x="744" y="136">SFT · LoRA</text>
-      <text class="fig-s" x="744" y="151">Qwen3.6-27B · GLM-4.7</text>
+      <rect class="fig-box" x="734" y="118" width="214" height="44" rx="4" />
+      <text class="fig-t" x="744" y="136">LoRA SFT</text>
+      <text class="fig-s" x="744" y="151">DPO tested · SFT kept</text>
 
-      <rect class="fig-box-em" x="734" y="188" width="144" height="44" rx="4" />
+      <rect class="fig-box-em" x="734" y="188" width="214" height="44" rx="4" />
       <text class="fig-t-em" x="744" y="206">CO-SCIENTIST</text>
-      <text class="fig-s" x="744" y="221">reads · plans · runs jobs</text>
+      <text class="fig-s" x="744" y="221">DeepSeek Harness · default-deny jobs</text>
 
-      <path class="fig-line" d="M806,92 V114" marker-end="url(#fig-arrow)" />
-      <path class="fig-line" d="M806,162 V184" marker-end="url(#fig-arrow)" />
+      <path class="fig-line" d="M841,92 V114" marker-end="url(#fig-arrow)" />
+      <path class="fig-line" d="M841,162 V184" marker-end="url(#fig-arrow)" />
 
       <!-- Feedback loop -->
-      <path class="fig-line" d="M806,232 V262 Q806,270 798,270 H116 Q108,270 108,262 V236" marker-end="url(#fig-arrow)" />
-      <text class="fig-s" x="457" y="287" text-anchor="middle">proposes the next simulation — and submits the jobs that check it</text>
+      <path class="fig-line" d="M841,232 V262 Q841,270 833,270 H116 Q108,270 108,262 V236" marker-end="url(#fig-arrow)" />
+      <text class="fig-s" x="475" y="287" text-anchor="middle">proposes the next simulation — and submits the jobs that check it</text>
 
       <!-- Compute: under every stage -->
       <text class="fig-h" x="10" y="310">COMPUTE</text>
-      <rect class="fig-panel" x="10" y="318" width="880" height="36" rx="6" />
+      <rect class="fig-panel" x="10" y="318" width="950" height="36" rx="6" />
       <text class="fig-t" x="24" y="340">GPU</text>
       <text class="fig-s" x="58" y="340">Clebsch–Gordan tensor products · channel-wise (uvu) kernels · cuEquivariance · torch.compile · bf16 / tf32 · A100</text>
     </svg>
@@ -260,17 +263,92 @@ latest_posts:
     <div class="about-row">
       <div class="about-row-key">Chemistry-aware post-training</div>
       <div class="about-row-val">
-        Distilled reasoning traces plus chemistry-aware tokenization and latent softmax, fed
-        into LoRA SFT on Qwen3.6-27B and GLM-4.7.
+        At SES I post-trained two kinds of model. <strong>Image-to-SMILES:</strong> LoRA SFT
+        (rank 16, BF16) on GLM-4.1V-9B, InternVL3-8B and Qwen2.5-VL-7B, using about 38K real
+        paper crops (a label is kept when 3 of 4 readers agree), split by molecule identity
+        with 55,267 benchmark InChIKeys kept out of training. The best GLM run used 70% real
+        data and reached 59.8% exact match on 331 journal figures, vs 58.3% for MolScribe
+        (internship evaluation; the OCSR paper reports a separate table). Then I tried DPO:
+        loss went 0.69 → 0.19 and preference accuracy hit 90–97%, while exact match on
+        generated molecules fell to 0–2%. Harder negatives improved validity, but accuracy
+        was still about half of SFT, so SFT stayed. <strong>Electrolyte and cell
+        specialists:</strong> Qwen3.6-27B LoRA on 254,527 task, evidence and tool-use rows
+        (one epoch, 63,632 steps on one GPU), and a 4-bit QLoRA specialist with
+        chemistry-aware tokenization, latent softmax, and 12 soft prefix tokens from
+        molecule, electrolyte and cell projectors. The 254,527-row electrolyte LoRA taught
+        format, evidence reading, and tool use. The cell specialist's training data did not
+        include tool-call trajectories. Numbers still come from data and programs.
+        <a href="{{ '/notes/atom-is-atom-bond-is-bond/' | relative_url }}">Part 1</a>
+        ·
+        <a href="{{ '/notes/teaching-a-puddle-to-dance/' | relative_url }}">Part 2</a>
+        ·
+        <a href="{{ '/notes/from-molecules-to-batteries/' | relative_url }}">Part 3</a>.
+        SES summer notes:
+        <a href="{{ '/notes/summer-of-molecules-puddles-batteries/' | relative_url }}">Overview</a>
+        ·
+        <a href="{{ '/notes/atom-is-atom-bond-is-bond/' | relative_url }}">Molecules (incl. "The DPO detour")</a>
+        ·
+        <a href="{{ '/notes/teaching-a-puddle-to-dance/' | relative_url }}">Electrolytes</a>
+        ·
+        <a href="{{ '/notes/from-molecules-to-batteries/' | relative_url }}">Cells</a>.
       </div>
     </div>
 
     <div class="about-row">
       <div class="about-row-key">Co-scientist</div>
       <div class="about-row-val">
-        A tool-using agent for electrolyte and cell design that reads the literature, queries
-        the simulation stack and proposes the next run — kept honest by leakage-safe
-        benchmarks and default-deny job submission.
+        Two agents at SES. <strong>Electrolyte:</strong> the LLM plans; the harness pulls past
+        experiments, calls explanation and generation models, runs only approved MD, and
+        compares results with saved artifacts. Preparing a run is separate from submitting
+        it: each request carries formulation, protocol, resources and a fingerprint, is
+        checked before a job exists, and repeats are caught so GPU time is not spent twice.
+        The model sees summaries, not 5,000 frames of coordinates. Three tool failures became
+        fixes — an unsupported unit that looked like "no data", short errors that led to
+        guessed retries, and a "DMC" that carried the SMILES of DMF and passed every numeric
+        check. <strong>Cell:</strong> DeepSeek Harness on battery tools plus the fine-tuned
+        specialist; every piece of evidence is marked measured, computed, predicted, missing
+        or rejected. Success meant task metrics and a safe process, not a learned reward. In
+        the demo, prediction still ranks measured DOE recipes; wiring in the aging world
+        model is next. Lesson: good scientific answers did not give reliable tool use for
+        free.
+        <a href="{{ '/notes/teaching-a-puddle-to-dance/' | relative_url }}">Part 2</a>
+        ·
+        <a href="{{ '/notes/from-molecules-to-batteries/' | relative_url }}">Part 3</a>.
+      </div>
+    </div>
+
+    <div class="about-row">
+      <div class="about-row-key">Metrics I had to define</div>
+      <div class="about-row-val">
+        The training score is rarely the goal, so I set the metric first.
+        <strong>VERDICT:</strong> agreement among four different recognizers flags wrong
+        structures without labels (AUROC 0.916; re-rendering pixels scored 0.547).
+        Three-of-four agreement keeps 52.1% of images at 98.5% precision; chemists rated 400
+        released labels at 0.995 precision
+        (<a href="https://arxiv.org/abs/2608.22183">arXiv:2608.22183</a>).
+        <strong>DPO vs exact match:</strong> see above. <strong>Force fields</strong> pass on
+        liquid MD, not cluster DFT error: one ether-oxygen fix cut ion aggregation from
+        0.811 to 0.282. Of 80 versions in the ledger, more than 50 failed in the liquid, and
+        each failure became an automatic check. <strong>Cross-scale models:</strong> removing
+        test conditions dropped an MD-to-electrode link score from 0.327 to 0.066, and
+        nominal 90% intervals covered only about 68–78% — reported as overconfident, not
+        hidden. <strong>Leakage:</strong> splits by molecule and by recipe; held-out
+        experimental answers never enter training.
+      </div>
+    </div>
+
+    <div class="about-row">
+      <div class="about-row-key">labbench-posttrain — personal, ongoing</div>
+      <div class="about-row-val">
+        Later personal work, not SES. A post-training repo with two tracks: Scientist (SFT,
+        DPO, reward modeling, GRPO, distillation) and Operator (protocols to actions,
+        physical constraints as rewards). Dataset v0 has 49,139 records from 20 public
+        sources; the Operator side includes 23,880 SFT examples and 9,867 preference pairs,
+        most from automatic parses and synthetic corruptions, so they are weak labels, not
+        lab observations. SFT, DPO and GRPO pipelines pass CPU smoke tests (GRPO smoke
+        rewards can be zero because a random model does not emit valid structured answers).
+        No GPU training yet, so no quality numbers. A LAB-Bench eval harness and BioProBench
+        RL environments are in review.
       </div>
     </div>
 
@@ -307,8 +385,18 @@ latest_posts:
           <a href="https://www.ses.ai/">SES AI</a>
           <span>Applied Scientist Intern</span>
         </div>
-        Molecular foundation models, multimodal chemistry models, electrolyte MD, and
-        cell co-scientists for AI-driven battery development.
+        Post-training and evals for AI-driven battery development: LoRA SFT for
+        image-to-SMILES VLMs (plus a DPO attempt that lost to SFT on exact match), a
+        Qwen3.6-27B electrolyte specialist trained on 254,527 task and tool rows,
+        electrolyte MD, and two co-scientist agents with checked, default-deny job
+        submission. SES summer notes:
+        <a href="{{ '/notes/summer-of-molecules-puddles-batteries/' | relative_url }}">Overview</a>
+        ·
+        <a href="{{ '/notes/atom-is-atom-bond-is-bond/' | relative_url }}">Molecules (incl. "The DPO detour")</a>
+        ·
+        <a href="{{ '/notes/teaching-a-puddle-to-dance/' | relative_url }}">Electrolytes</a>
+        ·
+        <a href="{{ '/notes/from-molecules-to-batteries/' | relative_url }}">Cells</a>.
       </div>
     </div>
 
