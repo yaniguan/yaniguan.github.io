@@ -4,11 +4,9 @@ title: About
 permalink: /
 subtitle: Ph.D. Candidate, UCLA · Ph.D. expected December 2026
 tagline: >
-  I build symmetry-aware neural networks for chemistry — E(3)-equivariant models
-  over atoms and trajectories, steerable encoders over molecule images, language
-  models that read 3D directions — along with the multi-scale simulations that
-  feed them, the GPU work that makes them trainable, and the post-training and
-  evals that check whether they got the chemistry right.
+  I build physics-aware AI for chemistry: multi-scale simulations and equivariant
+  networks that learn how molecules move, and a co-scientist that reads the
+  literature and runs the next simulation.
 
 profile:
   align: right
@@ -174,191 +172,133 @@ latest_posts:
   <p class="about-figure-hint">Scroll the diagram sideways →</p>
 
   <p class="about-figure-caption">
-    Rows are the three forms chemistry reaches a model in; columns are what happens to
-    each. Every form gets an encoder that respects its symmetry — none for text, planar
-    rotations for drawings, E(3) for atoms — before alignment puts them in one space and
-    post-training turns that space into a co-scientist, whose proposals go back to
-    simulation. The GPU work is the floor all of it stands on.
+    Chemistry reaches a model as papers, drawings and simulated atoms. Each gets an
+    encoder that respects its symmetry: none for text, planar rotations for drawings,
+    E(3) for atoms. Alignment puts them in one space. Post-training and a harness turn
+    that space into a co-scientist, and its proposals go back to simulation as jobs.
+    GPU work sits under every stage.
   </p>
 
   <div class="about-rows">
 
     <div class="about-row">
-      <div class="about-row-key">Multi-scale simulation</div>
+      <div class="about-row-key">From simulation to data</div>
       <div class="about-row-val">
-        One ladder from an electrode–electrolyte interface to a working cell: DFT at the
-        surface, MD in the liquid, kinetic Monte Carlo for the reaction network, P2D for the
-        device. The hard part is what survives each step between rungs.
+        Chemistry reaches my models through simulation and through the literature. On the
+        simulation side I built a ladder from atoms to a working cell. DFT covers local
+        chemistry and electron transfer. Polarizable force fields (PFF) carry that
+        chemistry into MD of the liquid electrolyte. Reactions at the electrode–electrolyte
+        interface come next, and kinetic Monte Carlo follows them as states, events and
+        rates. P2D models transport and response in the cell along two coordinates,
+        electrode thickness and particle radius; SPMe is the cheaper electrochemical model.
+        At the top, 3D thermal and mechanical fields give temperature and stress across the
+        whole cell. PFF parameters are predicted from molecular structure, so a SMILES
+        string leads to density, conductivity and solubility. A force field is accepted on
+        how the liquid behaves in MD, not on cluster DFT error. Restoring one ether-oxygen
+        interaction cut ion aggregation from 0.811 to 0.282. Of 80 versions in the ledger,
+        more than 50 failed in the liquid, and each failure became an automatic check. The
+        top of the ladder is tied to real cells: 3,331 electrothermal simulations were
+        linked to DOE records, and sim-to-real calibration supported 24 targets.
       </div>
     </div>
 
     <div class="about-row">
-      <div class="about-row-key">Electrolyte force fields</div>
+      <div class="about-row-key">Physics in the architecture</div>
       <div class="about-row-val">
-        Polarizable force-field parameters predicted from molecular structure instead of
-        fitted by hand: SMILES in, density, conductivity and solubility out.
+        Data from this ladder is only useful if the model respects the same symmetries as
+        the system. I expand atomic environments in spherical harmonics and group the
+        features into irreps, the irreducible representations of SO(3). Clebsch–Gordan
+        coefficients couple two irreps into a new one, so features rotate with the
+        molecule. <a href="https://github.com/yaniguan/WignerFlow"><em>WignerFlow</em></a>
+        replaces the MD integrator with an autoregressive E(3)-equivariant transformer.
+        eSCN SO(2) convolutions reduce the tensor product from O(L<sup>6</sup>) to
+        O(L<sup>3</sup>). Temporal attention uses invariant-only logits. MSE and
+        equivariant flow-matching heads, trained with a pushforward unrolling curriculum,
+        keep 10<sup>4</sup>-step rollouts stable. Rollouts are judged on RDF, VACF, Li⁺
+        residence times and energy drift. A trajectory world model learns the same motion
+        in latent space and decodes it in order: frames, then center of mass, then atoms.
+        Geometry also has to reach language. In
+        <a href="https://github.com/yaniguan/YLM"><em>YLM</em></a>, text tokens attend to
+        l ≥ 1 irreps. Keys and logits are invariant, values keep their direction, and
+        Clebsch–Gordan products combine them. So rotating the molecule by <i>R</i> rotates
+        the answer by D(<i>R</i>), and parity separates R from S. A &lt;VEC&gt; or
+        &lt;TENSOR&gt; token triggers an equivariant readout. On TensorQA (85k GFN2-xTB
+        pairs) the equivariance error is below 10<sup>−9</sup> in fp64. The same rule sets
+        every encoder before pretraining: E(3) for atoms, C<sub>N</sub> steerable
+        CNNs for drawings, and no geometric group for text. Contrastive learning with
+        cross-scale alignment then puts text, drawings and simulation output in one latent
+        space, so a drawn molecule links to its DFT numbers and its MD behavior. Test
+        conditions hold that link together: removing them dropped an MD-to-electrode link
+        score from 0.327 to 0.066. These models are only practical with GPU work.
+        Channel-wise (uvu) tensor products run about 40× faster than the fully connected
+        e3nn product, and the l ≥ 1 channels stay in fp32 while other work runs in tf32 or
+        bf16.
       </div>
     </div>
 
     <div class="about-row">
-      <div class="about-row-key">Trajectory world models</div>
+      <div class="about-row-key">Reading chemistry</div>
       <div class="about-row-val">
-        Latent-space pretraining over MD trajectories, decoded hierarchically from frames to
-        center of mass to atoms, so the representation captures how an electrolyte moves,
-        not just what is in it.
+        Much of chemistry is still stored as drawings in papers.
+        <a href="https://github.com/yaniguan/ouroboros-ocsr"><em>Ouroboros</em></a> reads
+        them with steerable C<sub>N</sub> CNNs that are equivariant to rotation but not to
+        reflection, because a mirror flips stereocenters. At SES I ran LoRA SFT for
+        image→SMILES on GLM-4.1V-9B, InternVL3-8B and Qwen2.5-VL-7B. The data was about 38K
+        real paper crops, labeled where 3 of 4 readers agreed, with 55,267 benchmark
+        InChIKeys kept out of training. The best GLM run used 70% real data and reached
+        59.8% exact match on 331 journal figures, vs 58.3% for MolScribe (internship
+        evaluation; the OCSR paper reports a separate table). I also tried DPO. Loss fell
+        from 0.69 to 0.19 and preference accuracy reached 90–97%, but exact match on
+        generated molecules was 0–2%. Harder negatives improved validity, but accuracy stayed
+        at about half of SFT, so SFT stayed. To check readings without labels,
+        <em>VERDICT</em> uses agreement among four different recognizers: AUROC 0.916, vs
+        0.547 for re-rendering pixels. When three of four agree, 52.1% of images are kept at
+        98.5% precision, and chemists found 0.995 precision on 400 released labels
+        (<a href="https://arxiv.org/abs/2608.22183">arXiv:2608.22183</a>). Understanding
+        what was read is the language model's job. For electrolytes I trained a Qwen3.6-27B
+        LoRA on 254,527 task, evidence and tool-use rows for one epoch (63,632 steps). It
+        learned the task format, how to read evidence, and when to call tools. The cell
+        specialist is a 4-bit QLoRA model with chemistry-aware tokenization and latent
+        softmax. Separate molecule, electrolyte and cell projectors each turn their
+        features into 4 soft tokens, so the model reads 12 soft prefix tokens, and missing
+        inputs are masked.
       </div>
     </div>
 
     <div class="about-row">
-      <div class="about-row-key"><a href="https://github.com/yaniguan/WignerFlow">E(3)-equivariant trajectory generation</a></div>
+      <div class="about-row-key">A co-scientist that runs jobs</div>
       <div class="about-row-val">
-        <em>WignerFlow</em> replaces the MD integrator with an autoregressive E(3)-equivariant
-        transformer: eSCN SO(2) convolutions cut the tensor product from O(L<sup>6</sup>) to
-        O(L<sup>3</sup>), and temporal attention uses invariant-only logits. MSE and
-        equivariant flow-matching heads, trained with a pushforward unrolling curriculum, keep
-        10<sup>4</sup>-step rollouts stable; evaluated on RDF, VACF, Li⁺ residence times and
-        energy drift.
-      </div>
-    </div>
-
-    <div class="about-row">
-      <div class="about-row-key">Vision–language chemistry</div>
-      <div class="about-row-val">
-        Fine-tuned VLMs for image→SMILES. <em>VERDICT</em> combines independent recognizers
-        into a consensus engine that abstains when they disagree.
-      </div>
-    </div>
-
-    <div class="about-row">
-      <div class="about-row-key"><a href="https://github.com/yaniguan/ouroboros-ocsr">Equivariant OCSR</a></div>
-      <div class="about-row-val">
-        <em>Ouroboros</em> uses steerable C<sub>N</sub> CNNs (N ∈ {4, 8, 16}) as the image
-        encoder — rotations but not reflections, since mirroring flips stereocenters
-        (ruling out D<sub>N</sub>). Arms are FLOP-matched at 10.3 GFLOPs, equivariance holds
-        to 10<sup>−6</sup>, hypotheses were pre-registered, and recognition errors are priced
-        in energy via ETKDG + MACE-OFF.
-      </div>
-    </div>
-
-    <div class="about-row">
-      <div class="about-row-key"><a href="https://github.com/yaniguan/YLM">Irreps-to-text attention</a></div>
-      <div class="about-row-val">
-        <em>YLM</em> lets text tokens attend to l ≥ 1 irreps with invariant logits and
-        Clebsch–Gordan products, so rotating the molecule by <i>R</i> rotates the answer by
-        D(<i>R</i>); parity separates R/S, and <code>&lt;VEC&gt;</code> /
-        <code>&lt;TENSOR&gt;</code> tokens trigger an equivariant readout. Evaluated on
-        TensorQA (85k GFN2-xTB pairs), with equivariance error &lt; 10<sup>−9</sup> in fp64.
-      </div>
-    </div>
-
-    <div class="about-row">
-      <div class="about-row-key">Scientific multimodality</div>
-      <div class="about-row-val">
-        Contrastive learning with cross-scale alignment puts text, figures and simulation
-        output in one latent space, so a drawn molecule, its DFT numbers and its MD behavior
-        become one object.
-      </div>
-    </div>
-
-    <div class="about-row">
-      <div class="about-row-key">Chemistry-aware post-training</div>
-      <div class="about-row-val">
-        At SES I post-trained two kinds of model. <strong>Image-to-SMILES:</strong> LoRA SFT
-        (rank 16, BF16) on GLM-4.1V-9B, InternVL3-8B and Qwen2.5-VL-7B, using about 38K real
-        paper crops (a label is kept when 3 of 4 readers agree), split by molecule identity
-        with 55,267 benchmark InChIKeys kept out of training. The best GLM run used 70% real
-        data and reached 59.8% exact match on 331 journal figures, vs 58.3% for MolScribe
-        (internship evaluation; the OCSR paper reports a separate table). Then I tried DPO:
-        loss went 0.69 → 0.19 and preference accuracy hit 90–97%, while exact match on
-        generated molecules fell to 0–2%. Harder negatives improved validity, but accuracy
-        was still about half of SFT, so SFT stayed. <strong>Electrolyte and cell
-        specialists:</strong> Qwen3.6-27B LoRA on 254,527 task, evidence and tool-use rows
-        (one epoch, 63,632 steps on one GPU), and a 4-bit QLoRA specialist with
-        chemistry-aware tokenization, latent softmax, and 12 soft prefix tokens from
-        molecule, electrolyte and cell projectors. The 254,527-row electrolyte LoRA taught
-        format, evidence reading, and tool use. The cell specialist's training data did not
-        include tool-call trajectories. Numbers still come from data and programs.
+        Vision, a foundation model and a harness give a co-scientist eyes, a brain and
+        hands. The harness is where tools enter an execution environment, so the system can
+        prepare and submit simulations, check jobs and recover from failure. I built two
+        such agents at SES. In the electrolyte agent the LLM plans, and the harness pulls
+        past experiments, calls explanation and generation models, runs approved MD, and
+        compares results with saved artifacts. Preparing a run is separate from submitting
+        it. Each request carries formulation, protocol, resources and a fingerprint, and is
+        checked before a job is created. Submission is default-deny, and repeats are
+        caught. The model sees summaries; the 5,000-frame trajectories stay on the tool
+        side. Three failures changed the tools. An unsupported unit had looked like "no
+        data". Short error messages made the model retry with guessed arguments. A request
+        labeled "DMC" carried the SMILES of DMF and passed every numeric check, so the
+        checker now verifies chemical identity. The cell agent runs on DeepSeek Harness. A
+        larger model plans and calls tools, the fine-tuned specialist answers the science,
+        and every piece of evidence is marked measured, computed, predicted, missing or
+        rejected. The specialist's training data did not include tool-call trajectories,
+        and good scientific answers did not give reliable tool use on their own. Splits are
+        by molecule and by recipe, and held-out experimental answers never enter training.
+        In the demo, prediction still ranks measured DOE recipes; connecting the aging
+        world model is further work. At SES, success was task metrics and a safe process,
+        not a learned reward. On-policy training came later, as my own work outside SES. I
+        set up GRPO pipelines with verifiable, programmatic rewards for a Scientist track
+        and an Operator track. They pass CPU smoke tests, but no GPU training job has run
+        yet, so there are no quality numbers. Smoke rewards can be zero, because a random
+        model does not emit valid structured answers.
+        SES notes:
         <a href="{{ '/notes/atom-is-atom-bond-is-bond/' | relative_url }}">Part 1</a>
         ·
         <a href="{{ '/notes/teaching-a-puddle-to-dance/' | relative_url }}">Part 2</a>
         ·
         <a href="{{ '/notes/from-molecules-to-batteries/' | relative_url }}">Part 3</a>.
-        SES summer notes:
-        <a href="{{ '/notes/summer-of-molecules-puddles-batteries/' | relative_url }}">Overview</a>
-        ·
-        <a href="{{ '/notes/atom-is-atom-bond-is-bond/' | relative_url }}">Molecules (incl. "The DPO detour")</a>
-        ·
-        <a href="{{ '/notes/teaching-a-puddle-to-dance/' | relative_url }}">Electrolytes</a>
-        ·
-        <a href="{{ '/notes/from-molecules-to-batteries/' | relative_url }}">Cells</a>.
-      </div>
-    </div>
-
-    <div class="about-row">
-      <div class="about-row-key">Co-scientist</div>
-      <div class="about-row-val">
-        Two agents at SES. <strong>Electrolyte:</strong> the LLM plans; the harness pulls past
-        experiments, calls explanation and generation models, runs only approved MD, and
-        compares results with saved artifacts. Preparing a run is separate from submitting
-        it: each request carries formulation, protocol, resources and a fingerprint, is
-        checked before a job exists, and repeats are caught so GPU time is not spent twice.
-        The model sees summaries, not 5,000 frames of coordinates. Three tool failures became
-        fixes — an unsupported unit that looked like "no data", short errors that led to
-        guessed retries, and a "DMC" that carried the SMILES of DMF and passed every numeric
-        check. <strong>Cell:</strong> DeepSeek Harness on battery tools plus the fine-tuned
-        specialist; every piece of evidence is marked measured, computed, predicted, missing
-        or rejected. Success meant task metrics and a safe process, not a learned reward. In
-        the demo, prediction still ranks measured DOE recipes; wiring in the aging world
-        model is next. Lesson: good scientific answers did not give reliable tool use for
-        free.
-        <a href="{{ '/notes/teaching-a-puddle-to-dance/' | relative_url }}">Part 2</a>
-        ·
-        <a href="{{ '/notes/from-molecules-to-batteries/' | relative_url }}">Part 3</a>.
-      </div>
-    </div>
-
-    <div class="about-row">
-      <div class="about-row-key">Metrics I had to define</div>
-      <div class="about-row-val">
-        The training score is rarely the goal, so I set the metric first.
-        <strong>VERDICT:</strong> agreement among four different recognizers flags wrong
-        structures without labels (AUROC 0.916; re-rendering pixels scored 0.547).
-        Three-of-four agreement keeps 52.1% of images at 98.5% precision; chemists rated 400
-        released labels at 0.995 precision
-        (<a href="https://arxiv.org/abs/2608.22183">arXiv:2608.22183</a>).
-        <strong>DPO vs exact match:</strong> see above. <strong>Force fields</strong> pass on
-        liquid MD, not cluster DFT error: one ether-oxygen fix cut ion aggregation from
-        0.811 to 0.282. Of 80 versions in the ledger, more than 50 failed in the liquid, and
-        each failure became an automatic check. <strong>Cross-scale models:</strong> removing
-        test conditions dropped an MD-to-electrode link score from 0.327 to 0.066, and
-        nominal 90% intervals covered only about 68–78% — reported as overconfident, not
-        hidden. <strong>Leakage:</strong> splits by molecule and by recipe; held-out
-        experimental answers never enter training.
-      </div>
-    </div>
-
-    <div class="about-row">
-      <div class="about-row-key">labbench-posttrain — personal, ongoing</div>
-      <div class="about-row-val">
-        Later personal work, not SES. A post-training repo with two tracks: Scientist (SFT,
-        DPO, reward modeling, GRPO, distillation) and Operator (protocols to actions,
-        physical constraints as rewards). Dataset v0 has 49,139 records from 20 public
-        sources; the Operator side includes 23,880 SFT examples and 9,867 preference pairs,
-        most from automatic parses and synthetic corruptions, so they are weak labels, not
-        lab observations. SFT, DPO and GRPO pipelines pass CPU smoke tests (GRPO smoke
-        rewards can be zero because a random model does not emit valid structured answers).
-        No GPU training yet, so no quality numbers. A LAB-Bench eval harness and BioProBench
-        RL environments are in review.
-      </div>
-    </div>
-
-    <div class="about-row">
-      <div class="about-row-key">Equivariant models on GPUs</div>
-      <div class="about-row-val">
-        Channel-wise (uvu) tensor products replace the fully connected e3nn product (~40×
-        faster); activation memory is budgeted before launch (batch 137 on a 40 GB A100 in
-        bf16); profiling compares eager, <code>torch.compile</code> and cuEquivariance, and
-        fp32 vs tf32/bf16 with l ≥ 1 kept in fp32.
       </div>
     </div>
 
