@@ -180,60 +180,52 @@ latest_posts:
     GPU work sits under every stage.
   </p>
 
+  <p class="about-row-val">
+    I work on machine learning for chemistry: equivariant models, chemistry vision and language models, and agents that run simulations.
+  </p>
+
   <div class="about-rows">
 
     <div class="about-row">
-      <div class="about-row-key">From simulation to data</div>
+      <div class="about-row-key">VERDICT</div>
       <div class="about-row-val">
-        I built a simulation ladder from atoms to a working cell: DFT, polarizable force
-        fields (PFF), MD of the liquid electrolyte, interface reactions, kinetic Monte
-        Carlo, P2D and SPMe cell models, and 3D thermal and mechanical fields. A force
-        field is judged by how the liquid behaves in MD, not by its error against cluster
-        DFT. Of 80 versions, more than 50 failed in the liquid, and each failure became an
-        automatic check.
+        Four different structure recognizers vote. When they disagree, the structure is flagged as wrong, with no labels needed. AUROC 0.916. Chemists rated 400 released labels at 0.995 precision.
+        <a href="https://arxiv.org/abs/2608.22183">arXiv:2608.22183</a>
       </div>
     </div>
 
     <div class="about-row">
-      <div class="about-row-key">Physics in the architecture</div>
+      <div class="about-row-key">Image-to-SMILES post-training</div>
       <div class="about-row-val">
-        A model trained on this data should respect the symmetries of the system.
-        <a href="https://github.com/yaniguan/WignerFlow"><em>WignerFlow</em></a> replaces
-        the MD integrator with an autoregressive E(3)-equivariant transformer that stays
-        stable over 10<sup>4</sup>-step rollouts. In
-        <a href="https://github.com/yaniguan/YLM"><em>YLM</em></a>, text tokens attend to
-        3D directions, so rotating a molecule rotates the answer, and parity tells R from
-        S. Contrastive alignment then puts text, drawings and simulation output in one
-        space. Test conditions hold it together: removing them dropped an MD-to-electrode
-        link score from 0.327 to 0.066.
+        LoRA SFT on three open VLMs reached 59.8% exact match on 331 journal figures, against 58.3% for MolScribe. DPO pushed preference accuracy to 90–97% while exact match fell to 0–2%, so I kept SFT.
       </div>
     </div>
 
     <div class="about-row">
-      <div class="about-row-key">Reading chemistry</div>
+      <div class="about-row-key">Electrolyte co-scientist</div>
       <div class="about-row-val">
-        Papers store much of chemistry as drawings.
-        <a href="https://github.com/yaniguan/ouroboros-ocsr"><em>Ouroboros</em></a> reads
-        them with steerable C<sub>N</sub> CNNs that respect rotation but not reflection,
-        because a mirror flips stereocenters. At SES I fine-tuned vision–language models on
-        the same task with LoRA SFT. DPO reached 90–97% preference accuracy but only 0–2%
-        exact match on generated molecules, so I kept SFT. <em>VERDICT</em> checks readings
-        without labels through agreement among four different recognizers: AUROC 0.916, vs
-        0.547 for re-rendering pixels
-        (<a href="https://arxiv.org/abs/2608.22183">arXiv:2608.22183</a>). I also trained
-        LoRA specialists for electrolytes and cells.
+        Qwen3.6-27B with LoRA on 254,527 task, evidence and tool-use rows. Each MD job is checked before it is submitted, and repeat jobs are caught.
       </div>
     </div>
 
     <div class="about-row">
-      <div class="about-row-key">A co-scientist that runs jobs</div>
+      <div class="about-row-key"><a href="https://github.com/yaniguan/WignerFlow">WignerFlow</a></div>
       <div class="about-row-val">
-        At SES I built two co-scientist agents: one for electrolytes, and one for cells on
-        DeepSeek Harness. In the electrolyte agent the model plans, and the harness pulls
-        past experiments and runs approved MD. Job submission is default-deny: each request
-        is checked before a job is created, and repeats are caught. Success meant task
-        metrics and a safe process, not a learned reward. Later, outside SES, I set up GRPO
-        pipelines that pass CPU smoke tests; none has trained on a GPU yet.
+        An autoregressive E(3)-equivariant transformer that generates MD trajectories. Public results so far are on argon.
+      </div>
+    </div>
+
+    <div class="about-row">
+      <div class="about-row-key"><a href="https://github.com/yaniguan/ouroboros-ocsr">Ouroboros</a></div>
+      <div class="about-row-val">
+        A C<sub>N</sub> steerable CNN as the image encoder for structure recognition. It handles rotations but not reflections, because a mirror image flips stereocenters.
+      </div>
+    </div>
+
+    <div class="about-row">
+      <div class="about-row-key"><a href="https://github.com/yaniguan/YLM">YLM</a></div>
+      <div class="about-row-val">
+        Text tokens attend to <i>l</i> ≥ 1 irreps through Clebsch–Gordan products. Equivariance error is below 10<sup>−9</sup> in fp64.
       </div>
     </div>
 
