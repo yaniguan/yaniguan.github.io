@@ -4,9 +4,10 @@ title: About
 permalink: /
 subtitle: Ph.D. Candidate, UCLA · Ph.D. expected December 2026
 tagline: >
-  I build physics-aware AI for chemistry: multi-scale simulations and equivariant
-  networks that learn how molecules move, and a co-scientist that reads the
-  literature and runs the next simulation.
+  I build symmetry-aware neural networks for chemistry — E(3)-equivariant models
+  over atoms and trajectories, steerable encoders over molecule images, language
+  models that read 3D directions — along with the multi-scale simulations that
+  feed them and the GPU work that makes them trainable.
 
 profile:
   align: right
