@@ -256,18 +256,18 @@
 
   // ------------------------------------------------------------- reading room
   function initReading() {
-    const room = root.querySelector('[data-reading]');
+    const room = root.querySelector("[data-reading]");
     if (!room) return;
-    const reading = JSON.parse(room.querySelector('#reading-data').textContent);
+    const reading = JSON.parse(room.querySelector("#reading-data").textContent);
     const tabs = Array.from(room.querySelectorAll('[role="tab"]'));
-    const panels = Array.from(room.querySelectorAll('.reading-panel'));
-    const clusterButtons = Array.from(room.querySelectorAll('[data-cluster]'));
-    const bookNodes = Array.from(room.querySelectorAll('.reading-book'));
-    let activeCluster = '';
+    const panels = Array.from(room.querySelectorAll(".reading-panel"));
+    const clusterButtons = Array.from(room.querySelectorAll("[data-cluster]"));
+    const bookNodes = Array.from(room.querySelectorAll(".reading-book"));
+    let activeCluster = "";
     let atlas = null;
     let atlasPromise = null;
     const markers = new Map();
-    const elements = Array.from(room.querySelectorAll('.reading-element'));
+    const elements = Array.from(room.querySelectorAll(".reading-element"));
     let currentTrigger = null;
     let currentNote = null;
     let hideTimer;
@@ -275,7 +275,7 @@
     function dismiss() {
       clearTimeout(hideTimer);
       if (currentNote) currentNote.hidden = true;
-      if (currentTrigger) currentTrigger.removeAttribute('aria-describedby');
+      if (currentTrigger) currentTrigger.removeAttribute("aria-describedby");
       currentNote = null;
       currentTrigger = null;
     }
@@ -287,24 +287,24 @@
       const left = Math.max(12, Math.min(rect.left, window.innerWidth - width - 12));
       let top = rect.bottom + 8;
       if (top + height > window.innerHeight - 12) top = Math.max(12, rect.top - height - 8);
-      currentNote.style.left = left + 'px';
-      currentNote.style.top = top + 'px';
+      currentNote.style.left = left + "px";
+      currentNote.style.top = top + "px";
     }
     function showNote(trigger, n) {
       clearTimeout(hideTimer);
-      const panel = trigger.closest('.reading-panel');
-      const note = panel.querySelector('.reading-inspector');
-      const source = document.getElementById('reading-detail-' + n);
+      const panel = trigger.closest(".reading-panel");
+      const note = panel.querySelector(".reading-inspector");
+      const source = document.getElementById("reading-detail-" + n);
       if (!note || !source) return;
       if (currentTrigger !== trigger) dismiss();
       currentTrigger = trigger;
       currentNote = note;
       note.innerHTML = source.innerHTML;
       // The note sits outside the book's own element, so carry its binding colour over.
-      note.style.setProperty('--book-color', window.getComputedStyle(trigger).getPropertyValue('--book-color'));
-      note.id = panel.id + '-note';
+      note.style.setProperty("--book-color", window.getComputedStyle(trigger).getPropertyValue("--book-color"));
+      note.id = panel.id + "-note";
       note.hidden = false;
-      trigger.setAttribute('aria-describedby', note.id);
+      trigger.setAttribute("aria-describedby", note.id);
       positionNote();
     }
     function delayDismiss() {
@@ -315,23 +315,28 @@
       }, 220);
     }
     elements.forEach((el) => {
-      const summary = el.querySelector('summary');
-      summary.addEventListener('click', (e) => { e.preventDefault(); showNote(summary, el.dataset.book); });
-      summary.addEventListener('focus', () => showNote(summary, el.dataset.book));
-      summary.addEventListener('mouseenter', () => showNote(summary, el.dataset.book));
-      summary.addEventListener('mouseleave', delayDismiss);
-      summary.addEventListener('blur', delayDismiss);
+      const summary = el.querySelector("summary");
+      summary.addEventListener("click", (e) => {
+        e.preventDefault();
+        showNote(summary, el.dataset.book);
+      });
+      summary.addEventListener("focus", () => showNote(summary, el.dataset.book));
+      summary.addEventListener("mouseenter", () => showNote(summary, el.dataset.book));
+      summary.addEventListener("mouseleave", delayDismiss);
+      summary.addEventListener("blur", delayDismiss);
     });
     // Place each dot near its original coordinates, choosing the nearest free
     // point on a deterministic spiral. Recompute in pixels after tab/size changes.
     function layoutMood() {
-      const plot = room.querySelector('.reading-mood-plot');
-      const width = plot.clientWidth, height = plot.clientHeight;
+      const plot = room.querySelector(".reading-mood-plot");
+      const width = plot.clientWidth,
+        height = plot.clientHeight;
       if (!width || !height) return;
       const placed = [];
-      room.querySelectorAll('.reading-dot').forEach((dot) => {
+      room.querySelectorAll(".reading-dot").forEach((dot) => {
         const book = reading.books.find((b) => b.n === Number(dot.dataset.book));
-        const baseX = book.map.x * width, baseY = book.map.y * height;
+        const baseX = book.map.x * width,
+          baseY = book.map.y * height;
         let x, y;
         for (let step = 0; step < 5000; step++) {
           const radius = 2 * Math.sqrt(step);
@@ -340,55 +345,59 @@
           y = Math.max(8, Math.min(height - 8, baseY + radius * Math.sin(angle)));
           if (placed.every((p) => Math.hypot(p.x - x, p.y - y) >= 15)) break;
         }
-        placed.push({x, y});
-        dot.style.left = x + 'px';
-        dot.style.bottom = y + 'px';
+        placed.push({ x, y });
+        dot.style.left = x + "px";
+        dot.style.bottom = y + "px";
       });
     }
-    if (window.ResizeObserver) new ResizeObserver(layoutMood).observe(room.querySelector('.reading-mood-plot'));
-    window.addEventListener('resize', layoutMood);
+    if (window.ResizeObserver) new ResizeObserver(layoutMood).observe(room.querySelector(".reading-mood-plot"));
+    window.addEventListener("resize", layoutMood);
 
     // A group filter hides library cards and dims the books in every other view.
-    let activeGroup = '';
-    const groupButtons = Array.from(room.querySelectorAll('[data-group]'));
-    groupButtons.forEach((button) => button.addEventListener('click', () => {
-      activeGroup = button.dataset.group;
-      pressOne(groupButtons, button);
-      applyCluster();
-      dismiss();
-    }));
+    let activeGroup = "";
+    const groupButtons = Array.from(room.querySelectorAll("[data-group]"));
+    groupButtons.forEach((button) =>
+      button.addEventListener("click", () => {
+        activeGroup = button.dataset.group;
+        pressOne(groupButtons, button);
+        applyCluster();
+        dismiss();
+      })
+    );
 
-    room.querySelectorAll('.reading-dot').forEach((dot) => {
-      dot.addEventListener('focus', () => showNote(dot, dot.dataset.book));
-      dot.addEventListener('mouseenter', () => showNote(dot, dot.dataset.book));
-      dot.addEventListener('click', () => showNote(dot, dot.dataset.book));
-      dot.addEventListener('mouseleave', delayDismiss);
-      dot.addEventListener('blur', delayDismiss);
+    room.querySelectorAll(".reading-dot").forEach((dot) => {
+      dot.addEventListener("focus", () => showNote(dot, dot.dataset.book));
+      dot.addEventListener("mouseenter", () => showNote(dot, dot.dataset.book));
+      dot.addEventListener("click", () => showNote(dot, dot.dataset.book));
+      dot.addEventListener("mouseleave", delayDismiss);
+      dot.addEventListener("blur", delayDismiss);
     });
-    room.querySelectorAll('.reading-inspector').forEach((note) => {
-      note.addEventListener('mouseenter', () => clearTimeout(hideTimer));
-      note.addEventListener('mouseleave', delayDismiss);
-      note.addEventListener('focusout', delayDismiss);
+    room.querySelectorAll(".reading-inspector").forEach((note) => {
+      note.addEventListener("mouseenter", () => clearTimeout(hideTimer));
+      note.addEventListener("mouseleave", delayDismiss);
+      note.addEventListener("focusout", delayDismiss);
     });
-    document.addEventListener('keydown', (e) => { if (e.key === 'Escape') dismiss(); });
-    document.addEventListener('pointerdown', (e) => {
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape") dismiss();
+    });
+    document.addEventListener("pointerdown", (e) => {
       if (currentNote && !currentNote.contains(e.target) && !currentTrigger.contains(e.target)) dismiss();
     });
-    window.addEventListener('resize', dismiss);
-    window.addEventListener('scroll', dismiss, {passive: true});
-    room.querySelector('.reading-table-scroll').addEventListener('scroll', dismiss, {passive: true});
+    window.addEventListener("resize", dismiss);
+    window.addEventListener("scroll", dismiss, { passive: true });
+    room.querySelector(".reading-table-scroll").addEventListener("scroll", dismiss, { passive: true });
 
     function applyCluster() {
       bookNodes.forEach((node) => {
-        const inCluster = !activeCluster || (node.dataset.clusters || '').split(' ').includes(activeCluster);
+        const inCluster = !activeCluster || (node.dataset.clusters || "").split(" ").includes(activeCluster);
         const inGroup = !activeGroup || node.dataset.groupId === activeGroup;
-        if (node.classList.contains('reading-library')) {
+        if (node.classList.contains("reading-library")) {
           node.hidden = !inGroup;
-          node.classList.toggle('is-dimmed', !inCluster);
+          node.classList.toggle("is-dimmed", !inCluster);
         } else {
-          node.classList.toggle('is-dimmed', !(inCluster && inGroup));
+          node.classList.toggle("is-dimmed", !(inCluster && inGroup));
         }
-        node.classList.toggle('is-connected', !!activeCluster && inCluster && inGroup);
+        node.classList.toggle("is-connected", !!activeCluster && inCluster && inGroup);
       });
       const shared = new Map();
       markers.forEach((marker, n) => {
@@ -398,118 +407,167 @@
       });
       shared.forEach((match, marker) => marker.setOpacity(match ? 1 : 0.25));
     }
-    clusterButtons.forEach((btn) => btn.addEventListener('click', () => {
-      activeCluster = btn.dataset.cluster;
-      pressOne(clusterButtons, btn);
-      applyCluster();
-      dismiss();
-    }));
-    room.querySelector('.reading-clusters').hidden = false;
+    clusterButtons.forEach((btn) =>
+      btn.addEventListener("click", () => {
+        activeCluster = btn.dataset.cluster;
+        pressOne(clusterButtons, btn);
+        applyCluster();
+        dismiss();
+      })
+    );
+    room.querySelector(".reading-clusters").hidden = false;
 
-    room.querySelectorAll('.reading-library').forEach((card) => {
-      const toggle = card.querySelector('.reading-card-toggle');
-      const front = card.querySelector('.reading-card-front');
-      const back = card.querySelector('.reading-card-back');
+    room.querySelectorAll(".reading-library").forEach((card) => {
+      const toggle = card.querySelector(".reading-card-toggle");
+      const front = card.querySelector(".reading-card-front");
+      const back = card.querySelector(".reading-card-back");
       toggle.hidden = false;
-      back.setAttribute('aria-hidden', 'true');
+      back.setAttribute("aria-hidden", "true");
       function flip() {
-        const flipped = card.classList.toggle('is-flipped');
-        toggle.setAttribute('aria-pressed', String(flipped));
-        front.setAttribute('aria-hidden', String(flipped));
-        back.setAttribute('aria-hidden', String(!flipped));
+        const flipped = card.classList.toggle("is-flipped");
+        toggle.setAttribute("aria-pressed", String(flipped));
+        front.setAttribute("aria-hidden", String(flipped));
+        back.setAttribute("aria-hidden", String(!flipped));
       }
-      toggle.addEventListener('click', flip);
-      card.addEventListener('click', (e) => { if (!e.target.closest('button, a')) flip(); });
+      toggle.addEventListener("click", flip);
+      card.addEventListener("click", (e) => {
+        if (!e.target.closest("button, a")) flip();
+      });
     });
 
     function ensureAtlas() {
-      const el = room.querySelector('#reading-map');
-      const status = room.querySelector('.reading-map-status');
-      if (atlas) { window.requestAnimationFrame(() => atlas.invalidateSize()); return; }
-      if (atlasPromise) return;
-      status.textContent = '正在打开地图 / Opening the atlas…';
-      atlasPromise = loadLeaflet(el).then((L) => {
-        el.hidden = false;
-        atlas = L.map(el, {scrollWheelZoom: false, minZoom: 1, worldCopyJump: true}).setView([28, 10], 2);
-        let tiles;
-        function setTiles() {
-          if (tiles) atlas.removeLayer(tiles);
-          tiles = L.tileLayer(document.documentElement.getAttribute('data-theme') === 'dark' ? TILES.dark : TILES.light,
-            {attribution: ATTRIBUTION, maxNativeZoom: 16, maxZoom: 18}).addTo(atlas);
-          tiles.on('tileerror', () => { status.textContent = '底图暂不可用；地点清单仍可用。 / Basemap unavailable; use the place index below.'; });
-        }
-        setTiles();
-        new MutationObserver(setTiles).observe(document.documentElement, {attributes: true, attributeFilter: ['data-theme']});
-        // Books sharing a location share one pin, so none is buried underneath another.
-        const locations = new Map();
-        reading.books.forEach((book) => {
-          if (!book.place || !validLatLng(book.place.lat, book.place.lon)) return;
-          const key = book.place.lat + ',' + book.place.lon;
-          if (!locations.has(key)) locations.set(key, []);
-          locations.get(key).push(book);
-        });
-        locations.forEach((books) => {
-          const first = books[0];
-          const group = reading.groups.find((g) => g.id === first.group);
-          const marker = L.marker([first.place.lat, first.place.lon], {
-            title: books.map((b) => b.title).join(' · '),
-            icon: L.divIcon({className: 'reading-pin', iconSize: [28, 32], iconAnchor: [14, 32],
-              html: '<span style="--book-color:' + escapeHtml(group.color) + '">' + (books.length > 1 ? books.length : escapeHtml(first.symbol)) + '</span>'})
-          }).addTo(atlas);
-          const popup = books.map((b) => '<strong>' + escapeHtml(b.title) + '</strong><span>' + escapeHtml(b.place.name) + '</span><p lang="zh">' + escapeHtml(b.review) + '</p>' +
-            (b.review_en ? '<p class="reading-map-popup-en" lang="en">' + escapeHtml(b.review_en) + '</p>' : '')).join('<hr>');
-          marker.bindPopup('<div class="reading-map-popup">' + popup + '</div>', {maxHeight: 300});
-          books.forEach((b) => markers.set(b.n, marker));
-        });
-        room.querySelectorAll('[data-map-book]').forEach((button) => { button.disabled = !markers.has(Number(button.dataset.mapBook)); });
-        // A shared pin remains visible if any of its books belongs to the selected thread.
-        applyCluster();
-        atlas.on('focus click', () => atlas.scrollWheelZoom.enable());
-        atlas.on('blur', () => atlas.scrollWheelZoom.disable());
+      const el = room.querySelector("#reading-map");
+      const status = room.querySelector(".reading-map-status");
+      if (atlas) {
         window.requestAnimationFrame(() => atlas.invalidateSize());
-        status.textContent = '点击或用键盘选择书签；同地的书共用一针。 / Select a pin; books at the same place share one. The complete index is below.';
-      }).catch(() => {
-        if (atlas) { atlas.remove(); atlas = null; }
-        el.hidden = true;
-        room.querySelectorAll('[data-map-book]').forEach((button) => { button.disabled = true; });
-        status.textContent = '地图暂不可用，请看下面的地点清单。 / Map unavailable; all book places are listed below.';
-      });
-    }
-    room.querySelectorAll('[data-map-book]').forEach((button) => button.addEventListener('click', () => {
-      const marker = markers.get(Number(button.dataset.mapBook));
-      if (atlas && marker) {
-        atlas.setView(marker.getLatLng(), 6, {animate: !prefersReduced()});
-        marker.openPopup();
-        room.querySelector('#reading-map').focus({preventScroll: true});
-        room.querySelector('#reading-map').scrollIntoView({block: 'nearest', behavior: prefersReduced() ? 'auto' : 'smooth'});
+        return;
       }
-    }));
+      if (atlasPromise) return;
+      status.textContent = "正在打开地图 / Opening the atlas…";
+      atlasPromise = loadLeaflet(el)
+        .then((L) => {
+          el.hidden = false;
+          atlas = L.map(el, { scrollWheelZoom: false, minZoom: 1, worldCopyJump: true }).setView([28, 10], 2);
+          let tiles;
+          function setTiles() {
+            if (tiles) atlas.removeLayer(tiles);
+            tiles = L.tileLayer(document.documentElement.getAttribute("data-theme") === "dark" ? TILES.dark : TILES.light, {
+              attribution: ATTRIBUTION,
+              maxNativeZoom: 16,
+              maxZoom: 18,
+            }).addTo(atlas);
+            tiles.on("tileerror", () => {
+              status.textContent = "底图暂不可用；地点清单仍可用。 / Basemap unavailable; use the place index below.";
+            });
+          }
+          setTiles();
+          new MutationObserver(setTiles).observe(document.documentElement, { attributes: true, attributeFilter: ["data-theme"] });
+          // Books sharing a location share one pin, so none is buried underneath another.
+          const locations = new Map();
+          reading.books.forEach((book) => {
+            if (!book.place || !validLatLng(book.place.lat, book.place.lon)) return;
+            const key = book.place.lat + "," + book.place.lon;
+            if (!locations.has(key)) locations.set(key, []);
+            locations.get(key).push(book);
+          });
+          locations.forEach((books) => {
+            const first = books[0];
+            const group = reading.groups.find((g) => g.id === first.group);
+            const marker = L.marker([first.place.lat, first.place.lon], {
+              title: books.map((b) => b.title).join(" · "),
+              icon: L.divIcon({
+                className: "reading-pin",
+                iconSize: [28, 32],
+                iconAnchor: [14, 32],
+                html:
+                  '<span style="--book-color:' +
+                  escapeHtml(group.color) +
+                  '">' +
+                  (books.length > 1 ? books.length : escapeHtml(first.symbol)) +
+                  "</span>",
+              }),
+            }).addTo(atlas);
+            const popup = books
+              .map(
+                (b) =>
+                  "<strong>" +
+                  escapeHtml(b.title) +
+                  "</strong><span>" +
+                  escapeHtml(b.place.name) +
+                  '</span><p lang="zh">' +
+                  escapeHtml(b.review) +
+                  "</p>" +
+                  (b.review_en ? '<p class="reading-map-popup-en" lang="en">' + escapeHtml(b.review_en) + "</p>" : "")
+              )
+              .join("<hr>");
+            marker.bindPopup('<div class="reading-map-popup">' + popup + "</div>", { maxHeight: 300 });
+            books.forEach((b) => markers.set(b.n, marker));
+          });
+          room.querySelectorAll("[data-map-book]").forEach((button) => {
+            button.disabled = !markers.has(Number(button.dataset.mapBook));
+          });
+          // A shared pin remains visible if any of its books belongs to the selected thread.
+          applyCluster();
+          atlas.on("focus click", () => atlas.scrollWheelZoom.enable());
+          atlas.on("blur", () => atlas.scrollWheelZoom.disable());
+          window.requestAnimationFrame(() => atlas.invalidateSize());
+          status.textContent =
+            "点击或用键盘选择书签；同地的书共用一针。 / Select a pin; books at the same place share one. The complete index is below.";
+        })
+        .catch(() => {
+          if (atlas) {
+            atlas.remove();
+            atlas = null;
+          }
+          el.hidden = true;
+          room.querySelectorAll("[data-map-book]").forEach((button) => {
+            button.disabled = true;
+          });
+          status.textContent = "地图暂不可用，请看下面的地点清单。 / Map unavailable; all book places are listed below.";
+        });
+    }
+    room.querySelectorAll("[data-map-book]").forEach((button) =>
+      button.addEventListener("click", () => {
+        const marker = markers.get(Number(button.dataset.mapBook));
+        if (atlas && marker) {
+          atlas.setView(marker.getLatLng(), 6, { animate: !prefersReduced() });
+          marker.openPopup();
+          room.querySelector("#reading-map").focus({ preventScroll: true });
+          room.querySelector("#reading-map").scrollIntoView({ block: "nearest", behavior: prefersReduced() ? "auto" : "smooth" });
+        }
+      })
+    );
     function activate(tab, focus) {
       dismiss();
       tabs.forEach((t) => {
         const selected = t === tab;
-        t.setAttribute('aria-selected', String(selected));
+        t.setAttribute("aria-selected", String(selected));
         t.tabIndex = selected ? 0 : -1;
       });
-      panels.forEach((panel) => { panel.hidden = panel.id !== tab.getAttribute('aria-controls'); });
+      panels.forEach((panel) => {
+        panel.hidden = panel.id !== tab.getAttribute("aria-controls");
+      });
       if (focus) tab.focus();
-      if (tab.getAttribute('aria-controls') === 'reading-world') ensureAtlas();
-      if (tab.getAttribute('aria-controls') === 'reading-mood') layoutMood();
+      if (tab.getAttribute("aria-controls") === "reading-world") ensureAtlas();
+      if (tab.getAttribute("aria-controls") === "reading-mood") layoutMood();
     }
     tabs.forEach((tab, i) => {
-      tab.addEventListener('click', () => activate(tab, false));
-      tab.addEventListener('keydown', (e) => {
+      tab.addEventListener("click", () => activate(tab, false));
+      tab.addEventListener("keydown", (e) => {
         let target;
-        if (e.key === 'ArrowRight') target = (i + 1) % tabs.length;
-        if (e.key === 'ArrowLeft') target = (i - 1 + tabs.length) % tabs.length;
-        if (e.key === 'Home') target = 0;
-        if (e.key === 'End') target = tabs.length - 1;
-        if (target !== undefined) { e.preventDefault(); activate(tabs[target], true); }
+        if (e.key === "ArrowRight") target = (i + 1) % tabs.length;
+        if (e.key === "ArrowLeft") target = (i - 1 + tabs.length) % tabs.length;
+        if (e.key === "Home") target = 0;
+        if (e.key === "End") target = tabs.length - 1;
+        if (target !== undefined) {
+          e.preventDefault();
+          activate(tabs[target], true);
+        }
       });
     });
-    room.classList.add('is-enhanced');
+    room.classList.add("is-enhanced");
     activate(tabs[0], false);
-    room.querySelector('.reading-tabs').hidden = false;
+    room.querySelector(".reading-tabs").hidden = false;
   }
 
   // ---------------------------------------------------------------- trip map
