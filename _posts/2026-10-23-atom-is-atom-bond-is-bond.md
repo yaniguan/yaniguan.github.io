@@ -105,6 +105,7 @@ To keep myself honest, I split the data by molecule identity and excluded 55,267
 molecules (by InChIKey, a fingerprint of chemical identity) from training, so the model couldn't
 just memorize the test. I scored three things: whether the SMILES is valid, whether it's an exact
 match, and, for wrong answers, how close they are (Tanimoto similarity of fingerprints).
+
 </details>
 
 The winner was GLM trained with 70% real images, at 59.8% exact structure on 331 figures from ACS
@@ -204,6 +205,7 @@ and relative direction, with the relative position written in the asking token's
 frame. Rotate the whole picture and the tokens just get relabeled consistently, so nothing about
 the answer changes. After attention, I average over directions and hand the result to the SMILES
 decoder.
+
 </details>
 
 ### Three arms
@@ -323,6 +325,7 @@ geometry. A distance-only 3D branch, which reads distances between atoms but not
 they are, responds to distance changes but can't tell every chemical identity, or handedness,
 apart. And randomly dropping inputs during training mainly helped when 2D was missing at random,
 not when a whole chemical class was missing or when extrapolating to low temperature.
+
 </details>
 
 My conclusion from all of this is to test view matching, teacher matching and property prediction

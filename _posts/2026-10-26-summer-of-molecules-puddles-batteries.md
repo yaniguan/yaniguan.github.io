@@ -92,11 +92,11 @@ every layer.
 
 <figure class="nf nf-wide"><img width="720" height="300" src="{{ '/assets/img/notes/icons/method-per-scale.svg' | relative_url }}" alt="A grid of three rows, molecules, electrolytes and cells, each going through the same four steps: represent, align, predict, co-scientist" loading="lazy"><figcaption>The same loop three times over, each row reusing what the row below learned.</figcaption></figure>
 
-| | Data | Representation | Alignment | Co-scientist / decision |
-|---|---|---|---|---|
-| Molecule | paper figures read by VLMs, checked by VERDICT | 1D/2D/3D vectors | 2D ↔ 3D partners (InfoNCE), keyed by InChIKey | multimodal database in MU and a Chrome extension |
-| Electrolyte | polarizable force field, ~40,000 MD movies | recipe, snapshot and trajectory heads | three-way contrastive, one 128-d latent | electrolyte co-scientist |
-| Cell | 252-formulation DOE plus a simulation ladder | stacked molecule, electrolyte and cell reps | cross-scale links, conditions as the glue | aging world model, cell co-scientist, decision API |
+|             | Data                                           | Representation                              | Alignment                                      | Co-scientist / decision                            |
+| ----------- | ---------------------------------------------- | ------------------------------------------- | ---------------------------------------------- | -------------------------------------------------- |
+| Molecule    | paper figures read by VLMs, checked by VERDICT | 1D/2D/3D vectors                            | 2D ↔ 3D partners (InfoNCE), keyed by InChIKey | multimodal database in MU and a Chrome extension   |
+| Electrolyte | polarizable force field, ~40,000 MD movies     | recipe, snapshot and trajectory heads       | three-way contrastive, one 128-d latent        | electrolyte co-scientist                           |
+| Cell        | 252-formulation DOE plus a simulation ladder   | stacked molecule, electrolyte and cell reps | cross-scale links, conditions as the glue      | aging world model, cell co-scientist, decision API |
 
 <div class="n-callout"><img width="240" height="200" src="{{ '/assets/img/notes/icons/dpo-detour.svg' | relative_url }}" alt=""><div markdown="1">
 One lesson also kept showing up at every layer: a pretty number on the training objective is not
