@@ -12,7 +12,7 @@
 <text x="146" y="48" style="font-family:Georgia,serif;font-size:30px;fill:#e07a5f">“</text>
 <path class="g" d="M164 32H220M164 42H212M148 54H220"/>
 <rect x="141" y="62" width="86" height="30" rx="5" fill="#fff" stroke="#1fa3a3" stroke-width="1.8"/>
-<text class="t b" x="184" y="84" style="fill:#1fa3a3">solvent</text>
+<text class="t b" x="184" y="84" style="fill:#1fa3a3;font-size:18px">solvent</text>
 <path class="g" d="M148 102H218M148 112H198"/>
 <text class="t" x="120" y="154">what the paper says</text>
 <text class="t b c" x="120" y="186">image → text</text>

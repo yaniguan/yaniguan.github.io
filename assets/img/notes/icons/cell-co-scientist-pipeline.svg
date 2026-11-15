@@ -31,11 +31,11 @@
 <rect x="276" y="86" width="176" height="74" rx="14" fill="#dceef5" stroke="#23395b" stroke-width="2.5"/>
 <path class="g" d="M298 106h22v22h-22z" stroke-width="2"/><path d="M302 102v4M309 102v4M316 102v4M302 128v4M309 128v4M316 128v4M294 110h4M294 117h4M294 124h4M320 110h4M320 117h4M320 124h4" stroke="#23395b" stroke-width="1.8" stroke-linecap="round"/>
 <rect x="303" y="111" width="12" height="12" rx="2" fill="#1fa3a3"/>
-<text class="t b" x="334" y="116">fine-tuned LLM</text><text class="t s u" x="334" y="134">QLoRA + projectors</text>
+<text class="t b" x="334" y="116">fine-tuned LLM</text><text class="t s u" x="334" y="134" style="font-size:11px">QLoRA + projectors</text>
 <path class="g" d="M310 164v14M364 164v14M418 164v14" stroke-width="2"/>
-<g transform="translate(262 182)"><rect class="w" width="64" height="40" rx="10" stroke-width="2"/><text class="t s m" x="32" y="24">tools</text></g>
-<g transform="translate(332 182)"><rect class="w" width="64" height="40" rx="10" stroke-width="2"/><text class="t s m" x="32" y="24">workspace</text></g>
-<g transform="translate(402 182)"><rect class="w" width="64" height="40" rx="10" stroke-width="2"/><text class="t s m" x="32" y="24">planner</text></g>
+<g transform="translate(262 182)"><rect class="w" width="64" height="40" rx="10" stroke-width="2"/><text class="t s m" x="32" y="24" style="font-size:10px">tools</text></g>
+<g transform="translate(332 182)"><rect class="w" width="64" height="40" rx="10" stroke-width="2"/><text class="t s m" x="32" y="24" style="font-size:10px">workspace</text></g>
+<g transform="translate(402 182)"><rect class="w" width="64" height="40" rx="10" stroke-width="2"/><text class="t s m" x="32" y="24" style="font-size:10px">planner</text></g>
 <text class="t s m u" x="364" y="248">answers carry their evidence chain</text>
 <path class="a" d="M486 140H520"/>
 <rect class="w" x="526" y="52" width="180" height="176" rx="16"/>

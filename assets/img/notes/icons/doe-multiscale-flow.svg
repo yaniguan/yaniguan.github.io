@@ -14,7 +14,7 @@
 <rect class="c" x="282" y="78" width="76" height="36" rx="9"/><text x="320" y="100">MD</text>
 <rect class="c" x="196" y="122" width="76" height="36" rx="9"/><text x="234" y="144">RXN</text>
 <rect class="c" x="282" y="122" width="76" height="36" rx="9"/><text x="320" y="144">kMC</text>
-<rect class="c" x="196" y="166" width="76" height="36" rx="9"/><text x="234" y="188">P2D / SPMe</text>
+<rect class="c" x="196" y="166" width="76" height="36" rx="9"/><text x="234" y="188" style="font-size:11px">P2D/SPMe</text>
 <rect class="c" x="282" y="166" width="76" height="36" rx="9"/><text x="320" y="188">3D fields</text>
 <text class="u" x="277" y="225">around the real recipes</text></g>
 <path class="a" d="M376 140H400"/>
