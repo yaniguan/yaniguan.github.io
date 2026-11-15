@@ -9,16 +9,16 @@
 <path d="M120 68L127 72V80L120 84L113 80V72Z" fill="#1fa3a3" stroke="#23395b" stroke-width="1.8" stroke-linejoin="round"/>
 <rect class="w" x="4" y="12" width="96" height="34" rx="9"/>
 <rect class="g" x="12" y="22" width="16" height="14" rx="2"/><path d="M14 34l4 -5l3 3l4 -3" fill="none" stroke="#1fa3a3" stroke-width="1.6" stroke-linejoin="round"/>
-<text class="t b" x="63" y="37">image</text>
+<text class="t b" x="63" y="37" style="font-size:18px">image</text>
 <rect class="w" x="140" y="12" width="96" height="34" rx="9"/>
 <path class="g" d="M148 23H162M148 29H164M148 35H158"/>
-<text class="t b" x="200" y="37">text</text>
+<text class="t b" x="200" y="37" style="font-size:18px">text</text>
 <rect class="w" x="4" y="110" width="96" height="34" rx="9"/>
 <path class="g" d="M12 121H28M12 133H28"/><circle cx="17" cy="133" r="2" fill="#1fa3a3"/><circle cx="23" cy="133" r="2" fill="#1fa3a3"/>
-<text class="t b" x="63" y="135">DFT</text>
+<text class="t b" x="63" y="135" style="font-size:18px">DFT</text>
 <rect class="w" x="140" y="110" width="96" height="34" rx="9"/>
 <g fill="#1fa3a3"><circle cx="150" cy="120" r="2.2"/><circle cx="158" cy="123" r="2.2"/><circle cx="152" cy="132" r="2.2"/></g><circle cx="160" cy="133" r="2.6" fill="#e07a5f"/>
-<text class="t b" x="200" y="135">MD</text>
+<text class="t b" x="200" y="135" style="font-size:18px">MD</text>
 <text class="t" x="120" y="168">linked by molecule</text>
 <text class="t b" x="120" y="193">multimodal database</text>
 </svg>
