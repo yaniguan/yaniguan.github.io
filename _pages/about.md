@@ -234,6 +234,50 @@ latest_posts:
 </section>
 
 <section class="about-section">
+  <h2 class="about-section-title">Agents for science</h2>
+
+  <div class="about-rows">
+
+    <div class="about-row">
+      <div class="about-row-key">Failure-gated force-field harness</div>
+      <div class="about-row-val">
+        Recorded failure modes of past polarizable force-field fits become automated gates; a candidate field that repeats a known short-range collapse or typing break is rejected before use.
+      </div>
+    </div>
+
+    <div class="about-row">
+      <div class="about-row-key">Consensus labels for self-training</div>
+      <div class="about-row-val">
+        Independent structure readers vote on literature figures; only agreed labels enter training, and real crops, not more synthetic drawings, moved accuracy.
+      </div>
+    </div>
+
+    <div class="about-row">
+      <div class="about-row-key">Multimodal molecular retrieval</div>
+      <div class="about-row-val">
+        A molecular knowledge graph keyed on InChIKey, with identity, structure-similarity and text search linking literature, structures and simulations.
+      </div>
+    </div>
+
+    <div class="about-row">
+      <div class="about-row-key">Bounded scientist agents</div>
+      <div class="about-row-val">
+        Tool-using electrolyte and cell scientist agents that inspect trajectories, diagnose failures and prepare jobs; submission is default-deny and model text never runs as a shell command.
+      </div>
+    </div>
+
+    <div class="about-row">
+      <div class="about-row-key">Cell-scale simulation</div>
+      <div class="about-row-val">
+        Large P2D and 3D electrothermal cell simulation campaigns for design studies.
+      </div>
+    </div>
+
+  </div>
+
+</section>
+
+<section class="about-section">
   <h2 class="about-section-title">News</h2>
   {% include news.liquid limit=true %}
   <p class="about-more">
