@@ -10,10 +10,10 @@
 <g transform="translate(64 24)"><path class="g" d="M-11 -6L0 -13L11 -6V6L0 13L-11 6Z" stroke-width="2"/><circle class="o" cx="0" cy="-13" r="3.5"/><circle class="p" cx="11" cy="6" r="3.5"/><circle class="p" cx="-11" cy="6" r="3.5"/></g>
 <text class="t b" x="64" y="54">molecules</text>
 <rect class="w" x="128" width="132" height="64" rx="12" stroke-width="2"/><rect class="w" x="276" width="132" height="64" rx="12" stroke-width="2"/><rect class="w" x="424" width="132" height="64" rx="12" stroke-width="2"/><rect class="q" x="572" width="132" height="64" rx="12" stroke-width="2"/>
-<g class="t"><text class="b" x="194" y="28">1D / 2D / 3D</text><text class="s u" x="194" y="46">read by VLM, VERDICT</text>
-<text class="b" x="342" y="28">2D ↔ 3D partners</text><text class="s u" x="342" y="46">InfoNCE, InChIKey</text>
-<text class="b" x="490" y="28">properties</text><text class="s u" x="490" y="46">energy, HOMO/LUMO</text>
-<text class="b" x="638" y="28">multimodal DB</text><text class="s u" x="638" y="46">MU: image → DFT, MD</text></g>
+<g class="t"><text class="b" x="194" y="28">1D / 2D / 3D</text><text class="s u" x="194" y="46" style="font-size:11px">read: VLM, VERDICT</text>
+<text class="b" x="342" y="28">2D ↔ 3D partners</text><text class="s u" x="342" y="46" style="font-size:11px">InfoNCE, InChIKey</text>
+<text class="b" x="490" y="28">properties</text><text class="s u" x="490" y="46" style="font-size:11px">energy, HOMO/LUMO</text>
+<text class="b" x="638" y="28">multimodal DB</text><text class="s u" x="638" y="46" style="font-size:11px">MU: image → DFT, MD</text></g>
 <path class="v" d="M265 27l5 5l-5 5M413 27l5 5l-5 5M561 27l5 5l-5 5" stroke-width="2.2"/></g>
 <path class="v" d="M58 119l6 6l6 -6" stroke-width="2.2"/>
 <g transform="translate(0 128)">
@@ -21,10 +21,10 @@
 <g transform="translate(64 25)"><path d="M0 -15C7 -6 12 0 12 5a12 12 0 0 1 -24 0C-12 0 -7 -6 0 -15Z" fill="#dceef5" stroke="#23395b" stroke-width="2" stroke-linejoin="round"/><circle cx="-4" cy="5" r="3" fill="#1fa3a3"/><circle cx="5" cy="1" r="2.5" fill="#e07a5f"/></g>
 <text class="t b" x="64" y="56">electrolytes</text>
 <rect class="w" x="128" width="132" height="64" rx="12" stroke-width="2"/><rect class="w" x="276" width="132" height="64" rx="12" stroke-width="2"/><rect class="w" x="424" width="132" height="64" rx="12" stroke-width="2"/><rect class="q" x="572" width="132" height="64" rx="12" stroke-width="2"/>
-<g class="t"><text class="b" x="194" y="28">three heads</text><text class="s u" x="194" y="46">recipe, frame, motion</text>
-<text class="b" x="342" y="28">128-d latent</text><text class="s u" x="342" y="46">three-way contrastive</text>
-<text class="b" x="490" y="28">liquid properties</text><text class="s u" x="490" y="46">+ reverse design</text>
-<text class="b" x="638" y="28">co-scientist</text><text class="s u" x="638" y="46">LLM + harness</text></g>
+<g class="t"><text class="b" x="194" y="28">three heads</text><text class="s u" x="194" y="46" style="font-size:11px">recipe, frame, motion</text>
+<text class="b" x="342" y="28">128-d latent</text><text class="s u" x="342" y="46" style="font-size:11px">three-way contrastive</text>
+<text class="b" x="490" y="28">liquid properties</text><text class="s u" x="490" y="46" style="font-size:11px">+ reverse design</text>
+<text class="b" x="638" y="28">co-scientist</text><text class="s u" x="638" y="46" style="font-size:11px">LLM + harness</text></g>
 <path class="v" d="M265 27l5 5l-5 5M413 27l5 5l-5 5M561 27l5 5l-5 5" stroke-width="2.2"/></g>
 <path class="v" d="M58 195l6 6l6 -6" stroke-width="2.2"/>
 <g transform="translate(0 204)">
@@ -32,10 +32,10 @@
 <g transform="translate(64 24)"><rect x="-9" y="-13" width="18" height="26" rx="3" fill="#fff" stroke="#23395b" stroke-width="2"/><rect x="-4" y="-17" width="8" height="4" rx="1" fill="#23395b"/><rect x="-5" y="-1" width="10" height="11" rx="1.5" fill="#8fa98a"/></g>
 <text class="t b" x="64" y="54">cells</text>
 <rect class="w" x="128" width="132" height="64" rx="12" stroke-width="2"/><rect class="w" x="276" width="132" height="64" rx="12" stroke-width="2"/><rect class="w" x="424" width="132" height="64" rx="12" stroke-width="2"/><rect class="q" x="572" width="132" height="64" rx="12" stroke-width="2"/>
-<g class="t"><text class="b" x="194" y="28">stacked reps</text><text class="s u" x="194" y="46">+ simulation ladder</text>
-<text class="b" x="342" y="28">cross-scale links</text><text class="s u" x="342" y="46">conditions as glue</text>
-<text class="b" x="490" y="28">world model</text><text class="s u" x="490" y="46">+ regression heads</text>
-<text class="b" x="638" y="28">co-scientist</text><text class="s u" x="638" y="46">+ decision API (Jev)</text></g>
+<g class="t"><text class="b" x="194" y="28">stacked reps</text><text class="s u" x="194" y="46" style="font-size:11px">+ simulation ladder</text>
+<text class="b" x="342" y="28">cross-scale links</text><text class="s u" x="342" y="46" style="font-size:11px">conditions as glue</text>
+<text class="b" x="490" y="28">world model</text><text class="s u" x="490" y="46" style="font-size:11px">+ regression heads</text>
+<text class="b" x="638" y="28">co-scientist</text><text class="s u" x="638" y="46" style="font-size:11px">+ decision API (Jev)</text></g>
 <path class="v" d="M265 27l5 5l-5 5M413 27l5 5l-5 5M561 27l5 5l-5 5" stroke-width="2.2"/></g>
 <text class="t s" x="360" y="290">same four steps at every scale, and each row reuses what the row above learned</text>
 </svg>
