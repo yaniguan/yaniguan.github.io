@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-Defended my Ph.D. at UCLA. Slides: <a href="/assets/files/yani-guan-phd-defense.pdf">PDF</a> · <a href="/assets/files/yani-guan-phd-defense.pptx">PPTX</a>
+Defended my Ph.D. at UCLA. <a href="/assets/files/yani-guan-phd-defense.pdf">Download the slides (PDF)</a>
