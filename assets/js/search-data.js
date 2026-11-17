@@ -128,6 +128,9 @@ ninja.data = [{
           section: "News",},{id: "news-selected-for-six-months-of-upgraded-google-antigravity-access-for-scientific-research",
           title: 'Selected for six months of upgraded Google Antigravity access for scientific research.',
           description: "",
+          section: "News",},{id: "news-defended-my-ph-d-at-ucla-download-the-slides-pdf",
+          title: 'Defended my Ph.D. at UCLA. Download the slides (PDF)',
+          description: "",
           section: "News",},{
         id: 'social-email',
         title: 'email',
