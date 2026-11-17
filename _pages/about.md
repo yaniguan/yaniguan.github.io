@@ -2,7 +2,7 @@
 layout: about
 title: About
 permalink: /
-subtitle: Ph.D., UCLA, December 2026 · On OPT, no visa sponsorship required
+subtitle: Ph.D., UCLA, December 2026 · On OPT, no visa sponsorship needed now or in the future
 tagline: >
   I build symmetry-aware neural networks for chemistry — E(3)-equivariant models
   over atoms and trajectories, steerable encoders over molecule images, language
