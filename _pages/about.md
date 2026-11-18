@@ -186,103 +186,153 @@ latest_posts:
   </div>
 
   <figure class="about-figure">
-    <svg class="lab-link" viewBox="0 0 972 492" role="img" aria-labelledby="lab-fig-title lab-fig-desc">
+    <svg class="lab-link" viewBox="0 0 972 693" role="img" aria-labelledby="lab-fig-title lab-fig-desc">
       <title id="lab-fig-title">A lab agent that understands chemistry and biology</title>
       <desc id="lab-fig-desc">
-        A line drawing of a robot whose parts map to the work. Filled marks are built;
-        hollow marks and dashed cards are planned. Brain: YLM reads text and 3D geometry
-        together and recalls papers, structures and simulations from a molecular memory;
-        debugging protocol steps and designing experiments are planned. Eyes: Ouroboros OCSR
-        turns paper figures into structures, and four models vote to flag errors; spectra,
-        gels and a lab camera are planned. Ears, planned: chemistry and biology protocols,
-        scientist goals by voice or chat, instrument logs and alarms. Hands, planned: robot
-        arm, pipettes and well plates, and liquid-handler scripts. First principles: quantum
-        chemistry as ground truth and multiscale models from electrons to cells; distilling
-        them into small, fast students is planned. Physics intuition: WignerFlow learns MD
-        frame by frame (shown so far on argon), and force fields are gated by past failures;
-        simulating each step before running is planned. Body: a bounded harness inspects
-        runs, diagnoses failures, prepares jobs, catches repeats and puts a default-deny gate
-        on every job. Feet, planned: cloud GPUs only in short bursts and small quantized
-        models on the edge.
+        A line drawing of a two-armed robot working at a lab bench, linked to a GPU, with a
+        pre-experiment loop below. Filled marks are built; hollow marks and dashed outlines are
+        planned. Brain: YLM reads text and 3D geometry together and recalls papers, structures
+        and simulations from a molecular memory; strict checks that turn text into Lean proofs,
+        SQL queries and protocol scripts are planned. Eyes: Ouroboros OCSR turns paper figures
+        into structures, and four models vote to flag errors; spectra, gels and a lab camera are
+        planned. Ears, planned: chemistry and biology protocols, scientist goals by voice or chat.
+        Touch, planned: tactile pads on a gripper feel the last centimeter where glass and liquids
+        fool cameras, for tip seating and cap grip. Hands, planned: one arm holds a pipette over a
+        well plate, the other a sample tube above a
+        tube rack; pipetting, tip-to-well alignment and
+        liquid-handler scripts. First principles: quantum chemistry as ground truth and multiscale
+        models from electrons to cells; distilling them into small, fast students is planned.
+        Physics intuition: WignerFlow learns MD frame by frame (shown so far on argon), and force
+        fields are gated by past failures; simulating each step before running is planned. Body:
+        a bounded harness diagnoses failures, catches repeats and puts a default-deny gate on
+        every job. Action planning, planned: protocol to steps to motion instead of hard-coded
+        moves. Compute, planned: cloud GPUs only in short bursts and small quantized models on the
+        edge. Before every experiment: recall molecular memory and past failures (built); rehearse
+        in a GPU digital twin of the bench, an Isaac-style physics sim (planned) and with learned MD (built, argon so far);
+        verify with Lean, SQL and protocol checks (planned) behind the default-deny job gate
+        (built); run the real experiment, guided by camera and touch (planned); write results and
+        failures back to memory, which trains the Decision API (planned). A planned Decision API closes the loop: trained on our own lab data, it grows
+        out from a trusted zone and asks why, not who is right.
       </desc>
 
       <!-- Robot -->
-      <path class="fig-line-soft" d="M401,412.5 H569" />
-      <path class="fig-route" d="M485,48.5 V66" />
+      <path class="fig-route" d="M485,48.5 V64" />
       <g data-part="ears">
-      <circle class="fig-box" cx="414" cy="138" r="11" />
-      <circle class="fig-route" cx="414" cy="138" r="11" />
-      <circle class="fig-route" cx="414" cy="138" r="4" />
-      <circle class="fig-box" cx="556" cy="138" r="11" />
-      <circle class="fig-route" cx="556" cy="138" r="11" />
-      <circle class="fig-route" cx="556" cy="138" r="4" />
+      <circle class="fig-box" cx="422" cy="123" r="8.5" />
+      <circle class="fig-route" cx="422" cy="123" r="8.5" />
+      <circle class="fig-box" cx="548" cy="123" r="8.5" />
+      <circle class="fig-route" cx="548" cy="123" r="8.5" />
       </g>
-      <rect class="fig-box" x="469" y="160" width="32" height="22" rx="6" />
-      <rect class="fig-route" x="469" y="160" width="32" height="22" rx="6" />
-      <rect class="fig-box" x="454" y="312" width="24" height="88.5" rx="12" />
-      <rect class="fig-route" x="454" y="312" width="24" height="88.5" rx="12" />
-      <rect class="fig-box" x="492" y="312" width="24" height="88.5" rx="12" />
-      <rect class="fig-route" x="492" y="312" width="24" height="88.5" rx="12" />
-      <g data-part="feet">
-      <path class="fig-box" d="M438,406.5 L438,399.5 A8,8 0 0 1 446,391.5 L474,391.5 A8,8 0 0 1 482,399.5 L482,406.5 A3,3 0 0 1 479,409.5 L441,409.5 A3,3 0 0 1 438,406.5 Z" />
-      <path class="fig-route" d="M438,406.5 L438,399.5 A8,8 0 0 1 446,391.5 L474,391.5 A8,8 0 0 1 482,399.5 L482,406.5 A3,3 0 0 1 479,409.5 L441,409.5 A3,3 0 0 1 438,406.5 Z" />
-      <path class="fig-box" d="M488,406.5 L488,399.5 A8,8 0 0 1 496,391.5 L524,391.5 A8,8 0 0 1 532,399.5 L532,406.5 A3,3 0 0 1 529,409.5 L491,409.5 A3,3 0 0 1 488,406.5 Z" />
-      <path class="fig-route" d="M488,406.5 L488,399.5 A8,8 0 0 1 496,391.5 L524,391.5 A8,8 0 0 1 532,399.5 L532,406.5 A3,3 0 0 1 529,409.5 L491,409.5 A3,3 0 0 1 488,406.5 Z" />
-      </g>
-      <rect class="fig-box" x="439" y="304" width="92" height="24" rx="12" />
-      <rect class="fig-route" x="439" y="304" width="92" height="24" rx="12" />
+      <rect class="fig-box" x="470" y="140" width="30" height="20" rx="6" />
+      <rect class="fig-route" x="470" y="140" width="30" height="20" rx="6" />
+      <rect class="fig-box" x="474" y="242" width="22" height="50" rx="3" />
+      <rect class="fig-route" x="474" y="242" width="22" height="50" rx="3" />
+      <rect class="fig-box" x="469" y="288" width="32" height="48" rx="3" />
+      <rect class="fig-route" x="469" y="288" width="32" height="48" rx="3" />
       <g data-part="hands">
-      <g transform="rotate(19.29 391 278)">
-      <path class="fig-box" d="M388,282 V316 L390.1,330 H391.9 L394,316 V282 Z" />
-      <path class="fig-route" d="M388,282 V316 L390.1,330 H391.9 L394,316 V282 Z" />
-      <rect class="fig-box" x="381.5" y="287" width="6" height="22" rx="3" />
-      <rect class="fig-route" x="381.5" y="287" width="6" height="22" rx="3" />
-      <rect class="fig-box" x="394.5" y="287" width="6" height="22" rx="3" />
-      <rect class="fig-route" x="394.5" y="287" width="6" height="22" rx="3" />
+      <rect class="fig-box" x="609.5" y="332" width="11" height="28" rx="2.5" />
+      <rect class="fig-route" x="609.5" y="332" width="11" height="28" rx="2.5" />
+      <rect class="fig-dot" x="610.75" y="342" width="8.5" height="12" opacity="0.28" />
+      <rect class="fig-box" x="624.5" y="332" width="11" height="28" rx="2.5" />
+      <rect class="fig-route" x="624.5" y="332" width="11" height="28" rx="2.5" />
+      <rect class="fig-dot" x="625.75" y="342" width="8.5" height="12" opacity="0.28" />
+      <rect class="fig-box" x="604" y="352" width="51" height="14" rx="2.5" />
+      <rect class="fig-route" x="604" y="352" width="51" height="14" rx="2.5" />
+      <rect class="fig-box" x="301" y="354" width="68" height="12" rx="2.5" />
+      <rect class="fig-route" x="301" y="354" width="68" height="12" rx="2.5" />
+      <circle class="fig-line" cx="308" cy="360" r="2" />
+      <circle class="fig-dot" cx="317" cy="360" r="2" opacity="0.5" />
+      <circle class="fig-line" cx="317" cy="360" r="2" />
+      <circle class="fig-line" cx="326" cy="360" r="2" />
+      <circle class="fig-line" cx="335" cy="360" r="2" />
+      <circle class="fig-line" cx="344" cy="360" r="2" />
+      <circle class="fig-line" cx="353" cy="360" r="2" />
+      <circle class="fig-line" cx="362" cy="360" r="2" />
       </g>
-      </g>
-      <path class="fig-box" d="M410.98,195.19 L382.98,275.19 A8.5,8.5 0 0 0 399.02,280.81 L427.02,200.81 A8.5,8.5 0 0 0 410.98,195.19 Z" />
-      <path class="fig-route" d="M410.98,195.19 L382.98,275.19 A8.5,8.5 0 0 0 399.02,280.81 L427.02,200.81 A8.5,8.5 0 0 0 410.98,195.19 Z" />
-      <g transform="rotate(19.29 391 278)">
-      <rect class="fig-box" x="380.5" y="283" width="21" height="8" rx="4" />
-      <rect class="fig-route" x="380.5" y="283" width="21" height="8" rx="4" />
-      </g>
+      <rect class="fig-box" x="295" y="366" width="380" height="10" rx="3" />
+      <rect class="fig-route" x="295" y="366" width="380" height="10" rx="3" />
       <g data-part="hands">
-      <g transform="rotate(10.78 597 142)">
-      <path class="fig-route" d="M591.5,80 V124 A5.5,5.5 0 0 0 602.5,124 V80 M589,80 H605 M591.5,104 H602.5" />
-      <rect class="fig-box" x="585" y="111" width="6" height="22" rx="3" />
-      <rect class="fig-route" x="585" y="111" width="6" height="22" rx="3" />
-      <rect class="fig-box" x="603" y="111" width="6" height="22" rx="3" />
-      <rect class="fig-route" x="603" y="111" width="6" height="22" rx="3" />
+      <path class="fig-box" d="M439.05,328.47 L397.05,256.47 A7,7 0 0 0 384.95,263.53 L426.95,335.53 A7,7 0 0 0 439.05,328.47 Z" />
+      <path class="fig-route" d="M439.05,328.47 L397.05,256.47 A7,7 0 0 0 384.95,263.53 L426.95,335.53 A7,7 0 0 0 439.05,328.47 Z" />
+      <path class="fig-box" d="M388.37,253.51 L314.37,283.51 A7,7 0 0 0 319.63,296.49 L393.63,266.49 A7,7 0 0 0 388.37,253.51 Z" />
+      <path class="fig-route" d="M388.37,253.51 L314.37,283.51 A7,7 0 0 0 319.63,296.49 L393.63,266.49 A7,7 0 0 0 388.37,253.51 Z" />
+      <rect class="fig-box" x="312" y="290" width="10" height="14" rx="2" />
+      <rect class="fig-route" x="312" y="290" width="10" height="14" rx="2" />
+      <rect class="fig-box" x="314" y="302" width="6" height="32" rx="1.2" />
+      <rect class="fig-route" x="314" y="302" width="6" height="32" rx="1.2" />
+      <path class="fig-box" d="M314.6,334 L316.3,350 H317.7 L319.4,334 Z" />
+      <path class="fig-route" d="M314.6,334 L316.3,350 H317.7 L319.4,334 Z" />
+      <rect class="fig-box" x="307.6" y="306" width="6" height="20" rx="2.5" />
+      <rect class="fig-route" x="307.6" y="306" width="6" height="20" rx="2.5" />
+      <rect class="fig-box" x="320.4" y="306" width="6" height="20" rx="2.5" />
+      <rect class="fig-route" x="320.4" y="306" width="6" height="20" rx="2.5" />
+      <rect class="fig-box" x="302" y="300" width="30" height="8" rx="4" />
+      <rect class="fig-route" x="302" y="300" width="30" height="8" rx="4" />
+      <path class="fig-box" d="M543.05,335.53 L585.05,263.53 A7,7 0 0 0 572.95,256.47 L530.95,328.47 A7,7 0 0 0 543.05,335.53 Z" />
+      <path class="fig-route" d="M543.05,335.53 L585.05,263.53 A7,7 0 0 0 572.95,256.47 L530.95,328.47 A7,7 0 0 0 543.05,335.53 Z" />
+      <path class="fig-box" d="M576.1,266.37 L642.1,296.37 A7,7 0 0 0 647.9,283.63 L581.9,253.63 A7,7 0 0 0 576.1,266.37 Z" />
+      <path class="fig-route" d="M576.1,266.37 L642.1,296.37 A7,7 0 0 0 647.9,283.63 L581.9,253.63 A7,7 0 0 0 576.1,266.37 Z" />
+      <rect class="fig-box" x="640" y="290" width="10" height="14" rx="2" />
+      <rect class="fig-route" x="640" y="290" width="10" height="14" rx="2" />
+      <path class="fig-box" d="M639.5,304 V340.5 A5.5,5.5 0 0 0 650.5,340.5 V304 Z" />
+      <path class="fig-route" d="M639.5,304 V340.5 A5.5,5.5 0 0 0 650.5,340.5 V304 Z" />
+      <path class="fig-dot" d="M640.75,330 V340.5 A4.25,4.25 0 0 0 649.25,340.5 V330 Z" opacity="0.28" />
+      <rect class="fig-box" x="632.8" y="306" width="6" height="20" rx="2.5" />
+      <rect class="fig-route" x="632.8" y="306" width="6" height="20" rx="2.5" />
+      <rect class="fig-box" x="651.2" y="306" width="6" height="20" rx="2.5" />
+      <rect class="fig-route" x="651.2" y="306" width="6" height="20" rx="2.5" />
+      <rect class="fig-box" x="630" y="300" width="30" height="8" rx="4" />
+      <rect class="fig-route" x="630" y="300" width="30" height="8" rx="4" />
       </g>
+      <g data-part="touch">
+      <rect class="fig-dot" x="308.6" y="316" width="4" height="9" rx="1.5" opacity="0.5" />
+      <rect class="fig-dot" x="321.4" y="316" width="4" height="9" rx="1.5" opacity="0.5" />
       </g>
-      <path class="fig-box" d="M553.94,205.98 L591.94,191.98 A8.5,8.5 0 0 0 597.35,185.59 L605.35,143.59 A8.5,8.5 0 0 0 588.65,140.41 L581.55,177.69 L548.06,190.02 A8.5,8.5 0 0 0 553.94,205.98 Z" />
-      <path class="fig-route" d="M553.94,205.98 L591.94,191.98 A8.5,8.5 0 0 0 597.35,185.59 L605.35,143.59 A8.5,8.5 0 0 0 588.65,140.41 L581.55,177.69 L548.06,190.02 A8.5,8.5 0 0 0 553.94,205.98 Z" />
-      <g transform="rotate(10.78 597 142)">
-      <rect class="fig-box" x="584" y="129" width="26" height="8" rx="4" />
-      <rect class="fig-route" x="584" y="129" width="26" height="8" rx="4" />
+      <path class="fig-box" d="M447,242.61 L430.52,181.75 A22,22 0 0 1 451.75,154 L518.25,154 A22,22 0 0 1 539.48,181.75 L523,242.61 A10,10 0 0 1 513.35,250 L456.65,250 A10,10 0 0 1 447,242.61 Z" />
+      <path class="fig-route" d="M447,242.61 L430.52,181.75 A22,22 0 0 1 451.75,154 L518.25,154 A22,22 0 0 1 539.48,181.75 L523,242.61 A10,10 0 0 1 513.35,250 L456.65,250 A10,10 0 0 1 447,242.61 Z" />
+      <path class="fig-box" d="M415,364 L415,342 A10,10 0 0 1 425,332 L545,332 A10,10 0 0 1 555,342 L555,364 A2,2 0 0 1 553,366 L417,366 A2,2 0 0 1 415,364 Z" />
+      <path class="fig-route" d="M415,364 L415,342 A10,10 0 0 1 425,332 L545,332 A10,10 0 0 1 555,342 L555,364 A2,2 0 0 1 553,366 L417,366 A2,2 0 0 1 415,364 Z" />
+      <g data-part="hands">
+      <circle class="fig-box" cx="433" cy="332" r="11" />
+      <circle class="fig-route" cx="433" cy="332" r="11" />
+      <circle class="fig-route" cx="433" cy="332" r="4" />
+      <circle class="fig-box" cx="391" cy="260" r="9.5" />
+      <circle class="fig-route" cx="391" cy="260" r="9.5" />
+      <circle class="fig-route" cx="391" cy="260" r="3" />
+      <circle class="fig-box" cx="317" cy="290" r="7" />
+      <circle class="fig-route" cx="317" cy="290" r="7" />
+      <circle class="fig-box" cx="537" cy="332" r="11" />
+      <circle class="fig-route" cx="537" cy="332" r="11" />
+      <circle class="fig-route" cx="537" cy="332" r="4" />
+      <circle class="fig-box" cx="579" cy="260" r="9.5" />
+      <circle class="fig-route" cx="579" cy="260" r="9.5" />
+      <circle class="fig-route" cx="579" cy="260" r="3" />
+      <circle class="fig-box" cx="645" cy="290" r="7" />
+      <circle class="fig-route" cx="645" cy="290" r="7" />
       </g>
-      <path class="fig-box" d="M425.13,296.1 L414.15,202.8 A24,24 0 0 1 437.99,176 L532.01,176 A24,24 0 0 1 555.85,202.8 L544.87,296.1 A18,18 0 0 1 526.99,312 L443.01,312 A18,18 0 0 1 425.13,296.1 Z" />
-      <path class="fig-route" d="M425.13,296.1 L414.15,202.8 A24,24 0 0 1 437.99,176 L532.01,176 A24,24 0 0 1 555.85,202.8 L544.87,296.1 A18,18 0 0 1 526.99,312 L443.01,312 A18,18 0 0 1 425.13,296.1 Z" />
-      <rect class="fig-box" x="419" y="62" width="132" height="104" rx="26" />
-      <rect class="fig-route" x="419" y="62" width="132" height="104" rx="26" />
+      <g data-part="plan">
+      <path class="fig-route" d="M655,340 C676,338 672,306 672,293" stroke-dasharray="0.01 4" />
+      <path class="fig-route" d="M668.5,296.5 L672,293 L675.5,296.5" />
+      </g>
+      <rect class="fig-box" x="425" y="60" width="120" height="86" rx="24" />
+      <rect class="fig-route" x="425" y="60" width="120" height="86" rx="24" />
       <g data-part="brain">
-      <path class="fig-route-em" d="M485,83.25 L476.77,78.5 L468.55,83.25 L468.55,92.75 L476.77,97.5 L485,92.75 L493.23,97.5 L501.45,92.75 L501.45,83.25 L493.23,78.5 Z M485,83.25 V92.75" />
+      <path class="fig-route-em" d="M485,77.25 L476.77,72.5 L468.55,77.25 L468.55,86.75 L476.77,91.5 L485,86.75 L493.23,91.5 L501.45,86.75 L501.45,77.25 L493.23,72.5 Z M485,77.25 V86.75" />
       </g>
-      <rect class="fig-route" x="437" y="102" width="96" height="28" rx="14" />
+      <rect class="fig-route" x="440" y="94" width="90" height="24" rx="12" />
       <g data-part="eyes">
-      <circle class="fig-route" cx="463" cy="116" r="6.5" />
-      <circle class="fig-dot-em" cx="463" cy="116" r="2.4" />
-      <circle class="fig-route" cx="507" cy="116" r="6.5" />
-      <circle class="fig-dot-em" cx="507" cy="116" r="2.4" />
+      <circle class="fig-route" cx="464" cy="106" r="6.5" />
+      <circle class="fig-dot-em" cx="464" cy="106" r="2.4" />
+      <circle class="fig-route" cx="506" cy="106" r="6.5" />
+      <circle class="fig-dot-em" cx="506" cy="106" r="2.4" />
       </g>
       <g data-part="physics">
-      <circle class="fig-route" cx="485" cy="218" r="20" />
-      <path class="fig-route-em" d="M473,226 Q482,203.5 491,214.75" stroke-dasharray="0.01 4" />
-      <circle class="fig-dot-em" cx="491" cy="214.75" r="3" />
+      <circle class="fig-route" cx="485" cy="180" r="17" />
+      <path class="fig-route-em" d="M474,187 Q482,167 490,177" stroke-dasharray="0.01 4" />
+      <circle class="fig-dot-em" cx="490" cy="177" r="3" />
       </g>
       <g data-part="body">
-      <path class="fig-route-em" d="M485,269 L494,272.5 V281 C494,286 490,289 485,290.5 C480,289 476,286 476,281 V272.5 Z" />
+      <path class="fig-route-em" d="M485,205.5 L494,209 V217.5 C494,222.5 490,225.5 485,227 C480,225.5 476,222.5 476,217.5 V209 Z" />
       </g>
       <g data-part="first">
       <ellipse class="fig-route-em" cx="485" cy="37.5" rx="14" ry="5" transform="rotate(0 485 37.5)" />
@@ -290,25 +340,47 @@ latest_posts:
       <ellipse class="fig-route-em" cx="485" cy="37.5" rx="14" ry="5" transform="rotate(-60 485 37.5)" />
       <circle class="fig-dot-em" cx="485" cy="37.5" r="2.6" />
       </g>
+      <g data-part="feet">
+      <path class="fig-line" d="M485,446.5 V376" stroke-dasharray="3 3.14" />
+      <path class="fig-route" d="M463,463.5 h-5" />
+      <path class="fig-route" d="M475,451.5 v-5" />
+      <path class="fig-route" d="M463,473.5 h-5" />
+      <path class="fig-route" d="M485,451.5 v-5" />
+      <path class="fig-route" d="M463,483.5 h-5" />
+      <path class="fig-route" d="M495,451.5 v-5" />
+      <path class="fig-route" d="M507,463.5 h5" />
+      <path class="fig-route" d="M475,495.5 v5" />
+      <path class="fig-route" d="M507,473.5 h5" />
+      <path class="fig-route" d="M485,495.5 v5" />
+      <path class="fig-route" d="M507,483.5 h5" />
+      <path class="fig-route" d="M495,495.5 v5" />
+      <rect class="fig-box" x="463" y="451.5" width="44" height="44" rx="6" />
+      <rect class="fig-route" x="463" y="451.5" width="44" height="44" rx="6" />
+      <text class="fig-h" x="473.41" y="476.9">GPU</text>
+      </g>
 
       <!-- Leaders -->
-      <path class="fig-line" data-part="brain" d="M230,37.5 H288 A8,8 0 0 1 296,45.5 V80 A8,8 0 0 0 304,88 H468.55" opacity="0.6" />
-      <path class="fig-line" data-part="eyes" d="M230,158.5 H304 A8,8 0 0 0 312,150.5 V124 A8,8 0 0 1 320,116 H463" opacity="0.6" />
-      <path class="fig-line" data-part="ears" d="M230,279.5 H320 A8,8 0 0 0 328,271.5 V146 A8,8 0 0 1 336,138 H403" opacity="0.6" />
-      <path class="fig-line" data-part="hands" d="M230,400.5 H304 A8,8 0 0 0 312,392.5 V301.74 A8,8 0 0 1 320,293.74 H375.43" opacity="0.6" />
+      <path class="fig-line" data-part="brain" d="M230,37.5 H248 A8,8 0 0 1 256,45.5 V74 A8,8 0 0 0 264,82 H468.55" opacity="0.6" />
+      <path class="fig-line" data-part="eyes" d="M230,154.5 H262 A8,8 0 0 0 270,146.5 V114 A8,8 0 0 1 278,106 H464" opacity="0.6" />
+      <path class="fig-line" data-part="ears" d="M230,271.5 H278 A8,8 0 0 0 286,263.5 V131 A8,8 0 0 1 294,123 H413.5" opacity="0.6" />
+      <path class="fig-line" data-part="hands" d="M230,372.5 H234 A8,8 0 0 0 242,364.5 V312 A8,8 0 0 1 250,304 H302" opacity="0.6" />
+      <path class="fig-line" data-part="touch" d="M230,473.5 H248 A8,8 0 0 0 256,465.5 V328.5 A8,8 0 0 1 264,320.5 H307.6" opacity="0.6" />
       <path class="fig-line" data-part="first" d="M740,37.5 H499" opacity="0.6" />
-      <path class="fig-line" data-part="physics" d="M740,158.5 H668 A8,8 0 0 0 660,166.5 V206.75 A8,8 0 0 1 652,214.75 H491" opacity="0.6" />
-      <path class="fig-line" data-part="body" d="M740,279.5 H494" opacity="0.6" />
-      <path class="fig-line" data-part="feet" d="M740,400.5 H532" opacity="0.6" />
+      <path class="fig-line" data-part="physics" d="M740,154.5 H668 A8,8 0 0 0 660,162.5 V169 A8,8 0 0 1 652,177 H490" opacity="0.6" />
+      <path class="fig-line" data-part="body" d="M740,271.5 H722 A8,8 0 0 1 714,263.5 V224 A8,8 0 0 0 706,216 H494" opacity="0.6" />
+      <path class="fig-line" data-part="plan" d="M740,372.5 H702 A8,8 0 0 1 694,364.5 V315.02 A8,8 0 0 0 686,307.02 H672.3" opacity="0.6" />
+      <path class="fig-line" data-part="feet" d="M740,473.5 H512" opacity="0.6" />
 
-      <circle class="fig-dot-em" data-part="brain" cx="468.55" cy="88" r="2.6" />
-      <circle class="fig-dot-em" data-part="eyes" cx="463" cy="116" r="2.6" />
-      <circle class="fig-box" data-part="ears" cx="403" cy="138" r="2.6" />
-      <circle class="fig-box" data-part="hands" cx="375.43" cy="293.74" r="2.6" />
+      <circle class="fig-dot-em" data-part="brain" cx="468.55" cy="82" r="2.6" />
+      <circle class="fig-dot-em" data-part="eyes" cx="464" cy="106" r="2.6" />
+      <circle class="fig-box" data-part="ears" cx="413.5" cy="123" r="2.6" />
+      <circle class="fig-box" data-part="hands" cx="302" cy="304" r="2.6" />
+      <circle class="fig-box" data-part="touch" cx="307.6" cy="320.5" r="2.6" />
       <circle class="fig-dot-em" data-part="first" cx="499" cy="37.5" r="2.6" />
-      <circle class="fig-dot-em" data-part="physics" cx="491" cy="214.75" r="2.6" />
-      <circle class="fig-dot-em" data-part="body" cx="494" cy="279.5" r="2.6" />
-      <circle class="fig-box" data-part="feet" cx="532" cy="400.5" r="2.6" />
+      <circle class="fig-dot-em" data-part="physics" cx="490" cy="177" r="2.6" />
+      <circle class="fig-dot-em" data-part="body" cx="494" cy="216" r="2.6" />
+      <circle class="fig-box" data-part="plan" cx="672.3" cy="307.02" r="2.6" />
+      <circle class="fig-box" data-part="feet" cx="512" cy="473.5" r="2.6" />
 
       <rect class="fig-dot" x="10" y="20" width="220" height="105" rx="10" opacity="0.05" />
       <text class="fig-h" x="26" y="41">BRAIN</text>
@@ -318,36 +390,42 @@ latest_posts:
       <circle class="fig-dot-em" cx="29" cy="90.5" r="2.6" />
       <text class="fig-s" x="38" y="94">Recalls papers, structures, simulations</text>
       <circle class="fig-line" cx="29" cy="106.5" r="2.3" />
-      <text class="fig-s" x="38" y="110">Debugs steps, designs experiments</text>
+      <text class="fig-s" x="38" y="110">Strict checks: Lean · SQL · protocol</text>
       <rect class="fig-box-em lab-hit" data-part="brain" x="10" y="20" width="220" height="105" rx="10" />
-      <rect class="fig-dot" x="10" y="141" width="220" height="105" rx="10" opacity="0.05" />
-      <text class="fig-h" x="26" y="162">EYES</text>
-      <text class="fig-t" x="26" y="179">Ouroboros OCSR</text>
-      <circle class="fig-dot-em" cx="29" cy="195.5" r="2.6" />
-      <text class="fig-s" x="38" y="199">Turns paper figures into structures</text>
-      <circle class="fig-dot-em" cx="29" cy="211.5" r="2.6" />
-      <text class="fig-s" x="38" y="215">Four models vote to flag errors</text>
-      <circle class="fig-line" cx="29" cy="227.5" r="2.3" />
-      <text class="fig-s" x="38" y="231">Spectra, gels and a lab camera</text>
-      <rect class="fig-box-em lab-hit" data-part="eyes" x="10" y="141" width="220" height="105" rx="10" />
-      <rect class="fig-box" x="10" y="262" width="220" height="105" rx="10" stroke-dasharray="4 3" opacity="0.6" />
-      <text class="fig-h" x="26" y="283">EARS</text>
-      <text class="fig-t" x="26" y="300">Lab language</text>
-      <circle class="fig-line" cx="29" cy="316.5" r="2.3" />
-      <text class="fig-s" x="38" y="320">Chemistry and biology protocols</text>
-      <circle class="fig-line" cx="29" cy="332.5" r="2.3" />
-      <text class="fig-s" x="38" y="336">Scientist goals by voice or chat</text>
-      <circle class="fig-line" cx="29" cy="348.5" r="2.3" />
-      <text class="fig-s" x="38" y="352">Instrument logs and alarms</text>
-      <rect class="fig-box-em lab-hit" data-part="ears" x="10" y="262" width="220" height="105" rx="10" />
-      <rect class="fig-box" x="10" y="383" width="220" height="89" rx="10" stroke-dasharray="4 3" opacity="0.6" />
-      <text class="fig-h" x="26" y="404">HANDS</text>
-      <text class="fig-t" x="26" y="421">Instrument control</text>
-      <circle class="fig-line" cx="29" cy="437.5" r="2.3" />
-      <text class="fig-s" x="38" y="441">Robot arm, pipettes, well plates</text>
-      <circle class="fig-line" cx="29" cy="453.5" r="2.3" />
-      <text class="fig-s" x="38" y="457">Writes liquid-handler scripts</text>
-      <rect class="fig-box-em lab-hit" data-part="hands" x="10" y="383" width="220" height="89" rx="10" />
+      <rect class="fig-dot" x="10" y="137" width="220" height="105" rx="10" opacity="0.05" />
+      <text class="fig-h" x="26" y="158">EYES</text>
+      <text class="fig-t" x="26" y="175">Ouroboros OCSR</text>
+      <circle class="fig-dot-em" cx="29" cy="191.5" r="2.6" />
+      <text class="fig-s" x="38" y="195">Turns paper figures into structures</text>
+      <circle class="fig-dot-em" cx="29" cy="207.5" r="2.6" />
+      <text class="fig-s" x="38" y="211">Four models vote to flag errors</text>
+      <circle class="fig-line" cx="29" cy="223.5" r="2.3" />
+      <text class="fig-s" x="38" y="227">Spectra, gels and a lab camera</text>
+      <rect class="fig-box-em lab-hit" data-part="eyes" x="10" y="137" width="220" height="105" rx="10" />
+      <rect class="fig-box" x="10" y="254" width="220" height="89" rx="10" stroke-dasharray="5 3.46" opacity="0.5" />
+      <text class="fig-h" x="26" y="275">EARS</text>
+      <text class="fig-t" x="26" y="292">Lab language</text>
+      <circle class="fig-line" cx="29" cy="308.5" r="2.3" />
+      <text class="fig-s" x="38" y="312">Chemistry and biology protocols</text>
+      <circle class="fig-line" cx="29" cy="324.5" r="2.3" />
+      <text class="fig-s" x="38" y="328">Scientist goals by voice or chat</text>
+      <rect class="fig-box-em lab-hit" data-part="ears" x="10" y="254" width="220" height="89" rx="10" />
+      <rect class="fig-box" x="10" y="355" width="220" height="89" rx="10" stroke-dasharray="5 3.46" opacity="0.5" />
+      <text class="fig-h" x="26" y="376">HANDS</text>
+      <text class="fig-t" x="26" y="393">Instrument control</text>
+      <circle class="fig-line" cx="29" cy="409.5" r="2.3" />
+      <text class="fig-s" x="38" y="413">Pipetting, tip-to-well alignment</text>
+      <circle class="fig-line" cx="29" cy="425.5" r="2.3" />
+      <text class="fig-s" x="38" y="429">Writes liquid-handler scripts</text>
+      <rect class="fig-box-em lab-hit" data-part="hands" x="10" y="355" width="220" height="89" rx="10" />
+      <rect class="fig-box" x="10" y="456" width="220" height="89" rx="10" stroke-dasharray="5 3.46" opacity="0.5" />
+      <text class="fig-h" x="26" y="477">TOUCH</text>
+      <text class="fig-t" x="26" y="494">Tactile sensing</text>
+      <circle class="fig-line" cx="29" cy="510.5" r="2.3" />
+      <text class="fig-s" x="38" y="514">Feels where glass fools cameras</text>
+      <circle class="fig-line" cx="29" cy="526.5" r="2.3" />
+      <text class="fig-s" x="38" y="530">Force-guided tip seating, cap grip</text>
+      <rect class="fig-box-em lab-hit" data-part="touch" x="10" y="456" width="220" height="89" rx="10" />
       <rect class="fig-dot" x="740" y="20" width="220" height="105" rx="10" opacity="0.05" />
       <text class="fig-h" x="756" y="41">FIRST PRINCIPLES</text>
       <text class="fig-t" x="756" y="58">DFT teacher</text>
@@ -358,42 +436,94 @@ latest_posts:
       <circle class="fig-line" cx="759" cy="106.5" r="2.3" />
       <text class="fig-s" x="768" y="110">Distilled into small, fast students</text>
       <rect class="fig-box-em lab-hit" data-part="first" x="740" y="20" width="220" height="105" rx="10" />
-      <rect class="fig-dot" x="740" y="141" width="220" height="105" rx="10" opacity="0.05" />
-      <text class="fig-h" x="756" y="162">PHYSICS INTUITION</text>
-      <text class="fig-t" x="756" y="179">WignerFlow</text>
-      <circle class="fig-dot-em" cx="759" cy="195.5" r="2.6" />
-      <text class="fig-s" x="768" y="199">Learned MD, frame by frame</text>
-      <circle class="fig-dot-em" cx="759" cy="211.5" r="2.6" />
-      <text class="fig-s" x="768" y="215">Force fields gated by past failures</text>
-      <circle class="fig-line" cx="759" cy="227.5" r="2.3" />
-      <text class="fig-s" x="768" y="231">Simulates each step before running</text>
-      <rect class="fig-box-em lab-hit" data-part="physics" x="740" y="141" width="220" height="105" rx="10" />
-      <rect class="fig-dot" x="740" y="262" width="220" height="105" rx="10" opacity="0.05" />
-      <text class="fig-h" x="756" y="283">BODY</text>
-      <text class="fig-t" x="756" y="300">Bounded harness</text>
-      <circle class="fig-dot-em" cx="759" cy="316.5" r="2.6" />
-      <text class="fig-s" x="768" y="320">Inspects runs, diagnoses failures</text>
-      <circle class="fig-dot-em" cx="759" cy="332.5" r="2.6" />
-      <text class="fig-s" x="768" y="336">Prepares jobs, catches repeats</text>
-      <circle class="fig-dot-em" cx="759" cy="348.5" r="2.6" />
-      <text class="fig-s" x="768" y="352">Default-deny gate on every job</text>
-      <rect class="fig-box-em lab-hit" data-part="body" x="740" y="262" width="220" height="105" rx="10" />
-      <rect class="fig-box" x="740" y="383" width="220" height="89" rx="10" stroke-dasharray="4 3" opacity="0.6" />
-      <text class="fig-h" x="756" y="404">FEET</text>
-      <text class="fig-t" x="756" y="421">Low-cost deployment</text>
-      <circle class="fig-line" cx="759" cy="437.5" r="2.3" />
-      <text class="fig-s" x="768" y="441">Cloud GPUs only in short bursts</text>
-      <circle class="fig-line" cx="759" cy="453.5" r="2.3" />
-      <text class="fig-s" x="768" y="457">Small quantized models on the edge</text>
-      <rect class="fig-box-em lab-hit" data-part="feet" x="740" y="383" width="220" height="89" rx="10" />
+      <rect class="fig-dot" x="740" y="137" width="220" height="105" rx="10" opacity="0.05" />
+      <text class="fig-h" x="756" y="158">PHYSICS INTUITION</text>
+      <text class="fig-t" x="756" y="175">WignerFlow</text>
+      <circle class="fig-dot-em" cx="759" cy="191.5" r="2.6" />
+      <text class="fig-s" x="768" y="195">Learned MD, frame by frame</text>
+      <circle class="fig-dot-em" cx="759" cy="207.5" r="2.6" />
+      <text class="fig-s" x="768" y="211">Force fields gated by past failures</text>
+      <circle class="fig-line" cx="759" cy="223.5" r="2.3" />
+      <text class="fig-s" x="768" y="227">Simulates each step before running</text>
+      <rect class="fig-box-em lab-hit" data-part="physics" x="740" y="137" width="220" height="105" rx="10" />
+      <rect class="fig-dot" x="740" y="254" width="220" height="89" rx="10" opacity="0.05" />
+      <text class="fig-h" x="756" y="275">BODY</text>
+      <text class="fig-t" x="756" y="292">Bounded harness</text>
+      <circle class="fig-dot-em" cx="759" cy="308.5" r="2.6" />
+      <text class="fig-s" x="768" y="312">Diagnoses failures, catches repeats</text>
+      <circle class="fig-dot-em" cx="759" cy="324.5" r="2.6" />
+      <text class="fig-s" x="768" y="328">Default-deny gate on every job</text>
+      <rect class="fig-box-em lab-hit" data-part="body" x="740" y="254" width="220" height="89" rx="10" />
+      <rect class="fig-box" x="740" y="355" width="220" height="89" rx="10" stroke-dasharray="5 3.46" opacity="0.5" />
+      <text class="fig-h" x="756" y="376">ACTION PLANNING</text>
+      <text class="fig-t" x="756" y="393">Step planner</text>
+      <circle class="fig-line" cx="759" cy="409.5" r="2.3" />
+      <text class="fig-s" x="768" y="413">Protocol to steps to motion</text>
+      <circle class="fig-line" cx="759" cy="425.5" r="2.3" />
+      <text class="fig-s" x="768" y="429">Replaces hard-coded moves</text>
+      <rect class="fig-box-em lab-hit" data-part="plan" x="740" y="355" width="220" height="89" rx="10" />
+      <rect class="fig-box" x="740" y="456" width="220" height="89" rx="10" stroke-dasharray="5 3.46" opacity="0.5" />
+      <text class="fig-h" x="756" y="477">COMPUTE</text>
+      <text class="fig-t" x="756" y="494">Sim-to-real compute</text>
+      <circle class="fig-line" cx="759" cy="510.5" r="2.3" />
+      <text class="fig-s" x="768" y="514">Cloud GPUs only in short bursts</text>
+      <circle class="fig-line" cx="759" cy="526.5" r="2.3" />
+      <text class="fig-s" x="768" y="530">Small quantized models on the edge</text>
+      <rect class="fig-box-em lab-hit" data-part="feet" x="740" y="456" width="220" height="89" rx="10" />
 
+      <!-- Pre-experiment loop -->
+      <text class="fig-h" x="10" y="575">BEFORE EVERY EXPERIMENT</text>
+      <rect class="fig-dot" x="10" y="587" width="170.8" height="64" rx="10" opacity="0.05" />
+      <text class="fig-t" x="23" y="609">Recall</text>
+      <circle class="fig-dot-em" cx="26" cy="623.5" r="2.6" />
+      <text class="fig-s" x="35" y="627">Molecular memory</text>
+      <circle class="fig-dot-em" cx="26" cy="638.5" r="2.6" />
+      <text class="fig-s" x="35" y="642">Past failures as gates</text>
+      <rect class="fig-dot" x="204.8" y="587" width="170.8" height="64" rx="10" opacity="0.05" />
+      <text class="fig-t" x="217.8" y="609">Rehearse</text>
+      <circle class="fig-line" cx="220.8" cy="623.5" r="2.3" />
+      <text class="fig-s" x="229.8" y="627">GPU digital twin (Isaac-style)</text>
+      <circle class="fig-dot-em" cx="220.8" cy="638.5" r="2.6" />
+      <text class="fig-s" x="229.8" y="642">Learned MD (argon so far)</text>
+      <rect class="fig-dot" x="399.6" y="587" width="170.8" height="64" rx="10" opacity="0.05" />
+      <text class="fig-t" x="412.6" y="609">Verify</text>
+      <circle class="fig-line" cx="415.6" cy="623.5" r="2.3" />
+      <text class="fig-s" x="424.6" y="627">Lean · SQL · protocol checks</text>
+      <circle class="fig-dot-em" cx="415.6" cy="638.5" r="2.6" />
+      <text class="fig-s" x="424.6" y="642">Default-deny job gate</text>
+      <rect class="fig-box" x="594.4" y="587" width="170.8" height="64" rx="10" stroke-dasharray="5 3.54" opacity="0.5" />
+      <text class="fig-t" x="607.4" y="609">Run</text>
+      <circle class="fig-line" cx="610.4" cy="623.5" r="2.3" />
+      <text class="fig-s" x="619.4" y="627">Real experiment at the bench</text>
+      <circle class="fig-line" cx="610.4" cy="638.5" r="2.3" />
+      <text class="fig-s" x="619.4" y="642">Guided by camera and touch</text>
+      <rect class="fig-box" x="789.2" y="587" width="170.8" height="64" rx="10" stroke-dasharray="5 3.54" opacity="0.5" />
+      <text class="fig-t" x="802.2" y="609">Write back</text>
+      <circle class="fig-line" cx="805.2" cy="623.5" r="2.3" />
+      <text class="fig-s" x="814.2" y="627">Results, failures to memory</text>
+      <circle class="fig-line" cx="805.2" cy="638.5" r="2.3" />
+      <text class="fig-s" x="814.2" y="642">Trains the Decision API</text>
+      <path class="fig-route" data-part="loop" d="M186.8,605 H198.8 M195.3,601.5 L198.8,605 L195.3,608.5" />
+      <path class="fig-route" data-part="loop" d="M381.6,605 H393.6 M390.1,601.5 L393.6,605 L390.1,608.5" />
+      <path class="fig-route" data-part="loop" d="M576.4,605 H588.4 M584.9,601.5 L588.4,605 L584.9,608.5" />
+      <path class="fig-route" data-part="loop" d="M771.2,605 H783.2 M779.7,601.5 L783.2,605 L779.7,608.5" />
+      <path class="fig-route" data-part="loop" d="M874.6,655 V662 A8,8 0 0 1 866.6,670 H740.21" />
+      <path class="fig-route" data-part="loop" d="M229.79,670 H103.4 A8,8 0 0 1 95.4,662 V655 M91.9,658.5 L95.4,655 L98.9,658.5" />
+      <g data-part="decision">
+      <rect class="fig-box" x="235.79" y="659" width="498.42" height="22" rx="11" stroke-dasharray="5 3.52" opacity="0.5" />
+      <circle class="fig-line" cx="249.79" cy="670" r="2.3" />
+      <text class="fig-t" x="257.79" y="674.2">Decision API</text>
+      <text class="fig-s" x="340.68" y="673.6">trained on our own lab data · grows out from a trusted zone · asks why, not who is right</text>
+      </g>
+      <rect class="fig-box-em lab-hit" data-part="loop" x="10" y="587" width="950" height="64" rx="10" />
+      <rect class="fig-box-em lab-hit" data-part="decision" x="235.79" y="659" width="498.42" height="22" rx="11" />
       <!-- Legend -->
-      <circle class="fig-dot-em" cx="391.83" cy="453.5" r="2.6" />
-      <text class="fig-s" x="399.23" y="457">built</text>
-      <circle class="fig-line" cx="444.18" cy="453.5" r="2.3" />
-      <text class="fig-s" x="451.58" y="457">planned</text>
-      <rect class="fig-box" x="511.17" y="447" width="18" height="12" rx="3" stroke-dasharray="3 2" opacity="0.6" />
-      <text class="fig-s" x="535.17" y="457">future part</text>
+      <circle class="fig-dot-em" cx="779.07" cy="571.5" r="2.6" />
+      <text class="fig-s" x="786.47" y="575">built</text>
+      <circle class="fig-line" cx="827.41" cy="571.5" r="2.3" />
+      <text class="fig-s" x="834.81" y="575">planned</text>
+      <rect class="fig-box" x="890.41" y="565" width="18" height="12" rx="3" stroke-dasharray="3 1.99" opacity="0.5" />
+      <text class="fig-s" x="914.41" y="575">future part</text>
     </svg>
 
   </figure>
