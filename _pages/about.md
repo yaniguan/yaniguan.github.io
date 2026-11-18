@@ -406,6 +406,287 @@ latest_posts:
     don't expect.
   </p>
 
+  <div class="about-figure-bridge">
+    <p class="about-figure-kicker">Planned: a recursive self-improvement loop</p>
+    <p class="about-figure-hint-link">One lit path through a quiet field: the agent improves itself only through steps it can check. Hover or tap to trace it.</p>
+  </div>
+
+  <figure class="about-figure rsi-figure">
+    <style>
+      .rsi-figure .rsi-edge { fill: none; stroke: var(--about-map-line); stroke-width: 1; opacity: 0.3; }
+      .rsi-figure .rsi-node { fill: var(--about-map-line); stroke: none; opacity: 0.5; }
+      .rsi-figure .rsi-ring { fill: var(--global-bg-color); stroke: var(--global-theme-color); stroke-width: 1.8; }
+      .rsi-figure .rsi-core { fill: var(--global-theme-color); stroke: none; }
+      .rsi-figure .rsi-path { fill: none; stroke: var(--global-theme-color); stroke-width: 1.8; stroke-linecap: round; }
+      .rsi-figure .rsi-label { font-size: 12px; font-weight: 700; fill: var(--global-theme-color); }
+      .rsi-figure .rsi-sub { font-size: 10px; fill: var(--about-ink-muted); }
+      .rsi-figure .rsi-h { font-size: 9.5px; font-weight: 600; letter-spacing: 0.14em; fill: var(--about-ink-muted); }
+      .rsi-figure .rsi-arrow-head { fill: var(--global-theme-color); }
+      @media (hover: hover) and (prefers-reduced-motion: no-preference) {
+        .rsi-figure:hover .rsi-path { stroke-dasharray: 7 6; animation: rsi-trace 0.9s linear infinite; }
+      }
+      @keyframes rsi-trace { to { stroke-dashoffset: -13; } }
+    </style>
+    <svg class="rsi-loop" viewBox="0 0 972 420" role="img" aria-labelledby="rsi-fig-title rsi-fig-desc">
+      <title id="rsi-fig-title">Recursive self-improvement loop (planned)</title>
+      <desc id="rsi-fig-desc">
+        A quiet field of faint gray nodes and edges, with one highlighted path in the
+        accent color tracing a cycle: generate new data, verify it with the Lean checker,
+        SQL checks, protocol checks and simulation, keep only what passes, train on it,
+        expand the trusted regime where bench results confirm it, then generate again.
+        Planned.
+      </desc>
+      <defs>
+        <marker id="rsi-arrow" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+          <path class="rsi-arrow-head" d="M0,1 L9,5 L0,9 Z" />
+        </marker>
+      </defs>
+      <text class="rsi-h" x="24" y="24">RECURSIVE SELF-IMPROVEMENT — PLANNED</text>
+      <!-- faint neuron field (backdrop) -->
+      <g class="rsi-field">
+        <line class="rsi-edge" x1="614.8" y1="38.9" x2="586.7" y2="84.4" />
+        <line class="rsi-edge" x1="614.8" y1="38.9" x2="675.0" y2="46.3" />
+        <line class="rsi-edge" x1="278.1" y1="109.5" x2="315.5" y2="125.3" />
+        <line class="rsi-edge" x1="278.1" y1="109.5" x2="254.6" y2="66.6" />
+        <line class="rsi-edge" x1="704.5" y1="270.9" x2="717.9" y2="304.1" />
+        <line class="rsi-edge" x1="704.5" y1="270.9" x2="728.6" y2="222.0" />
+        <line class="rsi-edge" x1="848.4" y1="61.0" x2="818.3" y2="55.2" />
+        <line class="rsi-edge" x1="848.4" y1="61.0" x2="891.9" y2="71.1" />
+        <line class="rsi-edge" x1="413.9" y1="40.6" x2="360.5" y2="54.9" />
+        <line class="rsi-edge" x1="413.9" y1="40.6" x2="415.0" y2="105.4" />
+        <line class="rsi-edge" x1="226.0" y1="209.9" x2="244.5" y2="170.9" />
+        <line class="rsi-edge" x1="226.0" y1="209.9" x2="270.5" y2="258.2" />
+        <line class="rsi-edge" x1="48.5" y1="100.8" x2="24.5" y2="145.4" />
+        <line class="rsi-edge" x1="48.5" y1="100.8" x2="97.7" y2="112.9" />
+        <line class="rsi-edge" x1="624.5" y1="224.0" x2="584.1" y2="212.1" />
+        <line class="rsi-edge" x1="624.5" y1="224.0" x2="611.4" y2="159.9" />
+        <line class="rsi-edge" x1="771.9" y1="32.3" x2="818.3" y2="55.2" />
+        <line class="rsi-edge" x1="771.9" y1="32.3" x2="731.6" y2="75.7" />
+        <line class="rsi-edge" x1="338.4" y1="85.4" x2="366.0" y2="104.6" />
+        <line class="rsi-edge" x1="338.4" y1="85.4" x2="360.5" y2="54.9" />
+        <line class="rsi-edge" x1="908.5" y1="149.8" x2="920.7" y2="93.6" />
+        <line class="rsi-edge" x1="908.5" y1="149.8" x2="869.0" y2="193.4" />
+        <line class="rsi-edge" x1="109.7" y1="64.4" x2="148.1" y2="71.1" />
+        <line class="rsi-edge" x1="109.7" y1="64.4" x2="97.7" y2="112.9" />
+        <line class="rsi-edge" x1="373.8" y1="226.5" x2="399.5" y2="251.0" />
+        <line class="rsi-edge" x1="373.8" y1="226.5" x2="336.4" y2="239.4" />
+        <line class="rsi-edge" x1="820.2" y1="235.5" x2="791.4" y2="225.0" />
+        <line class="rsi-edge" x1="820.2" y1="235.5" x2="859.2" y2="224.2" />
+        <line class="rsi-edge" x1="675.0" y1="46.3" x2="687.1" y2="102.5" />
+        <line class="rsi-edge" x1="97.7" y1="112.9" x2="135.8" y2="110.0" />
+        <line class="rsi-edge" x1="611.4" y1="159.9" x2="610.0" y2="124.0" />
+        <line class="rsi-edge" x1="611.4" y1="159.9" x2="644.6" y2="136.8" />
+        <line class="rsi-edge" x1="366.0" y1="104.6" x2="415.0" y2="105.4" />
+        <line class="rsi-edge" x1="270.7" y1="363.4" x2="308.8" y2="350.0" />
+        <line class="rsi-edge" x1="270.7" y1="363.4" x2="218.9" y2="365.7" />
+        <line class="rsi-edge" x1="938.3" y1="257.8" x2="945.7" y2="211.4" />
+        <line class="rsi-edge" x1="938.3" y1="257.8" x2="892.9" y2="271.1" />
+        <line class="rsi-edge" x1="538.6" y1="273.7" x2="573.8" y2="270.4" />
+        <line class="rsi-edge" x1="538.6" y1="273.7" x2="584.1" y2="212.1" />
+        <line class="rsi-edge" x1="235.6" y1="41.4" x2="254.6" y2="66.6" />
+        <line class="rsi-edge" x1="235.6" y1="41.4" x2="222.0" y2="77.1" />
+        <line class="rsi-edge" x1="315.5" y1="125.3" x2="338.4" y2="85.4" />
+        <line class="rsi-edge" x1="218.9" y1="365.7" x2="169.5" y2="372.0" />
+        <line class="rsi-edge" x1="869.0" y1="193.4" x2="859.2" y2="224.2" />
+        <line class="rsi-edge" x1="869.0" y1="193.4" x2="888.4" y2="233.3" />
+        <line class="rsi-edge" x1="542.7" y1="123.5" x2="586.7" y2="84.4" />
+        <line class="rsi-edge" x1="542.7" y1="123.5" x2="610.0" y2="124.0" />
+        <line class="rsi-edge" x1="564.2" y1="349.6" x2="589.2" y2="381.5" />
+        <line class="rsi-edge" x1="564.2" y1="349.6" x2="637.0" y2="364.3" />
+        <line class="rsi-edge" x1="945.7" y1="211.4" x2="888.4" y2="233.3" />
+        <line class="rsi-edge" x1="125.3" y1="253.4" x2="89.6" y2="254.7" />
+        <line class="rsi-edge" x1="125.3" y1="253.4" x2="103.1" y2="203.0" />
+        <line class="rsi-edge" x1="82.7" y1="165.9" x2="103.1" y2="203.0" />
+        <line class="rsi-edge" x1="82.7" y1="165.9" x2="127.1" y2="184.8" />
+        <line class="rsi-edge" x1="921.3" y1="336.4" x2="908.6" y2="384.4" />
+        <line class="rsi-edge" x1="921.3" y1="336.4" x2="867.3" y2="339.9" />
+        <line class="rsi-edge" x1="34.6" y1="286.6" x2="88.0" y2="300.8" />
+        <line class="rsi-edge" x1="34.6" y1="286.6" x2="89.6" y2="254.7" />
+        <line class="rsi-edge" x1="270.5" y1="258.2" x2="302.1" y2="225.1" />
+        <line class="rsi-edge" x1="270.5" y1="258.2" x2="269.0" y2="309.1" />
+        <line class="rsi-edge" x1="127.1" y1="184.8" x2="103.1" y2="203.0" />
+        <line class="rsi-edge" x1="867.3" y1="339.9" x2="835.9" y2="326.1" />
+        <line class="rsi-edge" x1="867.3" y1="339.9" x2="835.3" y2="367.1" />
+        <line class="rsi-edge" x1="586.7" y1="84.4" x2="610.0" y2="124.0" />
+        <line class="rsi-edge" x1="728.6" y1="222.0" x2="688.6" y2="209.7" />
+        <line class="rsi-edge" x1="24.5" y1="145.4" x2="82.7" y2="165.9" />
+        <line class="rsi-edge" x1="42.0" y1="360.8" x2="93.5" y2="344.4" />
+        <line class="rsi-edge" x1="42.0" y1="360.8" x2="34.6" y2="286.6" />
+        <line class="rsi-edge" x1="835.9" y1="326.1" x2="835.3" y2="367.1" />
+        <line class="rsi-edge" x1="308.1" y1="50.6" x2="338.4" y2="85.4" />
+        <line class="rsi-edge" x1="308.1" y1="50.6" x2="360.5" y2="54.9" />
+        <line class="rsi-edge" x1="88.0" y1="300.8" x2="93.5" y2="344.4" />
+        <line class="rsi-edge" x1="88.0" y1="300.8" x2="89.6" y2="254.7" />
+        <line class="rsi-edge" x1="731.6" y1="75.7" x2="687.1" y2="102.5" />
+        <line class="rsi-edge" x1="463.2" y1="225.7" x2="428.8" y2="214.3" />
+        <line class="rsi-edge" x1="463.2" y1="225.7" x2="444.4" y2="180.6" />
+        <line class="rsi-edge" x1="415.0" y1="105.4" x2="449.3" y2="138.6" />
+        <line class="rsi-edge" x1="428.8" y1="214.3" x2="444.4" y2="180.6" />
+        <line class="rsi-edge" x1="135.8" y1="110.0" x2="148.1" y2="71.1" />
+        <line class="rsi-edge" x1="336.4" y1="239.4" x2="302.1" y2="225.1" />
+        <line class="rsi-edge" x1="222.0" y1="77.1" x2="254.6" y2="66.6" />
+        <line class="rsi-edge" x1="888.4" y1="233.3" x2="859.2" y2="224.2" />
+        <line class="rsi-edge" x1="888.4" y1="233.3" x2="892.9" y2="271.1" />
+        <line class="rsi-edge" x1="933.4" y1="65.0" x2="920.7" y2="93.6" />
+        <line class="rsi-edge" x1="933.4" y1="65.0" x2="891.9" y2="71.1" />
+        <line class="rsi-edge" x1="396.0" y1="150.8" x2="415.0" y2="105.4" />
+        <line class="rsi-edge" x1="396.0" y1="150.8" x2="449.3" y2="138.6" />
+        <line class="rsi-edge" x1="374.2" y1="380.8" x2="308.8" y2="350.0" />
+        <line class="rsi-edge" x1="269.0" y1="309.1" x2="316.1" y2="297.7" />
+        <line class="rsi-edge" x1="444.4" y1="180.6" x2="449.3" y2="138.6" />
+        <line class="rsi-edge" x1="908.6" y1="384.4" x2="946.6" y2="384.6" />
+        <line class="rsi-edge" x1="573.8" y1="270.4" x2="584.1" y2="212.1" />
+        <line class="rsi-edge" x1="846.6" y1="117.7" x2="848.4" y2="61.0" />
+        <line class="rsi-edge" x1="846.6" y1="117.7" x2="891.9" y2="71.1" />
+        <line class="rsi-edge" x1="244.5" y1="170.9" x2="309.8" y2="175.4" />
+        <line class="rsi-edge" x1="644.6" y1="136.8" x2="610.0" y2="124.0" />
+        <line class="rsi-edge" x1="316.1" y1="297.7" x2="308.8" y2="350.0" />
+        <line class="rsi-edge" x1="946.6" y1="384.6" x2="921.3" y2="336.4" />
+        <line class="rsi-edge" x1="589.2" y1="381.5" x2="637.0" y2="364.3" />
+        <line class="rsi-edge" x1="687.1" y1="102.5" x2="697.2" y2="141.7" />
+        <line class="rsi-edge" x1="744.8" y1="344.8" x2="717.9" y2="304.1" />
+        <line class="rsi-edge" x1="399.5" y1="251.0" x2="428.8" y2="214.3" />
+        <line class="rsi-edge" x1="891.9" y1="71.1" x2="920.7" y2="93.6" />
+        <line class="rsi-edge" x1="697.2" y1="141.7" x2="644.6" y2="136.8" />
+        <line class="rsi-edge" x1="584.1" y1="212.1" x2="611.4" y2="159.9" />
+        <line class="rsi-edge" x1="360.5" y1="54.9" x2="366.0" y2="104.6" />
+        <line class="rsi-edge" x1="309.8" y1="175.4" x2="302.1" y2="225.1" />
+        <line class="rsi-edge" x1="309.8" y1="175.4" x2="315.5" y2="125.3" />
+        <line class="rsi-edge" x1="688.6" y1="209.7" x2="704.5" y2="270.9" />
+        <line class="rsi-edge" x1="791.4" y1="225.0" x2="728.6" y2="222.0" />
+        <circle class="rsi-node" cx="614.8" cy="38.9" r="2.7" />
+        <circle class="rsi-node" cx="278.1" cy="109.5" r="2.5" />
+        <circle class="rsi-node" cx="704.5" cy="270.9" r="2.2" />
+        <circle class="rsi-node" cx="848.4" cy="61.0" r="1.9" />
+        <circle class="rsi-node" cx="413.9" cy="40.6" r="1.9" />
+        <circle class="rsi-node" cx="226.0" cy="209.9" r="2.4" />
+        <circle class="rsi-node" cx="48.5" cy="100.8" r="2.5" />
+        <circle class="rsi-node" cx="624.5" cy="224.0" r="2.2" />
+        <circle class="rsi-node" cx="771.9" cy="32.3" r="2.4" />
+        <circle class="rsi-node" cx="338.4" cy="85.4" r="1.9" />
+        <circle class="rsi-node" cx="908.5" cy="149.8" r="1.7" />
+        <circle class="rsi-node" cx="109.7" cy="64.4" r="1.9" />
+        <circle class="rsi-node" cx="373.8" cy="226.5" r="1.9" />
+        <circle class="rsi-node" cx="820.2" cy="235.5" r="2.0" />
+        <circle class="rsi-node" cx="675.0" cy="46.3" r="2.2" />
+        <circle class="rsi-node" cx="97.7" cy="112.9" r="1.8" />
+        <circle class="rsi-node" cx="611.4" cy="159.9" r="1.9" />
+        <circle class="rsi-node" cx="366.0" cy="104.6" r="2.4" />
+        <circle class="rsi-node" cx="270.7" cy="363.4" r="2.4" />
+        <circle class="rsi-node" cx="938.3" cy="257.8" r="1.7" />
+        <circle class="rsi-node" cx="538.6" cy="273.7" r="2.1" />
+        <circle class="rsi-node" cx="235.6" cy="41.4" r="2.3" />
+        <circle class="rsi-node" cx="315.5" cy="125.3" r="2.1" />
+        <circle class="rsi-node" cx="218.9" cy="365.7" r="1.8" />
+        <circle class="rsi-node" cx="869.0" cy="193.4" r="2.1" />
+        <circle class="rsi-node" cx="542.7" cy="123.5" r="2.7" />
+        <circle class="rsi-node" cx="564.2" cy="349.6" r="2.3" />
+        <circle class="rsi-node" cx="945.7" cy="211.4" r="2.4" />
+        <circle class="rsi-node" cx="125.3" cy="253.4" r="2.6" />
+        <circle class="rsi-node" cx="82.7" cy="165.9" r="2.5" />
+        <circle class="rsi-node" cx="921.3" cy="336.4" r="2.1" />
+        <circle class="rsi-node" cx="34.6" cy="286.6" r="1.6" />
+        <circle class="rsi-node" cx="270.5" cy="258.2" r="2.0" />
+        <circle class="rsi-node" cx="127.1" cy="184.8" r="2.5" />
+        <circle class="rsi-node" cx="867.3" cy="339.9" r="2.6" />
+        <circle class="rsi-node" cx="586.7" cy="84.4" r="2.7" />
+        <circle class="rsi-node" cx="728.6" cy="222.0" r="2.1" />
+        <circle class="rsi-node" cx="24.5" cy="145.4" r="2.5" />
+        <circle class="rsi-node" cx="42.0" cy="360.8" r="2.3" />
+        <circle class="rsi-node" cx="835.9" cy="326.1" r="2.3" />
+        <circle class="rsi-node" cx="308.1" cy="50.6" r="1.9" />
+        <circle class="rsi-node" cx="835.3" cy="367.1" r="1.9" />
+        <circle class="rsi-node" cx="103.1" cy="203.0" r="2.1" />
+        <circle class="rsi-node" cx="88.0" cy="300.8" r="1.6" />
+        <circle class="rsi-node" cx="731.6" cy="75.7" r="2.0" />
+        <circle class="rsi-node" cx="463.2" cy="225.7" r="2.4" />
+        <circle class="rsi-node" cx="415.0" cy="105.4" r="2.1" />
+        <circle class="rsi-node" cx="428.8" cy="214.3" r="1.8" />
+        <circle class="rsi-node" cx="135.8" cy="110.0" r="2.2" />
+        <circle class="rsi-node" cx="336.4" cy="239.4" r="1.8" />
+        <circle class="rsi-node" cx="89.6" cy="254.7" r="2.3" />
+        <circle class="rsi-node" cx="818.3" cy="55.2" r="1.6" />
+        <circle class="rsi-node" cx="222.0" cy="77.1" r="2.1" />
+        <circle class="rsi-node" cx="888.4" cy="233.3" r="2.3" />
+        <circle class="rsi-node" cx="933.4" cy="65.0" r="1.6" />
+        <circle class="rsi-node" cx="396.0" cy="150.8" r="2.4" />
+        <circle class="rsi-node" cx="374.2" cy="380.8" r="1.8" />
+        <circle class="rsi-node" cx="269.0" cy="309.1" r="2.2" />
+        <circle class="rsi-node" cx="444.4" cy="180.6" r="1.7" />
+        <circle class="rsi-node" cx="908.6" cy="384.4" r="2.1" />
+        <circle class="rsi-node" cx="169.5" cy="372.0" r="1.9" />
+        <circle class="rsi-node" cx="573.8" cy="270.4" r="2.0" />
+        <circle class="rsi-node" cx="846.6" cy="117.7" r="2.5" />
+        <circle class="rsi-node" cx="244.5" cy="170.9" r="2.1" />
+        <circle class="rsi-node" cx="644.6" cy="136.8" r="2.5" />
+        <circle class="rsi-node" cx="316.1" cy="297.7" r="2.6" />
+        <circle class="rsi-node" cx="946.6" cy="384.6" r="1.9" />
+        <circle class="rsi-node" cx="589.2" cy="381.5" r="1.7" />
+        <circle class="rsi-node" cx="637.0" cy="364.3" r="1.6" />
+        <circle class="rsi-node" cx="148.1" cy="71.1" r="2.2" />
+        <circle class="rsi-node" cx="687.1" cy="102.5" r="2.8" />
+        <circle class="rsi-node" cx="610.0" cy="124.0" r="2.0" />
+        <circle class="rsi-node" cx="93.5" cy="344.4" r="2.4" />
+        <circle class="rsi-node" cx="859.2" cy="224.2" r="2.5" />
+        <circle class="rsi-node" cx="308.8" cy="350.0" r="2.4" />
+        <circle class="rsi-node" cx="254.6" cy="66.6" r="2.5" />
+        <circle class="rsi-node" cx="744.8" cy="344.8" r="2.7" />
+        <circle class="rsi-node" cx="399.5" cy="251.0" r="1.8" />
+        <circle class="rsi-node" cx="449.3" cy="138.6" r="1.6" />
+        <circle class="rsi-node" cx="891.9" cy="71.1" r="1.8" />
+        <circle class="rsi-node" cx="920.7" cy="93.6" r="1.8" />
+        <circle class="rsi-node" cx="697.2" cy="141.7" r="2.4" />
+        <circle class="rsi-node" cx="584.1" cy="212.1" r="2.3" />
+        <circle class="rsi-node" cx="360.5" cy="54.9" r="1.9" />
+        <circle class="rsi-node" cx="309.8" cy="175.4" r="2.4" />
+        <circle class="rsi-node" cx="892.9" cy="271.1" r="2.5" />
+        <circle class="rsi-node" cx="302.1" cy="225.1" r="1.8" />
+        <circle class="rsi-node" cx="717.9" cy="304.1" r="2.3" />
+        <circle class="rsi-node" cx="688.6" cy="209.7" r="2.5" />
+        <circle class="rsi-node" cx="791.4" cy="225.0" r="1.7" />
+      </g>
+      <!-- highlighted RSI loop -->
+      <g class="rsi-loop-path">
+        <path class="rsi-path" d="M511.3,75.9 L752.7,132.1" marker-end="url(#rsi-arrow)" />
+        <path class="rsi-path" d="M778.0,164.0 L778.0,256.0" marker-end="url(#rsi-arrow)" />
+        <path class="rsi-path" d="M752.7,287.9 L511.3,344.1" marker-end="url(#rsi-arrow)" />
+        <path class="rsi-path" d="M460.7,344.1 L219.3,287.9" marker-end="url(#rsi-arrow)" />
+        <path class="rsi-path" d="M188,256 C110,230 100,150 460.4,74.7" marker-end="url(#rsi-arrow)" />
+      </g>
+      <!-- lit nodes -->
+      <g class="rsi-nodes">
+        <circle class="rsi-ring" cx="486" cy="70" r="11" /><circle class="rsi-core" cx="486" cy="70" r="3" />
+        <text class="rsi-label" x="486" y="42" text-anchor="middle">Generate</text>
+        <text class="rsi-sub" x="486" y="55" text-anchor="middle">new data</text>
+
+        <circle class="rsi-ring" cx="778" cy="138" r="11" /><circle class="rsi-core" cx="778" cy="138" r="3" />
+        <text class="rsi-label" x="796" y="135" text-anchor="start">Verify</text>
+        <text class="rsi-sub" x="796" y="149" text-anchor="start">Lean · SQL · protocol · sim</text>
+
+        <circle class="rsi-ring" cx="778" cy="282" r="11" /><circle class="rsi-core" cx="778" cy="282" r="3" />
+        <text class="rsi-label" x="796" y="279" text-anchor="start">Keep</text>
+        <text class="rsi-sub" x="796" y="293" text-anchor="start">verified only</text>
+
+        <circle class="rsi-ring" cx="486" cy="350" r="11" /><circle class="rsi-core" cx="486" cy="350" r="3" />
+        <text class="rsi-label" x="486" y="382" text-anchor="middle">Train</text>
+        <text class="rsi-sub" x="486" y="396" text-anchor="middle">SFT · GRPO on what passed</text>
+
+        <circle class="rsi-ring" cx="194" cy="282" r="11" /><circle class="rsi-core" cx="194" cy="282" r="3" />
+        <text class="rsi-label" x="176" y="279" text-anchor="end">Expand truth regime</text>
+        <text class="rsi-sub" x="176" y="293" text-anchor="end">where bench confirms</text>
+      </g>
+    </svg>
+
+  </figure>
+
+  <p class="about-figure-hint">Scroll the diagram sideways →</p>
+
+  <p class="about-figure-caption">
+    Planned. The agent writes new data, keeps only steps that pass the Lean checker, SQL and
+    protocol checks and simulation, trains on what it kept, and widens the trusted regime only
+    where bench results confirm it — then repeats. A human signs off each round.
+  </p>
+
   <script>
     (function () {
       var els = document.querySelectorAll(".about-figure [data-part]");
