@@ -278,6 +278,173 @@ latest_posts:
 </section>
 
 <section class="about-section">
+  <h2 class="about-section-title">Vision: a lab agent that understands chemistry</h2>
+
+  <figure class="about-figure">
+    <svg viewBox="0 0 960 492" role="img" aria-labelledby="lab-fig-title lab-fig-desc">
+      <title id="lab-fig-title">A lab agent that understands chemistry</title>
+      <desc id="lab-fig-desc">
+        A line drawing of a robot whose parts map to the work. Brain: YLM, with molecular
+        memory over text, SMILES and 3D, and planned protocol QA, step debugging, experiment
+        design and workflow writing. Ears, planned: protocols, papers, lab notes, scientist
+        instructions and instrument signals. Eyes: OCSR reads structures from literature
+        figures and checks itself by model consensus; spectra, plots and a lab camera are
+        planned. Hands, planned: robot arm, pipetting and liquid-handler scripts. First
+        principles: quantum chemistry as the teacher, later distilled into small models.
+        Physics intuition: WignerFlow learned MD and force fields gated by past failures.
+        Body: a bounded harness that plans, schedules and logs jobs behind a default-deny
+        gate. Feet, planned: short cloud training bursts, then quantized models on the edge.
+        Filled marks are built; hollow marks and dashed boxes are planned.
+      </desc>
+
+      <!-- Robot -->
+      <path class="fig-route" d="M480,38 V24" />
+      <circle class="fig-dot" cx="480" cy="16" r="3" />
+      <ellipse class="fig-route" cx="480" cy="16" rx="13" ry="5" transform="rotate(25 480 16)" />
+      <ellipse class="fig-route" cx="480" cy="16" rx="13" ry="5" transform="rotate(-25 480 16)" />
+      <path class="fig-route" d="M434,84 A46,46 0 0 1 526,84" />
+      <path class="fig-route" d="M478.5,50 C472,44 460,45 456,53 C448,55 447,68 454,72 C457,79 471,80 478.5,75 Z" />
+      <path class="fig-route" d="M481.5,50 C488,44 500,45 504,53 C512,55 513,68 506,72 C503,79 489,80 481.5,75 Z" />
+      <path class="fig-route" d="M469,55 Q463,60 469,65 M460,66 H466 M491,55 Q497,60 491,65 M500,66 H494" />
+      <rect class="fig-route" x="414" y="84" width="132" height="96" rx="22" />
+      <rect class="fig-route" x="432" y="102" width="96" height="52" rx="16" />
+      <circle class="fig-route" cx="459" cy="124" r="8" />
+      <circle class="fig-route" cx="501" cy="124" r="8" />
+      <circle class="fig-dot" cx="459" cy="124" r="2.8" />
+      <circle class="fig-dot" cx="501" cy="124" r="2.8" />
+      <path class="fig-route" d="M471,141 Q480,146 489,141" />
+      <rect class="fig-route" x="402" y="112" width="12" height="36" rx="6" />
+      <path class="fig-route" d="M408,124 V136" />
+      <rect class="fig-route" x="546" y="112" width="12" height="36" rx="6" />
+      <path class="fig-route" d="M552,124 V136" />
+      <path class="fig-route" d="M464,180 V194 M496,180 V194" />
+      <rect class="fig-route" x="408" y="194" width="144" height="124" rx="22" />
+      <circle class="fig-route" cx="480" cy="234" r="20" />
+      <path class="fig-route" d="M467,234 C471,222 475,222 478,234 S485,246 488,234 S492,226 494,232" />
+      <rect class="fig-route" x="440" y="268" width="80" height="32" rx="7" />
+      <path class="fig-route" d="M452,279 H488 M452,289 H480" />
+      <circle class="fig-dot" cx="504" cy="284" r="3" />
+      <path class="fig-route" d="M408,212 H388" />
+      <rect class="fig-route" x="372" y="204" width="16" height="96" rx="8" />
+      <rect class="fig-route" x="371" y="300" width="18" height="9" rx="3" />
+      <path class="fig-route" d="M552,212 H572" />
+      <rect class="fig-route" x="572" y="204" width="16" height="96" rx="8" />
+      <rect class="fig-route" x="571" y="300" width="18" height="9" rx="3" />
+      <path class="fig-route" d="M374,309 V318 Q374,324 370,328 M386,309 V318 Q386,324 390,328" />
+      <path class="fig-route" d="M574,309 V320 M586,309 V320" />
+      <path class="fig-route" d="M576,314 V324 L565,348 Q563,352 568,352 H592 Q597,352 595,348 L584,324 V314" />
+      <path class="fig-route" d="M569,340 H591" />
+      <rect class="fig-route" x="444" y="318" width="16" height="70" rx="8" />
+      <path class="fig-route" d="M432,404 V398 Q432,388 442,388 H450 Q460,388 460,398 V404 Z" />
+      <rect class="fig-route" x="500" y="318" width="16" height="70" rx="8" />
+      <path class="fig-route" d="M500,404 V398 Q500,388 510,388 H518 Q528,388 528,398 V404 Z" />
+      <path class="fig-line-soft" d="M350,412 H610" />
+
+      <!-- Leaders -->
+      <path class="fig-line-soft" d="M296,57 H326 L446,64" />
+      <circle class="fig-dot-em" cx="446" cy="64" r="2.4" />
+      <path class="fig-line-soft" d="M296,171 H318 L402,136" />
+      <circle class="fig-dot" cx="402" cy="136" r="2.4" />
+      <path class="fig-line-soft" d="M296,285 H356 V192 L454,130" />
+      <circle class="fig-dot-em" cx="454" cy="130" r="2.4" />
+      <path class="fig-line-soft" d="M296,399 H318 L370,328" />
+      <circle class="fig-dot" cx="370" cy="328" r="2.4" />
+      <path class="fig-line-soft" d="M664,57 H642 L493,16" />
+      <circle class="fig-dot-em" cx="493" cy="16" r="2.4" />
+      <path class="fig-line-soft" d="M664,171 H624 L494,220" />
+      <circle class="fig-dot-em" cx="494" cy="220" r="2.4" />
+      <path class="fig-line-soft" d="M664,285 H640 L520,290" />
+      <circle class="fig-dot-em" cx="520" cy="290" r="2.4" />
+      <path class="fig-line-soft" d="M664,399 H642 L528,398" />
+      <circle class="fig-dot" cx="528" cy="398" r="2.4" />
+
+      <rect class="fig-box" x="24" y="24" width="272" height="102" rx="8" />
+      <text class="fig-h" x="40" y="44">BRAIN</text>
+      <text class="fig-t" x="40" y="61">YLM</text>
+      <circle class="fig-dot-em" cx="43" cy="76.5" r="2.6" />
+      <text class="fig-s" x="53" y="80">Molecular memory: text, SMILES, 3D</text>
+      <circle class="fig-line" cx="43" cy="92.5" r="2.4" />
+      <text class="fig-s" x="53" y="96">Protocol QA and step debugging</text>
+      <circle class="fig-line" cx="43" cy="108.5" r="2.4" />
+      <text class="fig-s" x="53" y="112">Designs experiments, writes workflows</text>
+      <rect class="fig-box" x="24" y="138" width="272" height="102" rx="8" stroke-dasharray="4 3" />
+      <text class="fig-h" x="40" y="158">EARS</text>
+      <text class="fig-t" x="40" y="175">Lab language</text>
+      <circle class="fig-line" cx="43" cy="190.5" r="2.4" />
+      <text class="fig-s" x="53" y="194">Protocols, papers and lab notes</text>
+      <circle class="fig-line" cx="43" cy="206.5" r="2.4" />
+      <text class="fig-s" x="53" y="210">Scientist instructions by voice or chat</text>
+      <circle class="fig-line" cx="43" cy="222.5" r="2.4" />
+      <text class="fig-s" x="53" y="226">Instrument signals and alarms</text>
+      <rect class="fig-box" x="24" y="252" width="272" height="102" rx="8" />
+      <text class="fig-h" x="40" y="272">EYES</text>
+      <text class="fig-t" x="40" y="289">OCSR</text>
+      <circle class="fig-dot-em" cx="43" cy="304.5" r="2.6" />
+      <text class="fig-s" x="53" y="308">Structures from literature figures</text>
+      <circle class="fig-dot-em" cx="43" cy="320.5" r="2.6" />
+      <text class="fig-s" x="53" y="324">Self-checks by model consensus</text>
+      <circle class="fig-line" cx="43" cy="336.5" r="2.4" />
+      <text class="fig-s" x="53" y="340">Spectra, plots and lab camera</text>
+      <rect class="fig-box" x="24" y="366" width="272" height="86" rx="8" stroke-dasharray="4 3" />
+      <text class="fig-h" x="40" y="386">HANDS</text>
+      <text class="fig-t" x="40" y="403">Instruments</text>
+      <circle class="fig-line" cx="43" cy="418.5" r="2.4" />
+      <text class="fig-s" x="53" y="422">Robot arm and pipetting</text>
+      <circle class="fig-line" cx="43" cy="434.5" r="2.4" />
+      <text class="fig-s" x="53" y="438">Writes liquid-handler scripts</text>
+      <rect class="fig-box" x="664" y="24" width="272" height="86" rx="8" />
+      <text class="fig-h" x="680" y="44">FIRST PRINCIPLES</text>
+      <text class="fig-t" x="680" y="61">DFT teacher</text>
+      <circle class="fig-dot-em" cx="683" cy="76.5" r="2.6" />
+      <text class="fig-s" x="693" y="80">Quantum chemistry as ground truth</text>
+      <circle class="fig-line" cx="683" cy="92.5" r="2.4" />
+      <text class="fig-s" x="693" y="96">Distilled into small, fast students</text>
+      <rect class="fig-box" x="664" y="138" width="272" height="86" rx="8" />
+      <text class="fig-h" x="680" y="158">PHYSICS INTUITION</text>
+      <text class="fig-t" x="680" y="175">WignerFlow</text>
+      <circle class="fig-dot-em" cx="683" cy="190.5" r="2.6" />
+      <text class="fig-s" x="693" y="194">Learned MD as a cheap surrogate</text>
+      <circle class="fig-dot-em" cx="683" cy="206.5" r="2.6" />
+      <text class="fig-s" x="693" y="210">Force fields gated by past failures</text>
+      <rect class="fig-box" x="664" y="252" width="272" height="86" rx="8" />
+      <text class="fig-h" x="680" y="272">BODY</text>
+      <text class="fig-t" x="680" y="289">Bounded harness</text>
+      <circle class="fig-dot-em" cx="683" cy="304.5" r="2.6" />
+      <text class="fig-s" x="693" y="308">Plans, schedules and logs every job</text>
+      <circle class="fig-dot-em" cx="683" cy="320.5" r="2.6" />
+      <text class="fig-s" x="693" y="324">Default-deny gate before any run</text>
+      <rect class="fig-box" x="664" y="366" width="272" height="86" rx="8" stroke-dasharray="4 3" />
+      <text class="fig-h" x="680" y="386">FEET</text>
+      <text class="fig-t" x="680" y="403">Low-cost deployment</text>
+      <circle class="fig-line" cx="683" cy="418.5" r="2.4" />
+      <text class="fig-s" x="693" y="422">Train in short cloud bursts</text>
+      <circle class="fig-line" cx="683" cy="434.5" r="2.4" />
+      <text class="fig-s" x="693" y="438">Quantize and run on the edge</text>
+
+      <!-- Legend -->
+      <circle class="fig-dot-em" cx="304" cy="474.5" r="2.6" />
+      <text class="fig-s" x="312" y="478">built</text>
+      <circle class="fig-line" cx="356" cy="474.5" r="2.4" />
+      <text class="fig-s" x="364" y="478">planned</text>
+      <rect class="fig-box" x="424" y="468" width="18" height="12" rx="3" />
+      <text class="fig-s" x="448" y="478">existing part</text>
+      <rect class="fig-box" x="530" y="468" width="18" height="12" rx="3" stroke-dasharray="3 2" />
+      <text class="fig-s" x="554" y="478">future part</text>
+    </svg>
+
+  </figure>
+
+  <p class="about-figure-hint">Scroll the diagram sideways →</p>
+
+  <p class="about-figure-caption">
+    Today's self-driving labs mostly train an athlete to drill the same moves. A lab agent that
+    understands the chemistry behind each protocol step could plan better and find strategies people
+    don't expect.
+  </p>
+
+</section>
+
+<section class="about-section">
   <h2 class="about-section-title">News</h2>
   {% include news.liquid limit=true %}
   <p class="about-more">
