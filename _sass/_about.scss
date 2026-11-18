@@ -1037,3 +1037,73 @@ html[data-theme="dark"] .about-page {
 .about-page.list-page .publications ol.bibliography > li:nth-child(n + 6) {
   display: block;
 }
+
+/* -----------------------------------------------------------------------------
+ * Linked figures: the research map and the lab agent share data-part hooks.
+ * Hovering or tapping a part lights it up in both.
+ * -------------------------------------------------------------------------- */
+
+.about-figure-bridge {
+  position: relative;
+  margin: 0 0 1rem;
+  padding-top: 1.6rem;
+  text-align: center;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    height: 1.1rem;
+    border-left: 1.2px dashed var(--about-fig-line);
+  }
+}
+
+.about-figure-kicker {
+  margin: 0;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--about-ink-muted);
+}
+
+.about-figure-hint-link {
+  margin: 0.25rem 0 0;
+  font-size: 0.75rem;
+  color: var(--about-ink-muted);
+}
+
+.about-figure {
+  [data-part] {
+    cursor: pointer;
+    transition:
+      stroke 0.15s ease,
+      opacity 0.15s ease;
+  }
+
+  .lab-hit {
+    fill: none;
+    opacity: 0;
+    pointer-events: all;
+  }
+
+  .lab-hit.is-hot,
+  .fig-line.is-hot {
+    opacity: 1;
+  }
+
+  .fig-box.is-hot,
+  .fig-box-em.is-hot,
+  .fig-panel.is-hot,
+  .fig-line.is-hot,
+  g.is-hot .fig-route {
+    stroke: var(--global-theme-color);
+  }
+
+  .fig-box.is-hot,
+  .fig-box-em.is-hot,
+  .fig-panel.is-hot {
+    stroke-width: 1.8;
+  }
+}
