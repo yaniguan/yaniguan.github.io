@@ -1082,6 +1082,11 @@ html[data-theme="dark"] .about-page {
       opacity 0.15s ease;
   }
 
+  // Labels sit on top of the boxes; let the pointer reach the box underneath.
+  svg:has([data-part]) text {
+    pointer-events: none;
+  }
+
   .lab-hit {
     fill: none;
     opacity: 0;
