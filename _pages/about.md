@@ -341,22 +341,22 @@ latest_posts:
       <circle class="fig-dot-em" cx="485" cy="37.5" r="2.6" />
       </g>
       <g data-part="feet">
-      <path class="fig-line" d="M485,446.5 V376" stroke-dasharray="3 3.14" />
-      <path class="fig-route" d="M463,463.5 h-5" />
-      <path class="fig-route" d="M475,451.5 v-5" />
-      <path class="fig-route" d="M463,473.5 h-5" />
-      <path class="fig-route" d="M485,451.5 v-5" />
-      <path class="fig-route" d="M463,483.5 h-5" />
-      <path class="fig-route" d="M495,451.5 v-5" />
-      <path class="fig-route" d="M507,463.5 h5" />
-      <path class="fig-route" d="M475,495.5 v5" />
-      <path class="fig-route" d="M507,473.5 h5" />
-      <path class="fig-route" d="M485,495.5 v5" />
-      <path class="fig-route" d="M507,483.5 h5" />
-      <path class="fig-route" d="M495,495.5 v5" />
-      <rect class="fig-box" x="463" y="451.5" width="44" height="44" rx="6" />
-      <rect class="fig-route" x="463" y="451.5" width="44" height="44" rx="6" />
-      <text class="fig-h" x="473.41" y="476.9">GPU</text>
+      <path class="fig-line" d="M485,396 V376" stroke-dasharray="3 2.67" />
+      <path class="fig-route" d="M463,413 h-5" />
+      <path class="fig-route" d="M475,401 v-5" />
+      <path class="fig-route" d="M463,423 h-5" />
+      <path class="fig-route" d="M485,401 v-5" />
+      <path class="fig-route" d="M463,433 h-5" />
+      <path class="fig-route" d="M495,401 v-5" />
+      <path class="fig-route" d="M507,413 h5" />
+      <path class="fig-route" d="M475,445 v5" />
+      <path class="fig-route" d="M507,423 h5" />
+      <path class="fig-route" d="M485,445 v5" />
+      <path class="fig-route" d="M507,433 h5" />
+      <path class="fig-route" d="M495,445 v5" />
+      <rect class="fig-box" x="463" y="401" width="44" height="44" rx="6" />
+      <rect class="fig-route" x="463" y="401" width="44" height="44" rx="6" />
+      <text class="fig-h" x="473.41" y="426.4">GPU</text>
       </g>
 
       <!-- Leaders -->
@@ -364,23 +364,23 @@ latest_posts:
       <path class="fig-line" data-part="eyes" d="M230,154.5 H262 A8,8 0 0 0 270,146.5 V114 A8,8 0 0 1 278,106 H464" opacity="0.6" />
       <path class="fig-line" data-part="ears" d="M230,271.5 H278 A8,8 0 0 0 286,263.5 V131 A8,8 0 0 1 294,123 H413.5" opacity="0.6" />
       <path class="fig-line" data-part="hands" d="M230,372.5 H234 A8,8 0 0 0 242,364.5 V312 A8,8 0 0 1 250,304 H302" opacity="0.6" />
-      <path class="fig-line" data-part="touch" d="M230,473.5 H248 A8,8 0 0 0 256,465.5 V328.5 A8,8 0 0 1 264,320.5 H307.6" opacity="0.6" />
+      <path class="fig-line" data-part="touch" d="M230,473.5 H248 A8,8 0 0 0 256,465.5 V328.5 A8,8 0 0 1 264,320.5 H305" opacity="0.6" />
       <path class="fig-line" data-part="first" d="M740,37.5 H499" opacity="0.6" />
       <path class="fig-line" data-part="physics" d="M740,154.5 H668 A8,8 0 0 0 660,162.5 V169 A8,8 0 0 1 652,177 H490" opacity="0.6" />
       <path class="fig-line" data-part="body" d="M740,271.5 H722 A8,8 0 0 1 714,263.5 V224 A8,8 0 0 0 706,216 H494" opacity="0.6" />
       <path class="fig-line" data-part="plan" d="M740,372.5 H702 A8,8 0 0 1 694,364.5 V315.02 A8,8 0 0 0 686,307.02 H672.3" opacity="0.6" />
-      <path class="fig-line" data-part="feet" d="M740,473.5 H512" opacity="0.6" />
+      <path class="fig-line" data-part="feet" d="M740,473.5 H608 A8,8 0 0 1 600,465.5 V431 A8,8 0 0 0 592,423 H512" opacity="0.6" />
 
       <circle class="fig-dot-em" data-part="brain" cx="468.55" cy="82" r="2.6" />
       <circle class="fig-dot-em" data-part="eyes" cx="464" cy="106" r="2.6" />
       <circle class="fig-box" data-part="ears" cx="413.5" cy="123" r="2.6" />
       <circle class="fig-box" data-part="hands" cx="302" cy="304" r="2.6" />
-      <circle class="fig-box" data-part="touch" cx="307.6" cy="320.5" r="2.6" />
+      <circle class="fig-box" data-part="touch" cx="305" cy="320.5" r="2.6" />
       <circle class="fig-dot-em" data-part="first" cx="499" cy="37.5" r="2.6" />
       <circle class="fig-dot-em" data-part="physics" cx="490" cy="177" r="2.6" />
       <circle class="fig-dot-em" data-part="body" cx="494" cy="216" r="2.6" />
       <circle class="fig-box" data-part="plan" cx="672.3" cy="307.02" r="2.6" />
-      <circle class="fig-box" data-part="feet" cx="512" cy="473.5" r="2.6" />
+      <circle class="fig-box" data-part="feet" cx="512" cy="423" r="2.6" />
 
       <rect class="fig-dot" x="10" y="20" width="220" height="105" rx="10" opacity="0.05" />
       <text class="fig-h" x="26" y="41">BRAIN</text>
