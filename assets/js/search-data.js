@@ -128,6 +128,9 @@ ninja.data = [{
           section: "News",},{id: "news-defended-my-ph-d-at-ucla-download-the-slides-pdf",
           title: 'Defended my Ph.D. at UCLA. Download the slides (PDF)',
           description: "",
+          section: "News",},{id: "news-excited-to-share-that-i-will-join-medra-as-a-member-of-technical-staff-in-january-2027",
+          title: 'Excited to share that I will join Medra as a Member of Technical...',
+          description: "",
           section: "News",},{
         id: 'social-email',
         title: 'email',
