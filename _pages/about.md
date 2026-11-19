@@ -2,7 +2,7 @@
 layout: about
 title: About
 permalink: /
-subtitle: Ph.D., UCLA, December 2026 · Authorized to work in the U.S. (OPT); will not require visa sponsorship now or in the future
+subtitle: Incoming Member of Technical Staff at Medra, January 2027 · Ph.D., UCLA, 2026
 tagline: >
   I build symmetry-aware neural networks for chemistry — E(3)-equivariant models
   over atoms and trajectories, steerable encoders over molecule images, language
