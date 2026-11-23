@@ -1,0 +1,10 @@
+{%- comment -%}
+  One line of publication stats. Citations and h-index come from
+  _data/scholar.yml; the paper count is the number of @article entries in
+  papers.bib, so it follows the list on /publications/.
+{%- endcomment -%}
+<p class="lst-meta pub-stats">
+  {{ site.data.scholar.citations }} citations · {% bibliography_count --query @article %} publications · h-index
+  {{ site.data.scholar.h_index }} —
+  <a href="https://scholar.google.com/citations?user={{ site.data.socials.scholar_userid }}">Google Scholar</a>
+</p>
