@@ -76,6 +76,11 @@ layout: default
       </section>
     {% endif %}
 
+    <!-- Visitor map -->
+    {% if site.data.visitors %}
+      {% include visitor_map.liquid %}
+    {% endif %}
+
     {% comment %}
       News is not rendered here: the page places it itself, between Research and
       Experience. `page.announcements.limit` still drives how many rows show.

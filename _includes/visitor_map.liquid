@@ -1,0 +1,40 @@
+{%- comment -%}
+  World map of visitors by country. Counts come from _data/visitors.yml, which
+  .github/workflows/visitors.yml refreshes daily from Google Analytics; the map
+  itself is drawn in the browser by assets/js/visitor-map.js. The list under
+  the map is the text version of the same data.
+{%- endcomment -%}
+{%- assign v = site.data.visitors -%}
+<section class="about-section visitor-map" id="visitor-map">
+  <h2 class="about-section-title">Visitors</h2>
+  <p class="lst-meta vm-summary">
+    {%- if v.total_users > 0 -%}
+      {{ v.total_users }} visitor{% if v.total_users != 1 %}s{% endif %} from {{ v.country_count }}
+      countr{% if v.country_count == 1 %}y{% else %}ies{% endif %} since {{ v.since | date: '%b %-d, %Y' }}
+    {%- else -%}
+      Counting visitors since {{ v.since | date: '%b %-d, %Y' }}
+    {%- endif %}
+    · updated daily from Google Analytics
+  </p>
+  <figure class="vm-figure">
+    <div class="vm-canvas" role="img" aria-label="World map of visitors by country"></div>
+    <div class="vm-tooltip" role="status" hidden></div>
+    <figcaption class="vm-legend">
+      <span class="vm-key"><i class="vm-swatch vm-b0"></i>None</span>
+      <span class="vm-key"><i class="vm-swatch vm-b1"></i>1–4</span>
+      <span class="vm-key"><i class="vm-swatch vm-b2"></i>5–19</span>
+      <span class="vm-key"><i class="vm-swatch vm-b3"></i>20–99</span>
+      <span class="vm-key"><i class="vm-swatch vm-b4"></i>100+</span>
+    </figcaption>
+  </figure>
+  {%- if v.countries.size > 0 %}
+    <p class="lst-meta vm-list">
+      {%- for c in v.countries limit: 10 -%}
+        {{ c.name }} {{ c.users }}{% unless forloop.last %} · {% endunless %}
+      {%- endfor -%}
+      {%- if v.countries.size > 10 %} · and {{ v.countries.size | minus: 10 }} more{% endif %}
+    </p>
+  {%- endif %}
+  <script type="application/json" id="visitor-data">{{ v | jsonify }}</script>
+  <script defer src="{{ '/assets/js/visitor-map.js' | relative_url | bust_file_cache }}"></script>
+</section>
