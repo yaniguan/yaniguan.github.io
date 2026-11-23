@@ -1,9 +1,0 @@
-repo_description_lines_max: 5
-
-github_repos:
-  - yaniguan/yaniguan.github.io
-  - yaniguan/hpc_monitor
-  - yaniguan/ChatBot
-  - yaniguan/ChatDFT
-  - yaniguan/ChemVisionAgent
-  - yaniguan/bookmark_with_extensions
