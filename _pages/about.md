@@ -977,7 +977,7 @@ latest_posts:
     </div>
 
     <div class="about-row">
-      <div class="about-row-date">2022 — present</div>
+      <div class="about-row-date">2022 — 2026</div>
       <div class="about-row-val">
         <div class="about-role">
           UCLA
