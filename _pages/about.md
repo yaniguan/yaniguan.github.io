@@ -957,7 +957,7 @@ latest_posts:
   <div class="about-rows">
 
     <div class="about-row">
-      <div class="about-row-date">2026</div>
+      <div class="about-row-date">2026/06 — 2026/09</div>
       <div class="about-row-val">
         <div class="about-role">
           <a href="https://www.ses.ai/">SES AI</a>
@@ -977,7 +977,7 @@ latest_posts:
     </div>
 
     <div class="about-row">
-      <div class="about-row-date">2022 — 2026</div>
+      <div class="about-row-date">2022/09 — 2026/12</div>
       <div class="about-row-val">
         <div class="about-role">
           UCLA
@@ -990,7 +990,7 @@ latest_posts:
     </div>
 
     <div class="about-row">
-      <div class="about-row-date">2022</div>
+      <div class="about-row-date">2022/06 — 2022/09</div>
       <div class="about-row-val">
         <div class="about-role">
           <a href="https://www.dp.tech/en">DP Technology</a>
@@ -1003,7 +1003,7 @@ latest_posts:
     </div>
 
     <div class="about-row">
-      <div class="about-row-date">2018 — 2022</div>
+      <div class="about-row-date">2018/09 — 2022/06</div>
       <div class="about-row-val">
         <div class="about-role">
           <a href="https://www.hebut.edu.cn/">Hebei University of Technology</a>
