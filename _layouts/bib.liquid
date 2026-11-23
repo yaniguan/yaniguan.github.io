@@ -1,6 +1,25 @@
 ---
 ---
-<div class="row">
+<div class="row{% if entry.icon %} has-pub-icon{% endif %}">
+  {%- comment -%}
+    Optional highlight icon (bib fields icon, icon_alt, icon_caption), drawn
+    from /assets/img/publication_icons/. Only entries in selected.bib set it,
+    so it shows on the landing page and nowhere else.
+  {%- endcomment -%}
+  {% if entry.icon %}
+    <div class="pub-icon">
+      <img
+        src="{{ entry.icon | prepend: '/assets/img/publication_icons/' | relative_url }}"
+        alt="{{ entry.icon_alt }}"
+        width="48"
+        height="48"
+        loading="lazy"
+      >
+      {% if entry.icon_caption %}
+        <span class="pub-icon-caption" aria-hidden="true">{{ entry.icon_caption }}</span>
+      {% endif %}
+    </div>
+  {% endif %}
   {% if site.enable_publication_thumbnails %}
     <div class="col col-sm-2 abbr">
       {%- if entry.abbr -%}
