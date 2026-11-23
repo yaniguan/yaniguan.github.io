@@ -436,6 +436,8 @@ html[data-theme="dark"] .about-page {
     }
 
     // Highlight icon in a fixed left column; the text column takes the rest.
+    // Widths are plain rem values on purpose: the production CSS minifier
+    // strips the spaces inside calc(), which makes calc(a + b) invalid.
     .row.has-pub-icon {
       flex-wrap: nowrap;
 
@@ -448,9 +450,16 @@ html[data-theme="dark"] .about-page {
       }
     }
 
+    // Entries without an icon (only on /publications/) keep the same text edge.
+    .row:not(.has-pub-icon) > .col-sm-8,
+    .row:not(.has-pub-icon) > .col-sm-10 {
+      padding-left: 6.5rem; // icon column (5.5rem) + text gap (1rem)
+    }
+
     .pub-icon {
-      flex: 0 0 auto;
-      width: calc(15px + 4.5rem);
+      flex: 0 0 5.5rem;
+      width: 5.5rem;
+      max-width: 5.5rem;
       padding-left: 15px;
       padding-top: 0.15rem;
       text-align: center;
@@ -486,12 +495,19 @@ html[data-theme="dark"] .about-page {
 
     @media (max-width: 575.98px) {
       .pub-icon {
-        width: calc(15px + 3.5rem);
+        flex-basis: 4.5rem;
+        width: 4.5rem;
+        max-width: 4.5rem;
 
         img {
           width: 2.5rem;
           height: 2.5rem;
         }
+      }
+
+      .row:not(.has-pub-icon) > .col-sm-8,
+      .row:not(.has-pub-icon) > .col-sm-10 {
+        padding-left: 5.5rem;
       }
 
       .pub-icon-caption {
@@ -832,7 +848,7 @@ html[data-theme="dark"] .about-page {
 
   .notes-card-cta {
     align-self: flex-start;
-    padding-left: calc(26px + 1rem);
+    padding-left: 42px; // 26px + 1rem; calc(a + b) is broken by the minifier
   }
 }
 

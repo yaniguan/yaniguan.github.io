@@ -4,6 +4,9 @@
 @string{aps = {American Physical Society,}}
 
 @article{guan2026verdict,
+  icon={verdict.svg},
+  icon_alt={Four jurors, three tick yes and one asks a question: agreement among recognizers flags unreliable structures.},
+  icon_caption={4 readers vote},
   rank={2},
   title={VERDICT: Agreement Beats Pixel-Space Verification in Real-Document OCSR},
   author={Guan, Yani and Dong, Dengpan and Luo, Shuang and Wei, Zi and Han, Joah and Hannah, Dan and Zhang, Yumin and Hu, Qichao and Xu, Kang},
@@ -14,13 +17,13 @@
   note={Label-free verification for image-to-SMILES at scale: agreement among four architecturally distinct recognizers reaches AUROC 0.916, while re-rendering a prediction and comparing pixels barely beats chance at 0.547.},
   abstract={Optical Chemical Structure Recognition (OCSR) converts 2D molecular depictions in the published literature into SMILES, and is increasingly important for constructing large-scale chemical training datasets. Automation at that scale requires identifying unreliable predictions in the absence of ground truth. Three families of label-free signals were compared on 263 ACS journal depictions with verified ground truth: model confidence, re-rendering similarity, and agreement among recognizers. Pixel-space re-rendering performed little better than chance (AUROC 0.547, 95\% CI [0.465,0.629]), and an oracle-tuned threshold on it reduced correct labels per image from 0.745 to 0.205. Agreement among four architecturally distinct recognizers instead reached an AUROC of 0.916 ([0.880,0.952]). The two-of-four rule accepted 81.7\% of images at 88.8\% precision, the three-of-four rule 52.1\% at 98.5\%. The same pattern held on CLEF-IP, UOB, and USPTO. This distinction is obscured on synthetic benchmarks, where re-rendered predictions naturally resemble their inputs. A substance filter removed 2,193 false agreements on wildcards and R-group fragments, after which the three-of-four rule rejected all 68 generic depictions. VERDICT was then applied to PMC Open Access, producing 6,146 structure labels for 4,833 molecules; chemist adjudication of 400 released labels in two independent samples yielded precisions of 0.995 for the three-of-four tier and 0.958 for the two-of-four tier. VERDICT therefore enables validated labels for multimodal molecular databases linking structure images, machine-readable representations, and source-publication information. In SES AI's Molecular Universe platform, VERDICT further serves as an image-based interface for searching and retrieving molecular records.},
   abbr={VERDICT},
-  icon={verdict.svg},
-  icon_alt={Four jurors, three tick yes and one asks a question: agreement among recognizers flags unreliable structures.},
-  icon_caption={4 readers vote},
   selected={true}
 }
 
 @article{guan2026ocsr,
+  icon={ocsr-real-data.svg},
+  icon_alt={A real journal page with a hand-drawn ring under a magnifier: labeled real depictions, not more synthetic renders, close the gap.},
+  icon_caption={real pages win},
   rank={1},
   title={Real Data Closes Synthetic-to-Real Gap in Optical Chemical Structure Recognition},
   author={Guan, Yani and Dong, Dengpan and Wei, Zi and Luo, Shuang and Hannah, Dan C and Zhang, Yumin and Xu, Kang},
@@ -32,13 +35,13 @@
   abstract={Millions of chemical structures appear in patents and papers only as drawings. Optical chemical structure recognition (OCSR) appears nearly solved on synthetic images, but remains difficult on real documents: the starting recognizer Qwen2.5-VL-7B reaches over 91\% accuracy on synthetic images and below 16\% on the ACS, CLEF-IP and USPTO benchmarks. We fine-tuned 21 recognizers on mixtures of synthetically rendered structures and labeled real depictions from patents, journal figures and hand-drawn collections, varying the VLM base, the fraction of real training data, and the vision-tower adaptation strategy. Adding labeled real training images makes the largest difference: for Qwen2.5-VL, ACS exact match rises from 0.15 with no real data to 0.37 at 9.5\% real data and 0.46 at 50.2\%. A vision LoRA does not help Qwen at all (+0.00, paired p = 1.00), substantially helps InternVL3-8B (+22.8 to +34.6 pt) and modestly helps GLM-4.1V-9B, so its value depends on the base model. The strongest model reaches 0.96 exact match on clean renders and 0.49, 0.65, 0.84 and 0.76 on ACS, CLEF-IP, UOB and USPTO. Differences between bases are largest without real data (0.21) and shrink at 70\% real data (0.06), while their ranking also changes -- base model and real-data mixture must therefore be selected together.},
   preview={ocsr_real_data.png},
   abbr={OCSR VLM},
-  icon={ocsr-real-data.svg},
-  icon_alt={A real journal page with a hand-drawn ring under a magnifier: labeled real depictions, not more synthetic renders, close the gap.},
-  icon_caption={real pages win},
   selected={true}
 }
 
 @article{dong2026htmd,
+  icon={mu-pff.svg},
+  icon_alt={A fast forward arrow over a spring-bonded atom pair with a polarizable cloud: one network pass replaces weeks of force-field fitting.},
+  icon_caption={weeks → one pass},
   rank={3},
   title={High-throughput Molecular Dynamics Simulation on an AI-powered Platform},
   author={Dong, Dengpan and Guan, Yani and Luo, Shuang and Ding, Jingxuan and Hannah, Dan C and Zhang, Yumin and Hu, Qichao and Xu, Kang},
@@ -49,13 +52,13 @@
   abstract={We present an end-to-end, AI-powered platform for high-throughput molecular dynamics (MD) simulation of liquid electrolytes and complex formulations. At its core is MU-PFF, a many-body polarizable force field whose functional form follows the well-validated exp-6 polarizable model, but whose parameters are produced entirely by an automated machine-learning pipeline rather than by hand. We assemble a quantum-chemistry dataset of roughly one million molecules and molecular complexes and train a single message-passing neural network to predict the complete parameter set -- partial charges, atomic polarizabilities, bonded (bond, bend, torsion) terms, and the repulsion-dispersion parameters -- directly from molecular structure. Parameterization that traditionally takes weeks of expert effort per chemistry is reduced to a single forward pass, yielding a universal polarizable force field that transfers across solvents, salts and additives. Coupled to automated system building and trajectory analysis, the platform reproduces experimental electrolyte properties with high fidelity: density error below 0.02 g/cm3, lithium-electrolyte ionic conductivity of approximately 1.5 mS/cm in quantitative agreement with measurement, and salt/additive solubility predicted to within 10\%. We further demonstrate extended capabilities, including additive solubility by thermodynamic integration and electric-double-layer simulation under applied potential.},
   preview={mu_md_platform.png},
   abbr={MU-PFF MD},
-  icon={mu-pff.svg},
-  icon_alt={Stacked simulation boxes with a spark: a machine-learned polarizable force field runs MD from SMILES to properties.},
-  icon_caption={SMILES → properties},
   selected={true}
 }
 
 @article{shan2026desolvated,
+  icon={desolvated-cation.svg},
+  icon_alt={A caesium cation shedding its water molecules on a silver surface and binding a bent CO2.},
+  icon_caption={Cs⁺ sheds its shell},
   rank={4},
   title={Desolvated cations promote CO2 electroreduction through partial covalent interactions},
   author={Shan, Yu and Jaugstetter, Maximilian and Feijóo, Julian and Guan, Yani and Wang, Tianle and Falling, Lorenz J. and Li, Jialu and Ding, Honghe and Sachelarie, Alex and Fonseca Guzman, Maria V. and Zhao, Xiao and Kowalski, Robert Michael and Nemšák, Slavomír and Guo, Jinghua and Sautet, Philippe and Salmeron, Miquel B. and Yang, Peidong},
@@ -70,13 +73,13 @@
   note={Yu Shan, Maximilian Jaugstetter, Julian Feijóo and Yani Guan contributed equally.},
   abstract={Cations play a critical role in electrochemical CO2 reduction, yet the mechanisms underlying their influence remain incompletely understood owing to limited knowledge of their solvation structures and interfacial interactions under operating conditions. Here we combine surface-sensitive total electron yield X-ray absorption spectroscopy, surface-enhanced infrared absorption spectroscopy and density functional theory calculations to determine the solvation environment of caesium ions near a ligand-modified silver nanocatalyst under CO2-reducing conditions. We find that desolvated Cs+ ions, confined between a detached ligand layer and the silver surface, enable CO2 activation at potentials as high as 0.4 V versus reversible hydrogen electrode---reducing the overpotential for CO2-to-CO conversion by 250 mV compared with a bare Ag film. Our results further reveal partial covalent character in Cs--intermediate interactions, which directly accounts for the enhanced catalytic activity. These findings provide multimodal spectroscopic evidence that cations can modulate reaction kinetics beyond purely electrostatic effects.},
   abbr={Nature Catal.},
-  icon={desolvated-cation.svg},
-  icon_alt={A caesium cation shedding its water molecules on a silver surface and binding a bent CO2.},
-  icon_caption={Cs⁺ sheds its shell},
   selected={true}
 }
 
 @article{guan2026amination,
+  icon={pb-hydrogen.svg},
+  icon_alt={A trace lead atom in a silver surface carries a hydrogen over to the imine.},
+  icon_caption={1 ppm Pb shuttles H},
   rank={5},
   title={Electrochemical Amination of Acetone using Ag as Cathode: Mechanism and Role of Pb Impurities for Hydrogen Transfer},
   author={Guan, Yani and K{\"u}mper, Justus and Cuomo, Angelina and Kumari, Simran and M{\"u}rtz, Sonja D and Nikolaienko, Pavlo and Mayrhofer, Karl and Palkovits, Regina and Sautet, Philippe},
@@ -86,13 +89,13 @@
   doi={10.1039/D6CY00189K},
   preview={ag_amination.jpeg},
   abbr={Ag Amination},
-  icon={pb-hydrogen.svg},
-  icon_alt={A lead atom in a silver surface hands a hydrogen to an organic molecule.},
-  icon_caption={Pb passes the H},
   selected={true}
 }
 
 @article{guan2025probing,
+  icon={capacitance-edl.svg},
+  icon_alt={An electrode with acetone raising and methylamine lowering the double-layer capacitance.},
+  icon_caption={acetone ↑ amine ↓},
   rank={6},
   title={Probing the Electric Double-Layer Capacitance to Understand the Reaction Environment in Conditions of Electrochemical Amination of Acetone},
   author={Guan, Yani and Kümper, Justus and Kumari, Simran and Heiming, Nick and Mürtz, Sonja D and Steinmann, Stephan N and Palkovits, Stefan and Palkovits, Regina and Sautet, Philippe},
@@ -106,6 +109,9 @@
 }
 
 @article{guan2024origin,
+  icon={cu-dissolution.svg},
+  icon_alt={Amine ligands lifting a copper atom out of the surface, leaving a vacancy.},
+  icon_caption={amines pluck Cu out},
   rank={7},
   title={Origin of copper dissolution under electrocatalytic reduction conditions involving amines},
   author={Guan, Yani and K{\"u}mper, Justus and M{\"u}rtz, Sonja D and Kumari, Simran and Hausoul, Peter JC and Palkovits, Regina and Sautet, Philippe},
@@ -122,6 +128,9 @@
 }
 
 @article{luo2024first,
+  icon={kmc-dice.svg},
+  icon_alt={A Monte Carlo die above an H-covered platinum surface, with H2 leaving.},
+  icon_caption={rolling dice on Pt},
   rank={8},
   title={First-principles-based kinetic monte carlo model of hydrogen evolution reaction under realistic conditions: solvent, hydrogen coverage and electric field effects},
   author={Luo, Yuhong and Guan, Yani and Liu, Guihua and Wang, Yanji and Li, Jingde and Ricardez-Sandoval, Luis},
@@ -137,6 +146,9 @@
 }
 
 @article{guan2022machine,
+  icon={ml-volcano.svg},
+  icon_alt={Data points along a volcano plot with a star at the peak catalyst.},
+  icon_caption={ML climbs the volcano},
   rank={9},
   title={Machine learning in solid heterogeneous catalysis: Recent developments, challenges and perspectives},
   author={Guan, Yani and Chaffart, Donovan and Liu, Guihua and Tan, Zhaoyang and Zhang, Dongsheng and Wang, Yanji and Li, Jingde and Ricardez-Sandoval, Luis},
@@ -166,6 +178,9 @@
 }
 
 @article{guan2021insights,
+  icon={co2-cu-sites.svg},
+  icon_alt={CO2 approaching an H-covered copper site on a CuO surface.},
+  icon_caption={H-capped Cu sites},
   rank={11},
   title={Insights on the catalytic active site for CO2 reduction on copper-based catalyst: a DFT study},
   author={Guan, Yani and Suo, Wei and Zhang, Zisheng and Wang, Yanji and Sun, Shujuan and Liu, Guihua},
@@ -196,6 +211,9 @@
 }
 
 @article{guan2019surface,
+  icon={orr-oer.svg},
+  icon_alt={A cobalt nitride particle on graphene turning O2 over in both directions.},
+  icon_caption={one catalyst, both ways},
   rank={13},
   title={Surface-engineered cobalt nitride composite as efficient bifunctional oxygen electrocatalyst},
   author={Guan, Yani and Liu, Guihua and Li, Jingde and Wang, Yanji and Zhang, Zisheng},
