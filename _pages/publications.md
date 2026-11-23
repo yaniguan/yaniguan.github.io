@@ -46,9 +46,5 @@ it. Everything is emitted at column 0 — indented HTML becomes a code block.
 <div class="publications">
 <h2 class="bibliography">Papers &amp; preprints</h2>
 {% bibliography --query @article --group_by none %}
-<h2 class="bibliography">Conference</h2>
-{% bibliography --query @inproceedings --group_by none %}
-<h2 class="bibliography">Thesis</h2>
-{% bibliography --query @mastersthesis --group_by none %}
 </div>
 </section>
