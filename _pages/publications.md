@@ -41,7 +41,7 @@ it. Everything is emitted at column 0 — indented HTML becomes a code block.
 
 <section class="about-section">
 <h2 class="about-section-title">Publications</h2>
-<p class="lst-meta" style="margin: -0.9rem 0 1.2rem">410 citations · h-index 9 · i10-index 9 — <a href="https://scholar.google.com/citations?user={{ site.data.socials.scholar_userid }}">Google Scholar</a></p>
+{% include scholar_stats.liquid %}
 {% include bib_search.liquid %}
 <div class="publications">
 <h2 class="bibliography">Papers &amp; preprints</h2>
