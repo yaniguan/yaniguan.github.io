@@ -903,7 +903,7 @@ html[data-theme="dark"] .reading-room {
   font-size: 0.7rem;
 }
 .reading-mood-x {
-  margin: 0.5rem 0 0 calc(56px + 0.4rem);
+  margin: 0.5rem 0 0 62.4px; // 56px + 0.4rem; calc(a + b) is broken by the minifier
   flex-wrap: wrap;
 }
 .reading-mood-scroll {
