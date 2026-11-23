@@ -35,6 +35,24 @@ html[data-theme="dark"] .about-page {
   --about-map-line: #5e5e64;
 }
 
+// Visitor map: one blue hue, light to dark for more visitors. Dark mode has its
+// own steps that get brighter (not darker) with more visitors.
+.about-page {
+  --vm-b0: #eceff3;
+  --vm-b1: #b4cffb;
+  --vm-b2: #8ab4f8;
+  --vm-b3: #4285f4;
+  --vm-b4: #1a56b8;
+}
+
+html[data-theme="dark"] .about-page {
+  --vm-b0: #2e3036;
+  --vm-b1: #23406c;
+  --vm-b2: #2f63b3;
+  --vm-b3: #5b95f5;
+  --vm-b4: #a8c7fa;
+}
+
 /* -----------------------------------------------------------------------------
  * Hero
  * -------------------------------------------------------------------------- */
@@ -1198,5 +1216,116 @@ html[data-theme="dark"] .about-page {
   .fig-box-em.is-hot,
   .fig-panel.is-hot {
     stroke-width: 1.8;
+  }
+}
+
+/* -----------------------------------------------------------------------------
+ * Visitor map (homepage, bottom). Drawn by assets/js/visitor-map.js.
+ * -------------------------------------------------------------------------- */
+
+.visitor-map {
+  .vm-summary {
+    margin: -0.9rem 0 1rem;
+  }
+
+  .vm-figure {
+    position: relative;
+    margin: 0;
+  }
+
+  // Reserve the map's height before the libraries load so nothing jumps.
+  .vm-canvas {
+    aspect-ratio: 960 / 420;
+    width: 100%;
+
+    svg {
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .vm-country {
+    stroke: var(--global-bg-color);
+    stroke-width: 0.6;
+    stroke-linejoin: round;
+    transition: fill 0.15s ease;
+
+    &.vm-active {
+      stroke: var(--about-ink-soft);
+      stroke-width: 1.2;
+    }
+  }
+
+  .vm-b0 {
+    fill: var(--vm-b0);
+    background: var(--vm-b0);
+  }
+
+  .vm-b1 {
+    fill: var(--vm-b1);
+    background: var(--vm-b1);
+  }
+
+  .vm-b2 {
+    fill: var(--vm-b2);
+    background: var(--vm-b2);
+  }
+
+  .vm-b3 {
+    fill: var(--vm-b3);
+    background: var(--vm-b3);
+  }
+
+  .vm-b4 {
+    fill: var(--vm-b4);
+    background: var(--vm-b4);
+  }
+
+  .vm-tooltip {
+    position: absolute;
+    transform: translate(-50%, -100%);
+    margin-top: -10px;
+    padding: 0.3rem 0.55rem;
+    border-radius: 4px;
+    background: var(--global-card-bg-color, var(--global-bg-color));
+    border: 1px solid var(--global-divider-color);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12);
+    color: var(--global-text-color);
+    font-size: 0.75rem;
+    white-space: nowrap;
+    pointer-events: none;
+    z-index: 2;
+  }
+
+  .vm-legend {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.35rem 1rem;
+    margin-top: 0.6rem;
+    font-size: 0.72rem;
+    color: var(--about-ink-muted);
+  }
+
+  .vm-key {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+  }
+
+  .vm-swatch {
+    display: inline-block;
+    width: 0.8rem;
+    height: 0.8rem;
+    border-radius: 2px;
+  }
+
+  .vm-list {
+    margin-top: 0.6rem;
+  }
+
+  // If the CDN is blocked the map area collapses; the summary and list remain.
+  &.vm-failed .vm-canvas {
+    display: none;
   }
 }

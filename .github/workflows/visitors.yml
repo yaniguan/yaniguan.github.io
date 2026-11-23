@@ -1,0 +1,67 @@
+name: Update visitor map
+
+# Pulls per-country visitor counts from Google Analytics into
+# _data/visitors.yml and redeploys the site when they change.
+#
+# Needs the repository secret GA_SA_KEY: the JSON key of a Google Cloud
+# service account that has Viewer access on the GA4 property below.
+
+on:
+  schedule:
+    - cron: "17 9 * * *" # daily, 01:17 Los Angeles (PST)
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  actions: write
+
+concurrency:
+  group: visitors
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install "google-analytics-data>=0.18,<1" "pycountry>=24" "pyyaml>=6"
+
+      - name: Fetch visitor counts
+        env:
+          GA_PROPERTY_ID: "565572273"
+          VISITORS_SINCE: "2026-11-22"
+          GA_SA_KEY: ${{ secrets.GA_SA_KEY }}
+        run: |
+          if [ -z "$GA_SA_KEY" ]; then
+            echo "::error::Repository secret GA_SA_KEY is not set"
+            exit 1
+          fi
+          key="$RUNNER_TEMP/ga-sa.json"
+          printf '%s' "$GA_SA_KEY" > "$key"
+          GOOGLE_APPLICATION_CREDENTIALS="$key" python bin/fetch_visitors.py _data/visitors.yml
+          rm -f "$key"
+
+      - name: Commit and redeploy if changed
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          if git diff --quiet -- _data/visitors.yml; then
+            echo "No change in visitor counts"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add _data/visitors.yml
+          git commit -m "Update visitor map data"
+          git push
+          # Pushes made with GITHUB_TOKEN do not trigger other workflows, so
+          # start the deploy explicitly.
+          gh workflow run deploy.yml --ref "${GITHUB_REF_NAME}"
